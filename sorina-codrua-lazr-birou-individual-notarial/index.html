@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorina Codruța Lazăr - Birou Individual Notarial | Cluj-Napoca</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>tailwind.config = { theme: { extend: { fontFamily: { display: ['"Cormorant Garamond"','serif'], body: ['Inter','sans-serif'] } } } }</script>
+  <style>
+    :root{--bg:#150b10;--bg2:#2a1820;--panel:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);--accent:#d7b16e;--accent2:#ffb2a3;--text:#fbf4ef;--muted:rgba(251,244,239,.72)}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:radial-gradient(circle at top left,rgba(215,177,110,.14),transparent 26%),radial-gradient(circle at 80% 0,rgba(255,178,163,.12),transparent 26%),linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);color:var(--text);overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.08) 1px,transparent 0);background-size:26px 26px;opacity:.25}
+    [x-cloak]{display:none!important}
+    .glass{background:var(--panel);backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:0 16px 60px rgba(0,0,0,.22)}
+    .card{background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(14px);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+    .card:hover{transform:translateY(-5px);border-color:rgba(215,177,110,.35);box-shadow:0 18px 50px rgba(0,0,0,.22)}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#efd5a4);color:#171018}
+    .btn-secondary{border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.04)}
+    .section{padding:5rem 0}
+    .eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:.75rem;color:var(--accent)}
+  </style>
+</head>
+<body x-data="{menu:false,scrolled:false}" @scroll.window="scrolled = window.scrollY > 40">
+  <nav class="fixed inset-x-0 top-0 z-50 transition-all duration-300" :class="scrolled ? 'glass' : 'bg-transparent'">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <a href="#acasa" class="flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-accent"><i class="fa-solid fa-scale-balanced"></i></span>
+        <span class="font-display text-2xl">Sorina Codruța Lazăr</span>
+      </a>
+      <div class="hidden items-center gap-8 lg:flex">
+        <a href="#despre" class="text-sm text-white/80 hover:text-accent">Despre</a>
+        <a href="#servicii" class="text-sm text-white/80 hover:text-accent">Servicii</a>
+        <a href="#incredere" class="text-sm text-white/80 hover:text-accent">De ce noi</a>
+        <a href="#recenzii" class="text-sm text-white/80 hover:text-accent">Recenzii</a>
+        <a href="#contact" class="text-sm text-white/80 hover:text-accent">Contact</a>
+        <a href="tel:0264414675" class="btn-primary rounded-full px-5 py-2.5 text-sm font-semibold shadow-lg shadow-black/20"><i class="fa-solid fa-phone mr-2"></i>0264 414 675</a>
+      </div>
+      <button class="lg:hidden" @click="menu=!menu" aria-label="Meniu"><i class="fa-solid text-xl" :class="menu ? 'fa-xmark' : 'fa-bars'"></i></button>
+    </div>
+    <div x-show="menu" x-cloak x-transition class="lg:hidden border-t border-white/10 bg-[#150b10]/95">
+      <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-6">
+        <a @click="menu=false" href="#despre">Despre</a>
+        <a @click="menu=false" href="#servicii">Servicii</a>
+        <a @click="menu=false" href="#incredere">De ce noi</a>
+        <a @click="menu=false" href="#recenzii">Recenzii</a>
+        <a @click="menu=false" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="app">
+    <section id="acasa" class="relative min-h-screen overflow-hidden pt-28">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(215,177,110,.18),transparent_20%),radial-gradient(circle_at_20%_20%,rgba(255,178,163,.12),transparent_18%),linear-gradient(180deg,rgba(21,11,16,.2),rgba(21,11,16,.92))]"></div>
+      <div class="absolute -right-24 top-28 h-72 w-72 rounded-full bg-accent/10 blur-3xl"></div>
+      <div class="absolute left-8 top-1/3 h-56 w-56 rounded-full bg-rose-300/10 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 py-12 lg:grid-cols-[1.1fr_.9fr] lg:px-8 lg:py-20">
+        <div class="relative z-10 max-w-3xl" data-aos="fade-up">
+          <p class="eyebrow mb-4"><i class="fa-solid fa-feather-pointed mr-2"></i>Birou individual notarial în Cluj-Napoca</p>
+          <h1 class="font-display text-5xl leading-none md:text-6xl lg:text-7xl">Acte importante tratate simplu, calm și cu înțelegere pentru fiecare pas.</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-[color:var(--muted)]">Biroul Sorinei Codruța Lazăr oferă servicii notariale pentru documente de familie, proprietăți și succesiuni, într-un format individual, cu suport în română și franceză.</p>
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="tel:0264414675" class="btn-primary rounded-full px-7 py-4 text-center font-semibold text-[#171018]"><i class="fa-solid fa-phone mr-2"></i>Sună acum</a>
+            <a href="https://www.google.com/maps/place/Sorina+Codru%C5%A3a+Laz%C4%83r+-+Birou+Individual+Notarial/data=!4m7!3m6!1s0x47490c3b61f4a72d:0x538b992dd13cc034!8m2!3d46.7693695!4d23.6083828!16s%2Fg%2F1hc737qh3!19sChIJLaf0YTsMSUcRNMA80S2Zi1M?authuser=0&hl=en&rclk=1" target="_blank" class="btn-secondary rounded-full px-7 py-4 text-center font-semibold"><i class="fa-solid fa-location-dot mr-2 text-accent"></i>Vezi pe hartă</a>
+          </div>
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="card rounded-2xl p-5"><div class="text-3xl font-display text-accent">2.2/5</div><div class="mt-1 text-sm text-[color:var(--muted)]">rating Google</div></div>
+            <div class="card rounded-2xl p-5"><div class="text-3xl font-display text-accent">32</div><div class="mt-1 text-sm text-[color:var(--muted)]">recenzii publice</div></div>
+            <div class="card rounded-2xl p-5"><div class="text-3xl font-display text-accent">2 limbi</div><div class="mt-1 text-sm text-[color:var(--muted)]">RO / FR</div></div>
+          </div>
+        </div>
+        <div class="relative z-10" data-aos="fade-left">
+          <div class="glass rounded-[2rem] p-6 md:p-8">
+            <div class="rounded-[1.6rem] border border-white/10 bg-white/5 p-6">
+              <p class="eyebrow mb-3">Profil</p>
+              <h2 class="font-display text-4xl">Birou individual pentru clienți care vor explicații clare și o abordare directă.</h2>
+              <p class="mt-4 text-[color:var(--muted)] leading-7">Biroul din Bulevardul Nicolae Titulescu nr. 43 lucrează pentru clujeni care au nevoie de acte notariale standard, cu accent pe claritate, program fix și o relație directă cu notarul public.</p>
+              <div class="mt-6 grid grid-cols-2 gap-4">
+                <div class="rounded-2xl bg-black/20 p-4"><i class="fa-solid fa-file-signature text-accent"></i><div class="mt-3 text-sm text-white/70">Autentificări</div></div>
+                <div class="rounded-2xl bg-black/20 p-4"><i class="fa-solid fa-scroll text-accent"></i><div class="mt-3 text-sm text-white/70">Succesiuni</div></div>
+                <div class="rounded-2xl bg-black/20 p-4"><i class="fa-solid fa-house text-accent"></i><div class="mt-3 text-sm text-white/70">Imobiliare</div></div>
+                <div class="rounded-2xl bg-black/20 p-4"><i class="fa-solid fa-language text-accent"></i><div class="mt-3 text-sm text-white/70">RO / FR</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="despre" class="section bg-white text-slate-900">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
+        <div data-aos="fade-right">
+          <p class="eyebrow mb-3 text-slate-500">Despre birou</p>
+          <h2 class="font-display text-4xl md:text-5xl text-slate-900">Notariat individual pentru acte de familie, proprietate și succesiuni.</h2>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">Sorina Codruța Lazăr conduce un birou individual notarial care pune accent pe claritate și acces direct. Serviciile sunt potrivite pentru documente de familie, tranzacții imobiliare și moșteniri, iar contactul în română și franceză ajută clienții care au nevoie de explicații mai nuanțate.</p>
+          <p class="mt-4 max-w-2xl leading-8 text-slate-600">Programul de dimineață și ora limitată de lucru în fiecare zi pot fi utile pentru cei care preferă o organizare strictă a deplasărilor.</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-3" data-aos="fade-left">
+          <div class="rounded-3xl bg-slate-950 p-6 text-white shadow-xl"><div class="text-4xl font-display text-accent">2.2</div><p class="mt-2 text-white/70">rating mediu</p></div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6"><div class="text-4xl font-display text-slate-900">32</div><p class="mt-2 text-slate-500">recenzii listate</p></div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6"><div class="text-4xl font-display text-slate-900">9-15</div><p class="mt-2 text-slate-500">program zilnic</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="section">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="eyebrow mb-3">Servicii</p>
+          <h2 class="font-display text-4xl md:text-5xl">Servicii notariale standard, organizate într-un mod ușor de urmărit.</h2>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div v-for="item in business.services" :key="item.title" class="card rounded-3xl p-6" data-aos="fade-up">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/8 text-accent"><i :class="'fa-solid '+item.icon"></i></div>
+            <h3 class="mt-5 font-display text-3xl text-white">{{ item.title }}</h3>
+            <p class="mt-3 leading-7 text-[color:var(--muted)]">{{ item.text }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="incredere" class="section">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div class="card rounded-3xl p-6" v-for="item in business.trust" :key="item.title" data-aos="fade-up">
+            <div class="text-accent text-2xl"><i :class="'fa-solid '+item.icon"></i></div>
+            <h3 class="mt-4 font-display text-3xl">{{ item.title }}</h3>
+            <p class="mt-3 leading-7 text-[color:var(--muted)]">{{ item.text }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii" class="section bg-white text-slate-900">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="eyebrow mb-3 text-slate-500">Recenzii</p>
+          <h2 class="font-display text-4xl md:text-5xl text-slate-900">Recenzii publice, afișate exact ca în sursa originală.</h2>
+        </div>
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <article v-for="review in business.reviews" :key="review.name" class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm" data-aos="fade-up">
+            <div class="flex items-center justify-between gap-4">
+              <div><h3 class="font-semibold text-slate-900">{{ review.name }}</h3><p class="text-sm text-slate-500">Recenzie reală</p></div>
+              <div class="text-accent"><i v-for="n in 5" :key="n" class="fa-solid fa-star mr-0.5" :class="n <= review.stars ? 'text-accent' : 'text-slate-300'"></i></div>
+            </div>
+            <p class="mt-4 leading-7 text-slate-700">{{ review.text }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-5 lg:grid-cols-[1.05fr_.95fr]">
+          <div class="card rounded-[2rem] p-7" data-aos="fade-right">
+            <p class="eyebrow mb-3">Contact</p>
+            <h2 class="font-display text-4xl">Date de contact clare și program fix de dimineață.</h2>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-2xl bg-black/15 p-5"><i class="fa-solid fa-location-dot text-accent"></i><p class="mt-3 text-sm text-white/70">Bulevardul Nicolae Titulescu Nicolae, 43, 400407 Cluj-Napoca</p><a class="mt-3 inline-block text-sm text-accent" target="_blank" href="https://www.google.com/maps/place/Sorina+Codru%C5%A3a+Laz%C4%83r+-+Birou+Individual+Notarial/data=!4m7!3m6!1s0x47490c3b61f4a72d:0x538b992dd13cc034!8m2!3d46.7693695!4d23.6083828!16s%2Fg%2F1hc737qh3!19sChIJLaf0YTsMSUcRNMA80S2Zi1M?authuser=0&hl=en&rclk=1">Deschide în Google Maps</a></div>
+              <div class="rounded-2xl bg-black/15 p-5"><i class="fa-solid fa-phone text-accent"></i><p class="mt-3 text-sm text-white/70">0264 414 675</p><a class="mt-3 inline-block text-sm text-accent" href="tel:0264414675">Sună biroul</a></div>
+              <div class="rounded-2xl bg-black/15 p-5"><i class="fa-solid fa-clock text-accent"></i><p class="mt-3 text-sm text-white/70">Luni-Vineri: 09:00 - 15:00</p><p class="mt-1 text-sm text-white/50">Sâmbătă și duminică: închis</p></div>
+              <div class="rounded-2xl bg-black/15 p-5"><i class="fa-solid fa-star text-accent"></i><p class="mt-3 text-sm text-white/70">2.2/5 din 32 recenzii</p></div>
+            </div>
+          </div>
+          <div class="card rounded-[2rem] p-7" data-aos="fade-left">
+            <p class="eyebrow mb-3">Program</p>
+            <div class="space-y-3">
+              <div v-for="item in business.hours" :key="item.day" class="flex items-center justify-between rounded-2xl bg-white/5 px-5 py-4"><span>{{ item.day }}</span><span class="text-white/70">{{ item.value }}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-sm text-white/65 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <p>Sorina Codruța Lazăr - Birou Individual Notarial. Servicii notariale cu accent pe claritate și dialog direct.</p>
+        <p>0264 414 675 · Cluj-Napoca</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+    Vue.createApp({
+      data() {
+        return {
+          business: {
+            services: [
+              { icon: 'fa-file-signature', title: 'Autentificări', text: 'Înscrisuri și semnături autentificate într-o formă clară și sigură.' },
+              { icon: 'fa-house', title: 'Tranzacții imobiliare', text: 'Contracte de vânzare-cumpărare și documente pentru proprietăți.' },
+              { icon: 'fa-scroll', title: 'Succesiuni', text: 'Acte de moștenire și proceduri succesorale explicate simplu.' },
+              { icon: 'fa-pen-ruler', title: 'Procuri și declarații', text: 'Împuterniciri și declarații redactate atent, cu formulări corecte.' },
+              { icon: 'fa-ring', title: 'Acte de familie', text: 'Convenții matrimoniale și alte documente de familie cu regim juridic clar.' },
+              { icon: 'fa-comments', title: 'Consultanță', text: 'Sprijin pentru alegerea documentului potrivit și pregătirea dosarului.' }
+            ],
+            trust: [
+              { icon: 'fa-language', title: 'RO / FR', text: 'Clienți care au nevoie de explicații în română sau franceză.' },
+              { icon: 'fa-book-open', title: 'Registru european', text: 'Profil notarial activ și prezent în directoarele europene de specialitate.' },
+              { icon: 'fa-shield-halved', title: 'Rigoare', text: 'Acte lucrate fără grabă inutilă, cu atenție pentru formă.' },
+              { icon: 'fa-calendar-check', title: 'Program fix', text: 'Interval de lucru clar, util pentru programări și deplasări scurte.' }
+            ],
+            reviews: [
+              { name: 'NEMES NICOLAE', stars: 5, text: 'Un notar pe care îl recomand, fiind foarte atent la detaliile unei tranzacții.' },
+              { name: 'cosmin petrus', stars: 5, text: 'Un profesionist desăvârșit. Va recomand cu caldura serviciile doamnei notar.' },
+              { name: 'Maria Szasz', stars: 5, text: 'Recomand. Amabilitate.promptitudine si seriozitate' },
+              { name: 'Endre Vig', stars: 5, text: 'Promtitudine, rapiditate, eficienta.' }
+            ],
+            hours: [
+              { day: 'Luni', value: '09:00 - 15:00' },
+              { day: 'Marți', value: '09:00 - 15:00' },
+              { day: 'Miercuri', value: '09:00 - 15:00' },
+              { day: 'Joi', value: '09:00 - 15:00' },
+              { day: 'Vineri', value: '09:00 - 15:00' },
+              { day: 'Sâmbătă', value: 'Închis' },
+              { day: 'Duminică', value: 'Închis' }
+            ]
+          }
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>

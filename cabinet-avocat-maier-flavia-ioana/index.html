@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinet Avocat Maier Flavia Ioana | Cluj-Napoca</title>
+  <meta name="description" content="Cabinet de avocat in Cluj-Napoca, condus de Flavia-Ioana Maier. Drept civil, comercial, administrativ, penal, familie si munca. Peste 31 de ani de practica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Inter', 'sans-serif'],
+            display: ['Prata', 'serif']
+          },
+          colors: {
+            pine: '#123925',
+            forest: '#1d4d33',
+            gold: '#b99557',
+            ivory: '#f8f4ea',
+            stone: '#d8d0c4'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #173223;
+      background:
+        radial-gradient(circle at 18% 16%, rgba(185,149,87,.14), transparent 20%),
+        radial-gradient(circle at 83% 12%, rgba(18,57,37,.18), transparent 26%),
+        linear-gradient(180deg, #123925 0%, #174230 30%, #f8f4ea 30%, #f8f4ea 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 70px 70px;
+      opacity: .18;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .mesh {
+      background-image: linear-gradient(rgba(185,149,87,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(185,149,87,.09) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .card {
+      background: rgba(255,255,255,.83);
+      border: 1px solid rgba(18,57,37,.08);
+      box-shadow: 0 18px 50px rgba(18,57,37,.08);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(185,149,87,.18);
+      backdrop-filter: blur(16px);
+    }
+    .section-light { background: #f8f4ea; }
+    .section-dark {
+      background: linear-gradient(180deg, #174230 0%, #123925 100%);
+      color: #f8f4ea;
+    }
+    .nav-link { position: relative; text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: #b99557;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-gold {
+      background: linear-gradient(135deg, #ddca92 0%, #b99557 55%, #98753e 100%);
+      color: #123925;
+    }
+    .btn-outline {
+      border: 1px solid rgba(248,244,234,.35);
+      color: #f8f4ea;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,244,234,.98));
+      border: 1px solid rgba(18,57,37,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-pine/96 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-2xl font-semibold tracking-wide text-ivory"><span class="text-gold">Av.</span> Maier Flavia Ioana</a>
+        <nav class="hidden items-center gap-8 text-ivory lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Servicii</a>
+          <a href="#de-ce" class="nav-link">De ce aici</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40722585757" class="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Programare
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-ivory" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-pine px-5 py-5 text-ivory">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Servicii</a>
+          <a href="#de-ce" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">De ce aici</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-pine text-ivory">
+        <div class="absolute inset-0 mesh opacity-35"></div>
+        <div class="absolute left-0 top-28 h-80 w-80 rounded-full bg-gold/18 blur-3xl"></div>
+        <div class="absolute right-0 top-10 h-[28rem] w-[28rem] rounded-full bg-white/6 blur-3xl"></div>
+        <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-5 py-28 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-gold">
+              <i class="fa-solid fa-scale-balanced"></i> Avocat definitiv - Baroul Cluj
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">Experienta lunga. Decizii clare. Apel la rigoare.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ivory/76 md:text-xl">
+              Cabinetul Flavia Ioana Maier reuneste peste 31 de ani de practica in drept civil, comercial, administrativ, penal, familie si munca. Comunicarea este precisa, iar fiecare dosar primeste o strategie atent construita.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40722585757" class="btn-gold inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a href="tel:+40741155529" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-phone-volume"></i> Al doilea numar
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-ivory/72">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">31+ ani experienta</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Firma de Aur</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Baroul Cluj</span>
+            </div>
+          </div>
+          <aside class="glass rounded-[2rem] p-8 shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold">Profil profesional</p>
+            <h2 class="mt-4 font-display text-4xl text-ivory">Cabinet cu leadership, disciplina si prestigiu profesional</h2>
+            <div class="mt-8 grid gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Poziție profesionala</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Bar councillor, dean al Baroului Cluj si trainer in programe universitare.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Practica</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Civil, comercial, administrativ, penal, familie si munca, cu accent pe detaliu.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Programare</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Consultatii in zilele lucratoare, intr-un spatiu organizat si discret.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-pine">Despre</p>
+            <h2 class="font-display text-4xl text-pine md:text-5xl">Prestigiu construit prin consecventa si responsabilitate</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              Cabinet Avocat Maier Flavia Ioana este condus de Flavia-Ioana Maier, avocat definitiv si membru al Baroului Cluj, cu peste 31 de ani de practica. Incepand cu 1994, activitatea ei s-a consolidat prin roluri profesionale importante, inclusiv pozitia de bar councillor si ulterior de dean al Baroului Cluj. Biroul trateaza dosare din drept civil, comercial, administrativ, penal, familie si munca, cu accent pe comunicare transparenta si strategii adaptate.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-gold">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-pine">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-pine p-8 text-ivory shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold">Acreditari</p>
+            <h3 class="mt-4 font-display text-4xl">O practica respectata si recunoscuta in Cluj-Napoca</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Firma de Aur</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Laureat in intervalul 2021-2025, cu evaluari repetate de top.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Academie si mentorat</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Trainer in proiecte universitare si implicare in formarea generatiei noi de avocati.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Mod de lucru</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Consultatii detaliate, analiza documentelor si argumentare construita riguros.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Servicii</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Aria de practica a unui cabinet cu experienta mare</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-ivory">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-ivory/72">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="de-ce" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-pine">De ce aici</p>
+            <h2 class="font-display text-4xl text-pine md:text-5xl">Motivele care sustin un cabinet de top</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-pine">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f8f4ea 0%, #efe4d2 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-pine">Recenzii</p>
+            <h2 class="font-display text-4xl text-pine md:text-5xl">Recenziile publice arata un nivel constant de incredere</h2>
+            <p class="mt-4 text-base leading-8 text-slate-700">Textele publice nu au fost furnizate in prompt, astfel incat afisam doar ratingul verificat si numarul de recenzii.</p>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <div class="review-card rounded-3xl px-7 py-6 shadow-lg">
+              <div class="flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-star"></i></div>
+                <div>
+                  <p class="text-sm uppercase tracking-[0.18em] text-slate-500">Rating Google</p>
+                  <p class="font-display text-4xl text-pine">5/5</p>
+                </div>
+              </div>
+            </div>
+            <div class="review-card rounded-3xl px-7 py-6 shadow-lg">
+              <div class="flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-comments"></i></div>
+                <div>
+                  <p class="text-sm uppercase tracking-[0.18em] text-slate-500">Recenzii verificate</p>
+                  <p class="font-display text-4xl text-pine">6</p>
+                </div>
+              </div>
+            </div>
+            <div class="review-card rounded-3xl px-7 py-6 shadow-lg">
+              <div class="flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <p class="text-sm uppercase tracking-[0.18em] text-slate-500">Observatie</p>
+                  <p class="font-display text-2xl text-pine">Fara text public in prompt</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Contact</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Detalii utile pentru programare</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-ivory/92 hover:text-gold transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon</p>
+              <a href="tel:+40722585757" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">0722 585 757</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-phone-volume"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon secundar</p>
+              <a href="tel:+40741155529" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">0741 155 529</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-clock"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+              <div class="mt-2 space-y-1 text-ivory/90">
+                <p>Luni - Vineri: 08:00 - 16:00</p>
+                <p>Sambata - Duminica: Inchis</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-pine py-12 text-ivory">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-gold">Cabinet Avocat Maier Flavia Ioana</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-ivory/60">Avocat definitiv - Baroul Cluj - peste 31 de ani de practica</p>
+          </div>
+          <div class="space-y-2 text-sm text-ivory/65">
+            <p><i class="fa-solid fa-phone mr-2 text-gold"></i>0722 585 757</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-gold"></i>flaviamaier@yahoo.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-gold"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-ivory/45">© 2026 Cabinet Avocat Maier Flavia Ioana. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Strada Andrei Șaguna 34-36, ap. 29, 400394 Cluj-Napoca',
+          mapsLink: 'https://www.google.com/maps/place/Cabinet+Avocat+Maier+Flavia+Ioana/data=!4m7!3m6!1s0x47490e9e0dc7a1a9:0x8ab486b6123d1187!8m2!3d46.7735773!4d23.5923558!16s%2Fg%2F1ydpvc3h2!19sChIJqaHHDZ4OSUcRhxE9EraGtIo?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-award', label: 'Ani', value: '31+', note: 'practica juridica sustinuta' },
+            { icon: 'fa-solid fa-medal', label: 'Distinctii', value: 'Top', note: 'Firma de Aur si ranking constant' },
+            { icon: 'fa-solid fa-star', label: 'Rating', value: '5/5', note: '6 recenzii verificate' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-scale-balanced', title: 'Drept civil', text: 'Contracte, proprietate, succesiuni si litigii civile cu analiza atenta a documentelor.' },
+            { icon: 'fa-solid fa-building-columns', title: 'Drept comercial', text: 'Raporturi intre societati, contracte si strategii juridice pentru mediul de afaceri.' },
+            { icon: 'fa-solid fa-file-circle-check', title: 'Administrativ si fiscal', text: 'Contestatii, proceduri administrative si situatii cu autoritati publice sau fiscale.' },
+            { icon: 'fa-solid fa-gavel', title: 'Drept penal', text: 'Asistenta si reprezentare in cauze penale, cu atentie la fiecare pas procedural.' },
+            { icon: 'fa-solid fa-heart', title: 'Dreptul familiei', text: 'Divort, custodie, partaj si mosteniri, tratate cu echilibru si discretie.' },
+            { icon: 'fa-solid fa-briefcase', title: 'Dreptul muncii', text: 'Conflicte de munca, contracte si masuri de protectie pentru interesele clientului.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-crown', title: 'Leadership profesional', text: 'Pozitia de dean al Baroului Cluj vorbeste despre greutatea si consecventa practicii.' },
+            { icon: 'fa-solid fa-chalkboard-user', title: 'Formare si mentorat', text: 'Implicare universitara si proiecte de comunicare interprofesionala cu efect real.' },
+            { icon: 'fa-solid fa-shield-halved', title: 'Reputatie verificata', text: 'Aprecieri constante din partea platformelor juridice si a clientilor.' },
+            { icon: 'fa-solid fa-balance-scale', title: 'Claritate in cazuri complexe', text: 'Strategia este structurata, iar comunicarea ramane directa pe tot parcursul dosarului.' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => this.scrolled = window.scrollY > 20);
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

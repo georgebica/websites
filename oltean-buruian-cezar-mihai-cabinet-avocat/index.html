@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oltean-Buruiană Cezar-Mihai Cabinet Avocat | Slatina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#f4f0ea; --panel:#fffdf8; --ink:#191613; --muted:#675f56; --coal:#22201d; --amber:#c48f46; --amber-2:#e2bf7b; --line:rgba(34,32,29,.12); --shadow:0 22px 60px rgba(34,32,29,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Poppins',sans-serif;color:var(--ink);background:
+      radial-gradient(circle at 12% 8%, rgba(196,143,70,.18), transparent 24%),
+      radial-gradient(circle at 90% 12%, rgba(34,32,29,.16), transparent 22%),
+      linear-gradient(180deg,#faf6ef 0%, #efe7db 100%);
+      overflow-x:hidden
+    }
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(34,32,29,.08) 1px, transparent 1px),linear-gradient(90deg, rgba(34,32,29,.08) 1px, transparent 1px);background-size:24px 24px}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{position:fixed;inset:0 0 auto 0;z-index:60;backdrop-filter:blur(14px);background:rgba(244,240,234,.75);border-bottom:1px solid rgba(34,32,29,.08)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--coal),var(--amber));color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(34,32,29,.22)}
+    .brand strong{display:block;font-size:1rem;letter-spacing:.01em}
+    .brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:700}
+    .links{display:flex;align-items:center;gap:22px}
+    .links a{font-size:.8rem;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .links a:hover{color:var(--amber)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 20px;font-weight:900;border:1px solid transparent;transition:.25s ease}
+    .btn-primary{background:linear-gradient(135deg,var(--coal),#3a3733);color:#fff;box-shadow:0 18px 40px rgba(34,32,29,.22)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.52);border-color:rgba(34,32,29,.14)}
+    .btn-ghost:hover{transform:translateY(-2px)}
+    .menu{display:none;background:none;border:none;color:var(--coal);font-size:20px}
+    .hero{padding-top:110px;min-height:100vh;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:42px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;font-weight:900;color:var(--amber)}
+    h1,h2,h3,.serif{font-family:'Merriweather',serif}
+    h1{font-size:clamp(3rem,7vw,6.1rem);line-height:.96;margin:.4rem 0 1rem;color:var(--coal)}
+    .lead{font-size:1.05rem;line-height:1.9;color:var(--muted);max-width:60ch}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .panel{background:linear-gradient(160deg,#fffaf2,#f0e7da);border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .panel::before,.panel::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(196,143,70,.12)}
+    .panel::before{width:260px;height:260px;right:-90px;top:-90px}
+    .panel::after{width:170px;height:170px;left:-60px;bottom:-60px}
+    .panel h3{font-size:2.45rem;line-height:1.05;color:var(--coal);margin:.2rem 0 12px}
+    .panel p{color:var(--muted);line-height:1.8}
+    .chip{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:rgba(196,143,70,.09);color:var(--amber);padding:9px 13px;font-size:.86rem;font-weight:900}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:rgba(34,32,29,.05);border:1px solid rgba(34,32,29,.08);border-radius:18px;padding:18px;text-align:center}
+    .stat b{display:block;font-size:clamp(1.25rem,3vw,2.05rem);font-family:'Merriweather',serif;color:var(--coal)}
+    .section{padding:92px 0}
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,.08))}
+    .head{max-width:780px;margin:0 auto 36px;text-align:center}
+    .head h2{font-size:clamp(2.1rem,5vw,4rem);margin:.4rem 0;color:var(--coal)}
+    .head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .benefits{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{background:rgba(255,253,248,.88);border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 40px rgba(34,32,29,.08);backdrop-filter:blur(10px)}
+    .card{padding:24px;transition:.25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(34,32,29,.22)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(34,32,29,.09),rgba(196,143,70,.22));color:var(--coal);font-size:1.08rem;margin-bottom:16px}
+    .card h3,.review h3,.contact h3{margin:0 0 10px;color:var(--coal);font-size:1.4rem}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft{padding:16px 18px;border-radius:18px;background:rgba(34,32,29,.05);border:1px solid rgba(34,32,29,.08)}
+    .soft b{display:block;color:var(--coal);margin-bottom:6px}
+    .review{padding:22px}
+    .meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.95rem}
+    .stars{color:var(--amber);letter-spacing:2px;margin-bottom:8px}
+    .contact{padding:22px}
+    .contact .big{font-family:'Merriweather',serif;font-size:1.5rem;color:var(--coal);margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--coal);font-weight:900}
+    .hours{display:grid;gap:10px}
+    .hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(34,32,29,.08)}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(34,32,29,.06);color:var(--amber);font-size:.84rem;font-weight:900}
+    .footer{padding:28px 0 42px;border-top:1px solid rgba(34,32,29,.1);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .mini{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(34,32,29,.05);margin-top:16px;color:var(--muted)}
+    .menu-panel{display:none}
+    @media (max-width: 980px){
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .links,.desktop-cta{display:none}
+      .menu{display:block}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .menu-panel{display:none;padding-bottom:16px}
+      .menu-panel.open{display:block}
+      .menu-panel a{display:block;padding:12px 0;border-top:1px solid rgba(34,32,29,.08);font-weight:900;color:var(--coal)}
+      h1{font-size:clamp(2.8rem,13vw,4.8rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <span class="mark"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span><strong>Cabinet Avocat</strong><small>Oltean-Buruiană Cezar-Mihai · Slatina</small></span>
+        </a>
+        <nav class="links">
+          <a href="#despre">Despre</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#avantaje">De ce noi</a>
+          <a href="#recenzii">Recenzii</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="desktop-cta"><a class="btn btn-primary" href="tel:0770498236"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+        <button class="menu" id="menuBtn" aria-label="Meniu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="menu-panel" id="menuPanel">
+        <a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#avantaje">De ce noi</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a>
+        <a class="btn btn-primary" style="margin-top:10px" href="tel:0770498236"><i class="fa-solid fa-phone"></i> 0770 498 236</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-gavel"></i> Cabinet individual de avocat</span>
+          <h1>Apărare curată, strategie directă și argumentație bine construită.</h1>
+          <p class="lead">Cezar-Mihai Oltean-Buruiană își desfășoară activitatea în Slatina, cu experiență solidă în cauze civile și penale și cu competențe extinse în domenii juridice relevante pentru persoane fizice și companii.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:0770498236"><i class="fa-solid fa-phone"></i> 0770 498 236</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Oltean-Buruian%C4%83+Cezar-Mihai+Cabinet+Avocat/data=!4m7!3m6!1s0x40ad39389031a78b:0xc84493bf325eeb36!8m2!3d44.4279467!4d24.356487!16s%2Fg%2F11svxktv9s!19sChIJi6cxkDg5rUARNuteMr-TRMg?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <span class="chip"><i class="fa-solid fa-scale-balanced"></i> Practică individuală</span>
+          <h3 class="serif">Un birou care lucrează direct, fără formule impersonale.</h3>
+          <p>Practica este activă și orientată către dosare în care analiza faptelor, calmul și structura juridică fac diferența.</p>
+          <div class="stats">
+            <div class="stat"><b data-count="20">0</b><span>ani de experiență</span></div>
+            <div class="stat"><b data-count="2">0</b><span>domenii centrale</span></div>
+            <div class="stat"><b data-count="7">0</b><span>recenzii publice</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre cabinet</span>
+          <h2>Abordare sobră, practică și foarte orientată spre dosar</h2>
+          <p>Profilul profesional arată o practică individuală activă în Slatina, cu drept de exercitare la toate nivelurile de jurisdicție și cu apartenență la Baroul Olt și UNBR.</p>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+          <div class="soft"><b><i class="fa-solid fa-scale-balanced"></i> Practică individuală</b>Clientul comunică direct cu avocatul care îl reprezintă.</div>
+          <div class="soft"><b><i class="fa-solid fa-shield-halved"></i> Dosare civile și penale</b>Zonele centrale ale cabinetului sunt bine definite și ușor de urmărit.</div>
+          <div class="soft"><b><i class="fa-solid fa-users"></i> Multe arii conexe</b>Experiență și pentru drept comercial, familiei, muncii sau proprietăți.</div>
+          <div class="soft"><b><i class="fa-solid fa-globe"></i> Limbi de lucru</b>Engleză și franceză la nivel intermediar pentru situații cu componentă externă.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-briefcase"></i> Servicii</span>
+          <h2>Arii de competență pentru spețe simple și complexe</h2>
+          <p>Cabinetul are un profil elastic, cu focus pe apărare, litigii civile și consultanță pentru situații juridice variate.</p>
+        </div>
+        <div class="grid services">
+          <div class="card"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><h3>Drept civil</h3><p>Litigii civile, contracte, moșteniri și chestiuni patrimoniale tratate logic și eficient.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-gavel"></i></div><h3>Drept penal</h3><p>Asistență și apărare în materie penală, cu accent pe strategie și claritatea faptelor.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-building-columns"></i></div><h3>Drept comercial și societar</h3><p>Relații comerciale, structură de firmă și alte probleme de business cu miză juridică.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><h3>Drept administrativ și fiscal</h3><p>Proceduri administrative, raporturi cu autoritățile și zone de conformitate fiscală.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-people-roof"></i></div><h3>Dreptul familiei și al muncii</h3><p>Divorț, custodie, partaj, conflicte de muncă și alte situații cu impact personal.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-house-chimney-window"></i></div><h3>Construcții, proprietăți și asigurări</h3><p>Capacitate extinsă pentru cauze de proprietate, asigurări și domenii conexe de patrimoniu.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avantaje" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-check"></i> De ce noi</span>
+          <h2>Un cabinet individual cu profil foarte amplu</h2>
+        </div>
+        <div class="grid benefits">
+          <div class="card"><div class="icon"><i class="fa-solid fa-user-tie"></i></div><h3>Lucru direct</h3><p>Fără intermediere, fără echipe opace, doar avocatul și dosarul.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><h3>Jurisdicții complete</h3><p>Practica este autorizată pentru toate nivelurile de instanțe relevante.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-clipboard-check"></i></div><h3>Multidisciplinar</h3><p>Domeniile extinse ajută când o problemă juridică are mai multe ramuri.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3>Slatina</h3><p>Poziționare locală, într-un oraș unde accesul rapid la servicii juridice contează.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-star"></i> Recenzii</span>
+          <h2>Recenzii publice și distribuția lor</h2>
+          <p>Profilul public include atât comentarii pozitive, cât și opinii critice. Am păstrat exact textele furnizate.</p>
+        </div>
+        <div class="grid reviews">
+          <div class="review"><div class="meta"><strong>florin. ilie</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Ok"</p></div>
+          <div class="review"><div class="meta"><strong>Alleylla Addellaidde</strong><span>3/5</span></div><div class="stars">★★★☆☆</div><p>"Buna dimineața,mă numesc Luca Adela,am o problema foarte gravă,vecinii din fata casei au intrat abuziv pe terenul meu,și acum vor să toarne ciment in gradina tot pe terenul meu"</p></div>
+          <div class="review"><div class="meta"><strong>KING OF UNIVERSE</strong><span>1/5</span></div><div class="stars">★☆☆☆☆</div><p>"Din nefericire procurorii ce instrumentează dosarele penale sunt incompetenți.... altfel nu s-ar explica cum un măscărici politic ca DARIUS VÎLCOV este încă în libertate ....cel mai probabil acești procurori și-au obținut diploma de studii de la aceiași facultate din Teleorman de unde a obținut și Dragnea diploma ."</p></div>
+          <div class="review"><div class="meta"><strong>Daniel Iordache</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Parchetul de pe lângă judecătoria Slatina"</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+          <h2>Datele cabinetului din Slatina</h2>
+        </div>
+        <div class="grid contact-grid">
+          <div class="contact"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3 class="big">Adresă</h3><p>Strada Mihai Eminescu, 230116 Slatina</p><a class="maps" href="https://www.google.com/maps/place/Oltean-Buruian%C4%83+Cezar-Mihai+Cabinet+Avocat/data=!4m7!3m6!1s0x40ad39389031a78b:0xc84493bf325eeb36!8m2!3d44.4279467!4d24.356487!16s%2Fg%2F11svxktv9s!19sChIJi6cxkDg5rUARNuteMr-TRMg?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-phone"></i></div><h3 class="big">Telefon</h3><p>0770 498 236</p><a class="maps" href="tel:0770498236"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-envelope"></i></div><h3 class="big">Email</h3><p>dellaventurra@yahoo.com</p><a class="maps" href="mailto:dellaventurra@yahoo.com"><i class="fa-solid fa-paper-plane"></i> Trimite mesaj</a></div>
+          <div class="contact">
+            <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <h3 class="big">Program</h3>
+            <p>Programul nu este afișat public în datele disponibile.</p>
+            <div class="mini"><i class="fa-solid fa-star" style="color:var(--amber)"></i> Recenzii publice: 3 pozitive, 1 mixtă, 3 critice</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><strong style="color:var(--coal)">Oltean-Buruiană Cezar-Mihai Cabinet Avocat</strong><div>Slatina · cabinet individual de avocat</div></div>
+      <div>Telefon: 0770 498 236 · Email: dellaventurra@yahoo.com</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const panel = document.getElementById('menuPanel');
+    btn?.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      btn.innerHTML = panel.classList.contains('open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    panel?.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
+      panel.classList.remove('open');
+      btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = Number(el.dataset.count);
+      const io = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.done) {
+          entry.target.dataset.done = '1';
+          const start = performance.now();
+          const tick = now => {
+            const p = Math.min((now - start) / 1200, 1);
+            entry.target.textContent = Math.floor(target * p);
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+      }), {threshold:.5});
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>

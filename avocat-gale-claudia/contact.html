@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Avocat Galeș Claudia, Slatina</title>
+  <meta name="description" content="Contactați Cabinet Individual de Avocat Galeș Claudia din Slatina. Telefon: 0766 716 263. Str. Lipscani 32, program Luni-Vineri 08:30-14:00.">
+  <meta property="og:title" content="Contact — Avocat Galeș Claudia">
+  <meta property="og:description" content="Programați o consultație juridică. Telefon: 0766 716 263. Slatina, Str. Lipscani 32.">
+  <meta property="og:type" content="website">
+  <!-- TODO: Add og:image and og:url when domain is set up -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>body { font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif; }</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">Avocat Galeș Claudia</a>
+        <span class="logo-subtitle">Cabinet Individual de Avocat</span>
+      </div>
+      <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navigare principală">
+        <ul>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="about.html">Despre</a></li>
+          <li><a href="services.html">Servicii</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>Suntem aici pentru a vă ajuta — contactați-ne pentru o consultație</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO + FORM -->
+  <section class="section">
+    <div class="container contact-grid">
+
+      <!-- LEFT: Info -->
+      <div>
+        <h2 class="section-title">Informații de Contact</h2>
+        <div class="section-divider"></div>
+        <div class="contact-info-block">
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">&#9742;</div>
+            <div>
+              <h4>Telefon</h4>
+              <a href="tel:+40766716263">0766 716 263</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">&#9993;</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:gales.claudia@yahoo.com">gales.claudia@yahoo.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">&#9873;</div>
+            <div>
+              <h4>Adresă</h4>
+              <p>Strada Lipscani 32<br>230079 Slatina, Județul Olt<br>România</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">&#9855;</div>
+            <div>
+              <h4>Accesibilitate</h4>
+              <p>Parcare accesibilă pentru persoane cu dizabilități. Toaletă disponibilă.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Schedule -->
+        <h3 style="margin-top: 2rem; margin-bottom: 0.5rem; font-size: 1.1rem;">Program de Lucru</h3>
+        <table class="schedule-table" aria-label="Program de lucru">
+          <tbody>
+            <tr>
+              <th scope="row">Luni</th>
+              <td>08:30 – 14:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Marți</th>
+              <td>08:30 – 14:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Miercuri</th>
+              <td>08:30 – 14:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Joi</th>
+              <td>08:30 – 14:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Vineri</th>
+              <td>08:30 – 14:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Sâmbătă</th>
+              <td class="closed">Închis</td>
+            </tr>
+            <tr>
+              <th scope="row">Duminică</th>
+              <td class="closed">Închis</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div>
+        <h2 class="section-title">Trimiteți un Mesaj</h2>
+        <div class="section-divider"></div>
+        <!-- TODO: Configurați action-ul formularului cu un endpoint real (e.g., Formspree, Netlify Forms) -->
+        <form class="contact-form" action="#" method="POST" novalidate>
+          <div class="form-group">
+            <label for="name">Nume complet *</label>
+            <input type="text" id="name" name="name" required placeholder="Ex: Ion Popescu" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Ex: 07xx xxx xxx" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Ex: ion@email.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subiect</label>
+            <select id="subject" name="subject">
+              <option value="">Selectați domeniul</option>
+              <option value="dreptul-familiei">Dreptul Familiei</option>
+              <option value="drept-civil">Drept Civil</option>
+              <option value="drept-penal">Drept Penal</option>
+              <option value="dreptul-muncii">Dreptul Muncii</option>
+              <option value="altele">Altele</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mesajul dumneavoastră *</label>
+            <textarea id="message" name="message" required placeholder="Descrieți pe scurt situația dumneavoastră juridică..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Trimite Mesajul</button>
+          <p style="font-size: 0.8rem; color: var(--gray-400); margin-top: -0.5rem;">* Câmpuri obligatorii. Vă vom contacta în cel mai scurt timp posibil.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title section-center" style="text-align: center;">Locația Cabinetului</h2>
+      <div class="section-divider" style="margin: 1rem auto 2rem;"></div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.5!2d24.3568183!3d44.4291169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ad393077a5aae5%3A0xa7c2a9d6c11ed525!2sAvocat%20Gale%C8%99%20Claudia!5e0!3m2!1sro!2sro!4v1700000000000"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Locația cabinetului pe Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Preferați să Vorbiți Direct?</h2>
+      <p>Sunați-ne pentru a programa o consultație sau pentru informații suplimentare.</p>
+      <a href="tel:+40766716263" class="btn btn-outline">&#9742; 0766 716 263</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Avocat Galeș Claudia</h3>
+          <p>Cabinet Individual de Avocat cu sediul în Slatina, oferind servicii juridice profesionale din 2001. Membru al Baroului Olt și UNBR.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigare</h4>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="about.html">Despre</a></li>
+            <li><a href="services.html">Servicii</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <a href="tel:+40766716263">0766 716 263</a>
+          <a href="mailto:gales.claudia@yahoo.com">gales.claudia@yahoo.com</a>
+          <p>Str. Lipscani 32, Slatina 230079</p>
+          <p>Luni–Vineri: 08:30–14:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cabinet Individual de Avocat Galeș Claudia-Maria. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

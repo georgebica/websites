@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petruș Maria | Notar public, Cluj-Napoca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{--bg:#f6f1ee;--ink:#22191a;--muted:#6a5d62;--wine:#7d3444;--rose:#b36d78;--gold:#b8925a;--card:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:
+      radial-gradient(circle at top right, rgba(125,52,68,.12), transparent 24%),
+      radial-gradient(circle at left bottom, rgba(184,146,90,.12), transparent 20%),
+      linear-gradient(180deg,#fbf7f5 0%,#f6f1ee 100%)}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(251,247,245,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(34,25,26,.08)}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 0}
+    .brand{display:flex;flex-direction:column}
+    .brand strong{font-family:Crimson Pro,serif;font-size:1.15rem}
+    .brand span{font-size:.83rem;color:var(--muted)}
+    .navlinks{display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+    .navlinks a:hover{color:var(--wine)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--wine),#9b4d5a);color:#fff}
+    .btn.ghost{border:1px solid rgba(34,25,26,.1);background:#fff}
+    .hero{padding:58px 0 26px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(125,52,68,.08);color:var(--wine);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    h1,h2,h3{font-family:Crimson Pro,serif;margin:0}
+    h1{font-size:clamp(3rem,7vw,5.2rem);line-height:1;max-width:11ch;margin:18px 0 14px}
+    .lead{max-width:58ch;color:var(--muted);font-size:1.03rem;line-height:1.85}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .panel,.card,.review,.contact{background:var(--card);border:1px solid rgba(34,25,26,.08);border-radius:24px}
+    .panel{padding:24px}
+    .hero-panel{padding:22px;box-shadow:0 20px 54px rgba(34,25,26,.08)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{padding:18px;border-radius:20px;background:linear-gradient(180deg,#ffffff,#f7efed);border:1px solid rgba(34,25,26,.06)}
+    .stat b{display:block;font-family:Crimson Pro,serif;font-size:1.55rem;color:var(--wine);margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:.9rem}
+    section{padding:36px 0}
+    .title{display:flex;justify-content:space-between;gap:18px;align-items:end;flex-wrap:wrap;margin-bottom:18px}
+    .title p{margin:0;color:var(--muted);max-width:54ch;line-height:1.7}
+    .title h2{font-size:clamp(2rem,4vw,3.1rem)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .panel p,.card p,.review p,.contact p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:20px}
+    .card i,.contact i,.review .stars{color:var(--gold)}
+    .card h3,.contact h3,.review h3{font-size:1.48rem;margin:10px 0 8px}
+    .reviews{display:grid;grid-template-columns:1fr;gap:16px}
+    .review{padding:20px}
+    .review header{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+    .review .name{font-weight:700}
+    .review .meta{color:var(--muted);font-size:.88rem}
+    .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .contact{padding:18px}
+    .footer{padding:28px 0 40px;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 22px;background:#fff;border:1px solid rgba(34,25,26,.08);border-radius:24px}
+    @media(max-width:900px){.hero-grid,.two-col,.grid,.contact-grid{grid-template-columns:1fr}h1{max-width:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><strong>Petruș Maria</strong><span>Notar public, Cluj-Napoca</span></div>
+        <div class="navlinks"><a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#incredere">Încredere</a><a href="#recenzii">Recenzie</a><a href="#contact">Contact</a></div>
+        <a class="btn primary" href="tel:0264431263"><i class="fa-solid fa-phone"></i> Sună acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-scale-balanced"></i> Birou notar public</div>
+          <h1>Un profil sobru, cu date publice puține și feedback rezervat.</h1>
+          <p class="lead">Petruș Maria este un birou notarial din Cluj-Napoca, pe Calea Dorobanților 25, cu servicii standard de autentificare și consultanță notarială, într-o formulă personală și foarte discretă în mediul online.</p>
+          <div class="actions">
+            <a class="btn primary" href="tel:0264431263"><i class="fa-solid fa-phone"></i> 0264 431 263</a>
+            <a class="btn ghost" href="https://www.google.com/maps/place/Petru%C5%9F+Maria/data=!4m7!3m6!1s0x47490c23c1f7cd73:0xbbfdbaf595b30d38!8m2!3d46.7721!4d23.6021999!16s%2Fg%2F1hc46h8c6!19sChIJc833wSMMSUcROA2zlfW6_bs?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi harta</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="stats">
+            <div class="stat"><b>1/5</b><span>rating public</span></div>
+            <div class="stat"><b>1</b><span>recenzie publică</span></div>
+            <div class="stat"><b>FR</b><span>limbă de lucru</span></div>
+            <div class="stat"><b>Cluj</b><span>jurisdicție locală</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre">
+      <div class="wrap two-col">
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-circle-info"></i> Despre birou</div>
+          <h2 style="font-size:clamp(2rem,4vw,3.1rem);margin-top:12px">Notariat de proximitate, într-o zonă profesională densă.</h2>
+          <p>Biroul este amplasat pe Calea Dorobanților 25, la parter, în Cluj-Napoca, și operează în cadrul Camerei Notarilor Publici Cluj. Datele publice descriu un birou mic, în practica obișnuită a serviciilor notariale standard.</p>
+          <p>Profilul online este discret, iar evaluarea publică foarte scăzută cere transparență. Tocmai de aceea pagina rămâne simplă și factuală, fără promisiuni care nu apar în date.</p>
+        </div>
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-clock"></i> Program public</div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Informație publică limitată</h3>
+            <p>Orele de lucru nu sunt listate clar în datele structurate.</p>
+          </div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Contact direct recomandat</h3>
+            <p>Telefonul și adresa de email sunt cele mai clare puncte de pornire pentru programare.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-pen-nib"></i> Servicii</div><h2>Servicii notariale standard.</h2></div><p>Servicii obișnuite pentru un birou public de notariat din Cluj.</p></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-house"></i><h3>Imobiliare</h3><p>Contracte de vânzare, donație și documente pentru proprietăți.</p></article>
+          <article class="card"><i class="fa-solid fa-scroll"></i><h3>Succesiuni</h3><p>Acte pentru moșteniri și documente de partaj.</p></article>
+          <article class="card"><i class="fa-solid fa-user-check"></i><h3>Procuri</h3><p>Împuterniciri generale sau speciale, în funcție de nevoie.</p></article>
+          <article class="card"><i class="fa-solid fa-file-signature"></i><h3>Autentificări</h3><p>Semnături, copii legalizate și declarații notariale.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Documente în franceză</h3><p>Clienții pot folosi și limba franceză pentru unele situații uzuale.</p></article>
+          <article class="card"><i class="fa-solid fa-scale-balanced"></i><h3>Consiliere</h3><p>Explicații despre pașii administrativi ai unui act notarial.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="incredere">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-shield"></i> Încredere</div><h2>Ce poți deduce din datele publice.</h2></div></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-star"></i><h3>Rating scăzut</h3><p>1/5 pe baza unei singure recenzii publice afișate.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Franceză disponibilă</h3><p>Un avantaj pentru clienți care preferă comunicarea în franceză.</p></article>
+          <article class="card"><i class="fa-solid fa-location-dot"></i><h3>Adresă centrală</h3><p>Calea Dorobanților 25, o zonă profesională activă din Cluj.</p></article>
+          <article class="card"><i class="fa-solid fa-lock"></i><h3>Profil discret</h3><p>Prezență digitală minimă, cu accent pe contact direct.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-message"></i> Recenzie</div><h2>Singura recenzie publică afișată în date.</h2></div></div>
+        <div class="reviews">
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i></div><header><div class="name">Laura</div><div class="meta">Google</div></header><p>„Am avut o experiență neplăcută deoarece notarul nu ne-a pus la dispoziție documentele necesare și informațiile importante necesare tranzacției...”</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-envelope"></i> Contact</div><h2>Datele oficiale publice.</h2></div></div>
+        <div class="contact-grid">
+          <article class="contact"><i class="fa-solid fa-location-dot"></i><h3>Adresă</h3><p>Calea Dorobanților 25, 400117 Cluj-Napoca.</p><p><a href="https://www.google.com/maps/place/Petru%C5%9F+Maria/data=!4m7!3m6!1s0x47490c23c1f7cd73:0xbbfdbaf595b30d38!8m2!3d46.7721!4d23.6021999!16s%2Fg%2F1hc46h8c6!19sChIJc833wSMMSUcROA2zlfW6_bs?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener">Vezi pe hartă</a></p></article>
+          <article class="contact"><i class="fa-solid fa-phone"></i><h3>Telefon</h3><p><a href="tel:0264431263">0264 431 263</a></p><p>Linie directă pentru programare.</p></article>
+          <article class="contact"><i class="fa-solid fa-clock"></i><h3>Program</h3><p>Nu este listat public în mod clar.</p><p>Se recomandă contactarea biroului.</p></article>
+          <article class="contact"><i class="fa-solid fa-at"></i><h3>Email</h3><p>bnpetrusmaria@yahoo.com</p><p>Contact pentru întrebări și programări.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div><strong style="font-family:Crimson Pro,serif;font-size:1.25rem;color:var(--ink)">Petruș Maria</strong><p style="margin:6px 0 0">Cluj-Napoca • profil public discret</p></div>
+      <div>© 2026 • Birou notarial activ</div>
+    </div>
+  </footer>
+</body>
+</html>

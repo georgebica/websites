@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SC AUTO NICU & COSTI SERVICE SRL | Service Auto București</title>
+  <meta name="description" content="SC AUTO NICU & COSTI SERVICE SRL este un service auto din București specializat in reparatii, mentenanta si piese auto. Auto repair shop in Sector 3." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Archivo', 'sans-serif'],
+            display: ['Cormorant Garamond', 'serif']
+          },
+          colors: {
+            ink: '#09131d',
+            blue: '#12304a',
+            red: '#e24d3b',
+            amber: '#f2b34d',
+            ivory: '#f7f3ec'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Archivo', sans-serif;
+      color: #f7f3ec;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(226,77,59,.18), transparent 20%),
+        radial-gradient(circle at 84% 10%, rgba(242,179,77,.14), transparent 24%),
+        linear-gradient(180deg, #09131d 0%, #12304a 34%, #f7f3ec 34%, #f7f3ec 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 68px 68px;
+      opacity: .18;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .mesh {
+      background-image: linear-gradient(rgba(226,77,59,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(226,77,59,.08) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .section-light { background: #f7f3ec; color: #102133; }
+    .section-dark {
+      background: linear-gradient(180deg, #12304a 0%, #09131d 100%);
+      color: #f7f3ec;
+    }
+    .card {
+      background: rgba(255,255,255,.84);
+      border: 1px solid rgba(16,33,51,.08);
+      box-shadow: 0 20px 54px rgba(9,19,29,.10);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(226,77,59,.18);
+      backdrop-filter: blur(16px);
+    }
+    .nav-link { position: relative; text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0; height: 1px;
+      background: #e24d3b;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-red {
+      background: linear-gradient(135deg, #ff7a69 0%, #e24d3b 55%, #b41f19 100%);
+      color: #f7f3ec;
+    }
+    .btn-outline {
+      border: 1px solid rgba(247,243,236,.35);
+      color: #f7f3ec;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,243,236,.98));
+      border: 1px solid rgba(16,33,51,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-ink/96 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-2xl font-semibold tracking-widest text-ivory">AUTO NICU & COSTI</a>
+        <nav class="hidden items-center gap-8 text-ivory lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Servicii</a>
+          <a href="#de-ce" class="nav-link">De ce noi</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40723007249" class="btn-red inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Sunati acum
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-ivory" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-ink px-5 py-5 text-ivory">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Servicii</a>
+          <a href="#de-ce" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">De ce noi</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-ink text-ivory">
+        <div class="absolute inset-0 mesh opacity-32"></div>
+        <div class="absolute left-0 top-24 h-80 w-80 rounded-full bg-red/18 blur-3xl"></div>
+        <div class="absolute right-0 top-12 h-[28rem] w-[28rem] rounded-full bg-amber/10 blur-3xl"></div>
+        <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-5 py-28 lg:grid-cols-[1.06fr_0.94fr] lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-red/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-red">
+              <i class="fa-solid fa-car-wrench"></i> Service auto, nu chauffeur service
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">Service auto pentru reparatii corecte si lucrari bine facute.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ivory/78 md:text-xl">
+              SC AUTO NICU & COSTI SERVICE SRL este un atelier auto din Bucuresti, cu activitate in reparatii si mentenanta, piese auto si lucrari autorizate RAR. Fiecare masina primeste o abordare directa si clara.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40723007249" class="btn-red inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-location-dot"></i> Localizare
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-ivory/72">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">4.8 rating</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">252 recenzii</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">RAR autorizat</span>
+            </div>
+          </div>
+          <aside class="glass rounded-[2rem] border border-white/10 p-8 shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-red">Profil atelier</p>
+            <h2 class="mt-4 font-display text-4xl text-ivory">Organizare, atitudine directa si tehnicieni implicati</h2>
+            <div class="mt-8 grid gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-ivory">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Activitate</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Reparatii, mentenanta, piese auto si servicii de diagnostic.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-ivory">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Amplasare</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Bulevardul Theodor Pallady 287, Sector 3, Bucuresti.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-ivory">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Luni - Joi: 10:00 - 17:00. Vineri si weekend: inchis.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue">Despre</p>
+            <h2 class="font-display text-4xl text-blue md:text-5xl">Un service auto mic, cu istoric real si functionare activa</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              SC AUTO NICU & COSTI SERVICE SRL este un SRL activ din 2015, cu profil de reparatii si mentenanta auto in Bucuresti. Datele oficiale si feedback-ul clientilor indica un atelier cunoscut pentru comunicare directa, lucrari efectuate corect si capacitatea de a gestiona reparatii complexe, inclusiv tinichigerie si vopsitorie. In pagina noastra folosim adresa operationala din prompt si prezentam activitatea conform inscrierii reale, nu etichetei incorecte de pe harti.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-red">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-blue">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-blue p-8 text-ivory shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-red">Afacere in lucru</p>
+            <h3 class="mt-4 font-display text-4xl">Service de cartier cu feedback mixt, dar miez tehnic clar</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Licente</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">CUI si inregistrare ONRC active, cu functie de reparatii si intretinere auto.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Capacitate</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Echipa mica, cu 2 angajati si 2 administratori mentionati in datele financiare.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Aparat de lucru</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Relatie directa cu clientul si explicatii clare despre lucrari si costuri.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-red">Servicii</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Lucrari auto si piese pentru reparatii complete</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-red/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-red/12 text-red">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-ivory">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-ivory/72">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="de-ce" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue">De ce noi</p>
+            <h2 class="font-display text-4xl text-blue md:text-5xl">Patru motive pentru care atelierul este luat in serios</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-red/12 text-red">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-blue">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f7f3ec 0%, #eef1f5 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue">Recenzii</p>
+            <h2 class="font-display text-4xl text-blue md:text-5xl">Recenzii reale, inclusiv feedback-ul critic</h2>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            <article v-for="review in reviews" :key="review.author + review.stars + review.text.slice(0, 8)" class="review-card rounded-3xl p-7" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-red">
+                <i v-for="n in review.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-5 text-base leading-8 text-slate-700">"{{ review.text }}"</p>
+              <p class="mt-5 font-semibold text-blue">{{ review.author }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-red">Contact</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Datele atelierului si programul</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red/12 text-red"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-ivory/92 hover:text-red transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red/12 text-red"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon</p>
+              <a href="tel:+40723007249" class="mt-2 block text-lg text-ivory/92 hover:text-red transition">0723 007 249</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red/12 text-red"><i class="fa-solid fa-envelope"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Email</p>
+              <a href="mailto:autonicu.costiservice@gmail.com" class="mt-2 block text-lg text-ivory/92 hover:text-red transition">autonicu.costiservice@gmail.com</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red/12 text-red"><i class="fa-solid fa-clock"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+              <div class="mt-2 space-y-1 text-ivory/90">
+                <p>Luni - Joi: 10:00 - 17:00</p>
+                <p>Vineri - Duminica: Inchis</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-night py-12 text-ivory">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-red">AUTO NICU & COSTI SERVICE SRL</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-ivory/60">Service auto in Bucuresti, activ si orientat pe reparatii</p>
+          </div>
+          <div class="space-y-2 text-sm text-ivory/65">
+            <p><i class="fa-solid fa-phone mr-2 text-red"></i>0723 007 249</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-red"></i>autonicu.costiservice@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-red"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-ivory/45">© 2026 SC AUTO NICU & COSTI SERVICE SRL. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Bulevardul Theodor Pallady 287, 032258 București',
+          mapsLink: 'https://www.google.com/maps/place/SC+AUTO+NICU+%26+COSTI+SERVICE+SRL/data=!4m7!3m6!1s0x40b1fc18ef6cb499:0x2f029d6a1589325b!8m2!3d44.4113316!4d26.1830336!16s%2Fg%2F11cnd7td65!19sChIJmbRs7xj8sUARWzKJFWqdAi8?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-industry', label: 'Ani', value: '10+', note: 'de activitate activa' },
+            { icon: 'fa-solid fa-users', label: 'Echipa', value: '2', note: 'asociati si administratori' },
+            { icon: 'fa-solid fa-star', label: 'Rating', value: '4.8', note: 'din 5 pe Google' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-car-burst', title: 'Reparatii auto', text: 'Interventii generale pentru masina, de la probleme mecanice la lucrari de intretinere.' },
+            { icon: 'fa-solid fa-screwdriver-wrench', title: 'Mentenanta si diagnoza', text: 'Verificare, identificare de defectiuni si lucrari corective fara pasi inutili.' },
+            { icon: 'fa-solid fa-store', title: 'Piese auto', text: 'Comercializare de piese si componente pentru reparatii si inlocuiri.' },
+            { icon: 'fa-solid fa-shield-heart', title: 'Service autorizat RAR', text: 'Lucru incadrat in cadrul unui service autorizat, cu procese mai clare si mai sigure.' },
+            { icon: 'fa-solid fa-file-signature', title: 'Consultanta tehnica', text: 'Explicatii despre lucrare, cost si optiuni de reparatie intr-un limbaj clar.' },
+            { icon: 'fa-solid fa-headset', title: 'Programari si comunicare', text: 'Raspuns direct si programare organizata pentru gestionarea lucrarilor in atelier.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-car-on', title: 'Atelier real, nu eticheta gresita', text: 'Activitatea oficiala este de reparatii si mentenanta auto, nu serviciu de sofer.' },
+            { icon: 'fa-solid fa-wrench', title: 'Lucrari de mecanica si tinichigerie', text: 'Recenziile arata interventii pe mecanica, vopsitorie si reparatii complete.' },
+            { icon: 'fa-solid fa-comment-dots', title: 'Comunicare directa', text: 'Clientii mentioneaza raportare si update-uri pe durata reparatiilor.' },
+            { icon: 'fa-solid fa-scale-balanced', title: 'Date financiare si juridice clare', text: 'Companie activa, inregistrata si usor de verificat in sursele oficiale.' }
+          ],
+          reviews: [
+            { author: 'Adrian Dragut', stars: 5, text: 'Super ok' },
+            { author: 'Adx Cunningham', stars: 2, text: 'Not recommended' },
+            { author: 'Mohamed Osman', stars: 4, text: 'Effecient team' },
+            { author: 'Razvan Cimpoca', stars: 5, text: 'Service multimarca deservit de profesionisti. Dl. Mihai prompt si operativ. Am avut lucrare pe tinichigerie, vopsitorie Opel Astra H in urma unui accident si mecanica la Kia Ceed. Ambele lucrari realizate foarte bine. Ca si relativ nou client al lor recomand cu incredere!' },
+            { author: 'Eu', stars: 1, text: 'Am sunat vineri seara sa ma programez cand se poate, pentru un schimb de ulei si filtru. Toate bune, am vorbit cu cineva si a spus sa vin luni la ora 10. Am facut schimb de tura cu un coleg, am spalat masina, am completat piesele si la ora 9.40 am fost la service. Mi s-a spus la receptie ca am fost programat gresit si ca mai am de asteptat. Am plecat foarte nemultumit. Neseriosi din start cu atitudine sfidatoare si comportament lipsit de respect fata de clienti.' },
+            { author: 'Iulian Mihalcea', stars: 5, text: 'In luna iunie m-am prezentat cu masina personala, Opel Insignia, pentru unele reparatii de tinichigerie si vopsitorie totala. Termenul de executie a fost respectat, masina fiind gata cu mai multe zile inainte de termen, iar rezultatele au fost uimitoare. Service-ul are laborator de vopsea propriu, cuptor unde autoturismul este lasat dupa vopsire. Felicitari echipei, dar mai ales lui Daniel care este un artist.' },
+            { author: 'Mihalcea Gabriel', stars: 1, text: 'Colaborarea cu acest service auto a fost foarte proasta din cauza lipsei de comunicare. Dupa doua luni in care masina a stat dezmembrata afara, mi s-a refuzat repararea. Este absolut inacceptabil ca un service auto sa trateze un client in acest mod.' },
+            { author: 'Stefania Smaranda', stars: 5, text: 'Comunicare si profesionalism. Am fost foarte multumiti de rezultatul final. Pe toata durata reparatiei ni s-au dat update-uri. Echipa este cu adevarat profesionista. Recomand cu incredere!' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => this.scrolled = window.scrollY > 20);
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

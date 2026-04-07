@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KNZ Detailing | Detailing Auto București</title>
+  <meta name="description" content="KNZ Detailing este un service de detailing auto din București cu rating 4.8/5. Servicii de detailing interior si exterior, programare si plati moderne." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['DM Sans', 'sans-serif'],
+            display: ['Cormorant Garamond', 'serif']
+          },
+          colors: {
+            night: '#071017',
+            ink: '#0f1b26',
+            teal: '#1a8c8c',
+            mint: '#8ee0d6',
+            gold: '#d4a64d',
+            ivory: '#f8f4ef'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      color: #f8f4ef;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(26,140,140,.20), transparent 20%),
+        radial-gradient(circle at 82% 12%, rgba(212,166,77,.14), transparent 24%),
+        linear-gradient(180deg, #071017 0%, #0f1b26 34%, #f8f4ef 34%, #f8f4ef 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 68px 68px;
+      opacity: .17;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .mesh {
+      background-image: linear-gradient(rgba(26,140,140,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(26,140,140,.08) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .section-light { background: #f8f4ef; color: #10202b; }
+    .section-dark {
+      background: linear-gradient(180deg, #0f1b26 0%, #071017 100%);
+      color: #f8f4ef;
+    }
+    .card {
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(16,32,43,.08);
+      box-shadow: 0 20px 54px rgba(7,16,23,.10);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(26,140,140,.18);
+      backdrop-filter: blur(16px);
+    }
+    .nav-link { position: relative; text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0; height: 1px;
+      background: #d4a64d;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-gold {
+      background: linear-gradient(135deg, #edd08a 0%, #d4a64d 55%, #a97821 100%);
+      color: #071017;
+    }
+    .btn-outline {
+      border: 1px solid rgba(248,244,239,.35);
+      color: #f8f4ef;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,244,239,.98));
+      border: 1px solid rgba(16,32,43,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-night/96 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-3xl font-semibold tracking-widest text-ivory">KNZ Detailing</a>
+        <nav class="hidden items-center gap-8 text-ivory lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Servicii</a>
+          <a href="#de-ce" class="nav-link">De ce noi</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40765501043" class="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Programare
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-ivory" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-night px-5 py-5 text-ivory">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Servicii</a>
+          <a href="#de-ce" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">De ce noi</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-night text-ivory">
+        <div class="absolute inset-0 mesh opacity-32"></div>
+        <div class="absolute left-0 top-24 h-80 w-80 rounded-full bg-teal/20 blur-3xl"></div>
+        <div class="absolute right-0 top-12 h-[28rem] w-[28rem] rounded-full bg-gold/10 blur-3xl"></div>
+        <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-5 py-28 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-gold">
+              <i class="fa-solid fa-sparkles"></i> Detailing auto in Bucuresti
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">Masina curata perfect, prezentata impecabil.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ivory/78 md:text-xl">
+              KNZ Detailing lucreaza cu detalii fine, programari clare si standarde ridicate pentru interior si exterior. O abordare premium, adaptata masinilor care merita o prezenta impecabila.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40765501043" class="btn-gold inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-location-dot"></i> Localizare
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-ivory/72">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">4.8/5 rating</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">77 recenzii</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Programare necesara</span>
+            </div>
+          </div>
+          <aside class="glass rounded-[2rem] border border-white/10 p-8 shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold">Profil atelier</p>
+            <h2 class="mt-4 font-display text-4xl text-ivory">Finisaj curat, felul in care trebuie sa arate o masina bine ingrijita</h2>
+            <div class="mt-8 grid gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-ivory">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Accesibilitate</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Locuri de parcare si intrare accesibile pentru clienti.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-ivory">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Plati</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Carduri si plati NFC acceptate pentru confort si rapiditate.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-ivory">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Luni - Vineri: 09:00 - 17:00. Sambata si duminica inchis.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-teal">Despre</p>
+            <h2 class="font-display text-4xl text-teal md:text-5xl">Detailing profesional cu rezultate constante si feedback excelent</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              KNZ Detailing este o firma de detailing auto din Bucuresti, cu activitate de aproximativ 10 ani si o reputatie solida in randul clientilor. Promptitudinea, comunicarea clara si grija pentru detaliu sunt mentionate in mod repetat in recenzii. Oferta acopera curatare interioara si exterioara, cosmetica auto si finisaje, cu programare si plata moderna.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-gold">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-teal">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-teal p-8 text-ivory shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold">Comoditati</p>
+            <h3 class="mt-4 font-display text-4xl">Confort, acces si programare fara complicatii</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Accesibilitate</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Parcare si intrare accesibile pentru carucioare si persoane cu mobilitate redusa.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Plati moderne</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Carduri de credit, debit si NFC.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Programare</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Programare recomandata sau obligatorie, in functie de lucrare.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Servicii</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Servicii de detailing si cosmetica auto</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-ivory">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-ivory/72">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="de-ce" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-teal">De ce noi</p>
+            <h2 class="font-display text-4xl text-teal md:text-5xl">Patru motive pentru care clientii se intorc</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-teal">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f8f4ef 0%, #eef5f4 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-teal">Recenzii</p>
+            <h2 class="font-display text-4xl text-teal md:text-5xl">Recenzii reale din prompt, prezentate clar</h2>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            <article v-for="review in reviews" :key="review.author + review.text.slice(0, 12)" class="review-card rounded-3xl p-7" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-gold">
+                <i v-for="n in review.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-5 text-base leading-8 text-slate-700">"{{ review.text }}"</p>
+              <p class="mt-5 font-semibold text-teal">{{ review.author }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Contact</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Datele atelierului si programul de lucru</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-ivory/92 hover:text-gold transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon</p>
+              <a href="tel:+40765501043" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">0765 501 043</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-envelope"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Email</p>
+              <a href="mailto:ppr.kenzo@yahoo.com" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">ppr.kenzo@yahoo.com</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-clock"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+              <div class="mt-2 space-y-1 text-ivory/90">
+                <p>Luni - Vineri: 09:00 - 17:00</p>
+                <p>Sambata - Duminica: Inchis</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-night py-12 text-ivory">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-gold">KNZ Detailing</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-ivory/60">Detaling auto premium in Bucuresti</p>
+          </div>
+          <div class="space-y-2 text-sm text-ivory/65">
+            <p><i class="fa-solid fa-phone mr-2 text-gold"></i>0765 501 043</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-gold"></i>ppr.kenzo@yahoo.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-gold"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-ivory/45">© 2026 KNZ Detailing. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Strada Acordului Nr. 6, 012962 București',
+          mapsLink: 'https://www.google.com/maps/place/KNZ+Detailing/data=!4m7!3m6!1s0x40b203d068db5f65:0x9334ba6eb2705e64!8m2!3d44.4867909!4d26.0212946!16s%2Fg%2F11c17g8xz5!19sChIJZV_baNADskARZF5wsm66NJM?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-award', label: 'Ani', value: '10+', note: 'de activitate in Bucuresti' },
+            { icon: 'fa-solid fa-sparkles', label: 'Rating', value: '4.8', note: 'din 5 pe Google' },
+            { icon: 'fa-solid fa-comments', label: 'Recenzii', value: '77', note: 'feedbackuri verificate' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-broom', title: 'Detaling interior', text: 'Curatare profunda pentru scaune, mochete, plastice si suprafete sensibile.' },
+            { icon: 'fa-solid fa-spray-can-sparkles', title: 'Detaling exterior', text: 'Spalare si finisaj pentru caroserie, jante si elemente exterioare cu aspect premium.' },
+            { icon: 'fa-solid fa-wand-magic-sparkles', title: 'Cosmetica auto', text: 'Ajustari fine de aspect, pentru o masina prezentabila si ingrijita in detaliu.' },
+            { icon: 'fa-solid fa-file-signature', title: 'Programare rapida', text: 'Raspuns clar si programare usor de stabilit, inclusiv prin telefon.' },
+            { icon: 'fa-solid fa-credit-card', title: 'Plati moderne', text: 'Carduri si NFC pentru o experienta de plata convenabila.' },
+            { icon: 'fa-solid fa-wheelchair', title: 'Accesibilitate', text: 'Parcare si intrare accesibile, pentru un contact usor cu atelierul.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-star', title: 'Nivel premium', text: 'Recenziile vorbesc despre finisaj foarte bun, preturi corecte si atentie reala la detaliu.' },
+            { icon: 'fa-solid fa-clock', title: 'Programari clare', text: 'Clientii apreciaza usurinta de a stabili un interval si respectarea acestuia.' },
+            { icon: 'fa-solid fa-mug-hot', title: 'Ospitalitate', text: 'Experienta de la sosire este primitoare si bine organizata.' },
+            { icon: 'fa-solid fa-shield-halved', title: 'Lucru meticulos', text: 'Fiecare masina primeste o abordare atent controlata, de la curatare la finisare.' }
+          ],
+          reviews: [
+            { author: 'Ovi Visan', stars: 5, text: 'I brought my car here for the first time for a deep clean and I can truly say that I am 100% satisfied! The prices are very good and the services even better! Baha, the owner is very kind and welcoming, he even offered me a coffee upon arrival. The level of detail offered to my car was amazing and I can truly say that I will come back in the future! Highly recommend!' },
+            { author: 'ionutz p', stars: 5, text: 'Excellent detailing services! The owner Baha is very cool guy! 100% recommend if you want your car to look perfect!' },
+            { author: 'Gary Hampson', stars: 5, text: 'Took my car and my wife s car today very happy with the mini valet for my car and in the interior/exterior clean on my wife s car. Will be going back again for sure.' },
+            { author: 'Palarie Ioana Cristina', stars: 5, text: 'I brought my car here for the first time and I can definitely say I was satisfied. The service was great and the prices are fair. My car looked and smelled very clean at the end of the session. Thank you!' },
+            { author: 'Vladislavs Blumbergs', stars: 5, text: 'Great service for reasonable price, easy to schedule an appointment!' },
+            { author: 'David Ruska', stars: 5, text: 'Very professional services and products. Check them out!' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => this.scrolled = window.scrollY > 20);
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

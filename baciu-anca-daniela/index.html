@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avocat Baciu Anca Daniela | Cabinet Avocat Cluj-Napoca</title>
+  <meta name="description" content="Avocat definitiv in Cluj-Napoca cu peste 23 de ani de experienta. Drept civil, comercial, familie, munca si restructurare. Consultatii cu programare." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Inter', 'sans-serif'],
+            display: ['Cormorant Garamond', 'serif']
+          },
+          colors: {
+            ink: '#08111f',
+            ink2: '#0d1728',
+            navy: '#11243d',
+            gold: '#c9a84c',
+            ivory: '#f8f5ee',
+            mist: '#b9c3d1'
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(201,168,76,.18), 0 24px 80px rgba(4,10,18,.35)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg2: #0d1728;
+      --gold: #c9a84c;
+      --ivory: #f8f5ee;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(201,168,76,.11), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(120,146,194,.12), transparent 22%),
+        linear-gradient(180deg, #08111f 0%, #0b1321 28%, #f8f5ee 28%, #f8f5ee 100%);
+      color: #11243d;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mix-blend-mode: screen;
+      opacity: .18;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .glass {
+      background: rgba(8,17,31,.56);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(201,168,76,.18);
+    }
+    .section-light { background: #f8f5ee; }
+    .section-dark {
+      background:
+        radial-gradient(circle at top right, rgba(201,168,76,.14), transparent 30%),
+        linear-gradient(180deg, #0b1321 0%, #08111f 100%);
+      color: #f8f5ee;
+    }
+    .grid-mesh {
+      background-image:
+        linear-gradient(rgba(201,168,76,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,.08) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .card {
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(17,36,61,.08);
+      box-shadow: 0 18px 50px rgba(8,17,31,.08);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(201,168,76,.16);
+      backdrop-filter: blur(16px);
+    }
+    .nav-link {
+      position: relative;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: .72rem;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .hero-orb {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(14px);
+      opacity: .4;
+      pointer-events: none;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #e1c775 0%, #c9a84c 60%, #a98726 100%);
+      color: #08111f;
+      box-shadow: 0 16px 40px rgba(201,168,76,.22);
+    }
+    .btn-outline {
+      border: 1px solid rgba(248,245,238,.38);
+      color: #f8f5ee;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(248,245,238,.96));
+      border: 1px solid rgba(17,36,61,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-ink/95 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-2xl font-semibold tracking-wide text-ivory">
+          <span class="text-gold">Av.</span> Baciu Anca Daniela
+        </a>
+        <nav class="hidden items-center gap-8 text-ivory lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Domenii</a>
+          <a href="#alegere" class="nav-link">De ce eu</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40744212623" class="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Programare
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-ivory" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-ink/98 px-5 py-5 text-ivory">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/85">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/85">Domenii</a>
+          <a href="#alegere" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/85">De ce eu</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/85">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/85">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-ink text-ivory">
+        <div class="absolute inset-0 grid-mesh opacity-40"></div>
+        <div class="hero-orb left-8 top-24 h-72 w-72 bg-gold/25"></div>
+        <div class="hero-orb right-0 top-32 h-96 w-96 bg-slate-400/15"></div>
+        <div class="mx-auto flex min-h-screen max-w-7xl items-center px-5 py-28 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-gold">
+              <i class="fa-solid fa-scale-balanced"></i> Avocat definitiv - Cluj-Napoca
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">
+              Justitia nu este abstracta. Este dreptul dumneavoastra.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ivory/78 md:text-xl">
+              Avocat definitiv cu peste 23 de ani de experienta in drept civil, comercial si al familiei. Baroul Cluj. Legitimația europeana de avocat. Consultanta personalizata, cu atentie la detalii si strategie juridica clara.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40744212623" class="btn-gold inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-location-dot"></i> Localizare birou
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-ivory/70">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Baroul Cluj</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Din 2003</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Toate instantele</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Engleza C1</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-navy">Despre</p>
+            <h2 class="font-display text-4xl text-ink md:text-5xl">O practica juridica asezata, precisa si orientata spre rezultate</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              Cu o experienta de peste 23 de ani in avocatura, ofer servicii juridice complete si personalizate din inima orasului Cluj-Napoca. Inscrisa in Baroul Cluj din anul 2003, am dreptul de a reprezenta clientii in fata tuturor instantelor din Romania. Detin Legitimația Europeana de Avocat, ceea ce imi permite sa ofer asistenta juridica si in context transfrontalier. Vorbesc limba engleza la nivel avansat (C1), fiind astfel pregatita sa asist atat clienti romani, cat si internationali. Fiecare caz este tratat cu seriozitate, confidentialitate si atentie la detalii.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-gold">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-ink">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="relative overflow-hidden rounded-[2rem] bg-navy p-8 text-ivory shadow-glow" data-aos="fade-left">
+            <div class="absolute inset-0 grid-mesh opacity-25"></div>
+            <div class="relative">
+              <p class="text-xs uppercase tracking-[0.26em] text-gold">Profil profesional</p>
+              <h3 class="mt-4 font-display text-4xl">Cluj, drept civil si strategie pe termen lung</h3>
+              <div class="mt-8 grid gap-4">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Specializari</p>
+                  <p class="mt-2 text-lg leading-8 text-ivory/90">Civil, comercial, familie, munca, executare silita, imobiliar, achizitii publice.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Experienta</p>
+                  <p class="mt-2 text-lg leading-8 text-ivory/90">Peste doua decenii de practica in litigii si consiliere juridica personalizata.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Limbi</p>
+                  <p class="mt-2 text-lg leading-8 text-ivory/90">Romana si engleza C1 pentru clienti locali si internationali.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Domenii de practica</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Servicii construite pe rigoare, claritate si advocacy autentic</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-ivory">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-ivory/70">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="alegere" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-navy">De ce eu</p>
+            <h2 class="font-display text-4xl text-ink md:text-5xl">Patru motive care fac diferenta in dosarele importante</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-ink">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f8f5ee 0%, #f1eadc 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-navy">Recenzii</p>
+            <h2 class="font-display text-4xl text-ink md:text-5xl">Ce spun clientii care au lucrat direct cu cabinetul</h2>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            <article v-for="review in reviews" :key="review.author" class="review-card rounded-3xl p-7" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-gold">
+                <i v-for="n in review.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-5 text-base leading-8 text-slate-700">"{{ review.text }}"</p>
+              <p class="mt-5 font-semibold text-ink">{{ review.author }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Contact</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Programare, locatie si informatii esentiale</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-ivory/92 hover:text-gold transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon</p>
+              <a href="tel:+40744212623" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">0744 212 623</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-envelope"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Email</p>
+              <a href="mailto:av_ancabaciu@yahoo.com" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">av_ancabaciu@yahoo.com</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-clock"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+              <div class="mt-2 space-y-1 text-ivory/88">
+                <p v-for="item in hours" :key="item.day">{{ item.day }}: {{ item.hours }}</p>
+              </div>
+            </article>
+          </div>
+          <div class="mt-8 overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl" data-aos="fade-up">
+            <div class="rounded-[1.5rem] border border-white/10 bg-ink2 p-8 text-ivory">
+              <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.22em] text-gold">Recomandare</p>
+                  <h3 class="mt-2 font-display text-4xl">Se recomanda programarea inainte de vizita.</h3>
+                </div>
+                <a :href="mapsLink" target="_blank" rel="noopener" class="btn-gold inline-flex items-center justify-center gap-3 rounded-full px-6 py-3 font-semibold transition hover:-translate-y-0.5">
+                  <i class="fa-solid fa-map-location-dot"></i> Deschide pe harta
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink py-12 text-ivory">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-gold">Av. Baciu Anca Daniela</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-ivory/60">Avocat definitiv - Baroul Cluj - Din 2003</p>
+          </div>
+          <div class="space-y-2 text-sm text-ivory/65">
+            <p><i class="fa-solid fa-phone mr-2 text-gold"></i>0744 212 623</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-gold"></i>av_ancabaciu@yahoo.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-gold"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-ivory/45">© 2026 Baciu Anca Daniela. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Strada Pitești 9, ap. 3, 400117 Cluj-Napoca',
+          mapsLink: 'https://www.google.com/maps/place/Baciu+Anca+Daniela/data=!4m7!3m6!1s0x47490c23af00e3ef:0x538d1a6d508399fb!8m2!3d46.7726071!4d23.6003841!16s%2Fg%2F1hc3sxdb5!19sChIJ7-MAryMMSUcR-5mDUG0ajVM?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-award', label: 'Ani', value: '23+', note: 'practica juridica sustinuta' },
+            { icon: 'fa-solid fa-briefcase', label: 'Domenii', value: '5', note: 'arii principale de expertiza' },
+            { icon: 'fa-solid fa-star', label: 'Recenzii', value: '5/5', note: 'rating pe Google Maps' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-scale-balanced', title: 'Drept civil', text: 'Litigii civile, contracte, succesiuni, proprietate si raspundere civila, tratate cu atentie si precizie.' },
+            { icon: 'fa-solid fa-building-columns', title: 'Drept comercial', text: 'Consultanta pentru societati, contracte comerciale si protectia intereselor in relatiile de afaceri.' },
+            { icon: 'fa-solid fa-heart', title: 'Dreptul familiei', text: 'Divort, custodie, partaj si mosteniri, cu un discurs ferm dar echilibrat in situatii sensibile.' },
+            { icon: 'fa-solid fa-briefcase', title: 'Dreptul muncii', text: 'Conflicte de munca, contracte, concedieri si recuperarea drepturilor salariale sau profesionale.' },
+            { icon: 'fa-solid fa-sitemap', title: 'Restructurare si insolventa', text: 'Strategii pentru reorganizare, recuperare si protejarea intereselor in proceduri dificile.' },
+            { icon: 'fa-solid fa-gavel', title: 'Reprezentare si consultanta', text: 'Asistenta juridica completa, de la analiza initiala la reprezentarea in fata instantelor si institutiilor.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-scale-balanced', title: 'Experienta de peste 23 de ani', text: 'Practic fiecare dosar cu o perspectiva acumulata in doua decenii de munca juridica serioasa.' },
+            { icon: 'fa-solid fa-graduation-cap', title: 'Engleza C1 si profil international', text: 'Comunicarea cu clienti straini ramane clara, precisa si lipsita de ambiguitati.' },
+            { icon: 'fa-solid fa-shield-halved', title: 'Confidentialitate si tact', text: 'Fiecare detaliu este tratat discret, cu un proces bine organizat si atent supravegheat.' },
+            { icon: 'fa-solid fa-location-dot', title: 'Birou in Cluj-Napoca', text: 'Pozitionare centrala si consultatii cu programare pentru o relatie profesionala eficienta.' }
+          ],
+          reviews: [
+            { author: 'Bendorfean Traian', stars: 5, text: 'Sunt zeci de mii de avocati in Romania. Fiecare cu nivelul lui de pregatire si seriozitate. Dar am fost uimit sa descoper in persoana avocat Traian Laszlo, un munte de profesionalism si aplecare pe subiect. Atat eu cat si alti zeci de oameni recomandati de mine dansului. Succese domnule avocat si tot asa in continuare' },
+            { author: 'victor eagle studio', stars: 5, text: 'Ofera servicii pentru toate domeniile, au echipa mare si preturi bune! I recomand cu drag oricui!' },
+            { author: 'florin pop', stars: 5, text: 'Cel mai top cabinet de avocat din Cluj Napoca! Recomand cu drag' },
+            { author: 'Laura Cristina', stars: 5, text: 'Profesionalismul, seriozitatea si atentia la detalii au fost evidente pe tot parcursul colaborarii. In cadrul biroului Law Laszlo avocatii sunt foarte bine pregatiti, ofera solutii eficiente si explica fiecare pas in mod clar si transparent. Comunicarea a fost rapida, iar rezultatele au fost peste asteptari. Recomand cu incredere pentru oricine are nevoie de servicii juridice de calitate!' },
+            { author: 'Victor Pop', stars: 5, text: 'Cabinet ultra central, echipa foarte organizata' },
+            { author: 'Victor Pop', stars: 5, text: 'Cel mai prompt! Recomand! Preturi corecte' }
+          ],
+          hours: [
+            { day: 'Luni - Joi', hours: '08:00 - 17:00' },
+            { day: 'Vineri', hours: '08:00 - 17:00' },
+            { day: 'Sambata', hours: 'Inchis' },
+            { day: 'Duminica', hours: 'Inchis' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => {
+          this.scrolled = window.scrollY > 20;
+        });
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

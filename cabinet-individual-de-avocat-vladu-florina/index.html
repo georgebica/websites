@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinet individual de avocat Vladu Florina | Slatina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#f4efe8; --panel:#fffdf8; --ink:#221a1f; --muted:#6d5e68; --wine:#5f2232; --wine-2:#8a3c4f; --amber:#c49a58; --line:rgba(95,34,50,.14); --shadow:0 22px 60px rgba(95,34,50,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',sans-serif;color:var(--ink);background:
+      radial-gradient(circle at 10% 10%, rgba(196,154,88,.16), transparent 24%),
+      radial-gradient(circle at 90% 0%, rgba(95,34,50,.18), transparent 25%),
+      linear-gradient(180deg,#f7f1e9 0%, #efe6dc 100%);
+      overflow-x:hidden
+    }
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(95,34,50,.09) 1px, transparent 1px),linear-gradient(90deg, rgba(95,34,50,.09) 1px, transparent 1px);background-size:26px 26px}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{position:fixed;inset:0 0 auto 0;z-index:60;backdrop-filter:blur(16px);background:rgba(244,239,232,.74);border-bottom:1px solid rgba(95,34,50,.08)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--wine),var(--wine-2));color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(95,34,50,.24)}
+    .brand strong{display:block;font-size:1rem;letter-spacing:.01em}
+    .brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:600}
+    .links{display:flex;align-items:center;gap:22px}
+    .links a{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .links a:hover{color:var(--wine)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 20px;font-weight:800;transition:.25s ease;border:1px solid transparent}
+    .btn-primary{background:linear-gradient(135deg,var(--wine),var(--wine-2));color:#fff;box-shadow:0 18px 40px rgba(95,34,50,.22)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.48);border-color:rgba(95,34,50,.16)}
+    .btn-ghost:hover{transform:translateY(-2px);border-color:rgba(95,34,50,.28)}
+    .menu{display:none;background:none;border:none;color:var(--wine);font-size:20px}
+    .hero{padding-top:108px;min-height:100vh;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:40px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.2em;font-weight:900;font-size:.75rem;color:var(--wine)}
+    h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+    h1{font-size:clamp(3.1rem,7vw,6.1rem);line-height:.92;margin:.4rem 0 1rem;color:var(--wine)}
+    .lead{font-size:1.06rem;line-height:1.9;color:var(--muted);max-width:60ch}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .panel{background:linear-gradient(170deg,#fff9f1, #f7efe5);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:30px;padding:28px;position:relative;overflow:hidden}
+    .panel::before{content:'';position:absolute;inset:auto -70px -70px auto;width:220px;height:220px;border-radius:50%;border:1px solid rgba(95,34,50,.1)}
+    .panel::after{content:'';position:absolute;inset:-60px auto auto -80px;width:190px;height:190px;border-radius:50%;border:1px solid rgba(196,154,88,.14)}
+    .panel h3{font-size:2.5rem;line-height:1.02;margin:.2rem 0 12px;color:var(--wine)}
+    .panel p{color:var(--muted);line-height:1.8}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(95,34,50,.08);color:var(--wine);padding:9px 13px;border-radius:999px;font-weight:800;font-size:.86rem}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:rgba(95,34,50,.06);border:1px solid rgba(95,34,50,.08);border-radius:18px;padding:18px;text-align:center}
+    .stat b{display:block;font-size:clamp(1.3rem,3vw,2.1rem);font-family:'Playfair Display',serif;color:var(--wine)}
+    .section{padding:92px 0}
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,.06))}
+    .head{max-width:780px;margin:0 auto 36px;text-align:center}
+    .head h2{font-size:clamp(2.1rem,5vw,4rem);margin:.4rem 0;color:var(--wine)}
+    .head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .benefits{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{background:rgba(255,253,248,.86);border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 40px rgba(95,34,50,.08);backdrop-filter:blur(10px)}
+    .card{padding:24px;transition:.25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(95,34,50,.24)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(95,34,50,.1),rgba(196,154,88,.22));color:var(--wine);font-size:1.05rem;margin-bottom:16px}
+    .card h3,.review h3,.contact h3{margin:0 0 10px;color:var(--wine);font-size:1.45rem}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft{padding:16px 18px;border-radius:18px;background:rgba(95,34,50,.05);border:1px solid rgba(95,34,50,.08)}
+    .soft b{display:block;color:var(--wine);margin-bottom:6px}
+    .review{padding:22px}
+    .meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.95rem}
+    .stars{color:var(--amber);letter-spacing:2px;margin-bottom:8px}
+    .contact{padding:22px}
+    .contact .big{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--wine);margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--wine);font-weight:800}
+    .hours{display:grid;gap:10px}
+    .hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(95,34,50,.08)}
+    .footer{padding:28px 0 42px;border-top:1px solid rgba(95,34,50,.1);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(95,34,50,.07);color:var(--wine);font-size:.84rem;font-weight:900}
+    .menu-panel{display:none}
+    .mini{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(95,34,50,.05);margin-top:16px;color:var(--muted)}
+    @media (max-width: 980px){
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .links,.desktop-cta{display:none}
+      .menu{display:block}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .menu-panel{display:none;padding-bottom:16px}
+      .menu-panel.open{display:block}
+      .menu-panel a{display:block;padding:12px 0;border-top:1px solid rgba(95,34,50,.08);font-weight:900;color:var(--wine)}
+      h1{font-size:clamp(2.8rem,13vw,4.6rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span><strong>Cabinet individual de avocat</strong><small>Vladu Florina · Slatina</small></span>
+        </a>
+        <nav class="links">
+          <a href="#despre">Despre</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#avantaje">Avantaje</a>
+          <a href="#recenzii">Recenzii</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="desktop-cta"><a class="btn btn-primary" href="tel:0740166874"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+        <button class="menu" id="menuBtn" aria-label="Meniu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="menu-panel" id="menuPanel">
+        <a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#avantaje">Avantaje</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a>
+        <a class="btn btn-primary" style="margin-top:10px" href="tel:0740166874"><i class="fa-solid fa-phone"></i> 0740 166 874</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-gavel"></i> Avocat definitiv · Baroul Olt</span>
+          <h1>Apărare fermă, consultanță clară și lucru direct cu clientul.</h1>
+          <p class="lead">Cabinetul individual al Florinei Vladu este o practică matură din Slatina, activă din anul 2000, cu experiență în cauze civile, penale, comerciale, administrative, de familie și de muncă.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:0740166874"><i class="fa-solid fa-phone"></i> 0740 166 874</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Cabinet+individual+de+avocat+Vladu+Florina/data=!4m7!3m6!1s0x40ad39001b17e90d:0x3c293583a70d2bb8!8m2!3d44.4288978!4d24.3582512!16s%2Fg%2F11vyt0w_qq!19sChIJDekXGwA5rUARuCsNp4M1KTw?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <span class="chip"><i class="fa-solid fa-clock"></i> Program stabil</span>
+          <h3 class="serif">O practică individuală, cu ritm constant și consultanță atentă.</h3>
+          <p>Cabinetul funcționează de luni până vineri, între 09:00 și 16:00, cu disponibilitate clară și programări organizate din timp.</p>
+          <div class="stats">
+            <div class="stat"><b data-count="25">0</b><span>ani de experiență</span></div>
+            <div class="stat"><b data-count="6">0</b><span>arii juridice</span></div>
+            <div class="stat"><b data-count="2000">0</b><span>începutul practicii</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre cabinet</span>
+          <h2>Experiență acumulată în timp, prezentată fără artificii</h2>
+          <p>Florina Vladu practică dreptul ca avocat definitiv în Baroul Olt și oferă asistență adaptată dosarelor în care contează atât analiza, cât și răbdarea în comunicare.</p>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+          <div class="soft"><b><i class="fa-solid fa-scale-balanced"></i> Reprezentare în instanță</b>Pregătire pentru proceduri în fața tuturor instanțelor relevante.</div>
+          <div class="soft"><b><i class="fa-solid fa-shield-halved"></i> Apărare și strategie</b>Abordare structurată în dosare în care miza este ridicată.</div>
+          <div class="soft"><b><i class="fa-solid fa-file-lines"></i> Documente juridice</b>Redactare și analiză de acte într-un registru clar și riguros.</div>
+          <div class="soft"><b><i class="fa-solid fa-door-open"></i> Cabinet individual</b>Lucru direct, fără intermedieri și fără comunicare impersonală.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-briefcase"></i> Servicii</span>
+          <h2>Practica acoperă domenii esențiale ale dreptului</h2>
+          <p>Serviciile sunt prezentate într-un mod simplu și ușor de urmărit, exact cum ar trebui să arate un cabinet care pune accent pe claritate.</p>
+        </div>
+        <div class="grid services">
+          <div class="card"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><h3>Drept civil</h3><p>Conflicte contractuale, proprietate, succesiuni și alte situații civile care cer argumentație solidă.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-gavel"></i></div><h3>Drept penal</h3><p>Asistență și apărare în cauze penale, cu analiză atentă a situației de fapt și de drept.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-building-columns"></i></div><h3>Drept comercial și societar</h3><p>Probleme de business, relații contractuale și chestiuni care cer structură juridică bună.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><h3>Drept administrativ și fiscal</h3><p>Contestații, proceduri și consultanță în zonele în care disciplina procedurală contează decisiv.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-people-roof"></i></div><h3>Dreptul familiei</h3><p>Divorț, custodie și partaj, tratate cu echilibru și o comunicare sobră, dar clară.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-helmet-safety"></i></div><h3>Dreptul muncii</h3><p>Conflicte de muncă, drepturi salariale și documente în care formularea corectă schimbă rezultatul.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avantaje" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-check"></i> Avantaje</span>
+          <h2>De ce rămâne relevant un cabinet individual matur</h2>
+        </div>
+        <div class="grid benefits">
+          <div class="card"><div class="icon"><i class="fa-solid fa-user-shield"></i></div><h3>Lucru direct</h3><p>Clientul discută cu avocatul care gestionează efectiv cazul, nu prin straturi de intermediere.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-calendar-days"></i></div><h3>Program fix</h3><p>Programul de lucru este clar și stabil, de luni până vineri între 09:00 și 16:00.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><h3>Stabilitate profesională</h3><p>Cabinet activ de peste două decenii, cu experiență care se vede în abordare.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3>Slatina, poziție centrală</h3><p>Adresă ușor de localizat, în proximitatea zonelor cu trafic juridic și administrativ.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-star"></i> Recenzii publice</span>
+          <h2>Texte preluate din datele disponibile</h2>
+          <p>Recenziile de mai jos sunt afișate așa cum apar în datele furnizate, fără cosmetizare.</p>
+        </div>
+        <div class="grid reviews">
+          <div class="review"><div class="meta"><strong>florin. ilie</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Ok"</p></div>
+          <div class="review"><div class="meta"><strong>Alleylla Addellaidde</strong><span>3/5</span></div><div class="stars">★★★☆☆</div><p>"Buna dimineața,mă numesc Luca Adela,am o problema foarte gravă,vecinii din fata casei au intrat abuziv pe terenul meu,și acum vor să toarne ciment in gradina tot pe terenul meu"</p></div>
+          <div class="review"><div class="meta"><strong>KING OF UNIVERSE</strong><span>1/5</span></div><div class="stars">★☆☆☆☆</div><p>"Din nefericire procurorii ce instrumentează dosarele penale sunt incompetenți.... altfel nu s-ar explica cum un măscărici politic ca DARIUS VÎLCOV este încă în libertate ....cel mai probabil acești procurori și-au obținut diploma de studii de la aceiași facultate din Teleorman de unde a obținut și Dragnea diploma ."</p></div>
+          <div class="review"><div class="meta"><strong>Daniel Iordache</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Parchetul de pe lângă judecătoria Slatina"</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+          <h2>Datele cabinetului din Slatina</h2>
+        </div>
+        <div class="grid contact-grid">
+          <div class="contact"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3 class="big">Adresă</h3><p>Strada Horia 4, Slatina</p><a class="maps" href="https://www.google.com/maps/place/Cabinet+individual+de+avocat+Vladu+Florina/data=!4m7!3m6!1s0x40ad39001b17e90d:0x3c293583a70d2bb8!8m2!3d44.4288978!4d24.3582512!16s%2Fg%2F11vyt0w_qq!19sChIJDekXGwA5rUARuCsNp4M1KTw?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-phone"></i></div><h3 class="big">Telefon</h3><p>0740 166 874</p><a class="maps" href="tel:0740166874"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-envelope"></i></div><h3 class="big">Email</h3><p>florina_vladu@yahoo.com</p><a class="maps" href="mailto:florina_vladu@yahoo.com"><i class="fa-solid fa-paper-plane"></i> Trimite mesaj</a></div>
+          <div class="contact">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <h3 class="big">Program</h3>
+            <div class="hours">
+              <div><span>Luni - Joi</span><strong>09:00 - 16:00</strong></div>
+              <div><span>Vineri</span><strong>09:00 - 16:00</strong></div>
+              <div><span>Sâmbătă - Duminică</span><strong>Închis</strong></div>
+            </div>
+            <div class="mini"><i class="fa-solid fa-star" style="color:var(--amber)"></i> Program adaptat consultațiilor individuale</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><strong style="color:var(--wine)">Cabinet individual de avocat Vladu Florina</strong><div>Slatina · reprezentare juridică individuală</div></div>
+      <div>Telefon: 0740 166 874 · Email: florina_vladu@yahoo.com</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const panel = document.getElementById('menuPanel');
+    btn?.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      btn.innerHTML = panel.classList.contains('open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    panel?.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
+      panel.classList.remove('open');
+      btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+    const counters = document.querySelectorAll('[data-count]');
+    const io = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.done) {
+        entry.target.dataset.done = '1';
+        const target = Number(entry.target.dataset.count);
+        const start = performance.now();
+        const tick = now => {
+          const p = Math.min((now - start) / 1200, 1);
+          entry.target.textContent = Math.floor(target * p);
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+    }), {threshold:.5});
+    counters.forEach(c => io.observe(c));
+  </script>
+</body>
+</html>

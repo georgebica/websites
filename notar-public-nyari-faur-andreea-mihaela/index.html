@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notar Public Nyari Faur Andreea Mihaela | Cluj-Napoca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{--bg:#f2f3ee;--ink:#1c2622;--muted:#65706c;--sage:#56735f;--olive:#80915f;--gold:#b59657;--card:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:
+      radial-gradient(circle at top right, rgba(86,115,95,.12), transparent 24%),
+      radial-gradient(circle at left bottom, rgba(181,150,87,.12), transparent 20%),
+      linear-gradient(180deg,#fbfbf8 0%,#f2f3ee 100%)}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(251,251,248,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(28,38,34,.08)}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 0}
+    .brand{display:flex;flex-direction:column}
+    .brand strong{font-family:Cormorant Garamond,serif;font-size:1.12rem}
+    .brand span{font-size:.83rem;color:var(--muted)}
+    .navlinks{display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+    .navlinks a:hover{color:var(--sage)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--sage),#68876f);color:#fff}
+    .btn.ghost{border:1px solid rgba(28,38,34,.1);background:#fff}
+    .hero{padding:58px 0 26px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(86,115,95,.08);color:var(--sage);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    h1,h2,h3{font-family:Cormorant Garamond,serif;margin:0}
+    h1{font-size:clamp(3rem,7vw,5.2rem);line-height:1;max-width:11ch;margin:18px 0 14px}
+    .lead{max-width:58ch;color:var(--muted);font-size:1.03rem;line-height:1.85}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .panel,.card,.review,.contact{background:var(--card);border:1px solid rgba(28,38,34,.08);border-radius:24px}
+    .panel{padding:24px}
+    .hero-panel{padding:22px;box-shadow:0 20px 54px rgba(28,38,34,.08)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{padding:18px;border-radius:20px;background:linear-gradient(180deg,#ffffff,#f2f4ef);border:1px solid rgba(28,38,34,.06)}
+    .stat b{display:block;font-family:Cormorant Garamond,serif;font-size:1.55rem;color:var(--sage);margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:.9rem}
+    section{padding:36px 0}
+    .title{display:flex;justify-content:space-between;gap:18px;align-items:end;flex-wrap:wrap;margin-bottom:18px}
+    .title p{margin:0;color:var(--muted);max-width:54ch;line-height:1.7}
+    .title h2{font-size:clamp(2rem,4vw,3.1rem)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .panel p,.card p,.review p,.contact p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:20px}
+    .card i,.contact i,.review .stars{color:var(--gold)}
+    .card h3,.contact h3,.review h3{font-size:1.48rem;margin:10px 0 8px}
+    .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .review{padding:20px}
+    .review header{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+    .review .name{font-weight:700}
+    .review .meta{color:var(--muted);font-size:.88rem}
+    .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .contact{padding:18px}
+    .footer{padding:28px 0 40px;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 22px;background:#fff;border:1px solid rgba(28,38,34,.08);border-radius:24px}
+    @media(max-width:900px){.hero-grid,.two-col,.grid,.reviews,.contact-grid{grid-template-columns:1fr}h1{max-width:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><strong>Nyari Faur Andreea Mihaela</strong><span>Notar public, Cluj-Napoca</span></div>
+        <div class="navlinks"><a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#incredere">Încredere</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a></div>
+        <a class="btn primary" href="tel:0748624591"><i class="fa-solid fa-phone"></i> Sună acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-language"></i> Servicii în română, engleză și franceză</div>
+          <h1>Birou mic, accesibil, cu practică notarială completă.</h1>
+          <p class="lead">Notarul Andreea Mihaela Nyari Faur lucrează în Cluj-Napoca, cu prezență profesională în centrul orașului și cu servicii utile pentru clienți care au nevoie de acte de proprietate, succesiuni sau procuri în mai multe limbi.</p>
+          <div class="actions">
+            <a class="btn primary" href="tel:0748624591"><i class="fa-solid fa-phone"></i> 0748 624 591</a>
+            <a class="btn ghost" href="https://www.google.com/maps/place/Notar+Public+Nyari+Faur+Andreea+Mihaela/data=!4m7!3m6!1s0x47490fc8801d46cb:0x17671933c29361ea!8m2!3d46.772395!4d23.5890866!16s%2Fg%2F11spzp4f4h!19sChIJy0YdgMgPSUcR6mGTwjMZZxc?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi harta</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="stats">
+            <div class="stat"><b>3/5</b><span>rating public</span></div>
+            <div class="stat"><b>2</b><span>recenzii afișate</span></div>
+            <div class="stat"><b>FR</b><span>suport pentru clienți internaționali</span></div>
+            <div class="stat"><b>2</b><span>adrese în datele publice</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre">
+      <div class="wrap two-col">
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-circle-info"></i> Despre birou</div>
+          <h2 style="font-size:clamp(2rem,4vw,3.1rem);margin-top:12px">O practică notarială activă, cu răspunsuri rapide și limbaj clar.</h2>
+          <p>Datele publice arată o activitate profesională în Cluj-Napoca, cu sediu pe Strada Regele Ferdinand 21 și o a doua locație menționată în Aiud. Biroul este asociat cu servicii standard de notariat și cu o disponibilitate bună pentru clienți care au nevoie de ghidaj simplu.</p>
+          <p>Deși ratingul public este mai modest, profilul arată totuși un birou real, autorizat și prezent în rețeaua profesională a notarilor publici din România.</p>
+        </div>
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-clock"></i> Program public</div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Luni - Joi</h3>
+            <p>09:00 - 17:00</p>
+          </div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Vineri</h3>
+            <p>09:00 - 16:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-pen-nib"></i> Servicii</div><h2>Tipuri de acte pe care le gestionează un notar public.</h2></div><p>Lista urmărește profilul standard al biroului din datele publice.</p></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-house"></i><h3>Imobiliare</h3><p>Contracte de vânzare, donație și alte documente privind proprietatea.</p></article>
+          <article class="card"><i class="fa-solid fa-scroll"></i><h3>Succesiuni</h3><p>Testamente, moșteniri și acte pentru împărțirea bunurilor.</p></article>
+          <article class="card"><i class="fa-solid fa-user-check"></i><h3>Procuri</h3><p>Împuterniciri generale și speciale pentru reprezentare.</p></article>
+          <article class="card"><i class="fa-solid fa-file-signature"></i><h3>Autentificări</h3><p>Semnături, copii și declarații notarial autentice.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Documente multilingve</h3><p>Suport pentru clienți români și străini în engleză și franceză.</p></article>
+          <article class="card"><i class="fa-solid fa-scale-balanced"></i><h3>Consultanță</h3><p>Explicații simple despre pașii de urmat și efectele juridice ale actelor.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="incredere">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-shield"></i> Încredere</div><h2>Ce se vede din datele publice.</h2></div></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Multilingv</h3><p>Română, engleză și franceză, utile pentru clienți internaționali.</p></article>
+          <article class="card"><i class="fa-solid fa-location-dot"></i><h3>Poziționare centrală</h3><p>Strada Regele Ferdinand 21, într-o zonă ușor de găsit în Cluj.</p></article>
+          <article class="card"><i class="fa-solid fa-circle-nodes"></i><h3>Două locații</h3><p>Cluj-Napoca și Aiud apar în datele publice de prezentare.</p></article>
+          <article class="card"><i class="fa-solid fa-star"></i><h3>Rating moderat</h3><p>3/5 din 2 recenzii publice, ceea ce cere transparență și așteptări corecte.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-message"></i> Recenzii</div><h2>Feedback disponibil public.</h2></div></div>
+        <div class="reviews">
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">NEMES NICOLAE</div><div class="meta">Google</div></header><p>„Un notar pe care îl recomand, fiind foarte atent la detaliile unei tranzacții.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><header><div class="name">Laura</div><div class="meta">Google</div></header><p>„Am avut o experiență neplăcută deoarece notarul nu ne-a pus la dispoziție documentele necesare și informațiile importante necesare tranzacției...”</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-envelope"></i> Contact</div><h2>Datele oficiale de contact.</h2></div></div>
+        <div class="contact-grid">
+          <article class="contact"><i class="fa-solid fa-location-dot"></i><h3>Adresă</h3><p>Strada Regele Ferdinand 21, 400110 Cluj-Napoca.</p><p><a href="https://www.google.com/maps/place/Notar+Public+Nyari+Faur+Andreea+Mihaela/data=!4m7!3m6!1s0x47490fc8801d46cb:0x17671933c29361ea!8m2!3d46.772395!4d23.5890866!16s%2Fg%2F11spzp4f4h!19sChIJy0YdgMgPSUcR6mGTwjMZZxc?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener">Deschide în Google Maps</a></p></article>
+          <article class="contact"><i class="fa-solid fa-phone"></i><h3>Telefon</h3><p><a href="tel:0748624591">0748 624 591</a></p><p>Linia mobilă principală.</p></article>
+          <article class="contact"><i class="fa-solid fa-clock"></i><h3>Program</h3><p>Orele publice sunt standard, iar confirmarea se face telefonic.</p><p>Luni - Vineri: 09:00 - 17:00 / 09:00 - 16:00</p></article>
+          <article class="contact"><i class="fa-solid fa-at"></i><h3>Email</h3><p>bnp.nyarifaur@yahoo.com</p><p>Contact pentru programări și clarificări.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div><strong style="font-family:Cormorant Garamond,serif;font-size:1.25rem;color:var(--ink)">Nyari Faur Andreea Mihaela</strong><p style="margin:6px 0 0">Cluj-Napoca • notariat multilingv</p></div>
+      <div>© 2026 • Birou notarial activ</div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mircea Anișoara, Birou Notarial | București Sector 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#140f12;
+      --panel:#1c1418;
+      --panel-2:#22171d;
+      --text:#f6efe9;
+      --muted:#d9c6c8;
+      --accent:#c99a6b;
+      --accent-2:#8e5b63;
+      --line:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:
+      radial-gradient(circle at top right, rgba(201,154,107,.16), transparent 28%),
+      radial-gradient(circle at left center, rgba(142,91,99,.18), transparent 24%),
+      linear-gradient(180deg,#1a1216 0%,#120d10 100%);
+      color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    .nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:rgba(20,15,18,.72);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0;flex-wrap:wrap}
+    .brand{display:flex;flex-direction:column;gap:2px}
+    .brand strong{font:700 1.1rem/1 Cormorant Garamond,serif;letter-spacing:.04em}
+    .brand span{color:var(--muted);font-size:.82rem}
+    .links{display:flex;gap:18px;flex-wrap:wrap;color:#efe4dd;font-size:.9rem}
+    .links a{opacity:.82}
+    .links a:hover,.cta:hover{opacity:1}
+    .cta{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border-radius:999px;background:linear-gradient(135deg,var(--accent),#e2c4a1);color:#241417;font-weight:700}
+    .hero{padding:60px 0 28px}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:28px;align-items:stretch}
+    .eyebrow{display:inline-flex;gap:10px;align-items:center;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);color:#eadbcf;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+    h1,h2,h3{font-family:Cormorant Garamond,serif;margin:0}
+    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.92;margin:18px 0 16px;max-width:10ch}
+    .lead{max-width:58ch;color:var(--muted);font-size:1.03rem;line-height:1.8}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .btn-secondary{padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);display:inline-flex;align-items:center;gap:10px}
+    .hero-card{padding:24px;border-radius:28px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid var(--line);position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle, rgba(201,154,107,.16), transparent 36%);transform:translate(22%, -10%)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;position:relative;z-index:1}
+    .stat,.card,.review,.contact{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:22px}
+    .stat{padding:18px}
+    .stat b{display:block;font-size:1.55rem;font-family:Cormorant Garamond,serif;margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:.9rem}
+    section{padding:38px 0}
+    .section-title{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px;flex-wrap:wrap}
+    .section-title p{margin:0;color:var(--muted);max-width:56ch;line-height:1.7}
+    .section-title h2{font-size:clamp(2rem,4vw,3.2rem)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .panel{padding:24px;border-radius:26px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line)}
+    .panel p{color:var(--muted);line-height:1.8}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .chip{padding:9px 12px;border-radius:999px;background:rgba(201,154,107,.12);border:1px solid rgba(201,154,107,.22);font-size:.9rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:20px;min-height:100%}
+    .card i,.contact i,.review .stars{color:var(--accent)}
+    .card h3,.contact h3,.review h3{font-size:1.7rem;margin:8px 0 8px}
+    .card p,.contact p,.review p{margin:0;color:var(--muted);line-height:1.75}
+    .mini{display:flex;gap:12px;align-items:flex-start}
+    .mini i{font-size:1.15rem;margin-top:5px}
+    .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .review{padding:20px}
+    .review header{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+    .review .name{font-weight:700}
+    .review .meta{color:var(--muted);font-size:.88rem}
+    .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .contact{padding:18px}
+    .contact a{color:#fff}
+    .footer{padding:28px 0 44px;color:var(--muted)}
+    .footer .panel{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+    @media (max-width: 900px){
+      .hero-grid,.two-col,.grid,.reviews,.contact-grid{grid-template-columns:1fr}
+      h1{max-width:none}
+      .links{gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <strong>Mircea Anișoara</strong>
+        <span>Birou Notarial, Sector 5 București</span>
+      </div>
+      <nav class="links" aria-label="Navigare">
+        <a href="#despre">Despre</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#incredere">Încredere</a>
+        <a href="#recenzii">Recenzii</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="tel:0214112632"><i class="fa-solid fa-phone"></i> Sună acum</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-scale-balanced"></i> Societate profesională notarială în București</div>
+          <h1>Rigoare notarială, comunicare clară, timp câștigat.</h1>
+          <p class="lead">Biroul Mircea Anișoara lucrează cu atenție la fiecare act, într-un spațiu central din Sector 5, cu accesibilitate pentru clienți și o echipă obișnuită cu tranzacții imobiliare, succesiuni și declarații urgente.</p>
+          <div class="hero-actions">
+            <a class="cta" href="tel:0214112632"><i class="fa-solid fa-phone"></i> 021 411 2632</a>
+            <a class="btn-secondary" href="https://www.google.com/maps/place/Mircea+Ani%C5%9Foara,+Birou+Notarial/data=!4m7!3m6!1s0x40b1ff7a9c016fdd:0x86fd377a47e2ece5!8m2!3d44.4246084!4d26.0771782!16s%2Fg%2F1hc32nnkb!19sChIJ3W8BnHr_sUAR5eziR3o3_YY?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="stats">
+            <div class="stat"><b>4.6/5</b><span>rating Google</span></div>
+            <div class="stat"><b>186</b><span>recenzii publice</span></div>
+            <div class="stat"><b>2</b><span>linii de contact</span></div>
+            <div class="stat"><b>Acces</b><span>intrare și parcare adaptate</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre">
+      <div class="wrap two-col">
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-circle-info"></i> Despre birou</div>
+          <h2>Notariat organizat, pentru acte clare și procese curate.</h2>
+          <p>Mircea Anișoara, Birou Notarial, este o societate profesională din București, Sector 5, cu program de lucru de luni până vineri și cu o abordare orientată spre explicații simple, verificări atente și soluții corecte pentru fiecare situație juridică.</p>
+          <p>Din datele publice reiese o practică bine poziționată în zona centrală, cu echipă extinsă de notari asociați și cu servicii potrivite pentru cumpărări de imobile, succesiuni, procuri și autentificări diverse.</p>
+        </div>
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-list-check"></i> Ce contează</div>
+          <div class="chips">
+            <span class="chip">Program: 09:00 - 17:00</span>
+            <span class="chip">Acces facil în Sector 5</span>
+            <span class="chip">Parcare accesibilă</span>
+            <span class="chip">Intrare adaptată</span>
+          </div>
+          <div style="margin-top:18px" class="mini">
+            <i class="fa-solid fa-user-group"></i>
+            <div>
+              <strong>Echipă cu experiență</strong>
+              <p>Societatea funcționează ca parteneriat profesional, cu mai mulți notari și un flux de lucru potrivit pentru volume constante de acte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-pen-fancy"></i> Servicii</div>
+            <h2>Acte notariale acoperite cap-coadă.</h2>
+          </div>
+          <p>Serviciile sunt construite din datele publice ale biroului și din profilul standard al unei societăți notariale din București.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-house"></i><h3>Tranzacții imobiliare</h3><p>Contracte de vânzare-cumpărare, donații, ipoteci și alte acte pentru proprietăți.</p></article>
+          <article class="card"><i class="fa-solid fa-file-signature"></i><h3>Autentificări și legalizări</h3><p>Semnături, copii conforme, declarații și certificări cu formă autentică.</p></article>
+          <article class="card"><i class="fa-solid fa-infinity"></i><h3>Succesiuni</h3><p>Documente pentru moșteniri, certificate și operațiuni de partaj succesoral.</p></article>
+          <article class="card"><i class="fa-solid fa-people-arrows"></i><h3>Procuri și reprezentare</h3><p>Împuterniciri generale sau speciale pentru tranzacții, relații bancare și reprezentare juridică.</p></article>
+          <article class="card"><i class="fa-solid fa-family"></i><h3>Acte de familie</h3><p>Convenții matrimoniale, acorduri de divorț și declarații conexe.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Traduceri și declarații</h3><p>Legalizare de traduceri, declarații pentru uz intern sau internațional și certificări uzuale.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="incredere">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-shield-heart"></i> De ce biroul acesta</div>
+            <h2>Semnale de încredere din datele publice.</h2>
+          </div>
+          <p>Am păstrat accentul pe ce poate vedea rapid un client: poziționare, accesibilitate, recenzii și organizare.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-building-columns"></i><h3>Societate profesională</h3><p>Structură cu mai mulți notari asociați, utilă pentru continuitate și fluxuri de lucru mai stabile.</p></article>
+          <article class="card"><i class="fa-solid fa-wheelchair"></i><h3>Accesibilitate</h3><p>Parcare și intrare adaptate, utile pentru clienți care au nevoie de acces simplu în clădire.</p></article>
+          <article class="card"><i class="fa-solid fa-star"></i><h3>Reputație solidă</h3><p>Rating public de 4.6/5 pe baza a 186 de recenzii, ceea ce indică volum și vizibilitate mare.</p></article>
+          <article class="card"><i class="fa-solid fa-clock"></i><h3>Program clar</h3><p>Program standard de lucru, de luni până vineri, cu fereastră previzibilă pentru programări.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-message"></i> Recenzii</div>
+            <h2>Voci reale din datele publice.</h2>
+          </div>
+          <p>Am selectat câteva recenzii existente în prompt, pentru a păstra pagina ancorată în feedback-ul public disponibil.</p>
+        </div>
+        <div class="reviews">
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div><header><div class="name">Simona Iliescu</div><div class="meta">Google</div></header><p>„Vă recomand să veniți aici cu încredere, sunt serioși, prompți, profesioniști. Lucrez cu doamnele de aici de ani de zile...”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div><header><div class="name">Radu Atanasescu</div><div class="meta">Google</div></header><p>„Prompți și foarte bine organizați. Comunicare pe e-mail, plata cu cardul.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div><header><div class="name">Gabriel Amzulescu</div><div class="meta">Google</div></header><p>„O recomand pe Cristina Mihalache de la ei. Înțelege problemele, îți explică pe înțelesul tău pașii...”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div><header><div class="name">Floralia</div><div class="meta">Google</div></header><p>„Profesional and quick services. Decent prices.”</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow"><i class="fa-solid fa-envelope-open-text"></i> Contact</div>
+            <h2>Datele de care ai nevoie, fără formular.</h2>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <article class="contact"><i class="fa-solid fa-location-dot"></i><h3>Adresă</h3><p>Calea 13 Septembrie 103, 050716 București, Sector 5.</p><p><a href="https://www.google.com/maps/place/Mircea+Ani%C5%9Foara,+Birou+Notarial/data=!4m7!3m6!1s0x40b1ff7a9c016fdd:0x86fd377a47e2ece5!8m2!3d44.4246084!4d26.0771782!16s%2Fg%2F1hc32nnkb!19sChIJ3W8BnHr_sUAR5eziR3o3_YY?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener">Deschide harta</a></p></article>
+          <article class="contact"><i class="fa-solid fa-phone"></i><h3>Telefon</h3><p><a href="tel:0214112632">021 411 2632</a></p><p>021 411 7839 apare în datele publice ca linie secundară.</p></article>
+          <article class="contact"><i class="fa-solid fa-clock"></i><h3>Program</h3><p>Luni - Vineri: 09:00 - 17:00</p><p>Sâmbătă și duminică: închis</p></article>
+          <article class="contact"><i class="fa-solid fa-at"></i><h3>Email</h3><p>notariatmircea@yahoo.com</p><p>notariat.mn@cnpb.ro</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap panel">
+      <div>
+        <strong style="font-family:Cormorant Garamond,serif;font-size:1.5rem;color:var(--text)">Mircea Anișoara, Birou Notarial</strong>
+        <p style="margin:8px 0 0">Acte clare, comunicare precisă, prezență centrală în București.</p>
+      </div>
+      <div>© 2026 • Sector 5 București</div>
+    </div>
+  </footer>
+</body>
+</html>

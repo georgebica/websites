@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SC CAUC AUTOS S.R.L | Stație ITP Slatina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+  <style>
+    :root{
+      --bg:#11161d; --bg2:#18212b; --panel:#1c2632; --ink:#eef4f9; --muted:#9ba8b4; --steel:#39556c; --steel2:#51728a; --lime:#8fcd73; --orange:#ff9440; --line:rgba(255,255,255,.08); --shadow:0 24px 60px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(255,148,64,.16), transparent 20%),
+        radial-gradient(circle at 88% 8%, rgba(143,205,115,.18), transparent 22%),
+        linear-gradient(180deg,#11161d 0%, #151c24 100%);
+      overflow-x:hidden;
+    }
+    body::before{
+      content:'';position:fixed;inset:0;pointer-events:none;opacity:.16;
+      background-image:linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size:24px 24px;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:60;
+      backdrop-filter:blur(14px);
+      background:rgba(17,22,29,.78);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--orange),var(--lime));color:#11161d;box-shadow:0 14px 30px rgba(0,0,0,.28)}
+    .brand strong{display:block;font-size:1rem}
+    .brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:700}
+    .links{display:flex;align-items:center;gap:22px}
+    .links a{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .links a:hover{color:#fff}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 20px;border-radius:999px;border:1px solid transparent;
+      font-weight:800;transition:.25s ease;cursor:pointer;
+    }
+    .btn-primary{background:linear-gradient(135deg,var(--orange),#ffbb7a);color:#11161d;box-shadow:0 18px 40px rgba(255,148,64,.24)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+    .btn-ghost:hover{transform:translateY(-2px);background:rgba(255,255,255,.09)}
+    .menu{display:none;background:none;border:none;color:#fff;font-size:20px}
+    .hero{padding-top:110px;padding-bottom:48px}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:28px;align-items:center;padding:42px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;font-weight:900;color:var(--orange)}
+    h1,h2,h3,.display{font-family:'IBM Plex Serif',serif}
+    h1{font-size:clamp(3.1rem,7vw,6.2rem);line-height:.95;margin:.4rem 0 1rem;color:#fff}
+    .lead{font-size:1.05rem;line-height:1.95;color:var(--muted);max-width:60ch}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .panel{
+      background:linear-gradient(160deg,#1b2430, #131922);
+      border:1px solid var(--line);
+      border-radius:30px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+    }
+    .panel::before,.panel::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08)}
+    .panel::before{width:260px;height:260px;top:-90px;right:-90px}
+    .panel::after{width:170px;height:170px;left:-60px;bottom:-60px}
+    .panel h3{font-size:2.6rem;line-height:1.03;color:#fff;margin:.2rem 0 12px}
+    .panel p{color:var(--muted);line-height:1.85}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.06);color:#fff;font-size:.86rem;font-weight:900;border:1px solid rgba(255,255,255,.08)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;text-align:center}
+    .stat b{display:block;font-size:clamp(1.3rem,3vw,2.1rem);font-family:'IBM Plex Serif',serif;color:#fff}
+    .section{padding:92px 0}
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.06))}
+    .head{max-width:780px;margin:0 auto 36px;text-align:center}
+    .head h2{font-size:clamp(2.1rem,5vw,4rem);margin:.4rem 0;color:#fff}
+    .head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .benefits{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{
+      background:rgba(28,38,50,.92);
+      border:1px solid var(--line);
+      border-radius:24px;box-shadow:0 14px 40px rgba(0,0,0,.2);backdrop-filter:blur(10px);
+    }
+    .card{padding:24px;transition:.25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.16)}
+    .icon{
+      width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px;
+      background:linear-gradient(135deg,rgba(255,148,64,.14),rgba(143,205,115,.18));color:#ffb35e;font-size:1.08rem;
+    }
+    .card h3,.review h3,.contact h3{margin:0 0 10px;font-size:1.42rem;color:#fff}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .soft b{display:block;color:#fff;margin-bottom:6px}
+    .review{padding:22px}
+    .meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.95rem}
+    .stars{color:#ffb35e;letter-spacing:2px;margin-bottom:8px}
+    .contact{padding:22px}
+    .contact .big{font-family:'IBM Plex Serif',serif;font-size:1.45rem;color:#fff;margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:#ffb35e;font-weight:900}
+    .hours{display:grid;gap:10px}
+    .hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);color:#ffb35e;font-size:.84rem;font-weight:900}
+    .footer{padding:30px 0 42px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .mini{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.04);margin-top:16px;color:var(--muted)}
+    .menu-panel{display:none}
+    .score{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,148,64,.1);border:1px solid rgba(255,148,64,.16);color:#ffb35e;font-weight:900}
+    @media (max-width: 980px){
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .links,.desktop-cta{display:none}
+      .menu{display:block}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .menu-panel{display:none;padding-bottom:16px}
+      .menu-panel.open{display:block}
+      .menu-panel a{display:block;padding:12px 0;border-top:1px solid rgba(255,255,255,.08);font-weight:900;color:#fff}
+      h1{font-size:clamp(2.8rem,13vw,4.8rem)}
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header class="nav">
+      <div class="wrap">
+        <div class="nav-inner">
+          <a class="brand" href="#top">
+            <span class="mark"><i class="fa-solid fa-car-side"></i></span>
+            <span>
+              <strong>{{ business.name }}</strong>
+              <small>Slatina · stație ITP autorizată</small>
+            </span>
+          </a>
+          <nav class="links">
+            <a href="#despre">Despre</a>
+            <a href="#servicii">Servicii</a>
+            <a href="#operare">Operare</a>
+            <a href="#recenzii">Recenzii</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="desktop-cta">
+            <a class="btn btn-primary" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> Sună acum</a>
+          </div>
+          <button class="menu" @click="mobileOpen = !mobileOpen" aria-label="Meniu">
+            <i class="fa-solid" :class="mobileOpen ? 'fa-xmark' : 'fa-bars'"></i>
+          </button>
+        </div>
+        <div class="menu-panel" :class="{ open: mobileOpen }">
+          <a href="#despre" @click="mobileOpen=false">Despre</a>
+          <a href="#servicii" @click="mobileOpen=false">Servicii</a>
+          <a href="#operare" @click="mobileOpen=false">Operare</a>
+          <a href="#recenzii" @click="mobileOpen=false">Recenzii</a>
+          <a href="#contact" @click="mobileOpen=false">Contact</a>
+          <a class="btn btn-primary" style="margin-top:10px" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> {{ business.phone }}</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div data-aos="fade-up">
+            <span class="eyebrow"><i class="fa-solid fa-clipboard-check"></i> ITP · testare tehnică · conformitate</span>
+            <h1>Inspecții precise, flux clar și respect pentru siguranța rutieră.</h1>
+            <p class="lead">
+              SC CAUC AUTOS S.R.L din Slatina operează ca stație ITP clasa II, cu autorizație RAR, servicii online de estimare și intervenție la fața locului, plus accesibilitate completă pentru public.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> {{ business.phone }}</a>
+              <a class="btn btn-ghost" :href="business.maps" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+            </div>
+          </div>
+          <aside class="panel" data-aos="fade-left">
+            <span class="chip"><i class="fa-solid fa-clipboard-check"></i> Autorizație RAR OT021</span>
+            <h3 class="display">Un punct tehnic organizat, cu accent pe verificare și respectarea normelor.</h3>
+            <p>Cu activitate de 17 ani și rezultate financiare în creștere, compania arată stabilitate, disciplină și capacitate de operare pe termen lung.</p>
+            <div class="stats">
+              <div class="stat"><b>43</b><span>recenzii publice</span></div>
+              <div class="stat"><b>3</b><span>angajați în 2024</span></div>
+              <div class="stat"><b>2025</b><span>an de creștere</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre companie</span>
+            <h2>Stație ITP cu profil tehnic, stabil și bine evaluat</h2>
+            <p>Compania operează în Slatina și oferă activități de testare tehnică și analiză pentru vehicule ușoare, cu atenție pentru siguranță, documentare și conformitate legală.</p>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+            <div class="soft"><b><i class="fa-solid fa-car-side"></i> Class II ITP</b>Vehicule până la 3.500 kg, inclusiv 4x4.</div>
+            <div class="soft"><b><i class="fa-solid fa-car-burst"></i> Verificări tehnice</b>Bare, frâne, emisii, direcție și suspensie.</div>
+            <div class="soft"><b><i class="fa-solid fa-euro-sign"></i> Performanță</b>Profitabilitate și reducerea datoriilor până în 2025.</div>
+            <div class="soft"><b><i class="fa-solid fa-universal-access"></i> Accesibil</b>Parcare și intrare adaptate pentru scaun rulant.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicii" class="section">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-screwdriver-wrench"></i> Servicii</span>
+            <h2>Flux de lucru pentru inspecție, testare și eliberarea certificatului</h2>
+            <p>Serviciile publice se desfășoară în jurul verificării, testării și înregistrării vehiculului, cu opțiuni online și on-site.</p>
+          </div>
+          <div class="grid services">
+            <div class="card"><div class="icon"><i class="fa-solid fa-clipboard-check"></i></div><h3>ITP clasa II</h3><p>Inspecții pentru autoturisme și vehicule comerciale ușoare.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-digital-tachograph"></i></div><h3>Testare tehnică</h3><p>Analiză tehnică și verificări pentru conformitatea cu normele rutiere.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-gauge-high"></i></div><h3>Verificare frâne și direcție</h3><p>Componentă esențială pentru siguranța în trafic și autorizare.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-smog"></i></div><h3>Control emisii</h3><p>Analiză a emisiilor și fotografiere motor conform procedurilor.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-qrcode"></i></div><h3>Identificare vehicul</h3><p>Verificare șasiu și motor, plus documentare foto.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-file-signature"></i></div><h3>Certificat și registrare</h3><p>Procesare în sistem și eliberarea certificatului după finalizarea inspecției.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="operare" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-gears"></i> Operare</span>
+            <h2>Program, accesibilitate și rezultate financiare vizibile</h2>
+          </div>
+          <div class="grid benefits">
+            <div class="card"><div class="icon"><i class="fa-solid fa-calendar-days"></i></div><h3>Program clar</h3><p>Luni - vineri 08:00 - 18:00, sâmbătă 08:00 - 14:00, duminică închis.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-wheelchair"></i></div><h3>Acces complet</h3><p>Parcare și intrare accesibile pentru scaun rulant.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-mobile-screen"></i></div><h3>Estimări online</h3><p>Estimări și cereri de informații disponibile înainte de prezentare.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><h3>Cifră în creștere</h3><p>Venit și profit în urcare, cu datorii reduse până în 2025.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="section">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-star"></i> Recenzii</span>
+            <h2>Feedback real din profilul public</h2>
+            <p>Am păstrat textele publice exacte și am folosit numărul total de recenzii din datele furnizate.</p>
+          </div>
+          <div class="grid reviews">
+            <article class="review" v-for="review in reviews" :key="review.author">
+              <div class="meta"><strong>{{ review.author }}</strong><span>{{ review.rating }}/5</span></div>
+              <div class="stars">{{ review.stars }}</div>
+              <p>{{ review.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+            <h2>Contact direct pentru programare ITP</h2>
+          </div>
+          <div class="grid contact-grid">
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h3 class="big">Adresă</h3>
+              <p>Strada Pitești 227, 230001 Slatina</p>
+              <a class="maps" :href="business.maps" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <h3 class="big">Telefon</h3>
+              <p>0766 405 228</p>
+              <a class="maps" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> Sună acum</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+              <h3 class="big">Email</h3>
+              <p>sugubetu@gmail.com</p>
+              <a class="maps" href="mailto:sugubetu@gmail.com"><i class="fa-solid fa-paper-plane"></i> Trimite mesaj</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-clock"></i></div>
+              <h3 class="big">Program</h3>
+              <div class="hours">
+                <div><span>Luni - Vineri</span><strong>08:00 - 18:00</strong></div>
+                <div><span>Sâmbătă</span><strong>08:00 - 14:00</strong></div>
+                <div><span>Duminică</span><strong>Închis</strong></div>
+              </div>
+              <div class="mini"><i class="fa-solid fa-wheelchair"></i> Accesibilitate completă la locație</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <strong style="color:#fff">SC CAUC AUTOS S.R.L</strong>
+          <div>Slatina · stație ITP și testare tehnică</div>
+        </div>
+        <div>Telefon: 0766 405 228 · Email: sugubetu@gmail.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          mobileOpen: false,
+          business: {
+            name: 'SC CAUC AUTOS S.R.L',
+            phone: '0766 405 228',
+            phoneDigits: '0766405228',
+            maps: 'https://www.google.com/maps/place/SC+CAUC+AUTOS+S.R.L/data=!4m7!3m6!1s0x40ad390fe67c5c65:0x35fdb3f6c4f16c28!8m2!3d44.4500465!4d24.387928!16s%2Fg%2F11lwhljp4_!19sChIJZVx85g85rUARKGzxxPaz_TU?authuser=0&hl=en&rclk=1'
+          },
+          reviews: [
+            { author: 'Claudiu Ghita', rating: 5, stars: '★★★★★', text: 'Ok' },
+            { author: 'louis-paul Hayoun', rating: 5, stars: '★★★★★', text: 'Fast and good' },
+            { author: 'Nicolae Bizu', rating: 5, stars: '★★★★★', text: 'Personal ok' },
+            { author: 'Jon Diaconu', rating: 5, stars: '★★★★★', text: 'Ok' },
+            {
+              author: 'Petre Virgil Rada',
+              rating: 5,
+              stars: '★★★★★',
+              text: 'Bună ziua!...Fără voința mea am fost nevoit să caut un punct de I.T.P ,întrucât am fost luat pe nepregătite pt.o inspecție tehnică periodică la o remorcă cumpărată acum doi ani din reprezentanță. La citirea recenziilor referitoare la această stație, am mers îndoit... Vă recomand cu încredere această stație ITP împreună cu personalul ce o deservește pentru încredere, profesionalism și socializare excelentă, dar toate cu respectarea prevederilor legale. OK..Mulțumesc!'
+            },
+            {
+              author: 'Ion Cocoroada',
+              rating: 2,
+              stars: '★★☆☆☆',
+              text: 'Va salut . Responsabilul super caracter. La opus un asa zis inginer [ne adevarat] o mizerie. Un pusti max 27 ani de o nesimțire crasă, neîngrijit... Respect responsabilului de acolo.'
+            },
+            {
+              author: 'Viorel Monescu',
+              rating: 5,
+              stars: '★★★★★',
+              text: 'Chiar dacă sunt cam exigenți, ceea ce , desigur , teoretic cel puțin e bine , sunt foarte amabili , își fac "meseria" , în condițiile în care , pe drumurile noastre circulă atâtea epave "autorizate".'
+            },
+            {
+              author: 'Manuel Iorga',
+              rating: 5,
+              stars: '★★★★★',
+              text: 'Atmosfera frumoasa, poți servi o cafea un suc până este procesată masina'
+            }
+          ]
+        }
+      },
+      mounted() {
+        if (window.AOS) AOS.init({ duration: 800, once: true });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

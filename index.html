@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Sites</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+    .header {
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+    .header h1 { font-size: 1.8rem; font-weight: 700; }
+    .header p { color: #64748b; margin-top: 0.5rem; font-size: 0.95rem; }
+    .search-wrap {
+      max-width: 400px;
+      margin: 1.5rem auto 0;
+    }
+    .search-wrap input {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .search-wrap input:focus { border-color: #3b82f6; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .site-card {
+      display: block;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .site-card:hover {
+      border-color: #3b82f6;
+      background: #1e293b;
+    }
+    .site-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .site-url {
+      color: #3b82f6;
+      font-size: 0.8rem;
+      font-family: monospace;
+    }
+    .site-card.hidden { display: none; }
+    .count { color: #64748b; font-size: 0.85rem; text-align: center; padding: 0 2rem; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Business Sites</h1>
+    <p>66 sites deployed</p>
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Search businesses..." autocomplete="off">
+    </div>
+  </div>
+  <p class="count" id="count"></p>
+  <div class="grid" id="grid">
+        <a href="/andreea-vaman-cabinet-de-avocat/" class="site-card">
+          <div class="site-name">Andreea Vaman - Cabinet de Avocat</div>
+          <div class="site-url">/andreea-vaman-cabinet-de-avocat/</div>
+        </a>
+        <a href="/avocat-gale-claudia/" class="site-card">
+          <div class="site-name">Avocat Galeș Claudia</div>
+          <div class="site-url">/avocat-gale-claudia/</div>
+        </a>
+        <a href="/avocat-gale-eugen/" class="site-card">
+          <div class="site-name">Avocat Galeș Eugen</div>
+          <div class="site-url">/avocat-gale-eugen/</div>
+        </a>
+        <a href="/axv-detailing-auto/" class="site-card">
+          <div class="site-name">AXV Detailing Auto</div>
+          <div class="site-url">/axv-detailing-auto/</div>
+        </a>
+        <a href="/bnp-neciu-gabriela-daniela/" class="site-card">
+          <div class="site-name">B.N.P. Neciu Gabriela Daniela</div>
+          <div class="site-url">/bnp-neciu-gabriela-daniela/</div>
+        </a>
+        <a href="/baciu-anca-daniela/" class="site-card">
+          <div class="site-name">Baciu Anca Daniela</div>
+          <div class="site-url">/baciu-anca-daniela/</div>
+        </a>
+        <a href="/birou-cadastru-craiova-dolj-mohor-mirela/" class="site-card">
+          <div class="site-name">Birou Cadastru Craiova Dolj - Mohor Mirela</div>
+          <div class="site-url">/birou-cadastru-craiova-dolj-mohor-mirela/</div>
+        </a>
+        <a href="/birou-de-arhitectura-david-serban-nicolae/" class="site-card">
+          <div class="site-name">Birou De Arhitectura - David Serban Nicolae</div>
+          <div class="site-url">/birou-de-arhitectura-david-serban-nicolae/</div>
+        </a>
+        <a href="/birou-individual-notarial-dragut-reli/" class="site-card">
+          <div class="site-name">BIROU INDIVIDUAL NOTARIAL DRAGUT RELI</div>
+          <div class="site-url">/birou-individual-notarial-dragut-reli/</div>
+        </a>
+        <a href="/birou-individual-notarial-popescu-mihai-costin/" class="site-card">
+          <div class="site-name">Birou Individual Notarial Popescu Mihai-Costin</div>
+          <div class="site-url">/birou-individual-notarial-popescu-mihai-costin/</div>
+        </a>
+        <a href="/birou-individual-notarial-rusu-manuela/" class="site-card">
+          <div class="site-name">Birou Individual Notarial Rusu Manuela</div>
+          <div class="site-url">/birou-individual-notarial-rusu-manuela/</div>
+        </a>
+        <a href="/birou-notar-public-marga-amalia-nicoleta/" class="site-card">
+          <div class="site-name">Birou Notar Public - Marga Amalia Nicoleta</div>
+          <div class="site-url">/birou-notar-public-marga-amalia-nicoleta/</div>
+        </a>
+        <a href="/birou-notarial/" class="site-card">
+          <div class="site-name">Birou Notarial</div>
+          <div class="site-url">/birou-notarial/</div>
+        </a>
+        <a href="/birou-notarial-cluj/" class="site-card">
+          <div class="site-name">Birou Notarial Cluj</div>
+          <div class="site-url">/birou-notarial-cluj/</div>
+        </a>
+        <a href="/birou-notarial-gabriela-ghile/" class="site-card">
+          <div class="site-name">Birou Notarial Gabriela Ghile</div>
+          <div class="site-url">/birou-notarial-gabriela-ghile/</div>
+        </a>
+        <a href="/birou-notarial-ioana-serbanescu-stanga/" class="site-card">
+          <div class="site-name">Birou notarial Ioana Serbanescu Stanga</div>
+          <div class="site-url">/birou-notarial-ioana-serbanescu-stanga/</div>
+        </a>
+        <a href="/birou-notarial-ligia-elena-pintea-si-vlad-mihai/" class="site-card">
+          <div class="site-name">Birou Notarial Ligia Elena Pintea si Vlad Mihai</div>
+          <div class="site-url">/birou-notarial-ligia-elena-pintea-si-vlad-mihai/</div>
+        </a>
+        <a href="/birou-notarial-probitas/" class="site-card">
+          <div class="site-name">Birou Notarial PROBITAS</div>
+          <div class="site-url">/birou-notarial-probitas/</div>
+        </a>
+        <a href="/birou-notarial-public-murean/" class="site-card">
+          <div class="site-name">Birou Notarial Public Mureșan</div>
+          <div class="site-url">/birou-notarial-public-murean/</div>
+        </a>
+        <a href="/birou-notarial-rodica-buicescu/" class="site-card">
+          <div class="site-name">Birou Notarial Rodica Buicescu</div>
+          <div class="site-url">/birou-notarial-rodica-buicescu/</div>
+        </a>
+        <a href="/birou-notarial-serenec-roman/" class="site-card">
+          <div class="site-name">Birou Notarial Serenec &amp; Roman</div>
+          <div class="site-url">/birou-notarial-serenec-roman/</div>
+        </a>
+        <a href="/birou-notarial-tinta-alina-mihaela/" class="site-card">
+          <div class="site-name">Birou Notarial Tinta Alina Mihaela</div>
+          <div class="site-url">/birou-notarial-tinta-alina-mihaela/</div>
+        </a>
+        <a href="/birou-notarial-victor-dicu/" class="site-card">
+          <div class="site-name">BIROU NOTARIAL VICTOR DICU</div>
+          <div class="site-url">/birou-notarial-victor-dicu/</div>
+        </a>
+        <a href="/brehar-claudiu-octavian/" class="site-card">
+          <div class="site-name">Brehar Claudiu Octavian</div>
+          <div class="site-url">/brehar-claudiu-octavian/</div>
+        </a>
+        <a href="/cabinet-avocat-izabella-rdoi/" class="site-card">
+          <div class="site-name">Cabinet Avocat Izabella Rădoi</div>
+          <div class="site-url">/cabinet-avocat-izabella-rdoi/</div>
+        </a>
+        <a href="/cabinet-avocat-maier-flavia-ioana/" class="site-card">
+          <div class="site-name">Cabinet Avocat Maier Flavia Ioana</div>
+          <div class="site-url">/cabinet-avocat-maier-flavia-ioana/</div>
+        </a>
+        <a href="/cabinet-avocat-stan-ionel/" class="site-card">
+          <div class="site-name">Cabinet avocat STAN IONEL</div>
+          <div class="site-url">/cabinet-avocat-stan-ionel/</div>
+        </a>
+        <a href="/cabinet-de-avocat-oltean-alina-beatrice/" class="site-card">
+          <div class="site-name">Cabinet de avocat Oltean Alina Beatrice</div>
+          <div class="site-url">/cabinet-de-avocat-oltean-alina-beatrice/</div>
+        </a>
+        <a href="/cabinet-individual-de-avocat-vladu-florina/" class="site-card">
+          <div class="site-name">Cabinet individual de avocat Vladu Florina</div>
+          <div class="site-url">/cabinet-individual-de-avocat-vladu-florina/</div>
+        </a>
+        <a href="/cabinet-swiss-dent-dr-popa-raul-teodor/" class="site-card">
+          <div class="site-name">Cabinet Swiss Dent Dr Popa Raul Teodor</div>
+          <div class="site-url">/cabinet-swiss-dent-dr-popa-raul-teodor/</div>
+        </a>
+        <a href="/carpetino-spalatorie-de-covoare/" class="site-card">
+          <div class="site-name">Carpetino Spalatorie de Covoare</div>
+          <div class="site-url">/carpetino-spalatorie-de-covoare/</div>
+        </a>
+        <a href="/demeter-andreea/" class="site-card">
+          <div class="site-name">Demeter Andreea</div>
+          <div class="site-url">/demeter-andreea/</div>
+        </a>
+        <a href="/feurdean-cristian-octavian/" class="site-card">
+          <div class="site-name">Feurdean Cristian Octavian</div>
+          <div class="site-url">/feurdean-cristian-octavian/</div>
+        </a>
+        <a href="/georgescu-daniel-birou-ind-de-arhitectur/" class="site-card">
+          <div class="site-name">Georgescu Daniel, Birou Ind. De Arhitectură</div>
+          <div class="site-url">/georgescu-daniel-birou-ind-de-arhitectur/</div>
+        </a>
+        <a href="/gtm-logistics/" class="site-card">
+          <div class="site-name">GTM Logistics</div>
+          <div class="site-url">/gtm-logistics/</div>
+        </a>
+        <a href="/hudrea-cristina-cabinet-de-avocat/" class="site-card">
+          <div class="site-name">Hudrea Cristina Cabinet de Avocat</div>
+          <div class="site-url">/hudrea-cristina-cabinet-de-avocat/</div>
+        </a>
+        <a href="/ivanov-costache-birou-notar-public/" class="site-card">
+          <div class="site-name">Ivanov Costache, Birou Notar Public</div>
+          <div class="site-url">/ivanov-costache-birou-notar-public/</div>
+        </a>
+        <a href="/jakab-etelka/" class="site-card">
+          <div class="site-name">Jakab Etelka</div>
+          <div class="site-url">/jakab-etelka/</div>
+        </a>
+        <a href="/knz-detailing/" class="site-card">
+          <div class="site-name">KNZ Detailing</div>
+          <div class="site-url">/knz-detailing/</div>
+        </a>
+        <a href="/korcsog-andrea-beata-birou-notarial/" class="site-card">
+          <div class="site-name">Korcsog Andrea Beata, Birou Notarial</div>
+          <div class="site-url">/korcsog-andrea-beata-birou-notarial/</div>
+        </a>
+        <a href="/law-office-andaluna-bogdan/" class="site-card">
+          <div class="site-name">Law Office Andaluna Bogdan</div>
+          <div class="site-url">/law-office-andaluna-bogdan/</div>
+        </a>
+        <a href="/lazlo-traian-lawyer-office/" class="site-card">
+          <div class="site-name">Lazlo Traian - Lawyer Office</div>
+          <div class="site-url">/lazlo-traian-lawyer-office/</div>
+        </a>
+        <a href="/leanc-maria-birou-notarial/" class="site-card">
+          <div class="site-name">Leancă Maria, Birou Notarial</div>
+          <div class="site-url">/leanc-maria-birou-notarial/</div>
+        </a>
+        <a href="/m-tech-craiova/" class="site-card">
+          <div class="site-name">M-tech Craiova</div>
+          <div class="site-url">/m-tech-craiova/</div>
+        </a>
+        <a href="/miclea-florina/" class="site-card">
+          <div class="site-name">Miclea Florina</div>
+          <div class="site-url">/miclea-florina/</div>
+        </a>
+        <a href="/mircea-aniioara-birou-notarial/" class="site-card">
+          <div class="site-name">Mircea Aniişoara, Birou Notarial</div>
+          <div class="site-url">/mircea-aniioara-birou-notarial/</div>
+        </a>
+        <a href="/mircea-anioara-birou-notarial/" class="site-card">
+          <div class="site-name">Mircea Anişoara, Birou Notarial</div>
+          <div class="site-url">/mircea-anioara-birou-notarial/</div>
+        </a>
+        <a href="/notar-floresti-cristian-ghile-buzan/" class="site-card">
+          <div class="site-name">Notar Floresti - Cristian GHILE-BUZAN</div>
+          <div class="site-url">/notar-floresti-cristian-ghile-buzan/</div>
+        </a>
+        <a href="/notar-floresti-notario-societate-profesionala-notariala/" class="site-card">
+          <div class="site-name">Notar Floresti - NOTARIO Societate Profesionala Notariala</div>
+          <div class="site-url">/notar-floresti-notario-societate-profesionala-notariala/</div>
+        </a>
+        <a href="/notar-public/" class="site-card">
+          <div class="site-name">Notar Public</div>
+          <div class="site-url">/notar-public/</div>
+        </a>
+        <a href="/notar-public-chi-mihaela-liliana-i-chi-diana/" class="site-card">
+          <div class="site-name">Notar Public Chiș Mihaela Liliana și Chiș Diana</div>
+          <div class="site-url">/notar-public-chi-mihaela-liliana-i-chi-diana/</div>
+        </a>
+        <a href="/notar-public-gidro-alexandra/" class="site-card">
+          <div class="site-name">Notar public Gidro Alexandra</div>
+          <div class="site-url">/notar-public-gidro-alexandra/</div>
+        </a>
+        <a href="/notar-public-nyari-faur-andreea-mihaela/" class="site-card">
+          <div class="site-name">Notar Public Nyari Faur Andreea Mihaela</div>
+          <div class="site-url">/notar-public-nyari-faur-andreea-mihaela/</div>
+        </a>
+        <a href="/notar-public-vintu-beatrice-miruna/" class="site-card">
+          <div class="site-name">Notar Public Vintu Beatrice Miruna</div>
+          <div class="site-url">/notar-public-vintu-beatrice-miruna/</div>
+        </a>
+        <a href="/notari-mrginean-neciu/" class="site-card">
+          <div class="site-name">Notari Mărginean Neciu</div>
+          <div class="site-url">/notari-mrginean-neciu/</div>
+        </a>
+        <a href="/notary-public-office-tobescu-camelia-mihaela/" class="site-card">
+          <div class="site-name">Notary Public Office - Tobescu Camelia Mihaela</div>
+          <div class="site-url">/notary-public-office-tobescu-camelia-mihaela/</div>
+        </a>
+        <a href="/oltean-buruian-cezar-mihai-cabinet-avocat/" class="site-card">
+          <div class="site-name">Oltean-Buruiană Cezar-Mihai Cabinet Avocat</div>
+          <div class="site-url">/oltean-buruian-cezar-mihai-cabinet-avocat/</div>
+        </a>
+        <a href="/petru-maria/" class="site-card">
+          <div class="site-name">Petruş Maria</div>
+          <div class="site-url">/petru-maria/</div>
+        </a>
+        <a href="/srbulescu-irina-raluca-birou-notarial/" class="site-card">
+          <div class="site-name">Sârbulescu Irina-Raluca, Birou Notarial</div>
+          <div class="site-url">/srbulescu-irina-raluca-birou-notarial/</div>
+        </a>
+        <a href="/sc-auto-nicu-costi-service-srl/" class="site-card">
+          <div class="site-name">SC AUTO NICU &amp; COSTI SERVICE SRL</div>
+          <div class="site-url">/sc-auto-nicu-costi-service-srl/</div>
+        </a>
+        <a href="/sc-cauc-autos-srl/" class="site-card">
+          <div class="site-name">SC CAUC AUTOS S.R.L</div>
+          <div class="site-url">/sc-cauc-autos-srl/</div>
+        </a>
+        <a href="/societate-profesional-notarial-vancea-i-ttar/" class="site-card">
+          <div class="site-name">Societate Profesională Notarială „VANCEA și TĂTAR”</div>
+          <div class="site-url">/societate-profesional-notarial-vancea-i-ttar/</div>
+        </a>
+        <a href="/societatea-profesional-notarial-vlad-mihai-i-pintea-ligia-elena/" class="site-card">
+          <div class="site-name">Societatea Profesională Notarială Vlad Mihai și Pintea Ligia Elena</div>
+          <div class="site-url">/societatea-profesional-notarial-vlad-mihai-i-pintea-ligia-elena/</div>
+        </a>
+        <a href="/sorina-codrua-lazr-birou-individual-notarial/" class="site-card">
+          <div class="site-name">Sorina Codruţa Lazăr - Birou Individual Notarial</div>
+          <div class="site-url">/sorina-codrua-lazr-birou-individual-notarial/</div>
+        </a>
+        <a href="/spn-solemnis/" class="site-card">
+          <div class="site-name">SPN Solemnis</div>
+          <div class="site-url">/spn-solemnis/</div>
+        </a>
+        <a href="/yakaz-auto/" class="site-card">
+          <div class="site-name">Yakaz Auto</div>
+          <div class="site-url">/yakaz-auto/</div>
+        </a>
+  </div>
+  <script>
+    const input = document.getElementById('search');
+    const cards = document.querySelectorAll('.site-card');
+    const countEl = document.getElementById('count');
+    function filter() {
+      const q = input.value.toLowerCase();
+      let visible = 0;
+      cards.forEach(c => {
+        const match = c.textContent.toLowerCase().includes(q);
+        c.classList.toggle('hidden', !match);
+        if (match) visible++;
+      });
+      countEl.textContent = q ? visible + ' of ' + cards.length + ' shown' : '';
+    }
+    input.addEventListener('input', filter);
+  </script>
+</body>
+</html>

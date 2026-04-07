@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notar Floresti - NOTARIO | Florești, Cluj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{--bg:#eef5f2;--ink:#15231f;--muted:#5d6c67;--green:#1f6b57;--mint:#4f9b80;--gold:#b79252;--card:#ffffff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:
+      radial-gradient(circle at top right, rgba(31,107,87,.12), transparent 24%),
+      radial-gradient(circle at left bottom, rgba(183,146,82,.15), transparent 20%),
+      linear-gradient(180deg,#f8fbfa 0%,#eef5f2 100%)}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:30;background:rgba(238,245,242,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(21,35,31,.08)}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0;flex-wrap:wrap}
+    .brand{display:flex;flex-direction:column}
+    .brand strong{font-family:Playfair Display,serif;font-size:1.15rem}
+    .brand span{color:var(--muted);font-size:.84rem}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+    .navlinks a:hover{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--green),#2e856c);color:#fff}
+    .btn.ghost{border:1px solid rgba(21,35,31,.12);background:#fff}
+    .hero{padding:58px 0 26px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .tag{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border-radius:999px;background:rgba(31,107,87,.08);color:var(--green);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+    h1,h2,h3{font-family:Playfair Display,serif;margin:0}
+    h1{font-size:clamp(3rem,7vw,5.4rem);line-height:.95;margin:18px 0 14px}
+    .intro{color:var(--muted);font-size:1.03rem;line-height:1.85;max-width:58ch}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .hero-panel{padding:22px;border-radius:28px;background:linear-gradient(180deg,#ffffff,#f4faf7);border:1px solid rgba(21,35,31,.08);box-shadow:0 20px 60px rgba(22,46,38,.08)}
+    .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .fact{padding:18px;border-radius:20px;background:rgba(31,107,87,.07);border:1px solid rgba(31,107,87,.08)}
+    .fact b{display:block;font-family:Playfair Display,serif;font-size:1.7rem;color:var(--green)}
+    .fact span{color:var(--muted);font-size:.9rem}
+    section{padding:36px 0}
+    .title{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+    .title p{margin:0;color:var(--muted);max-width:54ch;line-height:1.7}
+    .title h2{font-size:clamp(2rem,4vw,3.1rem)}
+    .panel,.card,.review,.contact{background:var(--card);border:1px solid rgba(21,35,31,.08);border-radius:24px}
+    .panel{padding:24px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .panel p,.card p,.review p,.contact p{color:var(--muted);line-height:1.8}
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(31,107,87,.08);color:var(--green);font-size:.9rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:20px}
+    .card i,.contact i,.review .stars{color:var(--gold)}
+    .card h3,.review h3,.contact h3{margin:10px 0 8px;font-size:1.55rem}
+    .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .review{padding:20px}
+    .review header{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+    .review .name{font-weight:700}
+    .review .meta{color:var(--muted);font-size:.88rem}
+    .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .contact{padding:18px}
+    .footer{padding:28px 0 40px;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 22px;background:#fff;border:1px solid rgba(21,35,31,.08);border-radius:24px}
+    @media(max-width:900px){.hero-grid,.two-col,.grid,.reviews,.contact-grid{grid-template-columns:1fr}h1{max-width:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><strong>Notar Floresti - NOTARIO</strong><span>Societate profesională notarială</span></div>
+        <div class="navlinks"><a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#incredere">Încredere</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a></div>
+        <a class="btn primary" href="tel:0730206681"><i class="fa-solid fa-phone"></i> Sună acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="tag"><i class="fa-solid fa-file-signature"></i> Notariat în Florești</div>
+          <h1>Documente clare, programări simple, parcări la îndemână.</h1>
+          <p class="intro">NOTARIO este o societate profesională notarială din Florești, bine așezată pentru clienții care vor explicații limpezi, procesare rapidă și acces facil la sediu, cu parcare gratuită și on-site.</p>
+          <div class="actions">
+            <a class="btn primary" href="tel:0730206681"><i class="fa-solid fa-phone"></i> 0730 206 681</a>
+            <a class="btn ghost" href="https://www.google.com/maps/place/Notar+Floresti+-+NOTARIO+Societate+Profesionala+Notariala/data=!4m7!3m6!1s0x47491179d87c651f:0x65b7b61b801abd97!8m2!3d46.7373122!4d23.4842994!16s%2Fg%2F11fl0tnvsm!19sChIJH2V82HkRSUcRl70agBu2t2U?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Harta sediului</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="facts">
+            <div class="fact"><b>4.1/5</b><span>rating public</span></div>
+            <div class="fact"><b>55</b><span>recenzii Google</span></div>
+            <div class="fact"><b>Parcare</b><span>gratuită, la sediu</span></div>
+            <div class="fact"><b>09-17</b><span>luni - vineri</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre">
+      <div class="wrap two-col">
+        <div class="panel">
+          <div class="tag"><i class="fa-solid fa-circle-info"></i> Despre noi</div>
+          <h2 style="font-size:clamp(2rem,4vw,3.1rem);margin-top:12px">Un birou notarial central, gândit pentru claritate și ritm bun.</h2>
+          <p>Biroul funcționează ca societate profesională notarială în Florești, Cluj, cu adresă centrală pe Strada Eroilor 21, etaj 1. Datele publice indică un serviciu stabil, cu program standard și cu accent pe explicații clare înainte de semnare.</p>
+          <p>În zona serviciilor notariale, localizarea și ușurința accesului sunt importante. Aici, parcarea la sediu și profilul orientat spre rapiditate ajută mult clienții care vin pentru acte de proprietate, procuri sau succesiuni.</p>
+        </div>
+        <div class="panel">
+          <div class="tag"><i class="fa-solid fa-circle-check"></i> Ce ajută</div>
+          <div class="pillrow">
+            <span class="pill">Parcare gratuită</span>
+            <span class="pill">On-site parking</span>
+            <span class="pill">Program 09:00 - 17:00</span>
+            <span class="pill">Florești, Cluj</span>
+          </div>
+          <div style="margin-top:18px" class="card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Proceduri limpezi</h3>
+            <p>Notarul explică clauzele, efectele și riscurile actelor, iar clienții pot trimite documente și detalii înainte de programare.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii">
+      <div class="wrap">
+        <div class="title">
+          <div><div class="tag"><i class="fa-solid fa-pen-nib"></i> Servicii</div><h2>Acte notariale frecvente, rezolvate elegant.</h2></div>
+          <p>Lista de servicii urmează profilul public al biroului și tiparul clasic al unui notar cu activitate constantă în Cluj.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-house"></i><h3>Imobiliare</h3><p>Contracte de vânzare-cumpărare, donații, ipoteci și acte pentru transferuri de proprietate.</p></article>
+          <article class="card"><i class="fa-solid fa-file-signature"></i><h3>Autentificări</h3><p>Semnături, copii certificate, declarații și legalizări pentru uz curent sau special.</p></article>
+          <article class="card"><i class="fa-solid fa-user-shield"></i><h3>Procuri</h3><p>Împuterniciri generale sau speciale pentru administrare, reprezentare și operațiuni curente.</p></article>
+          <article class="card"><i class="fa-solid fa-inbox"></i><h3>Succesiuni</h3><p>Acte pentru moșteniri și documente care cer o redactare atentă și ordonată.</p></article>
+          <article class="card"><i class="fa-solid fa-users"></i><h3>Acte de familie</h3><p>Convenții matrimoniale, consimțăminte și declarații legate de viața de familie.</p></article>
+          <article class="card"><i class="fa-solid fa-scale-balanced"></i><h3>Consultanță</h3><p>Explicații pentru efectele juridice ale actelor, înainte de semnarea lor în formă autentică.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="incredere">
+      <div class="wrap">
+        <div class="title">
+          <div><div class="tag"><i class="fa-solid fa-shield"></i> Încredere</div><h2>De ce aleg clienții acest birou.</h2></div>
+        </div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-car"></i><h3>Acces ușor</h3><p>Parcare gratuită și poziționare bună în centrul Floreștiului.</p></article>
+          <article class="card"><i class="fa-solid fa-comment-dots"></i><h3>Comunicare bună</h3><p>Clienții pot trimite documentele în avans și primesc explicații clare despre pași.</p></article>
+          <article class="card"><i class="fa-solid fa-stopwatch"></i><h3>Ritm eficient</h3><p>Agenda este construită pentru lucrări rapide, cu program 09:00 - 17:00.</p></article>
+          <article class="card"><i class="fa-solid fa-star"></i><h3>Reputație stabilă</h3><p>Rating public de 4.1/5, cu feedback repetat pentru seriozitate și promptitudine.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii">
+      <div class="wrap">
+        <div class="title">
+          <div><div class="tag"><i class="fa-solid fa-message"></i> Recenzii</div><h2>Comentarii reale din datele publice.</h2></div>
+          <p>Am selectat recenzii existente în prompt, cu accent pe ce spun oamenii despre documente, seriozitate și rapiditate.</p>
+        </div>
+        <div class="reviews">
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">NEMES NICOLAE</div><div class="meta">Google</div></header><p>„Un notar pe care îl recomand, fiind foarte atent la detaliile unei tranzacții.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Maria Szasz</div><div class="meta">Google</div></header><p>„Recomand. Amabilitate, promptitudine și seriozitate.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Endre Vig</div><div class="meta">Google</div></header><p>„Promtitudine, rapiditate, eficiență.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Dorel Cotan</div><div class="meta">Google</div></header><p>„Doamna Notar Ciacoi e foarte amabilă... cu mici excepții.”</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="title"><div><div class="tag"><i class="fa-solid fa-envelope"></i> Contact</div><h2>Datele publice ale biroului.</h2></div></div>
+        <div class="contact-grid">
+          <article class="contact"><i class="fa-solid fa-location-dot"></i><h3>Adresă</h3><p>Str. Eroilor 21, ap. 1, et. 1, 407280 Florești.</p><p><a href="https://www.google.com/maps/place/Notar+Floresti+-+NOTARIO+Societate+Profesionala+Notariala/data=!4m7!3m6!1s0x47491179d87c651f:0x65b7b61b801abd97!8m2!3d46.7373122!4d23.4842994!16s%2Fg%2F11fl0tnvsm!19sChIJH2V82HkRSUcRl70agBu2t2U?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener">Deschide în Google Maps</a></p></article>
+          <article class="contact"><i class="fa-solid fa-phone"></i><h3>Telefon</h3><p><a href="tel:0730206681">0730 206 681</a></p><p>Apelul rapid este cel mai simplu mod de programare.</p></article>
+          <article class="contact"><i class="fa-solid fa-clock"></i><h3>Program</h3><p>Luni - Vineri: 09:00 - 17:00</p><p>Sâmbătă și duminică: închis</p></article>
+          <article class="contact"><i class="fa-solid fa-at"></i><h3>Email</h3><p>notar.floresti@gmail.com</p><p>Trimite documentele înainte de semnare.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div><strong style="font-family:Playfair Display,serif;font-size:1.35rem;color:var(--ink)">Notar Floresti - NOTARIO</strong><p style="margin:6px 0 0">Florești, Cluj • parcare gratuită la sediu</p></div>
+      <div>© 2026 • Societate profesională notarială</div>
+    </div>
+  </footer>
+</body>
+</html>

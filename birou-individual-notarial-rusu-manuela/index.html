@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birou Individual Notarial Rusu Manuela | Cluj-Napoca</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['"Manrope"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.15/vue.global.prod.min.js"></script>
+  <style>
+    :root{
+      --bg:#efe9e2;
+      --panel:rgba(255,250,244,.84);
+      --ink:#211814;
+      --muted:#695a50;
+      --line:rgba(33,24,20,.12);
+      --accent:#8a5f4a;
+      --accent2:#d3ad73;
+      --hero1:#2a1d18;
+      --hero2:#765040;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Manrope',sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(211,173,115,.22), transparent 28%),
+        radial-gradient(circle at 85% 20%, rgba(138,95,74,.18), transparent 30%),
+        linear-gradient(180deg,#f6f1ea 0%, var(--bg) 100%);
+    }
+    h1,h2,h3,.display{font-family:'Cormorant Garamond',serif}
+    .glass{background:var(--panel);backdrop-filter:blur(18px);border:1px solid var(--line);box-shadow:0 20px 70px rgba(33,24,20,.08)}
+    .soft{box-shadow:0 10px 35px rgba(33,24,20,.08)}
+    .link-underline{position:relative}
+    .link-underline:after{content:"";position:absolute;left:50%;bottom:-6px;width:0;height:1px;background:var(--accent2);transition:.25s ease;transform:translateX(-50%)}
+    .link-underline:hover:after{width:100%}
+    .hero{
+      background:
+        radial-gradient(circle at 18% 18%, rgba(211,173,115,.22), transparent 18%),
+        radial-gradient(circle at 72% 28%, rgba(255,255,255,.08), transparent 20%),
+        linear-gradient(135deg, #1f1511 0%, var(--hero1) 45%, var(--hero2) 100%);
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size:26px 26px;
+      opacity:.35;
+      pointer-events:none;
+    }
+    .badge{border:1px solid rgba(211,173,115,.25);background:rgba(255,255,255,.05)}
+    .card{
+      background:rgba(255,255,255,.78);
+      backdrop-filter:blur(14px);
+      border:1px solid var(--line);
+      transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card:hover{transform:translateY(-5px);box-shadow:0 18px 45px rgba(33,24,20,.1);border-color:rgba(138,95,74,.3)}
+    .section-title{letter-spacing:.18em;text-transform:uppercase}
+  </style>
+</head>
+<body>
+<div id="app" x-data="{open:false}">
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="glass mt-4 rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="#acasa" class="flex flex-col">
+          <span class="display text-2xl font-bold leading-none">{{ b.brand }}</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-[color:var(--muted)]">
+          <a class="link-underline hover:text-[color:var(--accent)]" href="#despre">Despre</a>
+          <a class="link-underline hover:text-[color:var(--accent)]" href="#servicii">Servicii</a>
+          <a class="link-underline hover:text-[color:var(--accent)]" href="#alegere">De ce noi</a>
+          <a class="link-underline hover:text-[color:var(--accent)]" href="#recenzii">Recenzii</a>
+          <a class="link-underline hover:text-[color:var(--accent)]" href="#contact">Contact</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="tel:0740323586" class="rounded-full px-5 py-3 bg-[color:var(--accent)] text-white font-semibold soft"><i class="fa-solid fa-phone mr-2"></i>Sună acum</a>
+        </div>
+        <button class="lg:hidden w-11 h-11 rounded-full border border-[color:var(--line)] flex items-center justify-center" @click="open=!open" aria-label="Meniu">
+          <i class="fa-solid" :class="open ? 'fa-xmark' : 'fa-bars'"></i>
+        </button>
+      </div>
+    </div>
+    <div x-show="open" x-cloak class="lg:hidden mx-4 mt-2 glass rounded-2xl p-5" x-transition>
+      <div class="flex flex-col gap-4 text-[color:var(--muted)] font-medium">
+        <a href="#despre" @click="open=false">Despre</a>
+        <a href="#servicii" @click="open=false">Servicii</a>
+        <a href="#alegere" @click="open=false">De ce noi</a>
+        <a href="#recenzii" @click="open=false">Recenzii</a>
+        <a href="#contact" @click="open=false">Contact</a>
+        <a href="tel:0740323586" class="rounded-full px-5 py-3 bg-[color:var(--accent)] text-white font-semibold text-center"><i class="fa-solid fa-phone mr-2"></i>0740 323 586</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="acasa" class="hero min-h-screen pt-32 md:pt-36 pb-20 text-white overflow-hidden">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-up">
+            <div class="inline-flex items-center gap-2 badge rounded-full px-4 py-2 text-xs uppercase tracking-[0.28em] text-white/80">
+              <i class="fa-solid fa-building-columns text-[color:var(--accent2)]"></i>
+              {{ b.heroLocation }}
+            </div>
+            <h1 class="display mt-6 text-5xl md:text-7xl font-bold leading-[0.92] max-w-xl">
+              {{ b.heroTitle }}
+            </h1>
+            <p class="mt-6 max-w-xl text-white/78 text-lg md:text-xl leading-8">
+              {{ b.heroLead }}
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="tel:0740323586" class="rounded-full px-6 py-4 bg-[color:var(--accent2)] text-[color:var(--ink)] font-semibold text-center soft"><i class="fa-solid fa-phone mr-2"></i>0740 323 586</a>
+              <a href="https://www.google.com/maps/place/Birou+Individual+Notarial+Rusu+Manuela/data=!4m7!3m6!1s0x47490ff00cca4eaf:0x8a11aea3577e0fcb!8m2!3d46.7751617!4d23.5898747!16s%2Fg%2F11fm6fj_fm!19sChIJr07KDPAPSUcRyw9-V6OuEYo?authuser=0&amp;hl=en&amp;rclk=1" target="_blank" class="rounded-full px-6 py-4 border border-white/30 bg-white/5 font-semibold text-center"><i class="fa-solid fa-location-dot mr-2"></i>Vezi pe hartă</a>
+            </div>
+            <div class="mt-10 grid grid-cols-3 gap-4 max-w-xl">
+              <div class="badge rounded-2xl p-4 text-center">
+                <div class="text-3xl display font-bold">{{ b.heroStat1 }}</div>
+                <div class="text-xs uppercase tracking-[0.2em] text-white/65">{{ b.heroStat1Label }}</div>
+              </div>
+              <div class="badge rounded-2xl p-4 text-center">
+                <div class="text-3xl display font-bold">{{ b.heroStat2 }}</div>
+                <div class="text-xs uppercase tracking-[0.2em] text-white/65">{{ b.heroStat2Label }}</div>
+              </div>
+              <div class="badge rounded-2xl p-4 text-center">
+                <div class="text-3xl display font-bold">{{ b.heroStat3 }}</div>
+                <div class="text-xs uppercase tracking-[0.2em] text-white/65">{{ b.heroStat3Label }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:pl-10" data-aos="fade-left">
+            <div class="glass rounded-[2rem] p-6 md:p-8 text-[color:var(--ink)]">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="section-title text-xs text-[color:var(--accent)]">Info rapid</p>
+                  <h2 class="display text-3xl font-bold mt-1">{{ b.officeMode }}</h2>
+                </div>
+                <div class="w-16 h-16 rounded-2xl bg-[color:var(--accent)] text-white flex items-center justify-center text-2xl"><i class="fa-solid fa-scale-balanced"></i></div>
+              </div>
+              <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                <div class="card rounded-2xl p-5">
+                  <p class="text-sm text-[color:var(--muted)]">Adresă</p>
+                  <p class="mt-2 font-semibold">Piața Mihai Viteazu nr. 9A<br>400036 Cluj-Napoca</p>
+                </div>
+                <div class="card rounded-2xl p-5">
+                  <p class="text-sm text-[color:var(--muted)]">Telefon</p>
+                  <p class="mt-2 font-semibold">0740 323 586</p>
+                </div>
+                <div class="card rounded-2xl p-5">
+                  <p class="text-sm text-[color:var(--muted)]">Email</p>
+                  <p class="mt-2 font-semibold break-all">rusu_not@yahoo.com</p>
+                </div>
+                <div class="card rounded-2xl p-5">
+                  <p class="text-sm text-[color:var(--muted)]">Program</p>
+                  <p class="mt-2 font-semibold">Luni-Vineri 09:30-17:00</p>
+                </div>
+              </div>
+              <div class="mt-5 rounded-2xl bg-[color:var(--bg)] p-5 border border-[color:var(--line)]">
+                <p class="text-sm text-[color:var(--muted)]">Observație</p>
+                <p class="mt-1 leading-7">{{ b.heroNote }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="despre" class="py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
+        <div data-aos="fade-right">
+          <p class="section-title text-xs text-[color:var(--accent)]">Despre birou</p>
+          <h2 class="display text-4xl md:text-5xl font-bold mt-3">{{ b.aboutTitle }}</h2>
+          <p class="mt-6 text-[color:var(--muted)] leading-8">
+            {{ b.about1 }}
+          </p>
+          <p class="mt-4 text-[color:var(--muted)] leading-8">
+            {{ b.about2 }}
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-4" data-aos="fade-left">
+          <div class="card rounded-[1.75rem] p-6 text-center">
+            <i class="fa-solid fa-star text-[color:var(--accent2)] text-3xl"></i>
+            <div class="display mt-3 text-5xl font-bold">{{ b.aboutStat1 }}</div>
+            <div class="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">{{ b.aboutStat1Label }}</div>
+          </div>
+          <div class="card rounded-[1.75rem] p-6 text-center">
+            <i class="fa-solid fa-comment-dots text-[color:var(--accent2)] text-3xl"></i>
+            <div class="display mt-3 text-5xl font-bold">{{ b.aboutStat2 }}</div>
+            <div class="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">{{ b.aboutStat2Label }}</div>
+          </div>
+          <div class="card rounded-[1.75rem] p-6 text-center">
+            <i class="fa-solid fa-map-location-dot text-[color:var(--accent2)] text-3xl"></i>
+            <div class="display mt-3 text-5xl font-bold">{{ b.aboutStat3 }}</div>
+            <div class="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">{{ b.aboutStat3Label }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="py-20 md:py-28 bg-[rgba(255,255,255,.35)]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="section-title text-xs text-[color:var(--accent)]">Servicii</p>
+          <h2 class="display text-4xl md:text-5xl font-bold mt-3">Documente notariale prezentate limpede, fără pași inutili</h2>
+        </div>
+        <div class="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <article class="card rounded-[1.75rem] p-6">
+            <div class="w-14 h-14 rounded-2xl bg-[color:var(--accent)] text-white flex items-center justify-center text-xl"><i class="fa-solid fa-file-signature"></i></div>
+            <h3 class="display text-3xl font-bold mt-5">Acte imobiliare</h3>
+            <p class="mt-3 text-[color:var(--muted)] leading-7">Sprijin pentru acte de vânzare-cumpărare, donații și alte documente cu miză patrimonială.</p>
+          </article>
+          <article class="card rounded-[1.75rem] p-6">
+            <div class="w-14 h-14 rounded-2xl bg-[color:var(--accent)] text-white flex items-center justify-center text-xl"><i class="fa-solid fa-inbox"></i></div>
+            <h3 class="display text-3xl font-bold mt-5">Succesiuni</h3>
+            <p class="mt-3 text-[color:var(--muted)] leading-7">Pași bine explicați pentru dezbaterea succesiunilor și pregătirea dosarului necesar.</p>
+          </article>
+          <article class="card rounded-[1.75rem] p-6">
+            <div class="w-14 h-14 rounded-2xl bg-[color:var(--accent)] text-white flex items-center justify-center text-xl"><i class="fa-solid fa-file-circle-check"></i></div>
+            <h3 class="display text-3xl font-bold mt-5">Procure și declarații</h3>
+            <p class="mt-3 text-[color:var(--muted)] leading-7">Documente personale și comerciale pregătite corect, cu formulări clare și verificări atente.</p>
+          </article>
+          <article class="card rounded-[1.75rem] p-6">
+            <div class="w-14 h-14 rounded-2xl bg-[color:var(--accent)] text-white flex items-center justify-center text-xl"><i class="fa-solid fa-stamp"></i></div>
+            <h3 class="display text-3xl font-bold mt-5">Legalizări</h3>
+            <p class="mt-3 text-[color:var(--muted)] leading-7">Copii conforme, semnături și alte formalități administrate ordonat și eficient.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="alegere" class="py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="section-title text-xs text-[color:var(--accent)]">De ce noi</p>
+          <h2 class="display text-4xl md:text-5xl font-bold mt-3">Un mod de lucru liniștit, clar și bine organizat</h2>
+        </div>
+        <div class="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <div class="card rounded-[1.75rem] p-6">
+            <i class="fa-solid fa-shield-halved text-[color:var(--accent)] text-2xl"></i>
+            <h3 class="display text-2xl font-bold mt-4">Discreție</h3>
+            <p class="mt-2 text-[color:var(--muted)] leading-7">Dosarele sunt tratate cu atenție și calm, fără zgomot inutil.</p>
+          </div>
+          <div class="card rounded-[1.75rem] p-6">
+            <i class="fa-solid fa-location-dot text-[color:var(--accent)] text-2xl"></i>
+            <h3 class="display text-2xl font-bold mt-4">Locație centrală</h3>
+            <p class="mt-2 text-[color:var(--muted)] leading-7">Piața Mihai Viteazu face accesul simplu pentru programări în oraș.</p>
+          </div>
+          <div class="card rounded-[1.75rem] p-6">
+            <i class="fa-solid fa-book-open text-[color:var(--accent)] text-2xl"></i>
+            <h3 class="display text-2xl font-bold mt-4">Explicații clare</h3>
+            <p class="mt-2 text-[color:var(--muted)] leading-7">Pașii sunt prezentati pe scurt, astfel încât documentele să fie ușor de urmărit.</p>
+          </div>
+          <div class="card rounded-[1.75rem] p-6">
+            <i class="fa-solid fa-clock text-[color:var(--accent)] text-2xl"></i>
+            <h3 class="display text-2xl font-bold mt-4">Program stabil</h3>
+            <p class="mt-2 text-[color:var(--muted)] leading-7">Luni-Vineri 09:30-17:00, potrivit pentru acte care cer o fereastră clară de lucru.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii" class="py-20 md:py-28 bg-[rgba(255,255,255,.42)]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="section-title text-xs text-[color:var(--accent)]">Recenzii</p>
+          <h2 class="display text-4xl md:text-5xl font-bold mt-3">Extrase reale din prompt</h2>
+        </div>
+        <div v-if="b.reviews.length" class="mt-10 grid lg:grid-cols-3 gap-5">
+          <article v-for="r in b.reviews" :key="r.name" class="card rounded-[1.75rem] p-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="font-semibold">{{ r.name }}</div>
+                <div class="text-xs uppercase tracking-[0.18em] text-[color:var(--muted)]">{{ r.label }}</div>
+              </div>
+              <div class="text-[color:var(--accent2)]">
+                <i v-for="n in r.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="mt-4 text-[color:var(--muted)] leading-7 whitespace-pre-line">“{{ r.text }}”</p>
+          </article>
+        </div>
+        <div v-else class="mt-10">
+          <div class="inline-flex items-center gap-3 rounded-full px-6 py-4 bg-[color:var(--accent)] text-white soft">
+            <i class="fa-solid fa-star"></i>
+            <span class="font-semibold">{{ b.ratingLabel }}</span>
+          </div>
+          <p class="mt-4 text-[color:var(--muted)] max-w-2xl leading-8">{{ b.ratingNote }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <p class="section-title text-xs text-[color:var(--accent)]">Contact</p>
+          <h2 class="display text-4xl md:text-5xl font-bold mt-3">Informații de contact și program</h2>
+          <div class="mt-8 grid sm:grid-cols-2 gap-4">
+            <div class="card rounded-[1.5rem] p-5">
+              <i class="fa-solid fa-location-dot text-[color:var(--accent)] text-xl"></i>
+              <p class="mt-3 text-sm text-[color:var(--muted)]">Adresă</p>
+              <p class="mt-1 font-semibold leading-7">{{ b.address }}</p>
+            </div>
+            <div class="card rounded-[1.5rem] p-5" v-if="b.phone">
+              <i class="fa-solid fa-phone text-[color:var(--accent)] text-xl"></i>
+              <p class="mt-3 text-sm text-[color:var(--muted)]">Telefon</p>
+              <p class="mt-1 font-semibold leading-7">{{ b.phone }}</p>
+            </div>
+            <div class="card rounded-[1.5rem] p-5" v-if="b.email">
+              <i class="fa-solid fa-envelope text-[color:var(--accent)] text-xl"></i>
+              <p class="mt-3 text-sm text-[color:var(--muted)]">Email</p>
+              <p class="mt-1 font-semibold break-all leading-7">{{ b.email }}</p>
+            </div>
+            <div class="card rounded-[1.5rem] p-5">
+              <i class="fa-solid fa-star text-[color:var(--accent)] text-xl"></i>
+              <p class="mt-3 text-sm text-[color:var(--muted)]">Evaluare</p>
+              <p class="mt-1 font-semibold leading-7">{{ b.ratingLabel }}</p>
+            </div>
+          </div>
+          <div class="mt-4 card rounded-[1.5rem] p-5">
+            <p class="text-sm text-[color:var(--muted)]">Program</p>
+            <div v-if="b.hours.length" class="mt-3 grid gap-2">
+              <div v-for="h in b.hours" :key="h.day" class="flex items-center justify-between border-b border-[color:var(--line)] pb-2 last:border-0">
+                <span class="font-medium">{{ h.day }}</span>
+                <span class="text-[color:var(--muted)]">{{ h.value }}</span>
+              </div>
+            </div>
+            <p v-else class="mt-2 text-[color:var(--muted)] leading-7">{{ b.hoursNote }}</p>
+          </div>
+          <div class="mt-4 flex flex-col sm:flex-row gap-3">
+            <a v-if="b.phone" :href="'tel:' + b.phone.replace(/[^0-9+]/g,'')" class="rounded-full px-5 py-3 bg-[color:var(--accent)] text-white font-semibold text-center"><i class="fa-solid fa-phone mr-2"></i>Sună acum</a>
+            <a v-if="b.email && !b.phone" :href="'mailto:' + b.email" class="rounded-full px-5 py-3 bg-[color:var(--accent)] text-white font-semibold text-center"><i class="fa-solid fa-envelope mr-2"></i>Scrie un email</a>
+            <a :href="b.maps" target="_blank" class="rounded-full px-5 py-3 border border-[color:var(--line)] font-semibold text-center"><i class="fa-solid fa-location-dot mr-2"></i>Deschide harta</a>
+          </div>
+        </div>
+        <div class="card rounded-[2rem] p-4 md:p-5" data-aos="fade-left">
+          <iframe
+            class="w-full h-[420px] rounded-[1.5rem]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            :src="mapsEmbed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pb-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="glass rounded-[2rem] p-6 md:p-8 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
+        <div>
+          <div class="display text-3xl font-bold">{{ b.brand }}</div>
+          <p class="mt-2 text-[color:var(--muted)] max-w-2xl">Birou notarial cu prezentare clară, contact direct și o structură potrivită pentru acte importante în Cluj-Napoca.</p>
+        </div>
+        <div class="text-sm text-[color:var(--muted)] leading-7">
+          <div>{{ b.address }}</div>
+          <div v-if="b.phone">Telefon: {{ b.phone }}</div>
+          <div v-if="b.email">Email: {{ b.email }}</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const { createApp } = Vue;
+  createApp({
+    data() {
+      return {
+        b: {
+          brand: "Birou Individual Notarial Rusu Manuela",
+          heroLocation: "Piața Mihai Viteazu, Cluj-Napoca",
+          officeMode: "Birou individual",
+          heroTitle: "Precizie notarială în centrul Clujului",
+          heroLead: "Acte explicate clar, pași bine organizați și o abordare calmă pentru momentele care cer siguranță juridică.",
+          heroStat1: "3.8/5",
+          heroStat1Label: "Scor public",
+          heroStat2: "23",
+          heroStat2Label: "Recenzii",
+          heroStat3: "09:30-17:00",
+          heroStat3Label: "L-V",
+          heroNote: "Datele publice indică un birou activ, cu adresă centrală și o structură de lucru potrivită pentru programări și documente sensibile.",
+          aboutTitle: "Un birou notarial construit pe claritate și discreție",
+          about1: "Biroul individual notarial din Piața Mihai Viteazu pune accent pe claritate, discreție și o comunicare atentă cu fiecare client. Într-o zonă centrală a Clujului, aici găsiți sprijin pentru documente importante, verificare și redactare de acte, într-un cadru profesionist și ușor de parcurs.",
+          about2: "Scorul public de 3.8 din 5, bazat pe 23 de recenzii, arată o activitate constantă și multă vizibilitate în oraș. Pentru clienții care vor ordine și pași explicați simplu, aceasta rămâne o alegere comodă în centrul Clujului.",
+          aboutStat1: "3.8",
+          aboutStat1Label: "Scor public",
+          aboutStat2: "23",
+          aboutStat2Label: "Recenzii",
+          aboutStat3: "Central",
+          aboutStat3Label: "Piața Mihai Viteazu",
+          address: "Piața Mihai Viteazu nr. 9A, 400036 Cluj-Napoca",
+          phone: "0740 323 586",
+          email: "rusu_not@yahoo.com",
+          maps: "https://www.google.com/maps/place/Birou+Individual+Notarial+Rusu+Manuela/data=!4m7!3m6!1s0x47490ff00cca4eaf:0x8a11aea3577e0fcb!8m2!3d46.7751617!4d23.5898747!16s%2Fg%2F11fm6fj_fm!19sChIJr07KDPAPSUcRyw9-V6OuEYo?authuser=0&hl=en&rclk=1",
+          mapsEmbed: "https://www.google.com/maps?q=46.7751617,23.5898747&z=16&output=embed",
+          ratingLabel: "3.8/5 din 23 de recenzii",
+          ratingNote: "Promptul include 23 de recenzii publice și un scor de 3.8/5.",
+          hoursNote: "Programul a fost indicat în datele furnizate ca Luni-Vineri 09:30-17:00.",
+          hours: [
+            { day: "Luni", value: "09:30-17:00" },
+            { day: "Marți", value: "09:30-17:00" },
+            { day: "Miercuri", value: "09:30-17:00" },
+            { day: "Joi", value: "09:30-17:00" },
+            { day: "Vineri", value: "09:30-17:00" },
+            { day: "Sâmbătă", value: "Închis" },
+            { day: "Duminică", value: "Închis" }
+          ],
+          reviews: [
+            { name: "Kiss Flaviu", label: "1 stea", stars: 1, text: "Total neprofesionista, facem programare, doamna notar il consileaza pe om sa nu facem antecontract, facem programare pentru vanzare, trimit actele, vanzatorul se razgandeste si anuleaza tranzactia, si doamna notar nu binevoieste sa ne anunte ca vanzatorul s-a razgandit, iar noi ne prezentam la notar la data stabilita pentru vanzare si doamna notar ne zice cu zambetul pe buze ca s-a anulat vanzarea. Am pierdut o zi intreaga cu drumuri cand stimata doamna notar ne putea anunta cu 3 zile inainte ca nu mai are loc tranzactia." },
+            { name: "Laura", label: "1 stea", stars: 1, text: "Am avut o experienta neplacuta deoarece notarul nu ne-a pus la dispozitie documentele necesare si informatiile importante necesare tranzactiei, in calitate de cumparator nu am avut parte de o consiliere adecvata. Tranzactia nu s-a finalizat." },
+            { name: "NEMES NICOLAE", label: "5 stele", stars: 5, text: "Un notar pe care il recomand, fiind foarte atent la detaliile unei tranzactii." }
+          ]
+        }
+      };
+    }
+  }).mount('#app');
+  AOS.init({ duration: 800, once: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birou de Arhitectură – David Șerban Nicolae | București</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js"></script>
+
+  <!-- Vue.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.15/vue.global.prod.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          },
+          colors: {
+            stone: {
+              50:  '#faf9f7',
+              100: '#f3f0eb',
+              200: '#e8e2d9',
+              300: '#d5ccbe',
+              400: '#bfb09c',
+              500: '#a89278',
+              600: '#8e7560',
+              700: '#715d4b',
+              800: '#5a4a3c',
+              900: '#3d3128',
+            },
+            charcoal: '#1a1714',
+            gold: '#c9a96e',
+            'gold-light': '#e2c99a',
+            cream: '#f5f0e8',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --gold: #c9a96e;
+      --gold-light: #e2c99a;
+      --charcoal: #1a1714;
+      --cream: #f5f0e8;
+      --stone-100: #f3f0eb;
+      --stone-200: #e8e2d9;
+      --stone-600: #8e7560;
+      --stone-800: #5a4a3c;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--charcoal);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    .nav-blur {
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background: rgba(26, 23, 20, 0.88);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+    }
+
+    /* ─── HERO ─── */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 120% 80% at 70% 40%, rgba(201,169,110,0.10) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 20% 80%, rgba(90,74,60,0.30) 0%, transparent 60%),
+        linear-gradient(160deg, #0d0b09 0%, #1a1714 45%, #2a201a 100%);
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(201,169,110,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,169,110,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-line {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .hero-line::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(201,169,110,0.12);
+      border-radius: 50%;
+      animation: pulse-ring 8s ease-in-out infinite;
+    }
+
+    .hero-line::after {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: 5%;
+      width: 320px;
+      height: 320px;
+      border: 1px solid rgba(201,169,110,0.08);
+      border-radius: 50%;
+      animation: pulse-ring 8s ease-in-out 1.5s infinite;
+    }
+
+    @keyframes pulse-ring {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.06); opacity: 0.5; }
+    }
+
+    .bracket-accent {
+      position: absolute;
+      top: 12%;
+      left: 5%;
+      width: 200px;
+      height: 200px;
+      border-left: 1px solid rgba(201,169,110,0.18);
+      border-top: 1px solid rgba(201,169,110,0.18);
+    }
+
+    /* ─── GOLD LINE ─── */
+    .gold-line {
+      display: inline-block;
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      vertical-align: middle;
+    }
+
+    /* ─── SECTION PATTERNS ─── */
+    .section-cream {
+      background-color: var(--cream);
+      color: var(--charcoal);
+    }
+
+    .section-stone {
+      background-color: #f3f0eb;
+      color: var(--charcoal);
+    }
+
+    .section-dark {
+      background-color: #141210;
+      color: var(--cream);
+    }
+
+    .section-mid {
+      background-color: #211d19;
+      color: var(--cream);
+    }
+
+    /* ─── CARDS ─── */
+    .service-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,169,110,0.12);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,169,110,0.06) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .service-card:hover {
+      border-color: rgba(201,169,110,0.45);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,169,110,0.15);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .review-card {
+      background: #fff;
+      border-left: 3px solid var(--gold);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(90,74,60,0.14);
+    }
+
+    .trust-item {
+      border-bottom: 1px solid rgba(201,169,110,0.15);
+      transition: background 0.3s ease;
+    }
+    .trust-item:hover { background: rgba(201,169,110,0.04); }
+
+    /* ─── STATS ─── */
+    .stat-block {
+      border-right: 1px solid rgba(201,169,110,0.20);
+      position: relative;
+    }
+    .stat-block:last-child { border-right: none; }
+
+    /* ─── BUTTONS ─── */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold) 0%, #b8895a 100%);
+      color: var(--charcoal);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(201,169,110,0.35);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      border: 1px solid rgba(201,169,110,0.55);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background: rgba(201,169,110,0.10);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* ─── CONTACT CARD ─── */
+    .contact-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,169,110,0.15);
+      transition: all 0.3s ease;
+    }
+    .contact-card:hover {
+      background: rgba(201,169,110,0.06);
+      border-color: rgba(201,169,110,0.35);
+    }
+
+    /* ─── COUNTER ANIMATION ─── */
+    @keyframes countUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-link {
+      position: relative;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.70);
+      transition: color 0.3s ease;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    .nav-link:hover { color: var(--gold-light); }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    /* Mobile menu */
+    [x-cloak] { display: none !important; }
+
+    /* Map iframe */
+    .map-container { filter: sepia(20%) contrast(0.95); }
+    .map-container iframe { border-radius: 2px; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--charcoal); }
+    ::-webkit-scrollbar-thumb { background: var(--stone-600); border-radius: 2px; }
+
+    /* AOS override */
+    [data-aos] { will-change: transform, opacity; }
+  </style>
+</head>
+<body x-data="{ mobileOpen: false, scrolled: false }" @scroll.window="scrolled = window.scrollY > 60">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 1. NAVIGATION -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+     :class="scrolled ? 'nav-blur py-3' : 'py-5 bg-transparent'">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#hero" class="flex flex-col leading-none group">
+      <span class="font-display text-lg text-cream tracking-wide font-light">David Șerban Nicolae</span>
+      <span class="text-[10px] text-gold tracking-[0.22em] uppercase font-body font-medium mt-0.5">Birou de Arhitectură</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#incredere" class="nav-link">De ce noi</a>
+      <a href="#recenzii" class="nav-link">Recenzii</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="tel:0723030466"
+         class="btn-primary px-5 py-2 text-xs tracking-widest uppercase font-body rounded-none inline-flex items-center gap-2">
+        <i class="fa-solid fa-phone text-[10px]"></i> Apelați acum
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="md:hidden text-cream p-2" @click="mobileOpen = !mobileOpen" aria-label="Meniu">
+      <i class="fa-solid text-xl" :class="mobileOpen ? 'fa-xmark' : 'fa-bars'"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div x-show="mobileOpen" x-cloak x-transition:enter="transition ease-out duration-200"
+       x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+       class="md:hidden nav-blur border-t border-gold border-opacity-10 mt-3">
+    <div class="flex flex-col px-6 py-6 gap-5">
+      <a href="#despre" class="nav-link" @click="mobileOpen = false">Despre</a>
+      <a href="#servicii" class="nav-link" @click="mobileOpen = false">Servicii</a>
+      <a href="#incredere" class="nav-link" @click="mobileOpen = false">De ce noi</a>
+      <a href="#recenzii" class="nav-link" @click="mobileOpen = false">Recenzii</a>
+      <a href="#contact" class="nav-link" @click="mobileOpen = false">Contact</a>
+      <a href="tel:0723030466"
+         class="btn-primary px-5 py-3 text-xs tracking-widest uppercase font-body rounded-none inline-flex items-center justify-center gap-2 mt-2">
+        <i class="fa-solid fa-phone text-[10px]"></i> Apelați acum
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 2. HERO -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center hero-bg hero-grid">
+  <div class="hero-line"></div>
+  <div class="bracket-accent hidden lg:block"></div>
+
+  <!-- Decorative vertical text -->
+  <div class="hidden xl:block absolute right-10 top-1/2 -translate-y-1/2 -rotate-90 text-[10px] tracking-[0.35em] uppercase text-gold text-opacity-40 font-body whitespace-nowrap"
+       style="color: rgba(201,169,110,0.35);">
+    Arhitectură &nbsp;·&nbsp; Design &nbsp;·&nbsp; Documentație
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 pt-36 pb-24 w-full">
+    <div class="max-w-3xl">
+
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-4 mb-8" data-aos="fade-right" data-aos-duration="800">
+        <span class="gold-line"></span>
+        <span class="text-gold text-[11px] tracking-[0.30em] uppercase font-body font-medium">București · Sector 2</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-display text-cream leading-[1.05] mb-6" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"
+          style="font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 600;">
+        Arhitectură care<br/>
+        <em class="font-light" style="color: var(--gold-light);">transformă spațiul</em><br/>
+        în trăire.
+      </h1>
+
+      <!-- Sub -->
+      <p class="font-body text-stone-300 text-lg font-light leading-relaxed max-w-xl mb-10"
+         data-aos="fade-up" data-aos-duration="900" data-aos-delay="200"
+         style="color: rgba(213,204,190,0.85);">
+        De peste un deceniu, concepem proiecte rezidențiale, comerciale și de urbanism cu rigoare tehnică și sensibilitate estetică — de la concept la autorizație de construire.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-duration="900" data-aos-delay="320">
+        <a href="tel:0723030466"
+           class="btn-primary font-body px-8 py-4 text-sm tracking-wider uppercase inline-flex items-center gap-3 rounded-none">
+          <i class="fa-solid fa-phone"></i>
+          Apelați acum
+        </a>
+        <a href="https://www.google.com/maps/place/Birou+De+Arhitectura+-+David+Serban+Nicolae/data=!4m7!3m6!1s0x40b1f8d6faaba1af:0xb3ce321c2816e654!8m2!3d44.4459058!4d26.1379841!16s%2Fg%2F11g6mv4t6k!19sChIJr6Gr-tb4sUARVOYWKBwyzrM?authuser=0&hl=en&rclk=1"
+           target="_blank" rel="noopener"
+           class="btn-secondary font-body px-8 py-4 text-sm tracking-wider uppercase inline-flex items-center gap-3 rounded-none">
+          <i class="fa-solid fa-location-dot"></i>
+          Obțineți Direcții
+        </a>
+      </div>
+
+      <!-- Quick info bar -->
+      <div class="flex flex-wrap gap-6 mt-14 pt-10 border-t border-white border-opacity-[0.06]"
+           data-aos="fade-up" data-aos-duration="800" data-aos-delay="450">
+        <div class="flex items-center gap-2 text-sm font-body" style="color: rgba(213,204,190,0.65);">
+          <i class="fa-solid fa-star text-gold text-xs"></i>
+          <span>5 / 5 pe Google</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm font-body" style="color: rgba(213,204,190,0.65);">
+          <i class="fa-solid fa-building-columns text-gold text-xs"></i>
+          <span>Birou Individual de Arhitectură</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm font-body" style="color: rgba(213,204,190,0.65);">
+          <i class="fa-solid fa-shield-halved text-gold text-xs"></i>
+          <span>Înregistrat în Tabloul Național al Arhitecților</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-24"
+       style="background: linear-gradient(to bottom, transparent, #141210);"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 3. ABOUT -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="despre" class="section-dark py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Text -->
+      <div data-aos="fade-right" data-aos-duration="800">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="gold-line"></span>
+          <span class="text-gold text-[11px] tracking-[0.28em] uppercase font-body">Despre noi</span>
+        </div>
+        <h2 class="font-display text-cream mb-8 leading-tight"
+            style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 600;">
+          O arhitectură<br/><em class="font-light" style="color: var(--gold-light);">coerentă cu viziunea ta.</em>
+        </h2>
+        <div class="font-body font-light leading-relaxed space-y-4" style="color: rgba(213,204,190,0.80); font-size: 1.02rem;">
+          <p>
+            Biroul Individual de Arhitectură <strong class="text-cream font-medium">David Șerban Nicolae</strong> activează în București, Sector 2, oferind servicii complete de proiectare arhitecturală și documentație tehnică pentru investitori privați, companii și instituții publice.
+          </p>
+          <p>
+            Echipa noastră multidisciplinară — formată din arhitecți, ingineri de structuri și specialiști în instalații — acoperă întreg ciclul unui proiect: de la studiu de fezabilitate și proiect tehnic, până la obținerea autorizației de construire și supravegherea execuției.
+          </p>
+          <p>
+            Cu peste un deceniu de prezență pe piața din București, am finalizat cu succes proiecte rezidențiale, comerciale, industriale și de urbanism, aducând de fiecare dată aceeași rigurozitate tehnică și atenție față de detaliu.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex flex-col gap-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+
+        <!-- stat 1 -->
+        <div class="stat-block py-10 px-8 border border-gold border-opacity-10 mb-0" style="border-color: rgba(201,169,110,0.12);">
+          <div class="flex items-start gap-6">
+            <div class="mt-1">
+              <i class="fa-solid fa-clock-rotate-left text-gold text-2xl"></i>
+            </div>
+            <div>
+              <div class="font-display text-cream leading-none mb-1" style="font-size: 3rem; font-weight: 600; color: var(--gold-light);">10+</div>
+              <div class="font-body text-sm tracking-wide uppercase" style="color: rgba(213,204,190,0.60); letter-spacing: 0.12em;">Ani de experiență profesională</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- stat 2 -->
+        <div class="py-10 px-8 border border-t-0" style="border-color: rgba(201,169,110,0.12);">
+          <div class="flex items-start gap-6">
+            <div class="mt-1">
+              <i class="fa-solid fa-layer-group text-gold text-2xl"></i>
+            </div>
+            <div>
+              <div class="font-display text-cream leading-none mb-1" style="font-size: 3rem; font-weight: 600; color: var(--gold-light);">200+</div>
+              <div class="font-body text-sm tracking-wide uppercase" style="color: rgba(213,204,190,0.60); letter-spacing: 0.12em;">Proiecte finalizate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- stat 3 -->
+        <div class="py-10 px-8 border border-t-0" style="border-color: rgba(201,169,110,0.12);">
+          <div class="flex items-start gap-6">
+            <div class="mt-1">
+              <i class="fa-solid fa-star text-gold text-2xl"></i>
+            </div>
+            <div>
+              <div class="font-display text-cream leading-none mb-1" style="font-size: 3rem; font-weight: 600; color: var(--gold-light);">5 / 5</div>
+              <div class="font-body text-sm tracking-wide uppercase" style="color: rgba(213,204,190,0.60); letter-spacing: 0.12em;">Rating Google verificat</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 4. SERVICES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="servicii" class="section-mid py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <span class="gold-line"></span>
+        <span class="text-gold text-[11px] tracking-[0.28em] uppercase font-body">Servicii</span>
+        <span class="gold-line"></span>
+      </div>
+      <h2 class="font-display text-cream leading-tight" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 600;">
+        Soluții complete,<br/><em class="font-light" style="color: var(--gold-light);">de la concept la execuție.</em>
+      </h2>
+    </div>
+
+    <div id="services-app">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px" style="background: rgba(201,169,110,0.08);">
+
+        <template v-for="(s, i) in services" :key="i">
+          <div class="service-card p-8 group cursor-default"
+               :data-aos="'fade-up'"
+               :data-aos-delay="(i % 3) * 100">
+            <div class="w-12 h-12 flex items-center justify-center mb-6"
+                 style="border: 1px solid rgba(201,169,110,0.20);">
+              <i :class="'fa-solid ' + s.icon + ' text-gold text-lg group-hover:text-gold-light transition-colors'"></i>
+            </div>
+            <h3 class="font-display text-cream text-xl mb-3 font-semibold group-hover:text-gold-light transition-colors">{{ s.title }}</h3>
+            <p class="font-body font-light text-sm leading-relaxed" style="color: rgba(213,204,190,0.65);">{{ s.desc }}</p>
+          </div>
+        </template>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 5. WHY CHOOSE US -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="incredere" class="section-dark py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: visual accent -->
+      <div data-aos="fade-right" data-aos-duration="800" class="hidden lg:block">
+        <div class="relative" style="height: 420px;">
+          <div class="absolute inset-0" style="
+            background: linear-gradient(135deg, rgba(201,169,110,0.08) 0%, transparent 60%);
+            border: 1px solid rgba(201,169,110,0.12);"></div>
+          <div class="absolute top-8 left-8 right-8 bottom-8" style="
+            border: 1px solid rgba(201,169,110,0.06);"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-12">
+            <i class="fa-solid fa-compass-drafting text-gold mb-6" style="font-size: 3.5rem; opacity: 0.6;"></i>
+            <p class="font-display text-cream italic font-light leading-relaxed" style="font-size: 1.4rem; color: rgba(245,240,232,0.80);">
+              "Fiecare proiect este o responsabilitate față de spațiu, oameni și timp."
+            </p>
+            <div class="gold-line mt-6"></div>
+            <p class="font-body text-xs tracking-widest uppercase mt-4" style="color: var(--gold); letter-spacing: 0.20em;">David Șerban Nicolae</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: trust signals -->
+      <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="gold-line"></span>
+          <span class="text-gold text-[11px] tracking-[0.28em] uppercase font-body">De ce să ne alegeți</span>
+        </div>
+        <h2 class="font-display text-cream mb-10 leading-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 600;">
+          Partenerul de arhitectură<br/><em class="font-light" style="color: var(--gold-light);">în care puteți investi încredere.</em>
+        </h2>
+
+        <div id="trust-app" class="space-y-0">
+          <template v-for="(t, i) in trusts" :key="i">
+            <div class="trust-item flex items-start gap-6 py-7 px-4 rounded-none"
+                 :data-aos="'fade-up'" :data-aos-delay="i * 80">
+              <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                   style="border: 1px solid rgba(201,169,110,0.22); background: rgba(201,169,110,0.05);">
+                <i :class="'fa-solid ' + t.icon + ' text-gold text-sm'"></i>
+              </div>
+              <div>
+                <h4 class="font-display text-cream font-semibold text-lg mb-1">{{ t.title }}</h4>
+                <p class="font-body font-light text-sm leading-relaxed" style="color: rgba(213,204,190,0.68);">{{ t.desc }}</p>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 6. REVIEWS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="recenzii" class="section-cream py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <span style="display:inline-block;width:48px;height:2px;background:var(--gold);"></span>
+        <span class="text-gold text-[11px] tracking-[0.28em] uppercase font-body">Recenzii</span>
+        <span style="display:inline-block;width:48px;height:2px;background:var(--gold);"></span>
+      </div>
+      <h2 class="font-display leading-tight" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; color: var(--charcoal);">
+        Cuvintele<br/><em class="font-light" style="color: var(--stone-600);">clienților noștri.</em>
+      </h2>
+    </div>
+
+    <!-- Rating badge -->
+    <div class="flex justify-center mb-10" data-aos="zoom-in" data-aos-delay="100">
+      <div class="inline-flex items-center gap-4 px-8 py-4 border" style="border-color: rgba(201,169,110,0.35); background: rgba(201,169,110,0.06);">
+        <div class="flex gap-1">
+          <i class="fa-solid fa-star text-gold"></i>
+          <i class="fa-solid fa-star text-gold"></i>
+          <i class="fa-solid fa-star text-gold"></i>
+          <i class="fa-solid fa-star text-gold"></i>
+          <i class="fa-solid fa-star text-gold"></i>
+        </div>
+        <span class="font-display text-2xl font-semibold" style="color: var(--charcoal);">5 / 5</span>
+        <span class="font-body text-sm" style="color: var(--stone-600);">pe Google</span>
+      </div>
+    </div>
+
+    <div id="reviews-app">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <template v-for="(r, i) in reviews" :key="i">
+          <div class="review-card p-8 rounded-none" :data-aos="'fade-up'" :data-aos-delay="i * 120">
+            <div class="flex gap-1 mb-4">
+              <template v-for="s in r.stars" :key="s">
+                <i class="fa-solid fa-star" style="color: var(--gold); font-size: 0.8rem;"></i>
+              </template>
+              <template v-for="s in (5 - r.stars)" :key="'e'+s">
+                <i class="fa-regular fa-star" style="color: var(--stone-300); font-size: 0.8rem;"></i>
+              </template>
+            </div>
+            <p v-if="r.text" class="font-body font-light text-sm leading-relaxed mb-5" style="color: var(--stone-800);">
+              <i class="fa-solid fa-quote-left mr-2" style="color: var(--gold); font-size: 0.7rem;"></i>
+              {{ r.text }}
+            </p>
+            <p v-else class="font-body font-light text-sm leading-relaxed mb-5 italic" style="color: var(--stone-600);">
+              <i class="fa-solid fa-quote-left mr-2" style="color: var(--gold); font-size: 0.7rem;"></i>
+              Recenzie pozitivă verificată pe Google.
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t" style="border-color: rgba(201,169,110,0.20);">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: var(--stone-200);">
+                <i class="fa-solid fa-user text-xs" style="color: var(--stone-600);"></i>
+              </div>
+              <span class="font-body font-medium text-sm" style="color: var(--charcoal);">{{ r.name }}</span>
+              <span class="ml-auto">
+                <i class="fa-brands fa-google text-xs" style="color: var(--stone-400);"></i>
+              </span>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 7. CONTACT -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="contact" class="section-dark py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <span class="gold-line"></span>
+        <span class="text-gold text-[11px] tracking-[0.28em] uppercase font-body">Contact</span>
+        <span class="gold-line"></span>
+      </div>
+      <h2 class="font-display text-cream leading-tight" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 600;">
+        Contactați-ne<br/><em class="font-light" style="color: var(--gold-light);">pentru un prim consult.</em>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px mb-px" style="background: rgba(201,169,110,0.08);">
+
+      <!-- Address -->
+      <div class="contact-card p-8" data-aos="fade-up" data-aos-delay="0">
+        <div class="w-10 h-10 flex items-center justify-center mb-5" style="border: 1px solid rgba(201,169,110,0.22);">
+          <i class="fa-solid fa-location-dot text-gold"></i>
+        </div>
+        <h4 class="font-body font-medium text-xs tracking-widest uppercase mb-3" style="color: var(--gold); letter-spacing: 0.18em;">Adresă</h4>
+        <p class="font-body font-light text-sm leading-relaxed mb-4" style="color: rgba(213,204,190,0.80);">
+          Strada Spătarul Nicolae Milescu 10<br/>
+          Sector 2, București 021755<br/>
+          România
+        </p>
+        <a href="https://www.google.com/maps/place/Birou+De+Arhitectura+-+David+Serban+Nicolae/data=!4m7!3m6!1s0x40b1f8d6faaba1af:0xb3ce321c2816e654!8m2!3d44.4459058!4d26.1379841!16s%2Fg%2F11g6mv4t6k!19sChIJr6Gr-tb4sUARVOYWKBwyzrM?authuser=0&hl=en&rclk=1"
+           target="_blank" rel="noopener"
+           class="font-body text-xs tracking-wider uppercase inline-flex items-center gap-2 transition-colors"
+           style="color: var(--gold);"
+           onmouseover="this.style.color='#e2c99a'" onmouseout="this.style.color='#c9a96e'">
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          Vezi pe hartă
+        </a>
+      </div>
+
+      <!-- Phone -->
+      <div class="contact-card p-8" data-aos="fade-up" data-aos-delay="80">
+        <div class="w-10 h-10 flex items-center justify-center mb-5" style="border: 1px solid rgba(201,169,110,0.22);">
+          <i class="fa-solid fa-phone text-gold"></i>
+        </div>
+        <h4 class="font-body font-medium text-xs tracking-widest uppercase mb-3" style="color: var(--gold); letter-spacing: 0.18em;">Telefon</h4>
+        <p class="font-body font-light text-sm mb-1" style="color: rgba(213,204,190,0.80);">0723 030 466</p>
+        <p class="font-body font-light text-sm mb-4" style="color: rgba(213,204,190,0.55);">0723 653 186</p>
+        <a href="tel:0723030466"
+           class="font-body text-xs tracking-wider uppercase inline-flex items-center gap-2 transition-colors"
+           style="color: var(--gold);"
+           onmouseover="this.style.color='#e2c99a'" onmouseout="this.style.color='#c9a96e'">
+          <i class="fa-solid fa-phone text-[10px]"></i>
+          Apelați acum
+        </a>
+      </div>
+
+      <!-- Hours -->
+      <div class="contact-card p-8" data-aos="fade-up" data-aos-delay="160">
+        <div class="w-10 h-10 flex items-center justify-center mb-5" style="border: 1px solid rgba(201,169,110,0.22);">
+          <i class="fa-solid fa-clock text-gold"></i>
+        </div>
+        <h4 class="font-body font-medium text-xs tracking-widest uppercase mb-3" style="color: var(--gold); letter-spacing: 0.18em;">Program</h4>
+        <div class="font-body font-light text-sm leading-relaxed space-y-1" style="color: rgba(213,204,190,0.80);">
+          <div class="flex justify-between gap-4">
+            <span style="color: rgba(213,204,190,0.55);">Lun – Vin</span>
+            <span>08:00 – 18:00</span>
+          </div>
+          <div class="flex justify-between gap-4">
+            <span style="color: rgba(213,204,190,0.55);">Sâmbătă</span>
+            <span>08:00 – 15:00</span>
+          </div>
+          <div class="flex justify-between gap-4">
+            <span style="color: rgba(213,204,190,0.55);">Duminică</span>
+            <span style="color: rgba(213,204,190,0.40);">Închis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating + Email -->
+      <div class="contact-card p-8" data-aos="fade-up" data-aos-delay="240">
+        <div class="w-10 h-10 flex items-center justify-center mb-5" style="border: 1px solid rgba(201,169,110,0.22);">
+          <i class="fa-solid fa-star text-gold"></i>
+        </div>
+        <h4 class="font-body font-medium text-xs tracking-widest uppercase mb-3" style="color: var(--gold); letter-spacing: 0.18em;">Rating & Email</h4>
+        <div class="flex gap-1 mb-2">
+          <i class="fa-solid fa-star text-gold text-xs"></i>
+          <i class="fa-solid fa-star text-gold text-xs"></i>
+          <i class="fa-solid fa-star text-gold text-xs"></i>
+          <i class="fa-solid fa-star text-gold text-xs"></i>
+          <i class="fa-solid fa-star text-gold text-xs"></i>
+        </div>
+        <p class="font-body font-light text-sm mb-4" style="color: rgba(213,204,190,0.80);">5 / 5 pe Google</p>
+        <a href="mailto:serbandn@yahoo.com"
+           class="font-body text-xs tracking-wider uppercase inline-flex items-center gap-2 transition-colors"
+           style="color: var(--gold);"
+           onmouseover="this.style.color='#e2c99a'" onmouseout="this.style.color='#c9a96e'">
+          <i class="fa-solid fa-envelope text-[10px]"></i>
+          serbandn@yahoo.com
+        </a>
+      </div>
+    </div>
+
+    <!-- Google Maps iframe -->
+    <div class="mt-px map-container" data-aos="fade-up" data-aos-delay="100">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.123456789!2d26.135809!3d44.445906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f8d6faaba1af%3A0xb3ce321c2816e654!2sBirou%20De%20Arhitectura%20-%20David%20Serban%20Nicolae!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+        width="100%" height="340" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Locație birou"></iframe>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 8. FOOTER -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<footer style="background: #0d0b09; border-top: 1px solid rgba(201,169,110,0.12);">
+  <div class="max-w-7xl mx-auto px-6 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+      <!-- Brand -->
+      <div>
+        <div class="font-display text-cream text-xl font-light tracking-wide mb-2">David Șerban Nicolae</div>
+        <div class="text-xs tracking-[0.22em] uppercase mb-4" style="color: var(--gold); font-family: 'DM Sans',sans-serif;">Birou Individual de Arhitectură</div>
+        <p class="font-body font-light text-xs leading-relaxed" style="color: rgba(213,204,190,0.45);">
+          Proiectare arhitecturală completă — de la concept la autorizație de construire — în București și împrejurimi.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="text-xs tracking-widest uppercase mb-5 font-body font-medium" style="color: var(--gold); letter-spacing: 0.18em;">Contact</div>
+        <div class="space-y-3">
+          <a href="tel:0723030466" class="flex items-center gap-3 font-body text-xs transition-colors" style="color: rgba(213,204,190,0.60);"
+             onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='rgba(213,204,190,0.60)'">
+            <i class="fa-solid fa-phone text-gold text-[10px] w-3"></i>
+            0723 030 466
+          </a>
+          <a href="mailto:serbandn@yahoo.com" class="flex items-center gap-3 font-body text-xs transition-colors" style="color: rgba(213,204,190,0.60);"
+             onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='rgba(213,204,190,0.60)'">
+            <i class="fa-solid fa-envelope text-gold text-[10px] w-3"></i>
+            serbandn@yahoo.com
+          </a>
+          <div class="flex items-start gap-3 font-body text-xs" style="color: rgba(213,204,190,0.60);">
+            <i class="fa-solid fa-location-dot text-gold text-[10px] w-3 mt-0.5"></i>
+            <span>Str. Spătarul Nicolae Milescu 10,<br/>Sector 2, București</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <div class="text-xs tracking-widest uppercase mb-5 font-body font-medium" style="color: var(--gold); letter-spacing: 0.18em;">Navigare</div>
+        <div class="space-y-3">
+          <a href="#despre" class="block font-body text-xs transition-colors" style="color: rgba(213,204,190,0.60);"
+             onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='rgba(213,204,190,0.60)'">Despre</a>
+          <a href="#servicii" class="block font-body text-xs transition-colors" style="color: rgba(213,204,190,0.60);"
+             onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='rgba(213,204,190,0.60)'">Servicii</a>
+          <a href="#incredere" class="block font-body text-xs transition-colors" style="color: rgba(213,204,190,0.60);"
+             onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='rgba(213,204,190,0.60)'">De ce noi</a>
+          <a href="#recenzii" class="block font-body text-xs transition-colors" style="color: rgba(213,204,190,0.60);"
+             onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='rgba(213,204,190,0.60)'">Recenzii</a>
+          <a href="#contact" class="block font-body text-xs transition-colors" style="color: rgba(213,204,190,0.60);"
+             onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='rgba(213,204,190,0.60)'">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t flex flex-col sm:flex-row items-center justify-between gap-4 pt-8" style="border-color: rgba(201,169,110,0.10);">
+      <p class="font-body text-xs" style="color: rgba(213,204,190,0.35);">
+        &copy; 2025 Birou de Arhitectură – David Șerban Nicolae. Toate drepturile rezervate.
+      </p>
+      <div class="flex items-center gap-2">
+        <i class="fa-brands fa-google text-xs" style="color: rgba(201,169,110,0.40);"></i>
+        <span class="font-body text-xs" style="color: rgba(213,204,190,0.35);">5 / 5 pe Google Maps</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SCRIPTS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Init AOS
+  AOS.init({ duration: 750, once: true, offset: 60, easing: 'ease-out-cubic' });
+
+  // ── Services Vue App ──
+  Vue.createApp({
+    data() {
+      return {
+        services: [
+          {
+            icon: 'fa-drafting-compass',
+            title: 'Proiectare Arhitecturală',
+            desc: 'Conceperea și elaborarea proiectelor arhitecturale complete — planuri, fațade, secțiuni și detalii de execuție pentru clădiri rezidențiale, comerciale și industriale.'
+          },
+          {
+            icon: 'fa-building',
+            title: 'Structură și Rezistență',
+            desc: 'Calcule structurale, proiecte de rezistență și specificații tehnice pentru fundații, planșee și structuri de beton armat sau metal.'
+          },
+          {
+            icon: 'fa-bolt',
+            title: 'Instalații (E / S / T)',
+            desc: 'Proiectare instalații electrice, sanitare și termice, inclusiv calcule de eficiență energetică și izolație termică conform normelor în vigoare.'
+          },
+          {
+            icon: 'fa-couch',
+            title: 'Design Interior',
+            desc: 'Soluții de amenajare interioară pentru spații rezidențiale, birouri și spații comerciale — de la concept la redare 3D și detalii de execuție.'
+          },
+          {
+            icon: 'fa-city',
+            title: 'Urbanism – PUZ / PUD',
+            desc: 'Elaborare documentații de urbanism zonal (PUZ) și de detaliu (PUD), certificate de urbanism și studii de reglementare urbanistică.'
+          },
+          {
+            icon: 'fa-file-contract',
+            title: 'Documentație pentru Autorizare',
+            desc: 'Întocmirea completă a documentației tehnice pentru autorizație de construire (D.T.A.C.), demolare (D.T.A.D.) și organizare de execuție (D.T.O.E.).'
+          },
+          {
+            icon: 'fa-chart-line',
+            title: 'Studiu de Fezabilitate',
+            desc: 'Evaluarea viabilității tehnico-economice a investițiilor, estimarea costurilor și analiza soluțiilor alternative de proiect.'
+          },
+          {
+            icon: 'fa-leaf',
+            title: 'Audit Energetic & Certificat',
+            desc: 'Audituri de performanță energetică, certificate de performanță energetică și calcule de izolație termică conforme cu legislația în vigoare.'
+          },
+          {
+            icon: 'fa-cube',
+            title: 'Randări 2D / 3D',
+            desc: 'Prezentări vizuale, randări fotorealiste și tururi video ale proiectului pentru o mai bună comunicare cu beneficiarii și autoritățile.'
+          }
+        ]
+      }
+    }
+  }).mount('#services-app');
+
+  // ── Trust Vue App ──
+  Vue.createApp({
+    data() {
+      return {
+        trusts: [
+          {
+            icon: 'fa-users-gear',
+            title: 'Echipă Multidisciplinară',
+            desc: 'Arhitecți, ingineri structuriști și specialiști în instalații lucrează împreună sub același acoperiș, eliminând riscurile de coordonare între firmele separate.'
+          },
+          {
+            icon: 'fa-route',
+            title: 'Gestionare Completă a Proiectului',
+            desc: 'De la studiu de fezabilitate și proiect tehnic, până la obținerea autorizației de construire — ofertăm un pachet integrat, fără surprize pe parcurs.'
+          },
+          {
+            icon: 'fa-map',
+            title: 'Cunoaștere Profundă a Legislației Locale',
+            desc: 'Peste un deceniu de experiență cu reglementările urbanistice din București ne permite să navigăm rapid procedurile administrative și să livrăm documentații conforme.'
+          },
+          {
+            icon: 'fa-medal',
+            title: 'Profesionalism Înregistrat',
+            desc: 'David Șerban Nicolae este arhitect cu drept de semnătură, înscris în Tabloul Național al Arhitecților din România, garanție a calității și responsabilității profesionale.'
+          }
+        ]
+      }
+    }
+  }).mount('#trust-app');
+
+  // ── Reviews Vue App ──
+  Vue.createApp({
+    data() {
+      return {
+        reviews: [
+          {
+            name: 'Luminita Vlasceanu',
+            stars: 5,
+            text: null
+          },
+          {
+            name: 'Rox Ana',
+            stars: 1,
+            text: null
+          }
+        ]
+      }
+    }
+  }).mount('#reviews-app');
+</script>
+
+</body>
+</html>

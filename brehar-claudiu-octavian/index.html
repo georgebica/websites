@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brehar Claudiu Octavian | Avocat Cluj-Napoca</title>
+  <meta name="description" content="Avocat definitiv in Cluj-Napoca, cu peste 30 de ani de practica. Drept penal, civil, comercial, administrativ, familie si munca. Programari la birou." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Manrope', 'sans-serif'],
+            display: ['Cormorant Garamond', 'serif']
+          },
+          colors: {
+            ink: '#1d1115',
+            burgundy: '#4a1828',
+            copper: '#c08b5c',
+            ivory: '#f7f1e8',
+            slate: '#d7c8bc'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: #24151a;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(192,139,92,.12), transparent 20%),
+        radial-gradient(circle at 85% 10%, rgba(74,24,40,.18), transparent 28%),
+        linear-gradient(180deg, #1d1115 0%, #26141b 30%, #f7f1e8 30%, #f7f1e8 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 80px 80px;
+      opacity: .18;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .glass {
+      background: rgba(29,17,21,.58);
+      border: 1px solid rgba(192,139,92,.18);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .section-light { background: #f7f1e8; }
+    .section-dark {
+      background: linear-gradient(180deg, #26141b 0%, #1d1115 100%);
+      color: #f7f1e8;
+    }
+    .mesh {
+      background-image: linear-gradient(rgba(192,139,92,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(192,139,92,.08) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .card {
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(45,30,35,.08);
+      box-shadow: 0 18px 50px rgba(29,17,21,.08);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(192,139,92,.18);
+      backdrop-filter: blur(16px);
+    }
+    .nav-link { position: relative; text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: #c08b5c;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-copper {
+      background: linear-gradient(135deg, #d7a16f 0%, #c08b5c 55%, #9f6135 100%);
+      color: #1d1115;
+    }
+    .btn-outline {
+      border: 1px solid rgba(247,241,232,.35);
+      color: #f7f1e8;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,241,232,.98));
+      border: 1px solid rgba(45,30,35,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-ink/96 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-2xl font-semibold tracking-wide text-ivory"><span class="text-copper">Av.</span> Brehar Claudiu Octavian</a>
+        <nav class="hidden items-center gap-8 text-ivory lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Practica</a>
+          <a href="#de-ce" class="nav-link">De ce aici</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40264599793" class="btn-copper inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Sunati acum
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-ivory" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-ink px-5 py-5 text-ivory">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Practica</a>
+          <a href="#de-ce" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">De ce aici</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-ink text-ivory">
+        <div class="absolute inset-0 mesh opacity-40"></div>
+        <div class="absolute left-6 top-24 h-72 w-72 rounded-full bg-copper/20 blur-3xl"></div>
+        <div class="absolute right-0 top-36 h-96 w-96 rounded-full bg-white/5 blur-3xl"></div>
+        <div class="mx-auto flex min-h-screen max-w-7xl items-center px-5 py-28 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-copper/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-copper">
+              <i class="fa-solid fa-scale-balanced"></i> Avocat definitiv - Baroul Cluj
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">Rigoare juridica pentru dosare care cer experienta reala.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ivory/76 md:text-xl">
+              Cu peste 30 de ani de practica, cabinetul ofera reprezentare si consultanta in drept penal, civil, comercial, administrativ, familie, munca si imobiliar. Raspuns rapid, strategie clara si prezenta constanta.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40264599793" class="btn-copper inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-location-dot"></i> Vedeti locatia
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-ivory/72">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">32+ ani experienta</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Baroul Cluj</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Birou individual</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-burgundy">Despre</p>
+            <h2 class="font-display text-4xl text-ink md:text-5xl">O practica solida, construita in timp si verificata in instante</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              Brehar Claudiu Octavian este avocat definitiv in Cluj-Napoca, cu o practica individuala sustinuta de aproximativ 32-33 de ani de experienta. Calitatea de membru al Baroului Cluj si prezenta constanta in registre profesionale oficiale confirma o practica legitima, serioasa si orientata catre rezultate. Cabinetul lucreaza cu atentie pentru clienti persoane fizice si companii, in dosare civile, comerciale, administrative si penale.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-copper">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-ink">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="relative overflow-hidden rounded-[2rem] bg-burgundy p-8 text-ivory shadow-2xl" data-aos="fade-left">
+            <div class="absolute inset-0 mesh opacity-20"></div>
+            <div class="relative">
+              <p class="text-xs uppercase tracking-[0.26em] text-copper">Profil profesional</p>
+              <h3 class="mt-4 font-display text-4xl">Analiza, reprezentare si strategie pentru litigii complexe</h3>
+              <div class="mt-8 grid gap-4">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Zona de lucru</p>
+                  <p class="mt-2 text-lg leading-8 text-ivory/90">Strada Iuliu Maniu 40, Cluj-Napoca, cu program in zilele lucratoare.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+                  <p class="mt-2 text-lg leading-8 text-ivory/90">Luni - Vineri, 09:00 - 14:00, cu consultatii pe baza de programare.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Amenities</p>
+                  <p class="mt-2 text-lg leading-8 text-ivory/90">Toaleta la birou si spatiu profesional de lucru.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-copper">Practica</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Domenii de lucru pentru clienti individuali si corporate</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-copper/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-copper/12 text-copper">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-ivory">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-ivory/72">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="de-ce" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-burgundy">De ce aici</p>
+            <h2 class="font-display text-4xl text-ink md:text-5xl">Ce aduce un cabinet cu experienta foarte lunga</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-copper/12 text-copper">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-ink">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f7f1e8 0%, #efe4d4 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-burgundy">Recenzii</p>
+            <h2 class="font-display text-4xl text-ink md:text-5xl">Recenzii reale, lasate de clienti dupa colaborari concrete</h2>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            <article v-for="review in reviews" :key="review.author + review.text.slice(0, 12)" class="review-card rounded-3xl p-7" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-copper">
+                <i v-for="n in review.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-5 text-base leading-8 text-slate-700">"{{ review.text }}"</p>
+              <p class="mt-5 font-semibold text-ink">{{ review.author }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-copper">Contact</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Datele esentiale pentru programare</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-copper/12 text-copper"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-ivory/92 hover:text-copper transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-copper/12 text-copper"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon</p>
+              <a href="tel:+40264599793" class="mt-2 block text-lg text-ivory/92 hover:text-copper transition">0264 599 793</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-copper/12 text-copper"><i class="fa-solid fa-envelope"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Email</p>
+              <a href="mailto:claudiu.brehar@bpgc.ro" class="mt-2 block text-lg text-ivory/92 hover:text-copper transition">claudiu.brehar@bpgc.ro</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-copper/12 text-copper"><i class="fa-solid fa-clock"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+              <p class="mt-2 text-lg text-ivory/90">Luni - Vineri: 09:00 - 14:00</p>
+              <p class="text-ivory/68">Sambata - Duminica: Inchis</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink py-12 text-ivory">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-copper">Brehar Claudiu Octavian</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-ivory/60">Avocat definitiv - Baroul Cluj - peste 30 de ani de practica</p>
+          </div>
+          <div class="space-y-2 text-sm text-ivory/65">
+            <p><i class="fa-solid fa-phone mr-2 text-copper"></i>0264 599 793</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-copper"></i>claudiu.brehar@bpgc.ro</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-copper"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-ivory/45">© 2026 Brehar Claudiu Octavian. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Strada Iuliu Maniu 40, Cluj-Napoca',
+          mapsLink: 'https://www.google.com/maps/place/Brehar+Claudiu+Octavian/data=!4m7!3m6!1s0x47490c276c9c5201:0x23c2c49ead7d4efa!8m2!3d46.7712623!4d23.5954413!16s%2Fg%2F1hc4d39xk!19sChIJAVKcbCcMSUcR-k59rZ7EwiM?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-award', label: 'Ani', value: '32+', note: 'practica juridica sustinuta' },
+            { icon: 'fa-solid fa-shield-halved', label: 'Barou', value: 'Cluj', note: 'cadru profesional verificat' },
+            { icon: 'fa-solid fa-star', label: 'Rating', value: '4.6/5', note: 'feedback pozitiv constant' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-gavel', title: 'Drept penal', text: 'Asistenta si reprezentare in cauze penale, cu analiza riguroasa a fiecarui pas procedural.' },
+            { icon: 'fa-solid fa-scale-balanced', title: 'Drept civil', text: 'Contracte, proprietate, succesiuni si litigii civile gestionate cu documentare atenta.' },
+            { icon: 'fa-solid fa-building-columns', title: 'Drept comercial', text: 'Probleme dintre parteneri, contracte si interese ale societatilor comerciale.' },
+            { icon: 'fa-solid fa-file-circle-check', title: 'Administrativ si fiscal', text: 'Litigii cu autoritati, contestatii si proceduri administrative cu miza ridicata.' },
+            { icon: 'fa-solid fa-heart', title: 'Familie', text: 'Divort, custodie si mosteniri, abordate cu echilibru si claritate.' },
+            { icon: 'fa-solid fa-briefcase', title: 'Munca si imobiliar', text: 'Conflicte de munca, constructii si dosare legate de patrimoniu sau credite.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-shield-halved', title: 'Experienta foarte lunga', text: 'Peste trei decenii de practica inseamna structura, ritm si instinct pentru dosarele complicate.' },
+            { icon: 'fa-solid fa-person-circle-check', title: 'Relație directa cu clientul', text: 'Cabinetul functioneaza individual, ceea ce inseamna comunicare clara si implicare constanta.' },
+            { icon: 'fa-solid fa-clock', title: 'Program de lucru predictibil', text: 'Intalniri in zilele lucratoare, cu fereastra de lucru bine delimitata.' },
+            { icon: 'fa-solid fa-magnifying-glass', title: 'Atenție la detaliu', text: 'Fiecare document si fiecare argument sunt filtrate inainte de a fi folosite strategic.' }
+          ],
+          reviews: [
+            { author: 'Bendorfean Traian', stars: 5, text: 'Sunt zeci de mii de avocati in Romania. Fiecare cu nivelul lui de pregatire si seriozitate. Dar am fost uimit sa descoper in persoana avocat Traian Laszlo, un munte de profesionalism si aplecare pe subiect. Atat eu cat si alti zeci de oameni recomandati de mine dansului. Succese domnule avocat si tot asa in continuare' },
+            { author: 'victor eagle studio', stars: 5, text: 'Ofera servicii pentru toate domeniile, au echipa mare si preturi bune! I recomand cu drag oricui!' },
+            { author: 'florin pop', stars: 5, text: 'Cel mai top cabinet de avocat din Cluj Napoca! Recomand cu drag' },
+            { author: 'Laura Cristina', stars: 5, text: 'Profesionalismul, seriozitatea si atentia la detalii au fost evidente pe tot parcursul colaborarii. In cadrul biroului Law Laszlo avocatii sunt foarte bine pregatiti, ofera solutii eficiente si explica fiecare pas in mod clar si transparent. Comunicarea a fost rapida, iar rezultatele au fost peste asteptari. Recomand cu incredere pentru oricine are nevoie de servicii juridice de calitate!' },
+            { author: 'Victor Pop', stars: 5, text: 'Cabinet ultra central, echipa foarte organizata' },
+            { author: 'Victor Pop', stars: 5, text: 'Cel mai prompt! Recomand! Preturi corecte' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => this.scrolled = window.scrollY > 20);
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinet avocat STAN IONEL | București</title>
+  <meta name="description" content="Cabinet individual de avocat in București, cu drept de concluzii in fata tuturor instantelor. Drept comercial, civil, administrativ, penal si familie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          },
+          colors: {
+            ink: '#07111d',
+            blue: '#102949',
+            amber: '#c79a49',
+            ivory: '#f7f4ed',
+            slate: '#ced6e1'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #102949;
+      background:
+        radial-gradient(circle at 18% 16%, rgba(199,154,73,.12), transparent 20%),
+        radial-gradient(circle at 86% 8%, rgba(16,41,73,.16), transparent 28%),
+        linear-gradient(180deg, #07111d 0%, #0c1830 30%, #f7f4ed 30%, #f7f4ed 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 72px 72px;
+      opacity: .16;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .mesh {
+      background-image: linear-gradient(rgba(199,154,73,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(199,154,73,.09) 1px, transparent 1px);
+      background-size: 66px 66px;
+    }
+    .card {
+      background: rgba(255,255,255,.84);
+      border: 1px solid rgba(16,41,73,.08);
+      box-shadow: 0 18px 50px rgba(7,17,29,.08);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(199,154,73,.18);
+      backdrop-filter: blur(16px);
+    }
+    .section-light { background: #f7f4ed; }
+    .section-dark {
+      background: linear-gradient(180deg, #0c1830 0%, #07111d 100%);
+      color: #f7f4ed;
+    }
+    .nav-link { position: relative; text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: #c79a49;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-amber {
+      background: linear-gradient(135deg, #e0c47a 0%, #c79a49 55%, #9d6f23 100%);
+      color: #07111d;
+    }
+    .btn-outline {
+      border: 1px solid rgba(247,244,237,.35);
+      color: #f7f4ed;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,244,237,.98));
+      border: 1px solid rgba(16,41,73,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-ink/96 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-2xl font-semibold tracking-wide text-ivory"><span class="text-amber">Av.</span> STAN IONEL</a>
+        <nav class="hidden items-center gap-8 text-ivory lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Servicii</a>
+          <a href="#de-ce" class="nav-link">De ce aici</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40722439040" class="btn-amber inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Programare
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-ivory" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-ink px-5 py-5 text-ivory">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Servicii</a>
+          <a href="#de-ce" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">De ce aici</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-ink text-ivory">
+        <div class="absolute inset-0 mesh opacity-35"></div>
+        <div class="absolute left-0 top-28 h-80 w-80 rounded-full bg-amber/18 blur-3xl"></div>
+        <div class="absolute right-0 top-10 h-[28rem] w-[28rem] rounded-full bg-white/6 blur-3xl"></div>
+        <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-5 py-28 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-amber/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-amber">
+              <i class="fa-solid fa-scale-balanced"></i> Cabinet individual de avocat - București
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">Cand miza este mare, trebuie sa existe un avocat care vede strategic.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ivory/76 md:text-xl">
+              Cabinetul Stan Ionel lucreaza in drept comercial, administrativ, civil, penal si familie, cu drept de concluzii in fata tuturor instantelor. Clientii sunt tratati individual, nu ca simple cazuri.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40722439040" class="btn-amber inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-location-dot"></i> Localizare
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-ivory/72">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">34 recenzii</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Din 2007</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Toate instantele</span>
+            </div>
+          </div>
+          <aside class="glass rounded-[2rem] p-8 shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-amber">Profil profesional</p>
+            <h2 class="mt-4 font-display text-4xl text-ivory">Apel la disciplina, viteza si comunicare clara</h2>
+            <div class="mt-8 grid gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Statut</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Avocat definitiv, cu drept de concluzii in fata tuturor instantelor.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Mod de lucru</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Litigii, consultanta, reprezentare si strategii personalizate pe fiecare caz.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Luni - Vineri, 08:00 - 19:00. Sambata si duminica inchis.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue">Despre</p>
+            <h2 class="font-display text-4xl text-blue md:text-5xl">Cabinetul care trateaza fiecare dosar ca pe o problema reala, nu teoretica</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              Cabinet avocat Stan Ionel este un cabinet individual de avocat din București, inregistrat in Baroul București si activ din 2007. Practica sa acopera drept comercial, administrativ, civil, penal si familie, cu o abordare orientata pe client si pe rezultate. In plus, cabinetul are dreptul de a sustine concluzii in fata tuturor instantelor, ceea ce ii confirma profilul profesional complet.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-amber">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-blue">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-blue p-8 text-ivory shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-amber">Calendar profesional</p>
+            <h3 class="mt-4 font-display text-4xl">Program extins pentru dosare cu ritm accelerat</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Sediu principal</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Bulevardul Națiunile Unite 8, sector 5, București.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon si fax</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Telefon 0722 439 040. Fax 031 427 7108.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Filosofie</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Tratament individual, nu mecanic - fiecare client conteaza separat.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-amber">Servicii</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Aria de practica acopera litigii, consultanta si reprezentare</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-amber/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber/12 text-amber">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-ivory">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-ivory/72">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="de-ce" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue">De ce aici</p>
+            <h2 class="font-display text-4xl text-blue md:text-5xl">Patru argumente care dau greutate unei colaborari</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/12 text-amber">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-blue">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f7f4ed 0%, #efe5d7 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue">Recenzii</p>
+            <h2 class="font-display text-4xl text-blue md:text-5xl">Textele reale ale clientilor care au trecut prin procese grele</h2>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            <article v-for="review in reviews" :key="review.author + review.text.slice(0, 12)" class="review-card rounded-3xl p-7" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-amber">
+                <i v-for="n in review.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-5 text-base leading-8 text-slate-700">"{{ review.text }}"</p>
+              <p class="mt-5 font-semibold text-blue">{{ review.author }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-amber">Contact</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Informatii de contact si program</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/12 text-amber"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-ivory/92 hover:text-amber transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/12 text-amber"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon</p>
+              <a href="tel:+40722439040" class="mt-2 block text-lg text-ivory/92 hover:text-amber transition">0722 439 040</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/12 text-amber"><i class="fa-solid fa-fax"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Fax</p>
+              <p class="mt-2 text-lg text-ivory/92">031 427 7108</p>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/12 text-amber"><i class="fa-solid fa-clock"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+              <div class="mt-2 space-y-1 text-ivory/90">
+                <p>Luni - Vineri: 08:00 - 19:00</p>
+                <p>Sambata - Duminica: Inchis</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink py-12 text-ivory">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-amber">Cabinet avocat STAN IONEL</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-ivory/60">Avocat definitiv - Baroul București - din 2007</p>
+          </div>
+          <div class="space-y-2 text-sm text-ivory/65">
+            <p><i class="fa-solid fa-phone mr-2 text-amber"></i>0722 439 040</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-amber"></i>stan_ionel@yahoo.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-amber"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-ivory/45">© 2026 Cabinet avocat STAN IONEL. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Bulevardul Națiunile Unite 8, 040103 București',
+          mapsLink: 'https://www.google.com/maps/place/Cabinet+avocat+STAN+IONEL/data=!4m7!3m6!1s0x40b1ff15bc74ce01:0x568a17c422a49e85!8m2!3d44.430375!4d26.0920144!16s%2Fg%2F1tsr1psk!19sChIJAc50vBX_sUARhZ6kIsQXilY?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-calendar-check', label: 'Ani', value: '18+', note: 'de la admiterea in barou' },
+            { icon: 'fa-solid fa-star', label: 'Recenzii', value: '34', note: 'rating perfect pe Google' },
+            { icon: 'fa-solid fa-gavel', label: 'Instante', value: 'Toate', note: 'drept de concluzii peste tot' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-building-columns', title: 'Drept comercial', text: 'Contracte, litigii intre parteneri si tranzactii comerciale, cu analiza juridica buna.' },
+            { icon: 'fa-solid fa-file-circle-check', title: 'Administrativ', text: 'Contencios administrativ, recunoastere de drepturi si litigii cu institutii publice.' },
+            { icon: 'fa-solid fa-scale-balanced', title: 'Drept civil', text: 'Litigii civile, proprietate, daune si situatii patrimoniale gestionate metodic.' },
+            { icon: 'fa-solid fa-gavel', title: 'Drept penal', text: 'Reprezentare si aparare in dosare penale, cu strategie si control procedural.' },
+            { icon: 'fa-solid fa-heart', title: 'Familie', text: 'Divort, custodie, mosteniri si alte probleme familiale tratate cu tact si fermitate.' },
+            { icon: 'fa-solid fa-briefcase', title: 'Consultanta si reprezentare', text: 'Servicii individualizate pentru persoane fizice si companii care au nevoie de directie juridica.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-user-shield', title: 'Abordare personalizata', text: 'Dosarele sunt tratate ca istorii distincte, nu ca sabloane repetate.' },
+            { icon: 'fa-solid fa-book-open', title: 'Expertiza larga', text: 'Domenii multiple, acoperite cu un stil de lucru disciplinat si coerent.' },
+            { icon: 'fa-solid fa-building', title: 'Birou central in București', text: 'Pozitie buna pentru intalniri si acces rapid in zona Sector 5.' },
+            { icon: 'fa-solid fa-bullseye', title: 'Orientare spre victorie', text: 'Fiecare dosar este gandit pentru rezultat, nu doar pentru parcurs.' }
+          ],
+          reviews: [
+            { author: 'Alina Samoila', stars: 5, text: 'Am avut o experienta excelenta colaborand cu acest avocat. Profesionalismul si dedicarea sa m-au impresionat inca de la prima intalnire. A fost extrem de receptiv, comunicand clar si transparent pe tot parcursul procesului. Am avut doua procese cu ISMB si Ministerul Educatiei, iar domnul avocat le-a gestionat impecabil, reusind sa le castige pe ambele. Profesionalismul si expertiza sa juridica s-au reflectat in fiecare etapa a proceselor, iar hotararile definitive obtinute sunt o dovada clara a competentei si dedicarii sale. A fost intotdeauna extrem de comunicativ, tinandu-ma informat la timp si explicandu-mi clar toate aspectele legale, astfel incat sa inteleg perfect evolutia dosarelor. In fata unor adversari institutionali, avocatul a construit o strategie solida si eficienta, gestionand cu calm si tact situatiile tensionate. Atentia sa la detalii si capacitatea de a anticipa obstacolele juridice au fost decisive in obtinerea rezultatelor favorabile. Recomand cu totala incredere acest avocat pentru oricine are nevoie de un profesionist dedicat, cu o pregatire juridica temeinica, o comunicare excelenta si o abordare umana.' },
+            { author: 'Florentina Catalina Ujica', stars: 5, text: 'Il recomand cu maxima caldura pe domnul avocat Stan Ionel! Am apelat la serviciile dansului pentru trei cazuri complexe si, gratie profesionalismului sau, am obtinut victorie in toate cele trei procese. Domnul avocat a demonstrat o expertiza remarcabila in domenii specifice, gestionand cu succes un proces pe drepturi salariale si doua procese pentru recunoasterea licentei. In fiecare caz, a fost meticulos, a construit o strategie juridica de necontestat si a comunicat excelent pe tot parcursul demersului. Daca aveti nevoie de un avocat specializat, dedicat si cu o rata de succes confirmata in litigii de dreptul muncii sau litigii administrative, domnul avocat Stan Ionel este alegerea care va aduce victoria!' },
+            { author: 'Tanase Stafie', stars: 5, text: 'In colaborare mea cu cabinetul de avocatura a D-lui. Ionel Stan a fost cu succes maxim! Am apelat de doua ori si gratie profesionalismului si promptitudinei cu care s-a implicat am reusit sa am castig de cauza in ambele procese! Recomand cu caldura si toata increderea sa apelati la profesionalismul cabinetului de avocatura sa puteti depasi fara probleme si stres problemele juridice cu care va confruntati!' },
+            { author: 'Catalina Ene Negrila', stars: 5, text: 'Am avut o experienta excelenta cu domnul avocat Stan Ionel. M-a ajutat intr-un litigiu din domeniul invatamantului si, datorita implicarii sale, am reusit sa castig procesul. Comunica permanent stadiul procesului si se vede ca ii pasa cu adevarat de client. Recomand cu toata increderea!' },
+            { author: 'Ascanio Ionut', stars: 5, text: 'Colaborarea cu Cabinetul de Avocatura Stan Ionel a fost una de exceptie. Profesionalismul, competenta si promptitudinea domnului avocat s-au reflectat in fiecare etapa a parteneriatului nostru. In domeniul comercial, unde fiecare decizie conteaza, am apreciat in mod special capacitatea sa de analiza, abordarea strategica si solutiile juridice bine fundamentate. Datorita expertizei sale, am beneficiat de consiliere clara si de reprezentare eficienta in situatii complexe. Cabinetul Avocat Stan Ionel este un partener de incredere pentru orice companie care isi doreste stabilitate si siguranta juridica pe termen lung. Ca urmare recomand acest avocat Stan Ionel.' },
+            { author: 'Rodica Racasanu', stars: 5, text: 'Va multumesc pentru profesionalismul, promptitudinea si implicarea cu care m-ati reprezentat in litigiul cu angajatorul. A fost extraordinar ca toate probele au fost depuse la timp, ca au fost complete si astfel sunt singurul profesor din judetul Dambovita care a castigat in instanta drepturile pentru indemnizatia de hrana pe perioada concediului. Felicitari!' },
+            { author: 'Ioana Jumara', stars: 5, text: 'Am avut o experienta placuta sa intalnesc pe acest domn avocat Stan Ionel care m-a ajutat sa transfer din penitenciarul din Spania in Romania pe baiatul meu. Un profesionalism si devotament care pe mine ca mama m-au impresionat foarte mult. Un om drept, comunicativ si alaturi de noi la orice ora din zi si din noapte. Sunt un om simplu care nu am avut nevoie de avocati in viata, dar tot viata mi-a dat sa intalnesc acest domn avocat care m-a ajutat enorm si ii multumesc ca exista si asa oameni buni, corecti si drepti care se implica. Recomand acest domn avocat!' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => this.scrolled = window.scrollY > 20);
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

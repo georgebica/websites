@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law Office Andaluna Bogdan | Cluj-Napoca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#f7efe7; --panel:#fffaf5; --ink:#221c19; --muted:#6e625b; --navy:#1f3347; --terracotta:#a4543a; --sage:#6f8b6b; --gold:#c89a59; --line:rgba(31,51,71,.12); --shadow:0 22px 60px rgba(31,51,71,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Source Sans 3',sans-serif;color:var(--ink);background:
+      radial-gradient(circle at 10% 8%, rgba(200,154,89,.18), transparent 22%),
+      radial-gradient(circle at 88% 12%, rgba(111,139,107,.18), transparent 23%),
+      linear-gradient(180deg,#fbf5ee 0%, #f2e8de 100%);
+      overflow-x:hidden
+    }
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(rgba(31,51,71,.13) 1px, transparent 1px);background-size:20px 20px}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{position:fixed;inset:0 0 auto 0;z-index:60;backdrop-filter:blur(14px);background:rgba(251,245,238,.72);border-bottom:1px solid rgba(31,51,71,.08)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--terracotta));color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(31,51,71,.22)}
+    .brand strong{display:block;font-size:1rem;letter-spacing:.01em}
+    .brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:700}
+    .links{display:flex;align-items:center;gap:22px}
+    .links a{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .links a:hover{color:var(--terracotta)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 20px;font-weight:800;border:1px solid transparent;transition:.25s ease}
+    .btn-primary{background:linear-gradient(135deg,var(--terracotta),#c06a4e);color:#fff;box-shadow:0 18px 40px rgba(164,84,58,.22)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.55);border-color:rgba(31,51,71,.14)}
+    .btn-ghost:hover{transform:translateY(-2px)}
+    .menu{display:none;background:none;border:none;color:var(--navy);font-size:20px}
+    .hero{padding-top:108px;min-height:100vh;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:28px;align-items:center;padding:42px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.22em;text-transform:uppercase;font-size:.75rem;font-weight:900;color:var(--terracotta)}
+    h1,h2,h3,.serif{font-family:'Fraunces',serif}
+    h1{font-size:clamp(3.1rem,7vw,6.2rem);line-height:.93;margin:.4rem 0 1rem;color:var(--navy)}
+    .lead{font-size:1.08rem;line-height:1.9;color:var(--muted);max-width:60ch}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .panel{background:linear-gradient(160deg,#fff9f3,#f4e8dc);border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .panel::before,.panel::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(164,84,58,.1)}
+    .panel::before{width:260px;height:260px;right:-90px;top:-90px}
+    .panel::after{width:170px;height:170px;left:-60px;bottom:-60px}
+    .panel h3{font-size:2.55rem;line-height:1.04;color:var(--navy);margin:.2rem 0 10px}
+    .panel p{color:var(--muted);line-height:1.8}
+    .chip{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:rgba(164,84,58,.08);color:var(--terracotta);padding:9px 13px;font-size:.86rem;font-weight:900}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:rgba(31,51,71,.05);border:1px solid rgba(31,51,71,.08);border-radius:18px;padding:18px;text-align:center}
+    .stat b{display:block;font-size:clamp(1.3rem,3vw,2.1rem);font-family:'Fraunces',serif;color:var(--navy)}
+    .section{padding:92px 0}
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.08))}
+    .head{max-width:780px;margin:0 auto 36px;text-align:center}
+    .head h2{font-size:clamp(2.1rem,5vw,4rem);margin:.4rem 0;color:var(--navy)}
+    .head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .benefits{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{background:rgba(255,250,245,.86);border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 40px rgba(31,51,71,.08);backdrop-filter:blur(10px)}
+    .card{padding:24px;transition:.25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(31,51,71,.22)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(31,51,71,.09),rgba(200,154,89,.22));color:var(--navy);font-size:1.08rem;margin-bottom:16px}
+    .card h3,.review h3,.contact h3{margin:0 0 10px;color:var(--navy);font-size:1.45rem}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft{padding:16px 18px;border-radius:18px;background:rgba(31,51,71,.05);border:1px solid rgba(31,51,71,.08)}
+    .soft b{display:block;color:var(--navy);margin-bottom:6px}
+    .review{padding:22px}
+    .meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.95rem}
+    .stars{color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+    .contact{padding:22px}
+    .contact .big{font-family:'Fraunces',serif;font-size:1.55rem;color:var(--navy);margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--terracotta);font-weight:900}
+    .hours{display:grid;gap:10px}
+    .hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(31,51,71,.08)}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(31,51,71,.06);color:var(--terracotta);font-size:.84rem;font-weight:900}
+    .footer{padding:28px 0 42px;border-top:1px solid rgba(31,51,71,.1);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .mini{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(31,51,71,.05);margin-top:16px;color:var(--muted)}
+    .menu-panel{display:none}
+    @media (max-width: 980px){
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .links,.desktop-cta{display:none}
+      .menu{display:block}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .menu-panel{display:none;padding-bottom:16px}
+      .menu-panel.open{display:block}
+      .menu-panel a{display:block;padding:12px 0;border-top:1px solid rgba(31,51,71,.08);font-weight:900;color:var(--navy)}
+      h1{font-size:clamp(2.8rem,13vw,4.8rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <span class="mark"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span><strong>Law Office Andaluna Bogdan</strong><small>Cluj-Napoca · cabinet avocațial</small></span>
+        </a>
+        <nav class="links">
+          <a href="#despre">Despre</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#avantaje">De ce noi</a>
+          <a href="#recenzii">Recenzii</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="desktop-cta"><a class="btn btn-primary" href="tel:0746055958"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+        <button class="menu" id="menuBtn" aria-label="Meniu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="menu-panel" id="menuPanel">
+        <a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#avantaje">De ce noi</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a>
+        <a class="btn btn-primary" style="margin-top:10px" href="tel:0746055958"><i class="fa-solid fa-phone"></i> 0746 055 958</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-venus"></i> Firmă condusă de femei</span>
+          <h1>Strategie juridică elegantă pentru decizii importante.</h1>
+          <p class="lead">Andaluna Bogdan conduce un cabinet individual din Cluj-Napoca, cu servicii la sediu și online, programări flexibile și o abordare orientată spre contracte, litigii și consiliere de business.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:0746055958"><i class="fa-solid fa-phone"></i> 0746 055 958</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Law+Office+Andaluna+Bogdan/data=!4m7!3m6!1s0x47490c22a2e1c83f:0xb53f77318ac1833!8m2!3d46.7691526!4d23.5863512!16s%2Fg%2F11cjg3b0vs!19sChIJP8jhoiIMSUcRMxisGHP3Uws?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <span class="chip"><i class="fa-solid fa-calendar-check"></i> Programare necesară</span>
+          <h3 class="serif">Un cabinet boutique, cu ritm clar și atenție pentru fiecare speță.</h3>
+          <p>Cu 12 ani de experiență și profil women-owned, biroul combină consultanța clasică cu disponibilitatea pentru întâlniri online sau la sediu.</p>
+          <div class="stats">
+            <div class="stat"><b data-count="12">0</b><span>ani de practică</span></div>
+            <div class="stat"><b data-count="2">0</b><span>limbi de lucru</span></div>
+            <div class="stat"><b data-count="4">0</b><span>recenzii verificate</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre cabinet</span>
+          <h2>Servicii juridice cu accent pe relația directă și pe detaliu</h2>
+          <p>Cabinetul este activ în Cluj-Napoca și lucrează atât în limba română, cât și în engleză sau franceză, în funcție de contextul clientului și al documentelor.</p>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+          <div class="soft"><b><i class="fa-solid fa-briefcase"></i> Contracte și negocieri</b>Întocmire și analiză de documente pentru relații comerciale și civile.</div>
+          <div class="soft"><b><i class="fa-solid fa-computer"></i> Întâlniri online</b>Consultanță la distanță, acolo unde timpul și mobilitatea sunt importante.</div>
+          <div class="soft"><b><i class="fa-solid fa-building"></i> Servicii la sediu</b>Întâlniri în cabinet, într-un spațiu pregătit pentru discuții aplicate.</div>
+          <div class="soft"><b><i class="fa-solid fa-car"></i> Parcare la sediu</b>Accesul este facilitat de posibilitatea de parcare pe amplasament.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-briefcase"></i> Servicii</span>
+          <h2>Arii de lucru concentrate pe consultanță și reprezentare</h2>
+          <p>Biroul activează pe mai multe planuri, de la consultanță și redactare până la litigii complexe și reprezentare în instanță.</p>
+        </div>
+        <div class="grid services">
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-signature"></i></div><h3>Drept civil</h3><p>Contracte, răspundere, proprietate și alte dosare civile care cer structură și argumentație bună.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-building-columns"></i></div><h3>Drept comercial</h3><p>Probleme legate de activitatea de business și relațiile dintre parteneri comerciali.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><h3>Drept comercial și societar</h3><p>Consultanță pentru firmă, documente societare și înțelegerea riscurilor juridice în business.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-gavel"></i></div><h3>Drept penal</h3><p>Asistență în cauze penale și pregătirea unei apărări bine articulate.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><h3>Drept administrativ și fiscal</h3><p>Analiză și sprijin în chestiuni administrative sau fiscale, cu documente clare și precise.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-people-roof"></i></div><h3>Dreptul familiei și muncii</h3><p>Spețe familiale și de muncă tratate echilibrat, cu focus pe soluții practice.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avantaje" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-check"></i> De ce noi</span>
+          <h2>Un profil construit pentru clienți care caută acces direct</h2>
+        </div>
+        <div class="grid benefits">
+          <div class="card"><div class="icon"><i class="fa-solid fa-venus"></i></div><h3>Women-owned</h3><p>Un cabinet condus de o profesionistă, cu un mod de lucru clar și echilibrat.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-laptop"></i></div><h3>Programări online</h3><p>Opțiunea de consultare la distanță face colaborarea mai flexibilă.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-car-side"></i></div><h3>On-site și accesibil</h3><p>Biroul oferă servicii la sediu și loc de parcare, potrivit pentru întâlniri rapide.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-circle-check"></i></div><h3>Programare recomandată</h3><p>Lucrul cu programare păstrează consultațiile concentrate și eficiente.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-star"></i> Recenzii</span>
+          <h2>Texte reale din profilul public</h2>
+          <p>Am selectat recenziile afișate în datele furnizate și le-am păstrat în forma lor originală.</p>
+        </div>
+        <div class="grid reviews">
+          <div class="review"><div class="meta"><strong>Bendorfean Traian</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Sunt zeci de mii de avocati în România. Fiecare cu nivelul lui de pregătire și seriozitate. Dar am fost uimit sa descoper în persoana avocat Traian Laszlo ,un.munte de profesionalism și aplecare pe subiect.Atat eu cât sj alți zeci de oameni recomandați de mine dânsului. Succese domnule avocat și tot asa în continuare"</p></div>
+          <div class="review"><div class="meta"><strong>victor eagle studio</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Oferă servicii pentru toate domeniile , au echipă mare și prețuri bune ! I recomand cu drag oricui !"</p></div>
+          <div class="review"><div class="meta"><strong>florin pop</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Cel mai top cabinet de avocat din Cluj Napoca ! Recomand cu drag"</p></div>
+          <div class="review"><div class="meta"><strong>Laura Cristina</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Profesionalismul, seriozitatea și atenția la detalii au fost evidente pe tot parcursul colaborării. În cadrul biroului Law Laszlo avocații sunt foarte bine pregătiți, oferă soluții eficiente și explică fiecare pas în mod clar și transparent. Comunicarea a fost rapidă, iar rezultatele au fost peste așteptări. Recomand cu încredere pentru oricine are nevoie de servicii juridice de calitate!"</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+          <h2>Datele cabinetului din Cluj-Napoca</h2>
+        </div>
+        <div class="grid contact-grid">
+          <div class="contact"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3 class="big">Adresă</h3><p>Strada Memorandumului 23, 400114 Cluj-Napoca</p><a class="maps" href="https://www.google.com/maps/place/Law+Office+Andaluna+Bogdan/data=!4m7!3m6!1s0x47490c22a2e1c83f:0xb53f77318ac1833!8m2!3d46.7691526!4d23.5863512!16s%2Fg%2F11cjg3b0vs!19sChIJP8jhoiIMSUcRMxisGHP3Uws?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-phone"></i></div><h3 class="big">Telefon</h3><p>0746 055 958</p><a class="maps" href="tel:0746055958"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-envelope"></i></div><h3 class="big">Email</h3><p>andaluna_bogdan@yahoo.com<br />andaluna.bogdan@gmail.com</p><a class="maps" href="mailto:andaluna_bogdan@yahoo.com"><i class="fa-solid fa-paper-plane"></i> Scrie un email</a></div>
+          <div class="contact">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <h3 class="big">Program</h3>
+            <div class="hours">
+              <div><span>Luni</span><strong>09:00 - 18:00</strong></div>
+              <div><span>Marți - Joi</span><strong>08:30 - 18:00</strong></div>
+              <div><span>Vineri</span><strong>09:00 - 17:00</strong></div>
+              <div><span>Sâmbătă - Duminică</span><strong>Închis</strong></div>
+            </div>
+            <div class="mini"><i class="fa-solid fa-star" style="color:var(--gold)"></i> Online și la sediu, cu programare necesară</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><strong style="color:var(--navy)">Law Office Andaluna Bogdan</strong><div>Cluj-Napoca · consultanță juridică boutique</div></div>
+      <div>Telefon: 0746 055 958 · Email: andaluna_bogdan@yahoo.com</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const panel = document.getElementById('menuPanel');
+    btn?.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      btn.innerHTML = panel.classList.contains('open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    panel?.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
+      panel.classList.remove('open');
+      btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = Number(el.dataset.count);
+      const io = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.done) {
+          entry.target.dataset.done = '1';
+          const start = performance.now();
+          const tick = now => {
+            const p = Math.min((now - start) / 1200, 1);
+            entry.target.textContent = Math.floor(target * p);
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+      }), {threshold:.5});
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>
