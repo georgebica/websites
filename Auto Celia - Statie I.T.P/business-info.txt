@@ -1,0 +1,166 @@
+Original Data:
+==================================================
+Title: Auto Celia - Statie I.T.P.
+Category: Auto repair shop
+Address: Strada Crișan 34, 230001 Slatina
+Complete Address: {"borough":"","street":"Strada Crișan 34","city":"Slatina","postal_code":"230001","state":"","country":"RO"}
+Phone: 0723 153 973
+Owner: {"id":"","name":"Auto Celia - Statie I.T.P. (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Auto+Celia+-+Statie+I.T.P./data=!4m7!3m6!1s0x40ad3839dc8a73c1:0xbb3d8f2d76ffaf20!8m2!3d44.4342062!4d24.3778575!16s%2Fg%2F1hdz19q5h!19sChIJwXOK3Dk4rUARIK__di2PPbs?authuser=0&hl=en&rclk=1
+Rating: 4.6/5 (65 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJwXOK3Dk4rUARIK__di2PPbs&q=Auto+Celia+-+Statie+I.T.P.&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["8 am–8 pm"],"Monday":["8 am–8 pm"],"Saturday":["8 am–2 pm"],"Sunday":["Closed"],"Thursday":["8 am–8 pm"],"Tuesday":["8 am–8 pm"],"Wednesday":["8 am–8 pm"]}
+About: [{"id":"accessibility","name":"Accessibility","options":[{"name":"Wheelchair-accessible car park","enabled":true},{"name":"Wheelchair-accessible entrance","enabled":true},{"name":"Wheelchair-accessible toilet","enabled":true}]},{"id":"amenities","name":"Amenities","options":[{"name":"Mechanic","enabled":true},{"name":"Toilet","enabled":true}]},{"id":"planning","name":"Planning","options":[{"name":"Appointments recommended","enabled":true}]},{"id":"payments","name":"Payments","options":[{"name":"Credit cards","enabled":true}]}]
+Plus Code: C9MH+M4 Slatina
+Place ID: ChIJwXOK3Dk4rUARIK__di2PPbs
+CID: 13492097484104642336
+Latitude: 44.434206
+Longitude: 24.377857
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAweql-7szzjsr9tSSvbHckwXeptkvqvp47QElSYy28zeRRNSq2oHzW9OgR-eWDh1rdiJfxbrznMj_PIUlh5MvYud7tHL3rc-jjZJYWVT02wfoMrfBU77jWH2RVfoWtqa4mWrAxfTlMw=w408-h861-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 80 | ****: 5 | ***: 0 | **: 1 | *: 2
+
+[*****] Claudiu Ghita
+  "Ok"
+
+[*****] louis-paul Hayoun
+  "Fast and good"
+
+[*****] Nicolae Bizu
+  "Personal ok"
+
+[*****] Jon Diaconu
+  "Ok"
+
+[*****] Petre Virgil Rada
+  "Bună ziua!...Fără voința mea am fost nevoit să caut un punct de I.T.P ,întrucât am fost luat pe nepregătite  pt.o inspecție tehnică periodică la o remorcuță cumpărată acum doi ani din reprezentanță.La citirea recenziilor referitoare la această stație,am mers îndoit citind că un inginer de cca.27 ani se comporta execrabil cu,clienții dar și faptul că restul personalului este ok! Astăzi am sunat pentru programare,dar surpriză,am fost invitat să mă prezint cât pot de repede,ceace am și făcut. La prezentarea mea cu actele și bine-înțeles cu remorcuța am rămas plăcut surprins față de modul în care am fost tratat,respectat și explicat aproape fiecare operațiune executată.Eu...căutam cu privirea acel inginer și nu am găsit acel om,fapt care ma făcut să întreb de dumnealui,surpriză,nu mai lucră în cadrul stației.Vă recomand cu încredere această stație ITP împreună cu personalul ce o deservește pentru încredere,profesionalism și socializare excelentă,dar toate cu respectarea prevederilor legale.OK..Mulțumesc!"
+
+[**___] Ion Cocoroada
+  "Va salut  . Responsabilul   super caracter.   La  opus un   asa zis inginer
+[ne adevarat]  o mizerie.     Un pusti   max 27 ani  de o nesimțire crasă , neîngrijit cu hainele de cred 15 zile  neschimbate dar trebuie menționat ca în 15 min  am terminat.   Respect  responsabilului de acolo."
+
+[*****] Viorel Monescu
+  "Chiar dacă sunt cam exigenți, ceea ce , desigur , teoretic cel puțin e bine , sunt foarte amabili , își fac "meseria" , în condițiile în care , pe drumurile noastre circulă atâtea epave "autorizate"."
+
+[*****] Manuel Iorga
+  "Atmosfera frumoasa, poți servi o cafea un suc până este procesată masina"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Auto Celia is registered in Romania under the legal entity SCUDERIA AUTO CELIA SRL. The business is located in Slatina, Olt County and operates primarily as a driving school (Școală de conducere) rather than exclusively as an auto repair shop, though it does provide ITP (Periodic Technical Inspection) services. The name "Statie I.T.P." refers to its periodic vehicle inspection station designation.
+
+Legal & Registration Details
+Attribute	Details
+Legal Entity Name	SCUDERIA AUTO CELIA SRL
+Tax ID (CUI)	35910769
+Commercial Registration	J2016000278280
+EUID	ROONRC.J2016000278280
+Founding Date	April 5, 2016 (10 years established)
+Location	Strada Crișan Nr. 34, Etaj 1, Slatina 230001, Olt County, Romania
+Business Category	Microenterprise (fewer than 50 employees)
+Primary Activity Code	CAEN 8553 – Driving Schools (Pilotage)
+Primary Services & Operations
+
+Based on the provided information and research findings, Auto Celia operates multiple service lines:
+
+Driving School Services
+
+Auto Celia functions as a certified driving school, offering driver training courses for various vehicle categories (B, C, C+E). The business has been operating this service since its establishment in 2016.
+
+ITP (Periodic Technical Inspection) Services
+
+The facility operates as an authorized ITP station where vehicles undergo mandatory periodic technical inspections required by Romanian law. The phone number 0723 153 973 is registered for this service at their Crișan Street location.
+
+Amenities & Accessibility
+
+According to the provided data, the facility offers:
+
+Wheelchair-accessible car park, entrance, and toilet facilities
+On-site mechanic services
+Toilet facilities
+Appointments are recommended for services
+Credit card payments accepted
+Financial Performance (2024)
+Metric	2024	2023	2022
+Revenue (RON)	501,341	422,508	558,953
+Net Profit (RON)	-91,481	485,136	46,385
+Total Debt (RON)	721,067	691,167	1,085,114
+Fixed Assets (RON)	612,780	651,239	560,812
+Current Assets (RON)	24,283	47,405	46,642
+Equity (RON)	4,000	4,000	4,000
+Employees	7	0	8
+Financial Assessment
+
+The business experienced significant financial challenges in 2024, with a substantial loss of approximately 91,481 RON despite a revenue increase of 18.66% compared to 2023. This indicates operational difficulties or increased expenses outpacing income. The company maintains relatively high debt levels (721,067 RON) compared to its equity base, which represents a financial vulnerability. However, the 2023 performance showed strong profitability, suggesting the 2024 decline may be temporary or related to specific operational changes.
+
+Driving School Performance Metrics
+
+Auto Celia's driving school has tracked student examination results:
+
+Year	Pass Rate	Students Admitted	Examined
+2024	43%	206	475
+2023	43%	203	472
+2022	47%	236	492
+2021	51%	256	501
+2017	68%	206	300
+
+The overall pass rate across all years is 47%, with 3,489 total students examined and 1,666 admitted since tracking began. The school's performance has shown a declining trend in recent years, dropping from 51% (2021) to 43% (2024).
+
+Market Position & Reputation
+Customer Rating
+
+4.6 out of 5 stars based on 65 reviews — indicating strong customer satisfaction overall.
+
+Market Standing
+
+According to industry directories, Auto Celia ranks #1 in the Top Driving Schools (Scoli Auto) category for the Slatina area in Olt County, demonstrating competitive market positioning within the region. The business is recognized among established driving schools in Romania and appears in multiple professional automotive service directories.
+
+Competitive Context
+
+The facility operates in a competitive market with other ITP stations and driving schools in Slatina, including:
+
+Auto Com
+Precizia Service
+Total Auto Casa
+Veiron (also on Crișan Street)
+Accessibility & Customer Services
+
+The facility demonstrates strong commitment to accessibility and customer service:
+
+Full wheelchair accessibility across parking, entrance, and facilities
+Appointment-based scheduling to minimize wait times
+Professional staff with mechanical expertise
+Multiple payment options including credit cards
+Toilet facilities available on-site
+Staffing & Operations
+Current workforce: 7 employees (as of 2024)
+Business structure: Limited liability company (SRL)
+Ownership: 2 associates and 2 administrators manage the business
+Operating status: Active, with secondary office location registered
+Key Observations & Risk Factors
+
+Strengths:
+
+Strong customer rating (4.6/5) and market positioning
+Established 10-year operational history
+Revenue growth in 2024 despite losses
+Comprehensive accessibility features
+Diversified services (driving school + ITP inspection)
+
+Concerns:
+
+Significant 2024 loss despite revenue increase suggests operational inefficiencies
+High debt-to-equity ratio indicating financial leverage risk
+Declining pass rates in driving school examinations (51% in 2021 vs. 43% in 2024)
+Minimal equity base (4,000 RON) relative to debt exposure
+Low current assets relative to operational needs
+
+##Website_Found: None
+
+Despite extensive searching, I could not locate an official website, Facebook page, Instagram profile, LinkedIn account, or other dedicated online presence for Auto Celia - Statie I.T.P. The business appears to rely primarily on directory listings, phone contact (0723 153 973), and word-of-mouth referrals for customer acquisition. This represents a potential opportunity for digital marketing expansion.

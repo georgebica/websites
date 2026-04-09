@@ -1,0 +1,203 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+NON-NEGOTIABLE RULES
+- Read the full RAW BUSINESS DOSSIER below before writing any copy, layout, or section plan.
+- Treat the full dossier as mandatory source material, not as an optional appendix.
+- Use only facts that are clearly supported by the dossier. If a detail is uncertain, leave it out.
+- The dossier may contain noisy or conflicting scraps from scraping. If a detail clearly refers to another company, another phone number, another city, or another business activity, ignore that detail.
+- If the Google category is generic or misleading, prefer the clearer business activity described elsewhere in the dossier.
+- Build a site that feels substantial, specific, and commercially useful. Do not make it feel blank or padded.
+- Prioritize actual useful business information: services, location, phone, booking or appointment flow, hours, amenities, delivery details, neighborhoods, named staff, process details, and credible review-backed strengths when they clearly match the business.
+
+FORBIDDEN COPY AND TONE
+- Never write copy that explains the page itself, the source of the data, or what is publicly verified.
+- Never use phrases like `Pagina pune in fata...`, `Cum decurge colaborarea`, `Ce este verificat public`, `dovada publica`, `feedback public`, `informatiile publice`, `am selectat`, or `verificat public`.
+- Never mention that the site is based on public data, verified data, a source bank, an appendix, research, listings, or selected reviews.
+- Never write filler about clarity, proof, or strategy in the abstract. Speak directly about the business and what the customer can actually do or get.
+- Avoid generic trust-filler. Show useful facts instead.
+
+FAST FACTS
+- Business: Auto X Drive - Craiova
+- Best-fit activity: Chauffeur service
+- Location focus: Craiova
+- Primary CTA label suggestion: Suna pentru programare
+- Secondary CTA label suggestion: Vezi locatia
+- Signature section direction: Service & Programare
+- Phone: 0754 392 277
+- Address: Calea Severinului 34 H, 200008 Craiova
+- Rating summary: 5/5 (33 review-uri)
+- Practical convenience clues: Wheelchair-accessible entrance
+
+CONTENT PRIORITIES
+- Build headlines and sections around the real business offer, not around the existence of data.
+- Surface the most decision-making details early: what the business does, where it is, how to contact it, and why someone should choose it now.
+- Mine the dossier for concrete service clues even if they appear in reviews, company-overview notes, amenities, or operational descriptions.
+- If there are real review-backed strengths, translate them into grounded claims and selective quotes only when they clearly fit the target business.
+- If details are sparse, make the design rich and confident but keep the copy factual and concise. Do not invent substance.
+
+SECTION DIRECTION
+- Create a strong hero with a real business promise tied to the city or service area.
+- Include a services or capabilities section using actual service details from the dossier wherever possible.
+- Include a practical reasons-to-choose-us section built from real operational strengths, not abstract marketing talk.
+- Include a process, booking, appointment, or stay-planning section only if you can make it operational and business-specific.
+- Include reviews or rating proof only when it genuinely helps and clearly matches the business.
+- Finish with a contact section that makes phone, address, map, hours, and next-step actions obvious.
+- Add FAQ only if the dossier supports real questions people would ask this business.
+
+TECHNICAL BUILD RULES
+- Build one standalone `index.html` file.
+- Use Tailwind CSS via CDN.
+- Use minimal vanilla JavaScript only where it improves navigation or interaction.
+- Use Font Awesome via CDN for icons.
+- Mobile-first, responsive, and thumb-friendly.
+- No placeholder text, no Lorem Ipsum, no fake metrics, no invented credentials, no fabricated testimonials, no fake galleries.
+- Do not add forms unless the dossier clearly supports a direct email/contact workflow. Phone and map actions are usually better.
+- Do not output the brief or explain your choices. Output only the finished website file.
+
+RAW BUSINESS DOSSIER
+Read this entire block before writing the site. Use it as the primary factual source.
+Original Data:
+==================================================
+Title: Auto X Drive - Craiova
+Category: Chauffeur service
+Address: Calea Severinului 34 H, 200008 Craiova
+Complete Address: {"borough":"","street":"Calea Severinului 34 H","city":"Craiova","postal_code":"200008","state":"","country":"RO"}
+Phone: 0754 392 277
+Owner: {"id":"116521274643796342417","name":"Auto X Drive - Craiova (Owner)","link":"https://www.google.com/maps/contrib/116521274643796342417"}
+Google Maps Link: https://www.google.com/maps/place/Auto+X+Drive+-+Craiova/data=!4m7!3m6!1s0x4752d95954e73751:0x8e3e23fb4d4ad4a8!8m2!3d44.3398935!4d23.7666848!16s%2Fg%2F11nn77d6dw!19sChIJUTfnVFnZUkcRqNRKTfsjPo4?authuser=0&hl=en&rclk=1
+Rating: 5/5 (33 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJUTfnVFnZUkcRqNRKTfsjPo4&q=Auto+X+Drive+-+Craiova&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["9 am–6 pm"],"Monday":["9 am–6 pm"],"Saturday":["9 am–1:30 pm"],"Sunday":["Closed"],"Thursday":["9 am–6 pm"],"Tuesday":["9 am–6 pm"],"Wednesday":["9 am–6 pm"]}
+About: [{"id":"accessibility","name":"Accessibility","options":[{"name":"Wheelchair-accessible entrance","enabled":true}]}]
+Plus Code: 8QQ8+XM Craiova
+Place ID: ChIJUTfnVFnZUkcRqNRKTfsjPo4
+CID: 10249669364182340776
+Latitude: 44.339893
+Longitude: 23.766685
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAweqDzRwBF5VVgRJaldlmB9EfXSXeRZmBJBNWk3vi0U0enPn-YmGcYx6A0Nyi-RyfSYFe4NRmskiKBLDr9kqDhrd3IrYD3I6EbG5KLFgneOH1qmwYTaiIWvY4yBS9m4C9oRgvuXWo=w426-h240-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 31 | ****: 3 | ***: 0 | **: 1 | *: 0
+
+[*****] grigorascu daniel
+  "Tot timpul am gasit preturi bune si baieti pregatiti care stiu sa te sfatuiasca...!!!"
+
+[*****] cyoby flo
+  "Băieți foarte amabili și servire promptă."
+
+[*****] Robert Bojenoiu
+  "Foarte bun magazinul de piese auto si preturi accesibile."
+
+[*****] Claudiu David
+  "Seriozitate si preturi corecte!"
+
+[*****] Razvan-Cristian Marian
+  "Piese comandate profesional si rapid!"
+
+[*****] Gigi G
+  "Seriozitate și promptitudine, bravo lor!"
+
+[*****] Ştefănescu Cosmin Florin
+  "Oameni extraordinari, preturi excelente."
+
+[****_] Popescu Gheorghe
+  "Bine aprovizionat preturi bune"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Auto X Drive - Craiova is a professional chauffeur and private car transfer service operating in Craiova, Romania. The business is classified as a private transportation/chauffeur service provider, offering reliable passenger transportation for both individual and corporate clients in the Craiova region and surrounding areas.
+
+Business Location & Contact Information
+Attribute	Details
+Address	Calea Severinului 34 H, 200008 Craiova, Dolj County, Romania
+Phone	+40 754 392 277
+Operating Hours	Monday–Friday: 09:00–18:00; Saturday: 09:00–13:30; Sunday: Closed
+Accessibility	Wheelchair-accessible entrance available
+Service Area	Craiova and surrounding regions
+Service Offerings
+
+Auto X Drive - Craiova specializes in private chauffeur-driven transportation services, which typically include:
+
+Private car transfers for individuals and groups
+Airport transfers (to/from Craiova Airport)
+Corporate transportation for business clients
+Long-distance transfers to other Romanian cities (Bucharest, Constanța, Cluj-Napoca, and other major destinations)
+Chauffeur-driven tours and guided transportation experiences
+Market Position & Reputation
+Rating Excellence
+
+Auto X Drive - Craiova maintains an exceptional 5.0/5-star rating across multiple platforms with 33 verified reviews aggregated from Google Maps and other business directories. This places the business among the highest-rated chauffeur services in the Craiova area.
+
+Customer Testimonials & Key Strengths
+
+Customer feedback consistently highlights:
+
+Professional staff: Customers describe the team as "professional," "serious," and "reliable"
+Exceptional cleanliness: The facility is noted as "the cleanest service" in Craiova
+Technical expertise: Particularly praised for advanced automotive knowledge, especially with automatic transmissions
+Customer service: Staff members are described as "helpful," "obliging," and "exceptionally courteous"
+Quality of service: Reviews consistently recommend the business "with confidence" to all customers, including those with demanding standards
+
+Sample customer comments (translated from Romanian):
+
+"Super service"
+"Professional and serious staff"
+"Professionalism, pharmacy-grade cleanliness, impeccable equipment, and a very good team"
+"The best and most trustworthy service in Craiova"
+"The cleanest service, best staff"
+"Truly professional people"
+Legal & Registration Details
+
+Information Status: Limited publicly available data on company registration, founding date, and tax identification number. Based on the business structure and operations, Auto X Drive - Craiova is likely registered as a small-to-medium private transportation enterprise in Romania. The business appears in official business directories (Cylex, Yably, Waze, Polomap) and is actively managed, suggesting proper registration with Romanian business authorities.
+
+Financial Performance
+
+Information Status: No publicly accessible financial data (revenue, profit margins, employee count) is available. This is typical for small-to-medium private service businesses in Romania, which are not required to publish detailed financial information publicly. The business's strong market position, consistent 5-star ratings, and established presence suggest stable operations and healthy market demand.
+
+Online Presence & Digital Visibility
+
+Auto X Drive - Craiova maintains visibility across multiple business platforms:
+
+Platform	Presence
+Google Maps/Waze	✓ Listed with full business details and hours
+Cylex.ro	✓ Business directory listing with reviews
+Yably.ro	✓ Comprehensive review aggregation (33 reviews)
+Polomap.com	✓ International business directory
+Official Website	Not found
+Facebook Page	Not found
+Instagram	Not found
+LinkedIn	Not found
+
+The business relies primarily on Google Maps, business directories, and word-of-mouth referrals rather than maintaining an independent digital presence.
+
+Competitive Context
+
+The Craiova chauffeur and private transfer market includes several established providers:
+
+RomaniaTransfers.eu: Major regional operator offering transfers across Romania
+Autonom: Large national car rental and chauffeur service company with 53+ agencies
+Multiple local service providers
+
+Auto X Drive - Craiova's competitive advantage lies in its exceptional customer satisfaction ratings, local expertise, and specialized technical knowledge, making it a preferred choice for discerning customers seeking premium local service.
+
+Accessibility Features
+
+The business explicitly offers wheelchair-accessible entrance, indicating commitment to serving customers with mobility requirements—a notable differentiator in the local market.
+
+Assessment Summary
+
+Auto X Drive - Craiova operates as a high-quality, locally-focused chauffeur service with a strong reputation for professionalism and customer satisfaction. The business's perfect 5.0-star rating across 33 reviews demonstrates consistent service excellence. While the company maintains minimal digital marketing presence (no independent website or social media), its strong performance in business directories and customer testimonials suggests stable operations and reliable market demand. The business appears well-positioned as a premium local provider in the Craiova private transportation market.
+
+##Website_Found: None
+
+FINAL REMINDER
+Use GPT-5.4, not a mini model. Build a business-first Romanian website that feels human, specific, and commercially useful.

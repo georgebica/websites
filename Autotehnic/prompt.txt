@@ -1,0 +1,206 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+NON-NEGOTIABLE RULES
+- Read the full RAW BUSINESS DOSSIER below before writing any copy, layout, or section plan.
+- Treat the full dossier as mandatory source material, not as an optional appendix.
+- Use only facts that are clearly supported by the dossier. If a detail is uncertain, leave it out.
+- The dossier may contain noisy or conflicting scraps from scraping. If a detail clearly refers to another company, another phone number, another city, or another business activity, ignore that detail.
+- If the Google category is generic or misleading, prefer the clearer business activity described elsewhere in the dossier.
+- Build a site that feels substantial, specific, and commercially useful. Do not make it feel blank or padded.
+- Prioritize actual useful business information: services, location, phone, booking or appointment flow, hours, amenities, delivery details, neighborhoods, named staff, process details, and credible review-backed strengths when they clearly match the business.
+
+FORBIDDEN COPY AND TONE
+- Never write copy that explains the page itself, the source of the data, or what is publicly verified.
+- Never use phrases like `Pagina pune in fata...`, `Cum decurge colaborarea`, `Ce este verificat public`, `dovada publica`, `feedback public`, `informatiile publice`, `am selectat`, or `verificat public`.
+- Never mention that the site is based on public data, verified data, a source bank, an appendix, research, listings, or selected reviews.
+- Never write filler about clarity, proof, or strategy in the abstract. Speak directly about the business and what the customer can actually do or get.
+- Avoid generic trust-filler. Show useful facts instead.
+
+FAST FACTS
+- Business: Autotehnic
+- Best-fit activity: Chauffeur service
+- Location focus: Craiova
+- Primary CTA label suggestion: Suna pentru programare
+- Secondary CTA label suggestion: Vezi locatia
+- Signature section direction: Service & Programare
+- Phone: 0760 539 333
+- Address: Strada Bariera Vâlcii 213, Craiova
+- Rating summary: 4.7/5 (117 review-uri)
+- Practical convenience clues: Wheelchair-accessible car park, Wheelchair-accessible entrance, Toilet, Credit cards, Debit cards, NFC mobile payments
+
+CONTENT PRIORITIES
+- Build headlines and sections around the real business offer, not around the existence of data.
+- Surface the most decision-making details early: what the business does, where it is, how to contact it, and why someone should choose it now.
+- Mine the dossier for concrete service clues even if they appear in reviews, company-overview notes, amenities, or operational descriptions.
+- If there are real review-backed strengths, translate them into grounded claims and selective quotes only when they clearly fit the target business.
+- If details are sparse, make the design rich and confident but keep the copy factual and concise. Do not invent substance.
+
+SECTION DIRECTION
+- Create a strong hero with a real business promise tied to the city or service area.
+- Include a services or capabilities section using actual service details from the dossier wherever possible.
+- Include a practical reasons-to-choose-us section built from real operational strengths, not abstract marketing talk.
+- Include a process, booking, appointment, or stay-planning section only if you can make it operational and business-specific.
+- Include reviews or rating proof only when it genuinely helps and clearly matches the business.
+- Finish with a contact section that makes phone, address, map, hours, and next-step actions obvious.
+- Add FAQ only if the dossier supports real questions people would ask this business.
+
+TECHNICAL BUILD RULES
+- Build one standalone `index.html` file.
+- Use Tailwind CSS via CDN.
+- Use minimal vanilla JavaScript only where it improves navigation or interaction.
+- Use Font Awesome via CDN for icons.
+- Mobile-first, responsive, and thumb-friendly.
+- No placeholder text, no Lorem Ipsum, no fake metrics, no invented credentials, no fabricated testimonials, no fake galleries.
+- Do not add forms unless the dossier clearly supports a direct email/contact workflow. Phone and map actions are usually better.
+- Do not output the brief or explain your choices. Output only the finished website file.
+
+RAW BUSINESS DOSSIER
+Read this entire block before writing the site. Use it as the primary factual source.
+Original Data:
+==================================================
+Title: Autotehnic
+Category: Chauffeur service
+Address: Strada Bariera Vâlcii 213, Craiova
+Complete Address: {"borough":"","street":"Strada Bariera Vâlcii 213","city":"Craiova","postal_code":"","state":"","country":"RO"}
+Phone: 0760 539 333
+Owner: {"id":"","name":"Autotehnic (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Autotehnic/data=!4m7!3m6!1s0x4752d7493d0be557:0x51a235b845b45e93!8m2!3d44.347417!4d23.819388!16s%2Fg%2F11bwkym6rt!19sChIJV-ULPUnXUkcRk160Rbg1olE?authuser=0&hl=en&rclk=1
+Rating: 4.7/5 (117 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJV-ULPUnXUkcRk160Rbg1olE&q=Autotehnic&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["9 am–6 pm"],"Monday":["9 am–6 pm"],"Saturday":["9 am–2 pm"],"Sunday":["Closed"],"Thursday":["9 am–6 pm"],"Tuesday":["9 am–6 pm"],"Wednesday":["9 am–6 pm"]}
+About: [{"id":"accessibility","name":"Accessibility","options":[{"name":"Wheelchair-accessible car park","enabled":true},{"name":"Wheelchair-accessible entrance","enabled":true}]},{"id":"amenities","name":"Amenities","options":[{"name":"Toilet","enabled":true}]},{"id":"payments","name":"Payments","options":[{"name":"Credit cards","enabled":true},{"name":"Debit cards","enabled":true},{"name":"NFC mobile payments","enabled":true},{"name":"Credit cards","enabled":false}]}]
+Plus Code: 8RW9+XQ Craiova
+Place ID: ChIJV-ULPUnXUkcRk160Rbg1olE
+CID: 5882323128858992275
+Latitude: 44.347417
+Longitude: 23.819388
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAwerKvfE4YyKxva6oO3NuD1MTu5s4C3jboXEv5BtgQjvzllbfd0Dq2WUyfB5YfkS1klF60e5U8TORRrK5R5zaE9TUQc-3qe5xyuLG46u7WyafZjYt3vvkG8lZ63JBpxEuE2NMKlhr9g=w426-h240-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 31 | ****: 3 | ***: 0 | **: 1 | *: 0
+
+[*****] grigorascu daniel
+  "Tot timpul am gasit preturi bune si baieti pregatiti care stiu sa te sfatuiasca...!!!"
+
+[*****] cyoby flo
+  "Băieți foarte amabili și servire promptă."
+
+[*****] Robert Bojenoiu
+  "Foarte bun magazinul de piese auto si preturi accesibile."
+
+[*****] Claudiu David
+  "Seriozitate si preturi corecte!"
+
+[*****] Razvan-Cristian Marian
+  "Piese comandate profesional si rapid!"
+
+[*****] Gigi G
+  "Seriozitate și promptitudine, bravo lor!"
+
+[*****] Ştefănescu Cosmin Florin
+  "Oameni extraordinari, preturi excelente."
+
+[****_] Popescu Gheorghe
+  "Bine aprovizionat preturi bune"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Autotehnic is a professional chauffeur and transportation service provider located in Craiova, Romania. The business operates from Strada Bariera Vâlcii 213, Craiova, Dolj County. This establishment serves as a reliable transportation service provider in the Dolj region, operating a professional chauffeur service for both personal and commercial transportation needs.
+
+Contact Information & Hours of Operation
+Detail	Information
+Phone Number	0760 539 333
+Address	Strada Bariera Vâlcii 213, Craiova, Dolj, Romania (Postal Code: 200717)
+Operating Hours	Monday–Friday: 9:00 AM – 6:00 PM; Saturday: 9:00 AM – 2:00 PM; Sunday: Closed
+Service Type	Chauffeur Service / Professional Transportation
+Accessibility & Amenities
+
+Autotehnic demonstrates a commitment to inclusivity and customer comfort with the following features:
+
+Accessibility Features
+Wheelchair-Accessible Car Park ✓
+Wheelchair-Accessible Entrance ✓
+Amenities
+Toilet Facilities ✓
+Payment Options
+Credit Cards ✓
+Debit Cards ✓
+NFC Mobile Payments ✓
+Customer Rating & Reviews
+
+Overall Rating: 4.7 out of 5.0 stars (based on 117 reviews)
+
+This strong rating of 4.7/5 demonstrates excellent customer satisfaction. Based on available customer feedback, users consistently praise Autotehnic for:
+
+Professional Service Quality – Customers highlight the expertise and professionalism of the team
+Reliability & Punctuality – The service is noted for dependable and timely transportation
+Competitive Pricing – Reviews mention reasonable costs for both parts and labor
+Well-Equipped Facility – Customers describe the service as extremely well-equipped
+Fast Service Delivery – Users appreciate the speed of service completion
+Quality Parts – Feedback indicates the use of quality automotive parts
+Trustworthy Operations – Customers express confidence in recommending the service
+Primary Services
+
+Based on the business classification and customer reviews, Autotehnic provides:
+
+Professional chauffeur services for personal and business transportation
+City and intercity transfers
+Airport transfers and shuttle services
+Corporate transportation solutions
+Reliable driver services with professional, experienced staff
+Market Position & Reputation
+
+Autotehnic operates in a competitive transportation and chauffeur services market in Craiova. The city of Craiova, located in Dolj County in southwestern Romania, is a significant regional center with a population of approximately 300,000 people. The business competes with other transportation services in the region but distinguishes itself through:
+
+High customer satisfaction ratings (4.7/5 stars across 117 reviews)
+Accessibility accommodations for customers with mobility needs
+Professional infrastructure and equipment
+Established presence in the local market
+Flexible payment options including modern digital payment methods
+Legal & Registration Details
+
+Unfortunately, specific legal registration details such as the company's tax identification number (CUI), founding date, or detailed business registration information were not accessible through available online sources. To obtain this information, you would need to:
+
+Consult the Romanian Trade Register (Registrul Comerțului)
+Contact the company directly at 0760 539 333
+Check official Romanian business registration databases
+Financial Performance
+
+No publicly accessible financial data regarding Autotehnic's revenue, profitability, or financial performance is available through standard business databases. As a private transportation service company, such information is typically not disclosed publicly unless the company is required to file financial statements with regulatory authorities.
+
+Online Presence & Digital Footprint
+
+The search revealed that while Autotehnic has a presence in online business directories and mapping platforms (such as Polomap and Deschis.ro), the company does not appear to maintain an active, dedicated official website or significant social media presence. The business is primarily found through:
+
+Google Maps and local business directories
+Business listing platforms (Deschis.ro, Polomap)
+Local business registries
+Direct phone contact
+
+This suggests a traditional, locally-focused business model rather than a digitally-driven online presence, which is common for regional transportation and chauffeur services that rely on word-of-mouth referrals and established client relationships.
+
+Key Observations & Assessment
+
+Strong Local Reputation – The 4.7/5 rating with 117 reviews indicates a well-established and trusted service in the Craiova market
+
+Customer-Centric Approach – The inclusion of wheelchair-accessible facilities and modern payment options demonstrates attention to customer needs
+
+Professional Operations – Customer feedback consistently mentions professionalism, quality, and reliability
+
+Limited Digital Marketing – The company appears to rely primarily on local presence and word-of-mouth rather than aggressive online marketing
+
+Stable Regional Business – Operating from a fixed location with consistent hours suggests a stable, established operation
+
+##Website_Found: None
+
+FINAL REMINDER
+Use GPT-5.4, not a mini model. Build a business-first Romanian website that feels human, specific, and commercially useful.

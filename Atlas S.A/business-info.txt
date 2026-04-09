@@ -1,0 +1,207 @@
+Original Data:
+==================================================
+Title: Atlas S.A.
+Category: Construction company
+Address: Strada Sărarilor 7, 200516 Craiova
+Complete Address: {"borough":"","street":"Strada Sărarilor 7","city":"Craiova","postal_code":"200516","state":"","country":"RO"}
+Phone: 0251 543 990
+Owner: {"id":"","name":"Atlas S.A. (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Atlas+S.A./data=!4m7!3m6!1s0x4752d701c6799a81:0x45b46ca4cf2e263e!8m2!3d44.3163729!4d23.8264438!16s%2Fg%2F1hc7c0r85!19sChIJgZp5xgHXUkcRPiYuz6RstEU?authuser=0&hl=en&rclk=1
+Rating: 5/5 (1 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJgZp5xgHXUkcRPiYuz6RstEU&q=Atlas+S.A.&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: null
+Plus Code: 8R8G+GH Craiova
+Place ID: ChIJgZp5xgHXUkcRPiYuz6RstEU
+CID: 5022758939531290174
+Latitude: 44.316373
+Longitude: 23.826444
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Hg0ydpmHRUakW87RsPVtvA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=83.781425&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 134 | ****: 37 | ***: 10 | **: 8 | *: 28
+
+[*____] Catalin TOLEA
+  "I ordered last year materials for a parking lot.  They assured that they will deliver on Saturday. On Saturday, I called and a lady told me that they have a short schedule and can't deliver the order.  I called everywhere and nobody helped. I cancelled the order and never bought anything from them anymore.
+They are the worst on this type of tasks from my experience. Now I buy from Hornbach and Leroy Merlin because they have good prices, quality merchandise,  reliable delivery and services, unlike Mathaus.
+
+LE: the delivery was confirmed by two different persons, prior that deadline."
+
+[*****] Lombrea Paul
+  "fast n easy"
+
+[*____] Razvan Dumitrascu
+  "As fi dat 0 stele dar nu se poate, total neseriosi, au livrat rigips pe ploaie torentiala, cu macaraua, nu au putut sa puna o folie sau ceva sa acopere placile, au ajuns la destinatie ude complet si de atunci numai probleme cu deslipitul cartonului de gips, cateva placi s-au rupt la ridicare de pe palet iar explicatia data de sofer la livrare ca le pui inclinate se scurge apa si se usuca.
+
+Ultima data cand mai folosesc serviciile mathaus. De evitat pe viitor!"
+
+[*____] Alina Nuta
+  "O experiență neplăcută cu magazinul din Craiova,am cumpărat plase de gard zincat am platit in factura diametru de 3,8 iar la livrare am primit de 3,00 deci ori schimbați personalul care duce lipsa de experiență cu desăvârșire...ori reglementati preturile!"
+
+[*____] stef calin
+  "Total neserioși! Am făcut o comandă,am primit factura proformă totală in valoare de 545 ron. Când a venit termenul de livrare am primit două facturi cu două transporturi facturate separat. Total 600 ron. Am primit plasele comandate indoite,sârmele rupte din sudură! Dezamăgit! Explicația a fost căçi nu se putea plase sudate cu saci! Dar camionul care mi-a adus plasele avea saci de ciment,izolație și altele ! Din respect pentru șofer am refuzat comanda a doua! Puteam să-l las să facă drumul și să refuz. Eu am m-am invoit 4 ore la job ,căci mi s-a spus ,,într-o   oră să ajung,, iar camionul a veni după 4 ore! Revin cu editare: bine bă răspundeți la recenzii ci chatGPT!?!?! DIN BUN SIMȚ PUTEAȚI SĂ ANALIZAȚI SITUAȚIA! AȚI CRESCUT CA ȘI FIRMĂ CU 50 DE RON ÎN PLU!??? PENTRU MINE CHIAR ÎNSEAMNĂ CEVA ! DAR PENTRU VOI CA FIRMĂ MARE!?"
+
+[*____] Cristi
+  "Am fost astăzi sa cumpăr cleme de prindere cofrag cu pana tip l și  îmi spuneau ca nu au dar  când am cautat pe telefon aveau,ar trebui sa ii mai instruiasaca pe la scoli am stat mai bn de o ara sa iau 25 bucăți.Daca sar da salariul în funcție  de performanțele angajaților  ar trebui sa aducă bani î de acasă am întrebat tei persoane habar nu aveau în frunte cu cei de la depozit   în concluzie nu recomand acest magazin un hos total ."
+
+[*****] Mitica Tudosie
+  "Foarte mulțumit de produsele achiziționate și transport ieftin"
+
+[*____] Remus Z
+  "Recenzie scrisa dupa 2 experiente:
+
+Prima data- Sunat vineri in magazin si confirmat ca pentru blaturi sambata e deschis pana la ora 14:00. Plecat din Bucuresti la 05:00 dimineata. Am ajuns la 8 in magazin si ghici ce, mobila apartine de alt magazin care se denumeste “ Mobilarie” si in weekend fata nu vine.
+
+A doua oara- am venit dupa profile led si leduri ( electrice) Stupefactie maxima, tot la “Mobilari” si de data asta fata era in concediu.
+Concluzie- Sunt sigur ca nu mai ajung pe aici, decat daca am nevoie la toaleta!"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Atlas S.A. is a construction company headquartered in Craiova, Romania, specializing in residential and non-residential building construction. The company operates as a joint-stock company (S.A.) and is classified as a microenterprise with a small but established operational footprint in the Dolj County region.
+
+Legal Details & Registration
+Attribute	Details
+Company Name	Atlas S.A.
+Legal Form	Joint-Stock Company (S.A.)
+Tax ID (CUI)	2324054
+Registration Number	J16/1984/1992
+Founding Date	June 15, 1992
+Company Age	34 years (as of 2026)
+EU ID (EUID)	ROONRC.J16/1984/1992
+Registered Capital	467,998 RON (~€62,800 USD)
+VAT Number	RO2324054
+Location	Strada Sărarilor 7, Craiova 200516, Dolj County, Romania
+Primary Services & Activities
+
+Atlas S.A. operates in the construction sector with the following primary services:
+
+Main Construction Activities
+Residential building construction (primary focus)
+Non-residential building construction
+Civil and industrial construction services
+Interior design and renovation work
+Thermal and sanitary installations
+HVAC (heating, ventilation, and air conditioning) systems installation
+Water supply and sanitation systems installation and maintenance
+NACE Classification
+NACE Rev.2 (2008): Construction of residential and non-residential buildings (4120)
+NACE Rev.2.1 (2025): Construction of residential and non-residential buildings (4100)
+Financial Performance
+Recent Financial Data (2024)
+Metric	Value (RON)	Status
+Turnover/Revenue	18,004 RON	Minimal revenue
+Net Profit/Loss	-95,602 RON	Loss
+Total Assets	1,355,585 RON	Decreased 34.29%
+Total Liabilities	217,027 RON	Manageable debt levels
+Equity (Capital)	1,138,558 RON	Decreased 7.75%
+Current Assets	529,602 RON	Down 57%
+Fixed Assets	825,983 RON	Down 2%
+Cash/Liquidity	261,162 RON	Available reserves
+Receivables	268,440 RON	Accounts receivable
+Key Financial Trends
+2024 Operating Performance: The company recorded a significant loss of 95,602 RON on minimal revenue of 18,004 RON, indicating operational challenges
+Asset Decline: Total assets declined 34.29% year-over-year, suggesting reduced operational capacity
+Operating Profit Trend: Operating profit declined 28.46%, and EBITDA fell 35.21%
+Return on Equity (ROE): Negative -2.4%, indicating value destruction
+Solvency Risk: Rated as low to medium insolvency risk based on 2024 data
+Historical Context: The company was significantly more active in previous years (2012-2017 showed revenues ranging from 7.6 million to 16 million RON)
+Organizational Structure
+Aspect	Details
+Current Employees	1 employee (as of 2025)
+Historical Employment	Previously employed up to 218 people (2007)
+Number of Shareholders	4 shareholders
+Number of Administrators	1 administrator
+Subsidiaries	Metrolemn SA (97.19% ownership), Cofraconstruct SRL (32.05%), West Park SRL (12%)
+Secondary Offices	1 secondary office location
+Branch Offices	0 branches
+Market Position & Reputation
+Industry Standing
+Sector: Construction of residential and non-residential buildings in Romania
+Market Presence: Operates in a competitive local market in Craiova with numerous similar construction companies
+Company Status: Currently operational with low activity levels
+Regional Context: Based in Craiova, Dolj County, a significant regional construction hub in southern Romania
+Customer Reviews & Rating
+Overall Rating: 5/5 stars (based on 1 review)
+Review Count: Limited feedback available (only 1 verified review)
+Assessment: The single review suggests positive customer satisfaction, though the small sample size limits the reliability of this rating
+Competitive Environment
+
+The company operates alongside numerous local competitors in Craiova, including:
+
+Porr Construct SRL
+Constructii Erbasu SA
+Strabag SRL
+Concelex SRL
+TIPLEXIM SRL
+HIDROKRAFT SRL
+And dozens of other regional construction firms
+Financial Health Assessment
+Strengths
+Stable equity base: Equity of 1,138,558 RON provides a reasonable financial foundation
+Manageable debt levels: Total liabilities of 217,027 RON are relatively low
+Established history: 34 years of operation demonstrates longevity
+Available liquidity: Cash reserves of 261,162 RON available for operations
+Challenges
+Severe revenue decline: Revenue dropped dramatically from historical levels (millions of RON to just 18,004 RON in 2024)
+Operating losses: Consistent losses in recent years (-95,602 RON in 2024)
+Workforce reduction: Decreased from 218 employees to 1 employee, indicating significant operational scaling down
+Asset deterioration: 34% decline in total assets suggests reduced productive capacity
+Minimal market activity: Current revenue levels suggest the company may be in a dormant or wind-down phase
+Legal Proceedings
+
+The company has been involved in multiple court cases, appearing as:
+
+Petitioner, defendant, debtor, claimant, creditor, and respondent in various legal matters
+At least 10 documented court cases between 2013 and 2025
+Online Presence & Contact Information
+Contact Details
+Phone Numbers:
++40 351 427 831 (main)
++40 251 543 990 (as provided)
+Additional numbers: +40 251 563 9xx, +40 251 467 0xx
+Email: Partially masked in public records (offic**a.*
+Website: No active website identified
+Social Media: No active social media presence found
+Business Listings
+
+The company is registered on multiple business directories:
+
+Kompass Directory (Kompass ID: RO026541)
+ListaFirme.ro (Romanian business registry)
+Cylex.ro (Business directory)
+Targetare.ro (Business intelligence platform)
+Operational Assessment
+
+Current Status: The company appears to be in a dormant or significantly reduced operational state. Key indicators include:
+
+Minimal annual revenue (18,004 RON in 2024)
+Single employee on payroll
+Consistent operating losses
+Dramatic reduction in assets and equity
+Lack of active online presence or marketing
+
+Possible Scenarios:
+
+The company may be in the process of winding down operations
+It could be maintained for holding subsidiary companies (Metrolemn SA, Cofraconstruct SRL, West Park SRL)
+It may be inactive but legally maintained to preserve registration and past work history
+The company might be transitioning to a holding company structure
+Summary Table: Company Profile at a Glance
+Category	Information
+Business Type	Construction (Residential & Non-Residential Buildings)
+Founding	June 15, 1992 (34 years old)
+Headquarters	Craiova, Dolj County, Romania
+Legal Status	Active joint-stock company
+Employees	1 (down from 218 historically)
+2024 Revenue	18,004 RON
+2024 Profit	-95,602 RON (loss)
+Tax ID	2324054
+Registration	J16/1984/1992
+Customer Rating	5/5 (1 review)
+Online Presence	Limited; listed on business directories
+Website_Found: None

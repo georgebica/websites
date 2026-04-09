@@ -1,0 +1,269 @@
+You are an elite website builder specializing in modern, high-converting single-page websites for Romanian businesses. You produce flawless, production-ready code in a single file.
+
+========================================
+GLOBAL RULES
+========================================
+1. ALL visible text content must be written in Romanian, using correct Romanian diacritics (ă, â, î, ș, ț).
+2. Output a single index.html file — fully self-contained, no external files.
+3. Use Tailwind CSS via CDN (<script src="https://cdn.tailwindcss.com"></script>).
+4. NO images anywhere. All visual elements must be created with CSS only (gradients, shapes, borders, shadows, patterns, SVG inline).
+5. NO forms, NO input fields, NO contact forms whatsoever.
+6. Use Font Awesome via CDN for all icons (<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">).
+7. Use AOS (Animate On Scroll) library via CDN for scroll animations (<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"> and <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>).
+8. Use Google Fonts for typography (Merriweather and Open Sans).
+9. Mobile-first responsive design — must look perfect on all screen sizes.
+10. NO emojis anywhere in the code or content.
+11. Semantic HTML5 structure throughout.
+12. All phone numbers must be clickable tel: links.
+13. Smooth scrolling behavior enabled.
+
+========================================
+BUSINESS DATA
+========================================
+- Company Name: Atlas S.A.
+- Legal Form: Societate pe Acțiuni (S.A.)
+- Category: Construction company / Companie de construcții
+- Founded: 15 iunie 1992
+- Years of Activity: 34 de ani (din 1992)
+- CUI (Tax ID): 2324054
+- Registration Number: J16/1984/1992
+- Main Activity (CAEN): 4120 — Construcția clădirilor rezidențiale și nerezidențiale
+- Address: Strada Sărarilor 7, Craiova 200516, Județul Dolj, Romania
+- Phone: 0251 543 990
+- Registered Capital: 467.998 RON
+- Subsidiaries: Metrolemn SA (97,19%), Cofraconstruct SRL (32,05%), West Park SRL (12%)
+- Coordinates: 44.316373, 23.826444
+- Website: None (this will be their first)
+
+========================================
+BRAND DNA
+========================================
+Core Identity: CORPORATE AUTHORITY / HERITAGE
+- Institutional authority — this is a company that has been a pillar of the Craiova construction landscape for over three decades.
+- Heritage trust — founded in 1992, Atlas S.A. carries the weight of post-revolution Romanian enterprise. It is an enduring presence.
+- Solid foundation mentality — the name "Atlas" evokes the titan bearing the world; the brand should feel like bedrock, permanence, structural integrity.
+- Corporate gravitas — this is not a startup or a trendy firm. It is a joint-stock company with subsidiaries and a formal structure. The tone is boardroom-professional, not casual.
+- Group presence — through its subsidiaries (Metrolemn, Cofraconstruct, West Park), Atlas operates as a construction group, not just a single entity.
+
+Brand Voice: Formal, authoritative, measured. Sentences should be deliberate and substantial. Use corporate language without being stiff. Think of the tone used in annual reports of established European construction groups.
+
+========================================
+VISUAL DESIGN SYSTEM
+========================================
+
+COLOR PALETTE:
+- Primary Dark (Navy): #1B2A4A — used for hero background, headers, footer, strong text
+- Primary Medium (Stone Grey): #8B8B8B — used for secondary text, borders, subtle backgrounds
+- Accent (Warm Amber): #D4A24E — used for accent highlights, CTAs, decorative elements, badge backgrounds
+- Light Background: #F5F3EF — warm off-white for section backgrounds (not pure white)
+- White: #FFFFFF — for card backgrounds, contrast sections
+- Dark Text: #1B2A4A — primary text color
+- Body Text: #3D3D3D — for paragraph text
+
+TYPOGRAPHY:
+- Headings: "Merriweather", serif — authoritative, institutional, classic. Use font-weight 700 and 900.
+- Body: "Open Sans", sans-serif — clean, professional, highly readable. Use font-weight 400 and 600.
+- Google Fonts import: Merriweather:wght@400;700;900 and Open+Sans:wght@400;600;700
+
+DESIGN MOTIFS — "CORNERSTONE":
+- Use solid rectangular blocks as design elements — think building blocks, cornerstones, foundation stones.
+- Strong borders (2px-4px solid) on cards and content blocks. No rounded corners — use sharp 0 or very minimal border-radius.
+- Architectural grid lines — subtle vertical and horizontal lines suggesting building blueprints or structural grids.
+- Section dividers should feel like architectural elements — thick horizontal rules, stepped patterns.
+- Use CSS-only geometric patterns subtly in backgrounds: grid lines, cross-hatch, or blueprint-style patterns.
+- Cards and content blocks should feel like solid masonry — stacked, weighted, substantial.
+
+LAYOUT PRINCIPLES:
+- Corporate grid layout — structured, symmetrical, organized.
+- Large section headers with generous spacing.
+- Strong visual hierarchy — clear distinction between H1, H2, H3.
+- Generous whitespace to convey institutional confidence.
+- Thick decorative borders and dividers between sections.
+
+========================================
+UNIQUE LAYOUT STRUCTURE
+========================================
+
+SECTION 1 — HERO (Heritage Hero):
+- Full-viewport height hero section with deep navy (#1B2A4A) background.
+- Subtle CSS-only geometric pattern overlay (fine grid lines or blueprint-style pattern at low opacity).
+- Prominently display a large badge/block element with "Din 1992" — this should be a rectangular amber (#D4A24E) badge with strong borders, appearing monumental. The year should be large and commanding.
+- Below the badge, the company name "ATLAS S.A." in Merriweather, font-weight 900, large size, white color, letter-spacing wide.
+- Subtitle underneath: "Construcții rezidențiale și nerezidențiale" in Open Sans, lighter weight, stone grey or amber.
+- A tagline or corporate statement: "Peste trei decenii de construcții solide în inima Olteniei" (or similar).
+- A single CTA button: "Contactați-ne: 0251 543 990" styled as a solid amber button with navy text, strong border, no rounded corners. Links to tel:.
+- Scroll indicator at bottom (CSS chevron animation).
+
+SECTION 2 — DESPRE NOI (Cine suntem / About):
+- Warm off-white (#F5F3EF) background.
+- Section header: "Cine suntem" in Merriweather, navy color, with a thick amber underline accent.
+- Corporate narrative paragraph (2-3 paragraphs) emphasizing:
+  - Founded in 1992, Atlas S.A. is one of Craiova's established construction entities.
+  - 34 years of continuous presence in the Dolj County construction landscape.
+  - Joint-stock company structure reflecting institutional solidity.
+  - Part of a group with subsidiaries active in complementary sectors (wood processing, construction services).
+  - Commitment to residential and non-residential building construction.
+- Use a "cornerstone" decorative element — a large quotation-style block or a bordered sidebar with a key corporate value.
+- Mention the CAEN 4120 activity naturally within the text.
+
+SECTION 3 — SERVICII (Services Grid):
+- White background with subtle grid-line pattern.
+- Section header: "Serviciile noastre" in Merriweather, navy, with amber underline.
+- 3-column grid (responsive: 1 column on mobile, 3 on desktop).
+- Each service card:
+  - Sharp rectangular border (2-3px solid navy or stone grey).
+  - Font Awesome icon at top in amber color.
+  - Service title in Merriweather, navy.
+  - Short description in Open Sans.
+  - No rounded corners — all sharp edges.
+  - Hover effect: amber border highlight, subtle shadow.
+
+  Card 1: Construcții Rezidențiale
+  - Icon: fa-building (or fa-house-chimney)
+  - Description: Focus on residential building construction — apartment blocks, housing developments, residential complexes in Craiova and Dolj County.
+
+  Card 2: Construcții Nerezidențiale
+  - Icon: fa-city (or fa-industry)
+  - Description: Commercial, industrial, and institutional buildings — warehouses, offices, commercial spaces.
+
+  Card 3: Servicii de Grup
+  - Icon: fa-sitemap (or fa-handshake)
+  - Description: Through subsidiaries Metrolemn SA and Cofraconstruct SRL, the Atlas group offers complementary services in wood processing and specialized construction.
+
+SECTION 4 — CIFRE CARE CONTEAZĂ (Key Numbers Strip):
+- Navy (#1B2A4A) background — creates a strong visual band.
+- CSS geometric pattern overlay (subtle).
+- 3 or 4 stat blocks in a horizontal row (responsive: stacked on mobile).
+- Each stat:
+  - Large number in Merriweather, font-weight 900, amber color.
+  - Label underneath in Open Sans, white.
+  - Separated by vertical dividers (stone grey lines).
+
+  Stats to display:
+  - "34+" / "Ani de activitate" (Years of activity)
+  - "CAEN 4120" / "Construcții clădiri" (Building construction — using the code as a trust signal)
+  - "3" / "Companii în grup" (Companies in group — Atlas + subsidiaries)
+  - "Dolj" / "Prezență regională" (Regional presence)
+
+- Use AOS count-up animation if possible.
+
+SECTION 5 — PREZENȚĂ LOCALĂ (Local Presence / Craiova):
+- Light off-white background.
+- Section header: "Prezență în Craiova" in Merriweather, navy, amber underline.
+- A content block describing Atlas S.A.'s deep roots in Craiova and Dolj County.
+- Mention the address: Strada Sărarilor 7, Craiova.
+- Emphasize the company's role in the local construction ecosystem.
+- Include a CSS-only decorative map pin or location indicator.
+- A bordered block with the full address, formatted in corporate style.
+
+SECTION 6 — CONTACT:
+- White background with navy accents.
+- Section header: "Contact" in Merriweather, navy, amber underline.
+- Corporate-style contact information layout:
+  - Address block with Font Awesome location icon.
+  - Phone number with Font Awesome phone icon — clickable tel: link.
+  - CUI and Registration number displayed as corporate identifiers.
+- Large amber CTA button: "Sunați acum: 0251 543 990" — tel: link, sharp corners, strong border.
+- The tone should be professional and inviting but not casual.
+
+SECTION 7 — FOOTER:
+- Deep navy (#1B2A4A) background.
+- Company name "Atlas S.A." in Merriweather, white.
+- Address, phone, CUI repeated in small text.
+- Copyright line: "© 2024 Atlas S.A. Toate drepturile rezervate."
+- Subtle amber accent line at the very top of the footer.
+- Schema.org structured data (JSON-LD) embedded in the footer or head:
+  - @type: "ConstructionBusiness" (or "GeneralContractor")
+  - name, address, telephone, foundingDate, taxID, geo coordinates
+  - areaServed: Craiova, Dolj
+
+========================================
+CONTENT FILTRATION RULES
+========================================
+1. DO NOT display raw financial data (revenue, profit, loss figures) anywhere in visible page content.
+2. DO NOT mention employee count, especially any decline in workforce numbers.
+3. DO NOT reference any lawsuits, legal disputes, or negative legal information.
+4. DO NOT mention the current minimal activity status of the company.
+5. DO NOT display negative Google reviews or reference complaints.
+6. DO NOT mention "Mathaus" or any association with building materials retail.
+7. KEEP all content positive, professional, and forward-looking.
+8. HUMANIZE the company — present it as an established, experienced construction entity with heritage value.
+9. Frame the 34-year history as a strength and a testament to endurance.
+10. Present subsidiaries as evidence of group strength and diversification, not as the main business.
+11. If referencing the company's track record, use general terms ("experiență vastă", "tradiție în construcții") rather than specific project claims that cannot be verified.
+
+========================================
+SEO + STRUCTURED DATA
+========================================
+1. Title tag: "Atlas S.A. — Construcții Rezidențiale și Nerezidențiale în Craiova | Din 1992"
+2. Meta description: "Atlas S.A. — companie de construcții cu peste 34 de ani de experiență în Craiova, Dolj. Construcții rezidențiale și nerezidențiale. Contactați-ne: 0251 543 990."
+3. Meta keywords: "construcții Craiova, construcții rezidențiale Craiova, construcții nerezidențiale Dolj, Atlas SA Craiova, firma construcții Dolj, CAEN 4120"
+4. Open Graph tags (og:title, og:description, og:type=website, og:locale=ro_RO).
+5. Canonical URL can be omitted (no website exists yet).
+6. HTML lang="ro".
+7. Schema.org JSON-LD structured data:
+   - @type: "GeneralContractor"
+   - name: "Atlas S.A."
+   - address: full structured address
+   - telephone: "+40251543990"
+   - foundingDate: "1992-06-15"
+   - taxID: "2324054"
+   - geo: { latitude: 44.316373, longitude: 23.826444 }
+   - areaServed: { @type: "City", name: "Craiova" }
+   - description: in Romanian
+   - numberOfEmployees: OMIT (do not include)
+
+========================================
+CONVERSION OPTIMIZATION
+========================================
+1. Primary CTA: Phone call — "Sunați acum: 0251 543 990" or "Contactați-ne: 0251 543 990"
+2. Phone number must appear at minimum 3 times on the page: hero, contact section, footer.
+3. All phone instances must be clickable tel: links.
+4. CTA buttons: amber (#D4A24E) background, navy (#1B2A4A) text, sharp corners (no border-radius), strong 2px border, hover darkening effect.
+5. Tone: corporate professional. Not aggressive sales — more "institutional confidence." The CTA should feel like an invitation from a serious company, not a promotional shout.
+6. Sticky header/navbar with company name and phone number visible at all times (optional but recommended).
+7. Smooth scroll navigation between sections.
+
+========================================
+RAW BUSINESS DOSSIER (REFERENCE DATA)
+========================================
+This is the complete raw data collected about this business. Use it to inform content creation but apply the Content Filtration Rules above when generating visible page content.
+
+```
+Original Data:
+==================================================
+Title: Atlas S.A.
+Category: Construction company
+Address: Strada Sărarilor 7, 200516 Craiova
+Complete Address: {"borough":"","street":"Strada Sărarilor 7","city":"Craiova","postal_code":"200516","state":"","country":"RO"}
+Phone: 0251 543 990
+Rating: 5/5 (1 reviews)
+Google Maps Link: https://www.google.com/maps/place/Atlas+S.A./...
+Latitude: 44.316373
+Longitude: 23.826444
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 134 | ****: 37 | ***: 10 | **: 8 | *: 28
+[*____] Catalin TOLEA - delivery issues
+[*****] Lombrea Paul - "fast n easy"
+[*****] Mitica Tudosie - "Foarte mulțumit de produsele achiziționate și transport ieftin"
+
+Company Overview:
+==================================================
+Name: Atlas S.A.
+Legal Form: Joint-Stock Company (S.A.)
+Tax ID: 2324054
+Registration: J16/1984/1992
+Founded: June 15, 1992
+NACE: 4120 - Construction of residential and non-residential buildings
+Registered Capital: 467,998 RON
+Location: Strada Sărarilor 7, Craiova, Dolj County
+Subsidiaries: Metrolemn SA (97.19%), Cofraconstruct SRL (32.05%), West Park SRL (12%)
+##Website_Found: None
+```
+
+========================================
+FINAL INSTRUCTION
+========================================
+Output only the finished index.html file. No commentary. No markdown fences.

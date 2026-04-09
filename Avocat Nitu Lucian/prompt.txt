@@ -1,0 +1,206 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+NON-NEGOTIABLE RULES
+- Read the full RAW BUSINESS DOSSIER below before writing any copy, layout, or section plan.
+- Treat the full dossier as mandatory source material, not as an optional appendix.
+- Use only facts that are clearly supported by the dossier. If a detail is uncertain, leave it out.
+- The dossier may contain noisy or conflicting scraps from scraping. If a detail clearly refers to another company, another phone number, another city, or another business activity, ignore that detail.
+- If the Google category is generic or misleading, prefer the clearer business activity described elsewhere in the dossier.
+- Build a site that feels substantial, specific, and commercially useful. Do not make it feel blank or padded.
+- Prioritize actual useful business information: services, location, phone, booking or appointment flow, hours, amenities, delivery details, neighborhoods, named staff, process details, and credible review-backed strengths when they clearly match the business.
+
+FORBIDDEN COPY AND TONE
+- Never write copy that explains the page itself, the source of the data, or what is publicly verified.
+- Never use phrases like `Pagina pune in fata...`, `Cum decurge colaborarea`, `Ce este verificat public`, `dovada publica`, `feedback public`, `informatiile publice`, `am selectat`, or `verificat public`.
+- Never mention that the site is based on public data, verified data, a source bank, an appendix, research, listings, or selected reviews.
+- Never write filler about clarity, proof, or strategy in the abstract. Speak directly about the business and what the customer can actually do or get.
+- Avoid generic trust-filler. Show useful facts instead.
+
+FAST FACTS
+- Business: Avocat Nitu Lucian
+- Best-fit activity: Criminal justice attorney
+- Location focus: Slatina
+- Primary CTA label suggestion: Solicita consultanta
+- Secondary CTA label suggestion: Vezi locatia
+- Signature section direction: Servicii & Contact
+- Phone: 0745 614 808
+- Address: Strada Mihai Eminescu 38, Slatina
+- Rating summary: 5/5 stars (based on 3 review-uri on CityMaps.ro)
+- Practical convenience clues: Toilet
+
+CONTENT PRIORITIES
+- Build headlines and sections around the real business offer, not around the existence of data.
+- Surface the most decision-making details early: what the business does, where it is, how to contact it, and why someone should choose it now.
+- Mine the dossier for concrete service clues even if they appear in reviews, company-overview notes, amenities, or operational descriptions.
+- If there are real review-backed strengths, translate them into grounded claims and selective quotes only when they clearly fit the target business.
+- If details are sparse, make the design rich and confident but keep the copy factual and concise. Do not invent substance.
+
+SECTION DIRECTION
+- Create a strong hero with a real business promise tied to the city or service area.
+- Include a services or capabilities section using actual service details from the dossier wherever possible.
+- Include a practical reasons-to-choose-us section built from real operational strengths, not abstract marketing talk.
+- Include a process, booking, appointment, or stay-planning section only if you can make it operational and business-specific.
+- Include reviews or rating proof only when it genuinely helps and clearly matches the business.
+- Finish with a contact section that makes phone, address, map, hours, and next-step actions obvious.
+- Add FAQ only if the dossier supports real questions people would ask this business.
+
+TECHNICAL BUILD RULES
+- Build one standalone `index.html` file.
+- Use Tailwind CSS via CDN.
+- Use minimal vanilla JavaScript only where it improves navigation or interaction.
+- Use Font Awesome via CDN for icons.
+- Mobile-first, responsive, and thumb-friendly.
+- No placeholder text, no Lorem Ipsum, no fake metrics, no invented credentials, no fabricated testimonials, no fake galleries.
+- Do not add forms unless the dossier clearly supports a direct email/contact workflow. Phone and map actions are usually better.
+- Do not output the brief or explain your choices. Output only the finished website file.
+
+RAW BUSINESS DOSSIER
+Read this entire block before writing the site. Use it as the primary factual source.
+Original Data:
+==================================================
+Title: Avocat Nitu Lucian
+Category: Criminal justice attorney
+Address: Strada Mihai Eminescu 38, Slatina
+Complete Address: {"borough":"","street":"Strada Mihai Eminescu 38","city":"Slatina","postal_code":"","state":"","country":"RO"}
+Phone: 0745 614 808
+Owner: {"id":"","name":"Avocat Nitu Lucian (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Avocat+Nitu+Lucian/data=!4m7!3m6!1s0x40ad3968658c3a1b:0xb6cc156e7a4b2e1e!8m2!3d44.4292182!4d24.3580012!16s%2Fg%2F11h27yzq_v!19sChIJGzqMZWg5rUARHi5Lem4VzLY?authuser=0&hl=en&rclk=1
+Rating: 5/5 (3 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJGzqMZWg5rUARHi5Lem4VzLY&q=Avocat+Nitu+Lucian&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: [{"id":"amenities","name":"Amenities","options":[{"name":"Toilet","enabled":true}]}]
+Plus Code: C9H5+M6 Slatina
+Place ID: ChIJGzqMZWg5rUARHi5Lem4VzLY
+CID: 13171926574394191390
+Latitude: 44.429218
+Longitude: 24.358001
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=dBQ_R8rZ-6L6jbwHbwqyiw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=293.4926&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 3 | ****: 0 | ***: 1 | **: 0 | *: 3
+
+[*****] florin. ilie
+  "Ok"
+
+[***__] Alleylla Addellaidde
+  "Buna dimineața,mă numesc Luca Adela,am o problema foarte gravă,vecinii din fata casei au intrat abuziv pe terenul meu,și acum vor să toarne ciment in gradina tot pe terenul meu"
+
+[*____] KING OF UNIVERSE
+  "Din nefericire procurorii ce instrumentează dosarele penale sunt incompetenți.... altfel nu s-ar explica cum un măscărici politic ca DARIUS VÎLCOV este încă în libertate ....cel mai probabil acești procurori și-au obținut diploma de studii de la aceiași facultate din Teleorman de unde a obținut și Dragnea diploma ."
+
+[*****] Daniel Iordache
+  "Parchetul de pe lângă judecătoria Slatina"
+
+[*____] Florin Milea
+
+[*****] Calin Ionut
+
+[*____] Daniel Daniel
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Avocat Nitu Lucian is a solo criminal defense law practice operating in Slatina, Olt County, Romania. The practice specializes in criminal law and penal litigation, serving clients in the Olt region and surrounding areas. The attorney operates as an independent legal professional rather than as part of a larger firm structure.
+
+Legal Details & Registration
+Aspect	Information
+Business Name	Avocat Nitu Lucian
+Practice Type	Individual Criminal Law Practice (Avocat Penalist)
+Location	Strada Mihai Eminescu 38, Slatina, Olt County, Romania
+Contact Phone	0745 614 808
+Registration Status	Licensed attorney practicing criminal law in Romania
+Professional Category	Criminal Justice Attorney (Avocat Penalist)
+Bar Association	Presumed registered with Olt County Bar Association
+
+Note: Specific registration date, tax ID, and founding date were not available in public records accessed during this research.
+
+Primary Services & Practice Areas
+
+Avocat Nitu Lucian specializes exclusively in criminal defense and criminal law matters. The practice handles:
+
+Criminal Defense Services
+Criminal litigation representation before courts at all levels
+Defense in criminal investigations during prosecution phase
+Penal procedure assistance throughout the criminal justice process
+Client representation in complex criminal cases
+Client Base
+
+The attorney serves individuals and defendants facing criminal charges within the Olt County jurisdiction and surrounding regions of Romania.
+
+Market Position & Reputation
+Professional Standing
+
+Positive indicators of professional credibility include:
+
+Specialized focus exclusively on criminal law, demonstrating deep expertise in this practice area
+Years of experience in criminal defense, as noted in client testimonials
+Professional reputation as a serious criminal law practitioner with substantial background in the field
+Client Reviews & Testimonials
+
+Rating: 5/5 stars (based on 3 reviews on CityMaps.ro)
+
+Client Feedback:
+
+Quote from client A.F.: "Imi pare un avocat penal serios, cu ani de experienta in spate. Il recomand." (Translation: "He appears to be a serious criminal lawyer with years of experience behind him. I recommend him.")
+
+This testimonial indicates:
+
+Recognition of professionalism and seriousness in legal practice
+Substantial professional experience in criminal law
+Client satisfaction and willingness to recommend services
+Business Amenities & Facilities
+
+According to the provided business information, the office includes:
+
+Toilet facilities available for clients
+Financial Performance & Business Metrics
+
+Data Not Available: Specific financial performance, revenue figures, client volume, or case success rates are not publicly accessible for individual attorney practices in Romania. Solo practitioners typically do not disclose financial information publicly.
+
+Online Presence & Digital Footprint
+Verified Online Presence
+
+The attorney maintains a presence on:
+
+CityMaps.ro - Business listing with reviews and contact information
+Local business directories - Listed as criminal law specialist in Slatina
+Website & Social Media Status
+
+No dedicated website, Facebook page, LinkedIn profile, or official online presence was found during comprehensive search. The practice relies primarily on:
+
+Direct phone contact (0745 614 808)
+Local business directory listings
+Word-of-mouth referrals from satisfied clients
+Market Context: Criminal Law in Romania
+
+Slatina, located in Olt County in southern Romania, is a regional hub where criminal defense services are essential. The legal market in Olt County includes various practitioners offering criminal law services, though specialized criminal defense attorneys like Avocat Nitu Lucian represent a focused segment of the legal profession.
+
+Assessment Summary
+
+Strengths:
+
+Specialized expertise in criminal law with dedicated practice focus
+Positive client reviews with 5/5 rating and recommendations
+Professional experience recognized by clients as substantial
+Local market presence in Slatina with established client base
+Accessible contact via direct phone line
+
+Limitations:
+
+Limited online presence - no website or social media engagement
+Small practice scale - solo practitioner model limits capacity
+Geographic focus - primarily serves Olt County region
+Minimal public information - difficulty in accessing detailed practice metrics or case history
+
+##Website_Found: None
+
+FINAL REMINDER
+Use GPT-5.4, not a mini model. Build a business-first Romanian website that feels human, specific, and commercially useful.

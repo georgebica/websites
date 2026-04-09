@@ -1,0 +1,330 @@
+You are an elite website builder and creative director specializing in high-converting, visually stunning single-page websites for local businesses in Romania.
+Build a complete, production-ready presentation website for "2 Olt Instal S.R.L." — a plumbing, heating, and HVAC installation company based in Slatina, Olt County, Romania, founded in 2001.
+
+================================================================================
+GLOBAL RULES
+================================================================================
+- The ENTIRE website content must be written in Romanian, using correct Romanian diacritics (ă, â, î, ș, ț).
+- Output a single index.html file containing ALL HTML, CSS, and JS inline.
+- Use Tailwind CSS via CDN (https://cdn.tailwindcss.com).
+- Do NOT use any images, photos, or external media files. All visual backgrounds must be CSS-only (gradients, patterns, shapes, SVG inline).
+- Do NOT use any placeholder text such as "Lorem ipsum" or "[insert here]". Every single word must be real, meaningful, relevant content.
+- Do NOT include any forms, contact forms, or input fields. The conversion path is phone call and WhatsApp only.
+- Use Font Awesome icons via CDN (https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css).
+- Use AOS (Animate On Scroll) library via CDN for scroll animations (https://unpkg.com/aos@2.3.1/dist/aos.css and https://unpkg.com/aos@2.3.1/dist/aos.js).
+- Use Google Fonts (Roboto Slab and Inter).
+- The design must be fully mobile-first and responsive across all breakpoints (mobile, tablet, desktop).
+- Do NOT use emojis anywhere in the website.
+- All phone numbers must use tel: links. WhatsApp links must use https://wa.me/40745644001.
+- The website must feel handcrafted, warm, and professional — never generic or template-like.
+
+================================================================================
+BUSINESS DATA
+================================================================================
+Business Name: 2 Olt Instal S.R.L.
+Tagline Suggestion: Instalații de Calitate din 2001
+Industry: Plumbing, Heating, HVAC / Air Conditioning Installations
+Founded: 2001 (23+ years of experience as of 2024)
+Legal Name: 2 OLT INSTAL SRL
+CUI (Tax ID): 13666222
+Registration Number: J20/0100/00006283
+Company Size: Microenterprise
+Primary CAEN Code: 4322 — Instalații sanitare, de încălzire și de aer condiționat
+
+Address: Str. Primăverii 18, Slatina, Județul Olt, România
+Plus Code: C9HF+M9 Slatina
+Latitude: 44.429157
+Longitude: 24.373393
+
+Phone (Landline): 0249 433 211
+Phone (Mobile / WhatsApp): 0745 644 001
+
+Working Hours:
+  Monday:    08:00 – 18:00
+  Tuesday:   08:00 – 18:00
+  Wednesday: 08:00 – 18:00
+  Thursday:  08:00 – 18:00
+  Friday:    08:00 – 18:00
+  Saturday:  09:00 – 14:00
+  Sunday:    Închis
+
+Service Options: Livrare (Delivery)
+Payment Methods: Carduri de credit, Carduri de debit
+Google Rating: 5/5
+Google Maps: https://www.google.com/maps/place/2+Olt+Instal+S.R.L./data=!4m7!3m6!1s0x40ad383430605725:0xa1b4ab1b57ec7a80!8m2!3d44.4291573!4d24.3733935!16s%2Fg%2F1hc1ccvzh!19sChIJJVdgMDQ4rUARgHrsVxurtKE?authuser=0&hl=en&rclk=1
+Place ID: ChIJJVdgMDQ4rUARgHrsVxurtKE
+
+Core Services:
+  1. Instalații sanitare (plumbing installations and repairs)
+  2. Instalații de încălzire centrală (central heating systems)
+  3. Instalații de ventilație și aer condiționat (ventilation and AC)
+  4. Livrare echipamente și materiale (equipment and materials delivery)
+
+================================================================================
+BRAND DNA
+================================================================================
+Brand Personality: INDUSTRIAL WARMTH — The trustworthy craftsman who has been doing this for over two decades. Steady hands, honest work, reliable results. Not flashy, not corporate — just deeply competent people who take pride in what they build.
+
+Tone of Voice:
+  - Warm but professional — like a senior installer explaining things to a homeowner
+  - Confident without being boastful
+  - Practical and direct — no fluff, no jargon overload
+  - Community-rooted — they are from Slatina, they serve Slatina
+  - Reassuring — "we've done this thousands of times, your home is in good hands"
+
+Market Position: The experienced, trusted local installer in Slatina and Olt County. Not the cheapest, not the most expensive — the most reliable. Families and businesses choose them because they know the work will be done right the first time.
+
+Brand Promise: Instalații făcute cu pricepere, din 2001. (Installations done with skill, since 2001.)
+
+================================================================================
+VISUAL DESIGN SYSTEM — "INDUSTRIAL WARMTH"
+================================================================================
+
+COLOR PALETTE:
+  Primary Accent (Terracotta):    #C4673A — warm, earthy, grounding
+  Secondary Accent (Copper):      #B87333 — metallic warmth, craft, quality
+  Dark Copper:                    #8B5E3C — for depth and hover states
+  Background Primary:             #FDF8F3 — warm cream/off-white
+  Background Secondary:           #F5EDE4 — slightly darker warm cream for alternating sections
+  Text Primary:                   #2C2017 — warm dark brown, not pure black
+  Text Secondary:                 #6B5B4F — muted brown for secondary text
+  Accent Light:                   #E8D5C0 — light copper/tan for borders, dividers
+  Pipe Line Color:                #B87333 at 40% opacity — for the decorative pipeline motif
+  White:                          #FFFFFF — for cards and contrast elements
+
+TYPOGRAPHY:
+  Headings: "Roboto Slab", serif — bold, slab-serif, industrial character
+    - H1: 3rem (48px) on desktop, 2rem (32px) on mobile, font-weight 700
+    - H2: 2.25rem (36px) on desktop, 1.5rem (24px) on mobile, font-weight 700
+    - H3: 1.5rem (24px), font-weight 600
+  Body: "Inter", sans-serif — clean, highly legible, modern
+    - Body text: 1rem (16px), font-weight 400, line-height 1.75
+    - Small text: 0.875rem (14px)
+  Import: https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap
+
+VISUAL MOTIFS:
+  1. PIPELINE LINES — Thin horizontal and vertical lines (2px) in copper color connecting sections. These simulate pipes running through the page, connecting content blocks like plumbing connects rooms. Use SVG or CSS borders with small circular "joints" (small circles) at connection points.
+  2. COPPER GRADIENT — Use linear gradients from #B87333 to #C4673A for accent blocks.
+  3. EXPOSED PIPE AESTHETIC — Section dividers should look like pipe segments: a thin copper line with small circles at each end.
+  4. WARM TEXTURES — Use subtle CSS repeating-linear-gradient patterns to simulate brushed metal or warm textile textures in backgrounds.
+  5. ROUNDED CORNERS — Use rounded corners (8px–12px) on cards to soften the industrial feel.
+
+ICON STYLE:
+  - Use Font Awesome solid icons
+  - Icons should be displayed in copper (#B87333) color
+  - Key icons: fa-wrench, fa-fire, fa-snowflake, fa-truck, fa-phone, fa-clock, fa-map-marker-alt, fa-credit-card, fa-tools, fa-shield-alt, fa-calendar-check
+
+ANIMATION GUIDELINES:
+  - AOS fade-up for content blocks (duration 800ms)
+  - AOS fade-right for left-side content, fade-left for right-side content in split layouts
+  - Subtle hover transitions on cards (transform scale 1.02, shadow increase)
+  - Pipeline lines should have a subtle CSS animation — a gentle "flow" pulse using opacity animation
+
+================================================================================
+UNIQUE LAYOUT ARCHITECTURE
+================================================================================
+
+HEADER / NAVIGATION:
+  - Fixed/sticky header with warm cream background (#FDF8F3) and subtle bottom border in copper
+  - Company name "2 Olt Instal S.R.L." in Roboto Slab on the left
+  - Simple navigation links on the right: Acasă, Servicii, Despre Noi, Contact
+  - Mobile: hamburger menu with slide-in panel
+  - A small copper pipe decorative line runs under the header
+
+HERO SECTION — SPLIT SCREEN:
+  - Do NOT use a standard centered hero. Use a SPLIT-SCREEN layout:
+    LEFT HALF (55% width on desktop): Solid warm cream (#FDF8F3) background
+      - Main headline in Roboto Slab: a compelling Romanian headline about reliable installations since 2001
+      - A short subtitle paragraph (2 lines max) in Inter
+      - Two CTA buttons: primary "Sună Acum" (phone link) in terracotta, secondary "WhatsApp" in copper outline
+      - Small trust indicator: "23+ ani de experiență / Slatina, Olt"
+    RIGHT HALF (45% width on desktop): CSS-only decorative panel
+      - A rich gradient background simulating warm copper/brushed metal: use layered gradients combining #B87333, #C4673A, #8B5E3C, and #E8D5C0
+      - Overlay a subtle CSS repeating pattern (thin diagonal lines or dot grid) to simulate metal texture
+      - A large Font Awesome icon (fa-tools or fa-wrench) centered, in semi-transparent white
+  - On mobile: stack vertically, left content on top, right decorative panel becomes a shorter accent band
+
+SECTION CONNECTORS — PIPELINE MOTIF:
+  - Between every major section, insert a decorative SVG or CSS "pipe connector":
+    - A vertical copper line (2px wide, about 60px tall) centered on the page
+    - With a small circle (12px diameter, copper border) at the top and bottom of the line
+    - This creates the visual illusion of pipes running between sections
+  - On alternating sections, add a subtle horizontal pipe line from the vertical connector to the section edge
+
+SERVICES SECTION — ASYMMETRIC MASONRY GRID:
+  - Do NOT use a standard 3-column grid. Use an ASYMMETRIC MASONRY-STYLE layout:
+    - First service card (Instalații Sanitare): spans 2 columns, taller, featured
+    - Second service card (Încălzire Centrală): standard single column
+    - Third service card (Aer Condiționat): standard single column
+    - Fourth service card (Livrare): spans full width but short height, like a banner
+  - Each card has:
+    - A copper-colored top border (4px)
+    - A Font Awesome icon in copper
+    - Service title in Roboto Slab
+    - 2-3 sentence description in Inter
+    - Warm cream background (#FFFFFF) with subtle shadow
+  - On mobile: stack all cards in single column
+
+PROCESS TIMELINE SECTION — "Cum Lucrăm":
+  - A horizontal timeline on desktop, vertical on mobile
+  - Four steps connected by a copper pipe line:
+    1. Evaluare (Evaluation) — fa-clipboard-check — "Venim la fața locului, evaluăm necesarul și discutăm opțiunile."
+    2. Proiect (Project/Planning) — fa-drafting-compass — "Proiectăm soluția tehnică optimă pentru spațiul dumneavoastră."
+    3. Instalare (Installation) — fa-tools — "Echipa noastră realizează instalația cu materiale de calitate."
+    4. Garanție (Warranty) — fa-shield-alt — "Oferim garanție pentru lucrări și suport post-instalare."
+  - The pipe line runs horizontally connecting each step, with circular "joint" nodes at each step
+  - Background: secondary cream (#F5EDE4)
+  - Each step has a number (01, 02, 03, 04) in large faded text behind the icon
+
+WELCOME / ABOUT STORY SECTION:
+  - Write 3-5 genuine sentences about the company's 23+ years of experience
+  - Tone: warm, personal, community-rooted
+  - Example direction (rewrite naturally): "Din 2001, echipa 2 Olt Instal a crescut alături de orașul Slatina. Am instalat sisteme de încălzire în sute de case, am reparat instalații sanitare în apartamente și birouri, și am adus confortul aerului condiționat în spații comerciale din tot județul Olt. Suntem meșteșugari cu experiență — fiecare proiect este tratat cu aceeași atenție și seriozitate, indiferent de dimensiune."
+  - Include a small stat bar: 23+ Ani Experiență | Slatina & Jud. Olt | Echipă Calificată
+
+LOCAL CONTEXT SECTION:
+  - A section that grounds the business in Slatina
+  - Mention Str. Primăverii 18 area, serving Slatina and surrounding Olt County communities
+  - Include a styled Google Maps link button
+  - Working hours displayed in a clean table/grid format
+  - Payment methods and delivery option mentioned with icons
+
+CONTACT CARD SECTION:
+  - A prominent contact section styled like a physical business card
+  - Card with warm background, subtle shadow, rounded corners
+  - Company name, address, both phone numbers (with tel: links)
+  - WhatsApp button prominently displayed
+  - Working hours summary
+  - Google Maps link
+  - CUI displayed subtly at the bottom
+
+FOOTER:
+  - Dark warm brown background (#2C2017) with cream text
+  - Company name and address
+  - Phone numbers
+  - Working hours summary
+  - A decorative copper pipe line at the top of the footer
+  - Copyright notice: "2024 2 Olt Instal S.R.L. Toate drepturile rezervate."
+  - Schema.org LocalBusiness structured data in a <script type="application/ld+json"> tag
+
+STICKY MOBILE CTA:
+  - On mobile only (hidden on desktop), show a sticky bottom bar
+  - Contains two buttons side by side: "Sună" (phone) and "WhatsApp"
+  - Terracotta background, white text, subtle top shadow
+  - Fixed to bottom of viewport, z-index high
+  - Appears after user scrolls past the hero section
+
+================================================================================
+HOMEPAGE SECTIONS ORDER
+================================================================================
+1. Header (sticky navigation)
+2. Hero (split-screen)
+3. Pipe connector
+4. Welcome / About story (with stats bar)
+5. Pipe connector
+6. Services (asymmetric masonry grid)
+7. Pipe connector
+8. Process Timeline (Evaluare → Proiect → Instalare → Garanție)
+9. Pipe connector
+10. Local Context (Slatina, address, hours, payments)
+11. Pipe connector
+12. Contact Card
+13. Footer (with schema markup)
+14. Sticky Mobile CTA (phone + WhatsApp)
+
+================================================================================
+CONTENT FILTRATION RULES
+================================================================================
+- NEVER display raw business data fields (like CUI, CAEN codes, lat/long, Place ID) in the visible page content. These belong only in structured data or HTML comments.
+- HUMANIZE everything. Do not write like a database. Write like a skilled craftsman who is proud of their work.
+- Every heading must sound natural in Romanian, not like a translated template.
+- Service descriptions must be specific to plumbing/heating/AC work — mention real scenarios (e.g., "montaj calorifere," "înlocuire țevi vechi," "instalare split-uri").
+- Avoid generic filler phrases like "echipă de profesioniști dedicați excelenței" — instead use concrete, grounded language.
+- The CUI may appear only in the footer or contact card, styled subtly as legal information.
+- Working hours must be displayed in a readable, well-formatted manner — not as raw JSON.
+- Write all body copy as if the business owner is speaking to a neighbor who asked for a recommendation.
+
+================================================================================
+SEO + STRUCTURED DATA
+================================================================================
+- Title tag: "2 Olt Instal S.R.L. — Instalații Sanitare, Încălzire și Aer Condiționat | Slatina, Olt"
+- Meta description: A compelling 150-160 character Romanian description mentioning key services, location (Slatina), and experience (din 2001).
+- Meta keywords: instalații sanitare Slatina, încălzire centrală Olt, aer condiționat Slatina, instalator Slatina, 2 Olt Instal
+- Open Graph tags (og:title, og:description, og:type=website, og:locale=ro_RO)
+- Canonical URL: leave as relative since no domain is known
+- Language: <html lang="ro">
+- Schema.org LocalBusiness JSON-LD with:
+    @type: "Plumber" (most specific available)
+    name: "2 Olt Instal S.R.L."
+    address: full structured address
+    telephone: "+40249433211"
+    additional phone in contactPoint
+    openingHoursSpecification: full weekly schedule
+    geo: lat/long coordinates
+    priceRange: "$$"
+    paymentAccepted: "Cash, Credit Card, Debit Card"
+    areaServed: "Slatina, Olt"
+    foundingDate: "2001"
+    aggregateRating if applicable
+
+================================================================================
+CONVERSION STRATEGY
+================================================================================
+- PRIMARY conversion: Phone call. Every section should have a subtle path back to calling.
+- SECONDARY conversion: WhatsApp message to 0745 644 001.
+- The hero section must have both CTA buttons above the fold.
+- The sticky mobile CTA ensures the phone/WhatsApp buttons are always one tap away.
+- At least 3 phone CTAs should exist throughout the page (hero, contact card, footer).
+- WhatsApp link format: https://wa.me/40745644001
+- Phone link format: tel:+40249433211 (landline) and tel:+40745644001 (mobile)
+- Use action-oriented button text: "Sună Acum," "Scrie pe WhatsApp," "Contactează-ne"
+- Trust elements near CTAs: years of experience, Google rating, payment methods accepted
+
+================================================================================
+RAW BUSINESS DOSSIER (REFERENCE DATA — DO NOT DISPLAY RAW ON PAGE)
+================================================================================
+
+Original Data:
+==================================================
+Title: 2 Olt Instal S.R.L.
+Category: Store
+Address: Str. Primăverii 18, Slatina
+Complete Address: {"borough":"","street":"Str. Primăverii 18","city":"Slatina","postal_code":"","state":"","country":"RO"}
+Phone: 0249 433 211
+Owner: {"id":"","name":"2 Olt Instal S.R.L. (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/2+Olt+Instal+S.R.L./data=!4m7!3m6!1s0x40ad383430605725:0xa1b4ab1b57ec7a80!8m2!3d44.4291573!4d24.3733935!16s%2Fg%2F1hc1ccvzh!19sChIJJVdgMDQ4rUARgHrsVxurtKE?authuser=0&hl=en&rclk=1
+Rating: 5/5 (1 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJJVdgMDQ4rUARgHrsVxurtKE&q=2+Olt+Instal+S.R.L.&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["8 am–6 pm"],"Monday":["8 am–6 pm"],"Saturday":["9 am–2 pm"],"Sunday":["Closed"],"Thursday":["8 am–6 pm"],"Tuesday":["8 am–6 pm"],"Wednesday":["8 am–6 pm"]}
+About: [{"id":"service_options","name":"Service options","options":[{"name":"Delivery","enabled":true}]},{"id":"payments","name":"Payments","options":[{"name":"Credit cards","enabled":true},{"name":"Debit cards","enabled":true}]}]
+Plus Code: C9HF+M9 Slatina
+Place ID: ChIJJVdgMDQ4rUARgHrsVxurtKE
+CID: 11652126269841898112
+Latitude: 44.429157
+Longitude: 24.373393
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 0 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+Company Overview:
+==================================================
+Company Overview
+Name: 2 Olt Instal S.R.L.
+Category: Store / Installer (plumbing, heating, HVAC)
+Address (listed): Str. Primăverii 18, Slatina, Olt, Romania
+Phone: +40 249 433 211 (additional mobile: +40 745 644 001).
+Service Options reported: Delivery.
+Payments reported: Credit cards, Debit cards.
+Official company name: 2 OLT INSTAL SRL.
+CUI: 13666222.
+Registration number: J20/0100/00006283.
+Founding date: 2001.
+Primary CAEN: 4322 — plumbing, heating, AC installations.
+Company size: microenterprise.
+Core activities: installation and repair works for sanitary installations, central heating systems, ventilation/air-conditioning equipment.
+##Website_Found: None
+
+================================================================================
+
+Output only the finished index.html file. No commentary. No markdown fences.

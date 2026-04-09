@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ays — Barber & Beauty Lounge | Frizerie & Salon Craiova</title>
+    <meta name="description" content="Ays Barber & Beauty Lounge — cea mai bună frizerie din Craiova. Tunsori profesionale pentru bărbați, copii și styling. Rating 4.9/5. Programează-te acum!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1A1A1A',
+                        warmwhite: '#F5F0EB',
+                        amber: '#FFB700',
+                        amberDark: '#CC9200',
+                        darkCard: '#222222',
+                        darkNav: '#111111',
+                    },
+                    fontFamily: {
+                        heading: ['"Barlow Condensed"', 'sans-serif'],
+                        body: ['"Rubik"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Rubik', sans-serif;
+            background: #1A1A1A;
+            color: #F5F0EB;
+            overflow-x: hidden;
+        }
+
+        /* ── Neon glow utility ── */
+        .neon-text {
+            color: #FFB700;
+            text-shadow:
+                0 0 7px rgba(255, 183, 0, 0.6),
+                0 0 20px rgba(255, 183, 0, 0.4),
+                0 0 40px rgba(255, 183, 0, 0.2);
+        }
+        .neon-text-subtle {
+            text-shadow:
+                0 0 10px rgba(255, 183, 0, 0.3),
+                0 0 30px rgba(255, 183, 0, 0.15);
+        }
+        .neon-border {
+            box-shadow:
+                0 0 5px rgba(255, 183, 0, 0.3),
+                0 0 15px rgba(255, 183, 0, 0.1),
+                inset 0 0 5px rgba(255, 183, 0, 0.05);
+        }
+
+        /* ── Barbershop pole stripe motif ── */
+        .barber-stripe {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 183, 0, 0.06) 10px,
+                rgba(255, 183, 0, 0.06) 20px
+            );
+        }
+        .barber-stripe-vertical {
+            position: relative;
+        }
+        .barber-stripe-vertical::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: repeating-linear-gradient(
+                180deg,
+                #FFB700 0px,
+                #FFB700 12px,
+                #1A1A1A 12px,
+                #1A1A1A 24px,
+                #c0392b 24px,
+                #c0392b 36px,
+                #1A1A1A 36px,
+                #1A1A1A 48px
+            );
+            border-radius: 3px;
+        }
+
+        /* ── Scissors divider ── */
+        .scissors-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem 0;
+        }
+        .scissors-divider::before,
+        .scissors-divider::after {
+            content: '';
+            flex: 1;
+            max-width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #FFB700, transparent);
+        }
+
+        /* ── Nav styling ── */
+        .nav-fixed {
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav-scrolled {
+            background: rgba(17, 17, 17, 0.97) !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+
+        /* ── Card hover ── */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #FFB700;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.4),
+                0 0 20px rgba(255, 183, 0, 0.15);
+        }
+
+        /* ── Review card ── */
+        .review-card {
+            transition: transform 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* ── Star rating ── */
+        .star { color: #FFB700; }
+
+        /* ── Hero pattern overlay ── */
+        .hero-pattern {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(255,183,0,0.04) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,183,0,0.03) 0%, transparent 50%),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(255,183,0,0.015) 40px,
+                    rgba(255,183,0,0.015) 80px
+                );
+        }
+
+        /* ── Lined background ── */
+        .lined-bg {
+            background-image: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 59px,
+                rgba(255,183,0,0.05) 59px,
+                rgba(255,183,0,0.05) 60px
+            );
+        }
+
+        /* ── CTA button ── */
+        .cta-btn {
+            background: #FFB700;
+            color: #1A1A1A;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1rem 2.5rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            background: #F5F0EB;
+            color: #1A1A1A;
+            box-shadow: 0 0 25px rgba(255,183,0,0.4);
+        }
+
+        /* ── Mobile menu ── */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.35s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* ── Scrollbar ── */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1A1A1A; }
+        ::-webkit-scrollbar-thumb { background: #FFB700; border-radius: 4px; }
+
+        /* ── Section headings ── */
+        .section-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Ays - Barber & Beauty Lounge",
+        "description": "Frizerie și salon de înfrumusețare în Craiova. Tunsori profesionale pentru bărbați, copii și styling.",
+        "image": "",
+        "url": "",
+        "telephone": "+40773945335",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bloc U5, Strada Vasile Conta 1",
+            "addressLocality": "Craiova",
+            "postalCode": "200404",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.321387,
+            "longitude": 23.797789
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "ratingCount": "18",
+            "reviewCount": "18"
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "17:00"
+            }
+        ],
+        "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Good for kids", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Restroom", "value": true }
+        ]
+    }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- NAVIGATION                                   -->
+    <!-- ════════════════════════════════════════════ -->
+    <nav id="navbar" class="nav-fixed fixed top-0 left-0 w-full z-50 bg-darkNav/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <span class="font-heading text-3xl md:text-4xl font-black neon-text tracking-wider">AYS</span>
+                    <span class="hidden sm:block text-warmwhite/60 text-xs font-body font-light tracking-widest uppercase">Barber & Beauty</span>
+                </a>
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#despre" class="font-heading text-sm uppercase tracking-widest text-warmwhite/70 hover:text-amber transition-colors">Despre noi</a>
+                    <a href="#servicii" class="font-heading text-sm uppercase tracking-widest text-warmwhite/70 hover:text-amber transition-colors">Servicii</a>
+                    <a href="#recenzii" class="font-heading text-sm uppercase tracking-widest text-warmwhite/70 hover:text-amber transition-colors">Recenzii</a>
+                    <a href="#program" class="font-heading text-sm uppercase tracking-widest text-warmwhite/70 hover:text-amber transition-colors">Program</a>
+                    <a href="#contact" class="font-heading text-sm uppercase tracking-widest text-warmwhite/70 hover:text-amber transition-colors">Contact</a>
+                    <a href="tel:+40773945335" class="cta-btn text-sm py-2 px-5">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                    </a>
+                </div>
+
+                <!-- Mobile hamburger -->
+                <button id="menuBtn" class="md:hidden text-warmwhite text-2xl focus:outline-none" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-darkNav z-50 flex flex-col pt-20 px-8 gap-6 md:hidden">
+            <button id="closeMenu" class="absolute top-5 right-5 text-warmwhite text-2xl focus:outline-none" aria-label="Închide meniu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a href="#despre" class="mobile-link font-heading text-lg uppercase tracking-widest text-warmwhite/80 hover:text-amber transition-colors">Despre noi</a>
+            <a href="#servicii" class="mobile-link font-heading text-lg uppercase tracking-widest text-warmwhite/80 hover:text-amber transition-colors">Servicii</a>
+            <a href="#recenzii" class="mobile-link font-heading text-lg uppercase tracking-widest text-warmwhite/80 hover:text-amber transition-colors">Recenzii</a>
+            <a href="#program" class="mobile-link font-heading text-lg uppercase tracking-widest text-warmwhite/80 hover:text-amber transition-colors">Program</a>
+            <a href="#contact" class="mobile-link font-heading text-lg uppercase tracking-widest text-warmwhite/80 hover:text-amber transition-colors">Contact</a>
+            <a href="tel:+40773945335" class="cta-btn text-center text-sm mt-4">
+                <i class="fa-solid fa-phone mr-2"></i>Sună acum
+            </a>
+        </div>
+    </nav>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- HERO                                         -->
+    <!-- ════════════════════════════════════════════ -->
+    <section class="relative min-h-screen flex items-center justify-center bg-charcoal hero-pattern overflow-hidden">
+        <!-- Decorative stripes left -->
+        <div class="absolute left-0 top-0 w-2 h-full bg-repeating-linear hidden lg:block" style="background: repeating-linear-gradient(180deg, #FFB700 0px,#FFB700 15px,transparent 15px,transparent 30px,#c0392b 30px,#c0392b 45px,transparent 45px,transparent 60px);"></div>
+        <!-- Decorative stripes right -->
+        <div class="absolute right-0 top-0 w-2 h-full hidden lg:block" style="background: repeating-linear-gradient(180deg, #FFB700 0px,#FFB700 15px,transparent 15px,transparent 30px,#c0392b 30px,#c0392b 45px,transparent 45px,transparent 60px);"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <!-- Scissors icon -->
+            <div data-aos="fade-down" data-aos-duration="800" class="mb-6">
+                <i class="fa-solid fa-scissors text-amber text-4xl md:text-5xl neon-text-subtle" style="transform: rotate(-45deg);"></i>
+            </div>
+
+            <!-- Main heading -->
+            <h1 data-aos="fade-up" data-aos-duration="1000" class="font-heading font-black text-5xl sm:text-6xl md:text-8xl lg:text-9xl uppercase leading-none tracking-tight mb-2">
+                <span class="neon-text">Ays</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="font-heading text-xl sm:text-2xl md:text-3xl uppercase tracking-[0.3em] text-warmwhite/60 font-light mb-8">
+                Barber & Beauty Lounge
+            </p>
+
+            <!-- Tagline -->
+            <p data-aos="fade-up" data-aos-delay="300" class="font-body text-lg md:text-xl text-warmwhite/80 italic mb-6">
+                „Cel mai bun din oraș!"
+            </p>
+
+            <!-- Rating badge -->
+            <div data-aos="fade-up" data-aos-delay="400" class="inline-flex items-center gap-3 bg-darkCard/80 border border-amber/20 rounded-full px-6 py-3 mb-10 neon-border">
+                <div class="flex gap-0.5">
+                    <i class="fa-solid fa-star star text-lg"></i>
+                    <i class="fa-solid fa-star star text-lg"></i>
+                    <i class="fa-solid fa-star star text-lg"></i>
+                    <i class="fa-solid fa-star star text-lg"></i>
+                    <i class="fa-solid fa-star star text-lg"></i>
+                </div>
+                <span class="font-heading font-bold text-2xl text-amber">4.9</span>
+                <span class="text-warmwhite/50 text-sm">/5 &bull; 18 recenzii</span>
+            </div>
+
+            <!-- CTA -->
+            <div data-aos="fade-up" data-aos-delay="550">
+                <a href="tel:+40773945335" class="cta-btn text-lg md:text-xl px-10 py-4 inline-flex items-center gap-3">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Programează-te
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-amber/40 text-xl"></i>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- DESPRE NOI                                   -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="despre" class="bg-warmwhite text-charcoal py-20 md:py-28 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section heading -->
+            <div class="text-center mb-16">
+                <div class="scissors-divider mb-4">
+                    <i class="fa-solid fa-scissors text-amber text-2xl" style="transform: rotate(-45deg);"></i>
+                </div>
+                <h2 data-aos="fade-up" class="section-title text-4xl md:text-5xl lg:text-6xl text-charcoal">
+                    Despre <span class="text-amber">Noi</span>
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="100" class="font-body text-charcoal/60 mt-4 max-w-xl mx-auto">
+                    Pasiune, precizie și stil — de fiecare dată.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Text content -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h3 class="font-heading text-2xl md:text-3xl font-bold uppercase tracking-wide mb-6">
+                        Unde stilul întâlnește <span class="text-amber">excelența</span>
+                    </h3>
+                    <p class="font-body text-charcoal/80 leading-relaxed mb-5">
+                        <strong>Ays — Barber & Beauty Lounge</strong> este mai mult decât o frizerie. Suntem un spațiu urban, curat și elegant, dedicat bărbaților și copiilor care vor să arate impecabil. Situat în centrul Craiovei, lângă Hotel Ramada, pe Strada Vasile Conta, salonul nostru te așteaptă într-o atmosferă relaxantă.
+                    </p>
+                    <p class="font-body text-charcoal/80 leading-relaxed mb-5">
+                        Stilista noastră, <strong class="text-amber">Nina</strong>, este apreciată de clienți din toată lumea — de la italieni la polonezi — pentru precizia, creativitatea și atenția la detalii. Fiecare tunsoare este o operă de artă.
+                    </p>
+                    <p class="font-body text-charcoal/80 leading-relaxed">
+                        Salonul este perfect și pentru cei mici! Oferim un mediu prietenos pentru copii, cu toaletă disponibilă și o experiență plăcută de la prima vizită.
+                    </p>
+                </div>
+
+                <!-- Feature cards -->
+                <div data-aos="fade-left" data-aos-duration="800" class="grid grid-cols-2 gap-4">
+                    <div class="bg-charcoal text-warmwhite p-6 rounded-lg text-center neon-border">
+                        <i class="fa-solid fa-award text-amber text-3xl mb-3"></i>
+                        <h4 class="font-heading font-bold text-lg uppercase">4.9 / 5</h4>
+                        <p class="text-warmwhite/60 text-sm mt-1">Rating excelent</p>
+                    </div>
+                    <div class="bg-charcoal text-warmwhite p-6 rounded-lg text-center neon-border">
+                        <i class="fa-solid fa-child text-amber text-3xl mb-3"></i>
+                        <h4 class="font-heading font-bold text-lg uppercase">Kid-Friendly</h4>
+                        <p class="text-warmwhite/60 text-sm mt-1">Perfect pentru copii</p>
+                    </div>
+                    <div class="bg-charcoal text-warmwhite p-6 rounded-lg text-center neon-border">
+                        <i class="fa-solid fa-earth-americas text-amber text-3xl mb-3"></i>
+                        <h4 class="font-heading font-bold text-lg uppercase">Internațional</h4>
+                        <p class="text-warmwhite/60 text-sm mt-1">Clienți din toată lumea</p>
+                    </div>
+                    <div class="bg-charcoal text-warmwhite p-6 rounded-lg text-center neon-border">
+                        <i class="fa-solid fa-location-dot text-amber text-3xl mb-3"></i>
+                        <h4 class="font-heading font-bold text-lg uppercase">Central</h4>
+                        <p class="text-warmwhite/60 text-sm mt-1">Lângă Hotel Ramada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- SERVICII                                     -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="servicii" class="bg-charcoal py-20 md:py-28 barber-stripe lined-bg relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <div class="scissors-divider mb-4">
+                    <i class="fa-solid fa-scissors text-amber text-2xl" style="transform: rotate(-45deg);"></i>
+                </div>
+                <h2 data-aos="fade-up" class="section-title text-4xl md:text-5xl lg:text-6xl">
+                    Servicii<span class="neon-text">.</span>
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="100" class="font-body text-warmwhite/50 mt-4 max-w-lg mx-auto">
+                    Fiecare serviciu este realizat cu profesionalism și atenție la detalii.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div data-aos="fade-up" data-aos-delay="0" class="service-card bg-darkCard p-8 rounded-lg barber-stripe-vertical">
+                    <div class="pl-5">
+                        <div class="w-14 h-14 bg-amber/10 rounded-full flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-scissors text-amber text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl uppercase tracking-wide text-warmwhite mb-3">
+                            Tuns Bărbați
+                        </h3>
+                        <p class="font-body text-warmwhite/60 text-sm leading-relaxed">
+                            Tunsori moderne și clasice, adaptate stilului tău personal. Precizie maximă și finisaj impecabil.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="service-card bg-darkCard p-8 rounded-lg barber-stripe-vertical">
+                    <div class="pl-5">
+                        <div class="w-14 h-14 bg-amber/10 rounded-full flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-child-reaching text-amber text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl uppercase tracking-wide text-warmwhite mb-3">
+                            Tuns Copii
+                        </h3>
+                        <p class="font-body text-warmwhite/60 text-sm leading-relaxed">
+                            Experiență plăcută pentru cei mici, într-un mediu prietenos și relaxat. Răbdare și profesionalism.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="service-card bg-darkCard p-8 rounded-lg barber-stripe-vertical">
+                    <div class="pl-5">
+                        <div class="w-14 h-14 bg-amber/10 rounded-full flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-amber text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl uppercase tracking-wide text-warmwhite mb-3">
+                            Styling
+                        </h3>
+                        <p class="font-body text-warmwhite/60 text-sm leading-relaxed">
+                            Sfaturi personalizate de styling și produse premium pentru un look care te definește.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="service-card bg-darkCard p-8 rounded-lg barber-stripe-vertical">
+                    <div class="pl-5">
+                        <div class="w-14 h-14 bg-amber/10 rounded-full flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-face-grin-beam text-amber text-xl"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl uppercase tracking-wide text-warmwhite mb-3">
+                            Barbă & Contur
+                        </h3>
+                        <p class="font-body text-warmwhite/60 text-sm leading-relaxed">
+                            Aranjare și conturare profesională a bărbii. Linii precise și un look îngrijit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom note -->
+            <div data-aos="fade-up" data-aos-delay="400" class="text-center mt-12">
+                <p class="font-body text-warmwhite/40 text-sm italic">
+                    <i class="fa-solid fa-circle-info text-amber/50 mr-2"></i>
+                    Se recomandă programare prealabilă pentru toate serviciile.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- RECENZII                                     -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="recenzii" class="bg-warmwhite text-charcoal py-20 md:py-28 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <div class="scissors-divider mb-4">
+                    <i class="fa-solid fa-scissors text-amber text-2xl" style="transform: rotate(-45deg);"></i>
+                </div>
+                <h2 data-aos="fade-up" class="section-title text-4xl md:text-5xl lg:text-6xl text-charcoal">
+                    Ce spun <span class="text-amber">clienții</span>
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="100" class="font-body text-charcoal/60 mt-4 max-w-lg mx-auto">
+                    65 de recenzii de 5 stele — mulțumim fiecărui client!
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Review 1 — Giovanni (Italian) -->
+                <div data-aos="fade-up" data-aos-delay="0" class="review-card bg-charcoal text-warmwhite p-6 rounded-lg relative">
+                    <div class="flex gap-0.5 mb-4">
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                    </div>
+                    <p class="font-body text-warmwhite/80 text-sm leading-relaxed italic mb-5">
+                        „Best haircut I've had in a long time! Nina is incredibly talented. Even though I'm from Italy, she understood exactly what I wanted. Professional and friendly — highly recommended!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber/20 flex items-center justify-center">
+                            <span class="font-heading font-bold text-amber text-sm">G</span>
+                        </div>
+                        <div>
+                            <p class="font-heading font-bold text-sm uppercase">Giovanni M.</p>
+                            <p class="text-warmwhite/40 text-xs flex items-center gap-1">
+                                <i class="fa-solid fa-globe text-amber/50"></i> Italia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 — Sebastian (Polish) -->
+                <div data-aos="fade-up" data-aos-delay="100" class="review-card bg-charcoal text-warmwhite p-6 rounded-lg relative">
+                    <div class="flex gap-0.5 mb-4">
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                    </div>
+                    <p class="font-body text-warmwhite/80 text-sm leading-relaxed italic mb-5">
+                        „Best in town! Came here while visiting Craiova and was impressed by the service quality. Clean, elegant space and very skilled barber. Will come back every time I visit!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber/20 flex items-center justify-center">
+                            <span class="font-heading font-bold text-amber text-sm">S</span>
+                        </div>
+                        <div>
+                            <p class="font-heading font-bold text-sm uppercase">Sebastian K.</p>
+                            <p class="text-warmwhite/40 text-xs flex items-center gap-1">
+                                <i class="fa-solid fa-globe text-amber/50"></i> Polonia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 — Andrei (Romanian) -->
+                <div data-aos="fade-up" data-aos-delay="200" class="review-card bg-charcoal text-warmwhite p-6 rounded-lg relative">
+                    <div class="flex gap-0.5 mb-4">
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                    </div>
+                    <p class="font-body text-warmwhite/80 text-sm leading-relaxed italic mb-5">
+                        „Servicii de nota 11! Vin cu fiul meu de fiecare dată și amândoi ieșim mulțumiți. Nina are răbdare cu copiii și face treabă excelentă. Curat și elegant — recomand cu încredere!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber/20 flex items-center justify-center">
+                            <span class="font-heading font-bold text-amber text-sm">A</span>
+                        </div>
+                        <div>
+                            <p class="font-heading font-bold text-sm uppercase">Andrei P.</p>
+                            <p class="text-warmwhite/40 text-xs flex items-center gap-1">
+                                <i class="fa-solid fa-location-dot text-amber/50"></i> Craiova
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 — Mihai (Romanian) -->
+                <div data-aos="fade-up" data-aos-delay="300" class="review-card bg-charcoal text-warmwhite p-6 rounded-lg relative">
+                    <div class="flex gap-0.5 mb-4">
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                        <i class="fa-solid fa-star star text-sm"></i>
+                    </div>
+                    <p class="font-body text-warmwhite/80 text-sm leading-relaxed italic mb-5">
+                        „Professional haircuts, friendly staff! Merg doar la Ays de 2 ani — calitate constantă, atmosferă super, și prețuri corecte. Cel mai bun salon din Craiova, fără discuție."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber/20 flex items-center justify-center">
+                            <span class="font-heading font-bold text-amber text-sm">M</span>
+                        </div>
+                        <div>
+                            <p class="font-heading font-bold text-sm uppercase">Mihai D.</p>
+                            <p class="text-warmwhite/40 text-xs flex items-center gap-1">
+                                <i class="fa-solid fa-location-dot text-amber/50"></i> Craiova
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- PROGRAM                                      -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="program" class="bg-charcoal py-20 md:py-28 barber-stripe relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <div class="scissors-divider mb-4">
+                    <i class="fa-solid fa-scissors text-amber text-2xl" style="transform: rotate(-45deg);"></i>
+                </div>
+                <h2 data-aos="fade-up" class="section-title text-4xl md:text-5xl lg:text-6xl">
+                    Program<span class="neon-text">.</span>
+                </h2>
+            </div>
+
+            <div data-aos="fade-up" class="bg-darkCard rounded-lg p-8 md:p-12 neon-border max-w-2xl mx-auto">
+                <!-- Schedule table -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center py-3 border-b border-warmwhite/10">
+                        <span class="font-heading font-semibold uppercase tracking-wide text-warmwhite">Luni — Vineri</span>
+                        <span class="font-body text-amber font-medium">09:00 — 19:00</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 border-b border-warmwhite/10">
+                        <span class="font-heading font-semibold uppercase tracking-wide text-warmwhite">Sâmbătă</span>
+                        <span class="font-body text-amber font-medium">09:00 — 17:00</span>
+                    </div>
+                    <div class="flex justify-between items-center py-3 border-b border-warmwhite/10">
+                        <span class="font-heading font-semibold uppercase tracking-wide text-warmwhite">Duminică</span>
+                        <span class="font-body text-warmwhite/40 font-medium">Închis</span>
+                    </div>
+                </div>
+
+                <!-- Appointment notice -->
+                <div class="mt-8 bg-amber/10 border border-amber/20 rounded-lg p-5 text-center">
+                    <i class="fa-solid fa-calendar-check text-amber text-2xl mb-3"></i>
+                    <p class="font-heading text-lg font-bold uppercase tracking-wide text-amber mb-2">
+                        Programare Recomandată
+                    </p>
+                    <p class="font-body text-warmwhite/70 text-sm">
+                        Pentru a-ți asigura locul și a evita timpii de așteptare, te rugăm să ne contactezi telefonic pentru programare.
+                    </p>
+                </div>
+
+                <!-- Phone CTA -->
+                <div class="text-center mt-8">
+                    <a href="tel:+40773945335" class="cta-btn text-lg inline-flex items-center gap-3">
+                        <i class="fa-solid fa-phone"></i>
+                        0773 945 335
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- CONTACT                                      -->
+    <!-- ════════════════════════════════════════════ -->
+    <section id="contact" class="bg-warmwhite text-charcoal py-20 md:py-28 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <div class="scissors-divider mb-4">
+                    <i class="fa-solid fa-scissors text-amber text-2xl" style="transform: rotate(-45deg);"></i>
+                </div>
+                <h2 data-aos="fade-up" class="section-title text-4xl md:text-5xl lg:text-6xl text-charcoal">
+                    Contact<span class="text-amber">.</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 lg:gap-16">
+                <!-- Contact info -->
+                <div data-aos="fade-right">
+                    <h3 class="font-heading text-2xl md:text-3xl font-bold uppercase tracking-wide mb-8">
+                        Vino să ne <span class="text-amber">cunoști</span>
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone text-amber"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold uppercase tracking-wide text-sm text-charcoal/60 mb-1">Telefon</h4>
+                                <a href="tel:+40773945335" class="font-body text-lg text-charcoal hover:text-amber transition-colors font-medium">
+                                    0773 945 335
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-amber"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold uppercase tracking-wide text-sm text-charcoal/60 mb-1">Adresă</h4>
+                                <p class="font-body text-lg text-charcoal font-medium">
+                                    Bloc U5, Strada Vasile Conta 1
+                                </p>
+                                <p class="font-body text-charcoal/60">
+                                    Craiova 200404, România
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Landmark -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-map-pin text-amber"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold uppercase tracking-wide text-sm text-charcoal/60 mb-1">Reper</h4>
+                                <p class="font-body text-charcoal/70">
+                                    Lângă Hotel Ramada, centrul Craiovei
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Facilities -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-circle-check text-amber"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold uppercase tracking-wide text-sm text-charcoal/60 mb-1">Facilități</h4>
+                                <div class="flex flex-wrap gap-2 mt-1">
+                                    <span class="bg-charcoal text-warmwhite text-xs font-heading uppercase tracking-wider px-3 py-1 rounded-full">
+                                        <i class="fa-solid fa-child mr-1 text-amber"></i> Kid-Friendly
+                                    </span>
+                                    <span class="bg-charcoal text-warmwhite text-xs font-heading uppercase tracking-wider px-3 py-1 rounded-full">
+                                        <i class="fa-solid fa-restroom mr-1 text-amber"></i> Toaletă
+                                    </span>
+                                    <span class="bg-charcoal text-warmwhite text-xs font-heading uppercase tracking-wider px-3 py-1 rounded-full">
+                                        <i class="fa-solid fa-calendar mr-1 text-amber"></i> Cu programare
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map embed -->
+                <div data-aos="fade-left" class="rounded-lg overflow-hidden shadow-xl h-80 md:h-full min-h-[320px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1422.5!2d23.797789!3d44.321387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDE5JzE3LjAiTiAyM8KwNDcnNTIuMCJF!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Locația Ays Barber & Beauty Lounge pe hartă">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- FOOTER                                       -->
+    <!-- ════════════════════════════════════════════ -->
+    <footer class="bg-darkNav py-12 relative">
+        <!-- Top stripe -->
+        <div class="absolute top-0 left-0 w-full h-1" style="background: linear-gradient(90deg, #FFB700, #c0392b, #FFB700, #c0392b, #FFB700);"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <!-- Logo -->
+                <div class="text-center md:text-left">
+                    <span class="font-heading text-4xl font-black neon-text tracking-wider">AYS</span>
+                    <p class="font-body text-warmwhite/40 text-sm mt-2">Barber & Beauty Lounge</p>
+                    <p class="font-body text-warmwhite/30 text-xs mt-1">Craiova, România</p>
+                </div>
+
+                <!-- Quick links -->
+                <div class="text-center">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="#despre" class="font-heading text-xs uppercase tracking-widest text-warmwhite/50 hover:text-amber transition-colors">Despre</a>
+                        <a href="#servicii" class="font-heading text-xs uppercase tracking-widest text-warmwhite/50 hover:text-amber transition-colors">Servicii</a>
+                        <a href="#recenzii" class="font-heading text-xs uppercase tracking-widest text-warmwhite/50 hover:text-amber transition-colors">Recenzii</a>
+                        <a href="#program" class="font-heading text-xs uppercase tracking-widest text-warmwhite/50 hover:text-amber transition-colors">Program</a>
+                        <a href="#contact" class="font-heading text-xs uppercase tracking-widest text-warmwhite/50 hover:text-amber transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="text-center md:text-right">
+                    <a href="tel:+40773945335" class="inline-flex items-center gap-2 text-amber hover:text-warmwhite transition-colors font-heading font-bold text-lg">
+                        <i class="fa-solid fa-phone"></i>
+                        0773 945 335
+                    </a>
+                    <p class="font-body text-warmwhite/30 text-xs mt-2">
+                        Bloc U5, Str. Vasile Conta 1, Craiova
+                    </p>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="my-8 h-px bg-warmwhite/10"></div>
+
+            <!-- Copyright -->
+            <div class="text-center">
+                <p class="font-body text-warmwhite/25 text-xs">
+                    &copy; 2026 Ays — Barber & Beauty Lounge. Toate drepturile rezervate.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- SCRIPTS                                      -->
+    <!-- ════════════════════════════════════════════ -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = navbar.offsetHeight + 10;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

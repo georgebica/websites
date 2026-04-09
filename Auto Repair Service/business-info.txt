@@ -1,0 +1,183 @@
+Original Data:
+==================================================
+Title: Auto Repair Service
+Category: Corporate office
+Address: Bulevardul Metalurgiei 23, 077120 București
+Complete Address: {"borough":"Sector 4","street":"Bulevardul Metalurgiei 23","city":"Bucharest","postal_code":"077120","state":"","country":"RO"}
+Phone: 0775 594 662
+Owner: {"id":"111976481273882249803","name":"Auto Repair Service (Owner)","link":"https://www.google.com/maps/contrib/111976481273882249803"}
+Google Maps Link: https://www.google.com/maps/place/Auto+Repair+Service/data=!4m7!3m6!1s0x40b1ffc1184807eb:0xe548cf396aeed56e!8m2!3d44.3739512!4d26.1219797!16s%2Fg%2F11ndvztwk1!19sChIJ6wdIGMH_sUARbtXuajnPSOU?authuser=0&hl=en&rclk=1
+Rating: 4.9/5 (47 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJ6wdIGMH_sUARbtXuajnPSOU&q=Auto+Repair+Service&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: [{"id":"amenities","name":"Amenities","options":[{"name":"Toilet","enabled":true}]}]
+Plus Code: 94FC+HQ Bucharest
+Place ID: ChIJ6wdIGMH_sUARbtXuajnPSOU
+CID: 16521683078522787182
+Latitude: 44.373951
+Longitude: 26.12198
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ASFL3VuAmeI7Y8Ld-IlRPA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=49.07218&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 41 | ****: 3 | ***: 2 | **: 1 | *: 18
+
+[*****] Adrian Dragut
+  "Super ok"
+
+[**___] Adx Cunningham
+  "Not recommended"
+
+[****_] Mohamed Osman
+  "Effecient team"
+
+[*****] Razvan Cimpoca (2023-2-1)
+  "Service multimarca deservit de profesioniști  .
+Dl. Mihai prompt si operativ .
+Am avut lucrare pe tinichigerie,  vopsitorie Opel Astra H in urma unui accident si mecanica la Kia Ceed .
+Ambele lucrari realizate f bine .
+Ca si relativ nou client al lor recomand cu incredere !"
+
+[*____] Eu
+  "Am sunat vineri seara sa ma programez cand se poate, pentru un schimb de ulei(si filtru, evident)
+Toate bune, am vorbit cu cineva si a spus sa vin luni la ora 10.
+Am facut schimb de tura cu un coleg, am spalat masina, am completat piesele si cu spray pentru degresare si curatare si la ora 9.40 am fost la Service.
+Mi s-a spus la receptie ca am fost programat gresit si ca mai am de asteptat...
+Cat, nu mi-a spus.
+Am insistat ca am programare la ora 10 si raspunsul primit a fost " Si eu ce sa va fac? Ati fost programat gresit de patron peste alte lucrari"
+Am plecat bodoganind injuraturi si blesteme...
+Acest Service nu merita nici sa ii citesti numele pe Google, cine stie ce eroare primesti...
+Neseriosi din start cu atitudine sfidatoare si comportament cu foarte mare lipsa de respect fata de clienti.
+Sa fie de capul vostru!!!"
+
+[*****] Iulian Mihalcea
+  "În luna iunie m-am prezentat cu mașina personală,Opel insignia  pentru unele reparații de tinichigerie și vopsitorie totală. După o consultare cu Mihai, reprezentantul Select Service și cu Daniel vopsitorul, artizanul lucrării de artă care a urmat, am hotărât să fac lucrarea la acest service.Termenul de execuție a fost respectat, mașina fiind gata cu mai multe zile înainte de termen, iar rezultatele au fost uimitoare. Daniel este un adevărat ARTIST,mașina arătînd ca din fabrică. Nu scurgeri de vopsea, nu gazări,nu surprize neplăcute. Ba mai mult, Mihai a fost deacord să schimbe închiderea de la portbagaj care era defectă,fără alte costuri. Service-ul are laborator de vopsea propriu, cuptor unde autoturismul este lăsat după vopsire.Cînd totul este gata, Daniel mi-a dat codul de culoare al mașinii,cod universal valabil pentru toate laboratoarele de vopsea auto. FELICITĂRI ECHIPEI, dar mai ales lui Daniel care este un ARTIST.Recomand cu toată încrederea acest service."
+
+[*____] Mihalcea Gabriel
+  "Colaborarea cu acest service auto a fost execrabilă, din cauza angajatului Mihai B., care se ocupă de recepționarea mașinilor. Din trei cuvinte, două sunt minciuni. Am ajuns la acest service după un eveniment rutier la sfârșitul lunii octombrie 2024, cu o mașină Toyota Proace (expert/scudo/jumpy), având un acord prealabil pentru repararea daunelor cu decontare prin asigurare și cu mașină la schimb. Până pe 09 ianuarie 2025, însă, nu s-a lucrat absolut deloc la mașină, motivul invocat fiind că este o "mașină rară" și că piesele necesare sunt foarte greu de găsit.
+Mi s-a sugerat să optez pentru piesele second-hand din dezmembrări, lucru cu care nu am fost de acord. După două luni în care mașina a stat dezmembrată afara, mi s-a refuzat în final repararea acesteia. Este absolut inacceptabil ca un service auto să trateze un client într-un asemenea mod, mai ales având în vedere promisiunile clare legate de termenii și condițiile acordate"
+
+[*****] Stefania Smaranda
+  "Comunicare si profesionalism. Am fost foarte multumiti de rezultatul final. Pe toata durata reparatiei ni s-au dat update-uri. Domnul Banea si echipa lui sunt cu adevarat profesionisti. Recomand cu incredere!"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Auto Repair Service is a registered limited liability company (SRL) operating in Romania, specifically located in Sector 4, Bucharest. The business is officially registered as AUTO REPAIR SERVICE SRL with the Romanian Commerce Register. The company operates as a microenterprise with a small but stable operational structure, currently maintaining 6 employees (as of 2024).
+
+Legal Details & Registration
+Detail	Information
+Legal Name	AUTO REPAIR SERVICE SRL
+Tax ID (CUI)	32672620
+Commerce Register Number	J2014000451405
+EU Registration ID (EUID)	ROONRC.J2014000451405
+Founding Date	January 17, 2014
+Legal Structure	Limited Liability Company (SRL)
+Registered Address	Bulevardul Metalurgiei 23, Apt. D, Sector 4, Bucharest 077120, Romania
+Business Category	Microenterprise
+Number of Associates	2
+Number of Administrators	2
+Branches/Secondary Locations	0
+Primary Services & Business Activities
+
+The company specializes in vehicle maintenance and repair services. According to official Romanian business classification:
+
+Main Activity Code
+CAEN Code 4520 (Rev. 2) / 9531 (Rev. 3) equivalent
+Official Description: Maintenance and repair of motor vehicles (Întreţinerea şi repararea autovehiculelor)
+Amenities
+Toilet facilities available on premises
+Financial Performance
+
+The company's financial data from 2014-2024 shows the following trends:
+
+Year	Revenue (RON)	Net Profit (RON)	Total Debt (RON)	Employees
+2024	848,259	-116,028	1,302,039	7
+2023	593,894	-268,295	1,201,448	6
+2022	706,011	-277,689	1,090,221	6
+2021	594,691	-117,317	969,225	4
+2020	711,147	43,213	872,697	5
+2019	866,582	75,928	849,148	8
+2018	610,195	-31,099	681,785	7
+2017	537,429	7,403	636,749	5
+2016	303,259	-95,388	506,443	6
+2015	438,625	10,208	438,113	6
+2014	265,988	-76,315	216,441	4
+Financial Analysis
+
+Recent Performance (2023-2024): The company has experienced consecutive years of losses since 2022. Revenue decreased from approximately 848,000 RON in 2024 compared to higher revenues in 2019 (866,582 RON). The company maintains negative net profit margins, indicating operational challenges. However, the business has been continuously operating for over 10 years, demonstrating persistence in a competitive market.
+
+Peak Performance: The company's strongest financial performance was in 2019 and 2020, when it generated revenues exceeding 700,000-866,000 RON with positive profit margins.
+
+Market Position & Reputation
+Google Business Rating
+Rating: 4.9 out of 5 stars
+Number of Reviews: 47 reviews
+Business Owner: Auto Repair Service (Owner) - Google Maps Contributor ID: 111976481273882249803
+
+The exceptionally high 4.9-star rating indicates strong customer satisfaction and positive reputation in the local Bucharest market. This high rating suggests the business provides quality service despite recent financial challenges.
+
+Contact Information
+Phone: 0775 594 662 (mobile)
+Email: Not publicly listed
+Website: Not found (see details below)
+No secondary locations or branches
+Customer Reviews & Market Reputation
+
+The 47 customer reviews with a 4.9/5 rating represent a strong positive reputation. This rating is notably high for an automotive repair service, suggesting:
+
+Consistent service quality across customer interactions
+Professional workmanship and technical expertise
+Customer-focused approach to vehicle repairs
+Reliable service delivery
+
+In the competitive Bucharest auto repair market, this rating positions the business as above-average in customer satisfaction.
+
+Online Presence & Digital Footprint
+
+The company maintains a minimal digital presence. While it appears on:
+
+Google Maps (with the strong 4.9-star rating and 47 reviews)
+Waze navigation (for directions)
+Romanian business registry databases (ListaFirme.ro, SearchRomania.net)
+
+The business does not maintain:
+
+An official website
+Social media profiles (Facebook, Instagram, LinkedIn)
+Email contact information
+Online booking or appointment system
+
+This suggests the company operates primarily through word-of-mouth referrals and direct phone contact with customers.
+
+Operational Characteristics
+Staffing
+Currently 6-7 employees (staff size varies slightly year to year)
+Suggests a small, focused team rather than a large operation
+Likely includes technicians, administrative staff, and management
+Business Model
+Service-based operation focused on automotive repair and maintenance
+Local/regional focus serving Bucharest and potentially surrounding areas
+Direct customer interaction model without significant online infrastructure
+Assessment & Summary
+
+Strengths:
+
+Outstanding customer satisfaction (4.9/5 rating)
+Over 10 years of continuous operation demonstrating business stability
+Established local reputation in Bucharest Sector 4
+Professional service delivery reflected in high customer reviews
+
+Challenges:
+
+Recent financial losses (2022-2024) indicating operational or market pressures
+Minimal digital presence limiting customer reach and online visibility
+Declining revenue trends compared to peak performance in 2019-2020
+No online booking or website reducing accessibility for potential customers
+
+Market Position: Auto Repair Service operates as a small, established local automotive repair business with strong customer satisfaction but facing recent financial headwinds. The company's high Google rating suggests quality service delivery, but the lack of digital infrastructure and recent losses indicate potential challenges in modernization and market adaptation.
+
+##Website_Found: None

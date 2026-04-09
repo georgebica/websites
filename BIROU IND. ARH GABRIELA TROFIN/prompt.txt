@@ -1,0 +1,228 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+NON-NEGOTIABLE RULES
+- Read the full RAW BUSINESS DOSSIER below before writing any copy, layout, or section plan.
+- Treat the full dossier as mandatory source material, not as an optional appendix.
+- Use only facts that are clearly supported by the dossier. If a detail is uncertain, leave it out.
+- The dossier may contain noisy or conflicting scraps from scraping. If a detail clearly refers to another company, another phone number, another city, or another business activity, ignore that detail.
+- If the Google category is generic or misleading, prefer the clearer business activity described elsewhere in the dossier.
+- Build a site that feels substantial, specific, and commercially useful. Do not make it feel blank or padded.
+- Prioritize actual useful business information: services, location, phone, booking or appointment flow, hours, amenities, delivery details, neighborhoods, named staff, process details, and credible review-backed strengths when they clearly match the business.
+
+FORBIDDEN COPY AND TONE
+- Never write copy that explains the page itself, the source of the data, or what is publicly verified.
+- Never use phrases like `Pagina pune in fata...`, `Cum decurge colaborarea`, `Ce este verificat public`, `dovada publica`, `feedback public`, `informatiile publice`, `am selectat`, or `verificat public`.
+- Never mention that the site is based on public data, verified data, a source bank, an appendix, research, listings, or selected reviews.
+- Never write filler about clarity, proof, or strategy in the abstract. Speak directly about the business and what the customer can actually do or get.
+- Avoid generic trust-filler. Show useful facts instead.
+
+FAST FACTS
+- Business: BIROU IND. ARH GABRIELA TROFIN
+- Best-fit activity: Architecture firm
+- Location focus: Slatina
+- Primary CTA label suggestion: Discuta proiectul
+- Secondary CTA label suggestion: Vezi locatia
+- Signature section direction: Proiecte & Proces
+- Phone: 0767 924 480
+- Address: BL.FA17, Strada Unirii, SC.4,AP 13,ET 3, 230017 Slatina
+- Practical convenience clues: Online appointments, On-site services, Appointment required
+
+CONTENT PRIORITIES
+- Build headlines and sections around the real business offer, not around the existence of data.
+- Surface the most decision-making details early: what the business does, where it is, how to contact it, and why someone should choose it now.
+- Mine the dossier for concrete service clues even if they appear in reviews, company-overview notes, amenities, or operational descriptions.
+- If there are real review-backed strengths, translate them into grounded claims and selective quotes only when they clearly fit the target business.
+- If details are sparse, make the design rich and confident but keep the copy factual and concise. Do not invent substance.
+
+SECTION DIRECTION
+- Create a strong hero with a real business promise tied to the city or service area.
+- Include a services or capabilities section using actual service details from the dossier wherever possible.
+- Include a practical reasons-to-choose-us section built from real operational strengths, not abstract marketing talk.
+- Include a process, booking, appointment, or stay-planning section only if you can make it operational and business-specific.
+- Include reviews or rating proof only when it genuinely helps and clearly matches the business.
+- Finish with a contact section that makes phone, address, map, hours, and next-step actions obvious.
+- Add FAQ only if the dossier supports real questions people would ask this business.
+
+TECHNICAL BUILD RULES
+- Build one standalone `index.html` file.
+- Use Tailwind CSS via CDN.
+- Use minimal vanilla JavaScript only where it improves navigation or interaction.
+- Use Font Awesome via CDN for icons.
+- Mobile-first, responsive, and thumb-friendly.
+- No placeholder text, no Lorem Ipsum, no fake metrics, no invented credentials, no fabricated testimonials, no fake galleries.
+- Do not add forms unless the dossier clearly supports a direct email/contact workflow. Phone and map actions are usually better.
+- Do not output the brief or explain your choices. Output only the finished website file.
+
+RAW BUSINESS DOSSIER
+Read this entire block before writing the site. Use it as the primary factual source.
+Original Data:
+==================================================
+Title: BIROU IND. ARH GABRIELA TROFIN
+Category: Architecture firm
+Address: BL.FA17, Strada Unirii, SC.4,AP 13,ET 3, 230017 Slatina
+Complete Address: {"borough":"","street":"BL.FA17, Strada Unirii, SC.4,AP 13,ET 3","city":"Slatina","postal_code":"230017","state":"","country":"RO"}
+Phone: 0767 924 480
+Owner: {"id":"115503035088219014558","name":"BIROU IND. ARH GABRIELA TROFIN (Owner)","link":"https://www.google.com/maps/contrib/115503035088219014558"}
+Google Maps Link: https://www.google.com/maps/place/BIROU+IND.+ARH+GABRIELA+TROFIN/data=!4m7!3m6!1s0x40ad395c861a3667:0xfc7b5125faedac63!8m2!3d44.4296352!4d24.3720981!16s%2Fg%2F11j6zfhr3n!19sChIJZzYahlw5rUARY6zt-iVRe_w?authuser=0&hl=en&rclk=1
+Open Hours: {"Friday":["9:30 am–5 pm"],"Monday":["9:30 am–5 pm"],"Saturday":["Closed"],"Sunday":["Closed"],"Thursday":["9:30 am–5 pm"],"Tuesday":["9:30 am–5 pm"],"Wednesday":["9:30 am–5 pm"]}
+About: [{"id":"service_options","name":"Service options","options":[{"name":"Online appointments","enabled":true},{"name":"On-site services","enabled":true}]},{"id":"planning","name":"Planning","options":[{"name":"Appointment required","enabled":true}]}]
+Plus Code: C9HC+VR Slatina
+Place ID: ChIJZzYahlw5rUARY6zt-iVRe_w
+CID: 18193224343258770531
+Latitude: 44.429635
+Longitude: 24.372098
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ibLFeD0owbHAl1o-VUut1g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=152.95633&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 0 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Birou Ind. Arh Gabriela Trofin is an individual architecture bureau (sole proprietorship) operating in Slatina, Olt County, Romania. The firm is owned and operated by Gabriela Trofin, a registered architect. The business operates as an independent architectural practice specializing in residential and commercial design services.
+
+Location & Contact Information
+Detail	Information
+Full Address	Bl. Fa17, Strada Unirii, Sc. 4, Ap. 13, Et. 3, Slatina, 230017, Romania
+Phone	0767 924 480
+City	Slatina (Olt County)
+Postal Code	230017
+Country	Romania
+Legal & Registration Details
+Business Structure
+
+Birou Ind. Arh Gabriela Trofin operates as a "Birou Individual de Arhitectură" (Individual Architecture Bureau), which is a sole proprietorship structure in Romania. This is a common legal form for independent architects and urban planners in Romania.
+
+Professional Registration
+
+According to the Romanian official records (Tabloul Teritorial al Arhitecilor - TNA), Gabriela Trofin is registered as a professional architect with registration number 6565 in the Bucharest territorial table. This registration indicates she is a qualified, licensed professional authorized to practice architecture in Romania.
+
+Market Presence Duration
+
+The firm has been operating for more than 10 years in the Slatina market, establishing itself as an established service provider in the region.
+
+Primary Services & Products
+
+The architecture bureau offers a comprehensive range of architectural and design services:
+
+Main Services Offered
+New House Design (Proiectare casă nouă)
+Interior Design (Design interior)
+Design of Other Constructions (Proiectare alte construcții)
+Redesign & Renovation (Reproiectare construcție existentă, including extensions and restoration)
+Urban Planning Documentation (Plan urbanistic - PUD/PUZ)
+Installation Design (Proiectare instalații)
+Service Delivery Options
+
+According to the provided information, the firm offers:
+
+Online Appointments ✓ Available
+On-Site Services ✓ Available
+Appointment Required ✓ Yes
+Pricing & Financial Information
+Service	Price Range (RON/m²)
+Complete House Project	50 – 190 RON/m²
+Interior Design Project	150 – 310 RON/m²
+Installation Design	6.30 – 11 RON/m²
+Estimated Project Costs
+
+Based on market data in the Slatina region:
+
+Small house project (80 m²): approximately 12,000 RON
+Medium house project (120 m²): approximately 18,000 RON
+Larger residential project (180 m²): approximately 18,000+ RON
+
+Note: These are market averages; actual costs depend on project complexity and scope.
+
+Market Position & Reputation
+Customer Reviews
+
+The firm has received positive customer feedback:
+
+Metric	Rating
+Overall Rating	5.0/5.0 ⭐
+Number of Reviews	1 verified review
+Projects Completed	2+ projects with 5.0 average rating
+Customer Testimonial
+
+Andrana N. (3 years ago):
+
+"Sunt foarte multumita de GABRIELA TROFIN - BIROU INDIVIDUAL DE ARHITECTURA. Are foarte multa rabdare si ma ajuta foarte mult."
+
+Translation: "I am very satisfied with Gabriela Trofin - Individual Architecture Bureau. She has a lot of patience and helps me a lot."
+
+Market Standing
+Ranked among top architects in Slatina (appears in top 20 architects list on Necesit.ro)
+Established reputation with 10+ years of market presence
+Specialized focus on residential architecture and interior design
+Responsive service with online appointment capabilities
+Service Capabilities & Target Market
+Project Types
+
+The bureau actively handles various project types in the Slatina region and surrounding areas (Lelești, Tălmaciu, Ștefănești):
+
+Residential homes (single-family houses)
+Apartment interior design
+Industrial/commercial spaces
+Extensions and renovations
+Urban planning documentation
+Geographic Reach
+
+While based in Slatina, the firm serves clients across the Olt County region and beyond, as evidenced by project requests from neighboring towns and counties.
+
+Competitive Environment
+
+The Slatina architecture market includes several competitors:
+
+ARTCAD BUILDING PRODESIGN SRL (5.0 rating, 10+ years, integrated services)
+DECORA DESIGN SRL (4.2 rating, 5+ years)
+ALFA PROIECT SRL (20+ years experience)
+DB OFFICE ARCHITECTURE SRL (10+ years)
+
+Gabriela Trofin's firm maintains competitive pricing and strong customer satisfaction relative to these alternatives.
+
+Financial Performance
+
+Accessibility Note: As a small individual bureau (sole proprietorship), detailed financial statements are not publicly available. However, indicators suggest:
+
+Stable operation for 10+ years
+Consistent project flow (evidenced by market presence)
+Pricing aligned with market rates for the region
+Positive cash flow indicators (continued operations, customer retention)
+Online Presence & Digital Accessibility
+
+The firm maintains visibility through:
+
+Necesit.ro listing (major Romanian service directory)
+Google Maps profile (owner verified listing)
+Phone contact (0767 924 480)
+Online appointment booking capability
+Strengths & Competitive Advantages
+Long-term market presence (10+ years establishes trust and experience)
+Excellent customer satisfaction (5.0 rating with positive testimonials)
+Comprehensive service range (design through documentation)
+Flexible service delivery (online and on-site options)
+Competitive pricing (aligned with market rates)
+Professional registration (licensed and authorized architect)
+Responsive communication (patient and helpful per customer feedback)
+Potential Considerations
+Limited online visibility compared to larger firms (single review visible online)
+Small team structure (individual bureau may limit simultaneous project capacity)
+Geographic focus primarily on Slatina and Olt County region
+Limited marketing presence beyond directory listings
+
+##Website_Found: None
+
+The business does not appear to have an official dedicated website. The primary online presence is through the Necesit.ro service directory and Google Maps business profile. Contact is conducted primarily through phone (0767 924 480) and potentially through the Necesit.ro platform's appointment system.
+
+FINAL REMINDER
+Use GPT-5.4, not a mini model. Build a business-first Romanian website that feels human, specific, and commercially useful.

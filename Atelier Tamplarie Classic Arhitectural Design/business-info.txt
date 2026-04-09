@@ -1,0 +1,113 @@
+Original Data:
+==================================================
+Title: Atelier Tamplarie Classic Arhitectural Design
+Category: Woodworker
+Address: Str. Caisului 5, 200124 Craiova
+Complete Address: {"borough":"","street":"Str. Caisului 5","city":"Craiova","postal_code":"200124","state":"","country":"RO"}
+Phone: 0720 663 600
+Owner: {"id":"104583635452538576768","name":"Atelier Tamplarie Classic Arhitectural Design (Owner)","link":"https://www.google.com/maps/contrib/104583635452538576768"}
+Google Maps Link: https://www.google.com/maps/place/Atelier+Tamplarie+Classic+Arhitectural+Design/data=!4m7!3m6!1s0x4752d7c68c5180b9:0x30b569734ff7d44c!8m2!3d44.3345245!4d23.837402!16s%2Fg%2F11h4dr5ytz!19sChIJuYBRjMbXUkcRTNT3T3NptTA?authuser=0&hl=en&rclk=1
+Open Hours: {"Friday":["9 am–5 pm"],"Monday":["9 am–5 pm"],"Saturday":["Closed"],"Sunday":["Closed"],"Thursday":["9 am–5 pm"],"Tuesday":["9 am–5 pm"],"Wednesday":["9 am–5 pm"]}
+About: null
+Plus Code: 8RMP+RX Craiova
+Place ID: ChIJuYBRjMbXUkcRTNT3T3NptTA
+CID: 3509827428588966988
+Latitude: 44.334525
+Longitude: 23.837402
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAweqgb6IzoEw5iQLv8ezARRvV_JQN3C9j2muR5c3nbLrdocxwQDgzXB9zlQDx2TBW20iuXuRNhzE3dxB8I_TXeq0wppbZmnHjz_LAKXorT13uVsh7ROP8EggfAjEPdTWjliwDtoi6=w408-h544-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 2 | ****: 0 | ***: 0 | **: 0 | *: 2
+
+[*****] Codrin Mirea
+  "Calitate foarte buna.
+Am fost multumit de consultanță si ulterior de calitatea montajului si a tâmplăriei."
+
+[*____] Raluca Tudora
+
+[*____] david gabriel smarandache
+
+[*****] Anca Andrei
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Atelier Tamplarie Classic Arhitectural Design is a woodworking and carpentry business located in Craiova, Romania. The company specializes in custom-made furniture and architectural woodwork design services. The business operates as a small, specialized atelier focused on bespoke carpentry and furniture design projects.
+
+Business Details
+Attribute	Information
+Business Name	Atelier Tamplarie Classic Arhitectural Design
+Category	Woodworker / Carpentry / Custom Furniture Design
+Location	Str. Caisului 5, Craiova, 200124, Dolj County, Romania
+Phone	0720 663 600
+Country	Romania
+Business Type	Small artisanal workshop
+Primary Services & Products
+
+The business specializes in custom-made furniture across multiple categories. Based on available information, their service offerings include:
+
+Furniture Categories
+Kitchen furniture (custom cabinetry) — price range: 4,400–11,900 RON for kitchen furniture projects
+Living room furniture
+Bedroom furniture
+Children's and youth furniture
+Bathroom furniture
+Hall/entryway furniture
+Office furniture
+Custom architectural woodwork
+
+The business focuses on made-to-order, personalized furniture design, indicating they work directly with clients to create bespoke pieces tailored to specific needs and architectural styles.
+
+Legal & Registration Details
+
+Note: Based on my search, I could not locate comprehensive legal registration details (company registration number, founding date, or tax ID) in publicly available online sources. For complete legal information, you would need to:
+
+Check the Romanian Trade Register (Registrul Comerțului)
+Contact the business directly at the provided phone number
+Verify registration with the Craiova Chamber of Commerce
+Market Position & Reputation
+Current Market Standing
+Listed on Cylex.ro — a major Romanian business directory, indicating some degree of formal business registration
+Listed on Necesit.ro — a Romanian service provider platform specializing in custom services
+Positioned among construction and woodworking firms in Craiova
+Operates in a competitive market with other carpentry and furniture design businesses in the region
+Competitive Context
+
+The business competes with other woodworking and furniture design firms in Craiova, including established construction companies that offer carpentry services. Their positioning as an "atelier" suggests they emphasize artisanal quality and custom design rather than mass production.
+
+Online Presence & Digital Footprint
+
+The business has minimal but verifiable online presence:
+
+Listed on Cylex.ro (Romanian business directory)
+Listed on Necesit.ro (Romanian services marketplace)
+Google Maps presence — the business has a Google Maps profile with owner attribution
+
+However, I found no dedicated official website, Facebook page, Instagram account, or LinkedIn profile for this business during my research.
+
+Financial Performance
+
+I was unable to access specific financial performance data, revenue figures, or profitability information. Such details are typically:
+
+Confidential for small private businesses
+Available through Romanian financial databases (e.g., ONRC, Tax Authority records) requiring direct access or paid subscriptions
+Not publicly disclosed by small artisanal workshops
+Customer Reviews & Testimonials
+
+Based on my search, I found no publicly available customer reviews or testimonials on major review platforms. The business listings on Cylex and Necesit.ro do not display customer feedback or ratings, which is common for smaller, specialized service providers that may rely primarily on word-of-mouth referrals and repeat clients.
+
+Additional Observations
+
+Specialization: The name "Atelier Tamplarie Classic Arhitectural Design" emphasizes classic/traditional architectural design, suggesting the business may focus on classical or heritage-style furniture and woodwork.
+
+Service Delivery: As a small workshop, the business likely operates on a project-by-project basis with personalized client consultation.
+
+Local Focus: The business appears primarily oriented toward the Craiova region and surrounding areas in Dolj County.
+
+Limited Digital Marketing: The minimal online presence suggests the business relies on local reputation, referrals, and directory listings rather than digital marketing strategies.
+
+##Website_Found: None

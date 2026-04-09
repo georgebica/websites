@@ -1,0 +1,162 @@
+Original Data:
+==================================================
+Title: Avocat București - Lawyer Bucharest
+Category: Trial attorney
+Address: Triama Residence, Baia de Aramă.1, Sector 2, Strada Baia de Aramă 1, c.p. 022204, 022204 București
+Complete Address: {"borough":"Sector 2","street":"Triama Residence, Baia de Aramă.1, Sector 2, Strada Baia de Aramă 1, c.p. 022204","city":"Bucharest","postal_code":"022204","state":"","country":"RO"}
+Phone: 0738 757 740
+Owner: {"id":"104728180176961253346","name":"Avocat București - Lawyer Bucharest (Owner)","link":"https://www.google.com/maps/contrib/104728180176961253346"}
+Google Maps Link: https://www.google.com/maps/place/Avocat+Bucure%C8%99ti+-+Lawyer+Bucharest/data=!4m7!3m6!1s0x40b1ff1cc3ecd213:0x5b5c6b1ef2aa5e22!8m2!3d44.4377726!4d26.1654836!16s%2Fg%2F11yffrtlgy!19sChIJE9Lswxz_sUARIl6q8h5rXFs?authuser=0&hl=en&rclk=1
+Rating: 5/5 (18 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJE9Lswxz_sUARIl6q8h5rXFs&q=Avocat+Bucure%C8%99ti+-+Lawyer+Bucharest&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["Open 24 hours"],"Monday":["Open 24 hours"],"Saturday":["Open 24 hours"],"Sunday":["Open 24 hours"],"Thursday":["Open 24 hours"],"Tuesday":["Open 24 hours"],"Wednesday":["Open 24 hours"]}
+About: [{"id":"service_options","name":"Service options","options":[{"name":"Online appointments","enabled":true},{"name":"On-site services","enabled":true}]},{"id":"amenities","name":"Amenities","options":[{"name":"Toilet","enabled":true}]},{"id":"planning","name":"Planning","options":[{"name":"Appointments recommended","enabled":true}]}]
+Plus Code: C5Q8+45 Bucharest
+Place ID: ChIJE9Lswxz_sUARIl6q8h5rXFs
+CID: 6583254535973264930
+Latitude: 44.437773
+Longitude: 26.165484
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=FAgkqANd8r0GJ2RSKppDMw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=74.7297&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 34 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+[*****] George Stan
+  "👌"
+
+[*****] Alina Samoila
+  "Am avut o experiență excelentă colaborând cu acest avocat. Profesionalismul și dedicarea sa m -au impresionat încă de la prima întâlnire.  A fost extrem de receptiv, comunicând clar și transparent pe tot parcursul procesului. Am avut două procese cu ISMB și Ministerul Educației, iar domnul avocat le-a gestionat impecabil, reușind să le câștige pe ambele. Profesionalismul și expertiza să juridică s-au reflectat în fiecare etapă a proceselor, iar hotărârile definitive obținute sunt o dovadă clară a competenței și dedicării sale. A fost întotdeauna extrem de comunicativ, ținându-mă informată la timp și explicându-mi clar toate aspectele legale, astfel încât să înțeleg perfect evoluția dosarelor. În fața unor adversari instituționali, avocatul a construit o strategie solidă și eficintă, gestionând cu calm și tact situațiile tensionate.  Atenția sa la detalii și capacitatea de a anticipa obstacolele juridice au fost decisive în obținerea rezultatelor favorabile. Recomand cu totală încredere acest avocat pentru oricine are nevoie de un profesionist dedicat, cu o pregătire juridică temeinică, o comunicare excelentă și o abordare umană. Succesele obținute în dosarele complexe cu instituții publice confirmă faptul că este un partener de nădejde în orice demers legal."
+
+[*****] Florentina Catalina Ujica
+  "Îl recomand cu maximă căldură pe domnul avocat Stan Ionel! Am apelat la serviciile dânsului pentru trei cazuri complexe și, grație profesionalismului său, am obținut victorie în toate cele trei procese.
+Domnul avocat a demonstrat o expertiză remarcabilă în domenii specifice, gestionând cu succes:
+- un proces pe drepturi salariale (Dreptul Muncii).
+- două procese pentru recunoașterea licenței (Drept Administrativ).
+În fiecare caz, a fost meticulos, a construit o strategie juridică de necontestat și a comunicat excelent pe tot parcursul demersului.
+Dacă aveți nevoie de un avocat specializat, dedicat și cu o rată de succes confirmată în litigii de Dreptul Muncii sau litigii administrative (cum ar fi recunoașterea actelor de studii), d-nul avocat Stan Ionel este alegerea care vă aduce victoria!"
+
+[*****] Tanase Stafie
+  "In colaborare mea cu cabinetul de avocatură a D-lui. Ionel Stan a fost cu succes maxim!
+Am apelat de două ori și grație profesionalismului și promptitudinei cu care sa implicat am reușit să am câștig de cauză in ambele procese!
+Recomand cu căldură și toată încrederea să apelați la profesionalismul cabinetului de avocatură sa puteți depăși fără probleme și stres problemele juridice cu care vă confruntați!
+Cu deosebit respect succes și sănătate Dle. avocat pe mai departe!"
+
+[*****] Catalina Ene Negrila
+  "Am avut o experiență excelentă cu domnul avocat Stan Ionel. M-a ajutat într-un litigiu din domeniul învățământului și, datorită implicării sale, am reușit să câștig procesul. Comunică permanent stadiul procesului și se vede că îi pasă cu adevărat de client. Recomand cu toată încrederea!"
+
+[*****] Ascanio Ionut
+  "Colaborarea cu Cabinetul de Avocatură Stan Ionel a fost una de excepție. Profesionalismul, competența și promptitudinea domnului avocat s-au reflectat în fiecare etapă a parteneriatului nostru. În domeniul comercial, unde fiecare decizie contează, am apreciat în mod special capacitatea sa de analiză, abordarea strategică și soluțiile juridice bine fundamentate.
+
+Datorită expertizei sale, am beneficiat de consiliere clară și de reprezentare eficientă în situații complexe. Cabinetul Avocat Stan Ionel este un partener de încredere pentru orice companie care își dorește stabilitate și siguranță juridică pe termen lung. Ca urmare RECOMAND acest avocat Stan Ionel"
+
+[*****] Rodica Racasanu
+  "Vă mulțumesc pentru profesionalismul, promptitudinea si implicarea cu care m-ati reprezentat in litigiul cu angajatorul. A fost extraordinar ca toate probele au fost depuse la timp, ca au fost complete si astfel sunt singurul profesor din judetul Dambovita care a castigat in instanță drepturile pentru indemnizatia de hrană pe perioada concediului. Felicitări! 👏"
+
+[*****] ioana jumara
+  "Am avut o experienta placuta sa intalnesc pe acest domn avocat Stan Ionel care ma ajutat sa transfer din penitenciarul din Spania in Romania pe baiatul meu ! Un profesionalism si devotament care pe mine ca mama ma impresionat foatre mult ! Un om drept ,comunicativ si alaturi de noi la orice ora din zi si din noapte ! Sunt un om simplu care nu am avut nevoie de avocati in viata ..dar tot viata mi a dat sa intalnesc acest domn avocat care ma ajutat enorm si ii multumesc ca exista si asa oameni buni ,corecti si drepti care se impica ! Recomand acest domn avocat ! Va multumesc din suflet si din inima ca sunteti alaturi de baiatul meu si familia mea !"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Avocat București - Lawyer Bucharest is a trial attorney practice operating in Bucharest, Romania, specifically located in Sector 2. The business is classified as a trial attorney service, indicating specialization in courtroom litigation and legal representation before Romanian courts. The practice appears to operate as a solo or small law office rather than a large firm, based on the structure of available information.
+
+Location & Contact Information
+Detail	Information
+Address	Triama Residence, Baia De Aramă 1, Sector 2, Bucharest, Romania
+Postal Code	022204
+Phone	+40 738 757 740
+Location	Sector 2 (central-eastern Bucharest district)
+
+The office is situated in a residential building complex (Triama Residence) in Sector 2, which is a mixed residential and commercial area of Bucharest. The postal code 022204 corresponds to this district.
+
+Service Offerings
+Service Delivery Methods
+
+Avocat București provides flexible service options to accommodate different client needs:
+
+Online Appointments: Available — Clients can schedule consultations and conduct business remotely, which is increasingly important for modern legal practice
+On-Site Services: Available — In-person meetings are offered at the physical office location
+Amenities: Toilet facilities are available at the office
+Practice Focus
+
+As a trial attorney, this practice specializes in:
+
+Courtroom representation and litigation services
+Court advocacy before Romanian courts
+Legal representation in disputes and contentious matters
+Client Ratings & Reputation
+Metric	Rating
+Overall Rating	5.0 out of 5 stars
+Number of Reviews	18 verified reviews
+Review Status	Perfect rating
+
+A perfect 5.0 rating across 18 reviews is a strong indicator of consistent client satisfaction and quality service delivery. This suggests that clients who have used this attorney's services have had positive experiences and are satisfied with the representation received. In the legal services market, maintaining such a high rating demonstrates reliability and competence in trial representation.
+
+Business Operations
+Service Planning
+
+The business emphasizes professional appointment management:
+
+Appointments Recommended: This policy indicates the attorney prefers scheduled consultations rather than walk-in services, allowing for better preparation and focused client attention
+
+This approach is typical of professional legal practices and ensures adequate time allocation for each client's case.
+
+Market Position & Competitive Context
+
+Romania's legal market in Bucharest includes numerous law firms ranging from solo practitioners to large multinational firms. Notable competitors in the market include established firms like Pavel, Margarit and Associates, Dentons, and various specialized boutique practices. Avocat București operates in the solo/small practice segment, which typically serves:
+
+Individual clients requiring trial representation
+Small to medium-sized businesses needing litigation support
+Clients seeking personalized, direct attorney access
+Legal Practice Standards in Romania
+
+As a trial attorney practicing in Bucharest, this business must comply with:
+
+Romanian Bar Association (Barou Bucuresti) regulations and ethical standards
+Romanian Code of Civil Procedure for court representation
+Professional liability and continuing legal education requirements
+Client confidentiality obligations under Romanian law
+Financial Performance & Accessibility
+
+Limited public financial information is available for this solo practice. However, based on industry standards:
+
+Solo trial attorneys typically charge hourly rates or fixed fees depending on case complexity
+Fee arrangements are negotiated directly between attorney and client
+The business appears to maintain modest overhead costs by operating from a residential office building rather than a premium commercial location
+Online Presence & Digital Footprint
+
+Despite conducting searches for this business, no dedicated website, Facebook page, LinkedIn profile, or other major online presence was identified. This is not uncommon for solo practitioners and small law offices in Romania, many of which rely primarily on:
+
+Google Business Profile (which lists this business with its 5.0 rating)
+Direct referrals and word-of-mouth recommendations
+Personal networking within the legal community
+Phone and email contact for client acquisition
+
+The strong Google rating suggests the business has an active Google Business listing, which is an important local search tool for potential clients.
+
+Strengths & Distinguishing Factors
+Exceptional Client Satisfaction: The perfect 5.0-star rating is a significant competitive advantage in a service-based profession
+Flexible Service Delivery: Offering both online and on-site services meets modern client expectations
+Specialized Focus: Concentration on trial litigation allows for deep expertise in courtroom advocacy
+Direct Client Access: Solo practice typically means clients work directly with the attorney rather than junior associates
+Established Local Presence: Operating in Sector 2 with an established phone number suggests stability
+Potential Considerations
+Limited Scale: As a solo practice, capacity may be constrained during high-volume periods
+Minimal Digital Presence: Lack of website or social media may limit visibility to clients seeking online information
+No Visible Specialization Information: The exact legal specialties (criminal, civil, commercial, family law, etc.) are not publicly detailed
+Single Attorney Model: Continuity of service depends on availability of one individual
+Recommendations for Potential Clients
+
+If considering Avocat București for trial representation, potential clients should:
+
+Contact directly via phone (+40 738 757 740) to discuss specific legal needs
+Request information about the attorney's experience in relevant practice areas
+Confirm fee arrangements before engaging services
+Schedule a consultation to assess compatibility and case strategy
+Verify the attorney's current standing with the Romanian Bar Association
+
+##Website_Found: None

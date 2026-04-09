@@ -1,0 +1,247 @@
+You are an elite website builder and creative director specializing in boutique hospitality brands.
+Build a complete, production-ready presentation website for "4 Rent Craiova" — a serviced apartment / short-term rental business in Craiova, Romania.
+
+========================
+GLOBAL RULES
+========================
+- All visible website copy, CTAs, headings, meta text, and footer text must be in Romanian.
+- Use correct Romanian diacritics (ă, â, î, ș, ț) throughout all visible copy.
+- Output a single, complete, standalone index.html file.
+- Use Tailwind CSS via CDN (latest stable version).
+- No images whatsoever — use CSS-only backgrounds (gradients, solid colors, patterns).
+- No placeholder text, no lorem ipsum, no fabricated statistics, no fake credentials, no invented testimonials.
+- No forms of any kind (no contact forms, no booking forms, no newsletter signups).
+- Use Font Awesome via CDN for all icons.
+- Use AOS (Animate On Scroll) library via CDN for subtle scroll-triggered animations.
+- Load Google Fonts: Playfair Display (serif, for headings) and Lato (sans-serif, for body text).
+- Mobile-first responsive design throughout.
+- No emojis anywhere in the output.
+- Build the final website itself, not a strategy document or meta-prompt.
+- Use only facts clearly supported by the dossier. If a detail is uncertain, leave it out or keep it generic.
+- The dossier reviews mention "Avensis Capital" evaluator services — these are from the shared Google listing. Adapt them carefully: extract only the sentiment about professionalism, promptness, and quality of service, and rewrite them as if they describe the apartment rental experience. Do NOT mention "Avensis Capital," "evaluator," "evaluare," "raport," or "bancă" in visible copy.
+
+========================
+BUSINESS DATA
+========================
+Business name: 4 Rent Craiova
+Type / niche: Apartament in regim hotelier / cazare pe termen scurt (serviced apartment)
+Location: Craiova 200516, Romania
+Phone: 0723 668 453 (international: +40 723 668 453)
+Google Maps Link: https://www.google.com/maps/place/4+Rent+Craiova/data=!4m7!3m6!1s0x4752d72e1eb9ad13:0xf5a3fd4321eaf4c8!8m2!3d44.3166961!4d23.8261343!16s%2Fg%2F11l2n628v7!19sChIJE625Hi7XUkcRyPTqIUP9o_U?authuser=0&hl=en&rclk=1
+Coordinates: 44.3166961, 23.8261343
+Rating: 5/5
+Target guest profile: Cupluri, calatori de business, familii mici si oaspeti care cauta cazare confortabila si curata in Craiova
+Key selling points: Contact direct, prezenta locala, experienta simpla de rezervare, ton cald si personal, flexibilitate
+Price positioning: MID-RANGE
+Booking/contact method: PHONE + WHATSAPP
+
+========================
+BRAND DNA
+========================
+- Emotional tone: Warm hospitality, intimate, personal
+- Brand personality: Boutique feel — not a corporate chain, not an impersonal platform listing. This is a local host who cares.
+- Trust positioning: Reliable, professional, attentive to details — a host you can count on
+- Communication style: Warm, calm, welcoming — like receiving a personal invitation from a friend who lives in Craiova
+- Market position: Best-value boutique stay in Craiova — the comfort of a hotel with the intimacy of a home
+- Differentiation: Must feel like a curated boutique brand, not a generic Airbnb clone or a cold hotel page
+
+========================
+VISUAL DESIGN SYSTEM — BOUTIQUE HOTEL EDITORIAL
+========================
+COLOR PALETTE:
+- Primary base: Warm ivory (#FAF7F2) for light sections
+- Secondary base: Deep charcoal (#2C2C2C) for dark sections
+- Tertiary: Warm grey (#E8E4DF) for alternating section backgrounds
+- Accent: Rich golden amber (#C8A96E) — used sparingly for CTAs, decorative lines, accent text, and hover states
+- Text on light: Charcoal (#2C2C2C) for body, slightly darker (#1A1A1A) for headings
+- Text on dark: Ivory (#FAF7F2) for body, white (#FFFFFF) for headings
+
+TYPOGRAPHY:
+- Headings: "Playfair Display" (Google Fonts) — elegant serif with editorial weight
+- Body text: "Lato" (Google Fonts) — clean, warm humanist sans-serif
+- Pull-quote text: Playfair Display italic, large size (2xl to 4xl), with golden amber accent marks or decorative quote marks
+- Letter-spacing: slightly tracked on uppercase labels, normal elsewhere
+
+LAYOUT PHILOSOPHY — EDITORIAL MAGAZINE:
+- Think luxury travel magazine meets Airbnb Luxe
+- NO card grids anywhere. Instead, use alternating full-width sections with different background tones (ivory, charcoal, warm grey)
+- Large typographic moments — oversized headings, pull-quotes that breathe
+- Asymmetric text blocks with generous whitespace
+- Sections should feel like flipping through a beautiful travel editorial spread
+- Use decorative thin lines (1px, golden amber) as section dividers or accent elements
+- Generous padding: sections should have py-20 to py-32 spacing
+- Max content width of ~800px for text-heavy sections (like a magazine column) but full-width backgrounds
+
+MOTION:
+- AOS animations: subtle fade-up, fade-in with gentle delays
+- No aggressive or bouncy animations
+- Smooth scroll behavior
+
+========================
+UNIQUE LAYOUT STRUCTURE
+========================
+
+SECTION 1 — HERO (Full-screen):
+- Full viewport height (min-h-screen)
+- Background: warm gradient from ivory to a soft warm tone (NO images)
+- Large, elegant Playfair Display heading: business name as the focal point
+- Below the name, a poetic one-line tagline about the feeling of arriving in Craiova and finding a home
+- A single golden amber CTA button for WhatsApp contact
+- Subtle decorative golden line or ornament above or below the heading
+- Feel: like the cover page of a luxury travel magazine
+
+SECTION 2 — WELCOME LETTER ("Scrisoare de bun venit"):
+- Background: ivory (#FAF7F2)
+- Written like a personal letter from the host to the guest
+- First-person voice, warm, 4-6 sentences
+- Describe the feeling of arriving at the apartment, the care put into every detail, the local touches
+- Use a large decorative opening quote mark in golden amber
+- Layout: centered text column, max-w-2xl, generous line-height
+- Sign off with a warm phrase, like "Cu drag, echipa 4 Rent Craiova"
+- This section should feel intimate and personal, like handwritten hospitality
+
+SECTION 3 — AMENITIES / EXPERIENCE ("Ce vei gasi"):
+- Background: warm grey (#E8E4DF)
+- Heading: elegant serif, centered
+- Layout: 2-column layout (on desktop) with elegant icon + text pairs
+- Each amenity: Font Awesome icon in golden amber + short descriptive text in Lato
+- Amenities to feature (inferred for a serviced apartment): Wi-Fi rapid, bucatarie complet utilata, lenjerie premium, aer conditionat, parcare, TV smart, produse de curatenie, checkout flexibil
+- NO card/box styling — just clean icon+text pairs with generous spacing
+- Feel: like an amenity page from a boutique hotel brochure
+
+SECTION 4 — CRAIOVA CITY STORY ("Descopera Craiova"):
+- Background: deep charcoal (#2C2C2C) with ivory/white text
+- A short love letter to Craiova as a city — mention Parcul Nicolae Romanescu, Centrul Vechi, Teatrul National, Universitatea din Craiova as nearby landmarks
+- 2-3 paragraphs of warm, editorial prose about what makes Craiova special
+- Use a pull-quote in large Playfair Display italic, golden amber color, about the city
+- Layout: asymmetric — text on one side with generous whitespace on the other (on desktop)
+- Feel: like a city guide editorial spread in a travel magazine
+
+SECTION 5 — TESTIMONIALS / TRUST ("Ce spun oaspetii nostri"):
+- Background: ivory (#FAF7F2)
+- Large quote typography — each testimonial displayed as a big pull-quote moment
+- Use oversized decorative quotation marks in golden amber
+- Show 3-4 testimonials adapted from the reviews (rewrite them to sound like apartment stay experiences — extract only the sentiments about professionalism, promptness, quality, communication, and reliability)
+- Each quote attributed with a first name only
+- Layout: stacked vertically with generous spacing between quotes, not a carousel
+- Feel: like the "praise" page in a high-end hotel press kit
+
+SECTION 6 — CONTACT INVITATION ("Te asteptam"):
+- Background: warm grey (#E8E4DF)
+- Written like a personal invitation, not a cold contact block
+- Short warm paragraph: "Suntem aici pentru tine. O simpla conversatie e tot ce ai nevoie pentru a-ti rezerva locul."
+- Phone number displayed elegantly with a tap-to-call link
+- WhatsApp CTA button in golden amber
+- Google Maps link styled as a subtle text link
+- Layout: centered, clean, generous whitespace
+- Feel: like an RSVP card for an exclusive event
+
+SECTION 7 — FOOTER:
+- Background: deep charcoal (#2C2C2C)
+- Business name in Playfair Display
+- Short tagline
+- NAP block (name, area, phone) in natural language
+- Copyright line with current year
+- Thin golden amber line at the very top of the footer as a decorative separator
+- Hidden LocalBusiness schema markup in a <script type="application/ld+json"> tag
+
+========================
+HOMEPAGE SECTIONS (in order)
+========================
+1. Hero — full-screen, typographic, warm gradient
+2. Welcome Letter — personal host letter, intimate tone
+3. Ce vei gasi — amenities in elegant 2-column icon+text layout
+4. Descopera Craiova — city story, dark background, editorial prose
+5. Ce spun oaspetii — testimonials as large pull-quotes
+6. Te asteptam — contact invitation, warm and personal
+7. Footer — with hidden structured data
+
+========================
+CONTENT FILTRATION — NON-NEGOTIABLE
+========================
+RULE 1 — Never expose raw operational data as visible page copy.
+- Never show postal codes, GPS coordinates, plus codes, place IDs, internal tags, low review counts, or raw database phrases in visible copy.
+- Raw geo/contact fields belong only in schema markup, map embeds, footer NAP, and hidden SEO data.
+RULE 2 — Transform everything into natural human language.
+BAD: "Localizare: Craiova 200516"
+GOOD: "Situat intr-o zona centrala a Craiovei, la cativa pasi de tot ce conteaza."
+BAD: "Contact direct: 0723 668 453"
+GOOD: "Scrie-ne pe WhatsApp sau suna direct — iti raspundem cu drag."
+RULE 3 — Write like a thoughtful human host, never like a listing bot or a database dump.
+RULE 4 — The reviews in the dossier mention "Avensis Capital" and evaluator services. These must be completely rewritten as apartment-stay testimonials. Extract ONLY the emotional sentiment (professionalism, promptness, clear communication, reliability, warmth) and recast them as guest experiences. Never mention evaluations, banks, reports, or Avensis Capital.
+
+========================
+SEO + STRUCTURED DATA
+========================
+- H1: Combine business name with a natural Romanian location phrase (e.g., "4 Rent Craiova — Cazare cu suflet in inima Olteniei")
+- H2s: Answer real guest questions naturally (e.g., "Ce vei gasi in apartament," "De ce sa alegi Craiova")
+- Meta title: Written in Romanian like a warm recommendation, under 60 characters
+- Meta description: Written in Romanian, compelling, under 155 characters, like a friend telling you about a great place to stay
+- Open Graph tags: title, description, type (website), locale (ro_RO)
+- LocalBusiness schema in <head> using JSON-LD with:
+  - @type: LodgingBusiness
+  - name: 4 Rent Craiova
+  - telephone: +40 723 668 453
+  - address with city Craiova, postal code 200516, country RO
+  - geo coordinates: 44.3166961, 23.8261343
+  - aggregateRating: 5/5
+  - url: Google Maps link
+- Canonical tag
+
+========================
+CONVERSION STRATEGY
+========================
+- Primary CTA: WhatsApp message link (https://wa.me/40723668453) — styled as golden amber button
+- Secondary CTA: Tap-to-call phone link (tel:+40723668453)
+- Mobile: sticky bottom bar with WhatsApp + Phone CTAs, always visible during scroll
+- Sticky bar styling: charcoal background, golden amber buttons, appears only on mobile (hidden on desktop)
+- CTA copy: warm and inviting, not aggressive ("Rezerva acum" / "Scrie-ne pe WhatsApp" / "Suna-ne")
+- Urgency: subtle, factual — no fake countdown timers or "only 1 left" tactics
+
+========================
+DIFFERENTIATION DIRECTIVE
+========================
+- This website must NOT feel like a generic Airbnb listing, a WordPress theme, or a cold corporate hotel page.
+- It must feel like a boutique local brand — curated, warm, editorial, with personality.
+- Signature design element: Large typographic pull-quote moments throughout the page, using Playfair Display italic in golden amber, creating a rhythm like a luxury travel magazine.
+- The overall impression should be: "Someone with taste and care runs this place."
+
+========================
+FULL RAW BUSINESS DOSSIER
+========================
+Read this entire block before writing the site. Treat it as the primary factual source.
+
+Original Data:
+==================================================
+Title: 4 Rent Craiova
+Category: Serviced apartment
+Address: 200516 Craiova
+Complete Address: {"borough":"","street":"","city":"Craiova","postal_code":"200516","state":"","country":"RO"}
+Phone: 0723 668 453
+Google Maps Link: https://www.google.com/maps/place/4+Rent+Craiova/data=!4m7!3m6!1s0x4752d72e1eb9ad13:0xf5a3fd4321eaf4c8!8m2!3d44.3166961!4d23.8261343!16s%2Fg%2F11l2n628v7!19sChIJE625Hi7XUkcRyPTqIUP9o_U?authuser=0&hl=en&rclk=1
+Rating: 5/5 (1 reviews)
+
+Google Reviews:
+==================================================
+[*****] Mirabela Belgiu - "Recomand in mod special... explicatii clare, solutii potrivite si multa rabdare."
+[*****] RaZVaNrzr - "Datorita suportului echipei... promptitudine si profesionalism. Recomand!"
+[*****] Silviu Eugen Ciobanu - "O adevarata echipa de profesionisti... seriozitatea... Ireproșabile."
+[*****] George-Marius Popescu - "inalt profesionalism... raspunsuri clare si complete."
+[*****] Flo Bizu - "Recomand cu incredere... punctual si profesionalism."
+[*****] marina mitroi - "Cel mai ridicat nivel... Amabili, comunicare foarte buna, operativi."
+[*****] Sofia Alexandra Corlan - "Comunicarea a fost clara, documentele au fost intocmite corect."
+[*****] Andrei Draghici - "Seriozitate, Promptitudine si Respect pentru clienti."
+
+Company Overview:
+==================================================
+Name: 4 Rent Craiova
+Category: Serviced apartment / short-term rental
+Location: Craiova 200516, Romania
+Phone: +40 723 668 453
+Small private short-term rental operator in Craiova.
+##Website_Found: None
+
+========================
+FINAL REMINDER
+========================
+Output only the finished index.html file. No commentary. No markdown fences.

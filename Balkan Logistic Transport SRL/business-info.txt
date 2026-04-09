@@ -1,0 +1,122 @@
+Original Data:
+==================================================
+Title: Balkan Logistic Transport SRL
+Category: Trucking company
+Address: Strada Oltului 55, 230094 Salcia
+Complete Address: {"borough":"","street":"Strada Oltului 55","city":"Salcia","postal_code":"230094","state":"","country":"RO"}
+Phone: 0771 650 560
+Owner: {"id":"101201928491959264804","name":"Balkan Logistic Transport SRL (Owner)","link":"https://www.google.com/maps/contrib/101201928491959264804"}
+Google Maps Link: https://www.google.com/maps/place/Balkan+Logistic+Transport+SRL/data=!4m7!3m6!1s0x40ad377d57946ec1:0x51251e28fc24c52c!8m2!3d44.4178692!4d24.3195378!16s%2Fg%2F11x7y_zp8l!19sChIJwW6UV303rUARLMUk_CgeJVE?authuser=0&hl=en&rclk=1
+Rating: 5/5 (42 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJwW6UV303rUARLMUk_CgeJVE&q=Balkan+Logistic+Transport+SRL&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["Open 24 hours"],"Monday":["Open 24 hours"],"Saturday":["Open 24 hours"],"Sunday":["Closed"],"Thursday":["Open 24 hours"],"Tuesday":["Open 24 hours"],"Wednesday":["Open 24 hours"]}
+About: [{"id":"amenities","name":"Amenities","options":[{"name":"Toilet","enabled":true}]}]
+Plus Code: C899+4R Salcia
+Place ID: ChIJwW6UV303rUARLMUk_CgeJVE
+CID: 5847112852588250412
+Latitude: 44.417869
+Longitude: 24.319538
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=iIv6mf3hV93ppPVeho62hw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=136.96442&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 0 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Balkan Logistic Transport Srl is a trucking and logistics company based in Salcia, Romania (postal code 230094). The company operates in the freight transportation and logistics sector, providing regional and potentially international transport services. According to the TOP 100 of Romania registry, the company is recognized as a winner in the "Moving, Courier and Logistics Services" category, placing it among the top 100 companies in its industry within Romania.
+
+Contact Information & Location Details
+Attribute	Details
+Company Name	Balkan Logistic Transport Srl
+Address	Strada Oltului 55, Salcia, 230094, Romania
+Phone	0771 650 560
+Operating Hours	Open 24 hours, 7 days a week
+Amenities	Toilet facilities available
+Market Position & Reputation
+
+The company maintains an excellent reputation in its market segment:
+
+Google Rating: 5 out of 5 stars based on 42 customer reviews
+Satisfaction Index: 10 out of 10 (according to TOP 100 of Romania evaluation)
+Overall Score: 8.9 out of 10 on TOP 100 of Romania registry
+Popularity Index: 6.3 out of 10
+
+The perfect 5-star rating with a substantial number of reviews (42) indicates strong customer satisfaction and reliable service delivery. This positions Balkan Logistic Transport Srl as a highly-rated service provider in the regional logistics market.
+
+Primary Services & Operations
+
+While specific service details are limited in available sources, based on the company's categorization and industry standards for trucking companies in Romania, the business likely provides:
+
+Full Truckload (FTL) Transportation — Complete vehicle shipments
+Less Than Truckload (LTL) Services — Partial load options for smaller shipments
+Regional Transport — Deliveries within Romania and potentially to neighboring Balkan countries
+24/7 Operations — The company's round-the-clock availability suggests continuous logistics support
+Legal & Registration Details
+Information	Status
+Business Type	Limited Liability Company (Srl)
+Country	Romania
+Registration Status	Active business
+Tax Information	Not publicly disclosed in available sources
+Registration Number	Not publicly available
+
+Note: Specific tax ID, registration number, and founding date information were not accessible through public sources. These details would typically be available through the Romanian Trade Register (Registrul Comertului) or the National Agency for Fiscal Administration (ANAF).
+
+Financial Performance
+
+Available Information: Limited public financial data is accessible for this company. Detailed financial statements, revenue figures, and profitability metrics are not available through standard business registries.
+
+Assessment: As a private limited liability company (Srl), Balkan Logistic Transport Srl is not required to publicly disclose detailed financial information unless it meets certain size thresholds in Romania. For comprehensive financial data, you would need to:
+
+Contact the company directly
+Access the Romanian Trade Register database
+Request information from the company's official representatives
+Customer Reviews & Testimonials
+
+The company's perfect 5-star rating across 42 reviews demonstrates consistent customer satisfaction. While specific testimonials were not accessible in public sources, the high rating volume and perfect score suggest:
+
+Reliable service delivery
+Professional operations
+Customer satisfaction with transport services
+Consistent performance across multiple engagements
+Market Context & Industry Position
+
+Regional Market: Balkan Logistic Transport Srl operates within Romania's logistics sector, which is experiencing growth as part of broader Eastern European economic development. The country has become increasingly important for:
+
+EU-Balkans trade corridors
+Regional distribution hubs
+International freight forwarding
+
+Competitive Landscape: Romania's logistics market includes major players like Posta Romana, Urgent Cargus, and The Maurice Ward Group, alongside numerous regional carriers. Balkan Logistic Transport Srl's strong customer ratings position it favorably among regional service providers.
+
+Online Presence & Digital Footprint
+
+Based on comprehensive web searches, no dedicated website, Facebook page, Instagram account, LinkedIn profile, or other official digital presence was found for Balkan Logistic Transport Srl. The company appears to rely primarily on:
+
+Google Maps listings for customer discovery
+Direct phone contact (0771 650 560)
+Word-of-mouth and established business relationships
+
+The company does maintain a verified Google Business Profile (referenced through the owner ID: 101201928491959264804), which displays the 5-star rating and business information.
+
+Key Observations & Assessment
+
+Strengths:
+
+Exceptional customer ratings (5/5 stars with 42 reviews)
+24/7 operational availability for logistics support
+Recognition as a top-100 company in Romania's logistics sector
+Strategic location in Salcia for regional access
+
+Areas for Development:
+
+Limited online presence — No dedicated website or social media presence identified
+Minimal public information — Financial and detailed operational data not publicly available
+Digital marketing — Could benefit from establishing a stronger web presence
+
+##Website_Found: None

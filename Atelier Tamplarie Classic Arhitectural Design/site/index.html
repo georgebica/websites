@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Tamplarie Classic Arhitectural Design | Mobilă la Comandă Craiova</title>
+  <meta name="description" content="Mobilă la comandă în Craiova, lucrată artizanal pentru bucătărie, living, dormitor, baie, hol și birou. Atelier Tamplarie Classic Arhitectural Design vă ascultă proiectul la 0720 663 600.">
+  <meta property="og:title" content="Atelier Tamplarie Classic Arhitectural Design | Mobilă la Comandă Craiova">
+  <meta property="og:description" content="Mobilă la comandă în Craiova, creată cu grijă pentru bucătărie, living, dormitor, baie, hol și birou. Discutați proiectul la 0720 663 600.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta name="theme-color" content="#3E2723">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            walnut: "#3E2723",
+            "walnut-soft": "#5D4037",
+            honey: "#D4A574",
+            "honey-light": "#E8C99B",
+            cream: "#FFF8F0",
+            "cream-deep": "#F5EDE0",
+            forest: "#2D5016"
+          },
+          fontFamily: {
+            serif: ["Libre Baskerville", "serif"],
+            sans: ["Source Sans 3", "sans-serif"]
+          },
+          boxShadow: {
+            warm: "0 4px 20px rgba(62, 39, 35, 0.15)"
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --walnut: #3E2723;
+      --walnut-soft: #5D4037;
+      --honey: #D4A574;
+      --honey-light: #E8C99B;
+      --cream: #FFF8F0;
+      --cream-deep: #F5EDE0;
+      --forest: #2D5016;
+      --footer-dark: #2C1B14;
+      --shadow-warm: 0 4px 20px rgba(62, 39, 35, 0.15);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Source Sans 3", sans-serif;
+      background: var(--cream);
+      color: var(--walnut);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Libre Baskerville", serif;
+    }
+
+    .section-divider {
+      height: 8px;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(212, 165, 116, 0.85) 0px,
+        rgba(212, 165, 116, 0.85) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+      border-top: 1px solid rgba(212, 165, 116, 0.2);
+      border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+    }
+
+    .grain-overlay::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(212, 165, 116, 0.08), transparent 45%),
+        radial-gradient(circle at top right, rgba(232, 201, 155, 0.12), transparent 36%),
+        repeating-linear-gradient(
+          120deg,
+          rgba(212, 165, 116, 0.06) 0,
+          rgba(212, 165, 116, 0.06) 1px,
+          transparent 1px,
+          transparent 12px
+        );
+      pointer-events: none;
+    }
+
+    .catalog-card {
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-warm);
+    }
+
+    .catalog-card::before,
+    .catalog-card::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      pointer-events: none;
+    }
+
+    .catalog-card::before {
+      top: 16px;
+      left: 16px;
+      border-top: 2px solid rgba(212, 165, 116, 0.9);
+      border-left: 2px solid rgba(212, 165, 116, 0.9);
+    }
+
+    .catalog-card::after {
+      right: 16px;
+      bottom: 16px;
+      border-right: 2px solid rgba(212, 165, 116, 0.9);
+      border-bottom: 2px solid rgba(212, 165, 116, 0.9);
+    }
+
+    .wood-joint {
+      position: relative;
+      width: 88px;
+      height: 88px;
+      border: 1px solid rgba(212, 165, 116, 0.35);
+      border-radius: 1.5rem;
+      background:
+        linear-gradient(90deg, transparent 42%, rgba(212, 165, 116, 0.45) 42%, rgba(212, 165, 116, 0.45) 58%, transparent 58%),
+        linear-gradient(0deg, transparent 42%, rgba(212, 165, 116, 0.45) 42%, rgba(212, 165, 116, 0.45) 58%, transparent 58%);
+      box-shadow: inset 0 0 0 1px rgba(232, 201, 155, 0.15);
+    }
+
+    .wood-joint::before,
+    .wood-joint::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(212, 165, 116, 0.25);
+      border-radius: 1rem;
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background: rgba(212, 165, 116, 0.75);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .menu-open {
+      overflow: hidden;
+    }
+
+    .menu-open #mobile-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .menu-open #mobile-menu {
+      transform: translateX(0);
+    }
+
+    .map-grid {
+      background-image:
+        linear-gradient(rgba(62, 39, 35, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(62, 39, 35, 0.08) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(212, 165, 116, 0.35), transparent 58%);
+      background-size: 24px 24px, 24px 24px, 100% 100%;
+      background-position: center;
+    }
+
+    .quote-mark {
+      line-height: 0.8;
+    }
+
+    .process-line-desktop {
+      background: linear-gradient(90deg, rgba(212, 165, 116, 0.25), rgba(212, 165, 116, 0.75), rgba(212, 165, 116, 0.25));
+    }
+
+    .process-line-mobile {
+      background: linear-gradient(180deg, rgba(212, 165, 116, 0.25), rgba(212, 165, 116, 0.75), rgba(212, 165, 116, 0.25));
+    }
+
+    .hero-rings::before,
+    .hero-rings::after {
+      content: "";
+      position: absolute;
+      border-radius: 9999px;
+      border: 1px solid rgba(212, 165, 116, 0.18);
+      pointer-events: none;
+    }
+
+    .hero-rings::before {
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: 64px;
+    }
+
+    .hero-rings::after {
+      width: 180px;
+      height: 180px;
+      left: -72px;
+      bottom: 72px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-rings::before {
+        width: 420px;
+        height: 420px;
+        right: -160px;
+      }
+
+      .hero-rings::after {
+        width: 260px;
+        height: 260px;
+        left: -80px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FurnitureStore",
+      "name": "Atelier Tamplarie Classic Arhitectural Design",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Str. Caisului 5",
+        "addressLocality": "Craiova",
+        "postalCode": "200124",
+        "addressCountry": "RO"
+      },
+      "telephone": "+40 720 663 600",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.334525,
+        "longitude": 23.837402
+      },
+      "openingHours": [
+        "Mo-Fr 09:00-17:00"
+      ],
+      "priceRange": "$$",
+      "areaServed": [
+        "Craiova",
+        "Dolj"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header id="acasa" class="relative bg-walnut text-cream">
+    <nav class="fixed inset-x-0 top-0 z-50 border-b border-honey/20 bg-[rgba(62,39,35,0.86)] backdrop-blur-md">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#acasa" class="min-w-0">
+          <span class="block truncate font-serif text-sm uppercase tracking-[0.3em] text-honey sm:text-base">Atelier Tâmplărie</span>
+          <span class="block truncate text-xs text-cream/80 sm:text-sm">Classic Arhitectural Design</span>
+        </a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="#acasa" class="nav-link text-sm font-semibold tracking-wide text-cream/90 transition hover:text-honey">Acasă</a>
+          <a href="#mobilier" class="nav-link text-sm font-semibold tracking-wide text-cream/90 transition hover:text-honey">Mobilier</a>
+          <a href="#proces" class="nav-link text-sm font-semibold tracking-wide text-cream/90 transition hover:text-honey">Proces</a>
+          <a href="#contact" class="nav-link text-sm font-semibold tracking-wide text-cream/90 transition hover:text-honey">Contact</a>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="tel:0720663600" class="hidden items-center gap-2 rounded-full border border-honey/40 bg-cream/10 px-4 py-2 text-sm font-semibold text-cream transition hover:border-honey hover:bg-cream/15 md:flex">
+            <i class="fa-solid fa-phone text-honey"></i>
+            <span>0720 663 600</span>
+          </a>
+          <a href="tel:0720663600" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-honey/40 bg-cream/10 text-honey transition hover:bg-cream/15 md:hidden" aria-label="Sună la atelier">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <button id="menu-toggle" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-honey/40 bg-cream/10 text-cream transition hover:bg-cream/15 md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Deschide meniul">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-overlay" class="pointer-events-none fixed inset-0 z-40 bg-black/45 opacity-0 transition-opacity duration-300 md:hidden"></div>
+      <div id="mobile-menu" class="fixed right-0 top-0 z-50 flex h-full w-[84%] max-w-sm translate-x-full flex-col bg-[#2f1e18] px-6 pb-8 pt-24 shadow-2xl transition-transform duration-300 md:hidden">
+        <div class="space-y-6 text-lg font-semibold text-cream">
+          <a href="#acasa" class="mobile-link block border-b border-honey/15 pb-3">Acasă</a>
+          <a href="#poveste" class="mobile-link block border-b border-honey/15 pb-3">Povestea noastră</a>
+          <a href="#mobilier" class="mobile-link block border-b border-honey/15 pb-3">Mobilier</a>
+          <a href="#proces" class="mobile-link block border-b border-honey/15 pb-3">Cum lucrăm</a>
+          <a href="#locatie" class="mobile-link block border-b border-honey/15 pb-3">Unde ne găsiți</a>
+          <a href="#contact" class="mobile-link block border-b border-honey/15 pb-3">Contact</a>
+        </div>
+        <div class="mt-auto rounded-[1.75rem] border border-honey/20 bg-cream/5 p-5 text-cream/85">
+          <p class="text-sm uppercase tracking-[0.28em] text-honey">Discuție directă</p>
+          <a href="tel:0720663600" class="mt-3 inline-flex items-center gap-3 text-xl font-semibold text-cream">
+            <i class="fa-solid fa-phone text-honey"></i>
+            <span>0720 663 600</span>
+          </a>
+          <p class="mt-4 text-sm leading-7">Str. Caisului 5, Craiova 200124</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="grain-overlay hero-rings relative isolate overflow-hidden">
+      <div class="mx-auto flex min-h-screen max-w-7xl items-center px-4 pb-16 pt-28 sm:px-6 lg:px-8">
+        <div class="grid w-full items-center gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(260px,0.85fr)] lg:gap-16">
+          <div class="relative z-10" data-aos="fade-up">
+            <p class="mb-5 text-sm uppercase tracking-[0.4em] text-honey">Mobilă artizanală în Craiova</p>
+            <h1 class="max-w-3xl text-4xl font-bold leading-tight text-cream sm:text-5xl lg:text-6xl">Mobilă la comandă, creată cu grijă</h1>
+            <div class="mt-8 h-px w-28 bg-honey"></div>
+            <p class="mt-8 max-w-2xl text-lg leading-8 text-cream/85 sm:text-xl sm:leading-9">
+              Fiecare piesă începe cu o discuție despre spațiul dumneavoastră, despre felul în care trăiți și despre ce vă doriți să simțiți acasă. În atelierul nostru din inima Craiovei, transformăm aceste detalii în mobilier lucrat cu mână sigură și atenție reală.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:0720663600" class="inline-flex items-center justify-center rounded-full bg-forest px-7 py-4 text-base font-semibold text-cream shadow-warm transition hover:bg-[#254212]">
+                Discută proiectul tău
+              </a>
+              <a href="#mobilier" class="inline-flex items-center justify-center rounded-full border border-honey px-7 py-4 text-base font-semibold text-cream transition hover:bg-honey/10">
+                Descoperă ce creăm
+              </a>
+            </div>
+            <div class="mt-10 flex items-center gap-4 text-cream/75">
+              <div class="wood-joint flex items-center justify-center">
+                <i class="fa-solid fa-hammer text-xl text-honey"></i>
+              </div>
+              <p class="max-w-sm text-base leading-7">
+                Lucrăm pe comandă, cu măsură, proporție și liniile potrivite pentru fiecare încăpere.
+              </p>
+            </div>
+          </div>
+          <div class="relative z-10" data-aos="fade-left" data-aos-delay="150">
+            <div class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(255,248,240,0.06)] p-6 sm:p-8">
+              <p class="text-sm uppercase tracking-[0.3em] text-honey">Classic Arhitectural Design</p>
+              <h2 class="mt-6 text-2xl leading-tight text-cream sm:text-3xl">Mobilier care își găsește locul firesc în arhitectura casei</h2>
+              <div class="mt-6 space-y-5 text-base leading-8 text-cream/80">
+                <p>Nu urmărim doar să umplem un perete. Căutăm echilibrul dintre depozitare, lumină, circulație și felul în care încăperea respiră.</p>
+                <p>De la bucătării până la birouri, fiecare proiect este desenat pentru viața de zi cu zi și finisat cu respect pentru detaliu.</p>
+              </div>
+              <div class="mt-8 grid gap-4 text-sm text-cream/85 sm:grid-cols-2">
+                <div class="rounded-2xl border border-honey/15 bg-black/10 p-4">
+                  <span class="block uppercase tracking-[0.25em] text-honey">Atelier</span>
+                  <span class="mt-2 block text-base">Str. Caisului 5, Craiova</span>
+                </div>
+                <div class="rounded-2xl border border-honey/15 bg-black/10 p-4">
+                  <span class="block uppercase tracking-[0.25em] text-honey">Program</span>
+                  <span class="mt-2 block text-base">Luni - Vineri, 9:00 - 17:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2" data-aos="fade-up" data-aos-delay="500">
+        <a href="#poveste" class="flex flex-col items-center gap-2 text-sm uppercase tracking-[0.28em] text-cream/70 transition hover:text-honey">
+          <span>Mai jos</span>
+          <span class="flex h-12 w-8 items-start justify-center rounded-full border border-honey/40 p-1">
+            <span class="h-3 w-1 rounded-full bg-honey animate-bounce"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <main>
+    <section id="poveste" class="bg-cream px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+        <p class="text-sm uppercase tracking-[0.35em] text-honey">Din atelier spre casa dumneavoastră</p>
+        <h2 class="mt-5 text-3xl font-bold text-walnut sm:text-4xl">Povestea noastră</h2>
+        <div class="mx-auto mt-6 h-px w-24 bg-honey"></div>
+        <div class="mt-10 space-y-6 text-lg leading-8 text-walnut/85">
+          <p>Pe Str. Caisului, lemnul intră brut și iese cu rost, proporție și personalitate. Aici pornim fiecare lucrare dintr-o discuție atentă despre spațiu, lumină, depozitare și felul în care vreți să trăiți în jurul mobilierului.</p>
+          <p>Nu lucrăm în serii și nu căutăm soluții grăbite. Măsurăm, desenăm, așezăm volumele și lăsăm răbdarea să-și facă treaba, pentru ca piesele să se integreze firesc în casă, nu doar să ocupe loc.</p>
+          <p>Pentru noi, filosofia Classic Arhitectural Design înseamnă mobilier care respectă arhitectura încăperii: linii cumpănite, detalii bine alese și o prezență caldă, discretă, făcută să rămână.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="mobilier" class="grain-overlay relative isolate overflow-hidden bg-walnut px-4 py-20 text-cream sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-6xl">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="text-sm uppercase tracking-[0.35em] text-honey">Portofoliu de atelier</p>
+          <h2 class="mt-5 text-3xl font-bold sm:text-4xl">Ce creăm pentru dumneavoastră</h2>
+          <div class="mt-6 h-px w-24 bg-honey"></div>
+          <p class="mt-8 text-lg leading-8 text-cream/82">Fiecare categorie pornește de la aceeași regulă simplă: mobilierul trebuie să slujească spațiul, să reziste bine și să păstreze căldura unei lucrări făcute pe comandă.</p>
+        </div>
+
+        <div class="mt-14 space-y-6 lg:space-y-8">
+          <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(93,64,55,0.45)] p-6 sm:p-8 lg:mr-auto lg:w-[48%]" data-aos="fade-right">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-honey/30 bg-honey/10 text-xl text-honey">
+                <i class="fa-solid fa-utensils"></i>
+              </span>
+              <div>
+                <h3 class="text-2xl">Bucătărie</h3>
+                <p class="mt-4 text-base leading-8 text-cream/80">Desenăm bucătării în care ordinea, mișcarea și proporția lucrează împreună, astfel încât fiecare corp să fie util și plăcut de privit. Interval orientativ: 4.400 - 11.900 RON.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(93,64,55,0.45)] p-6 sm:p-8 lg:ml-auto lg:w-[48%]" data-aos="fade-left" data-aos-delay="60">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-honey/30 bg-honey/10 text-xl text-honey">
+                <i class="fa-solid fa-couch"></i>
+              </span>
+              <div>
+                <h3 class="text-2xl">Living</h3>
+                <p class="mt-4 text-base leading-8 text-cream/80">Compozițiile pentru living aduc ordine fără să încarce. Construim piese care leagă firesc zona de relaxare, depozitarea și prezența camerei de zi.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(93,64,55,0.45)] p-6 sm:p-8 lg:mr-auto lg:w-[48%]" data-aos="fade-right" data-aos-delay="120">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-honey/30 bg-honey/10 text-xl text-honey">
+                <i class="fa-solid fa-bed"></i>
+              </span>
+              <div>
+                <h3 class="text-2xl">Dormitor</h3>
+                <p class="mt-4 text-base leading-8 text-cream/80">Paturi, dressinguri și comode gândite pentru liniște vizuală, deschidere comodă și o atmosferă calmă. Dormitorul trebuie să odihnească și prin felul în care este construit.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(93,64,55,0.45)] p-6 sm:p-8 lg:ml-auto lg:w-[48%]" data-aos="fade-left" data-aos-delay="180">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-honey/30 bg-honey/10 text-xl text-honey">
+                <i class="fa-solid fa-child"></i>
+              </span>
+              <div>
+                <h3 class="text-2xl">Copii și tineret</h3>
+                <p class="mt-4 text-base leading-8 text-cream/80">Creăm mobilier care lasă loc de creștere, joacă și studiu, dar păstrează aceeași grijă pentru rezistență, siguranță și ordine în fiecare colț al camerei.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(93,64,55,0.45)] p-6 sm:p-8 lg:mr-auto lg:w-[48%]" data-aos="fade-right" data-aos-delay="240">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-honey/30 bg-honey/10 text-xl text-honey">
+                <i class="fa-solid fa-bath"></i>
+              </span>
+              <div>
+                <h3 class="text-2xl">Baie</h3>
+                <p class="mt-4 text-base leading-8 text-cream/80">În baie, fiecare centimetru contează. Propunem soluții echilibrate, care folosesc bine spațiul și păstrează o prezență curată, atentă la ritmul încăperii.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(93,64,55,0.45)] p-6 sm:p-8 lg:ml-auto lg:w-[48%]" data-aos="fade-left" data-aos-delay="300">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-honey/30 bg-honey/10 text-xl text-honey">
+                <i class="fa-solid fa-door-open"></i>
+              </span>
+              <div>
+                <h3 class="text-2xl">Hol</h3>
+                <p class="mt-4 text-base leading-8 text-cream/80">Holul este prima întâlnire cu o casă bine așezată. Construim pantofare, cuiere și depozitări discrete care primesc ordinea chiar de la intrare.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(93,64,55,0.45)] p-6 sm:p-8 lg:mr-auto lg:w-[48%]" data-aos="fade-right" data-aos-delay="360">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-honey/30 bg-honey/10 text-xl text-honey">
+                <i class="fa-solid fa-briefcase"></i>
+              </span>
+              <div>
+                <h3 class="text-2xl">Birou</h3>
+                <p class="mt-4 text-base leading-8 text-cream/80">Birourile și corpurile auxiliare sunt gândite pentru concentrare, flux curat și o prezență sobră. Spațiul de lucru trebuie să susțină ideile, nu să le încurce.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="proces" class="bg-cream px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-6xl">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="text-sm uppercase tracking-[0.35em] text-honey">Pași clari, lucru atent</p>
+          <h2 class="mt-5 text-3xl font-bold text-walnut sm:text-4xl">Cum lucrăm</h2>
+          <div class="mt-6 h-px w-24 bg-honey"></div>
+        </div>
+
+        <div class="relative mt-14">
+          <div class="process-line-mobile absolute bottom-0 left-7 top-0 w-px md:hidden" aria-hidden="true"></div>
+          <div class="process-line-desktop absolute left-[12.5%] right-[12.5%] top-14 hidden h-px md:block" aria-hidden="true"></div>
+          <div class="grid gap-8 md:grid-cols-4 md:gap-6">
+            <article class="relative pl-16 md:pl-0" data-aos="fade-up" data-aos-delay="0">
+              <div class="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border border-honey/40 bg-cream shadow-warm md:static md:mx-auto">
+                <i class="fa-solid fa-comments text-lg text-walnut"></i>
+              </div>
+              <div class="rounded-[1.75rem] border border-honey/25 bg-white/60 p-6 shadow-warm md:mt-6 md:text-center">
+                <p class="text-sm uppercase tracking-[0.28em] text-honey">Pasul 1</p>
+                <h3 class="mt-3 text-xl text-walnut">Consultare</h3>
+                <p class="mt-4 text-base leading-8 text-walnut/80">Discutăm despre spațiu, nevoi și viziune.</p>
+              </div>
+            </article>
+
+            <article class="relative pl-16 md:pl-0" data-aos="fade-up" data-aos-delay="120">
+              <div class="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border border-honey/40 bg-cream shadow-warm md:static md:mx-auto">
+                <i class="fa-solid fa-drafting-compass text-lg text-walnut"></i>
+              </div>
+              <div class="rounded-[1.75rem] border border-honey/25 bg-white/60 p-6 shadow-warm md:mt-6 md:text-center">
+                <p class="text-sm uppercase tracking-[0.28em] text-honey">Pasul 2</p>
+                <h3 class="mt-3 text-xl text-walnut">Design</h3>
+                <p class="mt-4 text-base leading-8 text-walnut/80">Proiectăm soluția potrivită pentru casa dumneavoastră.</p>
+              </div>
+            </article>
+
+            <article class="relative pl-16 md:pl-0" data-aos="fade-up" data-aos-delay="240">
+              <div class="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border border-honey/40 bg-cream shadow-warm md:static md:mx-auto">
+                <i class="fa-solid fa-hammer text-lg text-walnut"></i>
+              </div>
+              <div class="rounded-[1.75rem] border border-honey/25 bg-white/60 p-6 shadow-warm md:mt-6 md:text-center">
+                <p class="text-sm uppercase tracking-[0.28em] text-honey">Pasul 3</p>
+                <h3 class="mt-3 text-xl text-walnut">Execuție</h3>
+                <p class="mt-4 text-base leading-8 text-walnut/80">Creăm mobilierul în atelierul nostru, cu materiale alese cu grijă.</p>
+              </div>
+            </article>
+
+            <article class="relative pl-16 md:pl-0" data-aos="fade-up" data-aos-delay="360">
+              <div class="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border border-honey/40 bg-cream shadow-warm md:static md:mx-auto">
+                <i class="fa-solid fa-truck text-lg text-walnut"></i>
+              </div>
+              <div class="rounded-[1.75rem] border border-honey/25 bg-white/60 p-6 shadow-warm md:mt-6 md:text-center">
+                <p class="text-sm uppercase tracking-[0.28em] text-honey">Pasul 4</p>
+                <h3 class="mt-3 text-xl text-walnut">Montaj</h3>
+                <p class="mt-4 text-base leading-8 text-walnut/80">Livrăm și montăm la domiciliu, cu atenție la fiecare detaliu.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="mt-12 text-center text-lg leading-8 text-walnut/85" data-aos="fade-up" data-aos-delay="420">De la prima conversație până la ultima șurubelniță, suntem alături de dumneavoastră.</p>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="marturie" class="grain-overlay relative isolate overflow-hidden bg-walnut px-4 py-20 text-cream sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-4xl text-center" data-aos="fade-up">
+        <p class="text-sm uppercase tracking-[0.35em] text-honey">Cuvinte primite după lucru bine făcut</p>
+        <div class="quote-mark mt-8 text-7xl text-honey sm:text-8xl">“</div>
+        <blockquote class="mt-4 text-xl italic leading-10 text-cream sm:text-2xl sm:leading-[3rem]">
+          Calitate foarte bună. Am fost mulțumit de consultanță și ulterior de calitatea montajului și a tâmplăriei.
+        </blockquote>
+        <div class="mt-8 flex items-center justify-center gap-2 text-honey" aria-label="Cinci stele">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="mt-6 text-lg font-semibold text-cream/85">Codrin Mirea</p>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="locatie" class="bg-cream px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,0.95fr)] lg:items-start">
+        <div data-aos="fade-right">
+          <p class="text-sm uppercase tracking-[0.35em] text-honey">Atelierul nostru din Craiova</p>
+          <h2 class="mt-5 text-3xl font-bold text-walnut sm:text-4xl">Unde ne găsiți</h2>
+          <div class="mt-6 h-px w-24 bg-honey"></div>
+          <div class="mt-10 space-y-6 text-lg leading-8 text-walnut/85">
+            <p>Ne găsiți pe Str. Caisului 5, într-o zonă liniștită din Craiova, ușor de ajuns și potrivită pentru un atelier în care lucrurile bune se fac cu răgaz și atenție.</p>
+            <p>De aici pleacă proiectele noastre către locuințele familiilor din oraș și din județul Dolj, fiecare piesă fiind gândită pentru viața reală, nu pentru un catalog impersonal.</p>
+          </div>
+        </div>
+
+        <article class="catalog-card rounded-[2rem] border border-honey/25 bg-cream-deep p-6 sm:p-8" data-aos="fade-left" data-aos-delay="120">
+          <div class="map-grid relative overflow-hidden rounded-[1.75rem] border border-honey/30 bg-white/50 p-6">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(212,165,116,0.2),transparent_48%)]"></div>
+            <div class="relative flex min-h-[220px] items-center justify-center">
+              <div class="flex h-20 w-20 items-center justify-center rounded-full border border-honey/60 bg-walnut text-3xl text-honey shadow-warm">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 space-y-6">
+            <div>
+              <p class="text-sm uppercase tracking-[0.28em] text-honey">Adresă</p>
+              <p class="mt-2 text-xl font-semibold text-walnut">Str. Caisului 5, Craiova 200124</p>
+            </div>
+            <a href="https://www.google.com/maps?q=44.334525,23.837402" target="_blank" rel="noreferrer" class="inline-flex items-center gap-3 rounded-full border border-forest bg-forest px-6 py-3 text-sm font-semibold text-cream transition hover:bg-[#244214]">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Deschide în Google Maps</span>
+            </a>
+            <div class="border-t border-honey/25 pt-6">
+              <p class="text-sm uppercase tracking-[0.28em] text-honey">Program</p>
+              <div class="mt-4 grid gap-3 text-base text-walnut/85 sm:grid-cols-2">
+                <p class="flex justify-between gap-4 border-b border-honey/15 pb-2"><span>Luni</span><span>9:00 - 17:00</span></p>
+                <p class="flex justify-between gap-4 border-b border-honey/15 pb-2"><span>Marți</span><span>9:00 - 17:00</span></p>
+                <p class="flex justify-between gap-4 border-b border-honey/15 pb-2"><span>Miercuri</span><span>9:00 - 17:00</span></p>
+                <p class="flex justify-between gap-4 border-b border-honey/15 pb-2"><span>Joi</span><span>9:00 - 17:00</span></p>
+                <p class="flex justify-between gap-4 border-b border-honey/15 pb-2"><span>Vineri</span><span>9:00 - 17:00</span></p>
+                <p class="flex justify-between gap-4 border-b border-honey/15 pb-2"><span>Sâmbătă</span><span>Închis</span></p>
+                <p class="flex justify-between gap-4 border-b border-honey/15 pb-2 sm:col-span-2"><span>Duminică</span><span>Închis</span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="contact" class="grain-overlay relative isolate overflow-hidden bg-walnut px-4 py-20 text-cream sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)] lg:items-center">
+        <div data-aos="fade-right">
+          <p class="text-sm uppercase tracking-[0.35em] text-honey">Invitație la o conversație bună</p>
+          <h2 class="mt-5 max-w-3xl text-3xl font-bold sm:text-4xl">Să vorbim despre proiectul dumneavoastră</h2>
+          <div class="mt-6 h-px w-24 bg-honey"></div>
+          <p class="mt-8 max-w-2xl text-lg leading-8 text-cream/82">Orice piesă reușită începe cu o discuție sinceră. Fie că aveți deja o viziune clară, fie că porniți doar cu o idee, suntem gata să ascultăm și să construim împreună cea mai potrivită soluție pentru casa dumneavoastră.</p>
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a href="tel:0720663600" class="inline-flex items-center justify-center rounded-full bg-honey px-7 py-4 text-lg font-semibold text-walnut transition hover:bg-honey-light">
+              0720 663 600
+            </a>
+            <div>
+              <p class="text-sm uppercase tracking-[0.28em] text-honey">Vizitați atelierul</p>
+              <p class="mt-2 text-base leading-7 text-cream/80">Str. Caisului 5, Craiova 200124</p>
+            </div>
+          </div>
+        </div>
+
+        <article class="catalog-card rounded-[2rem] border border-honey/20 bg-[rgba(255,248,240,0.07)] p-6 sm:p-8" data-aos="fade-left" data-aos-delay="120">
+          <p class="text-sm uppercase tracking-[0.28em] text-honey">Program de lucru</p>
+          <div class="mt-6 space-y-3 text-base text-cream/85">
+            <p class="flex justify-between gap-4 border-b border-honey/15 pb-3"><span>Luni - Vineri</span><span>9:00 - 17:00</span></p>
+            <p class="flex justify-between gap-4 border-b border-honey/15 pb-3"><span>Sâmbătă</span><span>Închis</span></p>
+            <p class="flex justify-between gap-4 border-b border-honey/15 pb-3"><span>Duminică</span><span>Închis</span></p>
+          </div>
+          <div class="mt-8 rounded-[1.5rem] border border-honey/15 bg-black/10 p-5">
+            <p class="text-sm uppercase tracking-[0.28em] text-honey">Suntem pregătiți să ascultăm</p>
+            <a href="tel:0720663600" class="mt-4 inline-flex items-center gap-3 text-2xl font-semibold text-cream">
+              <i class="fa-solid fa-phone text-honey"></i>
+              <span>Sună acum</span>
+            </a>
+            <p class="mt-4 text-base leading-7 text-cream/75">Când proiectul pornește dintr-o conversație bună, mobilierul capătă măsură, rost și o prezență care rămâne.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <footer class="bg-[#2C1B14] px-4 py-10 text-cream sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <p class="font-serif text-xl text-cream">Atelier Tâmplărie Classic Arhitectural Design</p>
+      <div class="mt-5 h-px w-24 bg-honey"></div>
+      <div class="mt-6 flex flex-col gap-3 text-base text-cream/80 sm:flex-row sm:flex-wrap sm:gap-x-8">
+        <p>Str. Caisului 5, Craiova 200124</p>
+        <p><a href="tel:0720663600" class="transition hover:text-honey">0720 663 600</a></p>
+      </div>
+      <p class="mt-6 text-sm uppercase tracking-[0.2em] text-cream/55">Toate drepturile rezervate. <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    (function () {
+      const body = document.body;
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileOverlay = document.getElementById("mobile-overlay");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+      const year = document.getElementById("year");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function closeMenu() {
+        body.classList.remove("menu-open");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+      }
+
+      function toggleMenu() {
+        const isOpen = body.classList.toggle("menu-open");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+          menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        }
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", toggleMenu);
+      }
+
+      if (mobileOverlay) {
+        mobileOverlay.addEventListener("click", closeMenu);
+      }
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+
+      if (year) {
+        year.textContent = String(new Date().getFullYear());
+      }
+
+      AOS.init({
+        duration: reduceMotion ? 0 : 900,
+        once: true,
+        offset: 80,
+        easing: "ease-out-cubic",
+        disable: reduceMotion
+      });
+    })();
+  </script>
+</body>
+</html>

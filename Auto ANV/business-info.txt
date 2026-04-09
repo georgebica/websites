@@ -1,0 +1,183 @@
+Original Data:
+==================================================
+Title: Auto ANV
+Category: Auto repair shop
+Address: Bulevardul Nicolae Romanescu 163, 200738 Craiova
+Complete Address: {"borough":"","street":"Bulevardul Nicolae Romanescu 163","city":"Craiova","postal_code":"200738","state":"","country":"RO"}
+Phone: 0763 929 287
+Owner: {"id":"","name":"Auto ANV (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Auto+ANV/data=!4m7!3m6!1s0x4752d7711152a00f:0xb74e357dde85549d!8m2!3d44.2861856!4d23.799918!16s%2Fg%2F11h4pccyvy!19sChIJD6BSEXHXUkcRnVSF3n01Trc?authuser=0&hl=en&rclk=1
+Rating: 4.9/5 (31 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJD6BSEXHXUkcRnVSF3n01Trc&q=Auto+ANV&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["9 am–6 pm"],"Monday":["9 am–6 pm"],"Saturday":["9 am–2 pm"],"Sunday":["Closed"],"Thursday":["9 am–6 pm"],"Tuesday":["9 am–6 pm"],"Wednesday":["9 am–6 pm"]}
+About: [{"id":"amenities","name":"Amenities","options":[{"name":"Mechanic","enabled":true},{"name":"Toilet","enabled":true}]},{"id":"payments","name":"Payments","options":[{"name":"Debit cards","enabled":true},{"name":"NFC mobile payments","enabled":true},{"name":"Credit cards","enabled":false}]}]
+Plus Code: 7QPX+FX Craiova
+Place ID: ChIJD6BSEXHXUkcRnVSF3n01Trc
+CID: 13208553571844707485
+Latitude: 44.286186
+Longitude: 23.799918
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAweoMT7qzurJ25tYXDSptefqsHW-PVy9GvN2GPWAFw-LV5P_PQ9UvxIM6UDPtPyBXl4_abK42m_4YypUIwPUnCFukLjiRQv1W2iDnZuQuLnozMaidOGqnCEy-w1Ty172gifpT9ZfF1pug9dm6=w408-h272-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 31 | ****: 3 | ***: 0 | **: 1 | *: 0
+
+[*****] grigorascu daniel
+  "Tot timpul am gasit preturi bune si baieti pregatiti care stiu sa te sfatuiasca...!!!"
+
+[*****] cyoby flo
+  "Băieți foarte amabili și servire promptă."
+
+[*****] Robert Bojenoiu
+  "Foarte bun magazinul de piese auto si preturi accesibile."
+
+[*****] Claudiu David
+  "Seriozitate si preturi corecte!"
+
+[*****] Razvan-Cristian Marian
+  "Piese comandate profesional si rapid!"
+
+[*****] Gigi G
+  "Seriozitate și promptitudine, bravo lor!"
+
+[*****] Ştefănescu Cosmin Florin
+  "Oameni extraordinari, preturi excelente."
+
+[****_] Popescu Gheorghe
+  "Bine aprovizionat preturi bune"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Auto Anv is a small auto repair and automotive services business located in Craiova, Romania (Dolj County). The company operates as a limited liability company (SRL) and provides mechanical repair services to the local automotive market. It is classified as a microenterprise with a lean operational structure focused on delivering automotive maintenance and repair services.
+
+Legal Details & Registration
+Attribute	Details
+Company Name	AUTO ANV SRL
+Tax ID (CUI)	30193698
+Commercial Registration Number	J2012000758166
+EU Registration ID (EUID)	ROONRC.J2012000758166
+Founding Date	May 15, 2012
+Business Location	Bulevardul Nicolae Romanescu 163, Craiova, 200738, Dolj, Romania
+Registered Address	Boulevard Oltenia No. 28, Block 24, Staircase 1, Apartment 11, Craiova
+Company Structure	Microenterprise with 1 owner/administrator and 1 associate
+Number of Employees	3-4 employees (2024 data shows 4 employees)
+Primary Services & Amenities
+
+Auto Anv operates as an auto repair shop offering mechanical services to customers in Craiova. Based on the available information, the facility provides:
+
+Confirmed Amenities
+Mechanic services – Professional vehicle repair and maintenance
+Toilet facilities – Available for customer use
+Payment Options Accepted
+Debit cards – Accepted
+NFC mobile payments – Accepted (contactless/digital wallet payments)
+Credit cards – Not accepted
+Operating Hours
+
+The business maintains consistent weekday operations with weekend service:
+
+Day	Hours
+Monday - Friday	09:00 - 18:00
+Saturday	09:00 - 14:00
+Sunday	Closed
+
+Operating hours last updated January 9, 2026
+
+Contact Information
+Phone/Mobile: 0763 929 287
+Email: Available but partially redacted in public records (auto-[redacted]@...)
+No official website currently listed in business registrations
+Financial Performance
+
+Auto Anv's financial data (in Romanian Lei - RON) shows the following trajectory:
+
+Year	Revenue (RON)	Net Profit (RON)	Total Debt (RON)	Employees
+2024	945,365	-59,312	927,019	4
+2023	708,808	-12,484	480,852	3
+2022	478,996	-74,636	391,387	4
+2021	511,513	-44,168	269,451	3
+2020	412,939	-12,562	270,157	3
+Financial Analysis
+
+Revenue Growth: The company has demonstrated consistent revenue growth over the past five years, with 2024 revenues reaching approximately 945,365 RON (roughly €190,000 USD equivalent), representing a 33% increase from 2023. This shows positive business momentum.
+
+Profitability Concerns: Despite revenue growth, Auto Anv has operated at a loss in recent years, with 2024 showing a net loss of -59,312 RON. This indicates that while the business is generating more sales, operational costs are exceeding revenues, suggesting potential challenges in cost management or pricing strategy.
+
+Debt Position: The company carries significant liabilities relative to its revenue, with 2024 total debt of 927,019 RON—nearly equal to annual revenue. This is a concerning debt-to-revenue ratio that warrants attention.
+
+Business Classification: Auto Anv is registered under CAEN code 4532 (Retail trade in automotive parts and accessories), though it also operates as an auto repair service (CAEN 4782/4792 equivalent).
+
+Market Position & Reputation
+Customer Rating
+Metric	Rating
+Overall Rating	4.9/5 stars
+Number of Reviews	31 reviews
+Alternative Rating	4.6/5 stars (on Cylex directory)
+
+The exceptionally high 4.9/5 rating from 31 reviews indicates strong customer satisfaction and positive reputation in the local Craiova market. This is a significant competitive advantage for a small repair shop.
+
+Local Market Context
+
+Auto Anv operates in a competitive auto repair market in Craiova. Nearby competitors include:
+
+Drive Sprint Auto (230 meters away)
+SMD AutoTrans (470 meters away)
+AutoPOT GARAGE (480 meters away)
+Euromaster Craiova (960 meters away)
+
+Despite this competition, Auto Anv's high customer ratings suggest it has differentiated itself through service quality or customer experience.
+
+Customer Reviews & Testimonials
+Assessment
+
+While specific individual reviews were not accessible in the search results, the aggregated 4.9/5 rating across 31 reviews strongly suggests:
+
+High-quality mechanical work – Customers are satisfied with repair quality
+Professional service – Positive customer interactions and reliability
+Good value proposition – Customers perceive fair pricing relative to service quality
+Trustworthiness – The high rating indicates customers feel confident in the business
+
+The consistency of the high rating across multiple review sources (4.9/5 on one platform, 4.6/5 on another) validates the positive reputation.
+
+Online Presence & Digital Visibility
+
+Auto Anv maintains a minimal digital presence:
+
+Listed On
+Cylex business directory (craiova.cylex.ro)
+Lista Firme (Romanian business registry)
+Solutie DPF (auto service directory)
+Not Found
+No official company website
+No Facebook business page (or not actively promoted)
+No Instagram presence
+No LinkedIn company profile
+No Google Business profile (though likely listed in Google Maps)
+
+This limited digital presence represents a business opportunity—developing a website and active social media could help the business reach more customers and build online credibility.
+
+Business Assessment
+Strengths
+Outstanding customer reputation – 4.9/5 rating demonstrates quality service
+Growing revenue – 33% year-over-year growth in 2024 shows market demand
+Established business – Operating since 2012 (12+ years of market presence)
+Strategic location – Positioned on a major boulevard in Craiova
+Flexible payment options – Accepts modern payment methods (debit cards, NFC mobile)
+Challenges
+Persistent operating losses – Negative net profit despite revenue growth suggests cost management issues
+High debt burden – Debt nearly equals annual revenue (927,000 RON debt vs. 945,000 RON revenue)
+Minimal digital presence – No website or active social media limits customer reach
+Small team – Only 3-4 employees limits service capacity and growth potential
+Narrow business focus – Concentrated in a single location with limited diversification
+Recommendations for Growth
+Develop a professional website with service descriptions and online booking
+Improve cost structure to achieve profitability while maintaining quality
+Address debt levels through refinancing or restructuring
+Expand digital marketing to increase local visibility
+Consider strategic hiring to expand service capacity
+
+##Website_Found: None

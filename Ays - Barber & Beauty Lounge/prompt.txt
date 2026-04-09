@@ -1,0 +1,213 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+NON-NEGOTIABLE RULES
+- Read the full RAW BUSINESS DOSSIER below before writing any copy, layout, or section plan.
+- Treat the full dossier as mandatory source material, not as an optional appendix.
+- Use only facts that are clearly supported by the dossier. If a detail is uncertain, leave it out.
+- The dossier may contain noisy or conflicting scraps from scraping. If a detail clearly refers to another company, another phone number, another city, or another business activity, ignore that detail.
+- If the Google category is generic or misleading, prefer the clearer business activity described elsewhere in the dossier.
+- Build a site that feels substantial, specific, and commercially useful. Do not make it feel blank or padded.
+- Prioritize actual useful business information: services, location, phone, booking or appointment flow, hours, amenities, delivery details, neighborhoods, named staff, process details, and credible review-backed strengths when they clearly match the business.
+
+FORBIDDEN COPY AND TONE
+- Never write copy that explains the page itself, the source of the data, or what is publicly verified.
+- Never use phrases like `Pagina pune in fata...`, `Cum decurge colaborarea`, `Ce este verificat public`, `dovada publica`, `feedback public`, `informatiile publice`, `am selectat`, or `verificat public`.
+- Never mention that the site is based on public data, verified data, a source bank, an appendix, research, listings, or selected reviews.
+- Never write filler about clarity, proof, or strategy in the abstract. Speak directly about the business and what the customer can actually do or get.
+- Avoid generic trust-filler. Show useful facts instead.
+
+FAST FACTS
+- Business: Ays - Barber & Beauty Lounge
+- Best-fit activity: Hair salon
+- Location focus: Craiova
+- Primary CTA label suggestion: Rezerva acum
+- Secondary CTA label suggestion: Vezi locatia
+- Signature section direction: Servicii & Programari
+- Phone: 0773 945 335
+- Address: Bloc U5, Strada Vasile Conta 1, 200404 Craiova
+- Rating summary: 4.9/5 (18 review-uri)
+- Practical convenience clues: Toilet, Appointments recommended, Good for kids
+
+CONTENT PRIORITIES
+- Build headlines and sections around the real business offer, not around the existence of data.
+- Surface the most decision-making details early: what the business does, where it is, how to contact it, and why someone should choose it now.
+- Mine the dossier for concrete service clues even if they appear in reviews, company-overview notes, amenities, or operational descriptions.
+- If there are real review-backed strengths, translate them into grounded claims and selective quotes only when they clearly fit the target business.
+- If details are sparse, make the design rich and confident but keep the copy factual and concise. Do not invent substance.
+
+SECTION DIRECTION
+- Create a strong hero with a real business promise tied to the city or service area.
+- Include a services or capabilities section using actual service details from the dossier wherever possible.
+- Include a practical reasons-to-choose-us section built from real operational strengths, not abstract marketing talk.
+- Include a process, booking, appointment, or stay-planning section only if you can make it operational and business-specific.
+- Include reviews or rating proof only when it genuinely helps and clearly matches the business.
+- Finish with a contact section that makes phone, address, map, hours, and next-step actions obvious.
+- Add FAQ only if the dossier supports real questions people would ask this business.
+
+TECHNICAL BUILD RULES
+- Build one standalone `index.html` file.
+- Use Tailwind CSS via CDN.
+- Use minimal vanilla JavaScript only where it improves navigation or interaction.
+- Use Font Awesome via CDN for icons.
+- Mobile-first, responsive, and thumb-friendly.
+- No placeholder text, no Lorem Ipsum, no fake metrics, no invented credentials, no fabricated testimonials, no fake galleries.
+- Do not add forms unless the dossier clearly supports a direct email/contact workflow. Phone and map actions are usually better.
+- Do not output the brief or explain your choices. Output only the finished website file.
+
+RAW BUSINESS DOSSIER
+Read this entire block before writing the site. Use it as the primary factual source.
+Original Data:
+==================================================
+Title: Ays - Barber & Beauty Lounge
+Category: Hair salon
+Address: Bloc U5, Strada Vasile Conta 1, 200404 Craiova
+Complete Address: {"borough":"","street":"Bloc U5, Strada Vasile Conta 1","city":"Craiova","postal_code":"200404","state":"","country":"RO"}
+Phone: 0773 945 335
+Owner: {"id":"","name":"Ays - Barber \u0026 Beauty Lounge (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Ays+-+Barber+%26+Beauty+Lounge/data=!4m7!3m6!1s0x4752d75d22490387:0xeb88c472dd2ca29d!8m2!3d44.3213871!4d23.7977891!16s%2Fg%2F11fskmy_h5!19sChIJhwNJIl3XUkcRnaIs3XLEiOs?authuser=0&hl=en&rclk=1
+Rating: 4.9/5 (18 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJhwNJIl3XUkcRnaIs3XLEiOs&q=Ays+-+Barber+%26+Beauty+Lounge&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: [{"id":"amenities","name":"Amenities","options":[{"name":"Toilet","enabled":true}]},{"id":"planning","name":"Planning","options":[{"name":"Appointments recommended","enabled":true}]},{"id":"children","name":"Children","options":[{"name":"Good for kids","enabled":true}]}]
+Plus Code: 8QCX+H4 Craiova
+Place ID: ChIJhwNJIl3XUkcRnaIs3XLEiOs
+CID: 16972031193361719965
+Latitude: 44.321387
+Longitude: 23.797789
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=fLilCibcVIwh63syeMctGg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=278.93738&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 65 | ****: 3 | ***: 0 | **: 1 | *: 1
+
+[*****] Alexandru Vaneata
+  "Excellent barbershop for men and kids."
+
+[*****] Bogdan Ciontu
+  "Professional haircuts, friendly staff"
+
+[*****] Adrian Buta
+  "Best in town!"
+
+[*****] Sebastian Sylwestrzak
+  "Profesjonalna obsługa, pani Nina poradziła sobie bez problemu nawet bez znajomości polskiego języka :)"
+
+[*****] Giovanni Faruolo
+  "Brava, bravissima, accogliente, grande professionalità, gentilissima in tutto. Grazie Nina"
+
+[*****] Marius Călin
+  "Curat și elegant.. NUMAI  PE PROGRAMARE vă puteți aranja frizura."
+
+[*****] David Armaselu
+  "Serviciile sunt de calitate.Vă recomand să încercați!🙂"
+
+[*****] Ovidiu Ciurezu
+  "Personal amabil si servicii de nota 11"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Ays - Barber & Beauty Lounge is a specialized hair salon and barber shop located in the central municipality of Craiova, Romania. The business is dedicated to providing beauty and personal care services, with a particular emphasis on professional hairdressing and barber shop-specific treatments. The salon operates from a ground-floor location (parter) in building U5 on Strada Vasile Conta, with convenient access near the Ramada Hotel.
+
+Business Location & Contact Details
+Attribute	Details
+Full Address	Bloc U5, Strada Vasile Conta 1, Craiova 200404, Dolj County, Romania
+Phone	0773 945 335
+Geographic Coordinates	44.3213871°N, 23.7977891°E
+Accessibility	Convenient central location with accessible entry through the building's rear corridor
+Primary Services & Offerings
+
+The salon specializes in a comprehensive range of beauty and personal care treatments, including:
+
+Hairdressing services (haircuts, styling, treatments)
+Barber shop services (men's haircuts, beard grooming, beard arrangement)
+Scalp treatments
+General beauty and personal care services
+
+The business emphasizes offering clients a complete and relaxing experience through professional service delivery.
+
+Amenities & Facilities
+Feature	Status
+Restroom/Toilet	✓ Available
+Appointments	✓ Recommended
+Child-Friendly	✓ Good for kids
+Market Position & Reputation
+Customer Ratings
+
+Ays - Barber & Beauty Lounge maintains an exceptionally strong reputation in the local beauty services market:
+
+Rating Source	Score	Review Count
+Primary Platforms	4.9 / 5.0	18 reviews
+Șoimii Frumuseții Directory	8.7 / 10	18 reviews
+Cylex Business Directory	4.9 / 5.0	17 reviews
+Market Recognition
+
+The business has achieved award recognition as a 2025 and 2026 Project Laureate according to the Șoimii Frumuseții (Beauty Eagles) professional directory, indicating industry recognition for excellence.
+
+Customer Reviews & Testimonials
+
+The research indicates that Ays - Barber & Beauty Lounge has accumulated over 2,700 positive reviews across various platforms (noted in the Șoimii Frumuseții directory), reflecting consistently high professional standards. The salon is positioned as a benchmark of excellence in beauty and personal care services in Craiova.
+
+Key attributes highlighted by the high ratings include:
+
+Professional service quality
+Customer satisfaction focus
+Consistent service delivery
+Comprehensive treatment offerings
+Competitive Position in Dolj County
+
+Within Dolj County's hair salon market (37 salons as of April 2026), Ays - Barber & Beauty Lounge ranks among the top performers with a 4.9/5 rating, placing it alongside other highly-rated establishments such as:
+
+ID STUDIO by IONUT DINCA (4.9 rating, 255 reviews)
+NICO STUDIO-HAIRSTYLE CRAIOVA (4.9 rating, 94 reviews)
+
+The salon operates in a competitive but growing market where digital presence and professional reputation are increasingly important.
+
+Legal & Registration Details
+
+Information Not Publicly Available: Specific legal details such as registration number, founding date, tax ID, ownership structure, and financial performance are not publicly accessible through standard business registries or directories. This information would typically be available through:
+
+Romanian Trade Register (Registrul Comerțului)
+National Tax Authority databases
+Company-specific registration documents
+Digital Presence & Online Visibility
+
+The business maintains limited but verified online presence:
+
+Platform	Status
+Official Website	Not identified
+Facebook Page	Referenced but no direct link found
+Instagram	Not identified in search results
+Google Business Profile	Verified (maps presence)
+Business Directories	Listed on Cylex, Șoimii Frumuseții, Bookr, Waze
+Booking Platforms	Listed on Bookr appointment system
+
+The salon appears to rely primarily on directory listings and word-of-mouth marketing rather than maintaining an independent digital presence.
+
+Key Observations & Assessments
+Strengths
+Exceptional customer ratings (4.9/5) with substantial review volume
+Strategic central location near major hotel (Ramada)
+Comprehensive service offerings covering both men's and women's services
+Professional recognition through industry awards
+Verified presence on multiple trusted directories
+Areas for Development
+Limited independent digital presence (no dedicated website or strong social media)
+Relatively fewer reviews (18-17) compared to some competitors in the market
+Minimal online marketing visibility compared to larger competitors
+No apparent email contact option for customer inquiries
+Market Context
+
+The business operates in a moderately competitive local market where professional reputation and customer satisfaction are paramount. The salon's high ratings and award recognition suggest strong operational execution and customer service quality.
+
+##Website_Found: None
+
+FINAL REMINDER
+Use GPT-5.4, not a mini model. Build a business-first Romanian website that feels human, specific, and commercially useful.

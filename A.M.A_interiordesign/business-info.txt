@@ -1,0 +1,61 @@
+Original Data:
+==================================================
+Title: A.M.A_interiordesign
+Category: Interior designer
+Address: Bulevardul Alexandru Ioan Cuza, 049200 Slatina
+Complete Address: {"borough":"","street":"Bulevardul Alexandru Ioan Cuza","city":"Slatina","postal_code":"049200","state":"","country":"RO"}
+Phone: 0786 645 129
+Owner: {"id":"105013059097245672316","name":"A.M.A_interiordesign (Owner)","link":"https://www.google.com/maps/contrib/105013059097245672316"}
+Google Maps Link: https://www.google.com/maps/place/A.M.A_interiordesign/data=!4m7!3m6!1s0x40ad39d396997313:0x7906508e1549d881!8m2!3d44.426578!4d24.3761167!16s%2Fg%2F11ww4hrdqh!19sChIJE3OZltM5rUARgdhJFY5QBnk?authuser=0&hl=en&rclk=1
+Open Hours: {"Friday":["9 am–5 pm"],"Monday":["9 am–9 pm"],"Saturday":["9 am–5 pm"],"Sunday":["9 am–5 pm"],"Thursday":["9 am–5 pm"],"Tuesday":["9 am–9 pm"],"Wednesday":["9 am–5 pm"]}
+About: null
+Plus Code: C9GG+JC Slatina
+Place ID: ChIJE3OZltM5rUARgdhJFY5QBnk
+CID: 8720746299622283393
+Latitude: 44.426578
+Longitude: 24.376117
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=iqy_72j2o5nQDV-iz_GmaA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=254.98503&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 0 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+
+
+Company Overview:
+==================================================
+Company Overview
+Name: A.M.A_Interiordesign
+Category: Interior Designer
+Address (provided): Bulevardul Alexandru Ioan Cuza, Slatina 049200, Ro
+Phone (provided): 0786 645 129
+Owner (provided): A.M.A_Interiordesign (Owner), Google Maps contributor ID: 105013059097245672316
+About: No description provided.
+
+Verified information above comes solely from the user’s supplied data. I searched for additional online records but did not find verifiable public listings, an official website, or social profiles matching this exact business name plus the provided address and phone number.
+
+Legal Details
+Registration, founding date, and tax ID: Not found in public business registries accessible via standard web search for the supplied name, phone number, and address. No verified company registration record (e.g., Romanian Trade Register entry) could be located for A.M.A_Interiordesign with the provided details.
+
+(Assessment) It’s possible the business operates as an informal sole proprietorship, under a different registered name, or its public registration uses different spelling/formatting.
+
+Primary Services / Products
+Verified: None located online beyond the category "Interior Designer" from your context.
+Assessment: As an interior design business, likely services would include interior space planning, design consultancy, 3D visualizations, furniture and finishes selection, and project management — but this is an educated assumption, not verified for this entity.
+Financial Performance
+No public financial statements, revenue figures, or tax filings were found for this business under the provided name and details.
+Market Position / Reputation
+No independent sources (local directories, trade listings, press, or industry sites) were found that profile or reference this business. Therefore, market position and competitive standing cannot be confirmed.
+Customer Reviews / Testimonials
+No customer reviews located on Google Business Profile, Facebook, Instagram, Yelp, or other review platforms for the exact business name and provided phone number/address.
+Owner appears to have a Google Maps contributor ID (provided), but no associated business profile or reviews were found tied to that ID in public search results.
+Other Relevant Information
+Possibilities to verify further:
+Check Romanian Trade Register (ONRC) using alternate name spellings or the owner’s legal name (if known).
+Call the provided phone number for direct confirmation of legal business name, website, or social profiles.
+Search local Slatina business directories or Facebook community groups for referrals.
+Data limitations: Web search attempts did not return matching public records; information above relies on the supplied context and negative search results.
+Website_Found: None
+Related Searches
+A.M.A_Interiordesign Slatina Bulevardul Alexandru Ioan Cuza 049200 0786 645 129 A.M.A_Interiordesign owner 105013059097245672316

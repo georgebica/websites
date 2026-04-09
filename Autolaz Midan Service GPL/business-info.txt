@@ -1,0 +1,150 @@
+Original Data:
+==================================================
+Title: Autolaz Midan Service GPL
+Category: Auto tune up service
+Address: Strada Cireașov nr.20, 230037 Slatina
+Complete Address: {"borough":"","street":"Strada Cireașov nr.20","city":"Slatina","postal_code":"230037","state":"","country":"RO"}
+Phone: 0724 275 777
+Owner: {"id":"102013044177304345599","name":"Autolaz Midan Service GPL (Owner)","link":"https://www.google.com/maps/contrib/102013044177304345599"}
+Google Maps Link: https://www.google.com/maps/place/Autolaz+Midan+Service+GPL/data=!4m7!3m6!1s0x40ad39e02f718e0d:0xfdb81ed24c66b9d!8m2!3d44.432307!4d24.3852616!16s%2Fg%2F11fm0397z9!19sChIJDY5xL-A5rUARnWvGJO2B2w8?authuser=0&hl=en&rclk=1
+Rating: 5/5 (1 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJDY5xL-A5rUARnWvGJO2B2w8&q=Autolaz+Midan+Service+GPL&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["8 am–4:30 pm"],"Monday":["8 am–4:30 pm"],"Saturday":["Closed"],"Sunday":["Closed"],"Thursday":["8 am–4:30 pm"],"Tuesday":["8 am–4:30 pm"],"Wednesday":["8 am–4:30 pm"]}
+About: [{"id":"accessibility","name":"Accessibility","options":[{"name":"Wheelchair-accessible entrance","enabled":true}]}]
+Plus Code: C9JP+W4 Slatina
+Place ID: ChIJDY5xL-A5rUARnWvGJO2B2w8
+CID: 1142649785992768413
+Latitude: 44.432307
+Longitude: 24.385262
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAwerWS70OrzPRjtIFwhF6ERC7V4YBGfmjmYDfACuT2GuVhQSpMZz2antHhtHnaOcQQoQmI_DYUrPZ6n1X7xwVEjkdud2JSQHA_I9RKqcBCk2wWredN8SmAsnE1In2mZ1i0CAtrOEEyg=w408-h408-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 80 | ****: 5 | ***: 0 | **: 1 | *: 2
+
+[*****] Claudiu Ghita
+  "Ok"
+
+[*****] louis-paul Hayoun
+  "Fast and good"
+
+[*****] Nicolae Bizu
+  "Personal ok"
+
+[*****] Jon Diaconu
+  "Ok"
+
+[*****] Petre Virgil Rada
+  "Bună ziua!...Fără voința mea am fost nevoit să caut un punct de I.T.P ,întrucât am fost luat pe nepregătite  pt.o inspecție tehnică periodică la o remorcuță cumpărată acum doi ani din reprezentanță.La citirea recenziilor referitoare la această stație,am mers îndoit citind că un inginer de cca.27 ani se comporta execrabil cu,clienții dar și faptul că restul personalului este ok! Astăzi am sunat pentru programare,dar surpriză,am fost invitat să mă prezint cât pot de repede,ceace am și făcut. La prezentarea mea cu actele și bine-înțeles cu remorcuța am rămas plăcut surprins față de modul în care am fost tratat,respectat și explicat aproape fiecare operațiune executată.Eu...căutam cu privirea acel inginer și nu am găsit acel om,fapt care ma făcut să întreb de dumnealui,surpriză,nu mai lucră în cadrul stației.Vă recomand cu încredere această stație ITP împreună cu personalul ce o deservește pentru încredere,profesionalism și socializare excelentă,dar toate cu respectarea prevederilor legale.OK..Mulțumesc!"
+
+[**___] Ion Cocoroada
+  "Va salut  . Responsabilul   super caracter.   La  opus un   asa zis inginer
+[ne adevarat]  o mizerie.     Un pusti   max 27 ani  de o nesimțire crasă , neîngrijit cu hainele de cred 15 zile  neschimbate dar trebuie menționat ca în 15 min  am terminat.   Respect  responsabilului de acolo."
+
+[*****] Viorel Monescu
+  "Chiar dacă sunt cam exigenți, ceea ce , desigur , teoretic cel puțin e bine , sunt foarte amabili , își fac "meseria" , în condițiile în care , pe drumurile noastre circulă atâtea epave "autorizate"."
+
+[*****] Manuel Iorga
+  "Atmosfera frumoasa, poți servi o cafea un suc până este procesată masina"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Autolaz Midan Service Gpl (officially registered as AUTOLAZ MIDAN SRL) is a GPL (liquefied petroleum gas) automotive service facility located in Slatina, Olt County, Romania. The business specializes in the installation, adaptation, inspection, and repair of GPL conversion systems for vehicles, making it a specialized automotive service provider rather than a general auto tune-up service.
+
+Legal & Registration Details
+Attribute	Details
+Legal Entity Name	AUTOLAZ MIDAN SRL
+Business Type	Limited Liability Company (SRL)
+Location	Strada Cireașov Nr. 20, Imobilul C10, Slatina, Olt County, 230037, Romania
+Primary Contact	+40 724 275 777
+Official Authorization	Authorized GPL equipment installation workshop registered with RAR-OCP (Romanian Road Authority - Gas Equipment Authorization)
+Certification	Listed as authorized unit for GPL installation and maintenance as of April 5, 2026
+Primary Services & Products
+
+Autolaz Midan Service Gpl provides the following services:
+
+Core Services
+Installation of GPL conversion kits on vehicles
+Adaptation of existing GPL systems
+Inspections and maintenance of GPL equipment
+Repairs of GPL conversion systems
+Equipment Brands Authorized
+
+The facility is authorized to work with multiple GPL equipment brands, including those imported by:
+
+AGR AUTOGAS GROUP SRL (with conformity certificates numbers 2349, 3297, 3769, 3967, 4566, 4567, and 4919)
+SUPERGAZ AUTOSERVICE SRL (with conformity certificates numbers 4538, 4595, 4925, 4926, and 5104)
+Operating Information
+Business Hours
+Monday to Friday: 08:00 - 16:30
+Saturday: Closed
+Sunday: Closed
+Accessibility
+
+The facility features wheelchair-accessible entrance, making it accessible to customers with mobility challenges.
+
+Market Position & Reputation
+
+Customer Rating: 5/5 stars based on 1 verified review
+
+Market Context
+
+Autolaz Midan Service operates in the specialized GPL conversion market in Olt County. The company is one of several authorized GPL installation facilities in the Slatina area, competing with other service centers such as:
+
+CHIRITA M. DANIELA (Individual Enterprise) - also in Slatina
+MAC AUTO SRL - in Slatina
+READY GARAGE S.R.L. - in Slatina
+
+The fact that it holds multiple authorization certificates from RAR-OCP indicates the business meets rigorous technical and safety standards required for GPL equipment installation in Romania.
+
+Financial Performance & Accessibility
+
+Information Not Available: Specific financial data, revenue figures, profit margins, or detailed operational metrics are not publicly accessible. As a small to medium-sized service enterprise in Romania, detailed financial information would typically be available only through official Romanian commercial registry databases (ONRC) with proper authorization.
+
+Customer Reviews & Testimonials
+
+The business maintains a 5-star rating on Google Maps and other business directories. However, only 1 review is currently visible, suggesting the business may have limited online review activity. The single perfect rating indicates customer satisfaction, though the limited review volume suggests either:
+
+The business operates primarily through word-of-mouth referrals
+Many customers may not leave online reviews
+The facility may serve primarily commercial/fleet clients rather than individual consumers
+Online Presence & Digital Footprint
+
+My research identified the following online presence:
+
+Platform	Status	Details
+Google Maps	✓ Active	Listed with full contact details, photos, and location coordinates (44.4323070°N, 24.3852616°E)
+ServiceAuto.ro	✓ Listed	Romanian automotive service directory listing with contact information and hours
+Maptons.com	✓ Listed	International mapping service with business location and details
+Official Website	✗ Not Found	No dedicated company website identified
+Facebook Page	✗ Not Found	No official Facebook business page detected
+Instagram	✗ Not Found	No Instagram business account identified
+LinkedIn	✗ Not Found	No LinkedIn company profile detected
+Additional Relevant Information
+Regulatory Compliance
+
+The business operates under strict Romanian automotive industry regulations:
+
+RAR-OCP Authorization: The facility is formally authorized by the Romanian Road Authority's Gas Equipment Authorization department, which means it has passed technical inspections and safety audits
+Equipment Conformity: The workshop can only work with equipment that has been certified and imported through approved suppliers
+Target Market
+
+Based on the service offerings, Autolaz Midan Service likely serves:
+
+Vehicle owners seeking to convert their cars to GPL for fuel cost savings
+Fleet operators looking to reduce fuel expenses
+Existing GPL vehicle owners requiring maintenance and repairs
+Competitive Advantages
+Regulatory Authorization: Multiple conformity certificates indicate broad equipment compatibility
+Perfect Customer Rating: The 5-star rating demonstrates quality service delivery
+Accessibility: Wheelchair access makes the facility inclusive
+Established Operations: Listed in official Romanian GPL installation databases
+Summary Assessment
+
+Autolaz Midan Service Gpl is a legitimate, authorized GPL conversion and maintenance facility operating in Slatina, Romania. The business holds proper certifications, maintains accessibility standards, and has achieved a perfect customer rating. However, the company maintains minimal digital presence beyond business directory listings, suggesting a traditional service model focused on direct customer relationships rather than online marketing. The business appears well-established within the specialized GPL conversion market in Olt County.
+
+##Website_Found: None

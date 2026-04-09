@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Service Craiova | Reparații Auto pe Strada Deceneu</title>
+  <meta name="description" content="Auto Service din Craiova oferă reparații auto, diagnosticare și întreținere pe Strada Deceneu, cu prețuri corecte și o echipă prietenoasă.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="/">
+  <meta property="og:title" content="Auto Service Craiova | Reparații Auto pe Strada Deceneu">
+  <meta property="og:description" content="Auto Service din Craiova oferă reparații auto, diagnosticare și întreținere pe Strada Deceneu, cu prețuri corecte și o echipă prietenoasă.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta name="theme-color" content="#FDF6EC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDF6EC',
+            navy: '#1A3A5C',
+            mustard: '#E8A317',
+            ink: '#2D2D2D',
+            muted: '#5A6B7A',
+            card: '#FFFFFF',
+            ticket: '#FFF9F0',
+            tan: '#C4B99A',
+            footer: '#142F4A',
+            section: '#F9F3E6'
+          },
+          fontFamily: {
+            display: ['Archivo Black', 'sans-serif'],
+            body: ['IBM Plex Sans', 'sans-serif']
+          },
+          boxShadow: {
+            warm: '0 18px 40px rgba(97, 76, 38, 0.12)',
+            ticket: '0 14px 34px rgba(94, 73, 40, 0.11)',
+            lift: '0 20px 45px rgba(94, 73, 40, 0.16)'
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: #2D2D2D;
+      background-color: #FDF6EC;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(196, 185, 154, 0.20) 1px, transparent 0),
+        linear-gradient(rgba(253, 246, 236, 0.90), rgba(253, 246, 236, 0.90));
+      background-size: 24px 24px, auto;
+      min-width: 320px;
+    }
+
+    .section-anchor {
+      scroll-margin-top: 6rem;
+    }
+
+    .nav-shell {
+      transition: background-color 200ms ease, box-shadow 200ms ease, backdrop-filter 200ms ease;
+    }
+
+    .nav-shell.is-scrolled {
+      background-color: rgba(253, 246, 236, 0.94);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 14px 35px rgba(95, 73, 37, 0.12);
+    }
+
+    .menu-link {
+      position: relative;
+    }
+
+    .menu-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 100%;
+      height: 2px;
+      border-radius: 9999px;
+      background: #E8A317;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
+
+    .menu-link:hover::after,
+    .menu-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .cta-button {
+      box-shadow: 0 14px 28px rgba(232, 163, 23, 0.24);
+      transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(232, 163, 23, 0.30);
+      background-color: #D99512;
+    }
+
+    .hero-ornament {
+      position: absolute;
+      inset: auto -4rem -3rem auto;
+      width: min(42vw, 20rem);
+      height: min(42vw, 20rem);
+      border-radius: 50%;
+      opacity: 0.08;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at center, transparent 0 23%, rgba(26, 58, 92, 0.9) 23% 29%, transparent 29% 100%),
+        repeating-conic-gradient(from 0deg, rgba(26, 58, 92, 0.9) 0 12deg, transparent 12deg 30deg);
+      filter: saturate(0.9);
+    }
+
+    .hero-ornament::before {
+      content: '';
+      position: absolute;
+      width: 34%;
+      height: 12%;
+      background: rgba(26, 58, 92, 0.95);
+      border-radius: 9999px;
+      right: -6%;
+      top: 18%;
+      transform: rotate(42deg);
+      box-shadow:
+        -0.7rem 0.65rem 0 0 rgba(26, 58, 92, 0.95),
+        -1.4rem 1.3rem 0 0 rgba(26, 58, 92, 0.95);
+    }
+
+    .dotted-separator {
+      border-top: 2px dotted #C4B99A;
+    }
+
+    .note-card {
+      position: relative;
+      transform: rotate(-0.5deg);
+      border: 2px dotted #C4B99A;
+      box-shadow: 0 20px 44px rgba(99, 77, 40, 0.12);
+    }
+
+    .note-card::after {
+      content: '';
+      position: absolute;
+      top: 0.9rem;
+      right: 0.9rem;
+      width: 1.15rem;
+      height: 1.15rem;
+      border-radius: 50%;
+      background: rgba(232, 163, 23, 0.24);
+      box-shadow: 0 0 0 6px rgba(232, 163, 23, 0.08);
+    }
+
+    .ticket-card {
+      position: relative;
+      overflow: hidden;
+      border: 2px dotted #C4B99A;
+      border-left: 4px solid #E8A317;
+      box-shadow: 0 14px 34px rgba(94, 73, 40, 0.11);
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+
+    .ticket-card::before,
+    .ticket-card::after {
+      content: '';
+      position: absolute;
+      left: -0.7rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      background: #FDF6EC;
+      border: 2px dotted #C4B99A;
+    }
+
+    .ticket-card::before {
+      top: 1.1rem;
+    }
+
+    .ticket-card::after {
+      bottom: 1.1rem;
+    }
+
+    .ticket-card:hover,
+    .ticket-card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 44px rgba(94, 73, 40, 0.16);
+    }
+
+    .ticket-card--navy::before,
+    .ticket-card--navy::after {
+      background: #1A3A5C;
+    }
+
+    .badge-pill {
+      box-shadow: 0 12px 28px rgba(18, 47, 74, 0.18);
+    }
+
+    .maps-link {
+      text-underline-offset: 0.22rem;
+    }
+
+    .maps-link:hover,
+    .maps-link:focus-visible {
+      text-decoration-thickness: 2px;
+    }
+
+    .star-row i {
+      filter: drop-shadow(0 4px 10px rgba(232, 163, 23, 0.26));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Auto Service",
+      "url": "/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strada Deceneu",
+        "addressLocality": "Craiova",
+        "addressCountry": "RO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.334272,
+        "longitude": 23.801117
+      },
+      "hasMap": "https://www.google.com/maps/place/Auto+Service/",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "reviewCount": "2"
+      },
+      "priceRange": "$$"
+    }
+  </script>
+</head>
+<body class="bg-cream text-ink antialiased">
+  <header id="site-header" class="nav-shell sticky top-0 z-50 border-b border-transparent">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#acasa" class="font-display text-lg uppercase tracking-[0.08em] text-navy transition hover:text-mustard focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30 rounded-md">Auto Service</a>
+      <nav class="hidden items-center gap-6 md:flex" aria-label="Navigație principală">
+        <a href="#despre" class="menu-link text-sm font-semibold text-navy transition hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30 rounded-md">Despre noi</a>
+        <a href="#servicii" class="menu-link text-sm font-semibold text-navy transition hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30 rounded-md">Servicii</a>
+        <a href="#de-ce-noi" class="menu-link text-sm font-semibold text-navy transition hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30 rounded-md">De ce noi</a>
+        <a href="#contact" class="menu-link text-sm font-semibold text-navy transition hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30 rounded-md">Unde ne găsești</a>
+      </nav>
+      <button id="menu-toggle" type="button" class="inline-flex items-center justify-center rounded-full border border-tan/70 bg-white/80 px-4 py-2 text-navy shadow-warm transition hover:border-mustard hover:text-mustard focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30 md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Deschide meniul">
+        <i id="menu-icon" class="fa-solid fa-bars text-base" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-tan/60 bg-cream/95 px-4 pb-4 pt-2 shadow-warm md:hidden">
+      <nav class="flex flex-col gap-2" aria-label="Navigație mobilă">
+        <a href="#despre" class="rounded-2xl px-4 py-3 text-sm font-semibold text-navy transition hover:bg-white hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30">Despre noi</a>
+        <a href="#servicii" class="rounded-2xl px-4 py-3 text-sm font-semibold text-navy transition hover:bg-white hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30">Servicii</a>
+        <a href="#de-ce-noi" class="rounded-2xl px-4 py-3 text-sm font-semibold text-navy transition hover:bg-white hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30">De ce noi</a>
+        <a href="#contact" class="rounded-2xl px-4 py-3 text-sm font-semibold text-navy transition hover:bg-white hover:text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30">Unde ne găsești</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="acasa" class="section-anchor relative overflow-hidden">
+      <div class="mx-auto flex min-h-screen max-w-7xl items-center px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+        <div class="relative z-10 w-full">
+          <div class="flex flex-wrap items-center gap-3 text-sm font-medium text-muted">
+            <span class="rounded-full border border-tan/80 bg-white/80 px-4 py-2 shadow-warm">Strada Deceneu, Craiova</span>
+            <span class="rounded-full border border-tan/80 bg-white/80 px-4 py-2 shadow-warm">Service auto de cartier</span>
+          </div>
+          <div class="mt-8 max-w-4xl">
+            <h1 class="font-display text-4xl uppercase leading-[1.05] text-navy sm:text-5xl lg:text-6xl">Mecanicul tău de încredere din Craiova</h1>
+            <div class="mt-5 h-1.5 w-40 rounded-full bg-mustard sm:w-52"></div>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-muted sm:text-xl">Reparații auto cu suflet, prețuri corecte și o echipă care te tratează ca pe un vecin.</p>
+            <div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              <a href="#contact" class="cta-button inline-flex items-center justify-center rounded-full bg-mustard px-7 py-4 text-base font-bold text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-mustard/30">Vino să ne cunoști</a>
+              <p class="max-w-md text-sm font-medium text-muted">Treci pe la noi și vorbim pe înțeles despre ce are mașina ta și ce merită făcut mai întâi.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-ornament" aria-hidden="true"></div>
+      </div>
+      <div class="dotted-separator mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"></div>
+    </section>
+
+    <section id="despre" class="section-anchor py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-mustard">Despre atelier</p>
+          <h2 class="mt-3 font-display text-3xl uppercase leading-tight text-navy sm:text-4xl">Despre noi</h2>
+        </div>
+        <article class="note-card mt-10 rounded-2xl bg-ticket p-8 sm:p-10 lg:p-12">
+          <div class="absolute right-6 top-6 text-mustard/80" aria-hidden="true">
+            <i class="fa-solid fa-wrench text-xl"></i>
+          </div>
+          <div class="max-w-3xl">
+            <p class="text-lg font-semibold text-navy">Hai să vedem ce are mașina ta, fără ocoluri și fără vorbe mari.</p>
+            <p class="mt-4 text-base leading-8 text-ink sm:text-lg">Suntem un atelier local de pe Strada Deceneu, unde pasiunea pentru mașini merge mână în mână cu respectul pentru om. Când ajungi la noi, primești explicații clare, muncă atentă și recomandări făcute cinstit, ca între oameni care se cunosc. Ne place să păstrăm lucrurile simple: reparații bine făcute, prețuri corecte și grijă reală pentru fiecare client. Pentru noi, fiecare mașină care intră în curte merită aceeași atenție ca și cum ar fi a familiei.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="servicii" class="section-anchor bg-section/70 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-mustard">Servicii</p>
+          <h2 class="mt-3 font-display text-3xl uppercase leading-tight text-navy sm:text-4xl">Ce putem face pentru mașina ta</h2>
+          <p class="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">De la verificări de rutină până la intervenții mecanice care cer experiență, lucrăm curat și îți spunem clar care sunt pașii potriviți.</p>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <article class="ticket-card rounded-2xl bg-card p-6 sm:p-7" data-aos="fade-up" data-aos-delay="0">
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-mustard/15 text-mustard">
+                <i class="fa-solid fa-wrench text-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-xl uppercase text-navy">Reparații mecanice</h3>
+                <p class="mt-3 text-base leading-7 text-muted">De la zgomote ciudate și pierdere de putere până la lucrări mai serioase, punem lucrurile în ordine fără improvizații și fără surprize.</p>
+              </div>
+            </div>
+          </article>
+          <article class="ticket-card rounded-2xl bg-card p-6 sm:p-7" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-mustard/15 text-mustard">
+                <i class="fa-solid fa-magnifying-glass text-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-xl uppercase text-navy">Diagnosticare</h3>
+                <p class="mt-3 text-base leading-7 text-muted">Ascultăm, verificăm și căutăm cauza reală, ca să rezolvi problema din rădăcină și să nu schimbi piese la întâmplare.</p>
+              </div>
+            </div>
+          </article>
+          <article class="ticket-card rounded-2xl bg-card p-6 sm:p-7" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-mustard/15 text-mustard">
+                <i class="fa-solid fa-oil-can text-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-xl uppercase text-navy">Întreținere</h3>
+                <p class="mt-3 text-base leading-7 text-muted">Schimburi, verificări și lucrări periodice care te ajută să ții mașina într-o stare bună și să eviți problemele apărute pe nepregătite.</p>
+              </div>
+            </div>
+          </article>
+          <article class="ticket-card rounded-2xl bg-card p-6 sm:p-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-start gap-4">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-mustard/15 text-mustard">
+                <i class="fa-solid fa-clipboard-check text-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-xl uppercase text-navy">Revizie</h3>
+                <p class="mt-3 text-base leading-7 text-muted">Facem controale atente pentru drumuri fără griji și îți explicăm simplu ce este urgent, ce poate aștepta și cum îți protejezi bugetul.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="de-ce-noi" class="section-anchor py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-mustard">Încredere</p>
+          <h2 class="mt-3 font-display text-3xl uppercase leading-tight text-navy sm:text-4xl">De ce să ne alegi</h2>
+        </div>
+        <div class="mt-10 flex flex-col gap-4 lg:flex-row lg:flex-wrap">
+          <div class="badge-pill inline-flex items-center gap-3 rounded-full bg-navy px-6 py-4 text-base font-semibold text-white">
+            <i class="fa-solid fa-tag text-mustard" aria-hidden="true"></i>
+            <span>Prețuri corecte</span>
+          </div>
+          <div class="badge-pill inline-flex items-center gap-3 rounded-full bg-navy px-6 py-4 text-base font-semibold text-white">
+            <i class="fa-solid fa-users text-mustard" aria-hidden="true"></i>
+            <span>Echipă prietenoasă</span>
+          </div>
+          <div class="badge-pill inline-flex items-center gap-3 rounded-full bg-navy px-6 py-4 text-base font-semibold text-white">
+            <i class="fa-solid fa-star text-mustard" aria-hidden="true"></i>
+            <span>Rating 5/5</span>
+          </div>
+        </div>
+        <div class="mt-10 max-w-3xl">
+          <p class="text-base leading-8 text-muted sm:text-lg">Cei care trec pragul nostru apreciază același lucru: vorbim omenește, lucrăm atent și păstrăm costurile într-o zonă corectă. Asta ne place și nouă cel mai mult, fiindcă încrederea se câștigă simplu, prin muncă bună și respect.</p>
+          <div class="star-row mt-6 flex flex-wrap items-center gap-3 text-navy">
+            <div class="flex items-center gap-1 text-mustard" aria-label="Rating 5 din 5">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="text-sm font-semibold uppercase tracking-[0.16em] text-muted">5/5 pe Google</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-anchor bg-navy py-20 text-cream sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-mustard">Locație</p>
+          <h2 class="mt-3 font-display text-3xl uppercase leading-tight text-cream sm:text-4xl">Unde ne găsești</h2>
+          <p class="mt-6 text-base leading-8 text-cream/85 sm:text-lg">Te așteptăm la atelierul nostru de pe Strada Deceneu, în Craiova. Treci pe la noi, o cafea și o discuție despre mașina ta sunt mereu la dispoziție.</p>
+          <div class="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <a href="https://www.google.com/maps/place/Auto+Service/" target="_blank" rel="noopener" class="cta-button inline-flex items-center justify-center rounded-full bg-mustard px-7 py-4 text-base font-bold text-navy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40">Vino să ne cunoști</a>
+            <a href="https://www.google.com/maps/place/Auto+Service/" target="_blank" rel="noopener" class="maps-link text-sm font-semibold text-cream underline decoration-mustard/80 transition hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30 rounded-md">Vezi pe Google Maps</a>
+          </div>
+        </div>
+        <div class="ticket-card ticket-card--navy rounded-2xl bg-card p-7 text-ink sm:p-8" data-aos="fade-left">
+          <h3 class="font-display text-2xl uppercase text-navy">Atelierul nostru</h3>
+          <div class="mt-6 space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mustard/15 text-mustard">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-muted">Adresă</p>
+                <p class="mt-1 text-base font-semibold text-navy">Strada Deceneu, Craiova</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mustard/15 text-mustard">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-muted">Încredere</p>
+                <p class="mt-1 text-base font-semibold text-navy">Rating 5/5 pe Google</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mustard/15 text-mustard">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.16em] text-muted">Program</p>
+                <p class="mt-1 text-base font-semibold text-navy">Luni - Vineri</p>
+              </div>
+            </div>
+          </div>
+          <p class="mt-8 rounded-2xl bg-cream px-4 py-4 text-sm leading-7 text-muted">Dacă vii direct la atelier, vedem împreună ce are mașina și îți spunem limpede de unde merită început.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-footer text-cream">
+    <div class="dotted-separator mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"></div>
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <p class="font-display text-2xl uppercase text-cream">Auto Service</p>
+      <p class="mt-3 text-sm font-medium text-cream/80">Strada Deceneu, Craiova</p>
+      <p class="mt-2 text-sm text-cream/80">Mecanicul tău de încredere.</p>
+      <p class="mt-6 text-xs uppercase tracking-[0.14em] text-cream/60">2026 Auto Service. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    (function () {
+      var header = document.getElementById('site-header');
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var icon = document.getElementById('menu-icon');
+      var mobileLinks = menu.querySelectorAll('a');
+
+      function updateHeader() {
+        header.classList.toggle('is-scrolled', window.scrollY > 10);
+      }
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Deschide meniul');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Închide meniul');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      }
+
+      toggle.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+
+      updateHeader();
+
+      AOS.init({
+        duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 700,
+        once: true,
+        easing: 'ease-out-cubic',
+        offset: 60
+      });
+    }());
+  </script>
+</body>
+</html>

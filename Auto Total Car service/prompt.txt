@@ -1,0 +1,239 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+NON-NEGOTIABLE RULES
+- Read the full RAW BUSINESS DOSSIER below before writing any copy, layout, or section plan.
+- Treat the full dossier as mandatory source material, not as an optional appendix.
+- Use only facts that are clearly supported by the dossier. If a detail is uncertain, leave it out.
+- The dossier may contain noisy or conflicting scraps from scraping. If a detail clearly refers to another company, another phone number, another city, or another business activity, ignore that detail.
+- If the Google category is generic or misleading, prefer the clearer business activity described elsewhere in the dossier.
+- Build a site that feels substantial, specific, and commercially useful. Do not make it feel blank or padded.
+- Prioritize actual useful business information: services, location, phone, booking or appointment flow, hours, amenities, delivery details, neighborhoods, named staff, process details, and credible review-backed strengths when they clearly match the business.
+
+FORBIDDEN COPY AND TONE
+- Never write copy that explains the page itself, the source of the data, or what is publicly verified.
+- Never use phrases like `Pagina pune in fata...`, `Cum decurge colaborarea`, `Ce este verificat public`, `dovada publica`, `feedback public`, `informatiile publice`, `am selectat`, or `verificat public`.
+- Never mention that the site is based on public data, verified data, a source bank, an appendix, research, listings, or selected reviews.
+- Never write filler about clarity, proof, or strategy in the abstract. Speak directly about the business and what the customer can actually do or get.
+- Avoid generic trust-filler. Show useful facts instead.
+
+FAST FACTS
+- Business: Auto Total Car service
+- Best-fit activity: Car repair and maintenance service
+- Location focus: Bucharest
+- Primary CTA label suggestion: Suna pentru programare
+- Secondary CTA label suggestion: Vezi locatia
+- Signature section direction: Service & Programare
+- Phone: 0749 483 498
+- Address: 022452 București
+- Rating summary: 4.8/5 stars based on 53 verified customer review-uri
+- Founded year clue: 1994
+- Practical convenience clues: Wheelchair-accessible car park, Wheelchair-accessible entrance, Credit cards, Debit cards, NFC mobile payments
+
+CONTENT PRIORITIES
+- Build headlines and sections around the real business offer, not around the existence of data.
+- Surface the most decision-making details early: what the business does, where it is, how to contact it, and why someone should choose it now.
+- Mine the dossier for concrete service clues even if they appear in reviews, company-overview notes, amenities, or operational descriptions.
+- If there are real review-backed strengths, translate them into grounded claims and selective quotes only when they clearly fit the target business.
+- If details are sparse, make the design rich and confident but keep the copy factual and concise. Do not invent substance.
+
+SECTION DIRECTION
+- Create a strong hero with a real business promise tied to the city or service area.
+- Include a services or capabilities section using actual service details from the dossier wherever possible.
+- Include a practical reasons-to-choose-us section built from real operational strengths, not abstract marketing talk.
+- Include a process, booking, appointment, or stay-planning section only if you can make it operational and business-specific.
+- Include reviews or rating proof only when it genuinely helps and clearly matches the business.
+- Finish with a contact section that makes phone, address, map, hours, and next-step actions obvious.
+- Add FAQ only if the dossier supports real questions people would ask this business.
+
+TECHNICAL BUILD RULES
+- Build one standalone `index.html` file.
+- Use Tailwind CSS via CDN.
+- Use minimal vanilla JavaScript only where it improves navigation or interaction.
+- Use Font Awesome via CDN for icons.
+- Mobile-first, responsive, and thumb-friendly.
+- No placeholder text, no Lorem Ipsum, no fake metrics, no invented credentials, no fabricated testimonials, no fake galleries.
+- Do not add forms unless the dossier clearly supports a direct email/contact workflow. Phone and map actions are usually better.
+- Do not output the brief or explain your choices. Output only the finished website file.
+
+RAW BUSINESS DOSSIER
+Read this entire block before writing the site. Use it as the primary factual source.
+Original Data:
+==================================================
+Title: Auto Total Car service
+Category: Car repair and maintenance service
+Address: 022452 București
+Complete Address: {"borough":"Sector 2","street":"","city":"Bucharest","postal_code":"022452","state":"","country":"RO"}
+Phone: 0749 483 498
+Owner: {"id":"105887476291693939169","name":"Auto Total Car service (Owner)","link":"https://www.google.com/maps/contrib/105887476291693939169"}
+Google Maps Link: https://www.google.com/maps/place/Auto+Total+Car+service/data=!4m7!3m6!1s0x40b1f9364523f1b1:0x376967dd72eeaa92!8m2!3d44.4394762!4d26.1661711!16s%2Fg%2F11f3m9z23_!19sChIJsfEjRTb5sUARkqruct1naTc?authuser=0&hl=en&rclk=1
+Rating: 4.8/5 (53 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJsfEjRTb5sUARkqruct1naTc&q=Auto+Total+Car+service&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["8 am–6 pm"],"Monday":["8 am–6 pm"],"Saturday":["Closed"],"Sunday":["Closed"],"Thursday":["8 am–6 pm"],"Tuesday":["8 am–6 pm"],"Wednesday":["8 am–6 pm"]}
+About: [{"id":"accessibility","name":"Accessibility","options":[{"name":"Wheelchair-accessible car park","enabled":true},{"name":"Wheelchair-accessible entrance","enabled":true}]},{"id":"payments","name":"Payments","options":[{"name":"Credit cards","enabled":true},{"name":"Debit cards","enabled":true},{"name":"NFC mobile payments","enabled":true}]}]
+Plus Code: C5Q8+QF Bucharest
+Place ID: ChIJsfEjRTb5sUARkqruct1naTc
+CID: 3992836745454332562
+Latitude: 44.439476
+Longitude: 26.166171
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAweo_0wd-4ImC2D6kVcfKaFcyTbYY8aZzps3ycUN5e3WQR8NuyrmxWjbyHcXlHrgb6cikODyfJaBy_bCxExUBoR21OQHVkl8mhjqGhvYVRrbNhTEQYSyyY7-YF_-MwZplQujELEW2=w426-h240-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 41 | ****: 3 | ***: 2 | **: 1 | *: 18
+
+[*****] Adrian Dragut
+  "Super ok"
+
+[**___] Adx Cunningham
+  "Not recommended"
+
+[****_] Mohamed Osman
+  "Effecient team"
+
+[*****] Razvan Cimpoca (2023-2-1)
+  "Service multimarca deservit de profesioniști  .
+Dl. Mihai prompt si operativ .
+Am avut lucrare pe tinichigerie,  vopsitorie Opel Astra H in urma unui accident si mecanica la Kia Ceed .
+Ambele lucrari realizate f bine .
+Ca si relativ nou client al lor recomand cu incredere !"
+
+[*____] Eu
+  "Am sunat vineri seara sa ma programez cand se poate, pentru un schimb de ulei(si filtru, evident)
+Toate bune, am vorbit cu cineva si a spus sa vin luni la ora 10.
+Am facut schimb de tura cu un coleg, am spalat masina, am completat piesele si cu spray pentru degresare si curatare si la ora 9.40 am fost la Service.
+Mi s-a spus la receptie ca am fost programat gresit si ca mai am de asteptat...
+Cat, nu mi-a spus.
+Am insistat ca am programare la ora 10 si raspunsul primit a fost " Si eu ce sa va fac? Ati fost programat gresit de patron peste alte lucrari"
+Am plecat bodoganind injuraturi si blesteme...
+Acest Service nu merita nici sa ii citesti numele pe Google, cine stie ce eroare primesti...
+Neseriosi din start cu atitudine sfidatoare si comportament cu foarte mare lipsa de respect fata de clienti.
+Sa fie de capul vostru!!!"
+
+[*****] Iulian Mihalcea
+  "În luna iunie m-am prezentat cu mașina personală,Opel insignia  pentru unele reparații de tinichigerie și vopsitorie totală. După o consultare cu Mihai, reprezentantul Select Service și cu Daniel vopsitorul, artizanul lucrării de artă care a urmat, am hotărât să fac lucrarea la acest service.Termenul de execuție a fost respectat, mașina fiind gata cu mai multe zile înainte de termen, iar rezultatele au fost uimitoare. Daniel este un adevărat ARTIST,mașina arătînd ca din fabrică. Nu scurgeri de vopsea, nu gazări,nu surprize neplăcute. Ba mai mult, Mihai a fost deacord să schimbe închiderea de la portbagaj care era defectă,fără alte costuri. Service-ul are laborator de vopsea propriu, cuptor unde autoturismul este lăsat după vopsire.Cînd totul este gata, Daniel mi-a dat codul de culoare al mașinii,cod universal valabil pentru toate laboratoarele de vopsea auto. FELICITĂRI ECHIPEI, dar mai ales lui Daniel care este un ARTIST.Recomand cu toată încrederea acest service."
+
+[*____] Mihalcea Gabriel
+  "Colaborarea cu acest service auto a fost execrabilă, din cauza angajatului Mihai B., care se ocupă de recepționarea mașinilor. Din trei cuvinte, două sunt minciuni. Am ajuns la acest service după un eveniment rutier la sfârșitul lunii octombrie 2024, cu o mașină Toyota Proace (expert/scudo/jumpy), având un acord prealabil pentru repararea daunelor cu decontare prin asigurare și cu mașină la schimb. Până pe 09 ianuarie 2025, însă, nu s-a lucrat absolut deloc la mașină, motivul invocat fiind că este o "mașină rară" și că piesele necesare sunt foarte greu de găsit.
+Mi s-a sugerat să optez pentru piesele second-hand din dezmembrări, lucru cu care nu am fost de acord. După două luni în care mașina a stat dezmembrată afara, mi s-a refuzat în final repararea acesteia. Este absolut inacceptabil ca un service auto să trateze un client într-un asemenea mod, mai ales având în vedere promisiunile clare legate de termenii și condițiile acordate"
+
+[*****] Stefania Smaranda
+  "Comunicare si profesionalism. Am fost foarte multumiti de rezultatul final. Pe toata durata reparatiei ni s-au dat update-uri. Domnul Banea si echipa lui sunt cu adevarat profesionisti. Recomand cu incredere!"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Auto Total Car Service is a car repair and maintenance service provider located in Sector 2, Bucharest, Romania (postal code 022452). The business operates as a professional automotive service facility offering comprehensive vehicle maintenance and repair solutions.
+
+Based on the search findings, this service location appears to be affiliated with or part of AD Auto Total, a major Romanian automotive enterprise with 31 years of industry experience (established in 1994). AD Auto Total is a large-scale automotive business group with significant operations across Romania and internationally.
+
+Location & Accessibility
+Attribute	Details
+Address	Sector 2, Bucharest, Postal Code 022452, Romania
+Phone	0749 483 498
+Operating Hours	Monday–Friday: 08:00–18:00 (Closed weekends)
+Wheelchair Access	Yes – Wheelchair-accessible car park and entrance available
+Services & Facilities
+Primary Services Offered
+
+The business provides comprehensive car repair and maintenance services, including:
+
+General vehicle maintenance and repairs
+Multi-brand automotive service (compatible with various vehicle makes and models)
+Professional diagnostics and technical support
+Quality-assured repair work with professional mechanics
+Payment Options
+
+The business accepts multiple payment methods for customer convenience:
+
+Credit cards
+Debit cards
+NFC mobile payments
+Market Position & Reputation
+Customer Rating & Reviews
+
+Rating: 4.8/5 stars based on 53 verified customer reviews
+
+This excellent rating indicates strong customer satisfaction and reliable service quality. The high rating reflects positive customer experiences with repair work, professionalism, and service reliability.
+
+Professional Standards
+
+If affiliated with AD Auto Total (as research suggests), the service benefits from:
+
+Professional, trained mechanics with multi-brand expertise
+Continuous technician training through the Auto Academy (nationally and internationally recognized qualification courses)
+Quality-focused service delivery aligned with corporate standards
+Professional diagnostic equipment for accurate vehicle assessments
+Financial Performance & Scale
+
+While specific financial data for this individual location is not publicly available, the parent organization AD Auto Total demonstrates substantial market presence:
+
+Metric	Value
+Group Turnover (2024)	€550.6 million
+Daily Orders	Over 35,000
+Active Clients	15,000+
+Warehouses	89 across Romania
+Dedicated Employees	1,836
+AD Garage Network	120 service locations in Romania
+Ownership & Management
+
+Owner: Auto Total Car Service (Owner) – Verified Google Maps contributor with ID 105887476291693939169. The owner actively manages the business presence and maintains customer engagement through the Google Maps platform.
+
+Related Business Network
+
+Based on research, Auto Total Car Service is part of the AD Auto Total ecosystem, which includes:
+
+AD Garage – A network of 120 multi-brand service locations across Romania with 4,600+ international units in 26 countries
+Service Total – Equipment and tools supplier for automotive services
+Doctor Auto – Affordable service network with 49 locations in 33 Romanian cities
+School for Auto Mechanics – Professional training and qualification programs
+eOriginal – All-in-one management platform for auto parts and aftermarket services
+
+This network positions Auto Total Car Service within a well-established, professionally managed automotive ecosystem with strong industry credentials and resources.
+
+Legal & Registration Details
+
+Note on Data Availability: Specific legal registration details (company registration number, tax ID, founding date of this specific location) were not found in public sources. For official company registration information, these details would typically be available through:
+
+Romanian Trade Register (Registrul Comerțului)
+Romanian Financial Administration (ANAF) tax records
+Official business registration databases
+Customer Accessibility & Inclusivity
+
+The business demonstrates commitment to inclusive service delivery through:
+
+Wheelchair-accessible car park – Customers with mobility challenges can access the facility
+Wheelchair-accessible entrance – Full accessibility for disabled customers
+Flexible payment options – Multiple payment methods for convenience
+Competitive Advantages
+
+Based on available information, key business strengths include:
+
+Professional Standards – Access to training and quality protocols from parent organization
+Strong Customer Satisfaction – 4.8/5 rating demonstrates consistent service quality
+Extended Operating Hours – Open Monday–Friday 08:00–18:00 (10-hour daily availability)
+Multi-brand Capability – Professional mechanics trained to service various vehicle makes
+Accessibility Features – Wheelchair-accessible facilities demonstrate customer-centric approach
+Modern Payment Systems – NFC mobile payments and digital payment options
+Market Context
+
+The automotive repair and maintenance sector in Bucharest is competitive, with numerous service providers. Auto Total Car Service's 4.8/5 rating from 53 reviews positions it well within the market, indicating it has successfully differentiated itself through service quality and customer satisfaction.
+
+Website_Found: None
+
+The research did not identify an independent website, Facebook page, Instagram account, LinkedIn profile, or other dedicated online presence specifically for this Auto Total Car Service location. The business appears to operate without a separate digital presence and may be listed through:
+
+Google Maps (verified location with ratings and reviews)
+Waze (navigation and directions)
+The parent AD Auto Total corporate website (www.autototal.ro) for broader network information
+
+The business maintains a physical presence and phone contact as primary customer engagement channels.
+
+FINAL REMINDER
+Use GPT-5.4, not a mini model. Build a business-first Romanian website that feels human, specific, and commercially useful.

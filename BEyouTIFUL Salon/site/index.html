@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEyouTIFUL Salon — Salon de Frumusețe în Slatina</title>
+    <meta name="description" content="BEyouTIFUL Salon — salon de frumusețe în Slatina. Tuns de la 25 RON, coafură, vopsit, tratamente păr. Profesionalism și cele mai bune prețuri din oraș. Programări: 0749 479 098.">
+    <meta name="keywords" content="salon frumusete slatina, tuns slatina, coafura slatina, vopsit par slatina, BEyouTIFUL Salon">
+    <link rel="canonical" href="https://beyoutiful-salon-slatina.ro/">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blush: '#F4C2C2',
+                        lavender: '#D8BFD8',
+                        rosegold: '#B76E79',
+                        charcoal: '#333333',
+                        softpink: '#FDF2F2',
+                        softlav: '#F5F0F7',
+                        cream: '#FFF9F9',
+                    },
+                    fontFamily: {
+                        heading: ['Marcellus', 'serif'],
+                        body: ['Quicksand', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl2': '1.25rem',
+                        'xl3': '1.75rem',
+                        'xl4': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animate on Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: #333333;
+            background: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Marcellus', serif;
+        }
+
+        /* Pastel gradient backgrounds */
+        .grad-hero {
+            background: linear-gradient(135deg, #F4C2C2 0%, #E8D0E8 50%, #D8BFD8 100%);
+        }
+
+        .grad-soft {
+            background: linear-gradient(135deg, #FDF2F2 0%, #F5F0F7 100%);
+        }
+
+        .grad-reverse {
+            background: linear-gradient(135deg, #F5F0F7 0%, #FDF2F2 100%);
+        }
+
+        /* Rose gold gradient button */
+        .btn-rose {
+            background: linear-gradient(135deg, #B76E79 0%, #D4A0A8 100%);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 36px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-rose:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(183, 110, 121, 0.45);
+        }
+
+        /* Outline variant */
+        .btn-outline {
+            background: transparent;
+            color: #B76E79;
+            border: 2px solid #B76E79;
+            border-radius: 50px;
+            padding: 12px 32px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background: linear-gradient(135deg, #B76E79 0%, #D4A0A8 100%);
+            color: #FFFFFF;
+            border-color: transparent;
+        }
+
+        /* Decorative petal shapes */
+        .petal {
+            position: absolute;
+            border-radius: 50% 0 50% 0;
+            opacity: 0.10;
+            pointer-events: none;
+        }
+
+        .petal-pink {
+            background: #F4C2C2;
+        }
+
+        .petal-lav {
+            background: #D8BFD8;
+        }
+
+        .petal-rose {
+            background: #B76E79;
+        }
+
+        /* Decorative circle accents */
+        .circle-accent {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        /* Service card */
+        .service-card {
+            background: #FFFFFF;
+            border-radius: 1.5rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.35s ease;
+            box-shadow: 0 2px 20px rgba(183, 110, 121, 0.08);
+            border: 1px solid rgba(244, 194, 194, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #F4C2C2, #D8BFD8, #B76E79);
+            border-radius: 1.5rem 1.5rem 0 0;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 35px rgba(183, 110, 121, 0.15);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Review card */
+        .review-card {
+            background: #FFFFFF;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: 0 2px 20px rgba(183, 110, 121, 0.08);
+            border: 1px solid rgba(244, 194, 194, 0.2);
+            position: relative;
+        }
+
+        .review-card::after {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 4rem;
+            font-family: 'Marcellus', serif;
+            color: #F4C2C2;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        /* Star rating */
+        .stars {
+            color: #E8B931;
+        }
+
+        /* Pill badge */
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .pill-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* Rating badge */
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #B76E79;
+            box-shadow: 0 2px 12px rgba(183, 110, 121, 0.15);
+        }
+
+        /* Navigation */
+        .nav-link {
+            color: #333333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #B76E79;
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #B76E79;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Section heading underline */
+        .section-line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #F4C2C2, #B76E79);
+            border-radius: 2px;
+            margin: 0.75rem auto 0;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu .nav-link {
+            font-size: 1.25rem;
+        }
+
+        /* Contact card icons */
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Bloom decorative element */
+        .bloom {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(244, 194, 194, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FDF2F2;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #F4C2C2, #D8BFD8);
+            border-radius: 4px;
+        }
+
+        /* Hamburger */
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #333333;
+            margin: 6px 0;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Payment icon row */
+        .payment-icons {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .payment-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(244, 194, 194, 0.2);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body class="font-body text-charcoal">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-blush/30" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16 sm:h-18">
+                <!-- Logo -->
+                <a href="#" class="font-heading text-xl sm:text-2xl text-charcoal tracking-wide">
+                    BE<span class="text-rosegold font-body font-light italic">you</span>TIFUL
+                </a>
+
+                <!-- Desktop links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#despre" class="nav-link">Despre noi</a>
+                    <a href="#servicii" class="nav-link">Servicii</a>
+                    <a href="#recenzii" class="nav-link">Recenzii</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="tel:0749479098" class="btn-rose text-sm py-2.5 px-6">
+                        <i class="fas fa-phone-alt mr-1.5 text-xs"></i> Sună acum
+                    </a>
+                </div>
+
+                <!-- Hamburger -->
+                <button class="hamburger md:hidden flex flex-col justify-center" onclick="toggleMenu()" aria-label="Meniu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="absolute top-5 right-5 text-3xl text-charcoal" onclick="toggleMenu()" aria-label="Închide meniu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#despre" class="nav-link" onclick="toggleMenu()">Despre noi</a>
+        <a href="#servicii" class="nav-link" onclick="toggleMenu()">Servicii</a>
+        <a href="#recenzii" class="nav-link" onclick="toggleMenu()">Recenzii</a>
+        <a href="#contact" class="nav-link" onclick="toggleMenu()">Contact</a>
+        <a href="tel:0749479098" class="btn-rose mt-4">
+            <i class="fas fa-phone-alt mr-2"></i> Sună acum
+        </a>
+    </div>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="grad-hero relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Decorative elements -->
+        <div class="petal petal-rose w-40 h-40 -top-10 -left-10 rotate-45"></div>
+        <div class="petal petal-lav w-56 h-56 top-20 -right-20 rotate-12"></div>
+        <div class="petal petal-pink w-32 h-32 bottom-20 left-10 -rotate-30"></div>
+        <div class="circle-accent w-72 h-72 bg-white -bottom-20 right-1/4"></div>
+        <div class="circle-accent w-48 h-48 bg-rosegold top-1/4 left-1/3"></div>
+        <div class="bloom w-96 h-96 top-0 right-0"></div>
+        <div class="bloom w-80 h-80 bottom-0 left-0" style="background: radial-gradient(circle, rgba(216,191,216,0.15) 0%, transparent 70%);"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-3xl mx-auto">
+            <!-- Rating badge -->
+            <div class="mb-8" data-aos="fade-down" data-aos-delay="100">
+                <span class="rating-badge">
+                    <i class="fas fa-star text-yellow-500"></i>
+                    <span>4.9 din 58 recenzii</span>
+                </span>
+            </div>
+
+            <!-- Main heading -->
+            <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-4 text-charcoal leading-tight" data-aos="fade-up" data-aos-delay="200">
+                BE<span class="text-rosegold font-body font-light italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl">you</span>TIFUL
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="font-heading text-xl sm:text-2xl md:text-3xl text-charcoal/70 mb-2" data-aos="fade-up" data-aos-delay="300">
+                Salon de Frumusețe
+            </p>
+            <p class="text-base sm:text-lg text-charcoal/50 mb-10 font-medium" data-aos="fade-up" data-aos-delay="350">
+                <i class="fas fa-map-marker-alt text-rosegold mr-1"></i> Slatina, Județul Olt
+            </p>
+
+            <!-- CTA buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="450">
+                <a href="tel:0749479098" class="btn-rose text-lg px-10 py-4">
+                    <i class="fas fa-calendar-check mr-2"></i> Programează-te
+                </a>
+                <a href="#servicii" class="btn-outline">
+                    <i class="fas fa-spa mr-2"></i> Vezi serviciile
+                </a>
+            </div>
+
+            <!-- Quick info pills -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mt-10" data-aos="fade-up" data-aos-delay="550">
+                <span class="payment-chip">
+                    <i class="fas fa-tag text-rosegold"></i> De la 25 RON
+                </span>
+                <span class="payment-chip">
+                    <i class="fas fa-credit-card text-rosegold"></i> Card acceptat
+                </span>
+                <span class="payment-chip">
+                    <i class="fas fa-clock text-rosegold"></i> Cu programare
+                </span>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#despre" class="text-rosegold/50 text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== DESPRE NOI ==================== -->
+    <section id="despre" class="py-20 sm:py-28 bg-white relative overflow-hidden">
+        <div class="circle-accent w-64 h-64 bg-blush -top-20 -right-20"></div>
+        <div class="petal petal-lav w-24 h-24 bottom-10 left-5 rotate-45"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal">Despre noi</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Text -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-lg leading-relaxed text-charcoal/80 mb-6">
+                        La <strong class="text-rosegold">BEyouTIFUL Salon</strong> credem că frumusețea ar trebui să fie accesibilă tuturor. De aceea oferim servicii profesionale la <strong>cele mai bune prețuri din Slatina</strong> — fără compromisuri la calitate.
+                    </p>
+                    <p class="text-lg leading-relaxed text-charcoal/80 mb-6">
+                        Echipa noastră de specialiști calificați te așteaptă într-un spațiu modern, cu un <em>vibe</em> super plăcut, unde te poți relaxa și lăsa pe mâinile noastre. Fiecare client primește atenție individuală și rezultate care vorbesc de la sine.
+                    </p>
+                    <p class="text-base text-charcoal/60 italic">
+                        „Prețuri ieftine și rezultate profesionale într-un timp scurt" — așa ne descriu clienții noștri.
+                    </p>
+                </div>
+
+                <!-- Stats / info cards -->
+                <div class="space-y-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="flex items-center gap-4 p-5 rounded-xl3 grad-soft">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blush to-lavender flex items-center justify-center text-white text-xl flex-shrink-0">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-lg text-charcoal">Calitate Profesională</h4>
+                            <p class="text-sm text-charcoal/60">Personal calificat cu experiență</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-5 rounded-xl3 grad-soft">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-lavender to-rosegold flex items-center justify-center text-white text-xl flex-shrink-0">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-lg text-charcoal">Prețuri Accesibile</h4>
+                            <p class="text-sm text-charcoal/60">Tuns de la doar 25 RON</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-5 rounded-xl3 grad-soft">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-rosegold to-blush flex items-center justify-center text-white text-xl flex-shrink-0">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-lg text-charcoal">Atmosferă Plăcută</h4>
+                            <p class="text-sm text-charcoal/60">Un vibe super în locație</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICII ==================== -->
+    <section id="servicii" class="py-20 sm:py-28 grad-soft relative overflow-hidden">
+        <div class="petal petal-rose w-36 h-36 -top-10 right-20 rotate-12"></div>
+        <div class="circle-accent w-48 h-48 bg-lavender bottom-0 -left-16"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal">Serviciile Noastre</h2>
+                <div class="section-line"></div>
+                <p class="mt-4 text-charcoal/60 text-lg max-w-xl mx-auto">
+                    Descoperă gama noastră completă de servicii de înfrumusețare
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Tuns -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon bg-gradient-to-br from-blush/40 to-lavender/40 text-rosegold">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="font-heading text-xl mb-2 text-charcoal">Tuns</h3>
+                    <p class="text-charcoal/60 text-sm mb-4">Tunsori moderne și clasice, adaptate stilului tău personal. Rezultate impecabile la cele mai bune prețuri.</p>
+                    <span class="text-rosegold font-bold text-lg">de la 25 RON</span>
+                </div>
+
+                <!-- Coafură -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon bg-gradient-to-br from-lavender/40 to-blush/40 text-rosegold">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="font-heading text-xl mb-2 text-charcoal">Coafură</h3>
+                    <p class="text-charcoal/60 text-sm mb-4">Coafuri elegante pentru orice ocazie — de la evenimente speciale la look-ul de zi cu zi.</p>
+                    <span class="text-rosegold font-bold text-lg">preț accesibil</span>
+                </div>
+
+                <!-- Vopsit -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon bg-gradient-to-br from-rosegold/30 to-lavender/30 text-rosegold">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="font-heading text-xl mb-2 text-charcoal">Vopsit</h3>
+                    <p class="text-charcoal/60 text-sm mb-4">Tehnici moderne de colorare — de la nuanțe naturale la transformări îndrăznețe, cu produse de calitate.</p>
+                    <span class="text-rosegold font-bold text-lg">preț accesibil</span>
+                </div>
+
+                <!-- Tratamente păr -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon bg-gradient-to-br from-blush/40 to-rosegold/30 text-rosegold">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="font-heading text-xl mb-2 text-charcoal">Tratamente Păr</h3>
+                    <p class="text-charcoal/60 text-sm mb-4">Tratamente profesionale pentru hidratare, reparare și strălucire — părul tău merită cele mai bune îngrijiri.</p>
+                    <span class="text-rosegold font-bold text-lg">preț accesibil</span>
+                </div>
+
+                <!-- Styling -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon bg-gradient-to-br from-lavender/40 to-rosegold/30 text-rosegold">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="font-heading text-xl mb-2 text-charcoal">Styling</h3>
+                    <p class="text-charcoal/60 text-sm mb-4">Sfaturi personalizate și aranjare profesională pentru un look care te reprezintă.</p>
+                    <span class="text-rosegold font-bold text-lg">preț accesibil</span>
+                </div>
+
+                <!-- CTA card -->
+                <div class="service-card flex flex-col items-center justify-center grad-hero border-none" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 rounded-full bg-white/60 flex items-center justify-center text-rosegold text-2xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="font-heading text-xl mb-2 text-charcoal">Programează-te</h3>
+                    <p class="text-charcoal/60 text-sm mb-5">Sună-ne pentru o programare rapidă și comodă</p>
+                    <a href="tel:0749479098" class="btn-rose text-sm py-2.5 px-8">
+                        <i class="fas fa-phone mr-1.5"></i> 0749 479 098
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DE CE BEyouTIFUL ==================== -->
+    <section class="py-20 sm:py-24 bg-white relative overflow-hidden">
+        <div class="bloom w-72 h-72 -top-10 left-0"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal">
+                    De ce BE<span class="text-rosegold italic font-body font-light">you</span>TIFUL?
+                </h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="pill-badge bg-gradient-to-r from-blush/50 to-lavender/50 text-charcoal">
+                    <i class="fas fa-trophy text-rosegold text-lg"></i>
+                    <span>Cele mai bune prețuri</span>
+                </div>
+                <div class="pill-badge bg-gradient-to-r from-lavender/50 to-blush/50 text-charcoal">
+                    <i class="fas fa-calendar-alt text-rosegold text-lg"></i>
+                    <span>Programare ușoară</span>
+                </div>
+                <div class="pill-badge bg-gradient-to-r from-blush/50 to-lavender/50 text-charcoal">
+                    <i class="fas fa-user-tie text-rosegold text-lg"></i>
+                    <span>Personal profesionist</span>
+                </div>
+            </div>
+
+            <!-- Extra detail row -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-14">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blush to-lavender flex items-center justify-center mx-auto mb-4 text-white text-xl">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h4 class="font-heading text-lg mb-2">Calitate Accesibilă</h4>
+                    <p class="text-sm text-charcoal/60">Servicii profesionale la prețuri pe care ți le permiți — fără surprize.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-lavender to-rosegold flex items-center justify-center mx-auto mb-4 text-white text-xl">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 class="font-heading text-lg mb-2">Rapid și Eficient</h4>
+                    <p class="text-sm text-charcoal/60">Rezultate profesionale într-un timp scurt, fără așteptare inutilă.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-rosegold to-blush flex items-center justify-center mx-auto mb-4 text-white text-xl">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <h4 class="font-heading text-lg mb-2">Clienți Fericiți</h4>
+                    <p class="text-sm text-charcoal/60">4.9 stele din 58 recenzii — satisfacția clienților este prioritatea noastră.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RECENZII ==================== -->
+    <section id="recenzii" class="py-20 sm:py-28 grad-reverse relative overflow-hidden">
+        <div class="petal petal-pink w-28 h-28 top-10 right-10 rotate-45"></div>
+        <div class="circle-accent w-56 h-56 bg-lavender -bottom-16 left-1/4"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal">Ce Spun Clienții</h2>
+                <div class="section-line"></div>
+                <div class="mt-4">
+                    <span class="rating-badge text-base">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <span class="ml-1">4.9 / 5</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Review 1 - TAISHI -->
+                <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stars mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-charcoal/75 leading-relaxed mb-6 text-sm">
+                        „Profesionalism, calitate excelentă și foarte ieftin. Tunsul costă doar 25 de lei, cel mai ieftin din oraș și cu o calitate impecabilă. Recomand cu încredere!"
+                    </p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blush to-lavender flex items-center justify-center text-white font-bold text-sm">T</div>
+                        <div>
+                            <p class="font-semibold text-charcoal text-sm">TAISHI</p>
+                            <p class="text-xs text-charcoal/40">Client verificat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 - grecu leanu -->
+                <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-charcoal/75 leading-relaxed mb-6 text-sm">
+                        „Un vibe super în locație și personal profesionist. M-am simțit foarte bine, atmosfera este plăcută și rezultatul a fost exact ce mi-am dorit. Voi reveni cu siguranță!"
+                    </p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-lavender to-rosegold flex items-center justify-center text-white font-bold text-sm">G</div>
+                        <div>
+                            <p class="font-semibold text-charcoal text-sm">grecu leanu</p>
+                            <p class="text-xs text-charcoal/40">Client verificat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 - Gelu Cristian -->
+                <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stars mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-charcoal/75 leading-relaxed mb-6 text-sm">
+                        „Prețuri ieftine și rezultate profesionale într-un timp scurt. Personal calificat care știe ce face. Cel mai bun raport calitate-preț din Slatina!"
+                    </p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rosegold to-blush flex items-center justify-center text-white font-bold text-sm">G</div>
+                        <div>
+                            <p class="font-semibold text-charcoal text-sm">Gelu Cristian</p>
+                            <p class="text-xs text-charcoal/40">Client verificat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="py-20 sm:py-28 bg-white relative overflow-hidden">
+        <div class="petal petal-lav w-32 h-32 -top-8 left-20 rotate-45"></div>
+        <div class="bloom w-80 h-80 bottom-0 right-0" style="background: radial-gradient(circle, rgba(216,191,216,0.12) 0%, transparent 70%);"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-charcoal">Contact</h2>
+                <div class="section-line"></div>
+                <p class="mt-4 text-charcoal/60 text-lg">Suntem aici pentru tine. Programează-te ușor!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact info -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-delay="100">
+                    <!-- Phone -->
+                    <div class="flex items-center gap-4 p-5 rounded-xl3 grad-soft">
+                        <div class="contact-icon bg-gradient-to-br from-blush to-rosegold text-white text-lg">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-charcoal/50 uppercase tracking-wider font-semibold mb-0.5">Telefon</p>
+                            <a href="tel:0749479098" class="text-lg font-bold text-charcoal hover:text-rosegold transition-colors">
+                                0749 479 098
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="flex items-center gap-4 p-5 rounded-xl3 grad-soft">
+                        <div class="contact-icon bg-gradient-to-br from-lavender to-rosegold text-white text-lg">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-charcoal/50 uppercase tracking-wider font-semibold mb-0.5">Adresă</p>
+                            <p class="text-base font-semibold text-charcoal">Strada Văilor 3, bl 3</p>
+                            <p class="text-sm text-charcoal/60">Slatina, Județul Olt</p>
+                        </div>
+                    </div>
+
+                    <!-- Appointments -->
+                    <div class="flex items-center gap-4 p-5 rounded-xl3 grad-soft">
+                        <div class="contact-icon bg-gradient-to-br from-rosegold to-blush text-white text-lg">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-charcoal/50 uppercase tracking-wider font-semibold mb-0.5">Programare</p>
+                            <p class="text-base font-semibold text-charcoal">Se recomandă programare</p>
+                            <p class="text-sm text-charcoal/60">Sună-ne pentru o programare rapidă</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="flex items-center gap-4 p-5 rounded-xl3 grad-soft">
+                        <div class="contact-icon bg-gradient-to-br from-blush to-lavender text-white text-lg">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-charcoal/50 uppercase tracking-wider font-semibold mb-0.5">Metode de plată</p>
+                            <div class="payment-icons mt-1.5">
+                                <span class="payment-chip">
+                                    <i class="fab fa-cc-visa text-blue-700"></i> Visa
+                                </span>
+                                <span class="payment-chip">
+                                    <i class="fab fa-cc-mastercard text-red-600"></i> Mastercard
+                                </span>
+                                <span class="payment-chip">
+                                    <i class="fas fa-money-bill-wave text-green-600"></i> Cash
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map / CTA area -->
+                <div class="flex flex-col justify-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="rounded-xl4 overflow-hidden shadow-lg border border-blush/20">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.5!2d24.385021!3d44.420185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI1JzEyLjciTiAyNMKwMjMnMDYuMSJF!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+                            width="100%"
+                            height="300"
+                            style="border:0; border-radius: 1.5rem;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Locația BEyouTIFUL Salon pe hartă">
+                        </iframe>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="tel:0749479098" class="btn-rose text-lg px-10 py-4 w-full sm:w-auto">
+                            <i class="fas fa-phone-alt mr-2"></i> Sună pentru programare
+                        </a>
+                        <p class="text-sm text-charcoal/40 mt-3">
+                            <i class="fas fa-clock mr-1"></i> Răspundem rapid la apeluri
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="grad-hero py-12 relative overflow-hidden">
+        <div class="petal petal-rose w-20 h-20 top-4 right-10 rotate-45 opacity-5"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Logo -->
+                <div class="text-center md:text-left">
+                    <a href="#" class="font-heading text-2xl text-charcoal tracking-wide">
+                        BE<span class="text-rosegold font-body font-light italic">you</span>TIFUL
+                    </a>
+                    <p class="text-sm text-charcoal/50 mt-1">Salon de Frumusețe — Slatina</p>
+                </div>
+
+                <!-- Quick links -->
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="#despre" class="text-charcoal/60 hover:text-rosegold transition-colors">Despre</a>
+                    <a href="#servicii" class="text-charcoal/60 hover:text-rosegold transition-colors">Servicii</a>
+                    <a href="#recenzii" class="text-charcoal/60 hover:text-rosegold transition-colors">Recenzii</a>
+                    <a href="#contact" class="text-charcoal/60 hover:text-rosegold transition-colors">Contact</a>
+                </div>
+
+                <!-- Phone -->
+                <div class="text-center md:text-right">
+                    <a href="tel:0749479098" class="flex items-center gap-2 text-rosegold font-semibold hover:opacity-80 transition-opacity">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>0749 479 098</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-charcoal/10 mt-8 pt-6 text-center">
+                <p class="text-xs text-charcoal/40">
+                    &copy; 2026 BEyouTIFUL Salon. Toate drepturile rezervate. Strada Văilor 3, bl 3, Slatina.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JSON-LD STRUCTURED DATA ==================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "BEyouTIFUL Salon",
+        "description": "Salon de frumusețe în Slatina. Servicii profesionale de tuns, coafură, vopsit, tratamente păr și styling la cele mai bune prețuri din oraș.",
+        "url": "https://beyoutiful-salon-slatina.ro",
+        "telephone": "+40749479098",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Văilor 3, bl 3",
+            "addressLocality": "Slatina",
+            "addressRegion": "Olt",
+            "postalCode": "230080",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.420185,
+            "longitude": 24.385021
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "ratingCount": "58"
+        },
+        "priceRange": "$$",
+        "paymentAccepted": "Cash, Credit Card, Debit Card",
+        "currenciesAccepted": "RON",
+        "openingHoursSpecification": [],
+        "image": "",
+        "sameAs": []
+    }
+    </script>
+
+    <!-- ==================== AOS INIT ==================== -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 60,
+            disable: 'mobile'
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                navbar.style.boxShadow = '0 2px 20px rgba(183, 110, 121, 0.1)';
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.style.boxShadow = 'none';
+                navbar.style.background = 'rgba(255, 255, 255, 0.8)';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 70;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

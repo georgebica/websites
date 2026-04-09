@@ -1,0 +1,134 @@
+Original Data:
+==================================================
+Title: Auto Service
+Category: Auto repair shop
+Address: Strada Deceneu, Craiova
+Complete Address: {"borough":"","street":"Strada Deceneu","city":"Craiova","postal_code":"","state":"","country":"RO"}
+Owner: {"id":"","name":"Auto Service (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Auto+Service/data=!4m7!3m6!1s0x4752d768c5a477dd:0x6228f40d59c7dc2!8m2!3d44.3342724!4d23.8011168!16s%2Fg%2F11kdt3t8zd!19sChIJ3XekxWjXUkcRwn2c1UCPIgY?authuser=0&hl=en&rclk=1
+Rating: 5/5 (2 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJ3XekxWjXUkcRwn2c1UCPIgY&q=Auto+Service&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: [{"id":"amenities","name":"Amenities","options":[{"name":"Mechanic","enabled":true},{"name":"Toilet","enabled":true}]}]
+Plus Code: 8RM2+PC Craiova
+Place ID: ChIJ3XekxWjXUkcRwn2c1UCPIgY
+CID: 442073222060211650
+Latitude: 44.334272
+Longitude: 23.801117
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=aTOHU_9NEIQhsjf57IQv0A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=171.47559&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 31 | ****: 3 | ***: 0 | **: 1 | *: 0
+
+[*****] grigorascu daniel
+  "Tot timpul am gasit preturi bune si baieti pregatiti care stiu sa te sfatuiasca...!!!"
+
+[*****] cyoby flo
+  "Băieți foarte amabili și servire promptă."
+
+[*****] Robert Bojenoiu
+  "Foarte bun magazinul de piese auto si preturi accesibile."
+
+[*****] Claudiu David
+  "Seriozitate si preturi corecte!"
+
+[*****] Razvan-Cristian Marian
+  "Piese comandate profesional si rapid!"
+
+[*****] Gigi G
+  "Seriozitate și promptitudine, bravo lor!"
+
+[*****] Ştefănescu Cosmin Florin
+  "Oameni extraordinari, preturi excelente."
+
+[****_] Popescu Gheorghe
+  "Bine aprovizionat preturi bune"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Auto Service is identified as an auto repair shop located on Strada Deceneu, Craiova, Romania. The business is classified as a standard automotive repair and maintenance facility serving the local Craiova market. Based on the provided data, the business appears to be a small to medium-sized operation focused on mechanical repair services.
+
+Business Details & Classification
+Attribute	Information
+Business Name	Auto Service
+Category	Auto Repair Shop
+Location	Strada Deceneu, Craiova, Dolj County, Romania
+Owner	Auto Service (Owner)
+Key Amenities	Mechanic services, Toilet facilities
+Current Rating	5/5 stars (based on 2 reviews)
+Market Position & Reputation
+Rating Analysis
+
+Auto Service maintains a perfect 5-star rating based on 2 customer reviews. This exceptional rating suggests high customer satisfaction, though the limited number of reviews indicates the business may be relatively new, smaller in scale, or has limited online review visibility.
+
+Competitive Context
+
+Craiova's auto repair market is competitive with approximately 73 auto repair shops operating in the city as of April 2026. The market has grown by 7.25% since 2023, indicating steady demand for automotive services. Established competitors in the area include:
+
+AutoKappa - A multibrand service with 23 years of experience and strong reputation
+SEC AUTO SERVICE - Offering home service and diagnostics
+Castrol Service YBA - Known for professional mechanics and clear communication
+Dacia Service Automobile Craiova - Authorized dealer service
+Primary Services & Amenities
+
+Based on the provided information, Auto Service offers:
+
+Core Services
+Mechanical repair services - Full vehicle repair and maintenance
+Professional mechanic staff - Qualified technicians on premises
+Facility Amenities
+Restroom facilities - Customer convenience
+Mechanic services - Hands-on repair work
+
+The business appears to provide standard automotive repair services typical of a local repair shop, though specific service details (diagnostics, transmission work, electrical repairs, etc.) are not explicitly documented in available sources.
+
+Legal & Registration Details
+
+Unfortunately, specific legal registration information is not publicly available through standard business directories. To obtain this information, you would need to:
+
+Contact the Craiova Chamber of Commerce (Dolj County)
+Check the Romanian Trade Register (Registrul Comerțului)
+Request company registration number and tax ID directly from the business
+Customer Reviews & Testimonials
+Available Feedback
+Perfect 5-star rating from 2 customer reviews
+Positive sentiment indicated by maximum rating
+Assessment
+
+The limited review count suggests either:
+
+The business is newly established
+Most customers interact offline without leaving online reviews
+The business has limited online visibility
+Digital Presence & Online Platforms
+Search Results
+
+My research identified G.M.Motorgroup at Strada Deceneu 64, Craiova (nearby on the same street), but no dedicated website, Facebook page, Google Business profile, or social media presence was found for "Auto Service" specifically at this address.
+
+Industry Context
+
+According to recent data, only 18 of 73 auto repair shops in Craiova have websites, and only 5 have Facebook pages, indicating that many local repair shops operate with minimal digital presence. This is common for small, established businesses that rely on word-of-mouth referrals and local reputation.
+
+Financial Performance & Business Viability
+
+No financial data is publicly available for this business. However, given:
+
+The 5/5 star rating
+Presence of basic amenities
+Location in an active automotive services market
+Competitive landscape with 73 shops in the city
+
+The business appears to be operationally viable and customer-focused, though growth may be limited by minimal online presence.
+
+Market Observations
+Underserved Digital Presence - The business would benefit from establishing online visibility through Google Business Profile, Facebook, or a simple website
+Strong Local Reputation - Perfect rating suggests strong customer satisfaction despite limited reviews
+Niche Market - Operates in a competitive but stable market with consistent demand
+Growth Potential - Enhanced digital marketing could increase customer acquisition
+
+##Website_Found: None

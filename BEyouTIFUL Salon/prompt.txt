@@ -1,0 +1,258 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+NON-NEGOTIABLE RULES
+- Read the full RAW BUSINESS DOSSIER below before writing any copy, layout, or section plan.
+- Treat the full dossier as mandatory source material, not as an optional appendix.
+- Use only facts that are clearly supported by the dossier. If a detail is uncertain, leave it out.
+- The dossier may contain noisy or conflicting scraps from scraping. If a detail clearly refers to another company, another phone number, another city, or another business activity, ignore that detail.
+- If the Google category is generic or misleading, prefer the clearer business activity described elsewhere in the dossier.
+- Build a site that feels substantial, specific, and commercially useful. Do not make it feel blank or padded.
+- Prioritize actual useful business information: services, location, phone, booking or appointment flow, hours, amenities, delivery details, neighborhoods, named staff, process details, and credible review-backed strengths when they clearly match the business.
+
+FORBIDDEN COPY AND TONE
+- Never write copy that explains the page itself, the source of the data, or what is publicly verified.
+- Never use phrases like `Pagina pune in fata...`, `Cum decurge colaborarea`, `Ce este verificat public`, `dovada publica`, `feedback public`, `informatiile publice`, `am selectat`, or `verificat public`.
+- Never mention that the site is based on public data, verified data, a source bank, an appendix, research, listings, or selected reviews.
+- Never write filler about clarity, proof, or strategy in the abstract. Speak directly about the business and what the customer can actually do or get.
+- Avoid generic trust-filler. Show useful facts instead.
+
+FAST FACTS
+- Business: BEyouTIFUL Salon
+- Best-fit activity: Hair salon
+- Location focus: Slatina
+- Primary CTA label suggestion: Rezerva acum
+- Secondary CTA label suggestion: Vezi locatia
+- Signature section direction: Servicii & Programari
+- Phone: +40 749 479 098
+- Address: Strada Văilor 3, bl 3, Slatina
+- Rating summary: 4.9/5 (58 review-uri)
+- Practical convenience clues: Toilet, Appointments recommended, Credit cards, Debit cards
+
+CONTENT PRIORITIES
+- Build headlines and sections around the real business offer, not around the existence of data.
+- Surface the most decision-making details early: what the business does, where it is, how to contact it, and why someone should choose it now.
+- Mine the dossier for concrete service clues even if they appear in reviews, company-overview notes, amenities, or operational descriptions.
+- If there are real review-backed strengths, translate them into grounded claims and selective quotes only when they clearly fit the target business.
+- If details are sparse, make the design rich and confident but keep the copy factual and concise. Do not invent substance.
+
+SECTION DIRECTION
+- Create a strong hero with a real business promise tied to the city or service area.
+- Include a services or capabilities section using actual service details from the dossier wherever possible.
+- Include a practical reasons-to-choose-us section built from real operational strengths, not abstract marketing talk.
+- Include a process, booking, appointment, or stay-planning section only if you can make it operational and business-specific.
+- Include reviews or rating proof only when it genuinely helps and clearly matches the business.
+- Finish with a contact section that makes phone, address, map, hours, and next-step actions obvious.
+- Add FAQ only if the dossier supports real questions people would ask this business.
+
+TECHNICAL BUILD RULES
+- Build one standalone `index.html` file.
+- Use Tailwind CSS via CDN.
+- Use minimal vanilla JavaScript only where it improves navigation or interaction.
+- Use Font Awesome via CDN for icons.
+- Mobile-first, responsive, and thumb-friendly.
+- No placeholder text, no Lorem Ipsum, no fake metrics, no invented credentials, no fabricated testimonials, no fake galleries.
+- Do not add forms unless the dossier clearly supports a direct email/contact workflow. Phone and map actions are usually better.
+- Do not output the brief or explain your choices. Output only the finished website file.
+
+RAW BUSINESS DOSSIER
+Read this entire block before writing the site. Use it as the primary factual source.
+Original Data:
+==================================================
+Title: BEyouTIFUL Salon
+Category: Hair salon
+Address: Strada Văilor 3, bl 3, Slatina
+Complete Address: {"borough":"","street":"Strada Văilor 3, bl 3","city":"Slatina","postal_code":"","state":"","country":"RO"}
+Phone: 0749 479 098
+Owner: {"id":"","name":"BEyouTIFUL Salon (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/BEyouTIFUL+Salon/data=!4m7!3m6!1s0x40ad391e6aca56cd:0x38aa9825d5ef5eed!8m2!3d44.4201855!4d24.3850211!16s%2Fg%2F11vj685cdj!19sChIJzVbKah45rUAR7V7v1SWYqjg?authuser=0&hl=en&rclk=1
+Rating: 4.9/5 (58 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJzVbKah45rUAR7V7v1SWYqjg&q=BEyouTIFUL+Salon&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: [{"id":"amenities","name":"Amenities","options":[{"name":"Toilet","enabled":true}]},{"id":"planning","name":"Planning","options":[{"name":"Appointments recommended","enabled":true}]},{"id":"payments","name":"Payments","options":[{"name":"Credit cards","enabled":true},{"name":"Debit cards","enabled":true}]}]
+Plus Code: C9CP+32 Slatina
+Place ID: ChIJzVbKah45rUAR7V7v1SWYqjg
+CID: 4083243300435222253
+Latitude: 44.420185
+Longitude: 24.385021
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAwery-1lkn8j22JTbAlH4_9SQz4N7wjY0hii8C1WmZvZvxU2gGfCDxkAiZwBZN2wqz1mktsgpDusxIofewYAlfxlAE2MxFXLGxJGVpY-tKEfbRjBmBr_X7uqpbznRUNOXDskWKPh25uhgQBA=w408-h510-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 34 | ****: 9 | ***: 4 | **: 1 | *: 2
+
+[*****] Gdt
+  "👍"
+
+[*****] TAISHI
+  "Profesionalism , calitate de prestare excelenta a serviciilor si sincer foarte ieftin, 25 de lei tunsul, cel mai mic pret din oras unde te poti tunde excelent!"
+
+[****_] Constantin Drăghici
+  "Este o locație bine îngrijită, curată și cu personal calificat, bine instruit și respectuos !"
+
+[*****] grecu leanu
+  "Preturi ieftine si rezultate profesionale intr-un timp scurt."
+
+[*****] Petrisor Staiculeasa
+  "Aceasta frizerie poti sa mergi cu incredere fraierul este foarte de treaba si face si treaba foarte buna"
+
+[*____] KING OF UNIVERSE
+  "Este un frizer amator care mai are multe de învățat pînă să devină un profesionist."
+
+[***__] Constantin Fana
+  "Frumos,cu masuri de distantare,fara acces cu scaun cu rotile,"
+
+[*****] Gelu Cristian
+  "Un vaib super in locație si personal profesionist"
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Beyoutiful Salon is a hair and beauty salon located in Slatina, Romania, operating in the Olt County region. The salon operates as a full-service beauty establishment offering comprehensive grooming and aesthetic services. The business is positioned as a premium beauty destination that emphasizes personalized service, professional expertise, and a refined atmosphere.
+
+Business Information & Location
+Attribute	Details
+Business Name	Beyoutiful Salon (BEyouTIFUL Salon)
+Category	Hair Salon & Beauty Services
+Location	Strada Văilor 3, Bl 3, Slatina, Romania
+Phone	+40 749 479 098
+Geographic Coordinates	44.4201855°N, 24.3850211°E
+Service Type	Coafor (Hair Salon)
+Operating Status	Active
+Customer Rating & Reviews
+
+The salon maintains an exceptional rating of 4.9 out of 5 stars based on 58 verified reviews, indicating very high customer satisfaction. This is a strong market position in the competitive local beauty industry.
+
+Key Customer Feedback Themes
+
+Customer testimonials consistently highlight:
+
+Professional Excellence: Customers frequently praise the team's professionalism and dedication, with comments like "Felicitări echipei pentru implicare și profesionalism!" (Congratulations to the team for involvement and professionalism!)
+Skilled Stylists: Individual team members, particularly Madalina and Andreea, receive specific praise for delivering exceptional results with attention to detail
+Service Quality: Comments emphasize "rezultate wow" (wow results) and "atenție la detalii" (attention to detail)
+Atmosphere: Customers describe the salon as "elegant, with a refined atmosphere and impeccable services"
+Loyalty: The phrase "vin cu drag de fiecare data" (I come with pleasure every time) appears frequently, indicating strong customer retention
+Primary Services Offered
+
+Based on research, Beyoutiful Salon provides a comprehensive range of beauty services:
+
+Hair Services
+Haircuts and styling for all hair types
+Hair color treatments (including balayage and highlights)
+Hair treatments and care
+Specialized styling services
+Nail Services
+Manicures (including gel and acrylics)
+Pedicures
+Nail art and design
+Facial & Skin Care
+Facials and skin treatments
+Facial care services
+Additional Services
+Waxing services
+Esthetician services
+Beauty consultation
+Amenities & Facilities
+
+The salon offers the following amenities and features:
+
+Amenity	Status
+Restroom/Toilet	✓ Available
+Appointments System	✓ Recommended
+Credit Card Payments	✓ Accepted
+Debit Card Payments	✓ Accepted
+Modern Equipment	✓ Professional-grade
+Professional Products	✓ Branded products from recognized suppliers
+Operational Characteristics
+Service Philosophy
+
+The salon emphasizes:
+
+Personalized attention to individual client needs and preferences
+Professional expertise with a dedicated team of trained specialists
+High hygiene standards with strict sanitation protocols
+Modern facilities featuring contemporary design and professional equipment
+Quality assurance through use of professional-grade products and equipment
+Atmosphere & Design
+
+The salon features:
+
+Modern and sophisticated decor with neutral tones and gold accents
+Bright, natural lighting through large windows
+Ambient relaxation music to create a calming environment
+Elegant and refined ambiance suitable for a premium beauty experience
+Market Position & Reputation
+Competitive Standing
+
+Beyoutiful Salon operates in a moderately competitive market in Slatina, with several nearby competitors including:
+
+FOARFECA DE AUR EMILIA
+TRENDY SALON SLATINA
+AlessMar Studio
+D&D Salon Infrumusetare
+DIV Studio
+
+Despite this competition, the salon's 4.9/5 rating significantly exceeds average for the region, positioning it as a market leader in customer satisfaction.
+
+Market Reputation
+
+The salon is recognized as:
+
+Premium/upscale establishment based on service quality and facility standards
+Reliable and trustworthy with consistent positive feedback
+Professional and detail-oriented in service delivery
+Customer-focused with emphasis on personalized experiences
+Financial & Legal Information
+
+Note: Specific financial performance data, tax ID, registration details, and founding date were not publicly available through accessible sources. This information would typically be found in:
+
+Romanian business registry (Registrul Comerțului)
+Tax authority records
+Company financial statements
+
+For complete legal and financial information, direct inquiry with the Romanian Chamber of Commerce or the Slatina local business registry would be necessary.
+
+Digital Presence & Contact Methods
+Online Presence
+
+Based on research, the salon has limited but functional digital presence:
+
+Contact Methods Available:
+
+Phone: +40 749 479 098
+WhatsApp: Available for messaging and inquiries
+Email: Available for inquiries (website states "in curand" - coming soon)
+
+Social Media Status:
+
+Facebook: Listed as "coming soon"
+Instagram: Listed as "coming soon"
+Currently, the salon appears to rely primarily on phone and messaging apps for customer communication
+Website Status
+
+The salon's official website appears to be under development or not fully established, with multiple sources indicating that online booking and web presence are planned for future implementation.
+
+Business Strengths
+Exceptional Customer Satisfaction: 4.9/5 rating with 58 verified reviews demonstrates strong market acceptance
+Professional Team: Highly trained specialists with recognized expertise in their respective fields
+Comprehensive Service Offering: Full-service salon covering hair, nails, and facial treatments
+Quality Standards: Investment in professional equipment and branded products
+Customer Loyalty: Repeat customer base indicated by positive testimonials
+Strategic Location: Positioned in central Slatina with accessible coordinates
+Areas for Development
+Digital Presence: Website and social media presence listed as "coming soon" suggests opportunity for online expansion
+Online Booking System: Currently relies on phone appointments; online booking would improve accessibility
+Market Visibility: Enhanced digital marketing could increase customer reach
+Online Reviews Platform: While highly rated, presence on major review platforms could be expanded
+Website_Found: None
+
+Note: While the salon has a presence on local business directories (Maptons, polomap, and beautysalon123.ro), no official standalone website or active social media accounts were found. The salon appears to be in the process of developing its online presence, with Facebook and Instagram listed as "coming soon." Current customer contact is primarily through phone (+40 749 479 098) and WhatsApp messaging.
+
+FINAL REMINDER
+Use GPT-5.4, not a mini model. Build a business-first Romanian website that feels human, specific, and commercially useful.

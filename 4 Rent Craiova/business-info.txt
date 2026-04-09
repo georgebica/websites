@@ -1,0 +1,107 @@
+Original Data:
+==================================================
+Title: 4 Rent Craiova
+Category: Serviced apartment
+Address: 200516 Craiova
+Complete Address: {"borough":"","street":"","city":"Craiova","postal_code":"200516","state":"","country":"RO"}
+Phone: 0723 668 453
+Owner: {"id":"103810222664120318148","name":"4 Rent Craiova (Owner)","link":"https://www.google.com/maps/contrib/103810222664120318148"}
+Google Maps Link: https://www.google.com/maps/place/4+Rent+Craiova/data=!4m7!3m6!1s0x4752d72e1eb9ad13:0xf5a3fd4321eaf4c8!8m2!3d44.3166961!4d23.8261343!16s%2Fg%2F11l2n628v7!19sChIJE625Hi7XUkcRyPTqIUP9o_U?authuser=0&hl=en&rclk=1
+Rating: 5/5 (1 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJE625Hi7XUkcRyPTqIUP9o_U&q=4+Rent+Craiova&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: null
+Plus Code: 8R8G+MF Craiova
+Place ID: ChIJE625Hi7XUkcRyPTqIUP9o_U
+CID: 17700269425269863624
+Latitude: 44.316696
+Longitude: 23.826134
+Thumbnail: https://lh3.googleusercontent.com/gps-cs-s/AHVAwepRNvmtqPPHpNXs6OVU4xvZN-bO8BlYYjIWgR5ROx72PQtKTcGw7yaGtoWMos2oqKKnlO-D7QvL-_HLqSapKnj2NrpngttBSpZ2DVCotrIdzMxHdAwNSg19XAhbo_afUTComdL1RPUzWx5Y=w408-h306-k-no
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 11 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+[*****] Mirabela Belgiu
+  "Recomand în mod special, pe domnul evaluator Cladiu Oprescu. A fost alături de noi pe tot parcursul procesului de refinanțare, cu explicații clare, soluții potrivite și multă răbdare. Un proces care putea fi complicat a devenit simplu și eficient. Mulțumim!"
+
+[*****] RaZVaNrzr
+  "Am avut nevoie de evaluarea unui bun. Datorita suportului echipei AVENSIS CAPITAL am solutionat problema in aproximativ 3 zile, toata documentatia fiind pregatita si transmisa conform intelegerii. Multumesc domnului Oprescu Claudiu pentru promptitudine si profesionalism. Recomand! Apelati cu incredere!"
+
+[*****] Silviu Eugen Ciobanu
+  "O adevărată echipa de profesioniști. Am apelat de nenumărate ori la ei, iar ajutorul și promptitudinea lor au fost ireproșabile. Multumesc în mod special domnului Claudiu Oprescu pentru seriozitatea cu care a efectuat lucrările de evaluare atat pentru DITL, cât și pentru băncile cu care firma noastră colaborează. Cu siguranta voi continua sa lucrez cu echipa Avensis Capital."
+
+[*****] George-Marius Popescu
+  "Personalul cu care am interacționat, în special domnul Claudiu Oprescu, a dat dovadă de un înalt profesionalism. Am primit răspunsuri clare și complete la toate întrebările adresate, iar sprijinul oferit pentru reducerea termenului de realizare a raportului de evaluare, precum și pentru transmiterea promptă a răspunsului către bancă, a fost deosebit de apreciat.
+În concluzie, recomand cu încredere serviciile oferite. Mulțumesc!"
+
+[*****] Flo Bizu
+  "Recomand cu încredere serviciile Avensis Capital Consulting. Evaluatorul a fost punctual și a dat dovada de profesionalism. Actele predate băncii au fost complete și predate la timp."
+
+[*****] marina mitroi
+  "Societate de evaluari de cel mai ridicat nivel, cu garantia corectitudinii valorilor stabilite.
+Amabili, comunicare foarte buna, operativi, profesionisti si de incredere. Calitate ridicata la costuri decente.
+Recomand cu incredere!"
+
+[*****] Sofia Alexandra Corlan
+  "Am colaborat cu această firmă pentru servicii de evaluare și experiența a fost una bună. Comunicarea a fost clară, documentele au fost întocmite corect, iar termenele au fost respectate. Procesul a decurs fără probleme, iar explicațiile primite au fost utile. O colaborare serioasă și eficientă."
+
+[*****] Andrei Draghici
+  "Seriozitate, Promptitudine si Respect pentru clienți."
+
+
+Company Overview:
+==================================================
+Company overview
+Name: 4 Rent Craiova
+Category: Serviced apartment / short‑term rental (provided context)
+Location (given): Craiova 200516, Romania
+Phone (given): +40 723 668 453
+Owner (given): 4 Rent Craiova (Owner) — Google Maps contributor id: 103810222664120318148
+Google rating (given): 5.0 / 5 (1 review)
+
+Verified information above comes from the details you supplied (address, phone, owner id, rating). Additional online searches for a distinct official website, social profiles, company registration, tax ID, or public financials for an entity named “4 Rent Craiova” returned no clearly attributable corporate website or business‑registry record matching that exact trading name and phone number.
+
+Legal details
+Registration / Tax ID / Founding date: Not found in public Romanian company registries or other authoritative sources under the name “4 Rent Craiova.” No VAT/Tax ID or formal company registration details could be verified for this exact trading name during the search.
+Assessment: Likely a small private short‑term rental operator or an individual host listing (common in Craiova) rather than a registered hotel chain; if it is a registered company it may trade under a different legal name.
+
+(Verified = search of public sources produced no registration record for the provided trading name.)
+
+Primary services / products
+Likely service: Short‑term/serviced apartment rentals in Craiova (nightly/weekly lettings).
+Evidence: the business category you provided and the local market context where apartments are commonly listed on Airbnb/booking platforms. No dedicated booking page or listing explicitly labeled “4 Rent Craiova” was found.
+
+(Assessment based on category provided and absence of an official online presence.)
+
+Online presence and listings
+No official website located for “4 Rent Craiova.”
+No verifiable Facebook, Instagram, LinkedIn, or dedicated Google Business Profile page under that exact trading name found in public search results.
+There are multiple Craiova serviced‑apartment and aparthotel listings on platforms (Airbnb, Booking, local aparthotel sites), but none could be directly and confidently matched to “4 Rent Craiova” or the phone number +40 723 668 453 during the search.
+
+(Verified = no confirmed web/social presence found attributable to the provided name and phone.)
+
+Customer reviews / reputation
+You provided a Google rating of 5/5 from 1 review. That single‑review rating was treated as context; independent searches did not locate the corresponding Google Business Profile entry or the underlying review to verify content.
+Market context: Craiova short‑term rentals typically show mixed review volumes on platforms; a single 5‑star entry gives only limited insight into consistent performance.
+
+(Verified items: the rating appears only in the context you supplied; elsewhere no matching review was located.)
+
+Financial performance
+No public financial statements, revenue, or turnover data found for “4 Rent Craiova.”
+Assessment: absence of formal financial disclosures is consistent with a privately‑held small rental operator or individual host; such entities commonly do not publish financials.
+Market position / competition
+Local competitive landscape: Craiova’s short‑term accommodation market includes aparthotels, independent apartments listed on Airbnb/Booking/Expedia, and small local apartment managers. Without a clear online presence or registration info, “4 Rent Craiova” cannot be placed in market‑share rankings.
+Assessment: Likely a micro operator serving visitors to Craiova (business travelers, tourists) competing on location, price and short‑term availability rather than brand recognition.
+Risks and recommendations for verification
+Risks: inability to independently verify registration, ownership, or exact property listings increases uncertainty about service reliability, booking/payment safety, and regulatory compliance (tax/VAT).
+Quick verification steps you can take:
+Call the provided phone number and request the business’ legal name, company registration number (CUI/VAT), and address proof.
+Ask for a direct booking link or contract and request identification for the owner/manager.
+Search Romanian Trade Register (ONRC) for the provided legal name or the legal name provided by the operator.
+Check major listing platforms (Airbnb, Booking.com) by phone number or host name when available.
+Other relevant findings
+Multiple aparthotels and private apartment listings operate in Craiova; prominent local names (appearing in search results) include Aparthotel Craiova and numerous individual Airbnb/Booking listings — none matched conclusively to “4 Rent Craiova.”
+No public social media, website, or authoritative directory entries were found that could be cited as an official online presence for the business name you provided.
+Website_Found: None

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balkan Logistic Transport SRL — Transport & Logistică | Salcia, România</title>
+    <meta name="description" content="Balkan Logistic Transport SRL — transport marfă și logistică din Salcia, România. Curse naționale și internaționale, disponibilitate 24/7. TOP 100 România.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate_dark: '#1E293B',
+                        slate_deeper: '#0F172A',
+                        highway: '#FBBF24',
+                        highway_dark: '#D97706',
+                        concrete: '#94A3B8',
+                        concrete_light: '#CBD5E1',
+                    },
+                    fontFamily: {
+                        display: ['"Red Hat Display"', 'sans-serif'],
+                        body: ['"Red Hat Text"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700;900&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animate On Scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Red Hat Text', sans-serif;
+            color: #FFFFFF;
+            background: #0F172A;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Red Hat Display', sans-serif;
+        }
+
+        /* Highway dashed-line accent */
+        .highway-line {
+            width: 100%;
+            height: 4px;
+            background: repeating-linear-gradient(
+                90deg,
+                #FBBF24 0px,
+                #FBBF24 32px,
+                transparent 32px,
+                transparent 48px
+            );
+        }
+        .highway-line-vertical {
+            width: 4px;
+            height: 100%;
+            background: repeating-linear-gradient(
+                180deg,
+                #FBBF24 0px,
+                #FBBF24 20px,
+                transparent 20px,
+                transparent 32px
+            );
+            position: absolute;
+        }
+        .highway-line-short {
+            width: 120px;
+            height: 4px;
+            background: repeating-linear-gradient(
+                90deg,
+                #FBBF24 0px,
+                #FBBF24 20px,
+                transparent 20px,
+                transparent 30px
+            );
+        }
+
+        /* Card yellow top border */
+        .service-card {
+            border-top: 4px solid #FBBF24;
+            background: #1E293B;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(251, 191, 36, 0.15);
+        }
+
+        /* Stats strip */
+        .stat-item {
+            position: relative;
+        }
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: rgba(251, 191, 36, 0.3);
+        }
+
+        /* Badge pulse */
+        .badge-glow {
+            animation: badgePulse 3s ease-in-out infinite;
+        }
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.3); }
+            50% { box-shadow: 0 0 20px 4px rgba(251, 191, 36, 0.15); }
+        }
+
+        /* Star rating */
+        .star-rating {
+            color: #FBBF24;
+            letter-spacing: 2px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #FBBF24; border-radius: 4px; }
+
+        /* Nav active state */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FBBF24;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link:hover {
+            color: #FBBF24;
+        }
+
+        /* Truck icon animation */
+        .truck-move {
+            animation: truckDrive 8s linear infinite;
+        }
+        @keyframes truckDrive {
+            0% { transform: translateX(-100px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(calc(100vw + 100px)); opacity: 0; }
+        }
+
+        /* CTA button */
+        .cta-btn {
+            background: #FBBF24;
+            color: #0F172A;
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            background: #D97706;
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.35);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.35s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Section separators */
+        .section-dark { background: #0F172A; }
+        .section-slate { background: #1E293B; }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MovingCompany",
+        "name": "Balkan Logistic Transport SRL",
+        "description": "Transport marfă și logistică — curse naționale și internaționale din Salcia, România.",
+        "url": "",
+        "telephone": "+40771650560",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Oltului 55",
+            "addressLocality": "Salcia",
+            "postalCode": "230094",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.417869,
+            "longitude": 24.319538
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                "opens": "00:00",
+                "closes": "23:59"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "42"
+        },
+        "award": "TOP 100 România — Moving, Courier and Logistics Services"
+    }
+    </script>
+</head>
+<body class="font-body">
+
+    <!-- ============================================ -->
+    <!-- NAVBAR                                       -->
+    <!-- ============================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background: rgba(15,23,42,0.95); backdrop-filter: blur(12px);">
+        <div class="highway-line"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#acasa" class="flex items-center gap-3 group">
+                    <span class="text-highway text-2xl"><i class="fa-solid fa-truck-fast"></i></span>
+                    <span class="font-display font-bold text-lg md:text-xl tracking-wider text-white group-hover:text-highway transition-colors">
+                        BALKAN<span class="text-highway"> LOGISTIC</span>
+                    </span>
+                </a>
+
+                <!-- Desktop links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#acasa" class="nav-link text-sm tracking-widest uppercase text-concrete_light">Acasă</a>
+                    <a href="#despre" class="nav-link text-sm tracking-widest uppercase text-concrete_light">Despre noi</a>
+                    <a href="#servicii" class="nav-link text-sm tracking-widest uppercase text-concrete_light">Servicii</a>
+                    <a href="#contact" class="nav-link text-sm tracking-widest uppercase text-concrete_light">Contact</a>
+                    <a href="tel:0771650560" class="cta-btn px-5 py-2 rounded text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                    </a>
+                </div>
+
+                <!-- Mobile burger -->
+                <button id="menu-toggle" class="md:hidden text-highway text-2xl focus:outline-none" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-slate_deeper z-50 flex flex-col pt-20 px-8 gap-6 md:hidden shadow-2xl">
+            <button id="menu-close" class="absolute top-6 right-6 text-highway text-2xl"><i class="fa-solid fa-xmark"></i></button>
+            <a href="#acasa" class="mobile-link text-lg tracking-widest uppercase text-concrete_light hover:text-highway transition-colors">Acasă</a>
+            <a href="#despre" class="mobile-link text-lg tracking-widest uppercase text-concrete_light hover:text-highway transition-colors">Despre noi</a>
+            <a href="#servicii" class="mobile-link text-lg tracking-widest uppercase text-concrete_light hover:text-highway transition-colors">Servicii</a>
+            <a href="#contact" class="mobile-link text-lg tracking-widest uppercase text-concrete_light hover:text-highway transition-colors">Contact</a>
+            <div class="highway-line-short mt-4"></div>
+            <a href="tel:0771650560" class="cta-btn px-5 py-3 rounded text-center text-sm uppercase tracking-wider mt-2">
+                <i class="fa-solid fa-phone mr-2"></i>Sună acum
+            </a>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO                                         -->
+    <!-- ============================================ -->
+    <section id="acasa" class="section-dark relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+        <!-- Decorative vertical highway lines -->
+        <div class="highway-line-vertical left-8 top-0 hidden lg:block" style="opacity:0.15;"></div>
+        <div class="highway-line-vertical right-8 top-0 hidden lg:block" style="opacity:0.15;"></div>
+
+        <!-- Animated truck across bottom -->
+        <div class="absolute bottom-12 left-0 w-full pointer-events-none hidden md:block">
+            <div class="truck-move text-highway text-4xl opacity-20">
+                <i class="fa-solid fa-truck-moving"></i>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex flex-col items-center text-center gap-8">
+
+                <!-- Badges row -->
+                <div class="flex flex-wrap justify-center gap-4" data-aos="fade-down" data-aos-delay="100">
+                    <!-- Rating badge -->
+                    <div class="badge-glow inline-flex items-center gap-2 bg-slate_dark border border-highway/30 rounded-full px-5 py-2">
+                        <span class="star-rating text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        <span class="text-white font-display font-bold text-sm">5.0</span>
+                        <span class="text-concrete text-sm">din 42 recenzii</span>
+                    </div>
+                    <!-- TOP 100 badge -->
+                    <div class="badge-glow inline-flex items-center gap-2 bg-slate_dark border border-highway/30 rounded-full px-5 py-2">
+                        <span class="text-highway"><i class="fa-solid fa-trophy"></i></span>
+                        <span class="text-white font-display font-bold text-sm">TOP 100 România</span>
+                    </div>
+                </div>
+
+                <!-- Main heading -->
+                <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wider leading-tight uppercase" data-aos="fade-up" data-aos-delay="200">
+                    Balkan Logistic<br>
+                    <span class="text-highway">Transport</span>
+                </h1>
+
+                <!-- Highway line accent under heading -->
+                <div class="highway-line-short mx-auto" data-aos="fade-up" data-aos-delay="300"></div>
+
+                <!-- Subtitle -->
+                <p class="text-concrete_light text-lg md:text-xl max-w-2xl leading-relaxed font-body" data-aos="fade-up" data-aos-delay="350">
+                    Transport de marfă și soluții logistice complete — curse naționale și internaționale,
+                    disponibilitate <span class="text-highway font-semibold">24/7</span>, din inima României.
+                </p>
+
+                <!-- CTA buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-4" data-aos="fade-up" data-aos-delay="450">
+                    <a href="tel:0771650560" class="cta-btn px-8 py-4 rounded-lg text-base md:text-lg uppercase tracking-widest inline-flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        Solicită ofertă
+                    </a>
+                    <a href="#servicii" class="px-8 py-4 rounded-lg text-base md:text-lg uppercase tracking-widest inline-flex items-center justify-center gap-3 border-2 border-concrete/30 text-concrete_light hover:border-highway hover:text-highway transition-all duration-300">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        Servicii
+                    </a>
+                </div>
+
+                <!-- Quick info pills -->
+                <div class="flex flex-wrap justify-center gap-6 mt-8 text-concrete text-sm" data-aos="fade-up" data-aos-delay="550">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-highway"></i>
+                        Salcia, România
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-highway"></i>
+                        Luni — Sâmbătă, 24h
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-highway"></i>
+                        0771 650 560
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highway divider -->
+    <div class="highway-line"></div>
+
+    <!-- ============================================ -->
+    <!-- DESPRE NOI                                   -->
+    <!-- ============================================ -->
+    <section id="despre" class="section-slate py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-highway font-display font-bold text-sm uppercase tracking-[0.3em]">Cine suntem</span>
+                <h2 class="font-display font-black text-3xl md:text-5xl tracking-wider uppercase mt-4">Despre noi</h2>
+                <div class="highway-line-short mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Left column: text -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-concrete_light text-lg leading-relaxed">
+                        <strong class="text-white font-display">Balkan Logistic Transport SRL</strong> este o companie de transport și logistică
+                        cu sediul în <span class="text-highway font-semibold">Salcia, România</span>, dedicată excelenței operaționale în fiecare cursă pe care o efectuăm.
+                    </p>
+                    <p class="text-concrete_light text-lg leading-relaxed">
+                        Cu o evaluare perfectă de <span class="text-highway font-semibold">5.0 din 5</span> bazată pe
+                        <span class="text-highway font-semibold">42 de recenzii</span> și un
+                        <span class="text-highway font-semibold">Indice de Satisfacție de 10/10</span>,
+                        suntem recunoscuți drept unul dintre cei mai de încredere transportatori din regiune.
+                    </p>
+                    <p class="text-concrete_light text-lg leading-relaxed">
+                        Am fost desemnați câștigători <span class="text-highway font-semibold">TOP 100 România</span>
+                        în categoria „Moving, Courier and Logistics Services" — o confirmare a standardelor noastre
+                        ridicate și a angajamentului față de fiecare client.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <div class="flex items-center gap-2 bg-slate_deeper rounded-lg px-4 py-3">
+                            <i class="fa-solid fa-shield-halved text-highway text-xl"></i>
+                            <span class="text-sm text-concrete_light">Transport sigur</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-slate_deeper rounded-lg px-4 py-3">
+                            <i class="fa-solid fa-clock text-highway text-xl"></i>
+                            <span class="text-sm text-concrete_light">Disponibilitate 24/7</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-slate_deeper rounded-lg px-4 py-3">
+                            <i class="fa-solid fa-earth-europe text-highway text-xl"></i>
+                            <span class="text-sm text-concrete_light">Internațional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column: achievement cards -->
+                <div class="space-y-6" data-aos="fade-left" data-aos-delay="200">
+                    <!-- TOP 100 card -->
+                    <div class="bg-slate_deeper border border-highway/20 rounded-xl p-6 flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-trophy text-highway text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-white">TOP 100 România</h3>
+                            <p class="text-concrete text-sm mt-1">Câștigător în categoria Moving, Courier and Logistics Services — o distincție națională pentru excelență.</p>
+                        </div>
+                    </div>
+
+                    <!-- Satisfaction card -->
+                    <div class="bg-slate_deeper border border-highway/20 rounded-xl p-6 flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-face-smile text-highway text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-white">Indice Satisfacție: 10/10</h3>
+                            <p class="text-concrete text-sm mt-1">Scor maxim de satisfacție, reflectând grija noastră constantă pentru nevoile clienților.</p>
+                        </div>
+                    </div>
+
+                    <!-- Overall score card -->
+                    <div class="bg-slate_deeper border border-highway/20 rounded-xl p-6 flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-chart-line text-highway text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-white">Scor General: 8.9/10</h3>
+                            <p class="text-concrete text-sm mt-1">Performanță de top, evaluată pe baza calității serviciilor, punctualității și profesionalismului.</p>
+                        </div>
+                    </div>
+
+                    <!-- 24/7 card -->
+                    <div class="bg-slate_deeper border border-highway/20 rounded-xl p-6 flex items-start gap-5">
+                        <div class="flex-shrink-0 w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-headset text-highway text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-white">Operațiuni 24/7</h3>
+                            <p class="text-concrete text-sm mt-1">Suntem disponibili non-stop de luni până sâmbătă, pentru a vă asigura că marfa ajunge la timp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highway divider -->
+    <div class="highway-line"></div>
+
+    <!-- ============================================ -->
+    <!-- SERVICII                                     -->
+    <!-- ============================================ -->
+    <section id="servicii" class="section-dark py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-highway font-display font-bold text-sm uppercase tracking-[0.3em]">Ce oferim</span>
+                <h2 class="font-display font-black text-3xl md:text-5xl tracking-wider uppercase mt-4">Serviciile noastre</h2>
+                <div class="highway-line-short mx-auto mt-6"></div>
+                <p class="text-concrete_light text-lg max-w-2xl mx-auto mt-6">
+                    Soluții complete de transport și logistică, adaptate nevoilor dumneavoastră — de la curse locale la rute internaționale.
+                </p>
+            </div>
+
+            <!-- Service cards grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+                <!-- Card 1: Transport marfă -->
+                <div class="service-card rounded-xl p-6 md:p-8 flex flex-col gap-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-truck-moving text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl tracking-wide text-white">Transport marfă</h3>
+                    <p class="text-concrete text-sm leading-relaxed flex-grow">
+                        Transport de mărfuri generale și specializate cu flotă modernă, asigurând securitatea și integritatea încărcăturii pe tot parcursul traseului.
+                    </p>
+                    <div class="highway-line-short mt-2"></div>
+                </div>
+
+                <!-- Card 2: Logistică -->
+                <div class="service-card rounded-xl p-6 md:p-8 flex flex-col gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-boxes-stacked text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl tracking-wide text-white">Logistică</h3>
+                    <p class="text-concrete text-sm leading-relaxed flex-grow">
+                        Soluții logistice integrate — planificarea rutelor, optimizarea costurilor și managementul complet al lanțului de aprovizionare.
+                    </p>
+                    <div class="highway-line-short mt-2"></div>
+                </div>
+
+                <!-- Card 3: Curse naționale -->
+                <div class="service-card rounded-xl p-6 md:p-8 flex flex-col gap-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-road text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl tracking-wide text-white">Curse naționale</h3>
+                    <p class="text-concrete text-sm leading-relaxed flex-grow">
+                        Acoperire pe întreg teritoriul României, cu livrări rapide și programate. Rute optimizate pentru eficiență maximă.
+                    </p>
+                    <div class="highway-line-short mt-2"></div>
+                </div>
+
+                <!-- Card 4: Curse internaționale -->
+                <div class="service-card rounded-xl p-6 md:p-8 flex flex-col gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-highway/10 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-earth-europe text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl tracking-wide text-white">Curse internaționale</h3>
+                    <p class="text-concrete text-sm leading-relaxed flex-grow">
+                        Transport transfrontalier în Europa, cu documentație completă, respectarea reglementărilor internaționale și livrare la termen.
+                    </p>
+                    <div class="highway-line-short mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- STATS STRIP                                  -->
+    <!-- ============================================ -->
+    <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);">
+        <div class="highway-line"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
+
+                <!-- Stat: Rating -->
+                <div class="stat-item text-center px-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-highway font-display font-black text-5xl md:text-6xl">5.0</div>
+                    <div class="star-rating text-lg mt-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="text-concrete text-sm uppercase tracking-widest mt-2">Rating</div>
+                </div>
+
+                <!-- Stat: Reviews -->
+                <div class="stat-item text-center px-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-highway font-display font-black text-5xl md:text-6xl">42</div>
+                    <div class="text-white text-lg mt-2 font-display font-semibold">Recenzii</div>
+                    <div class="text-concrete text-sm uppercase tracking-widest mt-2">Verificate</div>
+                </div>
+
+                <!-- Stat: Availability -->
+                <div class="stat-item text-center px-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-highway font-display font-black text-5xl md:text-6xl">24/7</div>
+                    <div class="text-white text-lg mt-2 font-display font-semibold">Non-stop</div>
+                    <div class="text-concrete text-sm uppercase tracking-widest mt-2">Disponibilitate</div>
+                </div>
+
+                <!-- Stat: TOP 100 -->
+                <div class="stat-item text-center px-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-highway font-display font-black text-5xl md:text-6xl flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-trophy text-4xl md:text-5xl"></i>
+                    </div>
+                    <div class="text-white text-lg mt-2 font-display font-semibold">TOP 100</div>
+                    <div class="text-concrete text-sm uppercase tracking-widest mt-2">România</div>
+                </div>
+            </div>
+        </div>
+        <div class="highway-line"></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- DE CE NOI                                    -->
+    <!-- ============================================ -->
+    <section class="section-slate py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-highway font-display font-bold text-sm uppercase tracking-[0.3em]">Avantaje</span>
+                <h2 class="font-display font-black text-3xl md:text-5xl tracking-wider uppercase mt-4">De ce Balkan Logistic?</h2>
+                <div class="highway-line-short mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-gauge-high text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Rapiditate</h3>
+                    <p class="text-concrete text-sm leading-relaxed">Livrări rapide și la timp, cu rute optimizate pentru eficiență maximă pe drumurile naționale și europene.</p>
+                </div>
+
+                <div class="text-center space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-handshake text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Încredere</h3>
+                    <p class="text-concrete text-sm leading-relaxed">Rating perfect de 5.0 și Indice de Satisfacție de 10/10 — clientii noștri sunt cea mai bună recomandare.</p>
+                </div>
+
+                <div class="text-center space-y-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-route text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Flexibilitate</h3>
+                    <p class="text-concrete text-sm leading-relaxed">Adaptăm serviciile la cerințele specifice ale fiecărui client, indiferent de volum sau destinație.</p>
+                </div>
+
+                <div class="text-center space-y-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-helmet-safety text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Siguranță</h3>
+                    <p class="text-concrete text-sm leading-relaxed">Protocoale stricte de siguranță pentru manipularea și transportul mărfurilor, indiferent de natura acestora.</p>
+                </div>
+
+                <div class="text-center space-y-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-money-bill-trend-up text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Prețuri competitive</h3>
+                    <p class="text-concrete text-sm leading-relaxed">Tarife echilibrate care reflectă calitatea premium a serviciilor, fără costuri ascunse sau surprize.</p>
+                </div>
+
+                <div class="text-center space-y-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-headset text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Suport dedicat</h3>
+                    <p class="text-concrete text-sm leading-relaxed">Echipă disponibilă 24/7 de luni până sâmbătă, pregătită să răspundă la orice solicitare sau întrebare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highway divider -->
+    <div class="highway-line"></div>
+
+    <!-- ============================================ -->
+    <!-- CONTACT                                      -->
+    <!-- ============================================ -->
+    <section id="contact" class="section-dark py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-highway font-display font-bold text-sm uppercase tracking-[0.3em]">Contactați-ne</span>
+                <h2 class="font-display font-black text-3xl md:text-5xl tracking-wider uppercase mt-4">Contact</h2>
+                <div class="highway-line-short mx-auto mt-6"></div>
+                <p class="text-concrete_light text-lg max-w-2xl mx-auto mt-6">
+                    Suntem pregătiți să vă oferim soluția potrivită de transport. Contactați-ne pentru o ofertă personalizată.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+                <!-- Phone -->
+                <a href="tel:0771650560" class="service-card rounded-xl p-8 text-center flex flex-col items-center gap-4 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center group-hover:bg-highway/20 transition-colors">
+                        <i class="fa-solid fa-phone text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Telefon</h3>
+                    <p class="text-highway font-display font-bold text-xl tracking-wide">0771 650 560</p>
+                    <span class="text-concrete text-sm">Apelați pentru ofertă rapidă</span>
+                </a>
+
+                <!-- Address -->
+                <div class="service-card rounded-xl p-8 text-center flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-location-dot text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Adresă</h3>
+                    <p class="text-concrete_light text-base">Strada Oltului 55</p>
+                    <p class="text-concrete_light text-base">Salcia 230094</p>
+                    <span class="text-concrete text-sm">România</span>
+                </div>
+
+                <!-- Hours -->
+                <div class="service-card rounded-xl p-8 text-center flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-highway/10 rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-clock text-highway text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg">Program</h3>
+                    <p class="text-concrete_light text-base">Luni — Sâmbătă</p>
+                    <p class="text-highway font-display font-bold text-xl">24 ore / zi</p>
+                    <span class="text-concrete text-sm">Duminică: Închis</span>
+                </div>
+            </div>
+
+            <!-- CTA final -->
+            <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
+                <a href="tel:0771650560" class="cta-btn px-10 py-5 rounded-xl text-lg uppercase tracking-widest inline-flex items-center gap-3">
+                    <i class="fa-solid fa-phone-volume text-xl"></i>
+                    Sună acum: 0771 650 560
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="section-slate border-t border-highway/20">
+        <div class="highway-line"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <div class="grid md:grid-cols-3 gap-12">
+
+                <!-- Company info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-highway text-2xl"><i class="fa-solid fa-truck-fast"></i></span>
+                        <span class="font-display font-bold text-xl tracking-wider">
+                            BALKAN<span class="text-highway"> LOGISTIC</span>
+                        </span>
+                    </div>
+                    <p class="text-concrete text-sm leading-relaxed">
+                        Transport de marfă și soluții logistice complete. Curse naționale și internaționale din Salcia, România.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="star-rating text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        <span class="text-white text-sm font-bold">5.0</span>
+                        <span class="text-concrete text-sm">/ 42 recenzii</span>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="space-y-4">
+                    <h4 class="font-display font-bold text-lg tracking-wide">Navigare rapidă</h4>
+                    <div class="highway-line-short"></div>
+                    <ul class="space-y-3 mt-4">
+                        <li><a href="#acasa" class="text-concrete hover:text-highway transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-highway text-xs"></i> Acasă</a></li>
+                        <li><a href="#despre" class="text-concrete hover:text-highway transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-highway text-xs"></i> Despre noi</a></li>
+                        <li><a href="#servicii" class="text-concrete hover:text-highway transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-highway text-xs"></i> Servicii</a></li>
+                        <li><a href="#contact" class="text-concrete hover:text-highway transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-highway text-xs"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact footer -->
+                <div class="space-y-4">
+                    <h4 class="font-display font-bold text-lg tracking-wide">Contact</h4>
+                    <div class="highway-line-short"></div>
+                    <ul class="space-y-3 mt-4">
+                        <li class="flex items-center gap-3 text-concrete text-sm">
+                            <i class="fa-solid fa-phone text-highway"></i>
+                            <a href="tel:0771650560" class="hover:text-highway transition-colors">0771 650 560</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-concrete text-sm">
+                            <i class="fa-solid fa-location-dot text-highway mt-1"></i>
+                            <span>Strada Oltului 55, Salcia 230094, România</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-concrete text-sm">
+                            <i class="fa-solid fa-clock text-highway"></i>
+                            <span>Luni — Sâmbătă: 24h</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-concrete text-sm">
+                            <i class="fa-solid fa-trophy text-highway"></i>
+                            <span>TOP 100 România</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-highway/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-concrete text-sm text-center md:text-left">
+                    &copy; 2026 Balkan Logistic Transport SRL. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center gap-2 text-concrete text-sm">
+                    <i class="fa-solid fa-truck text-highway"></i>
+                    <span>Transport & Logistică — Salcia, România</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS                                      -->
+    <!-- ============================================ -->
+    <!-- AOS Init -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 60
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+        });
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = navbar.offsetHeight + 10;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

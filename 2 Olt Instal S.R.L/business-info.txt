@@ -1,0 +1,84 @@
+Original Data:
+==================================================
+Title: 2 Olt Instal S.R.L.
+Category: Store
+Address: Str. Primăverii 18, Slatina
+Complete Address: {"borough":"","street":"Str. Primăverii 18","city":"Slatina","postal_code":"","state":"","country":"RO"}
+Phone: 0249 433 211
+Owner: {"id":"","name":"2 Olt Instal S.R.L. (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/2+Olt+Instal+S.R.L./data=!4m7!3m6!1s0x40ad383430605725:0xa1b4ab1b57ec7a80!8m2!3d44.4291573!4d24.3733935!16s%2Fg%2F1hc1ccvzh!19sChIJJVdgMDQ4rUARgHrsVxurtKE?authuser=0&hl=en&rclk=1
+Rating: 5/5 (1 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJJVdgMDQ4rUARgHrsVxurtKE&q=2+Olt+Instal+S.R.L.&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["8 am–6 pm"],"Monday":["8 am–6 pm"],"Saturday":["9 am–2 pm"],"Sunday":["Closed"],"Thursday":["8 am–6 pm"],"Tuesday":["8 am–6 pm"],"Wednesday":["8 am–6 pm"]}
+About: [{"id":"service_options","name":"Service options","options":[{"name":"Delivery","enabled":true}]},{"id":"payments","name":"Payments","options":[{"name":"Credit cards","enabled":true},{"name":"Debit cards","enabled":true}]}]
+Plus Code: C9HF+M9 Slatina
+Place ID: ChIJJVdgMDQ4rUARgHrsVxurtKE
+CID: 11652126269841898112
+Latitude: 44.429157
+Longitude: 24.373393
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=UPJTZRMGB3fY1FexmXp3AQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=306.55005&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 0 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+
+
+Company Overview:
+==================================================
+Company Overview
+Name: 2 Olt Instal S.R.L.
+Category: Store / Installer (plumbing, heating, HVAC)
+Address (listed): Str. Primăverii 18, Slatina, Olt, Romania (variant addresses also appear as Aleea Rozelor 18, Bl. 1A, Sc. A, Et.1, Ap.4 and Str. Primăverii Nr. 18, Bl. Fa18, Sc. B, Parter).
+Phone: +40 249 433 211 (additional mobile listed on some directories: +40 745 644 001).
+Service Options reported: Delivery.
+Payments reported: Credit cards, Debit cards.
+Public rating (aggregated from provided context): 5/5 (1 review listed).
+
+Verified facts below are sourced from Romanian business directories (Listafirme, Termene, Cylex, Termene/Termene.ro summary pages).
+
+Legal Details
+Official company name: 2 OLT INSTAL SRL.
+Unique Identification (CUI): 13666222 (listed on multiple registries).
+Trade/Registration number: J20/0100/00006283 (displayed as J2001000006283 / ROONRC.J2001000006283).
+Founding / Registration date: 2001 (sources list either 16 Jan 2001 or 29 Jan 2001; Termene shows 29-01-2001, ListaFirme displays 2001-01-16 — date uncertain between those two entries).
+Primary CAEN (main activity): 4322 — Lucrări de instalații sanitare, de încălzire și de aer condiționat (plumbing, heating, AC installations).
+Company size category: microenterprise (directories list as micro, few employees historically).
+Publicly available registry entries: present on Romanian business aggregators (Listafirme, Termene, Termene.ro, Cylex).
+Tax ID / CUI provided above; no explicit public VAT number beyond the CUI shown.
+Primary Services / Products
+Core activities: installation and repair works for sanitary installations, central heating systems, ventilation/air-conditioning equipment; general installer services for construction projects (per CAEN 4322).
+Directory listings also tag product/ service keywords: equipment, installations for construction, thermal installations, central heating, installation and repair of sanitary systems, aluminum works.
+Financial Performance
+Historical financial snapshots available in directories (Listafirme/Termene) show variable figures across years. Some aggregated tables list revenue/profit/dates going back many years; others show recent years with zero or unavailable data. Directory excerpts include historical turnover values (older years) but recent years (2022–2024) are shown as zero or not disclosed on some public pages.
+Public directory summary: categorized as small/micro with revenues usually under thresholds for large reporting; up-to-date audited financial statements are not freely published on the directory pages consulted. For precise, audited financials or latest balance sheet, a paid company report or the official Romanian Trade Register (ONRC) filings would be required.
+
+Verified financial data references: Listafirme and Termene listings (public snapshots), but detailed up-to-date financial statements were not available in free previews.
+
+Market Position & Reputation
+Local player in Slatina (Olt) focused on plumbing/HVAC installation services.
+Classified as a microenterprise; appears to be a small local competitor among several installers in the same streets/neighborhood.
+No major national presence or registered trademarks found.
+Reputation signals: minimal online reviews (one 5/5 rating referenced in the provided context); directory listings (Cylex) show no or few user reviews. Presence on multiple directories indicates basic local visibility but limited public reputation content.
+Customer Reviews / Testimonials
+Public review activity is very limited. Cylex lists no user reviews (prompt to “Write first review”). Provided context included a single 5/5 (1 review) rating — likely from a local directory entry; full review text or source not available.
+No customer testimonials or reviews found on social networks or an official site.
+Online Presence & Contact Listings
+Found on multiple business-directory pages: Listafirme, Termene/Termene.ro, Cylex, and similar local business listing sites. These pages provide contact phone(s), addresses (variants), CAEN, and summary company data.
+No official company website URL or verified social media accounts (Facebook, Instagram, LinkedIn) discovered in searches of public directories and search engines. Some directories list “no website” or have empty website field.
+Multiple address formats appear across listings (Str. Primăverii 18 vs. Aleea Rozelor 18 / Rozelor 18 — likely different reported headquarters/punct of contact or historical address variants).
+Legal / Litigation / Compliance Notes
+Directory sites offer paid reports for deeper checks (e.g., outstanding tax liabilities, insolvency records, litigation). Public preview pages did not show active insolvency or flagged claims, but they also note that detailed reports require login/purchase. No free public evidence of insolvency found in the search results consulted.
+Additional Relevant Information
+Business directories list mobile contact +40 745 644 001 in addition to the main phone. Operating hours appear on Cylex (example schedule: weekdays ~08:00–18:00, Sat 09:00–14:00), but such schedules are user-contributed and may not be official.
+CAEN 4322 indicates the company is primarily contracting/installation-focused rather than retail storefront, despite the category “Store” in your brief.
+Sources / Verification Status
+Verified information: company name, CUI (13666222), registration number (J2001000006283), CAEN 4322, founding year 2001 (two close dates found), phone numbers and addresses as listed on multiple Romanian business directories (Listafirme, Termene, Cylex).
+Unverified / needs confirmation: exact founding day (16 Jan vs 29 Jan 2001), precise current address variant, up-to-date financial statements (recent years), presence/absence of active social pages beyond directory listings, and customer reviews beyond a single listed 5-star entry.
+Recommended Next Steps to Validate / Deepen Research
+Request an official company extract from the Romanian Trade Register (ONRC) for definitive registration date, administrators, shareholders, and filings.
+Obtain a paid financial/legal report (Termene, Listafirme paid reports) for current fiscal year figures, tax liabilities, and litigation history.
+Call the listed phone(s) to confirm address, services, opening hours, and whether an official website or social profiles exist.
+
+##Website_Found: None

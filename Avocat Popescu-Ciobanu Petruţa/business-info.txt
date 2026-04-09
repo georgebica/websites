@@ -1,0 +1,135 @@
+Original Data:
+==================================================
+Title: Avocat Popescu-Ciobanu Petruţa
+Category: Consultant
+Address: Strada Lipscani 40, Slatina
+Complete Address: {"borough":"","street":"Strada Lipscani 40","city":"Slatina","postal_code":"","state":"","country":"RO"}
+Phone: 0744 187 177
+Owner: {"id":"","name":"Avocat Popescu-Ciobanu Petruţa (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/Avocat+Popescu-Ciobanu+Petru%C5%A3a/data=!4m7!3m6!1s0x40ad382cb3ae977d:0xb2bbdaeda731a927!8m2!3d44.4288716!4d24.3566341!16s%2Fg%2F11kmnvvsnw!19sChIJfZeusyw4rUARJ6kxp-3au7I?authuser=0&hl=en&rclk=1
+Rating: 5/5 (4 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJfZeusyw4rUARJ6kxp-3au7I&q=Avocat+Popescu-Ciobanu+Petru%C5%A3a&authuser=0&hl=en&gl=RO
+Open Hours: {"Friday":["Open 24 hours"],"Monday":["Open 24 hours"],"Saturday":["Closed"],"Sunday":["Closed"],"Thursday":["Open 24 hours"],"Tuesday":["Open 24 hours"],"Wednesday":["Open 24 hours"]}
+About: null
+Plus Code: C9H4+GM Slatina
+Place ID: ChIJfZeusyw4rUARJ6kxp-3au7I
+CID: 12879128273643219239
+Latitude: 44.428872
+Longitude: 24.356634
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 3 | ****: 0 | ***: 1 | **: 0 | *: 3
+
+[*****] florin. ilie
+  "Ok"
+
+[***__] Alleylla Addellaidde
+  "Buna dimineața,mă numesc Luca Adela,am o problema foarte gravă,vecinii din fata casei au intrat abuziv pe terenul meu,și acum vor să toarne ciment in gradina tot pe terenul meu"
+
+[*____] KING OF UNIVERSE
+  "Din nefericire procurorii ce instrumentează dosarele penale sunt incompetenți.... altfel nu s-ar explica cum un măscărici politic ca DARIUS VÎLCOV este încă în libertate ....cel mai probabil acești procurori și-au obținut diploma de studii de la aceiași facultate din Teleorman de unde a obținut și Dragnea diploma ."
+
+[*****] Daniel Iordache
+  "Parchetul de pe lângă judecătoria Slatina"
+
+[*____] Florin Milea
+
+[*****] Calin Ionut
+
+[*____] Daniel Daniel
+
+
+Company Overview:
+==================================================
+Company Overview
+
+Avocat Popescu-Ciobanu Petruţa is a legal consulting practice operating as an individual law office (cabinet individual) in Slatina, Olt County, Romania. The business is operated by Petruţa Popescu-Ciobanu, a licensed attorney specializing in legal representation and consultation services.
+
+Legal Details and Registration
+Aspect	Information
+Professional Status	Avocat definitiv (fully licensed attorney)
+Bar Association	Baroul Olt (Olt Bar Association)
+Member Since	January 1, 1999
+Professional Experience	27-28 years of legal practice
+Practice Type	Individual law office (Cabinet Individual)
+Jurisdiction Rights	Authorized to appear before all court levels: District Court (Judecătorie), Court (Tribunal), Court of Appeal, and Supreme Court of Cassation
+Business Location and Contact Information
+Detail	Information
+Primary Address	Strada Primaverii nr. 11, Block PM 2, Staircase D, Apt. 20, Slatina, Olt County, Romania
+Alternative Address Listed	Strada Lipscani 40, Slatina
+Phone Number	0744 187 177 (mobile) / 0768 177 855 (landline)
+City	Slatina (county capital of Olt County)
+Country	Romania
+Primary Services and Practice Areas
+
+The attorney offers legal services across multiple domains:
+
+Core Practice Areas
+Criminal Law (Drept Penal) – including criminal defense and prosecution matters
+Civil Law (Drept Civil) – covering personal disputes and civil litigation
+Commercial and Corporate Law (Drept Comercial și Societar) – business transactions and corporate matters
+Administrative and Tax Law (Drept Administrativ și Fiscal) – regulatory and tax-related issues
+Family Law (Dreptul Familiei) – divorces, custody, inheritance matters
+Labor Law (Dreptul Muncii) – employment disputes and worker rights
+Insolvency Procedures (Procedura Insolvență) – bankruptcy and debt restructuring
+Service Offerings
+
+The practice provides:
+
+Legal representation in court proceedings
+Legal consultation and advisory services
+Document preparation and contract drafting
+Dispute resolution assistance
+Personalized legal solutions tailored to client needs
+Market Position and Reputation
+
+Rating and Reviews: 5/5 stars based on 4 reviews (as indicated in your provided data), though some sources show varying review counts. This indicates strong client satisfaction despite limited online visibility.
+
+Professional Standing:
+
+Well-established practice with over 25 years of continuous operation since 1999
+Registered member of the National Union of Romanian Bars (UNBR) and the Olt Bar Association
+Verified legal professional listed on multiple professional directories including:
+CautAvocat.ro (official Romanian attorney search platform)
+Avocatura.com (legal consultation platform)
+EuroAvocatura.ro (professional legal directory)
+Limburi.ro (business directory)
+
+Market Presence: The attorney operates in Slatina, a regional legal market with moderate competition from other established attorneys, making this a recognized local legal service provider.
+
+Operating Hours
+Day	Status
+Monday - Friday	Open 24 hours (or available for consultations)
+Saturday - Sunday	Closed
+Online Presence and Digital Accessibility
+
+The attorney maintains a presence on professional legal directories but limited personal branding:
+
+Active on: Professional legal platforms (CautAvocat.ro, Avocatura.com, EuroAvocatura.ro)
+Accessible via: Phone consultation and in-office meetings
+No dedicated website or social media profiles identified
+Financial Performance and Business Structure
+
+Information Status: Specific financial data is not publicly available. As an individual attorney practice, detailed financial records are typically private and not disclosed publicly in Romania. However, the sustained 27-year operation indicates financial stability and sustainable business viability.
+
+Clientele and Service Delivery
+
+The practice serves:
+
+Individual clients requiring personal legal representation
+Families needing domestic law assistance
+Small to medium business clients
+Parties involved in commercial disputes
+Individuals in employment or labor disputes
+Distinguishing Factors
+Long-standing credibility: Operating continuously since 1999 demonstrates professional reliability and client trust
+Comprehensive legal expertise: Covers diverse practice areas, making it a generalist practice suitable for various legal needs
+Local market presence: Well-integrated into Slatina's legal community with multiple directory listings
+Accessible contact: Direct phone availability for client consultations
+Positive client feedback: 5/5 rating suggests high satisfaction among clients who have used services
+
+##Website_Found: None
+
+The business does not have a dedicated official website or significant social media presence. However, it is listed on professional legal directories including CautAvocat.ro (https://cautavocat.ro/avocat/popescu-ciobanu-petruta), Avocatura.com, and EuroAvocatura.ro, where potential clients can find contact information and professional credentials.

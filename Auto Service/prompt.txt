@@ -1,0 +1,250 @@
+FINAL WEBSITE BUILD BRIEF
+Use GPT-5.4 for the final website build. Do not use GPT-5.4 Mini or any other mini model.
+
+You are building the final website itself, not writing a meta-prompt or explaining a strategy document.
+All public-facing website copy must be in Romanian.
+
+==========================================================
+ROLE
+==========================================================
+You are an elite, world-class website builder specializing in single-page, high-converting local business websites. You combine the visual sensibility of a top UI designer with the conversion instincts of a seasoned marketer and the technical precision of a senior front-end engineer. You produce flawless, production-ready code on the first attempt.
+
+==========================================================
+GLOBAL RULES (MANDATORY - NO EXCEPTIONS)
+==========================================================
+1. ALL public-facing text must be written in Romanian, using correct Romanian diacritics (a, i, s-comma, t-comma: a, i, s, t).
+2. Output a single, self-contained index.html file. No external CSS files, no external JS files beyond approved CDNs.
+3. Use Tailwind CSS via CDN (https://cdn.tailwindcss.com).
+4. NO <img> tags, NO external images, NO SVGs linked externally. All visual elements must be CSS-only (gradients, shapes, borders, shadows, pseudo-elements).
+5. NO <form> elements, NO <input> elements, NO <textarea> elements, NO contact forms of any kind.
+6. Use Font Awesome via CDN for all icons (https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css).
+7. Use AOS (Animate On Scroll) library via CDN for scroll animations (https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css and https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js).
+8. Use Google Fonts for typography (load via <link> in <head>).
+9. Mobile-first responsive design. Must look perfect on 320px screens and scale beautifully to 1920px+.
+10. NO emojis anywhere in the code or content.
+11. Semantic HTML5 throughout. Proper heading hierarchy (single H1, then H2s, H3s).
+12. All interactive elements must have hover/focus states.
+13. Smooth scrolling behavior enabled.
+14. Page must score 90+ on Lighthouse for Performance, Accessibility, Best Practices, and SEO.
+
+==========================================================
+BUSINESS DATA
+==========================================================
+Business Name: Auto Service
+Category: Auto Repair Shop (service auto, reparatii auto)
+Address: Strada Deceneu, Craiova, Romania
+City: Craiova
+Country: Romania (RO)
+Rating: 5/5 (based on 2 reviews)
+Amenities: Mechanic services, Toilet facilities
+Phone: Not available
+Website: None (this will be their first)
+Google Maps: https://www.google.com/maps/place/Auto+Service/
+Coordinates: 44.334272, 23.801117
+Competition: 73 auto repair shops in Craiova
+Key Review Themes: Good prices, friendly staff, quality work
+Online Presence: Very limited / new business
+
+==========================================================
+BRAND DNA
+==========================================================
+Core Identity: The friendly neighborhood mechanic you can trust.
+Personality Traits:
+- NEIGHBORHOOD TRUST: This is the mechanic your neighbor recommends over coffee. Local, known, reliable.
+- FRIENDLY SIMPLICITY: No corporate jargon, no complicated menus. Just honest, straightforward communication.
+- HONEST WORK: Fair prices, no surprises. What you see is what you get.
+- APPROACHABLE EXPERTISE: Skilled mechanics who explain things in plain language, never talk down to you.
+
+Voice & Tone: Warm, conversational, like a friend who happens to be great with cars. Not salesy, not corporate. Think of a mechanic wiping his hands on a rag and saying "Hai sa vedem ce are masina ta" with a genuine smile.
+
+==========================================================
+VISUAL DESIGN SYSTEM
+==========================================================
+
+COLOR PALETTE:
+- Base/Background: Warm Cream #FDF6EC (like aged paper, warm and inviting)
+- Primary: Classic Navy Blue #1A3A5C (trustworthy, professional but not cold)
+- Accent: Vintage Mustard Yellow #E8A317 (energetic, warm, retro feel)
+- Text Primary: #2D2D2D (soft black, easier on eyes than pure black)
+- Text Secondary: #5A6B7A (muted blue-gray for supporting text)
+- Card Background: #FFFFFF (clean white for service ticket cards)
+- Border/Dotted: #C4B99A (warm tan for dotted borders, like old service tickets)
+
+TYPOGRAPHY:
+- Headings: "Archivo Black", sans-serif (bold, punchy, slightly retro character)
+- Body: "IBM Plex Sans", sans-serif (technical precision meets friendly readability)
+- Load both from Google Fonts.
+- H1: 2.5rem-3.5rem responsive, Archivo Black, navy #1A3A5C
+- H2: 1.75rem-2.25rem responsive, Archivo Black, navy #1A3A5C
+- Body: 1rem-1.125rem, IBM Plex Sans, weight 400, color #2D2D2D
+- Small/captions: 0.875rem, IBM Plex Sans, weight 500, color #5A6B7A
+
+DESIGN MOTIFS:
+- Rounded corners everywhere (border-radius: 12px-16px for cards, 9999px for pill badges)
+- Dotted borders (2px dotted #C4B99A) on service ticket cards -- like a tear-off service receipt
+- "Service ticket" card style: white background, dotted border, slight shadow, a small "stub" accent on the left side (a 4px solid mustard yellow left border)
+- Warm, subtle shadows (box-shadow with warm tones, not cold grays)
+- Background texture: subtle dotted or cross-hatch pattern via CSS (very faint, on cream background)
+- No harsh lines. Everything feels hand-touched, warm, crafted.
+
+OVERALL VIBE: Vintage gas station poster meets modern web. Friendly neighborhood mechanic shop. Think warm, unpretentious, inviting. NOT corporate, NOT aggressive, NOT cold. Like walking into a clean, well-organized garage where the owner greets you by name.
+
+==========================================================
+UNIQUE LAYOUT STRUCTURE
+==========================================================
+
+SECTION 1 -- HERO (Full viewport height, cream background #FDF6EC)
+- Large navy heading (H1, Archivo Black): "Mecanicul tau de incredere din Craiova"
+- Below the heading: a thick mustard yellow (#E8A317) underline accent (not a full line, about 30-40% width, centered, 4px height, rounded ends)
+- Friendly subheadline (IBM Plex Sans, 1.125rem, #5A6B7A): "Reparatii auto cu suflet, preturi corecte si o echipa care te trateaza ca pe un vecin."
+- A single CTA button: "Vino sa ne cunosti" -- rounded pill shape, mustard yellow background, navy text, bold. Hover: darken slightly, subtle lift shadow.
+- Subtle CSS-only decorative element: a faint wrench or gear silhouette made with CSS shapes/pseudo-elements in the background corner (very subtle, opacity ~0.05-0.08)
+- Below hero: a thin dotted border separator line
+
+SECTION 2 -- DESPRE NOI (About Us -- cream background continues)
+- Section heading (H2): "Despre noi"
+- Styled to feel like a handwritten note or personal letter:
+  - Slightly off-white or light cream card (#FFF9F0) with a subtle shadow
+  - A slight rotation (transform: rotate(-0.5deg)) for a casual, handwritten feel
+  - Dotted border around the card
+  - Content: 3-4 warm, personal sentences. Write as if the owner is speaking directly to you. Mention: small, local shop on Strada Deceneu. Passion for cars. Treating every customer like family. No frills, just honest work at fair prices.
+  - A small wrench icon (Font Awesome) as decorative element in corner
+
+SECTION 3 -- SERVICII (Services -- slightly different background, maybe #F9F3E6 or keep cream)
+- Section heading (H2): "Ce putem face pentru masina ta"
+- 4 "service ticket" styled cards in a responsive grid (2x2 on desktop, 1 column on mobile):
+  CARD 1: Reparatii mecanice
+    - Small wrench icon (fa-wrench), dotted border, mustard left accent border
+    - Brief 1-2 sentence description of mechanical repairs
+  CARD 2: Diagnosticare
+    - Small search/diagnostic icon (fa-magnifying-glass or fa-stethoscope), dotted border, mustard left accent border
+    - Brief 1-2 sentence description of diagnostics
+  CARD 3: Intretinere
+    - Small oil can icon (fa-oil-can), dotted border, mustard left accent border
+    - Brief 1-2 sentence description of maintenance
+  CARD 4: Revizie
+    - Small clipboard/check icon (fa-clipboard-check), dotted border, mustard left accent border
+    - Brief 1-2 sentence description of revisions/inspections
+- Each card: white background, rounded corners (12px), 2px dotted border in #C4B99A, 4px solid left border in #E8A317, soft warm shadow, padding generous (24px), hover: slight lift and shadow increase
+- AOS fade-up animation on each card, staggered delays
+
+SECTION 4 -- DE CE NOI (Why Choose Us -- cream background)
+- Section heading (H2): "De ce sa ne alegi"
+- 3 trust points displayed as rounded pill-shaped badges, horizontally on desktop, stacked on mobile:
+  BADGE 1: "Preturi corecte" with fa-tag icon
+  BADGE 2: "Echipa prietenoasa" with fa-users icon
+  BADGE 3: "Rating 5/5" with fa-star icon
+- Each badge: rounded-full pill shape, navy background #1A3A5C, white text, padding 12px 24px, icon in mustard yellow
+- Below badges: a short reinforcing paragraph (1-2 sentences) about what customers say -- reference the fair prices and friendly staff from reviews, written naturally
+- Star rating display: 5 filled stars in mustard yellow, with "5/5 pe Google" text
+
+SECTION 5 -- LOCATIE SI CONTACT (Location & Contact -- navy background #1A3A5C for contrast)
+- This section flips to navy background with cream/white text for visual variety
+- Section heading (H2, cream color): "Unde ne gasesti"
+- Warm invitation text: "Te asteptam la atelierul nostru de pe Strada Deceneu, in Craiova. Treci pe la noi -- o cafea si o discutie despre masina ta sunt mereu la dispozitie."
+- Location details styled as a "service ticket" card (white background, dotted border, on the navy section):
+  - fa-location-dot icon + "Strada Deceneu, Craiova"
+  - fa-star icon + "Rating 5/5 pe Google"
+  - fa-clock icon + "Program: Luni - Vineri" (generic, since hours not specified)
+- CTA button (same style as hero): "Vino sa ne cunosti" -- mustard yellow, navy text, pill shape
+- Small Google Maps link: "Vezi pe Google Maps" as a simple text link (open in new tab, rel noopener)
+
+SECTION 6 -- FOOTER (Dark navy #142F4A)
+- Business name "Auto Service" in Archivo Black, cream color
+- "Strada Deceneu, Craiova" address
+- A short tagline: "Mecanicul tau de incredere."
+- Dotted border separator above footer
+- Copyright: "2026 Auto Service. Toate drepturile rezervate."
+- Keep it simple and clean
+
+==========================================================
+CONTENT FILTRATION RULES
+==========================================================
+1. NEVER display raw data, statistics, or database-style information directly on the page.
+2. NEVER mention "2 reviews" or exact review counts -- it sounds weak. Instead, reference customer satisfaction generally.
+3. NEVER use phrases like "according to data" or "based on reviews."
+4. HUMANIZE everything. Write as if you ARE the friendly mechanic, speaking to a neighbor.
+5. Transform business data into warm, conversational Romanian copy.
+6. The "Toilet" amenity should NOT be mentioned on the website -- it's irrelevant for marketing.
+7. Do NOT mention competition count (73 shops) on the page.
+8. Do NOT mention "limited online presence" or "new business" -- frame everything positively.
+9. All content should feel genuine, not generated. Read it aloud -- if it sounds like a robot wrote it, rewrite it.
+
+==========================================================
+SEO & STRUCTURED DATA
+==========================================================
+1. Title tag: "Auto Service Craiova | Reparatii Auto pe Strada Deceneu"
+2. Meta description (155 chars max): Compelling Romanian description mentioning service auto, Craiova, Strada Deceneu, preturi corecte.
+3. Canonical URL: leave as relative ("/").
+4. Open Graph tags: title, description, type (website), locale (ro_RO).
+5. JSON-LD Structured Data (LocalBusiness schema):
+   - @type: AutoRepair
+   - name: Auto Service
+   - address: Strada Deceneu, Craiova, Romania
+   - geo: lat 44.334272, lng 23.801117
+   - aggregateRating: 5/5, reviewCount: 2
+   - priceRange: "$$" (moderate, based on "good prices" reviews)
+6. Language attribute: <html lang="ro">
+7. Use semantic heading hierarchy throughout.
+
+==========================================================
+CONVERSION STRATEGY
+==========================================================
+Since NO phone number is available, conversion focuses on VISIT-BASED CTAs:
+1. Primary CTA: "Vino sa ne cunosti" (Come meet us) -- appears in hero and contact section
+2. Emphasis on LOCATION: make it crystal clear where they are (Strada Deceneu, Craiova)
+3. Google Maps link as secondary conversion path
+4. Tone of CTA: warm invitation, not aggressive sales push. "Treci pe la noi" (Stop by), "Te asteptam" (We're waiting for you)
+5. Build trust through the page so visitors feel confident making the trip
+6. NO "Call now" buttons since no phone is listed
+7. The entire page should build toward one action: physically visiting the shop
+
+==========================================================
+TECHNICAL REQUIREMENTS
+==========================================================
+1. Tailwind config: extend colors with the custom palette (cream, navy, mustard, etc.) in a <script> block configuring tailwind.config.
+2. Custom CSS in a <style> block for: dotted borders, service ticket card styling, the subtle background pattern, the handwritten note rotation, any pseudo-element decorations.
+3. AOS initialization in a <script> block at the end of body.
+4. Google Fonts loaded via <link> with display=swap.
+5. Smooth scroll: html { scroll-behavior: smooth; }
+6. All Font Awesome icons should use the free solid set (fas).
+7. Ensure all color contrast ratios meet WCAG AA standards.
+8. Responsive breakpoints: 320px (mobile), 768px (tablet), 1024px (desktop), 1280px+ (large).
+9. Navigation: simple sticky top bar with business name and smooth-scroll links to sections. Cream background, navy text, subtle shadow on scroll. Mobile hamburger menu.
+
+==========================================================
+RAW BUSINESS DOSSIER (REFERENCE ONLY -- DO NOT DISPLAY RAW)
+==========================================================
+
+Original Data:
+==================================================
+Title: Auto Service
+Category: Auto repair shop
+Address: Strada Deceneu, Craiova
+Complete Address: {"borough":"","street":"Strada Deceneu","city":"Craiova","postal_code":"","state":"","country":"RO"}
+Rating: 5/5 (2 reviews)
+About: Mechanic, Toilet
+Google Maps Link: https://www.google.com/maps/place/Auto+Service/...
+Latitude: 44.334272
+Longitude: 23.801117
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 31 | ****: 3 | ***: 0 | **: 1 | *: 0
+(Reviews overlap with Auto ANV listing)
+
+Company Overview:
+==================================================
+Name: Auto Service
+Category: Auto Repair Shop
+Location: Strada Deceneu, Craiova, Romania
+Amenities: Mechanic services, Toilet facilities
+Rating: 5/5 (2 reviews)
+Small local auto repair shop with limited online presence.
+73 auto repair shops operate in Craiova total.
+##Website_Found: None
+
+==========================================================
+FINAL REMINDER
+==========================================================
+Output only the finished index.html file. No commentary. No markdown fences.

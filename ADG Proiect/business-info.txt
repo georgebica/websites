@@ -1,0 +1,62 @@
+Original Data:
+==================================================
+Title: ADG Proiect
+Category: Architecture firm
+Address: Bloc V, Str. Donath 1, 400535 Cluj-Napoca
+Complete Address: {"borough":"","street":"Bloc V, Str. Donath 1","city":"Cluj-Napoca","postal_code":"400535","state":"","country":"RO"}
+Phone: 0264 420 831
+Owner: {"id":"","name":"ADG Proiect (Owner)","link":""}
+Google Maps Link: https://www.google.com/maps/place/ADG+Proiect/data=!4m7!3m6!1s0x47490e8cafff835d:0xfa039a7985f68be!8m2!3d46.7719867!4d23.560985!16s%2Fg%2F1hcb4frvw!19sChIJXYP_r4wOSUcRvmhfmKc5oA8?authuser=0&hl=en&rclk=1
+Rating: 5/5 (1 reviews)
+Reviews Link: https://search.google.com/local/reviews?placeid=ChIJXYP_r4wOSUcRvmhfmKc5oA8&q=ADG+Proiect&authuser=0&hl=en&gl=RO
+Open Hours: {}
+About: null
+Plus Code: QHC6+Q9 Cluj-Napoca
+Place ID: ChIJXYP_r4wOSUcRvmhfmKc5oA8
+CID: 1125963298821335230
+Latitude: 46.771987
+Longitude: 23.560985
+Thumbnail: https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=mBfIEqvRer39jRzH5_h9gA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=238.06166&pitch=0&thumbfov=100
+
+
+Google Reviews:
+==================================================
+Rating Breakdown: *****: 0 | ****: 0 | ***: 0 | **: 0 | *: 0
+
+
+
+Company Overview:
+==================================================
+Company Overview
+Name: ADG Proiect
+Category: Architecture firm (birou de arhitectură)
+Address: Bloc V, Str. Donath 1, 400535 Cluj‑Napoca, Romania
+Phone: +40 264 420 831
+Owner (as provided): Adg Proiect (Owner)
+Rating (provided): 5/5 (1 review)
+
+Verified information sources located: online map/listing entries showing the firm name, category, address, phone and coordinates (latitude 46.7719867, longitude 23.5609850). These listings do not include an “About” text or website content.
+
+Legal Details
+Registration / Tax ID / Founding date: No official company registration number, tax identification (CUI), or founding date found in available online listings and map entries.
+Assessment: Likely a small local architecture practice; absence of public company registry details in search results suggests either listings are informal (directory/map entries) or the firm is registered under a different legal name. Confirm via Romanian Trade Register (ONRC) search or client-supplied documents for authoritative registration/tax details.
+Primary Services / Products
+Verified: Classified online as an architecture office ("birou de arhitectură").
+Educated assessment: Typical services for such a listing likely include architectural design, project documentation (authoring technical project files), permit documentation, site planning and consultancy for residential or small commercial projects. No service portfolio, project examples, or specializations were found.
+Financial Performance
+No financial data (revenues, filings, balance sheet) found in public sources accessed.
+Assessment: Given lack of public filings or a corporate web presence, ADG Proiect appears to be a small private practice; financials would need to be obtained from company-supplied documents or official Romanian business registry records.
+Market Position / Reputation
+Verified: A single online directory/listing shows a 5/5 rating from 1 review (no review text available). Several map aggregator pages list the firm among local architecture offices in Cluj‑Napoca area.
+Assessment: Insufficient public reviews or press coverage to gauge broader reputation; presence in local map/directory listings indicates a recognized local address but not necessarily wider market presence.
+Customer Reviews / Testimonials
+Verified: One rating (5/5) noted in listing metadata; no review text, no additional testimonials found.
+Assessment: Public feedback is minimal—cannot form a reliable picture of client satisfaction from available data.
+Online Presence & Other Relevant Info
+Search located only map/directory aggregator pages (e.g., maptons and mirror pages) that replicate basic contact/address/phone and coordinates. No official website, social media pages (Facebook, Instagram, LinkedIn), or Google Business Profile with business details, photos, or reviews were found in the search results examined. No professional portfolios, press mentions, or listings on architecture networks were located.
+Recommended Next Steps to Verify / Enrich Profile
+Search Romanian Trade Register (ONRC) for “ADG Proiect” or variants to obtain registration number, fiscal code (CUI), and registration/founding date.
+Call the listed phone (+40 264 420 831) to request official company name, registration details, website or portfolio.
+Check Google Maps directly and local Romanian business directories (Paginiaurii, ListaFirme, 1188) for alternate listings or company profiles.
+Request client-supplied documents (portfolio, contract, invoice) for definitive legal and financial data.
+Website_Found: None
