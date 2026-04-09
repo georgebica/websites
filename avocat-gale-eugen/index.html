@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocat Galeș Eugen | Cabinet de Avocatură Slatina</title>
+    <meta name="description" content="Cabinet Individual de Avocat Galeș Eugen - Slatina, Olt. Drept civil, penal, administrativ, muncii, familiei și comercial. 18 ani de experiență. Programări: 0766 716 262.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B2A4A',
+                        'primary-dark': '#0F1A2E',
+                        secondary: '#7B2D3B',
+                        accent: '#C5A55A',
+                        'accent-light': '#D4B976',
+                        surface: '#F8F6F2',
+                        'surface-alt': '#EDE9E3',
+                        muted: '#6B7280',
+                        'dark-section': '#111827',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'Georgia', 'serif'],
+                        body: ['Source Sans 3', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Source Sans 3', system-ui, sans-serif; color: #1B2A4A; overflow-x: hidden; }
+
+        /* Navbar transitions */
+        .navbar { transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease; }
+        .navbar.scrolled { background-color: rgba(15, 26, 46, 0.97); box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
+        .navbar.scrolled .nav-link { color: #E5E7EB; }
+        .navbar.scrolled .nav-link:hover { color: #C5A55A; }
+        .navbar.scrolled .nav-brand { color: #F8F6F2; }
+
+        /* Hero gradient */
+        .hero-bg {
+            background: linear-gradient(135deg, #0F1A2E 0%, #1B2A4A 35%, #2A3F6A 60%, #1B2A4A 80%, #0F1A2E 100%);
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(197, 165, 90, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(123, 45, 59, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 120px;
+            background: linear-gradient(to top, #F8F6F2, transparent);
+            pointer-events: none;
+        }
+
+        /* Decorative line pattern */
+        .pattern-overlay {
+            background-image:
+                linear-gradient(rgba(197,165,90,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(197,165,90,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Gold accent line */
+        .accent-line {
+            width: 60px; height: 3px;
+            background: linear-gradient(90deg, #C5A55A, #D4B976);
+        }
+
+        /* Service cards */
+        .service-card {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border: 1px solid rgba(27,42,74,0.06);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(27,42,74,0.12);
+        }
+        .service-card .icon-wrap {
+            transition: background-color 0.35s ease, transform 0.35s ease;
+        }
+        .service-card:hover .icon-wrap {
+            background-color: #C5A55A;
+            transform: scale(1.1);
+        }
+        .service-card:hover .icon-wrap i { color: #fff; }
+
+        /* Trust cards */
+        .trust-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .trust-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(27,42,74,0.1);
+        }
+
+        /* Review cards */
+        .review-card {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .review-card:hover { transform: translateY(-3px); }
+        .review-card::before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: rgba(197,165,90,0.15);
+            position: absolute;
+            top: -10px; left: 16px;
+            line-height: 1;
+        }
+
+        /* Stars */
+        .star-filled { color: #C5A55A; }
+        .star-empty { color: #D1D5DB; }
+
+        /* Section alternating */
+        .section-dark {
+            background: linear-gradient(135deg, #0F1A2E, #1B2A4A);
+            color: #E5E7EB;
+        }
+
+        /* Counter animation helper */
+        .counter-value { font-variant-numeric: tabular-nums; }
+
+        /* Mobile menu */
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease; opacity: 0; }
+        .mobile-menu.open { max-height: 400px; opacity: 1; }
+
+        /* CTA button glow */
+        .cta-primary {
+            background: linear-gradient(135deg, #C5A55A, #D4B976);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(197,165,90,0.4);
+        }
+
+        /* Subtle divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(197,165,90,0.3), transparent);
+        }
+
+        /* Contact info hover */
+        .contact-item { transition: color 0.2s ease; }
+        .contact-item:hover { color: #C5A55A; }
+
+        /* Scroll indicator */
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+        .scroll-indicator { animation: bounce-slow 2s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-surface">
+
+    <!-- ═══════════════════════════════════════════════════════ NAVBAR -->
+    <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand -->
+                <a href="#acasa" class="nav-brand flex items-center gap-3 text-white group">
+                    <div class="w-10 h-10 border-2 border-accent rounded flex items-center justify-center">
+                        <i class="fa-solid fa-scale-balanced text-accent text-sm"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading text-lg font-semibold tracking-wide block leading-tight">Avocat Galeș</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-accent font-body font-medium opacity-80">Cabinet de Avocatură</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#acasa" class="nav-link text-white/90 hover:text-accent text-sm font-medium tracking-wide transition-colors duration-300">Acasă</a>
+                    <a href="#despre" class="nav-link text-white/90 hover:text-accent text-sm font-medium tracking-wide transition-colors duration-300">Despre</a>
+                    <a href="#servicii" class="nav-link text-white/90 hover:text-accent text-sm font-medium tracking-wide transition-colors duration-300">Servicii</a>
+                    <a href="#de-ce-noi" class="nav-link text-white/90 hover:text-accent text-sm font-medium tracking-wide transition-colors duration-300">De Ce Noi</a>
+                    <a href="#recenzii" class="nav-link text-white/90 hover:text-accent text-sm font-medium tracking-wide transition-colors duration-300">Recenzii</a>
+                    <a href="#contact" class="nav-link text-white/90 hover:text-accent text-sm font-medium tracking-wide transition-colors duration-300">Contact</a>
+                    <a href="tel:+40766716262" class="cta-primary text-primary-dark font-semibold text-sm px-5 py-2.5 rounded-lg inline-flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        0766 716 262
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="menuToggle" class="lg:hidden text-white text-2xl focus:outline-none" aria-label="Meniu">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu lg:hidden">
+                <div class="pb-6 pt-2 flex flex-col gap-3 border-t border-white/10">
+                    <a href="#acasa" class="mobile-link text-white/90 hover:text-accent py-2 text-sm font-medium tracking-wide transition-colors">Acasă</a>
+                    <a href="#despre" class="mobile-link text-white/90 hover:text-accent py-2 text-sm font-medium tracking-wide transition-colors">Despre</a>
+                    <a href="#servicii" class="mobile-link text-white/90 hover:text-accent py-2 text-sm font-medium tracking-wide transition-colors">Servicii</a>
+                    <a href="#de-ce-noi" class="mobile-link text-white/90 hover:text-accent py-2 text-sm font-medium tracking-wide transition-colors">De Ce Noi</a>
+                    <a href="#recenzii" class="mobile-link text-white/90 hover:text-accent py-2 text-sm font-medium tracking-wide transition-colors">Recenzii</a>
+                    <a href="#contact" class="mobile-link text-white/90 hover:text-accent py-2 text-sm font-medium tracking-wide transition-colors">Contact</a>
+                    <a href="tel:+40766716262" class="cta-primary text-primary-dark font-semibold text-sm px-5 py-2.5 rounded-lg inline-flex items-center gap-2 w-fit mt-2">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        0766 716 262
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════ HERO -->
+    <section id="acasa" class="hero-bg pt-24 pb-12 relative pattern-overlay">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0 w-full">
+            <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Eyebrow -->
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="accent-line"></div>
+                    <span class="text-accent font-body text-sm font-semibold uppercase tracking-[0.2em]">Cabinet de Avocatură</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Drepturile dumneavoastră,<br>
+                    <span class="text-accent">prioritatea noastră.</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-lg sm:text-xl text-white/75 font-body font-light leading-relaxed mb-10 max-w-2xl">
+                    Cu peste 18 ani de experiență în drept civil, penal și comercial, Avocat Galeș Eugen vă oferă asistență juridică profesionistă, dedicată și orientată spre rezultate, în Slatina și județul Olt.
+                </p>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-14">
+                    <a href="tel:+40766716262" class="cta-primary text-primary-dark font-bold px-8 py-4 rounded-lg inline-flex items-center justify-center gap-3 text-base">
+                        <i class="fa-solid fa-phone"></i>
+                        Programare Telefonică
+                    </a>
+                    <a href="https://www.google.com/maps/place/Avocat+Gale%C8%99+Eugen/data=!4m7!3m6!1s0x40ad391b1a79a377:0xc8c456ed6e1d98db!8m2!3d44.4291187!4d24.3568144!16s%2Fg%2F11l_h0vmng!19sChIJd6N5Ghs5rUAR25gdbu1WxMg?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="border-2 border-white/30 hover:border-accent text-white hover:text-accent font-semibold px-8 py-4 rounded-lg inline-flex items-center justify-center gap-3 text-base transition-all duration-300">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Indicații de Orientare
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap gap-x-8 gap-y-3 text-white/60 text-sm font-body" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-accent text-base"></i>
+                        <span>Membru Baroul Olt</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-accent text-base"></i>
+                        <span>Avocat Definitiv</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-check text-accent text-base"></i>
+                        <span>Din 2008</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-language text-accent text-base"></i>
+                        <span>Engleză C1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator hidden sm:block">
+            <a href="#despre" class="text-white/40 hover:text-accent transition-colors">
+                <i class="fa-solid fa-chevron-down text-xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ ABOUT -->
+    <section id="despre" class="py-20 lg:py-28 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Text Column -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="accent-line"></div>
+                        <span class="text-accent font-body text-sm font-semibold uppercase tracking-[0.2em]">Despre Cabinet</span>
+                    </div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-primary mb-6 leading-tight">
+                        Experiență, Dedicare <br class="hidden sm:block">și Profesionalism
+                    </h2>
+                    <div class="space-y-4 text-muted font-body text-base leading-relaxed">
+                        <p>
+                            Cabinetul Individual de Avocat Galeș Eugen funcționează în Slatina, județul Olt, din anul 2008, oferind servicii juridice complete persoanelor fizice și juridice din regiune. Cu o experiență de peste 18 ani în practica avocaturii, asigur reprezentare profesionistă și dedicată în fața tuturor instanțelor de judecată.
+                        </p>
+                        <p>
+                            Am absolvit Facultatea de Drept în perioada 1995-1999 și sunt membru definitiv al Baroului Olt, cu statut activ și toate competențele necesare pentru a gestiona cauze complexe din multiple ramuri ale dreptului. Vorbesc limba engleză la nivel avansat (C1), ceea ce îmi permite să asist și clienți internaționali.
+                        </p>
+                        <p>
+                            Fiecare caz primește atenție individualizată, iar abordarea mea se concentrează pe protejarea eficientă a intereselor clienților mei, cu transparență, onestitate și determinare.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stats Column -->
+                <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-lg border border-primary/5">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                            <!-- Stat 1 -->
+                            <div class="text-center">
+                                <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <i class="fa-solid fa-gavel text-accent text-xl"></i>
+                                </div>
+                                <div class="font-heading text-4xl font-bold text-primary mb-1">
+                                    <span class="counter-value" data-target="18">0</span>+
+                                </div>
+                                <p class="text-muted text-sm font-body">Ani de Experiență</p>
+                            </div>
+                            <!-- Stat 2 -->
+                            <div class="text-center">
+                                <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <i class="fa-solid fa-scale-balanced text-accent text-xl"></i>
+                                </div>
+                                <div class="font-heading text-4xl font-bold text-primary mb-1">
+                                    <span class="counter-value" data-target="6">0</span>
+                                </div>
+                                <p class="text-muted text-sm font-body">Domenii de Practică</p>
+                            </div>
+                            <!-- Stat 3 -->
+                            <div class="text-center">
+                                <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <i class="fa-solid fa-building-columns text-accent text-xl"></i>
+                                </div>
+                                <div class="font-heading text-4xl font-bold text-primary mb-1">
+                                    <span class="counter-value" data-target="2008">0</span>
+                                </div>
+                                <p class="text-muted text-sm font-body">Înregistrat Din</p>
+                            </div>
+                        </div>
+
+                        <div class="section-divider my-8"></div>
+
+                        <!-- Credentials -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 text-sm text-primary/80">
+                                <i class="fa-solid fa-check-circle text-accent"></i>
+                                <span class="font-body">Baroul Olt</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-primary/80">
+                                <i class="fa-solid fa-check-circle text-accent"></i>
+                                <span class="font-body">Avocat Definitiv</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-primary/80">
+                                <i class="fa-solid fa-check-circle text-accent"></i>
+                                <span class="font-body">CUI: 23377809</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-primary/80">
+                                <i class="fa-solid fa-check-circle text-accent"></i>
+                                <span class="font-body">Engleză Nivel C1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ SERVICES -->
+    <section id="servicii" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="accent-line"></div>
+                    <span class="text-accent font-body text-sm font-semibold uppercase tracking-[0.2em]">Servicii Juridice</span>
+                    <div class="accent-line"></div>
+                </div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                    Asistență Juridică Completă
+                </h2>
+                <p class="text-muted font-body text-base">
+                    Oferim consultanță și reprezentare juridică profesionistă în cele mai importante domenii ale dreptului românesc.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Civil Law -->
+                <div class="service-card bg-surface rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="icon-wrap w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-file-contract text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-primary mb-3">Drept Civil</h3>
+                    <p class="text-muted font-body text-sm leading-relaxed">
+                        Contracte, obligații, succesiuni, proprietate și litigii civile. Vă asist în protejarea drepturilor patrimoniale și personale nepatrimoniale.
+                    </p>
+                </div>
+
+                <!-- Criminal Law -->
+                <div class="service-card bg-surface rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-wrap w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-gavel text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-primary mb-3">Drept Penal</h3>
+                    <p class="text-muted font-body text-sm leading-relaxed">
+                        Apărare și asistență juridică în dosare penale, plângeri prealabile, constituire de parte civilă și reprezentare în fața parchetelor și instanțelor.
+                    </p>
+                </div>
+
+                <!-- Administrative & Tax Law -->
+                <div class="service-card bg-surface rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-wrap w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-landmark text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-primary mb-3">Drept Administrativ și Fiscal</h3>
+                    <p class="text-muted font-body text-sm leading-relaxed">
+                        Contestații la actele administrative, litigii fiscale, recuperarea taxelor și impozitelor plătite necuvenit, contencios administrativ.
+                    </p>
+                </div>
+
+                <!-- Labor Law -->
+                <div class="service-card bg-surface rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="icon-wrap w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-briefcase text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-primary mb-3">Dreptul Muncii</h3>
+                    <p class="text-muted font-body text-sm leading-relaxed">
+                        Concedieri abuzive, drepturi salariale, contracte de muncă, conflicte individuale și colective de muncă, negocieri cu angajatorul.
+                    </p>
+                </div>
+
+                <!-- Family Law -->
+                <div class="service-card bg-surface rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-wrap w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-people-roof text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-primary mb-3">Dreptul Familiei</h3>
+                    <p class="text-muted font-body text-sm leading-relaxed">
+                        Divorțuri, partaj, încredințare minori, stabilire pensie de întreținere, ordin de protecție și alte cauze de dreptul familiei.
+                    </p>
+                </div>
+
+                <!-- Commercial & Corporate Law -->
+                <div class="service-card bg-surface rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-wrap w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-building text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-primary mb-3">Drept Comercial și Societar</h3>
+                    <p class="text-muted font-body text-sm leading-relaxed">
+                        Înființare și dizolvare societăți, litigii comerciale, recuperare creanțe, insolvență, consultanță corporativă și contractuală.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ WHY CHOOSE US -->
+    <section id="de-ce-noi" class="section-dark py-20 lg:py-28 relative overflow-hidden">
+        <!-- Subtle pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, #C5A55A 1px, transparent 0); background-size: 40px 40px;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="accent-line"></div>
+                    <span class="text-accent font-body text-sm font-semibold uppercase tracking-[0.2em]">Avantaje</span>
+                    <div class="accent-line"></div>
+                </div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
+                    De Ce Să Alegeți Cabinetul Nostru
+                </h2>
+                <p class="text-white/60 font-body text-base">
+                    Combinăm experiența solidă cu o abordare personalizată pentru fiecare client.
+                </p>
+            </div>
+
+            <!-- Trust Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Trust 1 -->
+                <div class="trust-card bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-7 text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-user-tie text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">18 Ani de Practică</h3>
+                    <p class="text-white/55 font-body text-sm leading-relaxed">
+                        Experiență continuă din 2008, cu sute de cauze gestionate în instanțele din Olt și din întreaga țară.
+                    </p>
+                </div>
+
+                <!-- Trust 2 -->
+                <div class="trust-card bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-7 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-handshake text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">Abordare Personalizată</h3>
+                    <p class="text-white/55 font-body text-sm leading-relaxed">
+                        Fiecare caz este unic. Oferim atenție individualizată și strategii juridice adaptate situației dumneavoastră specifice.
+                    </p>
+                </div>
+
+                <!-- Trust 3 -->
+                <div class="trust-card bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-7 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-globe text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">Engleză Nivel Avansat</h3>
+                    <p class="text-white/55 font-body text-sm leading-relaxed">
+                        Competență lingvistică de nivel C1, ideală pentru asistarea clienților internaționali și a documentelor în limba engleză.
+                    </p>
+                </div>
+
+                <!-- Trust 4 -->
+                <div class="trust-card bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-7 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-list-check text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">Servicii Complete</h3>
+                    <p class="text-white/55 font-body text-sm leading-relaxed">
+                        Șase domenii de practică acoperite: civil, penal, administrativ, muncii, familiei și comercial, pentru o asistență juridică integrată.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ REVIEWS -->
+    <section id="recenzii" class="py-20 lg:py-28 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="accent-line"></div>
+                    <span class="text-accent font-body text-sm font-semibold uppercase tracking-[0.2em]">Recenzii</span>
+                    <div class="accent-line"></div>
+                </div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                    Ce Spun Clienții
+                </h2>
+                <p class="text-muted font-body text-base">
+                    Recenzii reale de pe Google Maps.
+                </p>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Review 1 -->
+                <div class="review-card bg-white rounded-2xl p-7 shadow-sm border border-primary/5" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                    </div>
+                    <p class="text-primary/80 font-body text-sm leading-relaxed mb-5 italic">
+                        &ldquo;Ok&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-primary/5">
+                        <div class="w-9 h-9 bg-accent/15 rounded-full flex items-center justify-center">
+                            <span class="text-accent font-heading font-bold text-sm">F</span>
+                        </div>
+                        <span class="font-body font-medium text-primary text-sm">Florin Ilie</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card bg-white rounded-2xl p-7 shadow-sm border border-primary/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                    </div>
+                    <p class="text-primary/80 font-body text-sm leading-relaxed mb-5 italic">
+                        &ldquo;Buna dimineața, mă numesc Luca Adela, am o problema foarte gravă, vecinii din fata casei au intrat abuziv pe terenul meu, și acum vor să toarne ciment in gradina tot pe terenul meu&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-primary/5">
+                        <div class="w-9 h-9 bg-accent/15 rounded-full flex items-center justify-center">
+                            <span class="text-accent font-heading font-bold text-sm">A</span>
+                        </div>
+                        <span class="font-body font-medium text-primary text-sm">Alleylla Addellaidde</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card bg-white rounded-2xl p-7 shadow-sm border border-primary/5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                    </div>
+                    <p class="text-primary/80 font-body text-sm leading-relaxed mb-5 italic">
+                        &ldquo;Parchetul de pe lângă judecătoria Slatina&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-primary/5">
+                        <div class="w-9 h-9 bg-accent/15 rounded-full flex items-center justify-center">
+                            <span class="text-accent font-heading font-bold text-sm">D</span>
+                        </div>
+                        <span class="font-body font-medium text-primary text-sm">Daniel Iordache</span>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card bg-white rounded-2xl p-7 shadow-sm border border-primary/5" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                    </div>
+                    <p class="text-primary/80 font-body text-sm leading-relaxed mb-5 italic">
+                        &nbsp;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-primary/5">
+                        <div class="w-9 h-9 bg-accent/15 rounded-full flex items-center justify-center">
+                            <span class="text-accent font-heading font-bold text-sm">C</span>
+                        </div>
+                        <span class="font-body font-medium text-primary text-sm">Calin Ionut</span>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card bg-white rounded-2xl p-7 shadow-sm border border-primary/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                    </div>
+                    <p class="text-primary/80 font-body text-sm leading-relaxed mb-5 italic">
+                        &nbsp;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-primary/5">
+                        <div class="w-9 h-9 bg-accent/15 rounded-full flex items-center justify-center">
+                            <span class="text-accent font-heading font-bold text-sm">F</span>
+                        </div>
+                        <span class="font-body font-medium text-primary text-sm">Florin Milea</span>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card bg-white rounded-2xl p-7 shadow-sm border border-primary/5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fa-solid fa-star star-filled text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                        <i class="fa-solid fa-star star-empty text-sm"></i>
+                    </div>
+                    <p class="text-primary/80 font-body text-sm leading-relaxed mb-5 italic">
+                        &nbsp;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-primary/5">
+                        <div class="w-9 h-9 bg-accent/15 rounded-full flex items-center justify-center">
+                            <span class="text-accent font-heading font-bold text-sm">D</span>
+                        </div>
+                        <span class="font-body font-medium text-primary text-sm">Daniel Daniel</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ CONTACT -->
+    <section id="contact" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="accent-line"></div>
+                    <span class="text-accent font-body text-sm font-semibold uppercase tracking-[0.2em]">Contact</span>
+                    <div class="accent-line"></div>
+                </div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                    Contactați-ne
+                </h2>
+                <p class="text-muted font-body text-base">
+                    Suntem aici pentru a vă ajuta. Nu ezitați să ne contactați pentru o consultație.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Contact Info -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-duration="800">
+
+                    <!-- Address -->
+                    <a href="https://www.google.com/maps/place/Avocat+Gale%C8%99+Eugen/data=!4m7!3m6!1s0x40ad391b1a79a377:0xc8c456ed6e1d98db!8m2!3d44.4291187!4d24.3568144!16s%2Fg%2F11l_h0vmng!19sChIJd6N5Ghs5rUAR25gdbu1WxMg?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="contact-item flex items-start gap-5 p-5 bg-surface rounded-xl group hover:bg-accent/5 transition-colors duration-300">
+                        <div class="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                            <i class="fa-solid fa-location-dot text-accent text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold text-primary text-base mb-1">Adresă</h4>
+                            <p class="text-muted font-body text-sm">Strada Lipscani 32, 230079 Slatina, Olt, România</p>
+                        </div>
+                    </a>
+
+                    <!-- Phone -->
+                    <a href="tel:+40766716262" class="contact-item flex items-start gap-5 p-5 bg-surface rounded-xl group hover:bg-accent/5 transition-colors duration-300">
+                        <div class="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                            <i class="fa-solid fa-phone text-accent text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold text-primary text-base mb-1">Telefon</h4>
+                            <p class="text-muted font-body text-sm">0766 716 262</p>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:eugen.gales@yahoo.com" class="contact-item flex items-start gap-5 p-5 bg-surface rounded-xl group hover:bg-accent/5 transition-colors duration-300">
+                        <div class="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                            <i class="fa-solid fa-envelope text-accent text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold text-primary text-base mb-1">Email</h4>
+                            <p class="text-muted font-body text-sm">eugen.gales@yahoo.com</p>
+                        </div>
+                    </a>
+
+                    <!-- Hours -->
+                    <div class="flex items-start gap-5 p-5 bg-surface rounded-xl">
+                        <div class="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-clock text-accent text-lg"></i>
+                        </div>
+                        <div class="w-full">
+                            <h4 class="font-heading font-semibold text-primary text-base mb-3">Program de Lucru</h4>
+                            <div class="space-y-2 font-body text-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-muted">Luni</span>
+                                    <span class="text-primary font-medium">08:30 - 14:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-muted">Marți</span>
+                                    <span class="text-primary font-medium">08:30 - 14:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-muted">Miercuri</span>
+                                    <span class="text-primary font-medium">08:30 - 14:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-muted">Joi</span>
+                                    <span class="text-primary font-medium">08:30 - 14:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-muted">Vineri</span>
+                                    <span class="text-primary font-medium">08:30 - 14:00</span>
+                                </div>
+                                <div class="section-divider my-2"></div>
+                                <div class="flex justify-between">
+                                    <span class="text-muted">Sâmbătă</span>
+                                    <span class="text-secondary font-medium">Închis</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-muted">Duminică</span>
+                                    <span class="text-secondary font-medium">Închis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Rating Badge -->
+                    <div class="flex items-center gap-4 p-5 bg-surface rounded-xl">
+                        <div class="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center shrink-0">
+                            <i class="fa-brands fa-google text-accent text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold text-primary text-base mb-1">Google Reviews</h4>
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-0.5">
+                                    <i class="fa-solid fa-star star-filled text-xs"></i>
+                                    <i class="fa-solid fa-star star-filled text-xs"></i>
+                                    <i class="fa-solid fa-star star-filled text-xs"></i>
+                                    <i class="fa-solid fa-star star-empty text-xs"></i>
+                                    <i class="fa-solid fa-star star-empty text-xs"></i>
+                                </div>
+                                <span class="text-muted font-body text-sm">7 recenzii</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Map -->
+                <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="rounded-2xl overflow-hidden shadow-lg border border-primary/5 h-full min-h-[450px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.5!2d24.3568144!3d44.4291187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ad391b1a79a377%3A0xc8c456ed6e1d98db!2sAvocat%20Gale%C8%99%20Eugen!5e0!3m2!1sro!2sro!4v1700000000000"
+                            width="100%"
+                            height="100%"
+                            style="border:0; min-height:450px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Locația cabinetului pe Google Maps">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ FOOTER -->
+    <footer class="bg-primary-dark py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 border-2 border-accent rounded flex items-center justify-center">
+                            <i class="fa-solid fa-scale-balanced text-accent text-xs"></i>
+                        </div>
+                        <span class="font-heading text-lg font-semibold text-white">Avocat Galeș Eugen</span>
+                    </div>
+                    <p class="text-white/50 font-body text-sm leading-relaxed max-w-xs">
+                        Cabinet Individual de Avocatură. Asistență juridică profesionistă în Slatina și județul Olt, din 2008.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-semibold text-white text-base mb-4">Navigare</h4>
+                    <div class="space-y-2">
+                        <a href="#acasa" class="block text-white/50 hover:text-accent font-body text-sm transition-colors">Acasă</a>
+                        <a href="#despre" class="block text-white/50 hover:text-accent font-body text-sm transition-colors">Despre</a>
+                        <a href="#servicii" class="block text-white/50 hover:text-accent font-body text-sm transition-colors">Servicii</a>
+                        <a href="#contact" class="block text-white/50 hover:text-accent font-body text-sm transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="font-heading font-semibold text-white text-base mb-4">Contact</h4>
+                    <div class="space-y-3">
+                        <a href="tel:+40766716262" class="flex items-center gap-3 text-white/50 hover:text-accent font-body text-sm transition-colors">
+                            <i class="fa-solid fa-phone text-accent text-xs w-4"></i>
+                            0766 716 262
+                        </a>
+                        <a href="mailto:eugen.gales@yahoo.com" class="flex items-center gap-3 text-white/50 hover:text-accent font-body text-sm transition-colors">
+                            <i class="fa-solid fa-envelope text-accent text-xs w-4"></i>
+                            eugen.gales@yahoo.com
+                        </a>
+                        <a href="https://www.google.com/maps/place/Avocat+Gale%C8%99+Eugen/data=!4m7!3m6!1s0x40ad391b1a79a377:0xc8c456ed6e1d98db!8m2!3d44.4291187!4d24.3568144!16s%2Fg%2F11l_h0vmng!19sChIJd6N5Ghs5rUAR25gdbu1WxMg?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="flex items-start gap-3 text-white/50 hover:text-accent font-body text-sm transition-colors">
+                            <i class="fa-solid fa-location-dot text-accent text-xs w-4 mt-1"></i>
+                            Strada Lipscani 32, 230079 Slatina
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="section-divider mb-6"></div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-white/30 font-body text-xs">
+                    &copy; 2026 Cabinet Individual de Avocat Galeș Eugen. Toate drepturile rezervate.
+                </p>
+                <p class="text-white/30 font-body text-xs">
+                    CUI: 23377809 <i class="fa-solid fa-circle text-[3px] align-middle mx-2"></i> Baroul Olt
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════ SCRIPTS -->
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 700,
+            easing: 'ease-out-cubic',
+            offset: 80
+        });
+
+        // ── Navbar scroll transition ──
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        function handleNavScroll() {
+            const scrollY = window.scrollY;
+            if (scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = scrollY;
+        }
+        window.addEventListener('scroll', handleNavScroll, { passive: true });
+        handleNavScroll();
+
+        // ── Mobile menu toggle ──
+        const menuToggle = document.getElementById('menuToggle');
+        const menuIcon = document.getElementById('menuIcon');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        menuToggle.addEventListener('click', function() {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('open', menuOpen);
+            menuIcon.className = menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                menuOpen = false;
+                mobileMenu.classList.remove('open');
+                menuIcon.className = 'fa-solid fa-bars';
+            });
+        });
+
+        // ── Counter animation ──
+        function animateCounters() {
+            document.querySelectorAll('.counter-value').forEach(function(el) {
+                if (el.dataset.animated) return;
+                var rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.dataset.animated = '1';
+                    var target = parseInt(el.dataset.target);
+                    var duration = 2000;
+                    var start = 0;
+                    var startTime = null;
+
+                    function step(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        var progress = Math.min((timestamp - startTime) / duration, 1);
+                        var eased = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.floor(eased * target);
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            el.textContent = target;
+                        }
+                    }
+                    requestAnimationFrame(step);
+                }
+            });
+        }
+        window.addEventListener('scroll', animateCounters, { passive: true });
+        animateCounters();
+
+        // ── Smooth scroll for anchor links ──
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                var targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    var offset = 80;
+                    var top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

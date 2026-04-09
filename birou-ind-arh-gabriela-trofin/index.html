@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arh. Gabriela Trofin — Birou Individual de Arhitectură, Slatina</title>
+    <meta name="description" content="Birou Individual de Arhitectură Gabriela Trofin — proiectare arhitecturală, documentații tehnice, autorizații de construire și consultanță în Slatina. Peste 10 ani de experiență.">
+    <meta name="keywords" content="arhitect Slatina, birou arhitectură, proiectare, autorizații construire, Gabriela Trofin">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;400;500;600;700;1,9..144,300;400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'grey-blue': '#A8B8C8',
+                        'warm-white': '#FAFAF8',
+                        'charcoal': '#2B2B2B',
+                        'coral': '#D4836B',
+                        'coral-dark': '#C06F57',
+                        'grey-blue-light': '#D0DBE5',
+                        'grey-blue-dark': '#8A9BAD',
+                    },
+                    fontFamily: {
+                        'heading': ['"Fraunces"', 'serif'],
+                        'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2B2B2B;
+            background: #FAFAF8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Architectural Corner Accents --- */
+        .corner-accent {
+            position: relative;
+        }
+        .corner-accent::before,
+        .corner-accent::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+        }
+        .corner-accent::before {
+            top: 0; left: 0;
+            border-top: 1.5px solid #A8B8C8;
+            border-left: 1.5px solid #A8B8C8;
+        }
+        .corner-accent::after {
+            bottom: 0; right: 0;
+            border-bottom: 1.5px solid #A8B8C8;
+            border-right: 1.5px solid #A8B8C8;
+        }
+
+        .corner-accent-coral::before {
+            border-top-color: #D4836B;
+            border-left-color: #D4836B;
+        }
+        .corner-accent-coral::after {
+            border-bottom-color: #D4836B;
+            border-right-color: #D4836B;
+        }
+
+        .corner-accent-lg::before,
+        .corner-accent-lg::after {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* --- Thin Line Decoratives --- */
+        .line-divider {
+            width: 60px;
+            height: 1.5px;
+            background: #D4836B;
+        }
+
+        .arch-line-left {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .arch-line-left::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1.5px;
+            background: linear-gradient(to bottom, #D4836B, transparent);
+        }
+
+        /* --- Nav --- */
+        .nav-main {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(250, 250, 248, 0.92);
+            border-bottom: 1px solid rgba(168, 184, 200, 0.25);
+            transition: box-shadow 0.3s ease;
+        }
+        .nav-main.scrolled {
+            box-shadow: 0 1px 20px rgba(43, 43, 43, 0.06);
+        }
+        .nav-link {
+            position: relative;
+            font-size: 0.8125rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #2B2B2B;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4836B;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover { color: #D4836B; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* --- Hero geometric background shapes --- */
+        .hero-geo-1 {
+            position: absolute;
+            top: 10%;
+            right: 8%;
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgba(168, 184, 200, 0.2);
+            transform: rotate(15deg);
+        }
+        .hero-geo-2 {
+            position: absolute;
+            bottom: 15%;
+            left: 5%;
+            width: 140px;
+            height: 140px;
+            border: 1px solid rgba(212, 131, 107, 0.15);
+            transform: rotate(-10deg);
+        }
+        .hero-geo-3 {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            width: 80px;
+            height: 1px;
+            background: rgba(168, 184, 200, 0.3);
+            transform: rotate(-30deg);
+        }
+        .hero-geo-4 {
+            position: absolute;
+            bottom: 30%;
+            right: 15%;
+            width: 1px;
+            height: 100px;
+            background: rgba(168, 184, 200, 0.2);
+        }
+
+        /* --- Service Card --- */
+        .service-card {
+            background: #FAFAF8;
+            border: 1px solid rgba(168, 184, 200, 0.2);
+            transition: all 0.4s ease;
+        }
+        .service-card:hover {
+            border-color: #D4836B;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(43, 43, 43, 0.06);
+        }
+        .service-card .service-icon {
+            color: #A8B8C8;
+            transition: color 0.4s ease;
+        }
+        .service-card:hover .service-icon {
+            color: #D4836B;
+        }
+
+        /* --- Step indicator --- */
+        .step-num {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: rgba(168, 184, 200, 0.35);
+            line-height: 1;
+        }
+
+        /* --- CTA Button --- */
+        .btn-coral {
+            background: #D4836B;
+            color: #FAFAF8;
+            transition: all 0.3s ease;
+        }
+        .btn-coral:hover {
+            background: #C06F57;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(212, 131, 107, 0.3);
+        }
+
+        .btn-outline {
+            border: 1.5px solid #D4836B;
+            color: #D4836B;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: #D4836B;
+            color: #FAFAF8;
+        }
+
+        /* --- Mobile Nav --- */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* --- Subtle background pattern --- */
+        .bg-grid {
+            background-image:
+                linear-gradient(rgba(168, 184, 200, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(168, 184, 200, 0.06) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* --- Scroll indicator --- */
+        .scroll-indicator {
+            animation: scrollBounce 2s infinite;
+        }
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+
+        /* --- Contact Info Row --- */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .contact-item i {
+            width: 20px;
+            text-align: center;
+            color: #D4836B;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        /* --- Section heading style --- */
+        .section-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.6875rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #A8B8C8;
+        }
+
+        /* --- Hamburger --- */
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: #2B2B2B;
+            transition: all 0.3s ease;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 4px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px);
+        }
+    </style>
+</head>
+<body class="bg-warm-white">
+
+    <!-- ============================================ -->
+    <!-- NAV -->
+    <!-- ============================================ -->
+    <nav class="nav-main fixed top-0 left-0 w-full z-50" id="mainNav">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-8 h-8 border border-grey-blue flex items-center justify-center">
+                        <span class="font-heading text-sm font-semibold text-charcoal">GT</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="font-heading text-sm font-medium text-charcoal tracking-wide">Gabriela Trofin</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#despre" class="nav-link font-body font-medium">Despre</a>
+                    <a href="#servicii" class="nav-link font-body font-medium">Servicii</a>
+                    <a href="#proces" class="nav-link font-body font-medium">Cum lucrăm</a>
+                    <a href="#locatie" class="nav-link font-body font-medium">Locație</a>
+                    <a href="#contact" class="nav-link font-body font-medium">Contact</a>
+                    <a href="#contact" class="btn-coral px-5 py-2 text-xs font-semibold uppercase tracking-widest rounded-sm">Programare</a>
+                </div>
+
+                <!-- Hamburger -->
+                <button class="hamburger lg:hidden flex flex-col gap-1.5 p-2" id="hamburgerBtn" aria-label="Meniu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed top-0 right-0 w-72 h-full bg-warm-white z-50 shadow-2xl pt-24 px-8" id="mobileMenu">
+        <div class="flex flex-col gap-6">
+            <a href="#despre" class="nav-link font-body font-medium text-base" onclick="closeMobile()">Despre</a>
+            <a href="#servicii" class="nav-link font-body font-medium text-base" onclick="closeMobile()">Servicii</a>
+            <a href="#proces" class="nav-link font-body font-medium text-base" onclick="closeMobile()">Cum lucrăm</a>
+            <a href="#locatie" class="nav-link font-body font-medium text-base" onclick="closeMobile()">Locație</a>
+            <a href="#contact" class="nav-link font-body font-medium text-base" onclick="closeMobile()">Contact</a>
+            <div class="mt-4">
+                <a href="#contact" class="btn-coral block text-center px-5 py-3 text-xs font-semibold uppercase tracking-widest rounded-sm" onclick="closeMobile()">Programare</a>
+            </div>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-charcoal/30 z-40 hidden" id="mobileOverlay" onclick="closeMobile()"></div>
+
+    <!-- ============================================ -->
+    <!-- HERO -->
+    <!-- ============================================ -->
+    <header class="relative min-h-screen flex items-center overflow-hidden bg-warm-white bg-grid" id="hero">
+        <!-- Geometric accents -->
+        <div class="hero-geo-1 hidden md:block"></div>
+        <div class="hero-geo-2 hidden md:block"></div>
+        <div class="hero-geo-3 hidden lg:block"></div>
+        <div class="hero-geo-4 hidden lg:block"></div>
+
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 w-full py-32 lg:py-0">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left content -->
+                <div class="lg:col-span-7" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section-label mb-6">Birou Individual de Arhitectură</p>
+
+                    <div class="corner-accent corner-accent-lg p-6 lg:p-10 inline-block">
+                        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-charcoal leading-tight">
+                            Arh. Gabriela<br>
+                            <span class="font-medium">Trofin</span>
+                        </h1>
+                    </div>
+
+                    <p class="font-body text-grey-blue-dark text-lg lg:text-xl mt-8 max-w-lg leading-relaxed">
+                        Birou Individual de Arhitectură — Slatina.<br>
+                        <span class="text-base">Proiectare cu atenție la detaliu și respect pentru context.</span>
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-10">
+                        <a href="#contact" class="btn-coral px-8 py-3.5 text-sm font-semibold uppercase tracking-widest rounded-sm inline-flex items-center gap-2">
+                            <span>Programare online</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#servicii" class="btn-outline px-8 py-3.5 text-sm font-semibold uppercase tracking-widest rounded-sm">
+                            Servicii
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right decorative column -->
+                <div class="lg:col-span-5 hidden lg:flex flex-col items-end gap-8" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="w-full max-w-xs">
+                        <div class="border border-grey-blue-light p-8 relative">
+                            <div class="absolute -top-3 -left-3 w-6 h-6 border-t border-l border-coral"></div>
+                            <p class="font-heading text-5xl font-light text-grey-blue-light">10<span class="text-coral">+</span></p>
+                            <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mt-2">Ani de experiență</p>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-xs">
+                        <div class="border border-grey-blue-light p-8 relative">
+                            <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b border-r border-coral"></div>
+                            <p class="font-heading text-2xl font-light text-grey-blue-light">#6565</p>
+                            <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mt-2">Înregistrare TNA București</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+            <div class="flex flex-col items-center gap-2 text-grey-blue">
+                <span class="text-[0.625rem] uppercase tracking-[0.2em] font-body">Scroll</span>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- DESPRE BIROU -->
+    <!-- ============================================ -->
+    <section class="py-24 lg:py-32 bg-white" id="despre">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                <!-- Left label -->
+                <div class="lg:col-span-4" data-aos="fade-right" data-aos-duration="800">
+                    <p class="section-label mb-4">Despre birou</p>
+                    <div class="line-divider mb-8"></div>
+                    <h2 class="font-heading text-3xl lg:text-4xl font-light text-charcoal leading-snug">
+                        Arhitectură cu<br>
+                        <span class="font-medium text-coral">sensibilitate</span>
+                    </h2>
+                </div>
+
+                <!-- Right content -->
+                <div class="lg:col-span-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="arch-line-left space-y-6">
+                        <p class="font-body text-base lg:text-lg leading-relaxed text-charcoal/80">
+                            Biroul Individual de Arhitectură <strong class="font-semibold text-charcoal">Gabriela Trofin</strong> funcționează în Slatina de peste <strong class="font-semibold text-charcoal">10 ani</strong>, oferind servicii complete de proiectare arhitecturală, documentații tehnice și consultanță pentru persoane fizice și juridice.
+                        </p>
+                        <p class="font-body text-base lg:text-lg leading-relaxed text-charcoal/80">
+                            Cu o abordare atentă la detaliu și un profund respect pentru contextul construit, fiecare proiect beneficiază de soluții personalizate, adaptate nevoilor reale ale beneficiarilor și cerințelor urbanistice locale.
+                        </p>
+                        <p class="font-body text-base lg:text-lg leading-relaxed text-charcoal/80">
+                            Biroul este înregistrat la <strong class="font-semibold text-charcoal">Tabloul Național al Arhitecților din România</strong>, filiala București, cu numărul de înregistrare <strong class="font-semibold text-coral">#6565</strong> — garanția unei practici profesionale conforme cu legislația în vigoare.
+                        </p>
+                    </div>
+
+                    <!-- Credentials row -->
+                    <div class="grid sm:grid-cols-3 gap-6 mt-12">
+                        <div class="corner-accent p-5" data-aos="fade-up" data-aos-delay="100">
+                            <p class="font-heading text-2xl font-light text-charcoal">10+</p>
+                            <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mt-1">Ani de activitate</p>
+                        </div>
+                        <div class="corner-accent p-5" data-aos="fade-up" data-aos-delay="200">
+                            <p class="font-heading text-2xl font-light text-charcoal">#6565</p>
+                            <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mt-1">Registrul TNA</p>
+                        </div>
+                        <div class="corner-accent p-5" data-aos="fade-up" data-aos-delay="300">
+                            <p class="font-heading text-2xl font-light text-charcoal">Slatina</p>
+                            <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mt-1">Sediu permanent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SERVICII -->
+    <!-- ============================================ -->
+    <section class="py-24 lg:py-32 bg-warm-white bg-grid" id="servicii">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="max-w-2xl mb-16" data-aos="fade-up">
+                <p class="section-label mb-4">Servicii</p>
+                <div class="line-divider mb-8"></div>
+                <h2 class="font-heading text-3xl lg:text-4xl font-light text-charcoal leading-snug">
+                    Soluții complete de<br>
+                    <span class="font-medium">proiectare și consultanță</span>
+                </h2>
+            </div>
+
+            <!-- Services grid — asymmetric -->
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Service 1 — Large -->
+                <div class="service-card p-8 lg:p-10 md:row-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start justify-between mb-8">
+                        <i class="fa-solid fa-compass-drafting service-icon text-3xl"></i>
+                        <span class="font-heading text-5xl font-light text-grey-blue-light/40">01</span>
+                    </div>
+                    <h3 class="font-heading text-xl lg:text-2xl font-medium text-charcoal mb-4">Proiectare arhitecturală</h3>
+                    <p class="font-body text-sm lg:text-base leading-relaxed text-charcoal/70">
+                        Elaborarea proiectelor de arhitectură pentru construcții noi — locuințe individuale, colective, spații comerciale sau de birouri. Fiecare proiect pornește de la o înțelegere profundă a locului, a programului funcțional și a bugetului disponibil, pentru a oferi soluții echilibrate și sustenabile.
+                    </p>
+                    <div class="mt-8 pt-6 border-t border-grey-blue-light/30">
+                        <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark">Include</p>
+                        <ul class="font-body text-sm text-charcoal/70 mt-3 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-coral text-xs"></i> Studiu de fezabilitate</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-coral text-xs"></i> Proiect tehnic (D.T.A.C. / P.Th.)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-coral text-xs"></i> Detalii de execuție</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card p-8 lg:p-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start justify-between mb-6">
+                        <i class="fa-solid fa-file-lines service-icon text-2xl"></i>
+                        <span class="font-heading text-4xl font-light text-grey-blue-light/40">02</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-medium text-charcoal mb-3">Documentații tehnice</h3>
+                    <p class="font-body text-sm leading-relaxed text-charcoal/70">
+                        Întocmirea documentațiilor tehnice necesare procesului de autorizare: D.T.A.C., D.T.A.D., documentații pentru avize și acorduri, memorii tehnice și studii de specialitate.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card p-8 lg:p-10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start justify-between mb-6">
+                        <i class="fa-solid fa-stamp service-icon text-2xl"></i>
+                        <span class="font-heading text-4xl font-light text-grey-blue-light/40">03</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-medium text-charcoal mb-3">Autorizații de construire</h3>
+                    <p class="font-body text-sm leading-relaxed text-charcoal/70">
+                        Asistență completă în procesul de obținere a autorizației de construire / desființare — de la certificatul de urbanism până la emiterea autorizației, inclusiv corespondența cu autoritățile competente.
+                    </p>
+                </div>
+
+                <!-- Service 4 — full width bottom -->
+                <div class="service-card p-8 lg:p-10 md:col-span-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-start justify-between mb-6">
+                                <i class="fa-solid fa-comments service-icon text-2xl"></i>
+                                <span class="font-heading text-4xl font-light text-grey-blue-light/40">04</span>
+                            </div>
+                            <h3 class="font-heading text-xl font-medium text-charcoal mb-3">Consultanță</h3>
+                            <p class="font-body text-sm leading-relaxed text-charcoal/70">
+                                Consultanță de specialitate pentru evaluarea potențialului urbanistic al unui teren, verificarea conformității construcțiilor existente, sau orientare în alegerea soluțiilor constructive optime.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-3 p-4 border border-grey-blue-light/30 rounded-sm">
+                                <i class="fa-solid fa-video text-coral text-sm"></i>
+                                <span class="font-body text-sm text-charcoal/80">Consultații online disponibile</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-4 border border-grey-blue-light/30 rounded-sm">
+                                <i class="fa-solid fa-location-dot text-coral text-sm"></i>
+                                <span class="font-body text-sm text-charcoal/80">Vizite la sediu, pe bază de programare</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-4 border border-grey-blue-light/30 rounded-sm">
+                                <i class="fa-solid fa-clock text-coral text-sm"></i>
+                                <span class="font-body text-sm text-charcoal/80">Programare necesară pentru toate serviciile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CUM LUCRĂM -->
+    <!-- ============================================ -->
+    <section class="py-24 lg:py-32 bg-white" id="proces">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16">
+                <!-- Left -->
+                <div class="lg:col-span-5" data-aos="fade-right" data-aos-duration="800">
+                    <p class="section-label mb-4">Proces</p>
+                    <div class="line-divider mb-8"></div>
+                    <h2 class="font-heading text-3xl lg:text-4xl font-light text-charcoal leading-snug mb-6">
+                        Cum<br>
+                        <span class="font-medium">lucrăm</span>
+                    </h2>
+                    <p class="font-body text-base leading-relaxed text-charcoal/70 mb-8">
+                        Colaborarea începe întotdeauna cu o programare — online sau la sediu. Acest lucru ne permite să alocăm timpul necesar fiecărui proiect și să oferim atenția cuvenită fiecărui client.
+                    </p>
+                    <a href="#contact" class="btn-coral px-7 py-3 text-xs font-semibold uppercase tracking-widest rounded-sm inline-flex items-center gap-2">
+                        <span>Programare online</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Right — Steps -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Step 1 -->
+                    <div class="flex gap-6 items-start" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-shrink-0">
+                            <span class="step-num">01</span>
+                        </div>
+                        <div class="pt-2 border-t border-grey-blue-light/40 flex-1">
+                            <h3 class="font-heading text-lg font-medium text-charcoal mb-2">Programare</h3>
+                            <p class="font-body text-sm leading-relaxed text-charcoal/70">
+                                Contactați-ne telefonic sau online pentru a stabili o întâlnire. Discuția inițială este gratuită și ne ajută să înțelegem nevoile dumneavoastră.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex gap-6 items-start" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex-shrink-0">
+                            <span class="step-num">02</span>
+                        </div>
+                        <div class="pt-2 border-t border-grey-blue-light/40 flex-1">
+                            <h3 class="font-heading text-lg font-medium text-charcoal mb-2">Analiză și propunere</h3>
+                            <p class="font-body text-sm leading-relaxed text-charcoal/70">
+                                Studiem documentele existente, evaluăm terenul sau construcția și elaborăm o propunere preliminară cu estimare de costuri și termene.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex gap-6 items-start" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex-shrink-0">
+                            <span class="step-num">03</span>
+                        </div>
+                        <div class="pt-2 border-t border-grey-blue-light/40 flex-1">
+                            <h3 class="font-heading text-lg font-medium text-charcoal mb-2">Proiectare</h3>
+                            <p class="font-body text-sm leading-relaxed text-charcoal/70">
+                                Elaborăm documentația tehnică completă, cu revizuiri incluse. Comunicarea este constantă pe parcursul întregului proces de proiectare.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex gap-6 items-start" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex-shrink-0">
+                            <span class="step-num">04</span>
+                        </div>
+                        <div class="pt-2 border-t border-grey-blue-light/40 flex-1">
+                            <h3 class="font-heading text-lg font-medium text-charcoal mb-2">Autorizare și asistență</h3>
+                            <p class="font-body text-sm leading-relaxed text-charcoal/70">
+                                Vă asistăm în procesul de autorizare și rămânem disponibili pentru consultanță pe durata execuției lucrărilor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LOCAȚIE -->
+    <!-- ============================================ -->
+    <section class="py-24 lg:py-32 bg-warm-white" id="locatie">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <p class="section-label mb-4">Locație</p>
+                    <div class="line-divider mb-8"></div>
+                    <h2 class="font-heading text-3xl lg:text-4xl font-light text-charcoal leading-snug mb-6">
+                        În inima<br>
+                        <span class="font-medium">Slatinei</span>
+                    </h2>
+                    <p class="font-body text-base leading-relaxed text-charcoal/70 mb-8">
+                        Biroul nostru este situat pe Strada Unirii, una dintre arterele principale ale municipiului Slatina, cu acces facil din toate zonele orașului. Funcționăm exclusiv pe bază de programare, pentru a vă putea dedica timpul necesar.
+                    </p>
+                </div>
+
+                <!-- Right — Address card -->
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="corner-accent corner-accent-coral p-8 lg:p-10 bg-white">
+                        <div class="space-y-5">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mb-1">Adresă</p>
+                                    <p class="font-body text-sm text-charcoal leading-relaxed">
+                                        Bl. FA17, Strada Unirii, Sc. 4, Ap. 13, Et. 3<br>
+                                        Slatina 230017, Jud. Olt
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-map"></i>
+                                <div>
+                                    <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mb-1">Zona</p>
+                                    <p class="font-body text-sm text-charcoal">Strada Unirii — centrul municipiului</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-car"></i>
+                                <div>
+                                    <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mb-1">Acces</p>
+                                    <p class="font-body text-sm text-charcoal">Parcare disponibilă în zonă</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <div>
+                                    <p class="font-body text-xs uppercase tracking-widest text-grey-blue-dark mb-1">Vizite</p>
+                                    <p class="font-body text-sm text-charcoal">Exclusiv cu programare prealabilă</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT -->
+    <!-- ============================================ -->
+    <section class="py-24 lg:py-32 bg-charcoal text-warm-white relative overflow-hidden" id="contact">
+        <!-- Subtle geometric decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 border border-white/5 transform rotate-12 translate-x-20 -translate-y-20"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 border border-white/5 transform -rotate-12 -translate-x-10 translate-y-10"></div>
+
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Left -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <p class="section-label text-grey-blue mb-4">Contact</p>
+                    <div class="line-divider mb-8"></div>
+                    <h2 class="font-heading text-3xl lg:text-4xl font-light text-warm-white leading-snug mb-6">
+                        Să discutăm despre<br>
+                        <span class="font-medium text-coral">proiectul dvs.</span>
+                    </h2>
+                    <p class="font-body text-base leading-relaxed text-grey-blue mb-10">
+                        Suntem disponibili pentru programări telefonice sau online. Nu ezitați să ne contactați pentru o discuție inițială — fără obligații.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone text-coral"></i>
+                            <div>
+                                <p class="font-body text-xs uppercase tracking-widest text-grey-blue mb-1">Telefon</p>
+                                <a href="tel:+40767924480" class="font-heading text-xl font-medium text-warm-white hover:text-coral transition-colors">
+                                    0767 924 480
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock text-coral"></i>
+                            <div>
+                                <p class="font-body text-xs uppercase tracking-widest text-grey-blue mb-1">Program</p>
+                                <p class="font-body text-base text-warm-white">Luni — Vineri: 9:30 – 17:00</p>
+                                <p class="font-body text-sm text-grey-blue mt-1">Sâmbătă – Duminică: Închis</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot text-coral"></i>
+                            <div>
+                                <p class="font-body text-xs uppercase tracking-widest text-grey-blue mb-1">Adresă</p>
+                                <p class="font-body text-base text-warm-white">
+                                    Bl. FA17, Strada Unirii, Sc. 4, Ap. 13, Et. 3
+                                </p>
+                                <p class="font-body text-sm text-grey-blue mt-1">Slatina 230017, Jud. Olt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right — CTA card -->
+                <div class="flex items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="w-full p-8 lg:p-10 border border-white/10 relative">
+                        <div class="absolute -top-3 -left-3 w-8 h-8 border-t border-l border-coral"></div>
+                        <div class="absolute -bottom-3 -right-3 w-8 h-8 border-b border-r border-coral"></div>
+
+                        <h3 class="font-heading text-2xl font-light text-warm-white mb-4">
+                            Programare <span class="font-medium text-coral">online</span>
+                        </h3>
+                        <p class="font-body text-sm leading-relaxed text-grey-blue mb-8">
+                            Preferați să stabiliți o întâlnire rapid? Sunați-ne direct sau trimiteți un mesaj. Vom reveni cu o confirmare în cel mai scurt timp.
+                        </p>
+
+                        <a href="tel:+40767924480" class="btn-coral w-full block text-center px-8 py-4 text-sm font-semibold uppercase tracking-widest rounded-sm mb-4">
+                            <i class="fa-solid fa-phone mr-2"></i>
+                            Sunați acum: 0767 924 480
+                        </a>
+
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="h-px flex-1 bg-white/10"></div>
+                            <span class="font-body text-xs uppercase tracking-widest text-grey-blue">sau</span>
+                            <div class="h-px flex-1 bg-white/10"></div>
+                        </div>
+
+                        <div class="mt-6 space-y-3">
+                            <div class="flex items-center gap-3 text-grey-blue">
+                                <i class="fa-solid fa-check text-coral text-xs"></i>
+                                <span class="font-body text-sm">Consultație inițială gratuită</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-grey-blue">
+                                <i class="fa-solid fa-check text-coral text-xs"></i>
+                                <span class="font-body text-sm">Disponibilitate Luni – Vineri, 9:30 – 17:00</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-grey-blue">
+                                <i class="fa-solid fa-check text-coral text-xs"></i>
+                                <span class="font-body text-sm">Întâlniri online sau la sediu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="bg-charcoal border-t border-white/5 py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Left -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 border border-grey-blue/30 flex items-center justify-center">
+                        <span class="font-heading text-sm font-semibold text-grey-blue">GT</span>
+                    </div>
+                    <div>
+                        <p class="font-body text-sm text-grey-blue">Birou Individual de Arhitectură</p>
+                        <p class="font-body text-xs text-grey-blue/60">Arh. Gabriela Trofin — Slatina</p>
+                    </div>
+                </div>
+
+                <!-- Center -->
+                <div class="flex items-center gap-6 text-grey-blue/60">
+                    <a href="#despre" class="font-body text-xs uppercase tracking-widest hover:text-coral transition-colors">Despre</a>
+                    <a href="#servicii" class="font-body text-xs uppercase tracking-widest hover:text-coral transition-colors">Servicii</a>
+                    <a href="#contact" class="font-body text-xs uppercase tracking-widest hover:text-coral transition-colors">Contact</a>
+                </div>
+
+                <!-- Right -->
+                <p class="font-body text-xs text-grey-blue/40">
+                    &copy; 2026 Arh. Gabriela Trofin. Toate drepturile rezervate.
+                </p>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-white/5 text-center">
+                <p class="font-body text-xs text-grey-blue/30">
+                    Înregistrare TNA București #6565 &middot; Birou Individual de Arhitectură
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- JSON-LD STRUCTURED DATA -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Architect",
+        "name": "Birou Individual de Arhitectură Gabriela Trofin",
+        "alternateName": "Arh. Gabriela Trofin",
+        "description": "Birou Individual de Arhitectură în Slatina — proiectare arhitecturală, documentații tehnice, autorizații de construire și consultanță. Peste 10 ani de experiență.",
+        "url": "",
+        "telephone": "+40767924480",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bl. FA17, Strada Unirii, Sc. 4, Ap. 13, Et. 3",
+            "addressLocality": "Slatina",
+            "postalCode": "230017",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.429635,
+            "longitude": 24.372098
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:30",
+                "closes": "17:00"
+            }
+        ],
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "City",
+            "name": "Slatina"
+        },
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional Registration",
+            "recognizedBy": {
+                "@type": "Organization",
+                "name": "Tabloul Național al Arhitecților din România"
+            },
+            "identifier": "6565"
+        },
+        "knowsAbout": [
+            "Proiectare arhitecturală",
+            "Documentații tehnice",
+            "Autorizații de construire",
+            "Consultanță arhitectură"
+        ]
+    }
+    </script>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================ -->
+    <script>
+        // AOS Init
+        AOS.init({
+            once: true,
+            duration: 700,
+            easing: 'ease-out-cubic',
+            offset: 80,
+        });
+
+        // Nav scroll effect
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            mobileOverlay.classList.toggle('hidden');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+
+        function closeMobile() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const navH = nav.offsetHeight;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

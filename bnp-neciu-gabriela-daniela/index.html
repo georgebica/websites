@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.N.P. Neciu Gabriela Daniela – Notar Public Cluj-Napoca</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CDNs -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#0f1e3c', 50: '#e8ecf4', 100: '#c2cce3', 200: '#8fa3cb', 300: '#5c7ab3', 400: '#3a5a9b', 500: '#1a3a7a', 600: '#0f2a62', 700: '#0a1f4a', 800: '#071534', 900: '#040d21' },
+            gold:  { DEFAULT: '#b8955a', light: '#d4b37e', dark: '#8a6a35', pale: '#f5ead5' },
+            cream: { DEFAULT: '#f8f3ec', dark: '#ede4d6' },
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body:    ['"Jost"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: #f8f3ec; color: #0f1e3c; overflow-x: hidden; }
+
+    /* ── Noise texture overlay ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.35;
+    }
+
+    /* ── Nav ── */
+    #navbar { transition: background 0.4s, box-shadow 0.4s, backdrop-filter 0.4s; }
+    #navbar.scrolled { background: rgba(15,30,60,0.94); backdrop-filter: blur(14px); box-shadow: 0 2px 32px rgba(0,0,0,0.22); }
+
+    /* ── Hero geometric shapes ── */
+    .geo-ring { border-radius: 50%; border: 1px solid rgba(184,149,90,0.25); position: absolute; }
+    .geo-line { position: absolute; background: linear-gradient(90deg, transparent, rgba(184,149,90,0.4), transparent); height: 1px; }
+
+    /* ── Gold separator ── */
+    .gold-rule { display: block; width: 60px; height: 2px; background: linear-gradient(90deg, #b8955a, #d4b37e, #b8955a); margin: 0 auto; border-radius: 2px; }
+    .gold-rule-left { display: block; width: 60px; height: 2px; background: linear-gradient(90deg, #b8955a, #d4b37e, #b8955a); border-radius: 2px; }
+
+    /* ── Section dark ── */
+    .section-dark { background: linear-gradient(160deg, #0a1530 0%, #0f1e3c 60%, #071534 100%); }
+
+    /* ── Service card ── */
+    .service-card {
+      background: #fff;
+      border: 1px solid #e8e0d4;
+      border-radius: 2px;
+      transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s, border-color 0.35s;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(15,30,60,0.12); border-color: #b8955a; }
+    .service-card:hover .card-icon { color: #b8955a; }
+    .card-icon { color: #1a3a7a; transition: color 0.3s; font-size: 2rem; }
+
+    /* ── Trust item ── */
+    .trust-icon-wrap { width: 56px; height: 56px; border-radius: 50%; background: rgba(184,149,90,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(184,149,90,0.3); }
+
+    /* ── Review card ── */
+    .review-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(184,149,90,0.2); border-radius: 2px; backdrop-filter: blur(8px); }
+
+    /* ── Contact card ── */
+    .contact-card { background: #fff; border: 1px solid #e8e0d4; border-radius: 2px; transition: box-shadow 0.3s; }
+    .contact-card:hover { box-shadow: 0 12px 36px rgba(15,30,60,0.1); }
+
+    /* ── Stat counter ── */
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; line-height: 1; color: #b8955a; }
+
+    /* ── Hamburger ── */
+    [x-cloak] { display: none !important; }
+
+    /* ── CTA button primary ── */
+    .btn-gold { background: linear-gradient(135deg, #b8955a 0%, #d4b37e 50%, #b8955a 100%); background-size: 200% auto; color: #0f1e3c; font-weight: 600; letter-spacing: 0.08em; transition: background-position 0.4s, transform 0.2s, box-shadow 0.2s; }
+    .btn-gold:hover { background-position: right center; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(184,149,90,0.45); }
+    .btn-outline { border: 1px solid rgba(184,149,90,0.7); color: #d4b37e; letter-spacing: 0.08em; transition: background 0.3s, color 0.3s, transform 0.2s; }
+    .btn-outline:hover { background: rgba(184,149,90,0.15); color: #fff; transform: translateY(-2px); }
+
+    /* ── Stars fill ── */
+    .star-filled { color: #b8955a; }
+    .star-empty  { color: rgba(184,149,90,0.25); }
+
+    /* ── Map ── */
+    #map-frame { filter: grayscale(20%) contrast(1.05); border: none; }
+
+    /* ── Divider ornament ── */
+    .divider-ornament { display: flex; align-items: center; gap: 16px; }
+    .divider-ornament::before, .divider-ornament::after { content:''; flex:1; height:1px; background: linear-gradient(90deg, transparent, #b8955a55); }
+
+    /* Scroll bar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f8f3ec; }
+    ::-webkit-scrollbar-thumb { background: #b8955a; border-radius: 3px; }
+  </style>
+</head>
+
+<body x-data="{ menuOpen: false, scrolled: false }" @scroll.window="scrolled = window.scrollY > 60">
+
+<!-- ══════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════ -->
+<nav id="navbar" :class="scrolled ? 'scrolled' : 'bg-transparent'" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+
+    <!-- Logo -->
+    <a href="#hero" class="flex flex-col leading-none group">
+      <span class="text-gold font-display text-xl font-semibold tracking-widest group-hover:text-gold-light transition-colors" style="letter-spacing:.18em">B.N.P.</span>
+      <span class="text-white font-display text-xs tracking-widest uppercase opacity-75" style="font-size:.65rem;letter-spacing:.22em">Neciu Gabriela Daniela</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="text-white/75 hover:text-gold text-xs uppercase tracking-widest font-body font-medium transition-colors" style="letter-spacing:.18em">Despre</a>
+      <a href="#servicii" class="text-white/75 hover:text-gold text-xs uppercase tracking-widest font-body font-medium transition-colors" style="letter-spacing:.18em">Servicii</a>
+      <a href="#incredere" class="text-white/75 hover:text-gold text-xs uppercase tracking-widest font-body font-medium transition-colors" style="letter-spacing:.18em">De Ce Noi</a>
+      <a href="#recenzii" class="text-white/75 hover:text-gold text-xs uppercase tracking-widest font-body font-medium transition-colors" style="letter-spacing:.18em">Recenzii</a>
+      <a href="#contact" class="text-white/75 hover:text-gold text-xs uppercase tracking-widest font-body font-medium transition-colors" style="letter-spacing:.18em">Contact</a>
+      <a href="tel:0264371547" class="btn-gold px-5 py-2.5 text-xs rounded-sm flex items-center gap-2">
+        <i class="fa-solid fa-phone text-xs"></i> Sună Acum
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button @click="menuOpen = !menuOpen" class="lg:hidden text-white w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none">
+      <span class="block w-6 h-0.5 bg-white transition-all duration-300" :class="menuOpen ? 'rotate-45 translate-y-2' : ''"></span>
+      <span class="block w-6 h-0.5 bg-white transition-opacity duration-300" :class="menuOpen ? 'opacity-0' : ''"></span>
+      <span class="block w-6 h-0.5 bg-white transition-all duration-300" :class="menuOpen ? '-rotate-45 -translate-y-2' : ''"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div x-show="menuOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="lg:hidden bg-navy-900/98 backdrop-blur-xl border-t border-gold/10">
+    <div class="flex flex-col px-8 py-8 gap-6">
+      <a href="#despre"    @click="menuOpen=false" class="text-white/80 hover:text-gold text-sm uppercase tracking-widest transition-colors">Despre</a>
+      <a href="#servicii"  @click="menuOpen=false" class="text-white/80 hover:text-gold text-sm uppercase tracking-widest transition-colors">Servicii</a>
+      <a href="#incredere" @click="menuOpen=false" class="text-white/80 hover:text-gold text-sm uppercase tracking-widest transition-colors">De Ce Noi</a>
+      <a href="#recenzii"  @click="menuOpen=false" class="text-white/80 hover:text-gold text-sm uppercase tracking-widest transition-colors">Recenzii</a>
+      <a href="#contact"   @click="menuOpen=false" class="text-white/80 hover:text-gold text-sm uppercase tracking-widest transition-colors">Contact</a>
+      <a href="tel:0264371547" class="btn-gold px-5 py-3 text-sm rounded-sm text-center flex items-center justify-center gap-2 mt-2">
+        <i class="fa-solid fa-phone"></i> 0264 371 547
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden section-dark">
+
+  <!-- Geometric rings -->
+  <div class="geo-ring" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+  <div class="geo-ring" style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.5"></div>
+  <div class="geo-ring" style="width:320px;height:320px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.3"></div>
+
+  <!-- Diagonal gold lines -->
+  <div class="geo-line" style="width:60%;top:30%;left:-10%;transform:rotate(-8deg);opacity:.5"></div>
+  <div class="geo-line" style="width:40%;bottom:28%;right:-5%;transform:rotate(-8deg);opacity:.35"></div>
+
+  <!-- Corner ornaments -->
+  <div class="absolute top-32 left-10 opacity-20 hidden lg:block">
+    <div style="width:80px;height:80px;border-left:1px solid #b8955a;border-top:1px solid #b8955a;"></div>
+  </div>
+  <div class="absolute bottom-20 right-10 opacity-20 hidden lg:block">
+    <div style="width:80px;height:80px;border-right:1px solid #b8955a;border-bottom:1px solid #b8955a;"></div>
+  </div>
+
+  <!-- Gradient blobs -->
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 60% 70% at 20% 50%, rgba(26,58,122,0.45) 0%, transparent 70%), radial-gradient(ellipse 50% 60% at 80% 50%, rgba(184,149,90,0.08) 0%, transparent 65%)"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center" data-aos="fade-up" data-aos-duration="900">
+
+    <!-- Eyebrow -->
+    <div class="flex items-center justify-center gap-4 mb-8">
+      <span class="gold-rule" style="width:40px;margin:0"></span>
+      <span class="text-gold font-body text-xs uppercase tracking-widest font-medium" style="letter-spacing:.25em">Birou Notar Public &bull; Cluj-Napoca</span>
+      <span class="gold-rule" style="width:40px;margin:0"></span>
+    </div>
+
+    <h1 class="font-display text-white mb-6" style="font-size:clamp(2.6rem,6vw,5.2rem);font-weight:600;line-height:1.1">
+      Certitudine Juridică.<br />
+      <em class="text-gold" style="font-style:italic;font-weight:400">Profesionalism Notarial.</em>
+    </h1>
+
+    <p class="font-body text-white/65 mb-12 max-w-xl mx-auto" style="font-size:1.05rem;line-height:1.8">
+      Servicii notariale complete pentru persoane fizice și juridice, cu rigoare, discreție și respect față de fiecare client — în inima Clujului.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="tel:0264371547" class="btn-gold px-8 py-4 rounded-sm flex items-center gap-3 text-sm font-semibold w-full sm:w-auto justify-center" style="letter-spacing:.1em">
+        <i class="fa-solid fa-phone"></i> 0264 371 547
+      </a>
+      <a href="https://www.google.com/maps/place/B.N.P.+Neciu+Gabriela+Daniela/data=!4m7!3m6!1s0x47491b9e6bb873d3:0xa16d7c22eaedbc5!8m2!3d46.7742956!4d23.5885853!16s%2Fg%2F1hc4344pf!19sChIJ03O4a54bSUcRxduuLsLXFgo?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="btn-outline px-8 py-4 rounded-sm flex items-center gap-3 text-sm font-semibold w-full sm:w-auto justify-center" style="letter-spacing:.1em">
+        <i class="fa-solid fa-location-dot"></i> Obțineți Indicații
+      </a>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <span class="font-body text-white text-xs uppercase tracking-widest" style="letter-spacing:.2em">Descoperiți</span>
+      <i class="fa-solid fa-chevron-down text-gold text-xs animate-bounce"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════ -->
+<section id="despre" class="py-28 bg-cream relative overflow-hidden">
+  <!-- Subtle bg pattern -->
+  <div class="absolute inset-0 pointer-events-none opacity-5" style="background-image:repeating-linear-gradient(45deg,#0f1e3c 0,#0f1e3c 1px,transparent 0,transparent 50%);background-size:28px 28px;"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Heading -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="gold-rule mb-4"></span>
+      <h2 class="font-display text-navy mt-4 mb-3" style="font-size:clamp(2rem,4vw,3.2rem);font-weight:600">Despre Biroul Notarial</h2>
+      <p class="font-body text-navy/50 text-sm uppercase tracking-widest" style="letter-spacing:.2em">Experiență. Integritate. Exactitate.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text -->
+      <div data-aos="fade-right" data-aos-delay="100">
+        <p class="font-body text-navy/75 mb-6" style="font-size:1.05rem;line-height:1.9">
+          Biroul Notarial Public <strong class="text-navy font-semibold">Neciu Gabriela Daniela</strong> activează în cadrul <em>Societății Profesionale Notariale Neciu Daniela Gabriela, Damian Cecilia Doina și Mărginean Carmen Mihaela</em>, oferind o gamă completă de servicii notariale pentru clienți din Cluj-Napoca și împrejurimi.
+        </p>
+        <p class="font-body text-navy/75 mb-6" style="font-size:1.05rem;line-height:1.9">
+          Activăm sub supravegherea <strong>Camerei Notarilor Publici Cluj</strong> și în conformitate cu Legea nr. 36/1995, oferind asistență pentru tranzacții imobiliare, succesiuni, procuri, autentificări și mult mai mult — cu profesionalism, discreție și atenție la fiecare detaliu.
+        </p>
+        <p class="font-body text-navy/75" style="font-size:1.05rem;line-height:1.9">
+          Biroul dispune de personal calificat, cu servicii disponibile în limbile <strong>română, engleză și spaniolă</strong>, facilitând accesul clienților internaționali la actele notariale necesare în România.
+        </p>
+        <span class="gold-rule-left mt-8 block"></span>
+      </div>
+
+      <!-- Stats -->
+      <div data-aos="fade-left" data-aos-delay="200">
+        <div class="grid grid-cols-1 gap-8">
+
+          <div class="flex items-center gap-6 p-6 bg-white border border-gold/15 rounded-sm shadow-sm">
+            <div class="trust-icon-wrap"><i class="fa-solid fa-scale-balanced text-gold text-xl"></i></div>
+            <div>
+              <div class="stat-num" data-target="15">0+</div>
+              <div class="font-body text-navy/60 text-sm uppercase tracking-widest mt-1" style="letter-spacing:.15em">Ani de Activitate Notarială</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6 p-6 bg-white border border-gold/15 rounded-sm shadow-sm">
+            <div class="trust-icon-wrap"><i class="fa-solid fa-users text-gold text-xl"></i></div>
+            <div>
+              <div class="stat-num" data-target="1000">0+</div>
+              <div class="font-body text-navy/60 text-sm uppercase tracking-widest mt-1" style="letter-spacing:.15em">Clienți Deserviți</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6 p-6 bg-white border border-gold/15 rounded-sm shadow-sm">
+            <div class="trust-icon-wrap"><i class="fa-solid fa-star text-gold text-xl"></i></div>
+            <div>
+              <div class="stat-num">3.8</div>
+              <div class="font-body text-navy/60 text-sm uppercase tracking-widest mt-1" style="letter-spacing:.15em">Rating Google (13 recenzii)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════ -->
+<section id="servicii" class="py-28 section-dark relative overflow-hidden">
+
+  <!-- bg texture -->
+  <div class="absolute inset-0 pointer-events-none opacity-5" style="background-image:radial-gradient(circle, #b8955a 1px, transparent 1px);background-size:36px 36px;"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="gold-rule mb-4"></span>
+      <h2 class="font-display text-white mt-4 mb-3" style="font-size:clamp(2rem,4vw,3.2rem);font-weight:600">Servicii Notariale</h2>
+      <p class="font-body text-white/45 text-sm uppercase tracking-widest" style="letter-spacing:.2em">Soluții complete pentru fiecare nevoie juridică</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="service-card p-8" data-aos="fade-up" data-aos-delay="0">
+        <i class="card-icon fa-solid fa-house mb-5 block"></i>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Tranzacții Imobiliare</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Contracte de vânzare-cumpărare, donații, ipoteci, partaje, drepturi de superficie și uzufruct — cu atenție maximă la detalii.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card p-8" data-aos="fade-up" data-aos-delay="80">
+        <i class="card-icon fa-solid fa-file-signature mb-5 block"></i>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Procuri și Împuterniciri</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Procuri generale și speciale, împuterniciri auto și SRL, procuri pentru declarații fiscale sau ridicare pașaport.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card p-8" data-aos="fade-up" data-aos-delay="160">
+        <i class="card-icon fa-solid fa-landmark mb-5 block"></i>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Succesiuni și Testamente</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Redactare testamente, deschiderea procedurii succesorale, certificat de moștenitor și asistență completă pentru succesiuni.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card p-8" data-aos="fade-up" data-aos-delay="0">
+        <i class="card-icon fa-solid fa-heart mb-5 block"></i>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Dreptul Familiei</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Contracte matrimoniale, convenții de divorț, acorduri privind custodia copilului și înțelegeri de pensie alimentară.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card p-8" data-aos="fade-up" data-aos-delay="80">
+        <i class="card-icon fa-solid fa-stamp mb-5 block"></i>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Autentificări și Legalizări</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Legalizări de documente, copii legalizate, legalizări de traduceri, autentificarea semnăturilor și certificarea de fapte.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card p-8" data-aos="fade-up" data-aos-delay="160">
+        <i class="card-icon fa-solid fa-comments mb-5 block"></i>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Consultanță Notarială</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Consultații juridice personalizate, depozit de înscrisuri, protest de efecte de comerț — în română, engleză și spaniolă.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     WHY CHOOSE US
+══════════════════════════════════════════════ -->
+<section id="incredere" class="py-28 bg-cream relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none opacity-5" style="background-image:repeating-linear-gradient(0deg,#0f1e3c 0,#0f1e3c 1px,transparent 0,transparent 50%);background-size:28px 28px;"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="gold-rule mb-4"></span>
+      <h2 class="font-display text-navy mt-4 mb-3" style="font-size:clamp(2rem,4vw,3.2rem);font-weight:600">De Ce Să Ne Alegeți</h2>
+      <p class="font-body text-navy/50 text-sm uppercase tracking-widest" style="letter-spacing:.2em">Patru motive solide de încredere</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+        <div class="trust-icon-wrap mx-auto mb-5" style="width:68px;height:68px"><i class="fa-solid fa-globe text-gold text-2xl"></i></div>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Servicii Multilingve</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Asistență notarială în română, engleză și spaniolă pentru clienți locali și internaționali.</p>
+      </div>
+
+      <div class="text-center" data-aos="fade-up" data-aos-delay="80">
+        <div class="trust-icon-wrap mx-auto mb-5" style="width:68px;height:68px"><i class="fa-solid fa-map-location-dot text-gold text-2xl"></i></div>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Două Locații</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Birou principal în centrul Cluj-Napocei și birou secundar în Gilău — accesibilitate extinsă pentru clienți din întreaga regiune.</p>
+      </div>
+
+      <div class="text-center" data-aos="fade-up" data-aos-delay="160">
+        <div class="trust-icon-wrap mx-auto mb-5" style="width:68px;height:68px"><i class="fa-solid fa-shield-halved text-gold text-2xl"></i></div>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Cadru Legal Strict</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Activitate reglementată conform Legii nr. 36/1995, sub supravegherea Camerei Notarilor Publici Cluj.</p>
+      </div>
+
+      <div class="text-center" data-aos="fade-up" data-aos-delay="240">
+        <div class="trust-icon-wrap mx-auto mb-5" style="width:68px;height:68px"><i class="fa-solid fa-award text-gold text-2xl"></i></div>
+        <h3 class="font-display text-navy text-xl font-semibold mb-3">Asociație Profesională</h3>
+        <p class="font-body text-navy/60 text-sm leading-relaxed">Membră a Uniunii Naționale a Notarilor Publici și înscrisă în Directorul European al Notarilor.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     REVIEWS
+══════════════════════════════════════════════ -->
+<section id="recenzii" class="py-28 section-dark relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none opacity-5" style="background-image:radial-gradient(circle, #b8955a 1px, transparent 1px);background-size:40px 40px;"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="gold-rule mb-4"></span>
+      <h2 class="font-display text-white mt-4 mb-3" style="font-size:clamp(2rem,4vw,3.2rem);font-weight:600">Ce Spun Clienții</h2>
+      <p class="font-body text-white/45 text-sm uppercase tracking-widest" style="letter-spacing:.2em">Recenzii reale de pe Google</p>
+    </div>
+
+    <!-- Positive reviews -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="review-card p-8" data-aos="fade-up" data-aos-delay="0">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i>
+        </div>
+        <p class="font-body text-white/75 text-sm leading-relaxed mb-6 italic">"Un notar pe care îl recomand, fiind foarte atent la detaliile unei tranzacții."</p>
+        <div class="flex items-center gap-3 border-t border-gold/15 pt-5">
+          <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center"><i class="fa-solid fa-user text-gold text-xs"></i></div>
+          <span class="font-body text-white/60 text-sm font-medium">NEMES NICOLAE</span>
+        </div>
+      </div>
+
+      <div class="review-card p-8" data-aos="fade-up" data-aos-delay="80">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i>
+        </div>
+        <p class="font-body text-white/75 text-sm leading-relaxed mb-6 italic">"Un profesionist desăvârșit. Vă recomand cu căldură serviciile doamnei notar."</p>
+        <div class="flex items-center gap-3 border-t border-gold/15 pt-5">
+          <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center"><i class="fa-solid fa-user text-gold text-xs"></i></div>
+          <span class="font-body text-white/60 text-sm font-medium">Cosmin Petrus</span>
+        </div>
+      </div>
+
+      <div class="review-card p-8" data-aos="fade-up" data-aos-delay="160">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i>
+        </div>
+        <p class="font-body text-white/75 text-sm leading-relaxed mb-6 italic">"Recomand. Amabilitate, promptitudine și seriozitate."</p>
+        <div class="flex items-center gap-3 border-t border-gold/15 pt-5">
+          <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center"><i class="fa-solid fa-user text-gold text-xs"></i></div>
+          <span class="font-body text-white/60 text-sm font-medium">Maria Szasz</span>
+        </div>
+      </div>
+
+      <div class="review-card p-8" data-aos="fade-up" data-aos-delay="0">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i>
+        </div>
+        <p class="font-body text-white/75 text-sm leading-relaxed mb-6 italic">"O experiență foarte bună!"</p>
+        <div class="flex items-center gap-3 border-t border-gold/15 pt-5">
+          <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center"><i class="fa-solid fa-user text-gold text-xs"></i></div>
+          <span class="font-body text-white/60 text-sm font-medium">Erika Lukacs</span>
+        </div>
+      </div>
+
+      <div class="review-card p-8" data-aos="fade-up" data-aos-delay="80">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i>
+        </div>
+        <p class="font-body text-white/75 text-sm leading-relaxed mb-6 italic">"Promptitudine, rapiditate, eficiență."</p>
+        <div class="flex items-center gap-3 border-t border-gold/15 pt-5">
+          <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center"><i class="fa-solid fa-user text-gold text-xs"></i></div>
+          <span class="font-body text-white/60 text-sm font-medium">Endre Vig</span>
+        </div>
+      </div>
+
+      <div class="review-card p-8" data-aos="fade-up" data-aos-delay="160">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-filled text-sm"></i><i class="fa-solid fa-star star-empty text-sm"></i>
+        </div>
+        <p class="font-body text-white/75 text-sm leading-relaxed mb-6 italic">"Doamna Notar Ciacoi e foarte amabilă... cu mici excepții."</p>
+        <div class="flex items-center gap-3 border-t border-gold/15 pt-5">
+          <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center"><i class="fa-solid fa-user text-gold text-xs"></i></div>
+          <span class="font-body text-white/60 text-sm font-medium">Dorel Cotan</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Rating badge -->
+    <div class="mt-14 flex justify-center" data-aos="fade-up">
+      <div class="inline-flex items-center gap-6 px-10 py-6 border border-gold/25 rounded-sm bg-white/4 backdrop-blur-sm">
+        <i class="fa-brands fa-google text-white/40 text-3xl"></i>
+        <div>
+          <div class="font-display text-white text-4xl font-semibold">3.8 <span class="text-gold text-2xl">/5</span></div>
+          <div class="flex gap-1 mt-1">
+            <i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-regular fa-star star-empty text-xs" style="color:#b8955a44"></i>
+          </div>
+          <p class="font-body text-white/45 text-xs mt-1">bazat pe 13 recenzii Google</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+<section id="contact" class="py-28 bg-cream relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none opacity-5" style="background-image:repeating-linear-gradient(45deg,#0f1e3c 0,#0f1e3c 1px,transparent 0,transparent 50%);background-size:28px 28px;"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="gold-rule mb-4"></span>
+      <h2 class="font-display text-navy mt-4 mb-3" style="font-size:clamp(2rem,4vw,3.2rem);font-weight:600">Contact &amp; Locație</h2>
+      <p class="font-body text-navy/50 text-sm uppercase tracking-widest" style="letter-spacing:.2em">Suntem la dispoziția dumneavoastră</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+
+      <!-- Cards -->
+      <div class="grid sm:grid-cols-2 gap-6 content-start">
+
+        <div class="contact-card p-7" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center mb-4"><i class="fa-solid fa-location-dot text-navy text-base"></i></div>
+          <h4 class="font-display text-navy text-lg font-semibold mb-2">Adresă</h4>
+          <p class="font-body text-navy/60 text-sm leading-relaxed mb-4">Piața Mihai Viteazu nr. 2, ap. 4<br/>Cluj-Napoca, Cluj 400394</p>
+          <a href="https://www.google.com/maps/place/B.N.P.+Neciu+Gabriela+Daniela/data=!4m7!3m6!1s0x47491b9e6bb873d3:0xa16d7c22eaedbc5!8m2!3d46.7742956!4d23.5885853!16s%2Fg%2F1hc4344pf!19sChIJ03O4a54bSUcRxduuLsLXFgo?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="text-gold font-body text-xs uppercase tracking-widest font-medium flex items-center gap-2 hover:text-gold-dark transition-colors" style="letter-spacing:.15em"><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> Vezi pe hartă</a>
+        </div>
+
+        <div class="contact-card p-7" data-aos="fade-up" data-aos-delay="80">
+          <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center mb-4"><i class="fa-solid fa-phone text-navy text-base"></i></div>
+          <h4 class="font-display text-navy text-lg font-semibold mb-2">Telefon</h4>
+          <a href="tel:0264371547" class="font-body text-navy/70 text-sm font-medium hover:text-gold transition-colors block mb-1">0264 371 547</a>
+          <a href="tel:0264413996" class="font-body text-navy/50 text-sm hover:text-gold transition-colors block mb-1">0264 413 996</a>
+          <a href="tel:0742055030" class="font-body text-navy/50 text-sm hover:text-gold transition-colors block">0742 055 030</a>
+        </div>
+
+        <div class="contact-card p-7" data-aos="fade-up" data-aos-delay="160">
+          <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center mb-4"><i class="fa-solid fa-clock text-navy text-base"></i></div>
+          <h4 class="font-display text-navy text-lg font-semibold mb-3">Program</h4>
+          <div class="space-y-1.5">
+            <div class="flex justify-between font-body text-sm">
+              <span class="text-navy/70">Luni – Vineri</span>
+              <span class="text-navy font-medium">09:30 – 17:00</span>
+            </div>
+            <div class="flex justify-between font-body text-sm">
+              <span class="text-navy/70">Sâmbătă</span>
+              <span class="text-navy/40 font-medium">Închis</span>
+            </div>
+            <div class="flex justify-between font-body text-sm">
+              <span class="text-navy/70">Duminică</span>
+              <span class="text-navy/40 font-medium">Închis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card p-7" data-aos="fade-up" data-aos-delay="240">
+          <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center mb-4"><i class="fa-solid fa-envelope text-navy text-base"></i></div>
+          <h4 class="font-display text-navy text-lg font-semibold mb-2">Email</h4>
+          <a href="mailto:neciu.daniela@enp.ro" class="font-body text-navy/60 text-xs hover:text-gold transition-colors block mb-1 break-all">neciu.daniela@enp.ro</a>
+          <a href="mailto:neciu_daniela@yahoo.com" class="font-body text-navy/60 text-xs hover:text-gold transition-colors block break-all">neciu_daniela@yahoo.com</a>
+        </div>
+
+      </div>
+
+      <!-- Map -->
+      <div data-aos="fade-left" data-aos-delay="100" class="rounded-sm overflow-hidden shadow-lg border border-gold/15" style="min-height:400px">
+        <iframe id="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.7!2d23.5863!3d46.7743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47491b9e6bb873d3%3A0xa16d7c22eaedbc5!2sB.N.P.%20Neciu%20Gabriela%20Daniela!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+          width="100%" height="100%" style="min-height:400px;border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+
+    <!-- Secondary office -->
+    <div class="mt-8" data-aos="fade-up">
+      <div class="contact-card p-6 flex items-start gap-5">
+        <div class="w-11 h-11 rounded-full bg-navy/8 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-building text-navy text-base"></i></div>
+        <div>
+          <h4 class="font-display text-navy text-lg font-semibold mb-1">Birou Secundar — Gilău</h4>
+          <p class="font-body text-navy/60 text-sm">Str. Principală nr. 3, ap. 9, Gilău, Cluj 407310, România</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="section-dark border-t border-gold/15">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+
+      <!-- Brand -->
+      <div>
+        <div class="font-display text-gold text-2xl font-semibold mb-1" style="letter-spacing:.08em">B.N.P. Neciu</div>
+        <div class="font-display text-white/50 text-sm mb-4">Gabriela Daniela</div>
+        <p class="font-body text-white/40 text-sm leading-relaxed">Birou Notar Public autorizat, Cluj-Napoca. Servicii notariale complete cu profesionalism și integritate.</p>
+      </div>
+
+      <!-- Contact quick -->
+      <div>
+        <h5 class="font-body text-white/70 text-xs uppercase tracking-widest mb-5 font-semibold" style="letter-spacing:.2em">Contact Rapid</h5>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-gold text-xs mt-1"></i>
+            <span class="font-body text-white/45 text-sm">Piața Mihai Viteazu 2, Cluj-Napoca 400394</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-gold text-xs"></i>
+            <a href="tel:0264371547" class="font-body text-white/45 text-sm hover:text-gold transition-colors">0264 371 547</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-gold text-xs"></i>
+            <a href="mailto:neciu.daniela@enp.ro" class="font-body text-white/45 text-sm hover:text-gold transition-colors">neciu.daniela@enp.ro</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h5 class="font-body text-white/70 text-xs uppercase tracking-widest mb-5 font-semibold" style="letter-spacing:.2em">Navigare</h5>
+        <div class="space-y-2.5">
+          <a href="#despre"    class="block font-body text-white/45 text-sm hover:text-gold transition-colors">Despre</a>
+          <a href="#servicii"  class="block font-body text-white/45 text-sm hover:text-gold transition-colors">Servicii</a>
+          <a href="#incredere" class="block font-body text-white/45 text-sm hover:text-gold transition-colors">De Ce Noi</a>
+          <a href="#recenzii"  class="block font-body text-white/45 text-sm hover:text-gold transition-colors">Recenzii</a>
+          <a href="#contact"   class="block font-body text-white/45 text-sm hover:text-gold transition-colors">Contact</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-body text-white/25 text-xs">&copy; 2025 B.N.P. Neciu Gabriela Daniela. Toate drepturile rezervate.</p>
+      <p class="font-body text-white/20 text-xs">Membră a Uniunii Naționale a Notarilor Publici din România</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════ -->
+<script>
+  // AOS init
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({ once: true, duration: 750, easing: 'ease-out-cubic' });
+
+    // Animated counters
+    const counters = document.querySelectorAll('.stat-num[data-target]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const suffix = target >= 100 ? '+' : '+';
+        let count = 0;
+        const step = Math.max(1, Math.floor(target / 60));
+        const tick = () => {
+          count = Math.min(count + step, target);
+          el.textContent = count + suffix;
+          if (count < target) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+  });
+</script>
+</body>
+</html>

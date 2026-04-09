@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas S.A. — Construcții Rezidențiale și Nerezidențiale în Craiova | Din 1992</title>
+  <meta name="description" content="Atlas S.A. — companie de construcții cu peste 34 de ani de experiență în Craiova, Dolj. Construcții rezidențiale și nerezidențiale. Contactați-ne: 0251 543 990.">
+  <meta name="keywords" content="construcții Craiova, construcții rezidențiale Craiova, construcții nerezidențiale Dolj, Atlas SA Craiova, firma construcții Dolj, CAEN 4120">
+  <meta property="og:title" content="Atlas S.A. — Construcții Rezidențiale și Nerezidențiale în Craiova | Din 1992">
+  <meta property="og:description" content="Atlas S.A. — companie de construcții cu peste 34 de ani de experiență în Craiova, Dolj. Construcții rezidențiale și nerezidențiale. Contactați-ne: 0251 543 990.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            atlasNavy: "#1B2A4A",
+            atlasStone: "#8B8B8B",
+            atlasAmber: "#D4A24E",
+            atlasCream: "#F5F3EF",
+            atlasBody: "#3D3D3D"
+          },
+          boxShadow: {
+            masonry: "10px 10px 0 rgba(27, 42, 74, 0.12)",
+            frame: "0 0 0 2px rgba(27, 42, 74, 0.12)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --navy: #1B2A4A;
+      --stone: #8B8B8B;
+      --amber: #D4A24E;
+      --cream: #F5F3EF;
+      --body: #3D3D3D;
+      --white: #FFFFFF;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: var(--body);
+      background: var(--cream);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Merriweather", serif;
+    }
+
+    .blueprint-grid {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(rgba(212, 162, 78, 0.08) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(212, 162, 78, 0.08) 2px, transparent 2px);
+      background-size: 28px 28px, 28px 28px, 140px 140px, 140px 140px;
+    }
+
+    .paper-grid {
+      background-image:
+        linear-gradient(rgba(27, 42, 74, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27, 42, 74, 0.07) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .section-rule {
+      position: relative;
+    }
+
+    .section-rule::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 120px;
+      height: 8px;
+      background: var(--amber);
+    }
+
+    .stepped-divider {
+      position: relative;
+      height: 28px;
+      overflow: hidden;
+    }
+
+    .stepped-divider::before,
+    .stepped-divider::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, var(--navy) 0 22%, transparent 22% 28%, var(--navy) 28% 50%, transparent 50% 56%, var(--navy) 56% 78%, transparent 78% 84%, var(--navy) 84% 100%);
+      opacity: 0.15;
+    }
+
+    .hero-badge {
+      position: relative;
+      box-shadow: 12px 12px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-badge::after {
+      content: "";
+      position: absolute;
+      right: -14px;
+      top: -14px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(255, 255, 255, 0.14);
+      z-index: -1;
+    }
+
+    .cornerstone-quote {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cornerstone-quote::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--amber), rgba(212, 162, 78, 0.08));
+    }
+
+    .service-card {
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--amber);
+      box-shadow: 12px 12px 0 rgba(212, 162, 78, 0.14);
+    }
+
+    .cta-button {
+      transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #c2903a;
+      transform: translateY(-2px);
+    }
+
+    .scroll-indicator {
+      width: 34px;
+      height: 58px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      position: relative;
+    }
+
+    .scroll-indicator::before,
+    .scroll-indicator::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      border-right: 2px solid var(--amber);
+      border-bottom: 2px solid var(--amber);
+      transform: translateX(-50%) rotate(45deg);
+      animation: descend 1.6s infinite;
+    }
+
+    .scroll-indicator::before {
+      top: 12px;
+    }
+
+    .scroll-indicator::after {
+      top: 24px;
+      animation-delay: 0.25s;
+    }
+
+    @keyframes descend {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -6px) rotate(45deg);
+      }
+      30%,
+      70% {
+        opacity: 1;
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, 8px) rotate(45deg);
+      }
+    }
+
+    .map-pin {
+      width: 74px;
+      height: 74px;
+      position: relative;
+      transform: rotate(-45deg);
+      background:
+        linear-gradient(135deg, var(--amber), #b88635);
+      border: 4px solid var(--navy);
+      box-shadow: 12px 12px 0 rgba(27, 42, 74, 0.1);
+    }
+
+    .map-pin::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 9999px;
+      background: var(--cream);
+      border: 4px solid var(--navy);
+    }
+
+    .map-pin::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -26px;
+      width: 6px;
+      height: 40px;
+      background: var(--navy);
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .stat-divider:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 14%;
+      width: 2px;
+      height: 72%;
+      background: rgba(139, 139, 139, 0.45);
+    }
+
+    .outline-frame {
+      box-shadow: inset 0 0 0 2px rgba(27, 42, 74, 0.12);
+    }
+
+    @media (max-width: 767px) {
+      .stat-divider::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 border-b-2 border-atlasAmber/70 bg-atlasNavy/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#hero" class="flex items-center gap-3 text-white">
+        <span class="flex h-10 w-10 items-center justify-center border-2 border-atlasAmber bg-atlasAmber text-sm font-bold tracking-[0.3em] text-atlasNavy">AT</span>
+        <span>
+          <span class="block text-base font-black uppercase tracking-[0.28em] sm:text-lg">Atlas S.A.</span>
+          <span class="block text-[11px] uppercase tracking-[0.22em] text-atlasStone sm:text-xs">Din 1992 în Craiova</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-semibold text-white/80 lg:flex">
+        <a href="#despre" class="transition hover:text-atlasAmber">Cine suntem</a>
+        <a href="#servicii" class="transition hover:text-atlasAmber">Servicii</a>
+        <a href="#prezenta" class="transition hover:text-atlasAmber">Prezență locală</a>
+        <a href="#contact" class="transition hover:text-atlasAmber">Contact</a>
+      </nav>
+      <a href="tel:0251543990" aria-label="Sunați la Atlas S.A." class="cta-button inline-flex items-center gap-2 border-2 border-atlasAmber bg-atlasAmber px-4 py-3 text-sm font-bold text-atlasNavy shadow-masonry">
+        <i class="fa-solid fa-phone"></i>
+        <span class="hidden sm:inline">0251 543 990</span>
+        <span class="sm:hidden">Sunați</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="blueprint-grid relative flex min-h-screen items-center overflow-hidden bg-atlasNavy pt-28 text-white">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,162,78,0.18),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.06),transparent_28%)]"></div>
+      <div class="absolute left-0 top-0 h-full w-full bg-[linear-gradient(180deg,rgba(27,42,74,0.1),rgba(27,42,74,0.72))]"></div>
+      <div class="relative mx-auto grid w-full max-w-7xl gap-12 px-4 pb-20 pt-10 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="900">
+          <div class="hero-badge inline-block border-4 border-white bg-atlasAmber px-6 py-5 text-atlasNavy sm:px-8 sm:py-6">
+            <span class="block text-xs font-bold uppercase tracking-[0.38em] sm:text-sm">Din</span>
+            <span class="block text-4xl font-black leading-none sm:text-6xl">1992</span>
+          </div>
+          <div class="mt-10 max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.38em] text-atlasAmber">Societate pe Acțiuni</p>
+            <h1 class="mt-4 text-4xl font-black uppercase leading-tight tracking-[0.16em] sm:text-6xl xl:text-7xl">Atlas S.A.</h1>
+            <p class="mt-6 max-w-2xl text-lg font-semibold text-white/[0.85] sm:text-2xl">Construcții rezidențiale și nerezidențiale</p>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-white/[0.72] sm:text-lg">Peste trei decenii de construcții solide în inima Olteniei, cu o prezență construită pe rigoare, continuitate și responsabilitate instituțională.</p>
+          </div>
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a href="tel:0251543990" aria-label="Contactați-ne la 0251 543 990" class="cta-button inline-flex items-center justify-center gap-3 border-2 border-atlasAmber bg-atlasAmber px-7 py-4 text-base font-bold text-atlasNavy shadow-masonry">
+              <i class="fa-solid fa-phone"></i>
+              Contactați-ne: 0251 543 990
+            </a>
+            <div class="border-l-4 border-atlasAmber pl-4">
+              <p class="text-sm uppercase tracking-[0.32em] text-white/[0.55]">Craiova, Dolj</p>
+              <p class="mt-1 text-base text-white/[0.85]">Strada Sărarilor 7</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-end lg:justify-end" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <div class="w-full max-w-lg border-4 border-white/90 bg-white/[0.06] p-6 backdrop-blur-sm sm:p-8">
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="border-2 border-white/[0.15] p-5">
+                <p class="text-xs font-bold uppercase tracking-[0.3em] text-atlasAmber">Activitate principală</p>
+                <p class="mt-3 text-2xl font-black text-white">CAEN 4120</p>
+                <p class="mt-2 text-sm leading-7 text-white/70">Construcția clădirilor rezidențiale și nerezidențiale, în acord cu standardele unei companii cu structură formală și experiență stabilă.</p>
+              </div>
+              <div class="border-2 border-white/[0.15] p-5">
+                <p class="text-xs font-bold uppercase tracking-[0.3em] text-atlasAmber">Prezență de grup</p>
+                <p class="mt-3 text-2xl font-black text-white">Atlas + entități afiliate</p>
+                <p class="mt-2 text-sm leading-7 text-white/70">Metrolemn SA, Cofraconstruct SRL și West Park SRL completează un cadru operațional diversificat, orientat spre continuitate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-4 md:flex">
+        <span class="text-xs uppercase tracking-[0.36em] text-white/[0.55]">Derulați</span>
+        <div class="scroll-indicator"></div>
+      </div>
+    </section>
+
+    <div class="stepped-divider bg-atlasCream"></div>
+
+    <section id="despre" class="section-rule bg-atlasCream py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+          <p class="text-sm font-bold uppercase tracking-[0.34em] text-atlasStone">Despre noi</p>
+          <h2 class="mt-5 inline-block border-b-8 border-atlasAmber pb-3 text-3xl font-black text-atlasNavy sm:text-5xl">Cine suntem</h2>
+        </div>
+
+        <div class="mt-12 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div class="space-y-6 text-base leading-8 text-atlasBody sm:text-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <p>Fondată la 15 iunie 1992, Atlas S.A. reprezintă una dintre prezențele consacrate ale peisajului de construcții din Craiova. Statutul de societate pe acțiuni exprimă un cadru instituțional solid, construit în jurul stabilității, al disciplinei operaționale și al unei viziuni orientate spre durabilitate.</p>
+            <p>Cu peste trei decenii de continuitate în județul Dolj, compania își afirmă expertiza în domeniul CAEN 4120, respectiv construcția clădirilor rezidențiale și nerezidențiale. Abordarea Atlas S.A. pune accent pe structură, rigoare și pe încrederea care se câștigă în timp, prin prezență constantă și seriozitate profesională.</p>
+            <p>Atlas funcționează în logica unui grup cu ramificații complementare. Participațiile în Metrolemn SA, Cofraconstruct SRL și West Park SRL susțin o prezență extinsă în activități conexe, consolidând profilul companiei ca actor matur, cu rădăcini locale și capacitate de coordonare în sectoare apropiate construcțiilor.</p>
+          </div>
+
+          <aside class="cornerstone-quote border-4 border-atlasNavy bg-white p-8 shadow-masonry outline-frame" data-aos="fade-left" data-aos-duration="800" data-aos-delay="180">
+            <p class="pl-8 text-sm font-bold uppercase tracking-[0.3em] text-atlasStone">Principiu de bază</p>
+            <h3 class="mt-5 pl-8 text-2xl font-black text-atlasNavy sm:text-3xl">Fundament solid. Prezență consecventă. Decizii asumate.</h3>
+            <p class="mt-5 pl-8 text-base leading-8 text-atlasBody">Atlas S.A. își construiește identitatea în jurul continuității și al responsabilității corporative. Într-un domeniu în care încrederea se validează în timp, istoricul companiei funcționează ca un reper de stabilitate pentru piața locală.</p>
+            <div class="mt-7 border-t-2 border-atlasNavy/[0.15] pt-5 pl-8">
+              <p class="text-sm font-semibold text-atlasNavy">34+ ani de activitate în Craiova și Dolj</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="stepped-divider bg-white"></div>
+
+    <section id="servicii" class="section-rule paper-grid bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+          <p class="text-sm font-bold uppercase tracking-[0.34em] text-atlasStone">Capabilități</p>
+          <h2 class="mt-5 inline-block border-b-8 border-atlasAmber pb-3 text-3xl font-black text-atlasNavy sm:text-5xl">Serviciile noastre</h2>
+          <p class="mt-6 max-w-2xl text-base leading-8 text-atlasBody sm:text-lg">Atlas S.A. își structurează activitatea în jurul unor servicii care reflectă competența sa principală în construcții și forța unei organizații cu rădăcini locale și perspectivă de grup.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="service-card border-[3px] border-atlasNavy bg-atlasCream p-8 shadow-frame" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
+            <div class="flex h-16 w-16 items-center justify-center border-[3px] border-atlasAmber text-3xl text-atlasAmber">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <h3 class="mt-6 text-2xl font-black text-atlasNavy">Construcții rezidențiale</h3>
+            <p class="mt-4 text-base leading-8 text-atlasBody">Competențe orientate către realizarea de clădiri cu destinație rezidențială, inclusiv blocuri de locuințe, dezvoltări urbane și ansambluri rezidențiale în Craiova și în județul Dolj.</p>
+          </article>
+
+          <article class="service-card border-[3px] border-atlasNavy bg-atlasCream p-8 shadow-frame" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+            <div class="flex h-16 w-16 items-center justify-center border-[3px] border-atlasAmber text-3xl text-atlasAmber">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <h3 class="mt-6 text-2xl font-black text-atlasNavy">Construcții nerezidențiale</h3>
+            <p class="mt-4 text-base leading-8 text-atlasBody">Execuție și coordonare pentru clădiri comerciale, industriale și instituționale, de la spații logistice și birouri până la imobile cu funcțiuni administrative sau comerciale.</p>
+          </article>
+
+          <article class="service-card border-[3px] border-atlasNavy bg-atlasCream p-8 shadow-frame" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
+            <div class="flex h-16 w-16 items-center justify-center border-[3px] border-atlasAmber text-3xl text-atlasAmber">
+              <i class="fa-solid fa-sitemap"></i>
+            </div>
+            <h3 class="mt-6 text-2xl font-black text-atlasNavy">Servicii de grup</h3>
+            <p class="mt-4 text-base leading-8 text-atlasBody">Prin Metrolemn SA și Cofraconstruct SRL, grupul Atlas extinde valoarea livrată către zone complementare precum prelucrarea lemnului și servicii specializate în construcții, într-o logică de continuitate operațională.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="blueprint-grid relative overflow-hidden bg-atlasNavy py-20 text-white sm:py-24">
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(27,42,74,0.1),rgba(27,42,74,0.72))]"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+          <p class="text-sm font-bold uppercase tracking-[0.34em] text-white/[0.55]">Indicatori esențiali</p>
+          <h2 class="mt-5 inline-block border-b-8 border-atlasAmber pb-3 text-3xl font-black sm:text-5xl">Cifre care contează</h2>
+        </div>
+
+        <div class="mt-12 grid border-y-2 border-white/[0.15] md:grid-cols-2 xl:grid-cols-4">
+          <div class="stat-divider relative border-b-2 border-white/[0.15] px-6 py-10 md:border-b-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
+            <p class="text-4xl font-black text-atlasAmber sm:text-5xl"><span class="count-up" data-target="34">0</span>+</p>
+            <p class="mt-3 text-base font-semibold text-white/80">Ani de activitate</p>
+          </div>
+          <div class="stat-divider relative border-b-2 border-white/[0.15] px-6 py-10 md:border-b-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="120">
+            <p class="text-4xl font-black text-atlasAmber sm:text-5xl">CAEN <span class="count-up" data-target="4120">0</span></p>
+            <p class="mt-3 text-base font-semibold text-white/80">Construcții clădiri</p>
+          </div>
+          <div class="stat-divider relative border-b-2 border-white/[0.15] px-6 py-10 xl:border-b-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="190">
+            <p class="text-4xl font-black text-atlasAmber sm:text-5xl"><span class="count-up" data-target="3">0</span></p>
+            <p class="mt-3 text-base font-semibold text-white/80">Companii în grup</p>
+          </div>
+          <div class="stat-divider relative px-6 py-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="260">
+            <p class="text-4xl font-black text-atlasAmber sm:text-5xl">Dolj</p>
+            <p class="mt-3 text-base font-semibold text-white/80">Prezență regională</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stepped-divider bg-atlasCream"></div>
+
+    <section id="prezenta" class="section-rule bg-atlasCream py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+          <p class="text-sm font-bold uppercase tracking-[0.34em] text-atlasStone">Ancorare locală</p>
+          <h2 class="mt-5 inline-block border-b-8 border-atlasAmber pb-3 text-3xl font-black text-atlasNavy sm:text-5xl">Prezență în Craiova</h2>
+        </div>
+
+        <div class="mt-12 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div class="flex flex-col items-start gap-8" data-aos="fade-right" data-aos-duration="800" data-aos-delay="80">
+            <div class="map-pin ml-6 mt-2"></div>
+            <div class="border-[3px] border-atlasNavy bg-white p-8 shadow-masonry">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-atlasStone">Adresă operațională</p>
+              <p class="mt-4 text-2xl font-black text-atlasNavy">Strada Sărarilor 7</p>
+              <p class="mt-2 text-lg text-atlasBody">Craiova 200516, județul Dolj, România</p>
+            </div>
+          </div>
+
+          <div class="space-y-6 text-base leading-8 text-atlasBody sm:text-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="140">
+            <p>Prezența Atlas S.A. în Craiova nu este un simplu reper administrativ, ci expresia unei apartenențe reale la dinamica economică și urbană a orașului. Din acest nucleu local, compania și-a construit identitatea de firmă serioasă, orientată spre construcții cu fundament durabil și relații profesionale stabile.</p>
+            <p>Strada Sărarilor 7 marchează o adresă cu relevanță instituțională pentru companie și un punct de referință în ecosistemul de construcții din Dolj. Atlas S.A. se prezintă ca o prezență matură, cu memorie organizațională și cu o poziționare care inspiră continuitate și rigoare.</p>
+            <div class="border-l-8 border-atlasAmber bg-white px-6 py-6 shadow-frame">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-atlasStone">Reper local</p>
+              <p class="mt-3 text-lg font-semibold text-atlasNavy">Atlas S.A. contribuie la peisajul de construcții al Craiovei prin tradiție, structură corporativă și o identitate construită pe rezistență în timp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stepped-divider bg-white"></div>
+
+    <section id="contact" class="section-rule bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+          <p class="text-sm font-bold uppercase tracking-[0.34em] text-atlasStone">Date corporative</p>
+          <h2 class="mt-5 inline-block border-b-8 border-atlasAmber pb-3 text-3xl font-black text-atlasNavy sm:text-5xl">Contact</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="grid gap-6">
+            <div class="border-[3px] border-atlasNavy bg-atlasCream p-8 shadow-frame" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">
+              <div class="flex items-start gap-4">
+                <div class="flex h-14 w-14 shrink-0 items-center justify-center border-[3px] border-atlasAmber text-2xl text-atlasAmber">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-atlasNavy">Adresă</h3>
+                  <p class="mt-3 text-base leading-8 text-atlasBody">Strada Sărarilor 7, Craiova 200516, Județul Dolj, România</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-[3px] border-atlasNavy bg-atlasCream p-8 shadow-frame" data-aos="fade-up" data-aos-duration="800" data-aos-delay="120">
+              <div class="flex items-start gap-4">
+                <div class="flex h-14 w-14 shrink-0 items-center justify-center border-[3px] border-atlasAmber text-2xl text-atlasAmber">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-atlasNavy">Telefon</h3>
+                  <a href="tel:0251543990" class="mt-3 inline-block text-xl font-bold text-atlasNavy underline decoration-atlasAmber decoration-4 underline-offset-4">0251 543 990</a>
+                  <p class="mt-3 text-base leading-8 text-atlasBody">Linie directă pentru dialog instituțional și contact operațional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="border-[4px] border-atlasNavy bg-atlasNavy p-8 text-white shadow-masonry" data-aos="fade-left" data-aos-duration="800" data-aos-delay="180">
+            <p class="text-sm font-bold uppercase tracking-[0.3em] text-atlasAmber">Identificare companie</p>
+            <div class="mt-6 space-y-5 border-t-2 border-white/[0.15] pt-6">
+              <div>
+                <p class="text-xs uppercase tracking-[0.26em] text-white/[0.55]">Denumire</p>
+                <p class="mt-2 text-xl font-bold">Atlas S.A.</p>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-[0.26em] text-white/[0.55]">CUI</p>
+                <p class="mt-2 text-xl font-bold">2324054</p>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-[0.26em] text-white/[0.55]">Nr. înregistrare</p>
+                <p class="mt-2 text-xl font-bold">J16/1984/1992</p>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-[0.26em] text-white/[0.55]">Capital social</p>
+                <p class="mt-2 text-xl font-bold">467.998 RON</p>
+              </div>
+            </div>
+
+            <a href="tel:0251543990" aria-label="Sunați acum la Atlas S.A." class="cta-button mt-8 inline-flex w-full items-center justify-center gap-3 border-2 border-atlasAmber bg-atlasAmber px-6 py-4 text-base font-bold text-atlasNavy">
+              <i class="fa-solid fa-phone-volume"></i>
+              Sunați acum: 0251 543 990
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-atlasNavy text-white">
+    <div class="h-2 w-full bg-atlasAmber"></div>
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div>
+          <h2 class="text-3xl font-black uppercase tracking-[0.16em]">Atlas S.A.</h2>
+          <p class="mt-4 max-w-2xl text-sm leading-7 text-white/[0.72]">Companie de construcții cu identitate corporativă matură, activă în Craiova și în județul Dolj, cu tradiție în construcții rezidențiale și nerezidențiale.</p>
+        </div>
+        <div class="border-l-4 border-atlasAmber pl-5 text-sm leading-7 text-white/[0.72]">
+          <p>Strada Sărarilor 7, Craiova 200516, Județul Dolj, România</p>
+          <p><a href="tel:0251543990" class="font-semibold text-white hover:text-atlasAmber">0251 543 990</a></p>
+          <p>CUI: 2324054</p>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t-2 border-white/10 pt-6 text-xs uppercase tracking-[0.22em] text-white/[0.45]">
+        © 2024 Atlas S.A. Toate drepturile rezervate.
+      </div>
+    </div>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "name": "Atlas S.A.",
+        "description": "Atlas S.A. este o companie de construcții din Craiova, cu tradiție din 1992, specializată în construcții rezidențiale și nerezidențiale.",
+        "telephone": "+40251543990",
+        "foundingDate": "1992-06-15",
+        "taxID": "2324054",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Sărarilor 7",
+          "addressLocality": "Craiova",
+          "postalCode": "200516",
+          "addressRegion": "Dolj",
+          "addressCountry": "RO"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 44.316373,
+          "longitude": 23.826444
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Craiova"
+        }
+      }
+    </script>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-out-cubic",
+      offset: 80
+    });
+
+    const counters = document.querySelectorAll(".count-up");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const el = entry.target;
+        const target = Number(el.dataset.target || 0);
+        const duration = 1400;
+        const startTime = performance.now();
+
+        const update = (currentTime) => {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(target * eased).toLocaleString("ro-RO");
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            el.textContent = target.toLocaleString("ro-RO");
+          }
+        };
+
+        requestAnimationFrame(update);
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach((counter) => observer.observe(counter));
+  </script>
+</body>
+</html>

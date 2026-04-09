@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birou Cadastru Craiova – Mohor Mirela</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Vue 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:    { DEFAULT: '#0D1B2A', 800: '#0D1B2A', 700: '#132338', 600: '#1A2E4A', 500: '#23405F' },
+            gold:    { DEFAULT: '#B6923A', light: '#D4AF6A', pale: '#F4E8C8' },
+            slate:   { light: '#F0F4F8', mid: '#C8D6E5', dark: '#7B8FA1' },
+            ink:     '#1A1A2E',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body:    ['"DM Sans"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Base */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: #1A1A2E; background: #F0F4F8; overflow-x: hidden; }
+
+    /* ---- NAV ---- */
+    .nav-scrolled { background: rgba(13,27,42,0.97) !important; box-shadow: 0 2px 24px rgba(0,0,0,0.35); }
+
+    /* ---- HERO ---- */
+    .hero-bg {
+      background: linear-gradient(135deg, #0D1B2A 0%, #132338 40%, #1A2E4A 70%, #23405F 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(182,146,58,0.13) 0%, transparent 70%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(182,146,58,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(182,146,58,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(182,146,58,0.15);
+    }
+    .hero-compass {
+      position: absolute;
+      right: 6%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 340px;
+      height: 340px;
+      opacity: 0.07;
+    }
+
+    /* Gold text */
+    .text-gold { color: #B6923A; }
+    .text-gold-light { color: #D4AF6A; }
+
+    /* ---- SECTION TITLES ---- */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+    .gold-bar {
+      display: inline-block;
+      width: 52px; height: 3px;
+      background: linear-gradient(90deg, #B6923A, #D4AF6A);
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    /* ---- CARDS ---- */
+    .service-card {
+      background: #fff;
+      border: 1px solid #e0e8f0;
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #B6923A, #D4AF6A);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(13,27,42,0.12); border-color: #D4AF6A; }
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-icon {
+      width: 56px; height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0D1B2A, #1A2E4A);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+      transition: background 0.3s;
+    }
+    .service-card:hover .service-icon { background: linear-gradient(135deg, #B6923A, #D4AF6A); }
+
+    /* ---- STATS ---- */
+    .stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(182,146,58,0.25);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    /* ---- REVIEW CARD ---- */
+    .review-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 24px rgba(13,27,42,0.07);
+      border-top: 3px solid #B6923A;
+      transition: transform 0.3s;
+    }
+    .review-card:hover { transform: translateY(-4px); }
+
+    /* ---- WHY CARD ---- */
+    .why-card {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .why-icon {
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #B6923A, #D4AF6A);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ---- CONTACT CARD ---- */
+    .contact-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      box-shadow: 0 4px 20px rgba(13,27,42,0.07);
+      transition: transform 0.3s;
+    }
+    .contact-card:hover { transform: translateY(-3px); }
+    .contact-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0D1B2A, #1A2E4A);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer-bg {
+      background: linear-gradient(135deg, #0D1B2A 0%, #132338 100%);
+    }
+
+    /* ---- COUNTER ---- */
+    .counter-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: #D4AF6A;
+    }
+
+    /* Decorative topographic lines */
+    .topo-bg {
+      background-color: #0D1B2A;
+      background-image:
+        radial-gradient(ellipse 90% 60% at 20% 50%, rgba(182,146,58,0.08) 0%, transparent 60%),
+        repeating-radial-gradient(circle at 50% 50%, transparent 0px, transparent 28px, rgba(182,146,58,0.04) 29px, transparent 30px);
+    }
+
+    /* Animations */
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    @keyframes rotateSlow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    .float-anim { animation: float 6s ease-in-out infinite; }
+    .rotate-slow { animation: rotateSlow 60s linear infinite; }
+
+    /* Hamburger active state */
+    [x-cloak] { display: none !important; }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     VUE APP
+========================================================= -->
+<div id="app">
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+<nav
+  x-data="{ open: false, scrolled: false }"
+  x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 50)"
+  :class="scrolled ? 'nav-scrolled' : 'bg-transparent'"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-400"
+>
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#hero" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
+        <i class="fa-solid fa-drafting-compass text-navy text-base"></i>
+      </div>
+      <div class="leading-none">
+        <span class="block text-white font-display font-bold text-lg leading-tight">Mohor Mirela</span>
+        <span class="block text-gold-light text-xs font-body font-light tracking-widest uppercase">Birou Cadastru</span>
+      </div>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="text-slate-mid hover:text-gold-light text-sm font-body font-medium transition-colors duration-200 tracking-wide">Despre</a>
+      <a href="#servicii" class="text-slate-mid hover:text-gold-light text-sm font-body font-medium transition-colors duration-200 tracking-wide">Servicii</a>
+      <a href="#de-ce-noi" class="text-slate-mid hover:text-gold-light text-sm font-body font-medium transition-colors duration-200 tracking-wide">De ce noi</a>
+      <a href="#recenzii" class="text-slate-mid hover:text-gold-light text-sm font-body font-medium transition-colors duration-200 tracking-wide">Recenzii</a>
+      <a href="#contact" class="text-slate-mid hover:text-gold-light text-sm font-body font-medium transition-colors duration-200 tracking-wide">Contact</a>
+      <a href="tel:0766275833"
+         class="flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-navy-800 font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-gold/30 transition-all duration-300">
+        <i class="fa-solid fa-phone text-xs"></i>
+        <span>0766 275 833</span>
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button @click="open = !open" class="lg:hidden text-white focus:outline-none">
+      <i :class="open ? 'fa-xmark' : 'fa-bars'" class="fa-solid text-xl"></i>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div x-show="open" x-cloak
+       x-transition:enter="transition ease-out duration-200"
+       x-transition:enter-start="opacity-0 -translate-y-2"
+       x-transition:enter-end="opacity-100 translate-y-0"
+       x-transition:leave="transition ease-in duration-150"
+       x-transition:leave-start="opacity-100"
+       x-transition:leave-end="opacity-0"
+       class="lg:hidden bg-navy-800 border-t border-white/10 px-6 py-6 flex flex-col gap-5">
+    <a @click="open=false" href="#despre"    class="text-slate-mid hover:text-gold-light font-body font-medium text-base transition-colors">Despre</a>
+    <a @click="open=false" href="#servicii"  class="text-slate-mid hover:text-gold-light font-body font-medium text-base transition-colors">Servicii</a>
+    <a @click="open=false" href="#de-ce-noi" class="text-slate-mid hover:text-gold-light font-body font-medium text-base transition-colors">De ce noi</a>
+    <a @click="open=false" href="#recenzii"  class="text-slate-mid hover:text-gold-light font-body font-medium text-base transition-colors">Recenzii</a>
+    <a @click="open=false" href="#contact"   class="text-slate-mid hover:text-gold-light font-body font-medium text-base transition-colors">Contact</a>
+    <a href="tel:0766275833"
+       class="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-navy-800 font-semibold px-5 py-3 rounded-full text-center justify-center">
+      <i class="fa-solid fa-phone text-sm"></i> 0766 275 833
+    </a>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<section id="hero" class="hero-bg min-h-screen flex items-center relative">
+  <div class="hero-grid"></div>
+
+  <!-- Decorative circles -->
+  <div class="hero-circle" style="width:600px;height:600px;right:-180px;bottom:-200px;opacity:0.06;"></div>
+  <div class="hero-circle" style="width:350px;height:350px;right:-60px;bottom:-80px;opacity:0.08;"></div>
+  <div class="hero-circle" style="width:140px;height:140px;right:110px;bottom:80px;opacity:0.12;"></div>
+
+  <!-- Compass SVG decoration -->
+  <svg class="hero-compass rotate-slow" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="96" stroke="#B6923A" stroke-width="1"/>
+    <circle cx="100" cy="100" r="70" stroke="#B6923A" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="44" stroke="#B6923A" stroke-width="0.5"/>
+    <line x1="100" y1="4" x2="100" y2="196" stroke="#B6923A" stroke-width="0.5"/>
+    <line x1="4" y1="100" x2="196" y2="100" stroke="#B6923A" stroke-width="0.5"/>
+    <polygon points="100,4 106,100 100,196 94,100" fill="#B6923A" opacity="0.6"/>
+    <polygon points="4,100 100,106 196,100 100,94" fill="#B6923A" opacity="0.3"/>
+    <text x="100" y="22" text-anchor="middle" fill="#B6923A" font-size="12" font-family="serif">N</text>
+    <text x="100" y="188" text-anchor="middle" fill="#B6923A" font-size="10" font-family="serif">S</text>
+    <text x="182" y="104" text-anchor="middle" fill="#B6923A" font-size="10" font-family="serif">E</text>
+    <text x="16" y="104" text-anchor="middle" fill="#B6923A" font-size="10" font-family="serif">V</text>
+  </svg>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-32 lg:py-0">
+    <div class="max-w-3xl">
+      <div class="flex items-center gap-3 mb-8" data-aos="fade-right" data-aos-duration="700">
+        <div class="h-px w-12 bg-gradient-to-r from-gold to-gold-light"></div>
+        <span class="text-gold-light font-body text-sm font-medium tracking-[0.25em] uppercase">Autorizat ANCPI · Dolj</span>
+      </div>
+
+      <h1 class="section-title text-white text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        Proprietatea ta,<br/>
+        <span class="text-gold-light">documentată</span><br/>
+        cu precizie.
+      </h1>
+
+      <p class="font-body text-slate-mid text-lg md:text-xl max-w-xl leading-relaxed mb-10"
+         data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        Servicii profesionale de cadastru, topografie și intabulare în Craiova și județul Dolj.
+        Expertiză autorizată, rezultate clare, termene respectate.
+      </p>
+
+      <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        <a href="tel:0766275833"
+           class="inline-flex items-center gap-3 bg-gradient-to-r from-gold to-gold-light text-navy-800 font-body font-semibold text-base px-7 py-4 rounded-full shadow-lg shadow-gold/30 hover:shadow-gold/50 hover:scale-105 transition-all duration-300">
+          <i class="fa-solid fa-phone"></i>
+          <span>Sună acum</span>
+        </a>
+        <a href="https://www.google.com/maps/place/Birou+Cadastru+Craiova+Dolj+-+Mohor+Mirela/data=!4m7!3m6!1s0x4752d6f81a1f8d75:0x57968f691e3c9e7c!8m2!3d44.311952!4d23.83757!16s%2Fg%2F11g866x6cb!19sChIJdY0fGvjWUkcRfJ48HmmPllc" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 border border-white/25 text-white font-body font-semibold text-base px-7 py-4 rounded-full hover:border-gold-light hover:text-gold-light hover:bg-white/5 transition-all duration-300">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Găsește biroul</span>
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap gap-6 mt-14" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <div class="flex items-center gap-2 text-slate-dark">
+          <i class="fa-solid fa-circle-check text-gold text-sm"></i>
+          <span class="font-body text-sm text-slate-mid">Autorizat ANCPI</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-gold text-sm"></i>
+          <span class="font-body text-sm text-slate-mid">PFA înregistrat</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-gold text-sm"></i>
+          <span class="font-body text-sm text-slate-mid">Expert Tabloul Expertilor Dolj</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom wave -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 80 L0 40 Q360 0 720 40 Q1080 80 1440 40 L1440 80 Z" fill="#F0F4F8"/>
+    </svg>
+  </div>
+</section>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+<section id="despre" class="bg-slate-light py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Text -->
+      <div>
+        <div class="gold-bar" data-aos="fade-right"></div>
+        <h2 class="section-title text-navy text-4xl md:text-5xl mb-6" data-aos="fade-up" data-aos-duration="700">
+          Expertiză cu<br/><span class="text-gold">rădăcini locale</span>
+        </h2>
+        <p class="font-body text-gray-600 text-base leading-relaxed mb-5" data-aos="fade-up" data-aos-delay="100">
+          Biroul de cadastru al doamnei Mohor Mirela funcționează ca PFA autorizat de ANCPI, oferind
+          servicii complete de cadastru, topografie și geodezice în Craiova și județul Dolj. Înregistrată
+          pe Tabloul Expertilor al județului Dolj, doamna Mohor Mirela îmbină rigoarea juridică a
+          procedurii cadastrale cu o abordare personalizată pentru fiecare client.
+        </p>
+        <p class="font-body text-gray-600 text-base leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="150">
+          De la simpla intabulare a unui apartament, la ridicări topografice pentru terenuri agricole extinse
+          sau zboruri cu drona pentru proiecte de urbanism, biroul asigură documentație corectă, validată
+          și depusă oficial la OCPI Dolj — economisind timp și efort proprietarilor.
+        </p>
+        <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="tel:0766275833"
+             class="inline-flex items-center gap-2 bg-navy text-white font-body font-semibold text-sm px-6 py-3 rounded-full hover:bg-navy-600 transition-colors duration-300">
+            <i class="fa-solid fa-phone text-gold text-xs"></i> Contactează biroul
+          </a>
+          <a href="mailto:vilceanumirela@yahoo.com"
+             class="inline-flex items-center gap-2 border border-navy/20 text-navy font-body font-semibold text-sm px-6 py-3 rounded-full hover:border-gold hover:text-gold transition-all duration-300">
+            <i class="fa-solid fa-envelope text-xs"></i> Trimite un e-mail
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6" data-aos="fade-left" data-aos-duration="800">
+        <!-- Stat 1 -->
+        <div class="topo-bg rounded-2xl px-8 py-8 flex items-center gap-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="w-14 h-14 rounded-xl bg-gold/15 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-award text-gold text-2xl"></i>
+          </div>
+          <div>
+            <div class="counter-num" id="stat1">10+</div>
+            <div class="font-body text-slate-mid text-sm mt-0.5">Ani de experiență autorizată</div>
+          </div>
+        </div>
+        <!-- Stat 2 -->
+        <div class="topo-bg rounded-2xl px-8 py-8 flex items-center gap-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="w-14 h-14 rounded-xl bg-gold/15 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-users text-gold text-2xl"></i>
+          </div>
+          <div>
+            <div class="counter-num" id="stat2">500+</div>
+            <div class="font-body text-slate-mid text-sm mt-0.5">Clienți mulțumiți</div>
+          </div>
+        </div>
+        <!-- Stat 3 -->
+        <div class="topo-bg rounded-2xl px-8 py-8 flex items-center gap-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="w-14 h-14 rounded-xl bg-gold/15 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-star text-gold text-2xl"></i>
+          </div>
+          <div>
+            <div class="counter-num" id="stat3">4.0</div>
+            <div class="font-body text-slate-mid text-sm mt-0.5">Rating Google Maps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+<section id="servicii" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="inline-block gold-bar"></div>
+      <h2 class="section-title text-navy text-4xl md:text-5xl">Servicii cadastrale complete</h2>
+      <p class="font-body text-gray-500 text-base mt-4 max-w-xl mx-auto">
+        De la documentație de apartament până la scanări 3D și zboruri UAV — acoperim toate nevoile tale imobiliare.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-building text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Cadastru și Intabulare</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Documentație completă pentru apartamente, case și terenuri. Depunere la OCPI Dolj și înscrierea dreptului de proprietate în Cartea Funciară.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-map text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Ridicare Topografică</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Măsurători de precizie pentru terenuri urbane și rurale, cu rapoarte conforme normelor ANCPI și Registrului Național de Cadastru.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-file-lines text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Plan de Situație (PUZ/PUD/PAC)</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Planuri topografice pentru autorizații de construire, planuri urbanistice zonale și de detaliu, necesare primăriei sau arhitecților.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="service-icon"><i class="fa-solid fa-scissors text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Dezmembrare / Parcelare</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Împărțirea legală a terenurilor și proprietăților în loturi separate, cu documentație completă pentru Notariat și OCPI.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="320">
+        <div class="service-icon"><i class="fa-solid fa-layer-group text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Alipire Terenuri</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Comasarea parcelelor adiacente într-un singur imobil, cu actualizarea Cărții Funciare și a planului cadastral.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-icon"><i class="fa-solid fa-drone text-gold-light text-xl" style="font-family:inherit"></i>
+          <i class="fa-solid fa-plane-up text-gold-light text-xl"></i>
+        </div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Zbor Dronă / UAV</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Ridicări aerofotogrammetrice cu dronă pentru terenuri extinse, șantiere și proiecte de infrastructură — date precise și vizualizare aeriană.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="480">
+        <div class="service-icon"><i class="fa-solid fa-cube text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Scanare 3D Laser</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Modele tridimensionale de înaltă precizie ale clădirilor sau terenurilor, utile în proiectare, restaurare și documentare patrimonială.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="560">
+        <div class="service-icon"><i class="fa-solid fa-seedling text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Scoatere din Circuitul Agricol</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Documentație pentru schimbarea destinației terenurilor agricole, necesară construcției sau investițiilor — avize și depunere completă.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="640">
+        <div class="service-icon"><i class="fa-solid fa-stamp text-gold-light text-xl"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Aviz Tehnic OCPI</h3>
+        <p class="font-body text-gray-500 text-sm leading-relaxed">Obținerea avizelor tehnice necesare de la Oficiul de Cadastru și Publicitate Imobiliară pentru situații speciale sau litigii.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     WHY CHOOSE US
+========================================================= -->
+<section id="de-ce-noi" class="topo-bg py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="inline-block gold-bar"></div>
+      <h2 class="section-title text-white text-4xl md:text-5xl">De ce să alegi biroul nostru</h2>
+      <p class="font-body text-slate-mid text-base mt-4 max-w-xl mx-auto">
+        Autorizare oficială, profesionalism și un serviciu dedicat fiecărui client în parte.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+      <div class="why-card" data-aos="fade-right" data-aos-delay="0">
+        <div class="why-icon">
+          <i class="fa-solid fa-shield-halved text-navy text-xl"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-white text-lg mb-1">Autorizare ANCPI validă</h4>
+          <p class="font-body text-slate-mid text-sm leading-relaxed">Număr autorizație RO-DJ-F 0173 – documentele emise au valoare juridică deplină și sunt acceptate de orice instanță sau notariat.</p>
+        </div>
+      </div>
+
+      <div class="why-card" data-aos="fade-left" data-aos-delay="80">
+        <div class="why-icon">
+          <i class="fa-solid fa-crosshairs text-navy text-xl"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-white text-lg mb-1">Precizie milimetrică</h4>
+          <p class="font-body text-slate-mid text-sm leading-relaxed">Instrumente topografice de ultimă generație — stații totale, GPS RTK, scanere 3D — garantează date exacte pentru orice proiect.</p>
+        </div>
+      </div>
+
+      <div class="why-card" data-aos="fade-right" data-aos-delay="160">
+        <div class="why-icon">
+          <i class="fa-solid fa-clock text-navy text-xl"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-white text-lg mb-1">Termene respectate</h4>
+          <p class="font-body text-slate-mid text-sm leading-relaxed">Programare flexibilă și comunicare constantă pe tot parcursul dosarului, de la măsurătoare până la înscrierea în Cartea Funciară.</p>
+        </div>
+      </div>
+
+      <div class="why-card" data-aos="fade-left" data-aos-delay="240">
+        <div class="why-icon">
+          <i class="fa-solid fa-hand-holding-hand text-navy text-xl"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-white text-lg mb-1">Consultanță personalizată</h4>
+          <p class="font-body text-slate-mid text-sm leading-relaxed">Fiecare client primește îndrumare completă: ce documente sunt necesare, ce etape urmează și cum poate economisi timp și costuri.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     REVIEWS
+========================================================= -->
+<section id="recenzii" class="bg-slate-light py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="inline-block gold-bar"></div>
+      <h2 class="section-title text-navy text-4xl md:text-5xl">Ce spun clienții</h2>
+
+      <!-- Overall badge -->
+      <div class="inline-flex items-center gap-4 mt-8 bg-white rounded-2xl px-8 py-5 shadow-md border border-gold/20" data-aos="zoom-in" data-aos-delay="100">
+        <div>
+          <div class="font-display font-black text-4xl text-navy">4.0</div>
+          <div class="text-xs text-gray-400 font-body mt-0.5">din 5</div>
+        </div>
+        <div class="w-px h-12 bg-gold/30"></div>
+        <div>
+          <div class="flex gap-1 mb-1">
+            <i class="fa-solid fa-star text-gold text-sm"></i>
+            <i class="fa-solid fa-star text-gold text-sm"></i>
+            <i class="fa-solid fa-star text-gold text-sm"></i>
+            <i class="fa-solid fa-star text-gold text-sm"></i>
+            <i class="fa-regular fa-star text-gold text-sm"></i>
+          </div>
+          <div class="font-body text-gray-500 text-xs">4 recenzii · Google Maps</div>
+        </div>
+        <div class="w-px h-12 bg-gold/30"></div>
+        <div class="text-left">
+          <div class="font-body text-xs text-gray-400 mb-0.5">Top 20</div>
+          <div class="font-body text-sm font-semibold text-navy">Birouri Cadastru Craiova</div>
+          <div class="font-body text-xs text-gray-400">Necesit.ro</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review cards – only actual reviews provided in data -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+      <div class="review-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-gold font-display font-bold text-base">L</div>
+            <div>
+              <div class="font-body font-semibold text-navy text-sm">Lombrea Paul</div>
+            </div>
+          </div>
+          <div class="flex gap-0.5">
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+          </div>
+        </div>
+        <p class="font-body text-gray-600 text-sm leading-relaxed italic">"fast n easy"</p>
+      </div>
+
+      <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-gold font-display font-bold text-base">M</div>
+            <div>
+              <div class="font-body font-semibold text-navy text-sm">Mitica Tudosie</div>
+            </div>
+          </div>
+          <div class="flex gap-0.5">
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+            <i class="fa-solid fa-star text-gold text-xs"></i>
+          </div>
+        </div>
+        <p class="font-body text-gray-600 text-sm leading-relaxed italic">"Foarte mulțumit de produsele achiziționate și transport ieftin"</p>
+      </div>
+
+    </div>
+
+    <p class="text-center font-body text-xs text-gray-400 mt-8" data-aos="fade-up" data-aos-delay="200">
+      <i class="fa-brands fa-google mr-1"></i>
+      Recenzii preluate de pe Google Maps · Nota generală: 4/5
+    </p>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+<section id="contact" class="bg-white py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="inline-block gold-bar"></div>
+      <h2 class="section-title text-navy text-4xl md:text-5xl">Contactează biroul</h2>
+      <p class="font-body text-gray-500 text-base mt-4 max-w-lg mx-auto">
+        Suntem disponibili de luni până vineri, 9:00–16:00. Contactează-ne pentru o consultație sau o ofertă.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
+
+      <!-- Address -->
+      <div class="contact-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="contact-icon"><i class="fa-solid fa-location-dot text-gold-light text-lg"></i></div>
+        <div>
+          <div class="font-body font-semibold text-navy text-sm mb-1">Adresă</div>
+          <p class="font-body text-gray-600 text-sm leading-relaxed mb-2">Strada Tehnicii 7, Bl. A14, Ap. 19<br/>200440 Craiova, Dolj</p>
+          <a href="https://www.google.com/maps/place/Birou+Cadastru+Craiova+Dolj+-+Mohor+Mirela/data=!4m7!3m6!1s0x4752d6f81a1f8d75:0x57968f691e3c9e7c!8m2!3d44.311952!4d23.83757!16s%2Fg%2F11g866x6cb!19sChIJdY0fGvjWUkcRfJ48HmmPllc" target="_blank" rel="noopener"
+             class="font-body text-xs text-gold font-semibold hover:underline inline-flex items-center gap-1">
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Deschide în Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="contact-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="contact-icon"><i class="fa-solid fa-phone text-gold-light text-lg"></i></div>
+        <div>
+          <div class="font-body font-semibold text-navy text-sm mb-1">Telefon</div>
+          <a href="tel:0766275833" class="font-body text-gray-600 text-base font-semibold hover:text-gold transition-colors">0766 275 833</a>
+          <p class="font-body text-gray-400 text-xs mt-1">Apelează direct</p>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div class="contact-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="contact-icon"><i class="fa-solid fa-clock text-gold-light text-lg"></i></div>
+        <div>
+          <div class="font-body font-semibold text-navy text-sm mb-2">Program</div>
+          <div class="font-body text-gray-600 text-xs space-y-0.5">
+            <div class="flex justify-between gap-4"><span>Luni – Vineri</span><span class="font-semibold text-navy">9:00 – 16:00</span></div>
+            <div class="flex justify-between gap-4"><span>Sâmbătă</span><span class="text-gray-400">Închis</span></div>
+            <div class="flex justify-between gap-4"><span>Duminică</span><span class="text-gray-400">Închis</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating -->
+      <div class="contact-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="contact-icon"><i class="fa-solid fa-star text-gold-light text-lg"></i></div>
+        <div>
+          <div class="font-body font-semibold text-navy text-sm mb-1">Rating Google</div>
+          <div class="flex items-center gap-2">
+            <span class="font-display font-black text-2xl text-navy">4.0</span>
+            <div>
+              <div class="flex gap-0.5">
+                <i class="fa-solid fa-star text-gold text-xs"></i>
+                <i class="fa-solid fa-star text-gold text-xs"></i>
+                <i class="fa-solid fa-star text-gold text-xs"></i>
+                <i class="fa-solid fa-star text-gold text-xs"></i>
+                <i class="fa-regular fa-star text-gold text-xs"></i>
+              </div>
+              <div class="font-body text-gray-400 text-xs mt-0.5">4 recenzii</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map embed -->
+    <div class="rounded-2xl overflow-hidden shadow-lg border border-gold/10" data-aos="fade-up" data-aos-delay="300" style="height:380px;">
+      <iframe
+        src="https://maps.google.com/maps?q=44.311952,23.83757&hl=ro&z=16&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Localizare Birou Cadastru Mohor Mirela">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="footer-bg py-14">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
+            <i class="fa-solid fa-drafting-compass text-navy text-base"></i>
+          </div>
+          <div>
+            <span class="block text-white font-display font-bold text-lg leading-tight">Mohor Mirela</span>
+            <span class="block text-gold-light text-xs tracking-widest uppercase font-body">Birou Cadastru</span>
+          </div>
+        </div>
+        <p class="font-body text-slate-dark text-sm leading-relaxed max-w-xs">
+          PFA autorizat ANCPI · Cadastru, topografie și geodezice în Craiova și județul Dolj.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h5 class="font-display font-bold text-white text-base mb-4">Navigare rapidă</h5>
+        <ul class="space-y-2 font-body text-sm">
+          <li><a href="#despre"    class="text-slate-dark hover:text-gold-light transition-colors">Despre birou</a></li>
+          <li><a href="#servicii"  class="text-slate-dark hover:text-gold-light transition-colors">Servicii</a></li>
+          <li><a href="#de-ce-noi" class="text-slate-dark hover:text-gold-light transition-colors">De ce noi</a></li>
+          <li><a href="#recenzii"  class="text-slate-dark hover:text-gold-light transition-colors">Recenzii</a></li>
+          <li><a href="#contact"   class="text-slate-dark hover:text-gold-light transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <h5 class="font-display font-bold text-white text-base mb-4">Contact</h5>
+        <div class="space-y-3 font-body text-sm text-slate-dark">
+          <div class="flex items-start gap-2">
+            <i class="fa-solid fa-location-dot text-gold mt-0.5 text-xs w-4"></i>
+            <span>Strada Tehnicii 7, Bl. A14, Ap. 19, 200440 Craiova</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-gold text-xs w-4"></i>
+            <a href="tel:0766275833" class="hover:text-gold-light transition-colors">0766 275 833</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-gold text-xs w-4"></i>
+            <a href="mailto:vilceanumirela@yahoo.com" class="hover:text-gold-light transition-colors">vilceanumirela@yahoo.com</a>
+          </div>
+          <div class="flex items-start gap-2">
+            <i class="fa-solid fa-clock text-gold text-xs w-4 mt-0.5"></i>
+            <span>Luni – Vineri: 9:00 – 16:00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-body text-xs text-slate-dark">&copy; 2025 Birou Cadastru Craiova – Mohor Mirela. Toate drepturile rezervate.</p>
+      <p class="font-body text-xs text-slate-dark">Autorizat ANCPI · Nr. RO-DJ-F 0173 · Dolj</p>
+    </div>
+  </div>
+</footer>
+
+</div><!-- #app -->
+
+<!-- =========================================================
+     Scripts
+========================================================= -->
+<script>
+  // AOS init
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({ duration: 700, once: true, offset: 80 });
+  });
+
+  // Vue (purely data binding, no dynamic rendering needed here since data is inline)
+  const { createApp } = Vue;
+  createApp({}).mount('#app');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinet de avocat Oltean Alina Beatrice | Cluj-Napoca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#f4efe6; --panel:#fffaf2; --ink:#1e1a17; --muted:#6d6259; --emerald:#123c2d; --emerald-2:#1f5c44; --gold:#b8915a; --gold-2:#d7bc85; --line:rgba(18,60,45,.14);
+      --shadow:0 20px 60px rgba(18,60,45,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Manrope',sans-serif;color:var(--ink);background:
+      radial-gradient(circle at top left, rgba(191,160,103,.14), transparent 28%),
+      radial-gradient(circle at 90% 12%, rgba(18,60,45,.16), transparent 30%),
+      linear-gradient(180deg,#f7f2ea 0%, #f1eadf 100%);
+      overflow-x:hidden;
+    }
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(rgba(18,60,45,.12) 1px, transparent 1px);background-size:22px 22px}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);background:rgba(244,239,230,.72);border-bottom:1px solid rgba(18,60,45,.08)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}
+    .brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--emerald),var(--emerald-2));color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(18,60,45,.25)}
+    .brand small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+    .nav-links{display:flex;align-items:center;gap:22px}
+    .nav-links a{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+    .nav-links a:hover{color:var(--emerald)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 20px;font-weight:700;border:1px solid transparent;transition:.25s ease;cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg,var(--emerald),var(--emerald-2));color:#fff;box-shadow:0 18px 40px rgba(18,60,45,.22)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{border-color:rgba(18,60,45,.16);background:rgba(255,255,255,.5)}
+    .btn-ghost:hover{border-color:rgba(18,60,45,.3);transform:translateY(-2px)}
+    .menu-btn{display:none;background:none;border:none;color:var(--emerald);font-size:20px}
+    .hero{padding-top:110px;min-height:100vh;display:grid;align-items:center;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding:46px 0 34px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--emerald);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    h1,h2,h3,.display{font-family:'Cormorant Garamond',serif}
+    h1{font-size:clamp(3.2rem,7vw,6rem);line-height:.92;margin:.35rem 0 1rem;color:var(--emerald)}
+    .lead{font-size:clamp(1.03rem,2vw,1.18rem);line-height:1.85;color:var(--muted);max-width:58ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .hero-card{background:linear-gradient(160deg,rgba(18,60,45,.96),rgba(31,92,68,.94));color:#fff;border-radius:30px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-card::before,.hero-card::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(215,188,133,.18)}
+    .hero-card::before{width:280px;height:280px;top:-90px;right:-90px}
+    .hero-card::after{width:180px;height:180px;bottom:-50px;left:-50px}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px;text-align:center}
+    .stat b{display:block;font-size:clamp(1.4rem,3vw,2.2rem);font-family:'Cormorant Garamond',serif}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.12);font-size:.92rem}
+    .section{padding:92px 0;position:relative}
+    .section.alt{background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,.1))}
+    .section-head{max-width:760px;margin:0 auto 34px;text-align:center}
+    .section-head h2{font-size:clamp(2.2rem,5vw,4rem);margin:.4rem 0 0;color:var(--emerald)}
+    .section-head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .cards-4{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{background:rgba(255,250,242,.82);border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 40px rgba(18,60,45,.08);backdrop-filter:blur(10px)}
+    .card{padding:24px;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(18,60,45,.22)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(18,60,45,.1),rgba(215,188,133,.22));color:var(--emerald);font-size:1.1rem;margin-bottom:16px}
+    .card h3,.review h3,.contact h3{margin:0 0 10px;font-size:1.5rem;color:var(--emerald)}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .soft{padding:16px 18px;border-radius:18px;background:rgba(18,60,45,.05);border:1px solid rgba(18,60,45,.08)}
+    .soft b{display:block;color:var(--emerald);margin-bottom:6px}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .review{padding:22px}
+    .stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+    .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;color:var(--muted);font-size:.95rem}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .contact{padding:22px}
+    .contact .big{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--emerald);margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;color:var(--emerald);font-weight:800;margin-top:14px}
+    .footer{padding:30px 0 44px;border-top:1px solid rgba(18,60,45,.1);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .mobile-panel{display:none}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(18,60,45,.06);color:var(--emerald);font-size:.84rem;font-weight:800}
+    .rating-box{display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:20px;background:rgba(18,60,45,.05);border:1px solid rgba(18,60,45,.08)}
+    .rating-box strong{font-size:1.8rem;color:var(--emerald);font-family:'Cormorant Garamond',serif}
+    @media (max-width: 980px){
+      .hero-grid,.services,.cards-4,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+      .hero-grid{gap:18px}
+    }
+    @media (max-width: 760px){
+      .nav-links,.desktop-cta{display:none}
+      .menu-btn{display:block}
+      .mobile-panel{display:none;padding:0 0 18px}
+      .mobile-panel.open{display:block}
+      .mobile-panel a{display:block;padding:12px 0;border-top:1px solid rgba(18,60,45,.08);font-weight:800;color:var(--emerald)}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.cards-4,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stat-row,.soft-list{grid-template-columns:1fr}
+      h1{font-size:clamp(2.8rem,14vw,4.4rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span>
+            Cabinet de avocat
+            <small>Oltean Alina Beatrice · Cluj-Napoca</small>
+          </span>
+        </a>
+        <nav class="nav-links">
+          <a href="#despre">Despre</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#avantaje">De ce noi</a>
+          <a href="#recenzii">Recenzii</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="desktop-cta">
+          <a class="btn btn-primary" href="tel:0745913397"><i class="fa-solid fa-phone"></i> Sună acum</a>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Deschide meniul"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="mobile-panel" id="mobilePanel">
+        <a href="#despre">Despre</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#avantaje">De ce noi</a>
+        <a href="#recenzii">Recenzii</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" style="margin-top:10px" href="tel:0745913397"><i class="fa-solid fa-phone"></i> 0745 913 397</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-gavel"></i> Cabinet de avocat în Cluj-Napoca</span>
+          <h1>Consiliere juridică precisă, construită pe atenție reală la detalii.</h1>
+          <p class="lead">Cabinetul individual al doamnei avocat Alina Beatrice Oltean oferă soluții personalizate pentru cauze civile, penale, comerciale, de muncă și familiale, cu o abordare calmă, clară și profesionistă.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:0745913397"><i class="fa-solid fa-phone"></i> 0745 913 397</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Cabinet+de+avocat+Oltean+Alina+Beatrice/data=!4m7!3m6!1s0x47490c26b278002f:0xb7fccba4526f085!8m2!3d46.7719495!4d23.6028303!16s%2Fg%2F1hc3d1y9z!19sChIJLwB4siYMSUcRhfAmRbrMfws?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <span class="pill"><i class="fa-solid fa-star"></i> 5/5 în profilul public</span>
+          <h3 class="display" style="font-size:2.6rem;margin:16px 0 10px">Un cabinet individual, cu lucru direct și răspunsuri clare.</h3>
+          <p style="margin:0;color:rgba(255,255,255,.82);line-height:1.8">Programările se fac în avans, iar fiecare dosar primește atenție punctuală, fără promisiuni vagi sau abordări grăbite.</p>
+          <div class="stat-row">
+            <div class="stat"><b data-count="19">0</b><span>ani de practică</span></div>
+            <div class="stat"><b data-count="6">0</b><span>arii juridice</span></div>
+            <div class="stat"><b data-count="2008">0</b><span>înregistrare</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre cabinet</span>
+          <h2>Servicii juridice individuale, orientate spre soluții reale</h2>
+          <p>Cabinetul funcționează în Cluj-Napoca și oferă asistență juridică personalizată, cu focus pe calitate, atenție la context și comunicare simplă.</p>
+        </div>
+        <div class="soft-list">
+          <div class="soft"><b><i class="fa-solid fa-scale-balanced"></i> Reprezentare atentă</b>Fiecare etapă este explicată clar, astfel încât deciziile să fie asumate și bine înțelese.</div>
+          <div class="soft"><b><i class="fa-solid fa-shield-heart"></i> Soluții personalizate</b>Strategia juridică este adaptată situației concrete, nu tratată ca un dosar standard.</div>
+          <div class="soft"><b><i class="fa-solid fa-door-open"></i> Programare recomandată</b>Vizitele se fac pe bază de programare, pentru o discuție concentrată și eficientă.</div>
+          <div class="soft"><b><i class="fa-solid fa-toilet"></i> Facilități la sediu</b>Conform datelor publice, există toaletă și condiții practice pentru consultații.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><i class="fa-solid fa-briefcase"></i> Servicii</span>
+          <h2>Arii de practică tratate cu rigoare și discreție</h2>
+          <p>Structura cabinetului permite abordarea mai multor tipuri de cauze, de la consultanță generală la dosare sensibile care cer documentare atentă.</p>
+        </div>
+        <div class="grid services">
+          <article class="card"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><h3>Drept civil</h3><p>Litigii civile, drepturi patrimoniale, contracte și situații în care claritatea juridică contează cel mai mult.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-gavel"></i></div><h3>Drept penal</h3><p>Abordare fermă pentru cauze penale, cu analiză serioasă și orientare spre protejarea intereselor clientului.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-file-signature"></i></div><h3>Drept comercial</h3><p>Asistență pentru probleme comerciale, relații contractuale și spețe care cer rigoare în documente.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-people-roof"></i></div><h3>Dreptul familiei</h3><p>Divorț, custodie, partaj și alte situații familiale tratate cu echilibru și respect pentru context.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-helmet-safety"></i></div><h3>Dreptul muncii</h3><p>Consiliere pentru raporturi de muncă, conflicte de muncă și documente care trebuie redactate corect.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-comments"></i></div><h3>Consultanță generală</h3><p>Discuții juridice clare, utile pentru înțelegerea riscurilor și a pașilor următori înainte de acțiune.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avantaje" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><i class="fa-solid fa-check-circle"></i> De ce noi</span>
+          <h2>Un cabinet construit pe seriozitate și lucru direct</h2>
+        </div>
+        <div class="grid cards-4">
+          <div class="card"><div class="icon"><i class="fa-solid fa-user-tie"></i></div><h3>Avocat definitiv</h3><p>Practica este condusă de un profesionist cu statut deplin de avocat și experiență verificabilă.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-calendar-check"></i></div><h3>Programare recomandată</h3><p>Consultațiile sunt organizate în avans, pentru a păstra timpul de lucru eficient și concentrat.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-compass"></i></div><h3>Poziționare centrală</h3><p>Cabinetul este amplasat în Cluj-Napoca, într-o zonă ușor de localizat pentru clienți.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><h3>Strategie adaptată</h3><p>Fiecare dosar primește o strategie construită pe date, nu pe formulări standard.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><i class="fa-solid fa-star"></i> Recenzii publice</span>
+          <h2>Feedback real din profilul public</h2>
+          <p>Am păstrat textele afișate în datele furnizate, fără completări sau rescrieri inventive.</p>
+        </div>
+        <div class="grid reviews">
+          <article class="review"><div class="meta"><strong>Bendorfean Traian</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Sunt zeci de mii de avocati în România. Fiecare cu nivelul lui de pregătire și seriozitate. Dar am fost uimit sa descoper în persoana avocat Traian Laszlo ,un.munte de profesionalism și aplecare pe subiect.Atat eu cât sj alți zeci de oameni recomandați de mine dânsului. Succese domnule avocat și tot asa în continuare"</p></article>
+          <article class="review"><div class="meta"><strong>victor eagle studio</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Oferă servicii pentru toate domeniile , au echipă mare și prețuri bune ! I recomand cu drag oricui !"</p></article>
+          <article class="review"><div class="meta"><strong>florin pop</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Cel mai top cabinet de avocat din Cluj Napoca ! Recomand cu drag"</p></article>
+          <article class="review"><div class="meta"><strong>Laura Cristina</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Profesionalismul, seriozitatea și atenția la detalii au fost evidente pe tot parcursul colaborării. În cadrul biroului Law Laszlo avocații sunt foarte bine pregătiți, oferă soluții eficiente și explică fiecare pas în mod clar și transparent. Comunicarea a fost rapidă, iar rezultatele au fost peste așteptări. Recomand cu încredere pentru oricine are nevoie de servicii juridice de calitate!"</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+          <h2>Datele de contact ale cabinetului</h2>
+        </div>
+        <div class="grid contact-grid">
+          <div class="contact"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3 class="big">Adresă</h3><p>Calea Dorobanților 28, ap. 6A, 400394 Cluj-Napoca</p><a class="maps" href="https://www.google.com/maps/place/Cabinet+de+avocat+Oltean+Alina+Beatrice/data=!4m7!3m6!1s0x47490c26b278002f:0xb7fccba4526f085!8m2!3d46.7719495!4d23.6028303!16s%2Fg%2F1hc3d1y9z!19sChIJLwB4siYMSUcRhfAmRbrMfws?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-phone"></i></div><h3 class="big">Telefon</h3><p>0745 913 397</p><a class="maps" href="tel:0745913397"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-envelope"></i></div><h3 class="big">Email</h3><p>beatrice_o2003@yahoo.com</p><a class="maps" href="mailto:beatrice_o2003@yahoo.com"><i class="fa-solid fa-paper-plane"></i> Trimite mesaj</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-calendar-days"></i></div><h3 class="big">Program</h3><p>Lucrăm pe bază de programare, cu consultări stabilite în avans.</p><div class="rating-box" style="margin-top:14px"><strong>5/5</strong><span><i class="fa-solid fa-star" style="color:var(--gold)"></i> rating public</span></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong style="color:var(--emerald)">Cabinet de avocat Oltean Alina Beatrice</strong>
+        <div>Cluj-Napoca · consultanță juridică individuală</div>
+      </div>
+      <div>Telefon: 0745 913 397 · Email: beatrice_o2003@yahoo.com</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobilePanel = document.getElementById('mobilePanel');
+    menuBtn?.addEventListener('click', () => {
+      mobilePanel.classList.toggle('open');
+      menuBtn.innerHTML = mobilePanel.classList.contains('open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    mobilePanel?.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
+      mobilePanel.classList.remove('open');
+      menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+    const counters = document.querySelectorAll('[data-count]');
+    const animate = el => {
+      const target = Number(el.dataset.count);
+      const start = 0;
+      const dur = 1200;
+      const t0 = performance.now();
+      const step = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        el.textContent = Math.floor(start + (target - start) * p);
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const io = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.done) {
+        entry.target.dataset.done = '1';
+        animate(entry.target);
+      }
+    }), { threshold: .5 });
+    counters.forEach(c => io.observe(c));
+  </script>
+</body>
+</html>

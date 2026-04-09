@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPN Solemnis | Notariat profesional, București</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{--bg:#101319;--ink:#f4efe8;--muted:#c6ced9;--navy:#1b3557;--blue:#2d5d98;--gold:#c6a45d;--card:#171c24}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:
+      radial-gradient(circle at top right, rgba(45,93,152,.18), transparent 24%),
+      radial-gradient(circle at left bottom, rgba(198,164,93,.16), transparent 22%),
+      linear-gradient(180deg,#121720 0%,#0d1117 100%)}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(16,19,25,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 0}
+    .brand{display:flex;flex-direction:column}
+    .brand strong{font-family:Playfair Display,serif;font-size:1.1rem;letter-spacing:.04em}
+    .brand span{font-size:.83rem;color:var(--muted)}
+    .navlinks{display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem;color:#d7dde6}
+    .navlinks a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--gold),#dec487);color:#221810}
+    .btn.ghost{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
+    .hero{padding:58px 0 26px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(198,164,93,.12);color:#e7d1a0;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    h1,h2,h3{font-family:Playfair Display,serif;margin:0}
+    h1{font-size:clamp(3rem,7vw,5.3rem);line-height:1.02;max-width:11ch;margin:18px 0 14px}
+    .lead{max-width:58ch;color:var(--muted);font-size:1.03rem;line-height:1.85}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .panel,.card,.review,.contact{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:24px}
+    .panel{padding:24px}
+    .hero-panel{padding:22px;box-shadow:0 20px 54px rgba(0,0,0,.28)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{padding:18px;border-radius:20px;background:linear-gradient(180deg,#1b2230,#151922);border:1px solid rgba(255,255,255,.06)}
+    .stat b{display:block;font-family:Playfair Display,serif;font-size:1.55rem;color:#fff;margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:.9rem}
+    section{padding:36px 0}
+    .title{display:flex;justify-content:space-between;gap:18px;align-items:end;flex-wrap:wrap;margin-bottom:18px}
+    .title p{margin:0;color:var(--muted);max-width:54ch;line-height:1.7}
+    .title h2{font-size:clamp(2rem,4vw,3.1rem)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .panel p,.card p,.review p,.contact p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:20px}
+    .card i,.contact i,.review .stars{color:var(--gold)}
+    .card h3,.contact h3,.review h3{font-size:1.48rem;margin:10px 0 8px}
+    .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .review{padding:20px}
+    .review header{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+    .review .name{font-weight:700}
+    .review .meta{color:var(--muted);font-size:.88rem}
+    .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .contact{padding:18px}
+    .footer{padding:28px 0 40px;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 22px;background:#141922;border:1px solid rgba(255,255,255,.08);border-radius:24px}
+    @media(max-width:900px){.hero-grid,.two-col,.grid,.reviews,.contact-grid{grid-template-columns:1fr}h1{max-width:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><strong>SPN Solemnis</strong><span>Societate profesională notarială</span></div>
+        <div class="navlinks"><a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#incredere">Încredere</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a></div>
+        <a class="btn primary" href="tel:0767940013"><i class="fa-solid fa-phone"></i> Sună acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-building-columns"></i> Societate notarială în Sector 1</div>
+          <h1>Instituțional, clar, pregătit pentru volume mari de acte.</h1>
+          <p class="lead">SPN Solemnis este o societate profesională notarială din București, cu mai mulți notari în echipă, program fix în timpul săptămânii și o reputație publică bună pentru promptitudine și comunicare.</p>
+          <div class="actions">
+            <a class="btn primary" href="tel:0767940013"><i class="fa-solid fa-phone"></i> 0767 940 013</a>
+            <a class="btn ghost" href="https://www.google.com/maps/place/SPN+Solemnis/data=!4m7!3m6!1s0x40b1ff5bf34418e9:0x5861e7b704ab85a2!8m2!3d44.4389235!4d26.0848363!16s%2Fg%2F11dftvvsj6!19sChIJ6RhE81v_sUARooWrBLfnYVg?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi harta</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="stats">
+            <div class="stat"><b>4.5/5</b><span>rating Google</span></div>
+            <div class="stat"><b>45</b><span>recenzii publice</span></div>
+            <div class="stat"><b>5</b><span>notari asociați</span></div>
+            <div class="stat"><b>EN</b><span>servicii bilingve</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre">
+      <div class="wrap two-col">
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-circle-info"></i> Despre birou</div>
+          <h2 style="font-size:clamp(2rem,4vw,3.1rem);margin-top:12px">O societate notarială matură, cu prezență puternică în București.</h2>
+          <p>Structura profesională Solemnis are mai mulți notari publici în aceeași organizație și acoperă o gamă largă de acte, de la imobiliare și succesiuni la declarații administrative și traduceri autorizate. Datele publice arată activitate clară și prezență verificată în registrul notarial.</p>
+          <p>Trebuie menționat și aspectul practic: biroul nu are intrare accesibilă pentru scaun rulant, așa că este bine ca vizita să fie planificată din timp.</p>
+        </div>
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-clock"></i> Program</div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Luni - Vineri</h3>
+            <p>09:30 - 17:00</p>
+          </div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Weekend</h3>
+            <p>Sâmbătă și duminică: închis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-pen-nib"></i> Servicii</div><h2>Portofoliu complet de acte notariale.</h2></div><p>Societatea acoperă un spectru larg de acte, conform profilului profesional public.</p></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-house"></i><h3>Imobiliare</h3><p>Vânzări, donații, ipoteci, închirieri și documente de proprietate.</p></article>
+          <article class="card"><i class="fa-solid fa-scroll"></i><h3>Succesiuni</h3><p>Testamente, certificate de moștenitor și împărțiri de patrimoniu.</p></article>
+          <article class="card"><i class="fa-solid fa-user-check"></i><h3>Procuri</h3><p>Împuterniciri generale și speciale pentru administrare și reprezentare.</p></article>
+          <article class="card"><i class="fa-solid fa-file-signature"></i><h3>Autentificări</h3><p>Semnături, copii, declarații și certificate pentru acte uzuale.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Traduceri autorizate</h3><p>Documente legalizate pentru uz local sau internațional.</p></article>
+          <article class="card"><i class="fa-solid fa-people-group"></i><h3>Acte de familie</h3><p>Convenții matrimoniale și acte pentru situații personale și familiale.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="incredere">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-shield"></i> Încredere</div><h2>Ce spun datele publice.</h2></div></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-star"></i><h3>Rating bun</h3><p>4.5 din 5 stele, cu 45 de recenzii publice.</p></article>
+          <article class="card"><i class="fa-solid fa-users"></i><h3>Echipă extinsă</h3><p>Cinci notari asociați, utili pentru continuitate și volum de lucru.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Bilingv</h3><p>Română și engleză, potrivite pentru clienți locali și internaționali.</p></article>
+          <article class="card"><i class="fa-solid fa-wheelchair"></i><h3>Accesibilitate limitată</h3><p>Intrarea nu este adaptată pentru scaun rulant, conform datelor publice.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-message"></i> Recenzii</div><h2>Feedback public ales din recenziile disponibile.</h2></div></div>
+        <div class="reviews">
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Carmen Predescu</div><div class="meta">Google</div></header><p>„Servicii excelente, promptitudine și o comunicare foarte bună. Recomand acest birou notarial în București!”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Andreea Pirvu</div><div class="meta">Google</div></header><p>„Profesionalism, dedicare și soluții optime pentru toate părțile implicate.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Alexandra Mihalache</div><div class="meta">Google</div></header><p>„Promptness in answering questions and a compact, professional team.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Eugen Voicu</div><div class="meta">Google</div></header><p>„Very dynamic and transparent, with rapid case resolution.”</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-envelope"></i> Contact</div><h2>Datele oficiale ale societății.</h2></div></div>
+        <div class="contact-grid">
+          <article class="contact"><i class="fa-solid fa-location-dot"></i><h3>Adresă</h3><p>Strada Constantin Cristescu 2, 010198 București, Sector 1.</p><p><a href="https://www.google.com/maps/place/SPN+Solemnis/data=!4m7!3m6!1s0x40b1ff5bf34418e9:0x5861e7b704ab85a2!8m2!3d44.4389235!4d26.0848363!16s%2Fg%2F11dftvvsj6!19sChIJ6RhE81v_sUARooWrBLfnYVg?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener">Vezi pe hartă</a></p></article>
+          <article class="contact"><i class="fa-solid fa-phone"></i><h3>Telefon</h3><p><a href="tel:0767940013">0767 940 013</a></p><p>Număr secundar public: +40 21 313 0236.</p></article>
+          <article class="contact"><i class="fa-solid fa-clock"></i><h3>Program</h3><p>Luni - Vineri: 09:30 - 17:00</p><p>Weekend: închis</p></article>
+          <article class="contact"><i class="fa-solid fa-at"></i><h3>Email</h3><p>notariat@solemnis.ro</p><p>Contact pentru programări și acte.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div><strong style="font-family:Playfair Display,serif;font-size:1.25rem;color:var(--ink)">SPN Solemnis</strong><p style="margin:6px 0 0">București, Sector 1 • societate profesională notarială</p></div>
+      <div>© 2026 • Notariat profesionist</div>
+    </div>
+  </footer>
+</body>
+</html>

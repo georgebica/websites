@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Total Car Service — Tinichigerie, Vopsitorie, Mecanică | Sector 2, București</title>
+    <meta name="description" content="Service auto multimarcă în Sector 2, București. Tinichigerie, vopsitorie și mecanică cu peste 30 de ani de experiență. Rating 4.8/5. Sună acum: 0749 483 498">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        olive: '#4A5D23',
+                        'olive-dark': '#3A4A1B',
+                        'olive-light': '#5C7330',
+                        gunmetal: '#2C3539',
+                        'gunmetal-light': '#3A454A',
+                        offwhite: '#F8F6F1',
+                        burnt: '#CC5500',
+                        'burnt-dark': '#A84500',
+                    },
+                    fontFamily: {
+                        heading: ['"Bebas Neue"', 'sans-serif'],
+                        body: ['"Barlow"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background-color: #F8F6F1;
+            color: #2C3539;
+            overflow-x: hidden;
+        }
+
+        /* Tactical horizontal stripe pattern */
+        .tactical-stripes {
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 4px,
+                rgba(74, 93, 35, 0.04) 4px,
+                rgba(74, 93, 35, 0.04) 8px
+            );
+        }
+
+        .tactical-stripes-dark {
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 6px,
+                rgba(255, 255, 255, 0.03) 6px,
+                rgba(255, 255, 255, 0.03) 12px
+            );
+        }
+
+        /* Stencil-style headings */
+        .stencil {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* Section divider — thick 4px olive line */
+        .section-divider {
+            height: 4px;
+            background-color: #4A5D23;
+            width: 100%;
+        }
+
+        /* Service block thick left border */
+        .service-block {
+            border-left: 6px solid #4A5D23;
+            position: relative;
+        }
+
+        .service-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -6px;
+            width: 6px;
+            height: 20px;
+            background-color: #CC5500;
+        }
+
+        /* Rating star glow */
+        .star-rating {
+            text-shadow: 0 0 10px rgba(204, 85, 0, 0.3);
+        }
+
+        /* Testimonial opening quote */
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: #4A5D23;
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        /* Mobile sticky CTA slide-up */
+        .mobile-cta-bar {
+            transform: translateY(100%);
+            animation: slideUp 0.5s ease forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes slideUp {
+            to { transform: translateY(0); }
+        }
+
+        /* Scroll progress indicator */
+        .scroll-progress {
+            height: 3px;
+            background: #CC5500;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* CTA button hover effects */
+        .cta-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::after {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(204, 85, 0, 0.35);
+        }
+
+        /* Info block tactical style */
+        .info-block {
+            border-left: 4px solid #4A5D23;
+            background: linear-gradient(135deg, rgba(74, 93, 35, 0.05) 0%, transparent 60%);
+        }
+
+        /* Team member card bottom gradient line */
+        .team-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #4A5D23, #CC5500);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #F8F6F1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4A5D23;
+            border-radius: 4px;
+        }
+
+        /* Focus styles for accessibility */
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #CC5500;
+            outline-offset: 2px;
+        }
+
+        /* Grid pattern overlay for hero */
+        .grid-overlay {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="tactical-stripes">
+
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div class="scroll-progress fixed top-0 left-0 z-[60]" id="scrollProgress"></div>
+
+    <!-- ===== STICKY HEADER ===== -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="mainHeader">
+        <!-- Olive top stripe -->
+        <div class="h-1.5 bg-olive w-full"></div>
+
+        <nav class="bg-gunmetal/95 backdrop-blur-md border-b border-olive/30">
+            <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                <!-- Logo / Brand -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-olive rounded flex items-center justify-center">
+                        <i class="fa-solid fa-wrench text-offwhite text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="stencil text-offwhite text-xl leading-none block tracking-wider">Auto Total</span>
+                        <span class="text-olive-light text-xs font-body font-medium uppercase tracking-widest">Car Service</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#servicii" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors">Servicii</a>
+                    <a href="#echipa" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors">Echipa</a>
+                    <a href="#recenzii" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors">Recenzii</a>
+                    <a href="#contact" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors">Contact</a>
+                    <a href="tel:0749483498" class="cta-button bg-burnt hover:bg-burnt-dark text-white px-5 py-2 rounded font-bold text-sm uppercase tracking-wider inline-flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        Sună acum
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-offwhite text-2xl" id="mobileMenuBtn" aria-label="Meniu navigare">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div class="hidden md:hidden bg-gunmetal border-t border-olive/20" id="mobileMenu">
+                <div class="px-4 py-4 flex flex-col gap-3">
+                    <a href="#servicii" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors py-2">Servicii</a>
+                    <a href="#echipa" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors py-2">Echipa</a>
+                    <a href="#recenzii" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors py-2">Recenzii</a>
+                    <a href="#contact" class="text-offwhite/80 hover:text-burnt text-sm font-semibold uppercase tracking-wider transition-colors py-2">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="bg-gunmetal tactical-stripes-dark grid-overlay min-h-[85vh] flex items-center pt-24 pb-16 relative">
+        <!-- Diagonal accent -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-olive/5 skew-x-[-8deg] origin-top-right hidden lg:block"></div>
+
+        <div class="max-w-6xl mx-auto px-4 w-full relative z-10">
+            <div class="grid md:grid-cols-5 gap-8 items-center">
+                <!-- Left: Text content -->
+                <div class="md:col-span-3" data-aos="fade-right" data-aos-duration="800">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 bg-olive/20 border border-olive/40 rounded px-4 py-1.5 mb-6">
+                        <i class="fa-solid fa-shield-halved text-olive-light text-sm"></i>
+                        <span class="text-olive-light text-xs font-bold uppercase tracking-widest font-body">Din 1994 &bull; Peste 30 de ani de experiență</span>
+                    </div>
+
+                    <h1 class="stencil text-offwhite text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-4">
+                        Auto Total<br>
+                        <span class="text-burnt">Car Service</span>
+                    </h1>
+
+                    <p class="text-offwhite/70 text-lg sm:text-xl font-body max-w-lg mb-8 leading-relaxed">
+                        Service auto multimarcă de încredere în Sector 2, București. Tinichigerie, vopsitorie și mecanică — executate cu precizie de profesioniști.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="tel:0749483498" class="cta-button bg-burnt hover:bg-burnt-dark text-white px-8 py-3.5 rounded font-bold text-base uppercase tracking-wider inline-flex items-center gap-3">
+                            <i class="fa-solid fa-phone"></i>
+                            0749 483 498
+                        </a>
+                        <a href="#servicii" class="border-2 border-olive text-olive-light hover:bg-olive hover:text-offwhite px-8 py-3.5 rounded font-bold text-base uppercase tracking-wider inline-flex items-center gap-3 transition-all">
+                            <i class="fa-solid fa-crosshairs"></i>
+                            Vezi serviciile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Rating display -->
+                <div class="md:col-span-2 flex justify-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="bg-gunmetal-light/60 border border-olive/30 rounded-lg p-8 text-center backdrop-blur-sm">
+                        <div class="stencil text-8xl sm:text-9xl text-offwhite leading-none mb-2">
+                            4.8
+                        </div>
+                        <div class="flex justify-center gap-1 mb-3 star-rating">
+                            <i class="fa-solid fa-star text-burnt text-xl"></i>
+                            <i class="fa-solid fa-star text-burnt text-xl"></i>
+                            <i class="fa-solid fa-star text-burnt text-xl"></i>
+                            <i class="fa-solid fa-star text-burnt text-xl"></i>
+                            <i class="fa-solid fa-star-half-stroke text-burnt text-xl"></i>
+                        </div>
+                        <p class="text-offwhite/60 text-sm font-body font-semibold uppercase tracking-wider">
+                            53 recenzii Google
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-olive/20">
+                            <div class="flex items-center justify-center gap-2 text-olive-light">
+                                <i class="fa-solid fa-certificate text-sm"></i>
+                                <span class="text-xs font-bold uppercase tracking-widest">Afiliat AD Auto Total</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom stats strip -->
+            <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-olive/20" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="stencil text-3xl text-burnt">30+</div>
+                    <div class="text-offwhite/50 text-xs uppercase tracking-wider font-semibold mt-1">Ani experiență</div>
+                </div>
+                <div class="text-center">
+                    <div class="stencil text-3xl text-burnt">3</div>
+                    <div class="text-offwhite/50 text-xs uppercase tracking-wider font-semibold mt-1">Specializări</div>
+                </div>
+                <div class="text-center">
+                    <div class="stencil text-3xl text-burnt">100%</div>
+                    <div class="text-offwhite/50 text-xs uppercase tracking-wider font-semibold mt-1">Multimarcă</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== MISIUNEA NOASTRĂ ===== -->
+    <section class="py-16 sm:py-20 bg-offwhite">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <!-- Section label -->
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 bg-olive rounded flex items-center justify-center">
+                        <i class="fa-solid fa-bullseye text-offwhite text-xs"></i>
+                    </div>
+                    <h2 class="stencil text-olive text-sm tracking-[0.2em]">Raport de misiune</h2>
+                </div>
+
+                <h3 class="stencil text-gunmetal text-4xl sm:text-5xl mb-8">Misiunea noastră</h3>
+
+                <div class="info-block pl-6 py-4 mb-6">
+                    <p class="text-gunmetal/80 text-lg leading-relaxed font-body">
+                        De peste <strong class="text-olive font-bold">30 de ani</strong>, Auto Total Car Service oferă servicii auto de cea mai înaltă calitate în Sector 2, București. Afiliați rețelei <strong class="text-olive font-bold">AD Auto Total</strong> din 1994, am construit o reputație solidă bazată pe precizie, profesionalism și respectul față de fiecare client.
+                    </p>
+                </div>
+
+                <div class="info-block pl-6 py-4 mb-6">
+                    <p class="text-gunmetal/80 text-lg leading-relaxed font-body">
+                        Echipa noastră de specialiști acoperă complet nevoile mașinii tale — de la <strong class="text-olive font-bold">tinichigerie și vopsitorie de artă</strong> până la <strong class="text-olive font-bold">mecanică multimarcă</strong> complexă. Fiecare lucrare este executată cu atenție la detaliu și cu materiale de calitate superioară.
+                    </p>
+                </div>
+
+                <div class="info-block pl-6 py-4 mb-6">
+                    <p class="text-gunmetal/80 text-lg leading-relaxed font-body">
+                        Nu suntem doar un service auto — suntem partenerii tăi de încredere pe termen lung. Comunicare transparentă, diagnosticare onestă și rezultate care vorbesc de la sine. Așa cum spun clienții noștri: <em class="text-olive">&ldquo;Service multimarcă deservit de profesioniști.&rdquo;</em>
+                    </p>
+                </div>
+
+                <div class="info-block pl-6 py-4">
+                    <p class="text-gunmetal/80 text-lg leading-relaxed font-body">
+                        Investim constant în echipamente moderne și în formarea continuă a tehnicienilor noștri, pentru ca fiecare mașină să plece din atelierul nostru în condiții impecabile — indiferent de marcă sau complexitatea lucrării.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== SERVICII ===== -->
+    <section class="py-16 sm:py-20 bg-offwhite" id="servicii">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="h-px w-8 bg-olive/40"></div>
+                    <span class="stencil text-olive text-sm tracking-[0.2em]">Operațiuni active</span>
+                    <div class="h-px w-8 bg-olive/40"></div>
+                </div>
+                <h2 class="stencil text-gunmetal text-4xl sm:text-5xl">Serviciile noastre</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tinichigerie -->
+                <div class="service-block bg-white rounded-r-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-olive/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-hammer text-olive text-2xl"></i>
+                    </div>
+                    <h3 class="stencil text-gunmetal text-2xl mb-4">Tinichigerie</h3>
+                    <ul class="space-y-3 text-gunmetal/70 font-body">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Reparații caroserie și îndreptare tablă</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Remediere lovituri și îndoituri</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Sudură și reconstrucție elemente</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Pregătire suprafețe pentru vopsire</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-olive/10">
+                        <span class="text-olive text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-shield-halved mr-1"></i> Garanție lucrări
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Vopsitorie -->
+                <div class="service-block bg-white rounded-r-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-14 h-14 bg-olive/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-spray-can-sparkles text-olive text-2xl"></i>
+                    </div>
+                    <h3 class="stencil text-gunmetal text-2xl mb-4">Vopsitorie</h3>
+                    <ul class="space-y-3 text-gunmetal/70 font-body">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Vopsire integrală și parțială</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Potrivire perfectă a nuanțelor originale</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Lac și finisaje profesionale</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Polish și detailing exterior</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-olive/10">
+                        <span class="text-burnt text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-star mr-1"></i> Daniel — artist al vopselei
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Mecanică Multimarcă -->
+                <div class="service-block bg-white rounded-r-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-olive/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-gears text-olive text-2xl"></i>
+                    </div>
+                    <h3 class="stencil text-gunmetal text-2xl mb-4">Mecanică Multimarcă</h3>
+                    <ul class="space-y-3 text-gunmetal/70 font-body">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Diagnosticare computerizată</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Revizie și întreținere periodică</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Reparații motor, frâne, suspensii</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-chevron-right text-burnt text-xs mt-1.5 flex-shrink-0"></i>
+                            <span>Toate mărcile auto — fără excepție</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-olive/10">
+                        <span class="text-olive text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-shield-halved mr-1"></i> Piese originale și aftermarket
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== ECHIPA ===== -->
+    <section class="py-16 sm:py-20 bg-gunmetal tactical-stripes-dark" id="echipa">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="h-px w-8 bg-olive/50"></div>
+                    <span class="stencil text-olive-light text-sm tracking-[0.2em]">Personal de comandă</span>
+                    <div class="h-px w-8 bg-olive/50"></div>
+                </div>
+                <h2 class="stencil text-offwhite text-4xl sm:text-5xl">Echipa noastră</h2>
+                <p class="text-offwhite/50 font-body mt-3 max-w-xl mx-auto">Profesioniști dedicați care tratează fiecare mașină ca și cum ar fi a lor.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mihai -->
+                <div class="team-card bg-gunmetal-light/60 border border-olive/20 rounded-lg p-8 text-center backdrop-blur-sm" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-20 h-20 bg-olive/20 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-headset text-olive-light text-3xl"></i>
+                    </div>
+                    <h3 class="stencil text-offwhite text-2xl mb-1">Mihai</h3>
+                    <span class="text-burnt text-sm font-bold uppercase tracking-wider">Recepție</span>
+                    <p class="text-offwhite/60 font-body mt-4 text-sm leading-relaxed">
+                        Primul punct de contact. Mihai te întâmpină, înțelege problema și coordonează întregul proces de reparație cu transparență totală.
+                    </p>
+                </div>
+
+                <!-- Daniel -->
+                <div class="team-card bg-gunmetal-light/60 border border-olive/20 rounded-lg p-8 text-center backdrop-blur-sm" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-20 h-20 bg-olive/20 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-palette text-olive-light text-3xl"></i>
+                    </div>
+                    <h3 class="stencil text-offwhite text-2xl mb-1">Daniel</h3>
+                    <span class="text-burnt text-sm font-bold uppercase tracking-wider">Vopsitor</span>
+                    <p class="text-offwhite/60 font-body mt-4 text-sm leading-relaxed">
+                        Un adevărat artist al vopselei auto. Daniel transformă fiecare caroserie deteriorată într-o operă de artă, cu finisaje impecabile.
+                    </p>
+                </div>
+
+                <!-- Echipa Banea -->
+                <div class="team-card bg-gunmetal-light/60 border border-olive/20 rounded-lg p-8 text-center backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-olive/20 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-users-gear text-olive-light text-3xl"></i>
+                    </div>
+                    <h3 class="stencil text-offwhite text-2xl mb-1">Echipa Banea</h3>
+                    <span class="text-burnt text-sm font-bold uppercase tracking-wider">Mecanică & Coordonare</span>
+                    <p class="text-offwhite/60 font-body mt-4 text-sm leading-relaxed">
+                        Domnul Banea și echipa sa reprezintă coloana vertebrală a service-ului. Comunicare excelentă, profesionalism și rezultate de top.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== TESTIMONIALE ===== -->
+    <section class="py-16 sm:py-20 bg-offwhite" id="recenzii">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="h-px w-8 bg-olive/40"></div>
+                    <span class="stencil text-olive text-sm tracking-[0.2em]">Rapoarte din teren</span>
+                    <div class="h-px w-8 bg-olive/40"></div>
+                </div>
+                <h2 class="stencil text-gunmetal text-4xl sm:text-5xl">Ce spun clienții</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="testimonial-card relative bg-white border-l-4 border-olive rounded-r-lg p-8 shadow-md" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                    </div>
+                    <p class="text-gunmetal/80 font-body leading-relaxed mb-6 italic">
+                        &ldquo;Service multimarcă deservit de profesioniști. Am fost plăcut surprins de calitatea lucrărilor și de rapiditatea cu care au fost finalizate. Recomand cu încredere!&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-olive/10">
+                        <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-olive text-sm"></i>
+                        </div>
+                        <div>
+                            <span class="text-gunmetal font-bold text-sm block">Client verificat</span>
+                            <span class="text-gunmetal/50 text-xs">Recenzie Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card relative bg-white border-l-4 border-olive rounded-r-lg p-8 shadow-md" data-aos="fade-up" data-aos-delay="150">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                    </div>
+                    <p class="text-gunmetal/80 font-body leading-relaxed mb-6 italic">
+                        &ldquo;Daniel este un adevărat ARTIST. Vopsitoria arată absolut impecabil, nu se vede nicio diferență față de original. Lucrare de nota 10, executată cu pasiune și profesionalism.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-olive/10">
+                        <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-olive text-sm"></i>
+                        </div>
+                        <div>
+                            <span class="text-gunmetal font-bold text-sm block">Client verificat</span>
+                            <span class="text-gunmetal/50 text-xs">Recenzie Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card relative bg-white border-l-4 border-olive rounded-r-lg p-8 shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                        <i class="fa-solid fa-star text-burnt text-sm"></i>
+                    </div>
+                    <p class="text-gunmetal/80 font-body leading-relaxed mb-6 italic">
+                        &ldquo;Comunicare și profesionalism la cel mai înalt nivel. Domnul Banea și echipa au fost extraordinari — m-au ținut la curent cu fiecare etapă. Mașina arată ca nouă!&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-olive/10">
+                        <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-olive text-sm"></i>
+                        </div>
+                        <div>
+                            <span class="text-gunmetal font-bold text-sm block">Client verificat</span>
+                            <span class="text-gunmetal/50 text-xs">Recenzie Google</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating summary bar -->
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="inline-flex items-center gap-4 bg-white border border-olive/20 rounded-lg px-8 py-4 shadow-sm">
+                    <div class="stencil text-4xl text-gunmetal">4.8</div>
+                    <div class="h-10 w-px bg-olive/20"></div>
+                    <div class="text-left">
+                        <div class="flex gap-1 mb-1">
+                            <i class="fa-solid fa-star text-burnt text-xs"></i>
+                            <i class="fa-solid fa-star text-burnt text-xs"></i>
+                            <i class="fa-solid fa-star text-burnt text-xs"></i>
+                            <i class="fa-solid fa-star text-burnt text-xs"></i>
+                            <i class="fa-solid fa-star-half-stroke text-burnt text-xs"></i>
+                        </div>
+                        <span class="text-gunmetal/60 text-xs font-semibold uppercase tracking-wider">53 recenzii pe Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== INFORMAȚII PRACTICE ===== -->
+    <section class="py-16 sm:py-20 bg-gunmetal tactical-stripes-dark" id="info">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="h-px w-8 bg-olive/50"></div>
+                    <span class="stencil text-olive-light text-sm tracking-[0.2em]">Intel operațional</span>
+                    <div class="h-px w-8 bg-olive/50"></div>
+                </div>
+                <h2 class="stencil text-offwhite text-4xl sm:text-5xl">Informații practice</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Program -->
+                <div class="bg-gunmetal-light/60 border border-olive/20 rounded-lg p-8 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-olive/20 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-clock text-olive-light text-xl"></i>
+                        </div>
+                        <h3 class="stencil text-offwhite text-xl">Program</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-2 border-b border-olive/10">
+                            <span class="text-offwhite/70 font-body font-semibold text-sm">Luni - Vineri</span>
+                            <span class="text-burnt font-bold text-sm">08:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-olive/10">
+                            <span class="text-offwhite/70 font-body font-semibold text-sm">Sâmbătă</span>
+                            <span class="text-offwhite/40 font-bold text-sm">Închis</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-offwhite/70 font-body font-semibold text-sm">Duminică</span>
+                            <span class="text-offwhite/40 font-bold text-sm">Închis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plăți -->
+                <div class="bg-gunmetal-light/60 border border-olive/20 rounded-lg p-8 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="150">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-olive/20 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-credit-card text-olive-light text-xl"></i>
+                        </div>
+                        <h3 class="stencil text-offwhite text-xl">Modalități de plată</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-burnt text-sm flex-shrink-0"></i>
+                            <span class="text-offwhite/70 font-body text-sm">Card de credit</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-burnt text-sm flex-shrink-0"></i>
+                            <span class="text-offwhite/70 font-body text-sm">Card de debit</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-burnt text-sm flex-shrink-0"></i>
+                            <span class="text-offwhite/70 font-body text-sm">Plată contactless (NFC)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-burnt text-sm flex-shrink-0"></i>
+                            <span class="text-offwhite/70 font-body text-sm">Numerar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accesibilitate -->
+                <div class="bg-gunmetal-light/60 border border-olive/20 rounded-lg p-8 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-olive/20 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-wheelchair text-olive-light text-xl"></i>
+                        </div>
+                        <h3 class="stencil text-offwhite text-xl">Accesibilitate</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-burnt text-sm flex-shrink-0"></i>
+                            <span class="text-offwhite/70 font-body text-sm">Parcare accesibilă pentru persoane cu dizabilități</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-burnt text-sm flex-shrink-0"></i>
+                            <span class="text-offwhite/70 font-body text-sm">Intrare accesibilă cu scaun rulant</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-burnt text-sm flex-shrink-0"></i>
+                            <span class="text-offwhite/70 font-body text-sm">Spațiu de așteptare confortabil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="py-16 sm:py-20 bg-offwhite" id="contact">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="h-px w-8 bg-olive/40"></div>
+                    <span class="stencil text-olive text-sm tracking-[0.2em]">Canal de comunicare</span>
+                    <div class="h-px w-8 bg-olive/40"></div>
+                </div>
+                <h2 class="stencil text-gunmetal text-4xl sm:text-5xl">Contactează-ne</h2>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <!-- Phone CTA -->
+                <div class="bg-white border-2 border-olive/20 rounded-lg p-8 text-center shadow-lg mb-8" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-burnt/10 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-phone-volume text-burnt text-2xl"></i>
+                    </div>
+                    <h3 class="stencil text-gunmetal text-2xl mb-2">Sună pentru programare</h3>
+                    <p class="text-gunmetal/60 font-body mb-6">Răspundem Luni - Vineri, 08:00 - 18:00</p>
+                    <a href="tel:0749483498" class="cta-button bg-burnt hover:bg-burnt-dark text-white px-10 py-4 rounded-lg font-bold text-xl uppercase tracking-wider inline-flex items-center gap-3">
+                        <i class="fa-solid fa-phone"></i>
+                        0749 483 498
+                    </a>
+                </div>
+
+                <!-- Address info -->
+                <div class="info-block bg-white rounded-r-lg p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-olive/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-location-dot text-olive text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="stencil text-gunmetal text-lg mb-1">Locație</h4>
+                            <p class="text-gunmetal/70 font-body">Sector 2, București, România</p>
+                            <p class="text-gunmetal/50 font-body text-sm mt-1">
+                                <i class="fa-solid fa-shield-halved text-olive mr-1"></i>
+                                Afiliat AD Auto Total din 1994
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-gunmetal border-t-4 border-olive">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-olive rounded flex items-center justify-center">
+                            <i class="fa-solid fa-wrench text-offwhite text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="stencil text-offwhite text-xl leading-none block tracking-wider">Auto Total</span>
+                            <span class="text-olive-light text-xs font-body font-medium uppercase tracking-widest">Car Service</span>
+                        </div>
+                    </div>
+                    <p class="text-offwhite/40 font-body text-sm leading-relaxed">
+                        Service auto multimarcă de încredere. Tinichigerie, vopsitorie și mecanică — executate cu precizie de profesioniști în Sector 2, București.
+                    </p>
+                </div>
+
+                <!-- Quick links -->
+                <div>
+                    <h4 class="stencil text-olive-light text-sm tracking-[0.2em] mb-4">Navigare rapidă</h4>
+                    <div class="space-y-2">
+                        <a href="#servicii" class="block text-offwhite/60 hover:text-burnt text-sm font-body transition-colors">Servicii</a>
+                        <a href="#echipa" class="block text-offwhite/60 hover:text-burnt text-sm font-body transition-colors">Echipa</a>
+                        <a href="#recenzii" class="block text-offwhite/60 hover:text-burnt text-sm font-body transition-colors">Recenzii</a>
+                        <a href="#contact" class="block text-offwhite/60 hover:text-burnt text-sm font-body transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Contact info -->
+                <div>
+                    <h4 class="stencil text-olive-light text-sm tracking-[0.2em] mb-4">Contact</h4>
+                    <div class="space-y-3">
+                        <a href="tel:0749483498" class="flex items-center gap-2 text-offwhite/60 hover:text-burnt text-sm font-body transition-colors">
+                            <i class="fa-solid fa-phone text-olive-light text-xs"></i>
+                            0749 483 498
+                        </a>
+                        <div class="flex items-center gap-2 text-offwhite/60 text-sm font-body">
+                            <i class="fa-solid fa-location-dot text-olive-light text-xs"></i>
+                            Sector 2, București
+                        </div>
+                        <div class="flex items-center gap-2 text-offwhite/60 text-sm font-body">
+                            <i class="fa-solid fa-clock text-olive-light text-xs"></i>
+                            Luni - Vineri: 08:00 - 18:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="mt-10 pt-6 border-t border-olive/20 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-offwhite/30 text-xs font-body">
+                    &copy; 2024 Auto Total Car Service. Toate drepturile rezervate.
+                </p>
+                <p class="text-offwhite/30 text-xs font-body">
+                    Afiliat <strong class="text-olive-light/50">AD Auto Total</strong> din 1994
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MOBILE STICKY CTA BAR ===== -->
+    <div class="mobile-cta-bar fixed bottom-0 left-0 w-full z-50 md:hidden">
+        <div class="bg-gunmetal/95 backdrop-blur-md border-t-2 border-olive px-4 py-3">
+            <a href="tel:0749483498" class="cta-button bg-burnt hover:bg-burnt-dark text-white w-full py-3.5 rounded-lg font-bold text-base uppercase tracking-wider flex items-center justify-center gap-3">
+                <i class="fa-solid fa-phone"></i>
+                Sună acum — 0749 483 498
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Auto Total Car Service",
+        "description": "Service auto multimarcă - tinichigerie, vopsitorie și mecanică în Sector 2, București. Afiliat AD Auto Total din 1994.",
+        "telephone": "+40749483498",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "București",
+            "addressRegion": "Sector 2",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.439476,
+            "longitude": 26.166171
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "ratingCount": "53"
+        },
+        "paymentAccepted": "Cash, Credit Card, Debit Card, NFC",
+        "currenciesAccepted": "RON",
+        "priceRange": "$$",
+        "hasMap": "https://www.google.com/maps?q=44.439476,26.166171",
+        "areaServed": {
+            "@type": "City",
+            "name": "București"
+        },
+        "brand": {
+            "@type": "Brand",
+            "name": "AD Auto Total"
+        },
+        "foundingDate": "1994",
+        "knowsAbout": ["Tinichigerie auto", "Vopsitorie auto", "Mecanică multimarcă", "Reparații caroserie", "Diagnosticare computerizată"]
+    }
+    </script>
+
+    <!-- ===== AOS INIT & SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 60
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark';
+            }
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars';
+            });
+        });
+
+        // Header shadow on scroll
+        var header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+
+        // Scroll progress bar
+        window.addEventListener('scroll', function() {
+            var scrollProgress = document.getElementById('scrollProgress');
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    var headerOffset = 80;
+                    var elementPosition = target.getBoundingClientRect().top;
+                    var offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

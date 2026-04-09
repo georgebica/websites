@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lazlo Traian - Lawyer Office | Cluj-Napoca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#f3efe9; --panel:#fffcf7; --ink:#181d2a; --muted:#657082; --navy:#0f2141; --copper:#b66b39; --cyan:#4aa7a5; --line:rgba(15,33,65,.12); --shadow:0 22px 60px rgba(15,33,65,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Work Sans',sans-serif;color:var(--ink);background:
+      radial-gradient(circle at 12% 10%, rgba(74,167,165,.16), transparent 24%),
+      radial-gradient(circle at 88% 4%, rgba(182,107,57,.16), transparent 22%),
+      linear-gradient(180deg,#f7f3ee 0%, #eee7dd 100%);
+      overflow-x:hidden
+    }
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(15,33,65,.08) 1px, transparent 1px),linear-gradient(90deg, rgba(15,33,65,.08) 1px, transparent 1px);background-size:28px 28px}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:60;backdrop-filter:blur(14px);background:rgba(243,239,233,.72);border-bottom:1px solid rgba(15,33,65,.08)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(15,33,65,.22)}
+    .brand strong{display:block;font-size:1rem;letter-spacing:.01em}
+    .brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:700}
+    .links{display:flex;align-items:center;gap:22px}
+    .links a{font-size:.8rem;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .links a:hover{color:var(--copper)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 20px;font-weight:900;transition:.25s ease;border:1px solid transparent}
+    .btn-primary{background:linear-gradient(135deg,var(--navy),#17335f);color:#fff;box-shadow:0 18px 40px rgba(15,33,65,.24)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.48);border-color:rgba(15,33,65,.14)}
+    .btn-ghost:hover{transform:translateY(-2px)}
+    .menu{display:none;background:none;border:none;color:var(--navy);font-size:20px}
+    .hero{padding-top:110px;min-height:100vh;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:42px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;font-weight:900;color:var(--copper)}
+    h1,h2,h3,.serif{font-family:'Cinzel',serif}
+    h1{font-size:clamp(3rem,7vw,6.2rem);line-height:.95;margin:.4rem 0 1rem;color:var(--navy)}
+    .lead{font-size:1.08rem;line-height:1.95;color:var(--muted);max-width:60ch}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .panel{background:linear-gradient(160deg,#fdf9f4,#eef1f3);border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .panel::before,.panel::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(74,167,165,.12)}
+    .panel::before{width:260px;height:260px;right:-90px;top:-90px}
+    .panel::after{width:170px;height:170px;left:-60px;bottom:-60px}
+    .panel h3{font-size:2.5rem;line-height:1.05;color:var(--navy);margin:.2rem 0 12px}
+    .panel p{color:var(--muted);line-height:1.8}
+    .chip{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:rgba(74,167,165,.09);color:var(--cyan);padding:9px 13px;font-size:.86rem;font-weight:900}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:rgba(15,33,65,.05);border:1px solid rgba(15,33,65,.08);border-radius:18px;padding:18px;text-align:center}
+    .stat b{display:block;font-size:clamp(1.25rem,3vw,2.05rem);font-family:'Cinzel',serif;color:var(--navy)}
+    .section{padding:92px 0}
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,.08))}
+    .head{max-width:780px;margin:0 auto 36px;text-align:center}
+    .head h2{font-size:clamp(2.1rem,5vw,4rem);margin:.4rem 0;color:var(--navy)}
+    .head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .benefits{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{background:rgba(255,252,247,.88);border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 40px rgba(15,33,65,.08);backdrop-filter:blur(10px)}
+    .card{padding:24px;transition:.25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(15,33,65,.22)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(15,33,65,.09),rgba(182,107,57,.22));color:var(--navy);font-size:1.08rem;margin-bottom:16px}
+    .card h3,.review h3,.contact h3{margin:0 0 10px;color:var(--navy);font-size:1.45rem}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft{padding:16px 18px;border-radius:18px;background:rgba(15,33,65,.05);border:1px solid rgba(15,33,65,.08)}
+    .soft b{display:block;color:var(--navy);margin-bottom:6px}
+    .review{padding:22px}
+    .meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.95rem}
+    .stars{color:var(--copper);letter-spacing:2px;margin-bottom:8px}
+    .contact{padding:22px}
+    .contact .big{font-family:'Cinzel',serif;font-size:1.55rem;color:var(--navy);margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--navy);font-weight:900}
+    .hours{display:grid;gap:10px}
+    .hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(15,33,65,.08)}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(15,33,65,.06);color:var(--copper);font-size:.84rem;font-weight:900}
+    .footer{padding:28px 0 42px;border-top:1px solid rgba(15,33,65,.1);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .mini{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(15,33,65,.05);margin-top:16px;color:var(--muted)}
+    .menu-panel{display:none}
+    @media (max-width: 980px){
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .links,.desktop-cta{display:none}
+      .menu{display:block}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .menu-panel{display:none;padding-bottom:16px}
+      .menu-panel.open{display:block}
+      .menu-panel a{display:block;padding:12px 0;border-top:1px solid rgba(15,33,65,.08);font-weight:900;color:var(--navy)}
+      h1{font-size:clamp(2.8rem,13vw,4.8rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <span class="mark"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span><strong>Lazlo Traian - Lawyer Office</strong><small>Cluj-Napoca · avocat definitiv</small></span>
+        </a>
+        <nav class="links">
+          <a href="#despre">Despre</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#avantaje">De ce noi</a>
+          <a href="#recenzii">Recenzii</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="desktop-cta"><a class="btn btn-primary" href="tel:0729515173"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+        <button class="menu" id="menuBtn" aria-label="Meniu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="menu-panel" id="menuPanel">
+        <a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#avantaje">De ce noi</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a>
+        <a class="btn btn-primary" style="margin-top:10px" href="tel:0729515173"><i class="fa-solid fa-phone"></i> 0729 515 173</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-book-open"></i> Practică juridică serioasă</span>
+          <h1>Drept clar, argument solid și consultanță fără ocolișuri.</h1>
+          <p class="lead">Cabinetul lui Traian Laszlo operează în Cluj-Napoca cu programări online, accesibilitate bună și o practică extinsă pe cauze civile, comerciale, administrative, penale și de dreptul cambial.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:0729515173"><i class="fa-solid fa-phone"></i> 0729 515 173</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Lazlo+Traian+-+Lawyer+Office/data=!4m7!3m6!1s0x47490c215494f581:0x726353d0292b3a7c!8m2!3d46.7662953!4d23.5915354!16s%2Fg%2F11fx9jgmwb!19sChIJgfWUVCEMSUcRfDorKdBTY3I?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <span class="chip"><i class="fa-solid fa-laptop"></i> Programări online</span>
+          <h3 class="serif">O practică matură, cu accente academice și atenție pentru cazuri complexe.</h3>
+          <p>Din 2008, biroul a dezvoltat o reputație solidă în Cluj, cu interes pentru argumentare, etică și soluții juridice bine construite.</p>
+          <div class="stats">
+            <div class="stat"><b data-count="17">0</b><span>ani de experiență</span></div>
+            <div class="stat"><b data-count="7">0</b><span>arii juridice</span></div>
+            <div class="stat"><b data-count="9">0</b><span>recenzii publice</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre cabinet</span>
+          <h2>Strategie juridică și disciplină în comunicare</h2>
+          <p>Traian Laszlo este avocat definitiv, membru al Baroului Cluj, iar profilul său public pune accent pe onestitate, analiză obiectivă și respect pentru procedură.</p>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+          <div class="soft"><b><i class="fa-solid fa-laptop"></i> Consultări online</b>Se pot stabili întâlniri la distanță, într-un cadru modern și flexibil.</div>
+          <div class="soft"><b><i class="fa-solid fa-universal-access"></i> Accesibilitate</b>Scaune accesibile, toaletă și condiții gândite pentru confortul clientului.</div>
+          <div class="soft"><b><i class="fa-solid fa-square-parking"></i> Parcare în zonă</b>Există opțiuni de parcare plătită în apropierea biroului.</div>
+          <div class="soft"><b><i class="fa-solid fa-scale-balanced"></i> Instanțe multiple</b>Practică pentru cauze care pot ajunge la mai multe niveluri de jurisdicție.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-briefcase"></i> Servicii</span>
+          <h2>Domenii de lucru bine definite</h2>
+          <p>Serviciile reflectă o practică de drept general și specializat, cu interes inclusiv pentru zone mai puțin obișnuite, dar utile în economie.</p>
+        </div>
+        <div class="grid services">
+          <div class="card"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><h3>Drept civil</h3><p>Contracte, proprietate, moșteniri și litigii civile care cer argumentație solidă și clară.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-building-columns"></i></div><h3>Drept comercial și societar</h3><p>Consultanță pentru firme, tranzacții și raporturi societare cu miză economică.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><h3>Drept administrativ și fiscal</h3><p>Proceduri administrative, fiscalitate și controlul legalității în raport cu autoritățile.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-gavel"></i></div><h3>Drept penal</h3><p>Apărare în cauze penale, cu strategie atentă și pregătire pentru fiecare etapă procesuală.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-file-invoice"></i></div><h3>Drept cambial</h3><p>Spețe privind cambii, bilete la ordin și instrumente comerciale de plată.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-handshake"></i></div><h3>Dreptul muncii și al omului</h3><p>Dosare de muncă și cauze orientate spre drepturi fundamentale și tratament echitabil.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avantaje" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-check"></i> De ce noi</span>
+          <h2>Etică, rigoare și disponibilitate modernă</h2>
+        </div>
+        <div class="grid benefits">
+          <div class="card"><div class="icon"><i class="fa-solid fa-laptop"></i></div><h3>Programări online</h3><p>Clienții pot organiza consultații fără deplasări inutile.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-shield-heart"></i></div><h3>Accesibilitate</h3><p>Biroul este gândit pentru a primi persoane cu nevoi diferite, în condiții bune.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-book"></i></div><h3>Abordare academică</h3><p>Profilul profesional include și interes pentru argumentare teoretică și drepturile omului.</p></div>
+          <div class="card"><div class="icon"><i class="fa-solid fa-circle-check"></i></div><h3>Rigoare procedurală</h3><p>Lucrul este structurat, cu atenție pentru detalii și pentru onestitate în comunicare.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-star"></i> Recenzii</span>
+          <h2>Texte reale din profilul public</h2>
+          <p>Am afișat recenzii reale din datele furnizate, păstrând conținutul lor original.</p>
+        </div>
+        <div class="grid reviews">
+          <div class="review"><div class="meta"><strong>Bendorfean Traian</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Sunt zeci de mii de avocati în România. Fiecare cu nivelul lui de pregătire și seriozitate. Dar am fost uimit sa descoper în persoana avocat Traian Laszlo ,un.munte de profesionalism și aplecare pe subiect.Atat eu cât sj alți zeci de oameni recomandați de mine dânsului. Succese domnule avocat și tot asa în continuare"</p></div>
+          <div class="review"><div class="meta"><strong>victor eagle studio</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Oferă servicii pentru toate domeniile , au echipă mare și prețuri bune ! I recomand cu drag oricui !"</p></div>
+          <div class="review"><div class="meta"><strong>florin pop</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Cel mai top cabinet de avocat din Cluj Napoca ! Recomand cu drag"</p></div>
+          <div class="review"><div class="meta"><strong>Laura Cristina</strong><span>5/5</span></div><div class="stars">★★★★★</div><p>"Profesionalismul, seriozitatea și atenția la detalii au fost evidente pe tot parcursul colaborării. În cadrul biroului Law Laszlo avocații sunt foarte bine pregătiți, oferă soluții eficiente și explică fiecare pas în mod clar și transparent. Comunicarea a fost rapidă, iar rezultatele au fost peste așteptări. Recomand cu încredere pentru oricine are nevoie de servicii juridice de calitate!"</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+          <h2>Datele cabinetului</h2>
+        </div>
+        <div class="grid contact-grid">
+          <div class="contact"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3 class="big">Adresă</h3><p>Str. Avram Iancu 28, 400083 Cluj-Napoca</p><a class="maps" href="https://www.google.com/maps/place/Lazlo+Traian+-+Lawyer+Office/data=!4m7!3m6!1s0x47490c215494f581:0x726353d0292b3a7c!8m2!3d46.7662953!4d23.5915354!16s%2Fg%2F11fx9jgmwb!19sChIJgfWUVCEMSUcRfDorKdBTY3I?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-phone"></i></div><h3 class="big">Telefon</h3><p>0729 515 173</p><a class="maps" href="tel:0729515173"><i class="fa-solid fa-phone"></i> Sună acum</a></div>
+          <div class="contact"><div class="icon"><i class="fa-solid fa-envelope"></i></div><h3 class="big">Email</h3><p>laszlotraian@yahoo.com</p><a class="maps" href="mailto:laszlotraian@yahoo.com"><i class="fa-solid fa-paper-plane"></i> Trimite mesaj</a></div>
+          <div class="contact">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <h3 class="big">Program</h3>
+            <div class="hours">
+              <div><span>Luni</span><strong>09:00 - 18:00</strong></div>
+              <div><span>Marți - Joi</span><strong>09:00 - 18:00</strong></div>
+              <div><span>Vineri</span><strong>09:00 - 17:00</strong></div>
+              <div><span>Sâmbătă - Duminică</span><strong>Închis</strong></div>
+            </div>
+            <div class="mini"><i class="fa-solid fa-star" style="color:var(--copper)"></i> Programări necesare și recomandate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><strong style="color:var(--navy)">Lazlo Traian - Lawyer Office</strong><div>Cluj-Napoca · consultanță și reprezentare juridică</div></div>
+      <div>Telefon: 0729 515 173 · Email: laszlotraian@yahoo.com</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const panel = document.getElementById('menuPanel');
+    btn?.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      btn.innerHTML = panel.classList.contains('open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    panel?.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
+      panel.classList.remove('open');
+      btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = Number(el.dataset.count);
+      const io = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.done) {
+          entry.target.dataset.done = '1';
+          const start = performance.now();
+          const tick = now => {
+            const p = Math.min((now - start) / 1200, 1);
+            entry.target.textContent = Math.floor(target * p);
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+      }), {threshold:.5});
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocat Stan Ionel — Cabinet de Avocatură București | Dreptul Muncii, Drept Administrativ</title>
+    <meta name="description" content="Avocat Stan Ionel — Cabinet de Avocatură în București, Sector 2. Specializări: Dreptul Muncii, Drept Administrativ, Drept Comercial. Disponibil 24/7. Rating 5/5.">
+    <meta name="keywords" content="avocat bucuresti, avocat dreptul muncii, avocat drept administrativ, cabinet avocatura bucuresti, Stan Ionel avocat">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://avocat-stan-ionel.ro">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#1B3A2D',
+                        'forest-light': '#2A5A45',
+                        'forest-dark': '#0F2218',
+                        parchment: '#FAF3E8',
+                        'parchment-dark': '#F0E6D4',
+                        gold: '#B8860B',
+                        'gold-light': '#D4A017',
+                        'gold-dark': '#8B6508',
+                        ink: '#1A1A1A',
+                        'ink-light': '#3D3D3D',
+                    },
+                    fontFamily: {
+                        garamond: ['"EB Garamond"', 'Georgia', 'serif'],
+                        crimson: ['"Crimson Pro"', 'Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            color: #1A1A1A;
+            background-color: #FAF3E8;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'EB Garamond', Georgia, serif;
+        }
+
+        /* Gold decorative rule */
+        .gold-rule {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #B8860B, transparent);
+            margin: 2rem auto;
+            max-width: 300px;
+        }
+
+        .gold-rule-wide {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #B8860B, transparent);
+            margin: 3rem auto;
+            max-width: 600px;
+        }
+
+        /* Testimonial card */
+        .testimonial-card {
+            border-left: 3px solid #B8860B;
+            background: rgba(250, 243, 232, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(27, 58, 45, 0.12);
+        }
+
+        /* Practice area card */
+        .practice-card {
+            border: 1px solid rgba(184, 134, 11, 0.25);
+            background: #FAF3E8;
+            transition: all 0.3s ease;
+        }
+
+        .practice-card:hover {
+            border-color: #B8860B;
+            box-shadow: 0 4px 20px rgba(184, 134, 11, 0.15);
+            transform: translateY(-3px);
+        }
+
+        /* Header shrink on scroll */
+        .header-scrolled {
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Scale icon pulse */
+        .scale-icon {
+            animation: gentlePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% { opacity: 0.9; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Badge styling */
+        .badge-24 {
+            background: rgba(184, 134, 11, 0.15);
+            border: 1px solid rgba(184, 134, 11, 0.4);
+        }
+
+        /* Victory stat */
+        .victory-card {
+            background: rgba(27, 58, 45, 0.05);
+            border: 1px solid rgba(27, 58, 45, 0.1);
+        }
+
+        /* Section backgrounds */
+        .section-forest {
+            background: linear-gradient(175deg, #1B3A2D 0%, #0F2218 100%);
+        }
+
+        .section-parchment-alt {
+            background: linear-gradient(180deg, #F0E6D4 0%, #FAF3E8 100%);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FAF3E8; }
+        ::-webkit-scrollbar-thumb { background: #B8860B; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8B6508; }
+
+        /* CTA button animation */
+        .cta-gold {
+            background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-gold::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+        }
+
+        .cta-gold:hover::after {
+            left: 100%;
+        }
+
+        .cta-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4);
+        }
+
+        /* Star rating */
+        .star-gold { color: #B8860B; }
+    </style>
+</head>
+<body class="bg-parchment text-ink antialiased">
+
+    <!-- ===== STICKY HEADER ===== -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 bg-forest/95 backdrop-blur-md py-4 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 text-parchment no-underline">
+                <i class="fas fa-balance-scale text-gold text-xl"></i>
+                <span class="font-garamond text-xl md:text-2xl font-semibold tracking-wide">Avocat Stan Ionel</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#despre" class="text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors duration-200">Despre</a>
+                <a href="#specializari" class="text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors duration-200">Specializări</a>
+                <a href="#rezultate" class="text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors duration-200">Rezultate</a>
+                <a href="#testimoniale" class="text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors duration-200">Recenzii</a>
+                <a href="#contact" class="cta-gold text-white font-crimson text-sm tracking-wider uppercase px-5 py-2 rounded no-underline">
+                    <i class="fas fa-calendar-check mr-2"></i>Programare
+                </a>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" class="md:hidden text-parchment text-2xl" aria-label="Meniu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-forest-dark/95 backdrop-blur-md px-4 pb-4 pt-2">
+            <a href="#despre" class="block py-2 text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors">Despre</a>
+            <a href="#specializari" class="block py-2 text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors">Specializări</a>
+            <a href="#rezultate" class="block py-2 text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors">Rezultate</a>
+            <a href="#testimoniale" class="block py-2 text-parchment/80 hover:text-gold font-crimson text-sm tracking-wider uppercase transition-colors">Recenzii</a>
+            <a href="#contact" class="block py-2 text-gold font-crimson text-sm tracking-wider uppercase transition-colors font-semibold">
+                <i class="fas fa-calendar-check mr-2"></i>Programare
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="section-forest min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Decorative background elements -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 text-parchment text-9xl font-garamond select-none">&#167;</div>
+            <div class="absolute bottom-20 right-10 text-parchment text-9xl font-garamond select-none">&#167;</div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <!-- Scale of Justice Icon -->
+            <div class="mb-8" data-aos="fade-down" data-aos-duration="1000">
+                <i class="fas fa-balance-scale text-gold text-6xl md:text-7xl scale-icon"></i>
+            </div>
+
+            <!-- Name -->
+            <h1 class="font-garamond text-5xl md:text-7xl lg:text-8xl font-bold text-parchment mb-4 tracking-wide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                Avocat Stan Ionel
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="font-garamond text-xl md:text-2xl text-gold/90 italic mb-6 tracking-wider" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                Cabinet de Avocatură — București
+            </p>
+
+            <hr class="gold-rule" data-aos="fade" data-aos-delay="500">
+
+            <!-- Tagline -->
+            <p class="font-crimson text-lg md:text-xl text-parchment/70 mb-8 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="600">
+                Experiență, dedicare și rezultate dovedite în instanță.<br>
+                Fiecare cauză primește atenția pe care o merită.
+            </p>
+
+            <!-- 24/7 Badge -->
+            <div class="inline-flex items-center gap-2 badge-24 text-gold px-5 py-2 rounded-full mb-10 font-crimson text-sm tracking-wider" data-aos="fade-up" data-aos-delay="700">
+                <i class="fas fa-clock"></i>
+                <span>Disponibil 24/7</span>
+            </div>
+
+            <!-- Rating -->
+            <div class="flex items-center justify-center gap-2 mb-10" data-aos="fade-up" data-aos-delay="750">
+                <div class="flex gap-1">
+                    <i class="fas fa-star text-gold"></i>
+                    <i class="fas fa-star text-gold"></i>
+                    <i class="fas fa-star text-gold"></i>
+                    <i class="fas fa-star text-gold"></i>
+                    <i class="fas fa-star text-gold"></i>
+                </div>
+                <span class="text-parchment/70 font-crimson text-sm ml-2">5.0 / 5 &mdash; 34 recenzii cu 5 stele</span>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="800">
+                <a href="tel:+40738757740" class="cta-gold text-white font-garamond text-lg px-8 py-4 rounded inline-flex items-center gap-3 no-underline">
+                    <i class="fas fa-calendar-check"></i>
+                    Programează o Consultație
+                </a>
+                <a href="tel:+40738757740" class="border border-gold/40 text-gold hover:bg-gold/10 font-garamond text-lg px-8 py-4 rounded inline-flex items-center gap-3 no-underline transition-all duration-300">
+                    <i class="fas fa-phone-alt"></i>
+                    0738 757 740
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold/50 animate-bounce">
+            <i class="fas fa-chevron-down text-xl"></i>
+        </div>
+    </section>
+
+    <!-- ===== DESPRE CABINET ===== -->
+    <section id="despre" class="py-20 md:py-28 bg-parchment">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <div data-aos="fade-up">
+                <i class="fas fa-balance-scale text-gold text-2xl mb-4 block"></i>
+                <h2 class="font-garamond text-4xl md:text-5xl text-forest font-bold mb-2">Despre Cabinet</h2>
+                <hr class="gold-rule mb-10">
+            </div>
+
+            <div class="text-left font-crimson text-lg md:text-xl leading-relaxed text-ink-light space-y-5" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                    Cabinetul de Avocatură <strong class="text-forest">Stan Ionel</strong> oferă servicii juridice de cea mai înaltă calitate din inima Bucureștiului, Sector 2. Cu o experiență vastă în dreptul muncii, drept administrativ și drept comercial, fiecare client beneficiază de o abordare personalizată și de o dedicare totală.
+                </p>
+                <p>
+                    Ceea ce ne diferențiază este un <strong class="text-forest">istoric impecabil de câștiguri în instanță</strong> — reflectat într-un rating perfect de 5 din 5 stele și zeci de recenzii entuziaste din partea clienților. De la procese complexe împotriva instituțiilor de stat până la consultanță juridică specializată, rezultatele vorbesc de la sine.
+                </p>
+                <p>
+                    Comunicarea permanentă, transparența și implicarea profundă în fiecare dosar sunt valorile care definesc activitatea cabinetului. Disponibil 24/7, avocat Stan Ionel asigură că niciun client nu rămâne fără sprijin juridic atunci când are cea mai mare nevoie.
+                </p>
+            </div>
+
+            <!-- Key stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center p-4">
+                    <div class="font-garamond text-3xl md:text-4xl text-forest font-bold">100%</div>
+                    <div class="font-crimson text-sm text-ink-light mt-1">Procese Câștigate<br><span class="text-xs text-gold">(conform recenziilor)</span></div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="font-garamond text-3xl md:text-4xl text-forest font-bold">24/7</div>
+                    <div class="font-crimson text-sm text-ink-light mt-1">Disponibilitate</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="font-garamond text-3xl md:text-4xl text-forest font-bold">5.0</div>
+                    <div class="font-crimson text-sm text-ink-light mt-1">Rating Google<br><span class="text-xs text-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="font-garamond text-3xl md:text-4xl text-forest font-bold">34+</div>
+                    <div class="font-crimson text-sm text-ink-light mt-1">Recenzii 5 Stele</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPECIALIZĂRI ===== -->
+    <section id="specializari" class="py-20 md:py-28 section-parchment-alt">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <i class="fas fa-gavel text-gold text-2xl mb-4 block"></i>
+                <h2 class="font-garamond text-4xl md:text-5xl text-forest font-bold mb-2">Specializări</h2>
+                <p class="font-crimson text-lg text-ink-light italic mb-2">Arii de practică</p>
+                <hr class="gold-rule mb-14">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Dreptul Muncii -->
+                <div class="practice-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-briefcase text-forest text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-2xl text-forest font-semibold mb-3">Dreptul Muncii</h3>
+                            <p class="font-crimson text-ink-light leading-relaxed">
+                                Apărarea drepturilor salariale, contestarea deciziilor de concediere, litigii cu angajatorul, negocieri contractuale și recuperarea drepturilor financiare datorate. Rezultate dovedite în instanță pentru clienții noștri.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drept Administrativ -->
+                <div class="practice-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-landmark text-forest text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-2xl text-forest font-semibold mb-3">Drept Administrativ</h3>
+                            <p class="font-crimson text-ink-light leading-relaxed">
+                                Contestarea actelor administrative, litigii cu instituții publice precum ISMB și Ministerul Educației, recunoașterea diplomelor, și apărarea drepturilor cetățenilor în fața autorităților statului.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drept Comercial -->
+                <div class="practice-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-line text-forest text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-2xl text-forest font-semibold mb-3">Drept Comercial</h3>
+                            <p class="font-crimson text-ink-light leading-relaxed">
+                                Asistență juridică în litigii comerciale, consultanță pentru societăți, redactarea și negocierea contractelor, rezolvarea disputelor comerciale și protejarea intereselor de afaceri ale clienților.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultanță Juridică -->
+                <div class="practice-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-book text-forest text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-2xl text-forest font-semibold mb-3">Consultanță Juridică</h3>
+                            <p class="font-crimson text-ink-light leading-relaxed">
+                                Consultanță juridică generală, transfer penitenciar internațional, recunoaștere licențe și diplome, analiză juridică a documentelor și asistență completă pentru orice problemă de natură legală.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REZULTATE CARE VORBESC ===== -->
+    <section id="rezultate" class="py-20 md:py-28 section-forest relative overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute top-10 right-10 text-gold/5 text-9xl font-garamond select-none hidden md:block">
+            <i class="fas fa-trophy"></i>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <i class="fas fa-trophy text-gold text-2xl mb-4 block"></i>
+                <h2 class="font-garamond text-4xl md:text-5xl text-parchment font-bold mb-2">Rezultate care Vorbesc</h2>
+                <p class="font-crimson text-lg text-parchment/60 italic mb-2">Cauze câștigate, drepturi restabilite</p>
+                <hr class="gold-rule mb-14">
+            </div>
+
+            <!-- Victory highlights -->
+            <div class="grid md:grid-cols-3 gap-6 mb-14">
+                <div class="victory-card bg-parchment/10 border border-gold/20 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-check-circle text-gold text-3xl mb-4"></i>
+                    <h3 class="font-garamond text-xl text-parchment font-semibold mb-3">Procese câștigate vs. ISMB</h3>
+                    <p class="font-crimson text-parchment/70 text-sm leading-relaxed">
+                        Multiple procese câștigate împotriva Inspectoratului Școlar al Municipiului București, asigurând drepturile profesorilor și personalului din educație.
+                    </p>
+                </div>
+
+                <div class="victory-card bg-parchment/10 border border-gold/20 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-check-circle text-gold text-3xl mb-4"></i>
+                    <h3 class="font-garamond text-xl text-parchment font-semibold mb-3">Victorie vs. Ministerul Educației</h3>
+                    <p class="font-crimson text-parchment/70 text-sm leading-relaxed">
+                        Cauze câștigate împotriva Ministerului Educației pentru recunoașterea drepturilor salariale și profesionale, stabilind precedente importante.
+                    </p>
+                </div>
+
+                <div class="victory-card bg-parchment/10 border border-gold/20 rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-check-circle text-gold text-3xl mb-4"></i>
+                    <h3 class="font-garamond text-xl text-parchment font-semibold mb-3">Transfer Penitenciar Internațional</h3>
+                    <p class="font-crimson text-parchment/70 text-sm leading-relaxed">
+                        Consultanță și reprezentare de succes în cazuri complexe de transfer penitenciar internațional și recunoaștere licențe.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pull quote -->
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="400">
+                <hr class="gold-rule mb-8">
+                <blockquote class="font-garamond text-2xl md:text-3xl text-parchment italic leading-relaxed mb-4">
+                    &ldquo;Toate procesele câștigate&rdquo;
+                </blockquote>
+                <p class="font-crimson text-gold text-sm tracking-widest uppercase">
+                    — Tema recurentă în recenziile clienților
+                </p>
+                <hr class="gold-rule mt-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALE ===== -->
+    <section id="testimoniale" class="py-20 md:py-28 bg-parchment">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <i class="fas fa-quote-left text-gold text-2xl mb-4 block"></i>
+                <h2 class="font-garamond text-4xl md:text-5xl text-forest font-bold mb-2">Ce Spun Clienții</h2>
+                <p class="font-crimson text-lg text-ink-light italic mb-2">Recenzii verificate</p>
+                <hr class="gold-rule mb-14">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 — Alina Samoila -->
+                <div class="testimonial-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="font-crimson text-ink-light italic leading-relaxed mb-6">
+                        &ldquo;Am câștigat 2 procese împotriva ISMB cu ajutorul domnului avocat Stan Ionel. Profesionalism desăvârșit, implicare totală și o comunicare exemplară pe tot parcursul proceselor. Recomand cu cea mai mare încredere — un avocat care chiar luptă pentru clienții săi.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center">
+                            <i class="fas fa-user text-forest text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-garamond text-forest font-semibold">Alina Samoila</p>
+                            <p class="font-crimson text-xs text-ink-light">2 procese câștigate vs. ISMB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 — Florentina Ujica -->
+                <div class="testimonial-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="font-crimson text-ink-light italic leading-relaxed mb-6">
+                        &ldquo;Dl. avocat Stan Ionel a câștigat 3 cauze complexe pentru mine. Este un profesionist excepțional, cu o cunoaștere profundă a legii și o determinare de fier. M-a ținut la curent cu fiecare etapă și mi-a oferit încredere când aveam cea mai mare nevoie. Îl recomand fără ezitare.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center">
+                            <i class="fas fa-user text-forest text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-garamond text-forest font-semibold">Florentina Ujica</p>
+                            <p class="font-crimson text-xs text-ink-light">3 cauze complexe câștigate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 — Tanase Stafie -->
+                <div class="testimonial-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="font-crimson text-ink-light italic leading-relaxed mb-6">
+                        &ldquo;Am apelat la domnul avocat Stan Ionel pentru 2 cauze dificile și ambele au fost câștigate. Seriozitate, competență și o dedicare rară în zilele noastre. Este un avocat care inspiră încredere din prima întâlnire și care nu se oprește până nu obține cel mai bun rezultat.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center">
+                            <i class="fas fa-user text-forest text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-garamond text-forest font-semibold">Tănase Stafie</p>
+                            <p class="font-crimson text-xs text-ink-light">2 cauze câștigate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 — Rodica Racasanu -->
+                <div class="testimonial-card rounded-lg p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                        <i class="fas fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="font-crimson text-ink-light italic leading-relaxed mb-6">
+                        &ldquo;Victorie importantă în dreptul muncii datorită domnului avocat Stan Ionel. Mi-a recuperat drepturile salariale pe care le consideram pierdute. Un om de o integritate desăvârșită, care tratează fiecare caz ca pe o misiune personală. Recunoștință și respect.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center">
+                            <i class="fas fa-user text-forest text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-garamond text-forest font-semibold">Rodica Răcășanu</p>
+                            <p class="font-crimson text-xs text-ink-light">Victorie — dreptul muncii</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More reviews note -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                <hr class="gold-rule mb-6">
+                <p class="font-crimson text-ink-light">
+                    <i class="fas fa-star text-gold mr-2"></i>
+                    34 de recenzii cu 5 stele &mdash; Rating perfect 5.0 / 5
+                    <i class="fas fa-star text-gold ml-2"></i>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-20 md:py-28 section-forest relative overflow-hidden">
+        <div class="absolute inset-0 opacity-3">
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-gold/5 text-[200px] font-garamond select-none">
+                <i class="fas fa-balance-scale"></i>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <i class="fas fa-envelope text-gold text-2xl mb-4 block"></i>
+                <h2 class="font-garamond text-4xl md:text-5xl text-parchment font-bold mb-2">Contact</h2>
+                <p class="font-crimson text-lg text-parchment/60 italic mb-2">Programați o consultație</p>
+                <hr class="gold-rule mb-14">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Contact info -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-delay="200">
+                    <!-- Phone -->
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone-alt text-gold text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-xl text-parchment font-semibold mb-1">Telefon</h3>
+                            <a href="tel:+40738757740" class="font-crimson text-gold text-lg hover:text-gold-light transition-colors no-underline">0738 757 740</a>
+                            <p class="font-crimson text-parchment/50 text-sm mt-1">Disponibil 24/7 pentru urgențe</p>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-gold text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-xl text-parchment font-semibold mb-1">Adresă</h3>
+                            <p class="font-crimson text-parchment/80">
+                                Triama Residence<br>
+                                Strada Baia de Aramă 1<br>
+                                Sector 2, București
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Appointments -->
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-calendar-alt text-gold text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-xl text-parchment font-semibold mb-1">Programări</h3>
+                            <p class="font-crimson text-parchment/80 mb-1">Programări online și la sediu</p>
+                            <p class="font-crimson text-parchment/50 text-sm">Se recomandă programare prealabilă</p>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-gold text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-garamond text-xl text-parchment font-semibold mb-1">Program</h3>
+                            <p class="font-crimson text-parchment/80">Disponibil 24/7</p>
+                            <p class="font-crimson text-parchment/50 text-sm">Luni - Duminică, oricând</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="bg-parchment/10 backdrop-blur-sm border border-gold/20 rounded-lg p-8 md:p-10 text-center" data-aos="fade-left" data-aos-delay="300">
+                    <i class="fas fa-balance-scale text-gold text-4xl mb-6"></i>
+                    <h3 class="font-garamond text-2xl md:text-3xl text-parchment font-bold mb-4">
+                        Aveți nevoie de asistență juridică?
+                    </h3>
+                    <p class="font-crimson text-parchment/70 leading-relaxed mb-8">
+                        Contactați-ne acum pentru o consultație. Fiecare caz primește atenția personalizată pe care o merită. Disponibil 24/7 pentru situații urgente.
+                    </p>
+                    <a href="tel:+40738757740" class="cta-gold text-white font-garamond text-lg px-8 py-4 rounded inline-flex items-center gap-3 no-underline w-full justify-center mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                        Sunați Acum — 0738 757 740
+                    </a>
+                    <a href="https://wa.me/40738757740" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#20BD5A] text-white font-garamond text-lg px-8 py-4 rounded inline-flex items-center gap-3 no-underline w-full justify-center transition-colors duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        WhatsApp
+                    </a>
+                    <hr class="gold-rule mt-8 mb-6">
+                    <div class="flex items-center justify-center gap-2">
+                        <div class="flex gap-1">
+                            <i class="fas fa-star text-gold text-xs"></i>
+                            <i class="fas fa-star text-gold text-xs"></i>
+                            <i class="fas fa-star text-gold text-xs"></i>
+                            <i class="fas fa-star text-gold text-xs"></i>
+                            <i class="fas fa-star text-gold text-xs"></i>
+                        </div>
+                        <span class="font-crimson text-parchment/50 text-xs">Rating 5.0 — 34 recenzii</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-forest-dark py-12">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <i class="fas fa-balance-scale text-gold text-lg"></i>
+                    <span class="font-garamond text-xl text-parchment font-semibold tracking-wide">Avocat Stan Ionel</span>
+                </div>
+                <p class="font-crimson text-parchment/50 text-sm">
+                    Cabinet de Avocatură — București, Sector 2
+                </p>
+            </div>
+
+            <hr class="border-gold/20 mb-8">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="font-crimson text-parchment/40 text-sm">
+                    &copy; 2026 Cabinet de Avocatură Stan Ionel. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="tel:+40738757740" class="text-parchment/40 hover:text-gold transition-colors text-sm font-crimson no-underline">
+                        <i class="fas fa-phone-alt mr-1"></i> 0738 757 740
+                    </a>
+                    <a href="https://wa.me/40738757740" target="_blank" rel="noopener noreferrer" class="text-parchment/40 hover:text-gold transition-colors text-sm font-crimson no-underline">
+                        <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/40738757740" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 60,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+
+    <!-- Header scroll behavior -->
+    <script>
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+
+    <!-- Mobile menu toggle -->
+    <script>
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+    </script>
+
+    <!-- Smooth scroll for anchor links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- ===== SCHEMA.ORG JSON-LD ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Avocat Stan Ionel",
+        "alternateName": "Cabinet de Avocatură Stan Ionel",
+        "description": "Cabinet de Avocatură specializat în Dreptul Muncii, Drept Administrativ, Drept Comercial și Consultanță Juridică. Disponibil 24/7.",
+        "url": "https://avocat-stan-ionel.ro",
+        "telephone": "+40738757740",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Triama Residence, Strada Baia de Aramă 1",
+            "addressLocality": "București",
+            "addressRegion": "Sector 2",
+            "postalCode": "020000",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.437773,
+            "longitude": 26.165484
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "18",
+            "reviewCount": "18"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Alina Samoila"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Am câștigat 2 procese împotriva ISMB cu ajutorul domnului avocat Stan Ionel. Profesionalism desăvârșit, implicare totală și o comunicare exemplară."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Florentina Ujica"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Dl. avocat Stan Ionel a câștigat 3 cauze complexe pentru mine. Este un profesionist excepțional."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Tănase Stafie"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Am apelat la domnul avocat Stan Ionel pentru 2 cauze dificile și ambele au fost câștigate."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Rodica Răcășanu"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Victorie importantă în dreptul muncii datorită domnului avocat Stan Ionel. Mi-a recuperat drepturile salariale."
+            }
+        ],
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "City",
+            "name": "București"
+        },
+        "knowsAbout": [
+            "Dreptul Muncii",
+            "Drept Administrativ",
+            "Drept Comercial",
+            "Consultanță Juridică",
+            "Transfer Penitenciar Internațional"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicii Juridice",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Dreptul Muncii"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Drept Administrativ"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Drept Comercial"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Consultanță Juridică"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</body>
+</html>

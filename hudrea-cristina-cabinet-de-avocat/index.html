@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hudrea Cristina Cabinet de Avocat | Cluj-Napoca</title>
+  <meta name="description" content="Cabinet de avocat in Cluj-Napoca, specializat in drept civil si dreptul familiei. 22 de ani de practica, programare recomandata, consultanta juridica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Inter', 'sans-serif'],
+            display: ['Merriweather', 'serif']
+          },
+          colors: {
+            teal: '#124a4b',
+            deep: '#0d2f31',
+            gold: '#b9975d',
+            ivory: '#f7f5ef',
+            stone: '#d7d7cf'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #123f40;
+      background:
+        radial-gradient(circle at 18% 16%, rgba(185,151,93,.12), transparent 20%),
+        radial-gradient(circle at 84% 10%, rgba(18,74,75,.18), transparent 26%),
+        linear-gradient(180deg, #124a4b 0%, #0d2f31 31%, #f7f5ef 31%, #f7f5ef 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 66px 66px;
+      opacity: .17;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .mesh {
+      background-image: linear-gradient(rgba(185,151,93,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(185,151,93,.09) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .card {
+      background: rgba(255,255,255,.84);
+      border: 1px solid rgba(18,63,64,.08);
+      box-shadow: 0 18px 50px rgba(13,47,49,.08);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(185,151,93,.18);
+      backdrop-filter: blur(16px);
+    }
+    .section-light { background: #f7f5ef; }
+    .section-dark {
+      background: linear-gradient(180deg, #0d2f31 0%, #124a4b 100%);
+      color: #f7f5ef;
+    }
+    .nav-link { position: relative; text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: #b9975d;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-gold {
+      background: linear-gradient(135deg, #dcc78f 0%, #b9975d 55%, #9a7440 100%);
+      color: #0d2f31;
+    }
+    .btn-outline {
+      border: 1px solid rgba(247,245,239,.35);
+      color: #f7f5ef;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,245,239,.98));
+      border: 1px solid rgba(18,63,64,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-deep/96 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-2xl font-semibold tracking-wide text-ivory"><span class="text-gold">Av.</span> Hudrea Cristina</a>
+        <nav class="hidden items-center gap-8 text-ivory lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Servicii</a>
+          <a href="#de-ce" class="nav-link">De ce aici</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40744543339" class="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Programare
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-ivory" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-deep px-5 py-5 text-ivory">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Servicii</a>
+          <a href="#de-ce" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">De ce aici</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-ivory/80">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-deep text-ivory">
+        <div class="absolute inset-0 mesh opacity-35"></div>
+        <div class="absolute left-0 top-28 h-80 w-80 rounded-full bg-gold/18 blur-3xl"></div>
+        <div class="absolute right-0 top-10 h-[28rem] w-[28rem] rounded-full bg-white/6 blur-3xl"></div>
+        <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-5 py-28 lg:grid-cols-[1.03fr_0.97fr] lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-gold">
+              <i class="fa-solid fa-scale-balanced"></i> Cabinet de avocat - Cluj-Napoca
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">Calm juridic, practica reala, programare recomandata.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ivory/76 md:text-xl">
+              Cabinetul Cristina Hudrea este o practica boutique din Cluj-Napoca, axata pe drept civil si dreptul familiei, cu 22 de ani de experienta si o prezenta constanta in oras din 2006.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40744543339" class="btn-gold inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-location-dot"></i> Localizare
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-ivory/72">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">22 ani experienta</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Programare recomandata</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">5/5 pe Google</span>
+            </div>
+          </div>
+          <aside class="glass rounded-[2rem] p-8 shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold">Profil profesional</p>
+            <h2 class="mt-4 font-display text-4xl text-ivory">Birou cald, discret si bine organizat</h2>
+            <div class="mt-8 grid gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Arii principale</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Drept civil si dreptul familiei, inclusiv consultanta si reprezentare.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Acreditare</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Membru Baroul Cluj si al Uniunii Nationale a Barourilor din Romania.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Activitate pe baza de programare, pentru intalniri bine pregatite.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-teal">Despre</p>
+            <h2 class="font-display text-4xl text-teal md:text-5xl">Un cabinet mic, cu atentie mare pentru fiecare client</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              Hudrea Cristina Cabinet de Avocat este un cabinet individual din Cluj-Napoca, coordonat de Cristina-Daniela Hudrea, avocat definitiv si membru al Baroului Cluj si UNBR. Practica are la baza dreptul civil si dreptul familiei, cu o abordare calma, clara si bine structurata. Activitatea s-a dezvoltat constant din 2006, intr-un model de lucru bazat pe programare si comunicare directa.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-gold">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-teal">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-teal p-8 text-ivory shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-gold">Principii</p>
+            <h3 class="mt-4 font-display text-4xl">Transparenta, discretie si organizare</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Mod de lucru</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Programare recomandata si dialog clar, fara promisiuni vagi.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Spatiu</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Birou cu toaleta si adresare directa, in zona centrala a Clujului.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-ivory/55">Experienta</p>
+                <p class="mt-2 text-lg leading-8 text-ivory/90">Doua decenii de practica in dosare civile si familiale.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Servicii</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Servicii in doua zone esentiale ale dreptului</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-ivory">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-ivory/72">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="de-ce" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-teal">De ce aici</p>
+            <h2 class="font-display text-4xl text-teal md:text-5xl">De ce un cabinet boutique poate fi un avantaj real</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-teal">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f7f5ef 0%, #e9f0ee 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-teal">Recenzii</p>
+            <h2 class="font-display text-4xl text-teal md:text-5xl">Recenzii reale din prompt, fara adaugiri</h2>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            <article v-for="review in reviews" :key="review.author + review.text.slice(0, 12)" class="review-card rounded-3xl p-7" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-gold">
+                <i v-for="n in review.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-5 text-base leading-8 text-slate-700">"{{ review.text }}"</p>
+              <p class="mt-5 font-semibold text-teal">{{ review.author }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-gold">Contact</p>
+            <h2 class="font-display text-4xl text-ivory md:text-5xl">Programare si date de contact</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-ivory/92 hover:text-gold transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Telefon</p>
+              <a href="tel:+40744543339" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">0744 543 339</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-envelope"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Email</p>
+              <a href="mailto:cabinetavocathudrea@yahoo.com" class="mt-2 block text-lg text-ivory/92 hover:text-gold transition">cabinetavocathudrea@yahoo.com</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/12 text-gold"><i class="fa-solid fa-calendar-check"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/55">Program</p>
+              <p class="mt-2 text-lg text-ivory/90">Exclusiv pe baza de programare</p>
+              <p class="text-ivory/68">Consultatii recomandate inainte de vizita</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-deep py-12 text-ivory">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-gold">Hudrea Cristina Cabinet de Avocat</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-ivory/60">Avocat definitiv - Baroul Cluj - din 2006</p>
+          </div>
+          <div class="space-y-2 text-sm text-ivory/65">
+            <p><i class="fa-solid fa-phone mr-2 text-gold"></i>0744 543 339</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-gold"></i>cabinetavocathudrea@yahoo.com</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-gold"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-ivory/45">© 2026 Hudrea Cristina Cabinet de Avocat. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Calea Dorobanților 5, Apartament 3, 400394 Cluj-Napoca',
+          mapsLink: 'https://www.google.com/maps/place/Hudrea+Cristina+Cabinet+de+Avocat/data=!4m7!3m6!1s0x47490c26b278002f:0xa9df1ce7136ead57!8m2!3d46.7713929!4d23.5989373!16s%2Fg%2F1hc667pdb!19sChIJLwB4siYMSUcRV61uE-cc36k?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-award', label: 'Ani', value: '22+', note: 'practica juridica sustinuta' },
+            { icon: 'fa-solid fa-scale-balanced', label: 'Arii', value: '2', note: 'civil si familie' },
+            { icon: 'fa-solid fa-star', label: 'Rating', value: '5/5', note: '6 recenzii verificate' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-scale-balanced', title: 'Drept civil', text: 'Litigii civile, contracte, mosteniri si alte situatii patrimoniale abordate meticulos.' },
+            { icon: 'fa-solid fa-heart', title: 'Dreptul familiei', text: 'Divort, custodie, partaj si probleme familiale rezolvate cu tact si claritate.' },
+            { icon: 'fa-solid fa-comments', title: 'Consultanta juridica', text: 'Analiza situatiei, explicatii clare si recomandari practice pentru urmatorii pasi.' },
+            { icon: 'fa-solid fa-gavel', title: 'Reprezentare', text: 'Prezentare in fata instantelor si sustinere constanta in dosare sensibile.' },
+            { icon: 'fa-solid fa-file-signature', title: 'Redactare si verificare', text: 'Contracte si documente juridice redactate sau analizate cu atentie la detalii.' },
+            { icon: 'fa-solid fa-shield-halved', title: 'Suport discret', text: 'Model de lucru bazat pe programare si pe o relatie profesionala sigura.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-handshake', title: 'Relatie directa', text: 'Clientul lucreaza direct cu avocatul, nu printr-o structura impersonală.' },
+            { icon: 'fa-solid fa-calendar-check', title: 'Programare recomandata', text: 'Ritmul este bine controlat, iar intalnirile sunt pregatite dinainte.' },
+            { icon: 'fa-solid fa-person-shelter', title: 'Discretie si calm', text: 'Problemele sensibile sunt gestionate cu tact si fara presiune inutila.' },
+            { icon: 'fa-solid fa-location-dot', title: 'Birou central', text: 'Adresa din Cluj-Napoca este usor de localizat si adecvata intalnirilor profesionale.' }
+          ],
+          reviews: [
+            { author: 'Bendorfean Traian', stars: 5, text: 'Sunt zeci de mii de avocati in Romania. Fiecare cu nivelul lui de pregatire si seriozitate. Dar am fost uimit sa descoper in persoana avocat Traian Laszlo, un munte de profesionalism si aplecare pe subiect. Atat eu cat si alti zeci de oameni recomandati de mine dansului. Succese domnule avocat si tot asa in continuare' },
+            { author: 'victor eagle studio', stars: 5, text: 'Ofera servicii pentru toate domeniile, au echipa mare si preturi bune! I recomand cu drag oricui!' },
+            { author: 'florin pop', stars: 5, text: 'Cel mai top cabinet de avocat din Cluj Napoca! Recomand cu drag' },
+            { author: 'Laura Cristina', stars: 5, text: 'Profesionalismul, seriozitatea si atentia la detalii au fost evidente pe tot parcursul colaborarii. In cadrul biroului Law Laszlo avocatii sunt foarte bine pregatiti, ofera solutii eficiente si explica fiecare pas in mod clar si transparent. Comunicarea a fost rapida, iar rezultatele au fost peste asteptari. Recomand cu incredere pentru oricine are nevoie de servicii juridice de calitate!' },
+            { author: 'Victor Pop', stars: 5, text: 'Cabinet ultra central, echipa foarte organizata' },
+            { author: 'Victor Pop', stars: 5, text: 'Cel mai prompt! Recomand! Preturi corecte' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => this.scrolled = window.scrollY > 20);
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.turbo/
+.vercel/
+out/
+*.log
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

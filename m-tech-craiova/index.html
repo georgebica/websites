@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M-tech Craiova | Service Auto Craiova</title>
+  <meta name="description" content="M-tech Craiova este un service auto din Craiova specializat in reparatii, diagnoza si inlocuire discuri si placute de frana. Programari si piese auto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.31/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Inter', 'sans-serif'],
+            display: ['Oswald', 'sans-serif']
+          },
+          colors: {
+            coal: '#0b0f14',
+            asphalt: '#121922',
+            steel: '#233142',
+            orange: '#ff8a1f',
+            ember: '#ffb15a',
+            paper: '#f4f1ea'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #e9eef5;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,138,31,.18), transparent 20%),
+        radial-gradient(circle at 82% 10%, rgba(60,76,95,.35), transparent 24%),
+        linear-gradient(180deg, #0b0f14 0%, #121922 35%, #f4f1ea 35%, #f4f1ea 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 72px 72px;
+      opacity: .18;
+      z-index: 0;
+    }
+    .page-shell { position: relative; z-index: 1; }
+    .grid-noise {
+      background-image:
+        linear-gradient(rgba(255,138,31,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,138,31,.08) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .section-light { background: #f4f1ea; color: #1a2230; }
+    .section-dark {
+      background: linear-gradient(180deg, #121922 0%, #0b0f14 100%);
+      color: #f4f1ea;
+    }
+    .card {
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(26,34,48,.08);
+      box-shadow: 0 20px 54px rgba(11,15,20,.10);
+    }
+    .dark-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,138,31,.18);
+      backdrop-filter: blur(16px);
+    }
+    .nav-link { position: relative; text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0; height: 1px;
+      background: #ff8a1f;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-orange {
+      background: linear-gradient(135deg, #ffb15a 0%, #ff8a1f 52%, #d96200 100%);
+      color: #0b0f14;
+    }
+    .btn-outline {
+      border: 1px solid rgba(244,241,234,.35);
+      color: #f4f1ea;
+      background: rgba(255,255,255,.04);
+    }
+    .review-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(244,241,234,.98));
+      border: 1px solid rgba(26,34,48,.08);
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-shell">
+    <header :class="['fixed inset-x-0 top-0 z-50 transition-all duration-300', scrolled ? 'bg-coal/96 shadow-2xl backdrop-blur-xl' : 'bg-transparent']">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="font-display text-3xl font-semibold tracking-widest text-paper">M-tech Craiova</a>
+        <nav class="hidden items-center gap-8 text-paper lg:flex">
+          <a href="#despre" class="nav-link">Despre</a>
+          <a href="#servicii" class="nav-link">Servicii</a>
+          <a href="#de-ce" class="nav-link">De ce noi</a>
+          <a href="#recenzii" class="nav-link">Recenzii</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+40774062566" class="btn-orange inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5">
+            <i class="fa-solid fa-phone"></i> Sunati acum
+          </a>
+        </nav>
+        <button class="lg:hidden rounded-full border border-white/20 p-3 text-paper" @click="menuOpen = !menuOpen" aria-label="Deschide meniul">
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
+      <div v-if="menuOpen" class="lg:hidden border-t border-white/10 bg-coal px-5 py-5 text-paper">
+        <div class="flex flex-col gap-4">
+          <a href="#despre" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-paper/80">Despre</a>
+          <a href="#servicii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-paper/80">Servicii</a>
+          <a href="#de-ce" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-paper/80">De ce noi</a>
+          <a href="#recenzii" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-paper/80">Recenzii</a>
+          <a href="#contact" @click="menuOpen=false" class="uppercase tracking-widest text-sm text-paper/80">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative overflow-hidden bg-coal text-paper">
+        <div class="absolute inset-0 grid-noise opacity-30"></div>
+        <div class="absolute left-0 top-24 h-80 w-80 rounded-full bg-orange/18 blur-3xl"></div>
+        <div class="absolute right-0 top-12 h-[28rem] w-[28rem] rounded-full bg-white/6 blur-3xl"></div>
+        <div class="mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-5 py-28 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-orange/25 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-orange">
+              <i class="fa-solid fa-screwdriver-wrench"></i> Service auto in Craiova
+            </p>
+            <h1 class="font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">Diagnoza clara. Reparatii rapide. Preturi corecte.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-paper/78 md:text-xl">
+              M-tech Craiova este un service auto axat pe reparatii generale, diagnoza si inlocuiri de discuri si placute de frana. Atelierul lucreaza organizat, cu mecanici pregatiti si raspuns prompt pentru clienti.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40774062566" class="btn-orange inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5">
+                <i class="fa-solid fa-phone"></i> Sunati acum
+              </a>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="btn-outline inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 font-semibold transition hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-solid fa-location-dot"></i> Localizare
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-3 text-sm text-paper/72">
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">5/5 pe Google</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">47 recenzii</span>
+              <span class="rounded-full border border-white/12 bg-white/5 px-4 py-2">Q-SERVICE</span>
+            </div>
+          </div>
+          <aside class="glass rounded-[2rem] border border-white/10 p-8 shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-orange">Profil atelier</p>
+            <h2 class="mt-4 font-display text-4xl text-paper">Service de cartier cu ritm bun si rezultate solide</h2>
+            <div class="mt-8 grid gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-paper">
+                <p class="text-sm uppercase tracking-[0.18em] text-paper/55">Activitate</p>
+                <p class="mt-2 text-lg leading-8 text-paper/90">Reparatii generale, diagnoza si lucrari uzuale de intretinere.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-paper">
+                <p class="text-sm uppercase tracking-[0.18em] text-paper/55">Parteneriat</p>
+                <p class="mt-2 text-lg leading-8 text-paper/90">Afiliere Q-SERVICE Romania si acces la standarde de lucru uniforme.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-paper">
+                <p class="text-sm uppercase tracking-[0.18em] text-paper/55">Program</p>
+                <p class="mt-2 text-lg leading-8 text-paper/90">Luni - Vineri: 09:00 - 18:00. Sambata si duminica inchis.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section-light py-20 lg:py-28">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-steel">Despre</p>
+            <h2 class="font-display text-4xl text-steel md:text-5xl">Un atelier mic, dar orientat catre munca facuta bine</h2>
+            <p class="mt-6 max-w-3xl text-base leading-8 text-slate-700">
+              M-Tech Craiova S.R.L. este un service auto din Craiova, activ din 2016, specializat in reparatii si intretinere auto. Datele din prompt arata o crestere de cifra de afaceri, o echipa mica dar stabila si o reputatie buna in randul clientilor. Lucrarile principale includ diagnoza, interventii mecanice si inlocuiri de discuri si placute de frana, cu accent pe comunicare si preturi corecte.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div v-for="item in stats" :key="item.label" class="card rounded-2xl p-5">
+                <div class="flex items-center gap-3 text-orange">
+                  <i :class="item.icon"></i>
+                  <span class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{{ item.label }}</span>
+                </div>
+                <div class="mt-4 font-display text-4xl text-steel">{{ item.value }}</div>
+                <p class="mt-1 text-sm text-slate-600">{{ item.note }}</p>
+              </div>
+            </div>
+          </div>
+          <aside class="rounded-[2rem] bg-steel p-8 text-paper shadow-2xl" data-aos="fade-left">
+            <p class="text-xs uppercase tracking-[0.26em] text-orange">Date-cheie</p>
+            <h3 class="mt-4 font-display text-4xl">Crestere, ordine si reparatii explicate corect</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-paper/55">2024</p>
+                <p class="mt-2 text-lg leading-8 text-paper/90">Cifra de afaceri in crestere si companie activa cu 2 angajati.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-paper/55">Sector</p>
+                <p class="mt-2 text-lg leading-8 text-paper/90">Drumul Industriilor 12, Craiova, cu activitate de reparatii auto.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm uppercase tracking-[0.18em] text-paper/55">Facilitati</p>
+                <p class="mt-2 text-lg leading-8 text-paper/90">Mecanic dedicat si toaleta pentru clienti.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicii" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-orange">Servicii</p>
+            <h2 class="font-display text-4xl text-paper md:text-5xl">Interventii uzuale si lucrari de intretinere auto</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article v-for="service in services" :key="service.title" class="dark-card rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:border-orange/40" data-aos="fade-up">
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange/12 text-orange">
+                <i :class="service.icon + ' text-xl'"></i>
+              </div>
+              <h3 class="mt-5 font-display text-3xl text-paper">{{ service.title }}</h3>
+              <p class="mt-3 leading-8 text-paper/72">{{ service.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="de-ce" class="section-light py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-steel">De ce noi</p>
+            <h2 class="font-display text-4xl text-steel md:text-5xl">Patru semne ca atelierul lucreaza responsabil</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            <article v-for="item in why" :key="item.title" class="card rounded-3xl p-7 transition duration-300 hover:-translate-y-1" data-aos="fade-up">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange/12 text-orange">
+                  <i :class="item.icon"></i>
+                </div>
+                <div>
+                  <h3 class="font-display text-3xl text-steel">{{ item.title }}</h3>
+                  <p class="mt-2 leading-8 text-slate-700">{{ item.text }}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="py-20 lg:py-28" style="background: linear-gradient(180deg, #f4f1ea 0%, #e8edf2 100%);">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-steel">Recenzii</p>
+            <h2 class="font-display text-4xl text-steel md:text-5xl">Recenzii selectate din cele 47 existente</h2>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+            <article v-for="review in reviews" :key="review.author + review.text.slice(0, 12)" class="review-card rounded-3xl p-7" data-aos="fade-up">
+              <div class="flex items-center gap-1 text-orange">
+                <i v-for="n in review.stars" :key="n" class="fa-solid fa-star"></i>
+              </div>
+              <p class="mt-5 text-base leading-8 text-slate-700">"{{ review.text }}"</p>
+              <p class="mt-5 font-semibold text-steel">{{ review.author }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-dark py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-orange">Contact</p>
+            <h2 class="font-display text-4xl text-paper md:text-5xl">Datele atelierului si programul de lucru</h2>
+          </div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange/12 text-orange"><i class="fa-solid fa-location-dot"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-paper/55">Adresa</p>
+              <a :href="mapsLink" target="_blank" rel="noopener" class="mt-2 block leading-8 text-lg text-paper/92 hover:text-orange transition">{{ address }}</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange/12 text-orange"><i class="fa-solid fa-phone"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-paper/55">Telefon</p>
+              <a href="tel:+40774062566" class="mt-2 block text-lg text-paper/92 hover:text-orange transition">0774 062 566</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange/12 text-orange"><i class="fa-solid fa-envelope"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-paper/55">Email</p>
+              <a href="mailto:mtechcraiova@q-service.ro" class="mt-2 block text-lg text-paper/92 hover:text-orange transition">mtechcraiova@q-service.ro</a>
+            </article>
+            <article class="dark-card rounded-3xl p-6" data-aos="fade-up">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange/12 text-orange"><i class="fa-solid fa-clock"></i></div>
+              <p class="mt-5 text-sm uppercase tracking-[0.18em] text-paper/55">Program</p>
+              <div class="mt-2 space-y-1 text-paper/90">
+                <p>Luni - Vineri: 09:00 - 18:00</p>
+                <p>Sambata - Duminica: Inchis</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-coal py-12 text-paper">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-display text-3xl text-orange">M-tech Craiova</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.22em] text-paper/60">Service auto - reparatii si diagnoza in Craiova</p>
+          </div>
+          <div class="space-y-2 text-sm text-paper/65">
+            <p><i class="fa-solid fa-phone mr-2 text-orange"></i>0774 062 566</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-orange"></i>mtechcraiova@q-service.ro</p>
+            <p><i class="fa-solid fa-location-dot mr-2 text-orange"></i>{{ address }}</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm text-paper/45">© 2026 M-tech Craiova. Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          menuOpen: false,
+          scrolled: false,
+          address: 'Drumul Industriilor 12, 123446 Craiova',
+          mapsLink: 'https://www.google.com/maps/place/M-tech+Craiova/data=!4m7!3m6!1s0x4752d925dcb9ff8b:0x840d4ac3eefca075!8m2!3d44.3501777!4d23.7732355!16s%2Fg%2F11vsbqzhy1!19sChIJi_-53CXZUkcRdaD87sNKDYQ?authuser=0&hl=en&rclk=1',
+          stats: [
+            { icon: 'fa-solid fa-chart-line', label: 'Crestere', value: '+95%', note: 'crestere a veniturilor in 2024' },
+            { icon: 'fa-solid fa-users', label: 'Echipa', value: '3', note: 'angajati in 2024' },
+            { icon: 'fa-solid fa-star', label: 'Rating', value: '5/5', note: '47 recenzii verificate' }
+          ],
+          services: [
+            { icon: 'fa-solid fa-car-burst', title: 'Reparatii generale', text: 'Interventii mecanice si operatiuni uzuale de service pentru autovehicule.' },
+            { icon: 'fa-solid fa-stethoscope', title: 'Diagnoza auto', text: 'Verificare si identificare rapida a problemelor, cu recomandari clare pentru reparatie.' },
+            { icon: 'fa-solid fa-circle-notch', title: 'Discuri si placute frana', text: 'Inlocuiri si operatiuni pentru sistemul de franare, cu accent pe siguranta.' },
+            { icon: 'fa-solid fa-gears', title: 'Intretinere preventiva', text: 'Revizii si lucrari de intretinere pentru functionare stabila si costuri controlate.' },
+            { icon: 'fa-solid fa-screwdriver-wrench', title: 'Consultanta tehnica', text: 'Explicatii pe intelesul clientului despre piese, costuri si timpul de executie.' },
+            { icon: 'fa-solid fa-warehouse', title: 'Piese auto', text: 'Comercializare de piese si componente necesare pentru reparatii si intretinere.' }
+          ],
+          why: [
+            { icon: 'fa-solid fa-bolt', title: 'Raspuns prompt', text: 'Clientii apreciaza timpii buni de reactie si programarea eficienta.' },
+            { icon: 'fa-solid fa-money-bill-wave', title: 'Preturi corecte', text: 'Feedback-ul mentioneaza costuri accesibile si transparenta in lucrare.' },
+            { icon: 'fa-solid fa-shield-halved', title: 'Partener Q-SERVICE', text: 'Afilierea la o retea nationala sustine standarde uniforme de lucru.' },
+            { icon: 'fa-solid fa-comment-dots', title: 'Comunicare clara', text: 'Despre lucrari se vorbeste simplu, direct si fara formule complicate.' }
+          ],
+          reviews: [
+            { author: 'grigorascu daniel', stars: 5, text: 'Tot timpul am gasit preturi bune si baieti pregatiti care stiu sa te sfatuiasca...!!!' },
+            { author: 'cyoby flo', stars: 5, text: 'Baieti foarte amabili si servire prompta.' },
+            { author: 'Robert Bojenoiu', stars: 5, text: 'Foarte bun magazinul de piese auto si preturi accesibile.' },
+            { author: 'Claudiu David', stars: 5, text: 'Seriozitate si preturi corecte!' },
+            { author: 'Razvan-Cristian Marian', stars: 5, text: 'Piese comandate profesional si rapid!' },
+            { author: 'Gigi G', stars: 5, text: 'Seriozitate si promptitudine, bravo lor!' }
+          ]
+        };
+      },
+      mounted() {
+        this.scrolled = window.scrollY > 20;
+        window.addEventListener('scroll', () => this.scrolled = window.scrollY > 20);
+        AOS.init({ duration: 850, once: true, offset: 60 });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

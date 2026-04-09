@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADG Proiect | Birou de Arhitectură Cluj-Napoca</title>
+  <meta name="description" content="ADG Proiect — birou de arhitectură în Cluj-Napoca. Proiectare, documentație tehnică, autorizații de construire și consultanță în arhitectură.">
+  <meta name="theme-color" content="#1A1A1A">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="ADG Proiect">
+  <meta property="og:title" content="ADG Proiect | Birou de Arhitectură Cluj-Napoca">
+  <meta property="og:description" content="ADG Proiect — birou de arhitectură în Cluj-Napoca. Proiectare, documentație tehnică, autorizații de construire și consultanță în arhitectură.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            concrete: '#B0B0B0',
+            deep: '#1A1A1A',
+            electric: '#0066FF'
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif']
+          },
+          borderRadius: {
+            DEFAULT: '0'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      border-radius: 0 !important;
+    }
+
+    body {
+      background: #FFFFFF;
+      color: #1A1A1A;
+      font-family: 'DM Sans', sans-serif;
+      text-rendering: geometricPrecision;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #0066FF;
+      outline-offset: 4px;
+    }
+
+    .blueprint-grid {
+      background-image:
+        linear-gradient(rgba(176, 176, 176, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(176, 176, 176, 0.18) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+
+    .blueprint-grid-dark {
+      background-image:
+        linear-gradient(rgba(176, 176, 176, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(176, 176, 176, 0.08) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .line-draw {
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    [data-aos].aos-animate .line-draw {
+      transform: scaleX(1);
+    }
+
+    @media (max-width: 640px) {
+      .blueprint-grid,
+      .blueprint-grid-dark {
+        background-size: 48px 48px;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Architect",
+      "name": "ADG Proiect",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bloc V, Str. Donath 1",
+        "addressLocality": "Cluj-Napoca",
+        "postalCode": "400535",
+        "addressCountry": "RO"
+      },
+      "telephone": "+40264420831",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.771987,
+        "longitude": 23.560985
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1"
+      }
+    }
+  </script>
+</head>
+<body class="font-body antialiased selection:bg-electric selection:text-white">
+  <header id="floatingBar" class="fixed inset-x-0 top-0 z-50 -translate-y-full border-b border-white/15 bg-deep/95 transition-transform duration-300">
+    <nav aria-label="Bară de contact" class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+      <a href="#top" class="font-heading text-xs font-bold uppercase tracking-[0.32em] text-white sm:text-sm">ADG Proiect</a>
+      <a href="tel:+40264420831" class="inline-flex items-center gap-3 border border-electric px-4 py-3 font-heading text-[11px] font-bold uppercase tracking-[0.2em] text-white transition hover:bg-electric">
+        <i class="fa-solid fa-phone text-electric" aria-hidden="true"></i>
+        <span>0264 420 831</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="overflow-x-hidden">
+    <section id="top" class="blueprint-grid relative flex min-h-screen items-center bg-white">
+      <div class="absolute left-6 top-24 h-16 w-16 border-l-2 border-t-2 border-deep/20 md:left-10 md:top-10 md:h-20 md:w-20"></div>
+      <div class="absolute bottom-10 right-6 h-20 w-20 border-b-2 border-r-2 border-deep/20 md:bottom-12 md:right-10 md:h-24 md:w-24"></div>
+
+      <div class="mx-auto w-full max-w-7xl px-6 pb-24 pt-28 md:px-10 md:pb-32">
+        <div class="grid grid-cols-12 gap-y-10">
+          <div class="col-span-12 lg:col-span-10 xl:col-span-9">
+            <h1 data-aos="fade-up" data-aos-duration="900" class="font-heading text-7xl font-bold uppercase leading-[0.82] tracking-[-0.08em] text-deep sm:text-8xl lg:text-9xl xl:text-[11rem]">
+              <span class="block">ADG</span>
+              <span class="block">PROIECT</span>
+            </h1>
+
+            <div data-aos="fade-right" data-aos-delay="150" class="mt-8 w-32 overflow-hidden">
+              <span class="line-draw block h-[2px] w-full bg-electric"></span>
+            </div>
+
+            <p data-aos="fade-up" data-aos-delay="250" class="mt-8 font-heading text-sm font-bold uppercase tracking-[0.34em] text-concrete sm:text-base">Birou de arhitectură</p>
+            <p data-aos="fade-up" data-aos-delay="350" class="mt-4 text-base text-concrete sm:text-lg">Cluj-Napoca, România</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#despre" class="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3 text-concrete transition-colors hover:text-deep" aria-label="Derulați către secțiunea Despre noi">
+        <span class="h-10 w-px bg-concrete/60"></span>
+        <i class="fa-solid fa-chevron-down text-sm" aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section id="despre" class="relative border-t-4 border-deep bg-white py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-6 md:px-10">
+        <div class="section-label" data-aos="fade-up">
+          <h2 class="font-heading text-xs font-bold uppercase tracking-[0.3em] text-concrete sm:text-sm">Despre noi</h2>
+          <span class="h-px flex-1 bg-concrete"></span>
+        </div>
+
+        <div class="mt-12 max-w-3xl" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-2xl leading-tight text-deep md:text-4xl md:leading-tight">
+            Arhitectura cere rigoare. Fiecare proiect începe cu amplasamentul, cu reglementarea și cu modul în care spațiul va fi folosit. În Cluj-Napoca, lucrăm într-un context urban care se schimbă rapid și cere decizii precise. Preferăm claritatea în locul gesturilor inutile. Proiectăm responsabil, astfel încât ideea să poată fi construită corect și folosită firesc.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii" class="relative border-t-4 border-deep bg-white py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-6 md:px-10">
+        <div class="section-label" data-aos="fade-up">
+          <h2 class="font-heading text-xs font-bold uppercase tracking-[0.3em] text-concrete sm:text-sm">Servicii</h2>
+          <span class="h-px flex-1 bg-concrete"></span>
+        </div>
+
+        <div class="mt-12 grid border-4 border-deep md:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
+          <article class="border-b-4 border-deep p-8 md:border-r-4 md:p-10">
+            <i class="fa-solid fa-drafting-compass text-2xl text-electric" aria-hidden="true"></i>
+            <h3 class="mt-6 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-deep">Proiectare</h3>
+            <p class="mt-4 text-lg leading-relaxed text-deep/80">Proiectare arhitecturală pentru locuințe și spații comerciale.</p>
+          </article>
+
+          <article class="border-b-4 border-deep p-8 md:p-10">
+            <i class="fa-solid fa-file-lines text-2xl text-electric" aria-hidden="true"></i>
+            <h3 class="mt-6 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-deep">Documentație</h3>
+            <p class="mt-4 text-lg leading-relaxed text-deep/80">Documentație tehnică completă pentru fiecare etapă a proiectului.</p>
+          </article>
+
+          <article class="border-b-4 border-deep p-8 md:border-b-0 md:border-r-4 md:p-10">
+            <i class="fa-solid fa-stamp text-2xl text-electric" aria-hidden="true"></i>
+            <h3 class="mt-6 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-deep">Autorizări</h3>
+            <p class="mt-4 text-lg leading-relaxed text-deep/80">Documentații necesare obținerii autorizațiilor de construire.</p>
+          </article>
+
+          <article class="p-8 md:p-10">
+            <i class="fa-solid fa-comments text-2xl text-electric" aria-hidden="true"></i>
+            <h3 class="mt-6 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-deep">Consultanță</h3>
+            <p class="mt-4 text-lg leading-relaxed text-deep/80">Consultanță de specialitate în arhitectură și urbanism.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proces" class="blueprint-grid-dark relative border-t-4 border-deep bg-deep py-24 text-white md:py-32">
+      <div class="mx-auto max-w-7xl px-6 md:px-10">
+        <div class="section-label" data-aos="fade-up">
+          <h2 class="font-heading text-xs font-bold uppercase tracking-[0.3em] text-white sm:text-sm">Procesul nostru</h2>
+          <span class="h-px flex-1 bg-concrete/40"></span>
+        </div>
+
+        <div class="mt-12 grid gap-10 md:grid-cols-2 md:gap-x-16 md:gap-y-14">
+          <article class="border-t border-concrete/30 pt-8" data-aos="fade-up" data-aos-delay="50">
+            <p class="font-heading text-5xl font-bold leading-none text-electric sm:text-6xl">01.</p>
+            <h3 class="mt-5 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-white">Analiză</h3>
+            <p class="mt-4 max-w-md text-lg leading-relaxed text-white/78">Înțelegem cerințele, studiem amplasamentul și definim obiectivele.</p>
+          </article>
+
+          <article class="border-t border-concrete/30 pt-8" data-aos="fade-up" data-aos-delay="100">
+            <p class="font-heading text-5xl font-bold leading-none text-electric sm:text-6xl">02.</p>
+            <h3 class="mt-5 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-white">Concept</h3>
+            <p class="mt-4 max-w-md text-lg leading-relaxed text-white/78">Dezvoltăm conceptul arhitectural și soluțiile funcționale.</p>
+          </article>
+
+          <article class="border-t border-concrete/30 pt-8" data-aos="fade-up" data-aos-delay="150">
+            <p class="font-heading text-5xl font-bold leading-none text-electric sm:text-6xl">03.</p>
+            <h3 class="mt-5 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-white">Proiectare</h3>
+            <p class="mt-4 max-w-md text-lg leading-relaxed text-white/78">Elaborăm documentația tehnică completă pentru dezvoltarea proiectului.</p>
+          </article>
+
+          <article class="border-t border-concrete/30 pt-8" data-aos="fade-up" data-aos-delay="200">
+            <p class="font-heading text-5xl font-bold leading-none text-electric sm:text-6xl">04.</p>
+            <h3 class="mt-5 font-heading text-2xl font-bold uppercase tracking-[-0.03em] text-white">Implementare</h3>
+            <p class="mt-4 max-w-md text-lg leading-relaxed text-white/78">Asistăm pe parcursul întregului proces de autorizare și execuție.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="context" class="relative border-t-4 border-deep bg-white py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-6 md:px-10">
+        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5" data-aos="fade-up">
+            <div class="section-label">
+              <p class="font-heading text-xs font-bold uppercase tracking-[0.3em] text-concrete sm:text-sm">Cluj-Napoca</p>
+              <span class="h-px flex-1 bg-concrete"></span>
+            </div>
+            <h2 class="mt-8 font-heading text-4xl font-bold uppercase leading-none tracking-[-0.04em] text-deep sm:text-5xl lg:text-6xl">Arhitectură în Cluj-Napoca</h2>
+          </div>
+
+          <div class="lg:col-span-7" data-aos="fade-up" data-aos-delay="100">
+            <p class="max-w-3xl text-lg leading-relaxed text-deep/80 sm:text-xl">
+              Cluj-Napoca crește prin densificare, reconversii și extinderi controlate. Într-un oraș în care țesutul istoric coexistă cu dezvoltarea recentă, proiectarea cere echilibru între context, reglementare și utilizare reală. ADG Proiect lucrează din Cluj-Napoca, aproape de amplasament și de cerințele administrative care influențează fiecare etapă a construirii.
+            </p>
+
+            <address class="mt-8 border-l-4 border-deep pl-6 text-base not-italic text-deep sm:text-lg">
+              Bloc V, Str. Donath 1, 400535 Cluj-Napoca, România
+            </address>
+
+            <a href="https://www.google.com/maps/place/ADG+Proiect/data=!4m7!3m6!1s0x47490e8cafff835d:0xfa039a7985f68be!8m2!3d46.7719867!4d23.560985!16s%2Fg%2F1hcb4frvw!19sChIJXYP_r4wOSUcRvmhfmKc5oA8?authuser=0&amp;hl=en&amp;rclk=1" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.16em] text-electric underline decoration-electric underline-offset-4 hover:text-deep sm:text-base">
+              Vezi locația pe Google Maps
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="blueprint-grid-dark relative border-t-4 border-deep bg-deep py-24 text-white md:py-32">
+      <div class="mx-auto max-w-7xl px-6 md:px-10">
+        <div class="section-label" data-aos="fade-up">
+          <h2 class="font-heading text-xs font-bold uppercase tracking-[0.3em] text-concrete sm:text-sm">Contact</h2>
+          <span class="h-px flex-1 bg-concrete/40"></span>
+        </div>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-7" data-aos="fade-up" data-aos-delay="50">
+            <p class="font-heading text-4xl font-bold uppercase leading-none tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">Discutați proiectul dumneavoastră</p>
+          </div>
+
+          <div class="lg:col-span-5 lg:border-l lg:border-concrete/30 lg:pl-12" data-aos="fade-up" data-aos-delay="100">
+            <a href="tel:+40264420831" class="font-heading text-4xl font-bold leading-none text-electric transition-colors hover:text-white sm:text-5xl">0264 420 831</a>
+            <p class="mt-6 text-base leading-relaxed text-concrete sm:text-lg">Bloc V, Str. Donath 1, 400535 Cluj-Napoca, România</p>
+
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+              <a href="tel:+40264420831" class="inline-flex items-center justify-center bg-electric px-8 py-4 font-heading text-sm font-bold uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-deep">Sunați acum</a>
+              <a href="https://www.google.com/maps/place/ADG+Proiect/data=!4m7!3m6!1s0x47490e8cafff835d:0xfa039a7985f68be!8m2!3d46.7719867!4d23.560985!16s%2Fg%2F1hcb4frvw!19sChIJXYP_r4wOSUcRvmhfmKc5oA8?authuser=0&amp;hl=en&amp;rclk=1" target="_blank" rel="noreferrer" class="text-sm uppercase tracking-[0.16em] text-concrete underline underline-offset-4 transition-colors hover:text-white">Vezi locația pe hartă</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-concrete/35 bg-deep py-10">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 md:px-10">
+      <p class="font-heading text-sm font-bold uppercase tracking-[0.22em] text-white">ADG Proiect</p>
+      <address class="text-sm not-italic leading-relaxed text-concrete">Bloc V, Str. Donath 1, 400535 Cluj-Napoca, România</address>
+      <a href="tel:+40264420831" class="w-fit text-sm text-concrete transition-colors hover:text-white">0264 420 831</a>
+      <p class="text-xs uppercase tracking-[0.14em] text-concrete">(c) 2024 ADG Proiect. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic',
+      offset: 60
+    });
+
+    const floatingBar = document.getElementById('floatingBar');
+
+    function toggleFloatingBar() {
+      if (window.scrollY > window.innerHeight * 0.55) {
+        floatingBar.classList.remove('-translate-y-full');
+      } else {
+        floatingBar.classList.add('-translate-y-full');
+      }
+    }
+
+    window.addEventListener('scroll', toggleFloatingBar, { passive: true });
+    toggleFloatingBar();
+  </script>
+</body>
+</html>

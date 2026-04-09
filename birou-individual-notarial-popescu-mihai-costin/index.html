@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birou Individual Notarial Popescu Mihai-Costin | Notar Public Bucuresti</title>
+    <meta name="description" content="Birou Individual Notarial Popescu Mihai-Costin - Servicii notariale profesionale in Sector 5, Bucuresti. Autentificari, succesiuni, tranzactii imobiliare.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f3f9',
+                            100: '#d9e0ef',
+                            200: '#b3c1df',
+                            300: '#8da2cf',
+                            400: '#6783bf',
+                            500: '#4164af',
+                            600: '#34508c',
+                            700: '#273c69',
+                            800: '#1a2846',
+                            900: '#0d1423',
+                            950: '#070a12'
+                        },
+                        gold: {
+                            50: '#fdf9ef',
+                            100: '#faf0d5',
+                            200: '#f4deaa',
+                            300: '#edc975',
+                            400: '#e5b044',
+                            500: '#d4982e',
+                            600: '#b87a22',
+                            700: '#995c1e',
+                            800: '#7d4a1f',
+                            900: '#683d1d',
+                            950: '#3b1f0c'
+                        },
+                        silver: {
+                            50: '#f8f9fa',
+                            100: '#f1f3f5',
+                            200: '#e9ecef',
+                            300: '#dee2e6',
+                            400: '#ced4da',
+                            500: '#adb5bd',
+                            600: '#868e96',
+                            700: '#495057',
+                            800: '#343a40',
+                            900: '#212529'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        [x-cloak] { display: none !important; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Hero background pattern */
+        .hero-pattern {
+            background-color: #0d1423;
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(65, 100, 175, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(212, 152, 46, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(65, 100, 175, 0.08) 0%, transparent 50%);
+        }
+
+        .hero-pattern::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234164af' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* Glassmorphism card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(13, 20, 35, 0.08);
+        }
+
+        /* Service card hover */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(13, 20, 35, 0.15), 0 0 0 1px rgba(212, 152, 46, 0.2);
+        }
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, #4164af, #d4982e);
+            color: white;
+            transform: scale(1.1);
+        }
+        .service-icon {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Gold line accent */
+        .gold-line::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4982e, #e5b044);
+            margin-top: 16px;
+            border-radius: 2px;
+        }
+        .gold-line-center::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4982e, #e5b044);
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Star rating */
+        .star-gold { color: #e5b044; }
+
+        /* Floating shapes */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(20px) rotate(-5deg); }
+        }
+        .float-shape {
+            animation: float 8s ease-in-out infinite;
+        }
+        .float-shape-reverse {
+            animation: floatReverse 10s ease-in-out infinite;
+        }
+
+        /* Section divider */
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(212, 152, 46, 0.3), transparent);
+            height: 1px;
+        }
+
+        /* Review card */
+        .review-card {
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(13, 20, 35, 0.12);
+        }
+
+        /* Navbar scroll */
+        .nav-scrolled {
+            background: rgba(7, 10, 18, 0.92) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CTA glow */
+        .cta-primary {
+            background: linear-gradient(135deg, #d4982e, #e5b044);
+            box-shadow: 0 4px 20px rgba(212, 152, 46, 0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-primary:hover {
+            box-shadow: 0 6px 30px rgba(212, 152, 46, 0.6);
+            transform: translateY(-2px);
+        }
+        .cta-secondary {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .cta-secondary:hover {
+            border-color: #e5b044;
+            background: rgba(212, 152, 46, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Trust card */
+        .trust-card {
+            transition: all 0.4s ease;
+        }
+        .trust-card:hover {
+            background: linear-gradient(135deg, rgba(65, 100, 175, 0.08), rgba(212, 152, 46, 0.05));
+        }
+        .trust-card:hover .trust-icon {
+            color: #d4982e;
+            transform: scale(1.15);
+        }
+        .trust-icon {
+            transition: all 0.4s ease;
+        }
+
+        /* Contact card hover */
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 152, 46, 0.4);
+        }
+
+        /* Subtle texture for light sections */
+        .texture-light {
+            background-color: #f8f9fa;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234164af' fill-opacity='0.02' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1.5'/%3E%3Ccircle cx='13' cy='13' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Dark section */
+        .bg-dark-section {
+            background: linear-gradient(180deg, #0d1423 0%, #1a2846 50%, #0d1423 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-silver-900 antialiased">
+
+<div id="app">
+
+    <!-- NAVIGATION -->
+    <nav x-data="{ open: false, scrolled: false }"
+         x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 50 })"
+         :class="scrolled ? 'nav-scrolled' : 'bg-transparent'"
+         class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-scale-balanced text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading text-lg font-bold text-white leading-tight block">Notar Popescu</span>
+                        <span class="text-gold-400 text-xs font-medium tracking-wider uppercase">Mihai-Costin</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#despre" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Despre Noi</a>
+                    <a href="#servicii" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Servicii</a>
+                    <a href="#de-ce-noi" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">De Ce Noi</a>
+                    <a href="#recenzii" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Recenzii</a>
+                    <a href="#contact" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Contact</a>
+                    <a href="tel:0213160149" class="cta-primary text-navy-950 font-semibold px-5 py-2.5 rounded-lg text-sm inline-flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>021 316 0149</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button @click="open = !open" class="lg:hidden text-white focus:outline-none p-2">
+                    <i x-show="!open" class="fa-solid fa-bars text-xl"></i>
+                    <i x-show="open" x-cloak class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="open" x-cloak
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 -translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 -translate-y-4"
+             class="lg:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/10">
+            <div class="px-6 py-6 space-y-4">
+                <a @click="open = false" href="#despre" class="block text-silver-200 hover:text-gold-400 transition-colors font-medium py-2">Despre Noi</a>
+                <a @click="open = false" href="#servicii" class="block text-silver-200 hover:text-gold-400 transition-colors font-medium py-2">Servicii</a>
+                <a @click="open = false" href="#de-ce-noi" class="block text-silver-200 hover:text-gold-400 transition-colors font-medium py-2">De Ce Noi</a>
+                <a @click="open = false" href="#recenzii" class="block text-silver-200 hover:text-gold-400 transition-colors font-medium py-2">Recenzii</a>
+                <a @click="open = false" href="#contact" class="block text-silver-200 hover:text-gold-400 transition-colors font-medium py-2">Contact</a>
+                <div class="pt-2">
+                    <a href="tel:0213160149" class="cta-primary text-navy-950 font-semibold px-5 py-3 rounded-lg text-sm inline-flex items-center space-x-2 w-full justify-center">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>021 316 0149</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-pattern relative min-h-screen flex items-center overflow-hidden">
+        <!-- Floating decorative shapes -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-navy-500/10 rounded-full blur-3xl float-shape"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-gold-500/8 rounded-full blur-3xl float-shape-reverse"></div>
+        <div class="absolute top-1/3 right-1/4 w-48 h-48 bg-navy-400/5 rounded-full blur-2xl float-shape"></div>
+
+        <!-- Decorative geometric elements -->
+        <div class="absolute top-32 right-20 opacity-10 hidden lg:block">
+            <div class="w-32 h-32 border-2 border-gold-400 rotate-45 float-shape"></div>
+        </div>
+        <div class="absolute bottom-40 left-20 opacity-10 hidden lg:block">
+            <div class="w-24 h-24 border-2 border-navy-400 rotate-12 float-shape-reverse"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+            <!-- Badge -->
+            <div data-aos="fade-down" data-aos-delay="100" class="inline-flex items-center space-x-2 glass-card rounded-full px-5 py-2.5 mb-8">
+                <i class="fa-solid fa-scale-balanced text-gold-400 text-sm"></i>
+                <span class="text-silver-300 text-sm font-medium tracking-wide">Birou Notarial Autorizat</span>
+                <span class="text-gold-400 text-sm">|</span>
+                <span class="text-silver-300 text-sm font-medium">Sector 5, Bucuresti</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 data-aos="fade-up" data-aos-delay="200" class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                Siguranta Juridica<br>
+                <span class="bg-gradient-to-r from-gold-400 to-gold-300 bg-clip-text text-transparent">la Cele Mai Inalte Standarde</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p data-aos="fade-up" data-aos-delay="300" class="text-lg sm:text-xl text-silver-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Servicii notariale complete, profesionalism desavarsit si atentie la fiecare detaliu.
+                Biroul Notarial Popescu Mihai-Costin va sta la dispozitie cu experienta si dedicare.
+            </p>
+
+            <!-- CTAs -->
+            <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:0213160149" class="cta-primary text-navy-950 font-bold px-8 py-4 rounded-xl text-lg inline-flex items-center space-x-3 group">
+                    <i class="fa-solid fa-phone group-hover:animate-pulse"></i>
+                    <span>Sunati Acum</span>
+                </a>
+                <a href="https://www.google.com/maps/place/Birou+Individual+Notarial+Popescu+Mihai-Costin/data=!4m7!3m6!1s0x40b1ff41de578fff:0xe1ce0c8cc4a88386!8m2!3d44.4317988!4d26.0937121!16s%2Fg%2F11g_d_s6m!19sChIJ_49X3kH_sUARhoOoxIwMzuE?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="cta-secondary text-white font-semibold px-8 py-4 rounded-xl text-lg inline-flex items-center space-x-3">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Indicatii de Orientare</span>
+                </a>
+            </div>
+
+            <!-- Trust indicators -->
+            <div data-aos="fade-up" data-aos-delay="500" class="mt-16 flex flex-wrap items-center justify-center gap-8 text-silver-400">
+                <div class="flex items-center space-x-2">
+                    <div class="flex">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star-half-stroke star-gold text-sm"></i>
+                    </div>
+                    <span class="text-sm font-medium">4.7/5 pe Google</span>
+                </div>
+                <div class="w-px h-5 bg-silver-700 hidden sm:block"></div>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-certificate text-gold-500 text-sm"></i>
+                    <span class="text-sm font-medium">Notar Public Autorizat</span>
+                </div>
+                <div class="w-px h-5 bg-silver-700 hidden sm:block"></div>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-language text-gold-500 text-sm"></i>
+                    <span class="text-sm font-medium">Romana & Engleza</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#despre" class="text-silver-500 hover:text-gold-400 transition-colors">
+                <i class="fa-solid fa-chevron-down text-lg"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="despre" class="py-24 lg:py-32 texture-light relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Text -->
+                <div data-aos="fade-right">
+                    <span class="text-gold-600 font-semibold text-sm tracking-widest uppercase mb-4 block">Despre Biroul Nostru</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-6 gold-line">
+                        Profesionalism si Incredere de Ani de Zile
+                    </h2>
+                    <p class="text-silver-700 text-lg leading-relaxed mb-6">
+                        Biroul Individual Notarial Popescu Mihai-Costin ofera servicii notariale complete in inima Bucurestiului, in Sector 5, pe Splaiul Independentei. Cu o echipa dedicata si o abordare orientata catre client, ne-am construit reputatia pe baza profesionalismului, promptitudinii si a preturilor corecte.
+                    </p>
+                    <p class="text-silver-600 leading-relaxed mb-8">
+                        Oferim o gama larga de servicii, de la autentificari si legalizari, la succesiuni si tranzactii imobiliare, in limba romana si engleza. Programarile se pot face online sau prin WhatsApp, iar documentele pot fi transmise electronic pentru a va economisi timpul.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-4 py-2 shadow-sm border border-silver-200">
+                            <i class="fa-solid fa-check-circle text-gold-500"></i>
+                            <span class="text-sm font-medium text-navy-800">Programari Online</span>
+                        </div>
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-4 py-2 shadow-sm border border-silver-200">
+                            <i class="fa-solid fa-check-circle text-gold-500"></i>
+                            <span class="text-sm font-medium text-navy-800">Deplasari la Domiciliu</span>
+                        </div>
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-4 py-2 shadow-sm border border-silver-200">
+                            <i class="fa-solid fa-check-circle text-gold-500"></i>
+                            <span class="text-sm font-medium text-navy-800">Comunicare WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div data-aos="fade-left" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
+                    <div class="glass-card-light rounded-2xl p-8 text-center lg:text-left">
+                        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy-600 to-navy-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-calendar-check text-gold-400 text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-heading text-4xl font-bold text-navy-900" v-counter="{ target: 10, suffix: '+' }"></div>
+                                <p class="text-silver-600 font-medium mt-1">Ani de Experienta</p>
+                                <p class="text-silver-500 text-sm mt-1">Experienta solida in domeniul notarial</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card-light rounded-2xl p-8 text-center lg:text-left">
+                        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-users text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-heading text-4xl font-bold text-navy-900" v-counter="{ target: 500, suffix: '+' }"></div>
+                                <p class="text-silver-600 font-medium mt-1">Clienti Multumiti</p>
+                                <p class="text-silver-500 text-sm mt-1">Clienti care ne-au acordat increderea</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card-light rounded-2xl p-8 text-center lg:text-left">
+                        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy-600 to-navy-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-star text-gold-400 text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-heading text-4xl font-bold text-navy-900">4.7 / 5</div>
+                                <p class="text-silver-600 font-medium mt-1">Rating Google</p>
+                                <p class="text-silver-500 text-sm mt-1">Bazat pe 25 de recenzii verificate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicii" class="py-24 lg:py-32 bg-dark-section relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4 block">Ce Oferim</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Servicii Notariale Complete</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-gold-500 to-gold-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-silver-400 text-lg max-w-2xl mx-auto">Oferim o gama completa de servicii notariale, adaptate nevoilor dumneavoastra, cu profesionalism si promptitudine.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Service 1 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-house text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Tranzactii Imobiliare</h3>
+                    <p class="text-silver-400 leading-relaxed">Autentificarea contractelor de vanzare-cumparare, donatii si schimb de proprietati, cu verificari complete ale actelor.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-scroll text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Succesiuni</h3>
+                    <p class="text-silver-400 leading-relaxed">Proceduri succesorale complete, de la deschiderea dosarului pana la eliberarea certificatului de mostenitor.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-file-signature text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Autentificari</h3>
+                    <p class="text-silver-400 leading-relaxed">Autentificarea documentelor, semnaturilor, sigiliilor si stampilelor, conform legislatiei in vigoare.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-stamp text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Legalizari</h3>
+                    <p class="text-silver-400 leading-relaxed">Legalizarea semnaturilor, a copiilor conforme cu originalul si certificarea documentelor oficiale.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-hand-holding-heart text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Donatii</h3>
+                    <p class="text-silver-400 leading-relaxed">Intocmirea si autentificarea contractelor de donatie, cu consultanta juridica privind implicatiile legale.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-pen-nib text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Declaratii Notariale</h3>
+                    <p class="text-silver-400 leading-relaxed">Redactarea si autentificarea declaratiilor notariale pentru diverse proceduri civile si administrative.</p>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-divide text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Partaj</h3>
+                    <p class="text-silver-400 leading-relaxed">Proceduri de partajare a bunurilor comune, fie prin acord intre parti, fie prin proceduri notariale specifice.</p>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-comments text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Consultanta Juridica</h3>
+                    <p class="text-silver-400 leading-relaxed">Consiliere profesionala in probleme notariale, explicarea procedurilor si ghidare pas cu pas in orice demers.</p>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="service-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800/50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-copy text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Copii Certificate</h3>
+                    <p class="text-silver-400 leading-relaxed">Eliberarea de copii legalizate ale documentelor originale, conforme cu prevederile legale in vigoare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="de-ce-noi" class="py-24 lg:py-32 texture-light relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold-600 font-semibold text-sm tracking-widest uppercase mb-4 block">Avantajele Noastre</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-4">De Ce Sa Ne Alegeti</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-gold-500 to-gold-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-silver-600 text-lg max-w-2xl mx-auto">Alegerea notarului potrivit este esentiala. Iata de ce clientii nostri ne acorda increderea in mod repetat.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="trust-card bg-white rounded-2xl p-8 text-center border border-silver-200 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+                        <i class="trust-icon fa-solid fa-shield-halved text-navy-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-navy-900 mb-3">Siguranta Juridica</h3>
+                    <p class="text-silver-600 text-sm leading-relaxed">Fiecare document este verificat cu atentie maxima, asigurand conformitatea deplina cu legislatia in vigoare.</p>
+                </div>
+
+                <div class="trust-card bg-white rounded-2xl p-8 text-center border border-silver-200 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+                        <i class="trust-icon fa-solid fa-bolt text-navy-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-navy-900 mb-3">Promptitudine</h3>
+                    <p class="text-silver-600 text-sm leading-relaxed">Procesam documentele rapid si eficient, respectand termenele promise si comunicand transparent la fiecare pas.</p>
+                </div>
+
+                <div class="trust-card bg-white rounded-2xl p-8 text-center border border-silver-200 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+                        <i class="trust-icon fa-solid fa-hand-holding-dollar text-navy-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-navy-900 mb-3">Tarife Corecte</h3>
+                    <p class="text-silver-600 text-sm leading-relaxed">Preturi competitive si transparente, fara costuri ascunse. Oferim intotdeauna un raport excelent calitate-pret.</p>
+                </div>
+
+                <div class="trust-card bg-white rounded-2xl p-8 text-center border border-silver-200 shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-navy-50 flex items-center justify-center mb-6">
+                        <i class="trust-icon fa-solid fa-laptop-file text-navy-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-navy-900 mb-3">Servicii Digitale</h3>
+                    <p class="text-silver-600 text-sm leading-relaxed">Programari online, trimitere de documente prin email sau WhatsApp si comunicare moderna pentru confortul dumneavoastra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="recenzii" class="py-24 lg:py-32 bg-dark-section relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4 block">Recenzii</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Ce Spun Clientii Nostri</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-gold-500 to-gold-400 mx-auto rounded-full mb-6"></div>
+                <div class="inline-flex items-center space-x-3 glass-card rounded-full px-6 py-3">
+                    <div class="flex">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star-half-stroke star-gold"></i>
+                    </div>
+                    <span class="text-white font-semibold">4.7 din 5</span>
+                    <span class="text-silver-400">|</span>
+                    <span class="text-silver-300">25 recenzii pe Google</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Review 1 -->
+                <div class="review-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex mb-4">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <p class="text-silver-300 leading-relaxed mb-6 italic">"Profesional and quick services. Decent prices"</p>
+                    <div class="flex items-center space-x-3 border-t border-white/10 pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-navy-500 to-gold-600 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">F</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Floralia</p>
+                            <p class="text-silver-500 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex mb-4">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <p class="text-silver-300 leading-relaxed mb-6 italic">"Best in town! Staff was very pleasent and professional, unlike other places."</p>
+                    <div class="flex items-center space-x-3 border-t border-white/10 pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-navy-600 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">R</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Ramona Saleh</p>
+                            <p class="text-silver-500 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex mb-4">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <p class="text-silver-300 leading-relaxed mb-6 italic">"Va recomand sa veniti aici cu incredere, sunt seriosi, prompti, profesionisti. Lucrez cu doamnele de aici de ani de zile, tot felul de spete si este o recomandare pe care trebuia sa o fac de mult timp, pentru ca totul a mers mereu fara niciun fel de probleme."</p>
+                    <div class="flex items-center space-x-3 border-t border-white/10 pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-navy-600 to-navy-400 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">S</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Simona Iliescu</p>
+                            <p class="text-silver-500 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex mb-4">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <p class="text-silver-300 leading-relaxed mb-6 italic">"O recomand pe Cristina Mihalache de la ei. Intelege problemele, iti explica pe intelesul tau pasii, face totul clar si facil pentru client si e foarte nice."</p>
+                    <div class="flex items-center space-x-3 border-t border-white/10 pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">G</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Gabriel Amzulescu</p>
+                            <p class="text-silver-500 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex mb-4">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <p class="text-silver-300 leading-relaxed mb-6 italic">"Extrem de profesionisti, printre putinele Birouri care isi merita buna reputatie! Nu buna reputatia definita sec si incomplet ca lipsa unor cercetari disciplinare ci buna reputatie la propiu!"</p>
+                    <div class="flex items-center space-x-3 border-t border-white/10 pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-navy-500 to-gold-500 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">D</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Dumi Stef</p>
+                            <p class="text-silver-500 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card glass-card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex mb-4">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <p class="text-silver-300 leading-relaxed mb-6 italic">"Prompti si foarte bine organizati. Comunicare pe e-mail, plata cu cardul."</p>
+                    <div class="flex items-center space-x-3 border-t border-white/10 pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-navy-400 to-navy-700 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">R</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Radu Atanasescu</p>
+                            <p class="text-silver-500 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 lg:py-32 texture-light relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold-600 font-semibold text-sm tracking-widest uppercase mb-4 block">Contact</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-4">Informatii de Contact</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-gold-500 to-gold-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-silver-600 text-lg max-w-2xl mx-auto">Suntem aici pentru dumneavoastra. Nu ezitati sa ne contactati pentru programari sau informatii suplimentare.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Address -->
+                <a href="https://www.google.com/maps/place/Birou+Individual+Notarial+Popescu+Mihai-Costin/data=!4m7!3m6!1s0x40b1ff41de578fff:0xe1ce0c8cc4a88386!8m2!3d44.4317988!4d26.0937121!16s%2Fg%2F11g_d_s6m!19sChIJ_49X3kH_sUARhoOoxIwMzuE?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="contact-card bg-white rounded-2xl p-8 border border-silver-200 shadow-sm text-center group block" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-navy-600 to-navy-800 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-location-dot text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy-900 mb-3">Adresa</h3>
+                    <p class="text-silver-600 text-sm leading-relaxed mb-3">Splaiul Independentei 17,<br>Bl.101, Sc.3, Et.4, Ap.45,<br>Sector 5, Bucuresti 050093</p>
+                    <span class="text-gold-600 font-semibold text-sm inline-flex items-center space-x-1 group-hover:text-gold-700 transition-colors">
+                        <span>Indicatii pe Harta</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:0213160149" class="contact-card bg-white rounded-2xl p-8 border border-silver-200 shadow-sm text-center group block" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-phone text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy-900 mb-3">Telefon</h3>
+                    <p class="text-silver-600 text-sm leading-relaxed mb-1">021 316 0149</p>
+                    <p class="text-silver-500 text-xs mb-3">Luni - Joi: 9:00 - 16:00</p>
+                    <span class="text-gold-600 font-semibold text-sm inline-flex items-center space-x-1 group-hover:text-gold-700 transition-colors">
+                        <span>Sunati Acum</span>
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+
+                <!-- Hours -->
+                <div class="contact-card bg-white rounded-2xl p-8 border border-silver-200 shadow-sm text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-navy-600 to-navy-800 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-clock text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy-900 mb-3">Program</h3>
+                    <div class="text-sm space-y-1.5">
+                        <div class="flex justify-between text-silver-600">
+                            <span>Luni</span><span class="font-medium">9:00 - 16:00</span>
+                        </div>
+                        <div class="flex justify-between text-silver-600">
+                            <span>Marti</span><span class="font-medium">9:00 - 16:00</span>
+                        </div>
+                        <div class="flex justify-between text-silver-600">
+                            <span>Miercuri</span><span class="font-medium">9:00 - 16:00</span>
+                        </div>
+                        <div class="flex justify-between text-silver-600">
+                            <span>Joi</span><span class="font-medium">9:00 - 16:00</span>
+                        </div>
+                        <div class="flex justify-between text-silver-500">
+                            <span>Vineri</span><span class="font-medium">Inchis</span>
+                        </div>
+                        <div class="flex justify-between text-silver-500">
+                            <span>Sam - Dum</span><span class="font-medium">Inchis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating -->
+                <div class="contact-card bg-white rounded-2xl p-8 border border-silver-200 shadow-sm text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-star text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy-900 mb-3">Rating Google</h3>
+                    <div class="flex justify-center mb-2">
+                        <i class="fa-solid fa-star star-gold text-lg"></i>
+                        <i class="fa-solid fa-star star-gold text-lg"></i>
+                        <i class="fa-solid fa-star star-gold text-lg"></i>
+                        <i class="fa-solid fa-star star-gold text-lg"></i>
+                        <i class="fa-solid fa-star-half-stroke star-gold text-lg"></i>
+                    </div>
+                    <p class="text-navy-900 font-bold text-2xl font-heading">4.7 / 5</p>
+                    <p class="text-silver-500 text-sm mt-1">Bazat pe 25 recenzii</p>
+                    <a href="https://search.google.com/local/reviews?placeid=ChIJ_49X3kH_sUARhoOoxIwMzuE&q=Birou+Individual+Notarial+Popescu+Mihai-Costin&authuser=0&hl=en&gl=RO" target="_blank" rel="noopener" class="text-gold-600 font-semibold text-sm inline-flex items-center space-x-1 mt-3 hover:text-gold-700 transition-colors">
+                        <span>Vezi Recenzii</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-silver-200" data-aos="fade-up">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.5!2d26.0937121!3d44.4317988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff41de578fff%3A0xe1ce0c8cc4a88386!2sBirou%20Individual%20Notarial%20Popescu%20Mihai-Costin!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Locatie Birou Notarial Popescu Mihai-Costin">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 pt-16 pb-8 relative">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+                            <i class="fa-solid fa-scale-balanced text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="font-heading text-lg font-bold text-white block">Notar Popescu</span>
+                            <span class="text-gold-400 text-xs font-medium tracking-wider uppercase">Mihai-Costin</span>
+                        </div>
+                    </div>
+                    <p class="text-silver-500 text-sm leading-relaxed mb-4">
+                        Birou Individual Notarial autorizat, oferind servicii notariale complete in Sector 5, Bucuresti. Profesionalism, promptitudine si tarife corecte.
+                    </p>
+                    <div class="flex items-center space-x-2 text-silver-500 text-sm">
+                        <i class="fa-solid fa-certificate text-gold-500 text-xs"></i>
+                        <span>Membru al Uniunii Nationale a Notarilor Publici</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading text-white font-bold mb-5">Navigare Rapida</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#despre" class="text-silver-400 hover:text-gold-400 transition-colors text-sm inline-flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-xs text-gold-600"></i><span>Despre Noi</span></a></li>
+                        <li><a href="#servicii" class="text-silver-400 hover:text-gold-400 transition-colors text-sm inline-flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-xs text-gold-600"></i><span>Servicii</span></a></li>
+                        <li><a href="#de-ce-noi" class="text-silver-400 hover:text-gold-400 transition-colors text-sm inline-flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-xs text-gold-600"></i><span>De Ce Noi</span></a></li>
+                        <li><a href="#recenzii" class="text-silver-400 hover:text-gold-400 transition-colors text-sm inline-flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-xs text-gold-600"></i><span>Recenzii</span></a></li>
+                        <li><a href="#contact" class="text-silver-400 hover:text-gold-400 transition-colors text-sm inline-flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-xs text-gold-600"></i><span>Contact</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-heading text-white font-bold mb-5">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-gold-500 mt-1 text-sm"></i>
+                            <span class="text-silver-400 text-sm">Splaiul Independentei 17, Bl.101, Sc.3, Et.4, Ap.45, Sector 5, Bucuresti</span>
+                        </li>
+                        <li>
+                            <a href="tel:0213160149" class="flex items-center space-x-3 text-silver-400 hover:text-gold-400 transition-colors">
+                                <i class="fa-solid fa-phone text-gold-500 text-sm"></i>
+                                <span class="text-sm">021 316 0149</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:mihai.costin.popescu@gmail.com" class="flex items-center space-x-3 text-silver-400 hover:text-gold-400 transition-colors">
+                                <i class="fa-solid fa-envelope text-gold-500 text-sm"></i>
+                                <span class="text-sm">mihai.costin.popescu@gmail.com</span>
+                            </a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-clock text-gold-500 text-sm"></i>
+                            <span class="text-silver-400 text-sm">Luni - Joi: 9:00 - 16:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-silver-600 text-sm text-center md:text-left">
+                        &copy; 2026 Birou Individual Notarial Popescu Mihai-Costin. Toate drepturile rezervate.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="mailto:mihai.costin.popescu@gmail.com" class="w-10 h-10 rounded-full bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-500/30 flex items-center justify-center transition-all">
+                            <i class="fa-solid fa-envelope text-silver-400 hover:text-gold-400 text-sm"></i>
+                        </a>
+                        <a href="tel:0213160149" class="w-10 h-10 rounded-full bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-500/30 flex items-center justify-center transition-all">
+                            <i class="fa-solid fa-phone text-silver-400 hover:text-gold-400 text-sm"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/place/Birou+Individual+Notarial+Popescu+Mihai-Costin/data=!4m7!3m6!1s0x40b1ff41de578fff:0xe1ce0c8cc4a88386!8m2!3d44.4317988!4d26.0937121!16s%2Fg%2F11g_d_s6m!19sChIJ_49X3kH_sUARhoOoxIwMzuE?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-500/30 flex items-center justify-center transition-all">
+                            <i class="fa-solid fa-map-location-dot text-silver-400 hover:text-gold-400 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- AOS Init -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80
+    });
+</script>
+
+<!-- Vue App -->
+<script>
+    const { createApp } = Vue;
+
+    createApp({
+        data() {
+            return {
+                businessName: 'Birou Individual Notarial Popescu Mihai-Costin',
+                phone: '021 316 0149',
+                email: 'mihai.costin.popescu@gmail.com',
+                address: 'Splaiul Independentei 17, Bl.101, Sc.3, Et.4, Ap.45, Sector 5, Bucuresti 050093',
+                rating: 4.7,
+                reviewCount: 25,
+                mapsUrl: 'https://www.google.com/maps/place/Birou+Individual+Notarial+Popescu+Mihai-Costin/'
+            };
+        },
+        directives: {
+            counter: {
+                mounted(el, binding) {
+                    const { target, suffix = '' } = binding.value;
+                    let current = 0;
+                    const duration = 2000;
+                    const steps = 60;
+                    const increment = target / steps;
+                    const interval = duration / steps;
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const timer = setInterval(() => {
+                                    current += increment;
+                                    if (current >= target) {
+                                        current = target;
+                                        clearInterval(timer);
+                                    }
+                                    el.textContent = Math.floor(current) + suffix;
+                                }, interval);
+                                observer.unobserve(el);
+                            }
+                        });
+                    }, { threshold: 0.5 });
+
+                    observer.observe(el);
+                    el.textContent = '0' + suffix;
+                }
+            }
+        }
+    }).mount('#app');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andreea Vaman - Cabinet de Avocat | Cluj-Napoca</title>
+    <meta name="description" content="Cabinet de avocat in Cluj-Napoca. Drept civil, penal, comercial, familiei si muncii. Rating 5/5 pe Google. Programari: 0743 933 494.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f3f9',
+                            100: '#dae1f0',
+                            200: '#b8c6e2',
+                            300: '#8da3ce',
+                            400: '#6680b8',
+                            500: '#4a63a0',
+                            600: '#3a4f85',
+                            700: '#2d3d66',
+                            800: '#1e2a4a',
+                            900: '#0f1729',
+                            950: '#080c17'
+                        },
+                        gold: {
+                            50: '#fefbf0',
+                            100: '#fdf4d4',
+                            200: '#fbe8a8',
+                            300: '#f8d76f',
+                            400: '#f4c430',
+                            500: '#d4a810',
+                            600: '#b8900e',
+                            700: '#8a6c0a',
+                            800: '#5c4807',
+                            900: '#2e2404'
+                        },
+                        silver: {
+                            50: '#f8f9fa',
+                            100: '#f1f3f5',
+                            200: '#e9ecef',
+                            300: '#dee2e6',
+                            400: '#ced4da',
+                            500: '#adb5bd'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1e2a4a;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f1729; }
+        ::-webkit-scrollbar-thumb { background: #d4a810; border-radius: 4px; }
+
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.06;
+            animation: floatShape 20s ease-in-out infinite;
+        }
+        .hero-shape-1 {
+            width: 600px; height: 600px;
+            top: -200px; right: -150px;
+            background: linear-gradient(135deg, #d4a810, #f4c430);
+            animation-delay: 0s;
+        }
+        .hero-shape-2 {
+            width: 400px; height: 400px;
+            bottom: -100px; left: -100px;
+            background: linear-gradient(135deg, #f4c430, #d4a810);
+            animation-delay: -7s;
+            animation-duration: 25s;
+        }
+        .hero-shape-3 {
+            width: 250px; height: 250px;
+            top: 40%; left: 20%;
+            background: linear-gradient(135deg, #fbe8a8, #d4a810);
+            animation-delay: -14s;
+            animation-duration: 18s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            25% { transform: translate(30px, -40px) rotate(5deg) scale(1.05); }
+            50% { transform: translate(-20px, 20px) rotate(-3deg) scale(0.95); }
+            75% { transform: translate(15px, 35px) rotate(4deg) scale(1.02); }
+        }
+
+        .pattern-overlay {
+            background-image: radial-gradient(circle at 1px 1px, rgba(212,168,16,0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 168, 16, 0.1);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(15, 23, 41, 0.15), 0 0 30px rgba(212, 168, 16, 0.08);
+        }
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, #d4a810, #f4c430);
+            color: #0f1729;
+            transform: scale(1.1);
+        }
+
+        .trust-card {
+            transition: all 0.4s ease;
+        }
+        .trust-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 168, 16, 0.3);
+        }
+
+        .review-card {
+            transition: all 0.35s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 50px rgba(15, 23, 41, 0.12);
+        }
+
+        .gold-line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4a810, #f4c430);
+            border-radius: 2px;
+        }
+
+        .contact-card {
+            transition: all 0.35s ease;
+        }
+        .contact-card:hover {
+            border-color: rgba(212, 168, 16, 0.4);
+            box-shadow: 0 8px 30px rgba(212, 168, 16, 0.1);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,168,16,0.2), transparent);
+        }
+
+        .nav-scrolled {
+            background: rgba(15, 23, 41, 0.95) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .star-gold { color: #f4c430; }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d4a810, #f4c430);
+            color: #0f1729;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 168, 16, 0.3);
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 168, 16, 0.4);
+        }
+        .btn-outline {
+            border: 2px solid rgba(212, 168, 16, 0.6);
+            color: #f4c430;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: rgba(212, 168, 16, 0.1);
+            border-color: #f4c430;
+            transform: translateY(-2px);
+        }
+
+        .bg-dark-section {
+            background: linear-gradient(180deg, #0f1729 0%, #1e2a4a 100%);
+        }
+        .bg-light-section {
+            background: linear-gradient(180deg, #f8f9fa 0%, #f0f3f9 100%);
+        }
+        .bg-navy-gradient {
+            background: linear-gradient(135deg, #0f1729 0%, #1e2a4a 50%, #0f1729 100%);
+        }
+
+        .mobile-menu-enter { animation: slideDown 0.3s ease forwards; }
+        .mobile-menu-leave { animation: slideUp 0.3s ease forwards; }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-10px); }
+        }
+
+        .map-container iframe {
+            filter: grayscale(0.3) contrast(1.1);
+            transition: filter 0.4s ease;
+        }
+        .map-container:hover iframe {
+            filter: grayscale(0) contrast(1);
+        }
+
+        .scale-icon {
+            animation: balanceSwing 4s ease-in-out infinite;
+            transform-origin: center top;
+        }
+        @keyframes balanceSwing {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(2deg); }
+            75% { transform: rotate(-2deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <!-- NAVIGATION -->
+    <nav x-data="{ open: false, scrolled: false }"
+         x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 50 })"
+         :class="scrolled ? 'nav-scrolled' : 'bg-transparent'"
+         class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-500 to-gold-400 flex items-center justify-center">
+                        <i class="fa-solid fa-scale-balanced text-navy-950 text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-display text-white text-lg font-bold tracking-wide">Andreea Vaman</span>
+                        <span class="hidden sm:block text-gold-400 text-xs tracking-widest uppercase">Cabinet de Avocat</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#despre" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Despre</a>
+                    <a href="#servicii" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Servicii</a>
+                    <a href="#de-ce-noi" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">De Ce Noi</a>
+                    <a href="#recenzii" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Recenzii</a>
+                    <a href="#contact" class="text-silver-300 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide uppercase">Contact</a>
+                    <a href="tel:0743933494" class="btn-gold px-6 py-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-xs"></i> Suna Acum
+                    </a>
+                </div>
+
+                <button @click="open = !open" class="lg:hidden text-white p-2">
+                    <i :class="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" class="text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div x-show="open" x-transition:enter="mobile-menu-enter" x-transition:leave="mobile-menu-leave"
+             @click.away="open = false"
+             class="lg:hidden bg-navy-900/98 backdrop-blur-xl border-t border-gold-700/20">
+            <div class="px-6 py-6 space-y-4">
+                <a @click="open = false" href="#despre" class="block text-silver-200 hover:text-gold-400 transition-colors py-2 text-sm uppercase tracking-wider font-medium">Despre</a>
+                <a @click="open = false" href="#servicii" class="block text-silver-200 hover:text-gold-400 transition-colors py-2 text-sm uppercase tracking-wider font-medium">Servicii</a>
+                <a @click="open = false" href="#de-ce-noi" class="block text-silver-200 hover:text-gold-400 transition-colors py-2 text-sm uppercase tracking-wider font-medium">De Ce Noi</a>
+                <a @click="open = false" href="#recenzii" class="block text-silver-200 hover:text-gold-400 transition-colors py-2 text-sm uppercase tracking-wider font-medium">Recenzii</a>
+                <a @click="open = false" href="#contact" class="block text-silver-200 hover:text-gold-400 transition-colors py-2 text-sm uppercase tracking-wider font-medium">Contact</a>
+                <div class="pt-4 border-t border-gold-700/20">
+                    <a href="tel:0743933494" class="btn-gold w-full px-6 py-3 rounded-lg text-sm font-semibold inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone text-xs"></i> Suna Acum
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center bg-navy-gradient pattern-overlay overflow-hidden">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-950/40 via-transparent to-navy-950/60"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-32">
+            <div data-aos="fade-down" data-aos-delay="100" class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/20 rounded-full px-5 py-2 mb-8">
+                <i class="fa-solid fa-scale-balanced text-gold-400 text-sm scale-icon"></i>
+                <span class="text-gold-300 text-sm font-medium tracking-wide">Cabinet de Avocat in Cluj-Napoca</span>
+            </div>
+
+            <h1 data-aos="fade-up" data-aos-delay="200" class="font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                Drepturile Dumneavoastra,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-300">Prioritatea Noastra</span>
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="350" class="text-silver-300 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                Consultanta juridica de incredere, cu dedicare si profesionalism.<br class="hidden sm:block">
+                Fiecare caz primeste atentia pe care o merita.
+            </p>
+
+            <div data-aos="fade-up" data-aos-delay="500" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tel:0743933494" class="btn-gold px-8 py-4 rounded-xl text-base font-bold inline-flex items-center gap-3 min-w-[220px] justify-center">
+                    <i class="fa-solid fa-phone"></i> Suna Acum
+                </a>
+                <a href="https://www.google.com/maps/place/Andreea+Vaman+-+Cabinet+de+Avocat/data=!4m7!3m6!1s0x47490d88d4dba5e9:0xd5b60955a4fc1167!8m2!3d46.7751814!4d23.5915954!16s%2Fg%2F11k9bs3rr4!19sChIJ6aXb1IgNSUcRZxH8pFUJttU?authuser=0&hl=en&rclk=1"
+                   target="_blank" rel="noopener"
+                   class="btn-outline px-8 py-4 rounded-xl text-base font-bold inline-flex items-center gap-3 min-w-[220px] justify-center">
+                    <i class="fa-solid fa-location-dot"></i> Indicatii pe Harta
+                </a>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="650" class="mt-14 inline-flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-3">
+                <div class="flex gap-1">
+                    <i class="fa-solid fa-star star-gold text-sm"></i>
+                    <i class="fa-solid fa-star star-gold text-sm"></i>
+                    <i class="fa-solid fa-star star-gold text-sm"></i>
+                    <i class="fa-solid fa-star star-gold text-sm"></i>
+                    <i class="fa-solid fa-star star-gold text-sm"></i>
+                </div>
+                <span class="text-white font-semibold">5.0</span>
+                <span class="text-silver-400 text-sm">din 56 recenzii Google</span>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold-400/50 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-lg"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="despre" class="bg-light-section py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="gold-line mb-6"></div>
+                    <h2 class="font-display text-navy-900 text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                        Despre Cabinetul Nostru
+                    </h2>
+                    <p class="text-navy-700/80 text-lg leading-relaxed mb-6">
+                        Cabinetul de Avocat Andreea Vaman ofera servicii juridice complete in Cluj-Napoca, cu o experienta de peste 7 ani in domeniul dreptului civil. Inregistrat la Baroul Cluj si membru activ al Uniunii Nationale a Barourilor din Romania, cabinetul nostru se dedica fiecarui client cu profesionalism si atentie la detalii.
+                    </p>
+                    <p class="text-navy-700/80 text-lg leading-relaxed mb-8">
+                        Oferim consultanta juridica atat in cadrul biroului, cat si prin programari online, adaptandu-ne nevoilor dumneavoastra. Fiecare caz este tratat cu confidentialitate, seriozitate si dedicare deplina, pentru a obtine cele mai bune rezultate.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center gap-2 bg-navy-900/5 rounded-full px-4 py-2 text-sm text-navy-800 font-medium">
+                            <i class="fa-solid fa-user-tie text-gold-600 text-xs"></i> Afacere condusa de o femeie
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-navy-900/5 rounded-full px-4 py-2 text-sm text-navy-800 font-medium">
+                            <i class="fa-solid fa-heart text-gold-600 text-xs"></i> Mediu incluziv
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-navy-900/5 rounded-full px-4 py-2 text-sm text-navy-800 font-medium">
+                            <i class="fa-solid fa-video text-gold-600 text-xs"></i> Consultatii online
+                        </span>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg shadow-navy-900/5 border border-silver-200 text-center lg:text-left lg:flex lg:items-center lg:gap-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 flex-shrink-0">
+                            <i class="fa-solid fa-briefcase text-gold-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-display text-navy-900 text-4xl font-bold">7+</div>
+                            <div class="text-navy-600 text-sm font-medium mt-1">Ani de Experienta</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg shadow-navy-900/5 border border-silver-200 text-center lg:text-left lg:flex lg:items-center lg:gap-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 flex-shrink-0">
+                            <i class="fa-solid fa-users text-gold-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-display text-navy-900 text-4xl font-bold">500+</div>
+                            <div class="text-navy-600 text-sm font-medium mt-1">Clienti Multumiti</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg shadow-navy-900/5 border border-silver-200 text-center lg:text-left lg:flex lg:items-center lg:gap-6">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 flex-shrink-0">
+                            <i class="fa-solid fa-star text-gold-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-display text-navy-900 text-4xl font-bold">5.0</div>
+                            <div class="text-navy-600 text-sm font-medium mt-1">Rating Google (56 recenzii)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicii" class="bg-dark-section py-24 sm:py-32 pattern-overlay relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Domeniile Noastre de Practica
+                </h2>
+                <p class="text-silver-400 text-lg max-w-2xl mx-auto">
+                    Asistenta juridica completa pentru o gama larga de situatii, de la drept civil la dreptul muncii.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div data-aos="fade-up" data-aos-delay="100" class="service-card glass-card rounded-2xl p-8 group cursor-default">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800 border border-gold-500/20 flex items-center justify-center mb-6 transition-all duration-400">
+                        <i class="fa-solid fa-landmark text-gold-400 text-xl group-hover:text-navy-950"></i>
+                    </div>
+                    <h3 class="font-display text-white text-xl font-bold mb-3">Drept Civil</h3>
+                    <p class="text-silver-400 text-sm leading-relaxed">Rezolvarea litigiilor civile, contracte, proprietati, succesiuni si orice disputa de natura civila, cu solutii eficiente si rapide.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="service-card glass-card rounded-2xl p-8 group cursor-default">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800 border border-gold-500/20 flex items-center justify-center mb-6 transition-all duration-400">
+                        <i class="fa-solid fa-gavel text-gold-400 text-xl group-hover:text-navy-950"></i>
+                    </div>
+                    <h3 class="font-display text-white text-xl font-bold mb-3">Drept Penal</h3>
+                    <p class="text-silver-400 text-sm leading-relaxed">Aparare si reprezentare in cauze penale, asistenta la audieri, contestatii si toate fazele procesului penal.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="service-card glass-card rounded-2xl p-8 group cursor-default">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800 border border-gold-500/20 flex items-center justify-center mb-6 transition-all duration-400">
+                        <i class="fa-solid fa-building text-gold-400 text-xl group-hover:text-navy-950"></i>
+                    </div>
+                    <h3 class="font-display text-white text-xl font-bold mb-3">Drept Comercial</h3>
+                    <p class="text-silver-400 text-sm leading-relaxed">Consultanta pentru firme, redactare contracte comerciale, drept societar si asistenta in tranzactii de afaceri.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="service-card glass-card rounded-2xl p-8 group cursor-default">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800 border border-gold-500/20 flex items-center justify-center mb-6 transition-all duration-400">
+                        <i class="fa-solid fa-people-roof text-gold-400 text-xl group-hover:text-navy-950"></i>
+                    </div>
+                    <h3 class="font-display text-white text-xl font-bold mb-3">Dreptul Familiei</h3>
+                    <p class="text-silver-400 text-sm leading-relaxed">Divort, custodie, pensie alimentara, partaj si orice alt aspect legat de relatiile de familie, tratat cu discretie si empatie.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="service-card glass-card rounded-2xl p-8 group cursor-default">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800 border border-gold-500/20 flex items-center justify-center mb-6 transition-all duration-400">
+                        <i class="fa-solid fa-file-invoice-dollar text-gold-400 text-xl group-hover:text-navy-950"></i>
+                    </div>
+                    <h3 class="font-display text-white text-xl font-bold mb-3">Drept Administrativ si Fiscal</h3>
+                    <p class="text-silver-400 text-sm leading-relaxed">Contestatii fiscale, litigii cu autoritatile publice, consultanta in drept administrativ si proceduri de executare.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="service-card glass-card rounded-2xl p-8 group cursor-default">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-navy-800 border border-gold-500/20 flex items-center justify-center mb-6 transition-all duration-400">
+                        <i class="fa-solid fa-handshake text-gold-400 text-xl group-hover:text-navy-950"></i>
+                    </div>
+                    <h3 class="font-display text-white text-xl font-bold mb-3">Dreptul Muncii</h3>
+                    <p class="text-silver-400 text-sm leading-relaxed">Contracte de munca, concedieri abuzive, negocieri, drepturi salariale si protectia angajatilor in relatia cu angajatorul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="de-ce-noi" class="bg-light-section py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-display text-navy-900 text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    De Ce Sa Ne Alegeti
+                </h2>
+                <p class="text-navy-600 text-lg max-w-2xl mx-auto">
+                    Fiecare client merita un avocat care intelege, se implica si obtine rezultate.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div data-aos="fade-up" data-aos-delay="100" class="trust-card bg-white rounded-2xl p-8 border border-silver-200 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-award text-navy-950 text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 text-lg font-bold mb-3">Excelenta Recunoscuta</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Rating perfect de 5 stele pe Google si distinctia "Firma de Aur" pentru calitatea serviciilor oferite.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="trust-card bg-white rounded-2xl p-8 border border-silver-200 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-shield-halved text-navy-950 text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 text-lg font-bold mb-3">Confidentialitate Totala</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Fiecare caz este tratat cu cea mai stricta confidentialitate, protejand interesele si datele dumneavoastra.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="trust-card bg-white rounded-2xl p-8 border border-silver-200 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-comments text-navy-950 text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 text-lg font-bold mb-3">Comunicare Transparenta</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Va explicam fiecare pas al procesului juridic in mod clar, astfel incat sa luati decizii informate.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="400" class="trust-card bg-white rounded-2xl p-8 border border-silver-200 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-laptop text-navy-950 text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 text-lg font-bold mb-3">Consultatii Online</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Oferim programari online si la birou, adaptandu-ne programului si nevoilor dumneavoastra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="recenzii" class="bg-dark-section py-24 sm:py-32 pattern-overlay relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Ce Spun Clientii Nostri
+                </h2>
+                <p class="text-silver-400 text-lg max-w-2xl mx-auto">
+                    Recenzii reale de la clientii care ne-au acordat increderea lor.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div data-aos="fade-up" data-aos-delay="100" class="review-card bg-navy-800/50 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="text-silver-300 text-sm leading-relaxed mb-6 italic">"Sunt zeci de mii de avocati in Romania. Fiecare cu nivelul lui de pregatire si seriozitate. Dar am fost uimit sa descopar un munte de profesionalism si aplecare pe subiect. Atat eu cat si alti zeci de oameni recomandati de mine."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="text-navy-950 font-bold text-sm">BT</span>
+                        </div>
+                        <div>
+                            <div class="text-white font-semibold text-sm">Bendorfean Traian</div>
+                            <div class="text-silver-500 text-xs">Recenzie Google</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="review-card bg-navy-800/50 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="text-silver-300 text-sm leading-relaxed mb-6 italic">"Profesionalismul, seriozitatea si atentia la detalii au fost evidente pe tot parcursul colaborarii. Avocatii sunt foarte bine pregatiti, ofera solutii eficiente si explica fiecare pas in mod clar si transparent. Rezultatele au fost peste asteptari."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="text-navy-950 font-bold text-sm">LC</span>
+                        </div>
+                        <div>
+                            <div class="text-white font-semibold text-sm">Laura Cristina</div>
+                            <div class="text-silver-500 text-xs">Recenzie Google</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="review-card bg-navy-800/50 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="text-silver-300 text-sm leading-relaxed mb-6 italic">"Ofera servicii pentru toate domeniile, au echipa mare si preturi bune! Ii recomand cu drag oricui!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="text-navy-950 font-bold text-sm">VE</span>
+                        </div>
+                        <div>
+                            <div class="text-white font-semibold text-sm">Victor Eagle Studio</div>
+                            <div class="text-silver-500 text-xs">Recenzie Google</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="review-card bg-navy-800/50 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="text-silver-300 text-sm leading-relaxed mb-6 italic">"Cel mai top cabinet de avocat din Cluj Napoca! Recomand cu drag."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="text-navy-950 font-bold text-sm">FP</span>
+                        </div>
+                        <div>
+                            <div class="text-white font-semibold text-sm">Florin Pop</div>
+                            <div class="text-silver-500 text-xs">Recenzie Google</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="review-card bg-navy-800/50 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="text-silver-300 text-sm leading-relaxed mb-6 italic">"Cabinet ultra central, echipa foarte organizata."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="text-navy-950 font-bold text-sm">VP</span>
+                        </div>
+                        <div>
+                            <div class="text-white font-semibold text-sm">Victor Pop</div>
+                            <div class="text-silver-500 text-xs">Recenzie Google</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="review-card bg-navy-800/50 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <p class="text-silver-300 text-sm leading-relaxed mb-6 italic">"Cel mai prompt! Recomand! Preturi corecte."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="text-navy-950 font-bold text-sm">VP</span>
+                        </div>
+                        <div>
+                            <div class="text-white font-semibold text-sm">Victor Pop</div>
+                            <div class="text-silver-500 text-xs">Recenzie Google</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="mt-12 text-center">
+                <div class="inline-flex items-center gap-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-8 py-5">
+                    <div class="flex gap-1">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <div class="h-8 w-px bg-white/20"></div>
+                    <div>
+                        <span class="text-white font-bold text-2xl">5.0</span>
+                        <span class="text-silver-400 text-sm ml-2">din 56 recenzii pe Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-light-section py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-display text-navy-900 text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Contactati-ne
+                </h2>
+                <p class="text-navy-600 text-lg max-w-2xl mx-auto">
+                    Programarea este necesara. Va asteptam cu o consultatie personalizata.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <a href="https://www.google.com/maps/place/Andreea+Vaman+-+Cabinet+de+Avocat/data=!4m7!3m6!1s0x47490d88d4dba5e9:0xd5b60955a4fc1167!8m2!3d46.7751814!4d23.5915954!16s%2Fg%2F11k9bs3rr4!19sChIJ6aXb1IgNSUcRZxH8pFUJttU?authuser=0&hl=en&rclk=1"
+                   target="_blank" rel="noopener"
+                   data-aos="fade-up" data-aos-delay="100"
+                   class="contact-card bg-white rounded-2xl p-8 border border-silver-200 text-center block hover:no-underline">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-location-dot text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 font-bold mb-2">Adresa</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Strada Ion Popescu Voitesti 2-4, Ap.5</p>
+                    <p class="text-navy-600 text-sm">400153, Cluj-Napoca</p>
+                    <p class="text-gold-600 text-sm font-medium mt-3 inline-flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> Indicatii
+                    </p>
+                </a>
+
+                <a href="tel:0743933494"
+                   data-aos="fade-up" data-aos-delay="200"
+                   class="contact-card bg-white rounded-2xl p-8 border border-silver-200 text-center block hover:no-underline">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-phone text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 font-bold mb-2">Telefon</h3>
+                    <p class="text-navy-600 text-sm">0743 933 494</p>
+                    <p class="text-gold-600 text-sm font-medium mt-3 inline-flex items-center gap-1">
+                        <i class="fa-solid fa-phone text-xs"></i> Apeleaza
+                    </p>
+                </a>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="contact-card bg-white rounded-2xl p-8 border border-silver-200 text-center">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-clock text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 font-bold mb-3">Program</h3>
+                    <div class="text-sm space-y-1.5">
+                        <div class="flex justify-between text-navy-700">
+                            <span>Luni</span><span class="font-medium">9:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between text-navy-700">
+                            <span>Marti</span><span class="font-medium">9:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between text-navy-700">
+                            <span>Miercuri</span><span class="font-medium">9:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between text-navy-700">
+                            <span>Joi</span><span class="font-medium">9:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between text-navy-500">
+                            <span>Vineri</span><span class="font-medium">Inchis</span>
+                        </div>
+                        <div class="flex justify-between text-navy-500">
+                            <span>Sambata</span><span class="font-medium">Inchis</span>
+                        </div>
+                        <div class="flex justify-between text-navy-500">
+                            <span>Duminica</span><span class="font-medium">Inchis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="400" class="contact-card bg-white rounded-2xl p-8 border border-silver-200 text-center">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-star text-gold-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-display text-navy-900 font-bold mb-3">Rating Google</h3>
+                    <div class="flex gap-1 justify-center mb-2">
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                        <i class="fa-solid fa-star star-gold"></i>
+                    </div>
+                    <p class="text-navy-900 font-bold text-2xl font-display">5.0 / 5</p>
+                    <p class="text-navy-600 text-sm mt-1">Bazat pe 56 recenzii</p>
+                    <a href="https://search.google.com/local/reviews?placeid=ChIJ6aXb1IgNSUcRZxH8pFUJttU&q=Andreea+Vaman+-+Cabinet+de+Avocat&authuser=0&hl=en&gl=RO"
+                       target="_blank" rel="noopener"
+                       class="text-gold-600 text-sm font-medium mt-3 inline-flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> Vezi recenzii
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="map-container rounded-2xl overflow-hidden shadow-xl shadow-navy-900/10 border border-silver-200">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.5!2d23.5915954!3d46.7751814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490d88d4dba5e9%3A0xd5b60955a4fc1167!2sAndreea%20Vaman%20-%20Cabinet%20de%20Avocat!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Locatia Cabinetului de Avocat Andreea Vaman pe Google Maps">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-500 to-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-scale-balanced text-navy-950 text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="font-display text-white text-lg font-bold">Andreea Vaman</span>
+                        </div>
+                    </div>
+                    <p class="text-silver-500 text-sm leading-relaxed">Cabinet de Avocat in Cluj-Napoca. Servicii juridice profesionale cu dedicare si excelenta, din 2017.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-white font-bold mb-4">Navigare</h4>
+                    <div class="space-y-2">
+                        <a href="#despre" class="block text-silver-400 hover:text-gold-400 transition-colors text-sm">Despre Noi</a>
+                        <a href="#servicii" class="block text-silver-400 hover:text-gold-400 transition-colors text-sm">Servicii</a>
+                        <a href="#recenzii" class="block text-silver-400 hover:text-gold-400 transition-colors text-sm">Recenzii</a>
+                        <a href="#contact" class="block text-silver-400 hover:text-gold-400 transition-colors text-sm">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-white font-bold mb-4">Contact</h4>
+                    <div class="space-y-3">
+                        <a href="tel:0743933494" class="flex items-center gap-3 text-silver-400 hover:text-gold-400 transition-colors text-sm">
+                            <i class="fa-solid fa-phone text-gold-500/60 w-4 text-center"></i> 0743 933 494
+                        </a>
+                        <a href="mailto:vaman_andreea@yahoo.ro" class="flex items-center gap-3 text-silver-400 hover:text-gold-400 transition-colors text-sm">
+                            <i class="fa-solid fa-envelope text-gold-500/60 w-4 text-center"></i> vaman_andreea@yahoo.ro
+                        </a>
+                        <div class="flex items-start gap-3 text-silver-400 text-sm">
+                            <i class="fa-solid fa-location-dot text-gold-500/60 w-4 text-center mt-0.5"></i>
+                            <span>Strada Ion Popescu Voitesti 2-4, Ap.5, 400153 Cluj-Napoca</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider mb-8"></div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-silver-500 text-xs">
+                    &copy; 2026 Andreea Vaman - Cabinet de Avocat. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.google.com/maps/place/Andreea+Vaman+-+Cabinet+de+Avocat/data=!4m7!3m6!1s0x47490d88d4dba5e9:0xd5b60955a4fc1167!8m2!3d46.7751814!4d23.5915954!16s%2Fg%2F11k9bs3rr4!19sChIJ6aXb1IgNSUcRZxH8pFUJttU?authuser=0&hl=en&rclk=1"
+                       target="_blank" rel="noopener"
+                       class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-silver-400 hover:bg-gold-500/20 hover:text-gold-400 transition-all">
+                        <i class="fa-brands fa-google text-sm"></i>
+                    </a>
+                    <a href="mailto:vaman_andreea@yahoo.ro"
+                       class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-silver-400 hover:bg-gold-500/20 hover:text-gold-400 transition-all">
+                        <i class="fa-solid fa-envelope text-sm"></i>
+                    </a>
+                    <a href="tel:0743933494"
+                       class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-silver-400 hover:bg-gold-500/20 hover:text-gold-400 transition-all">
+                        <i class="fa-solid fa-phone text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- AOS Init -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80
+    });
+</script>
+
+<!-- Vue.js App -->
+<script>
+    const { createApp, ref } = Vue;
+
+    createApp({
+        setup() {
+            const business = ref({
+                name: 'Andreea Vaman - Cabinet de Avocat',
+                phone: '0743 933 494',
+                email: 'vaman_andreea@yahoo.ro',
+                address: 'Strada Ion Popescu Voitești 2-4, Ap.5, 400153 Cluj-Napoca',
+                rating: 5,
+                reviewCount: 56,
+                mapsUrl: 'https://www.google.com/maps/place/Andreea+Vaman+-+Cabinet+de+Avocat/data=!4m7!3m6!1s0x47490d88d4dba5e9:0xd5b60955a4fc1167!8m2!3d46.7751814!4d23.5915954!16s%2Fg%2F11k9bs3rr4!19sChIJ6aXb1IgNSUcRZxH8pFUJttU?authuser=0&hl=en&rclk=1'
+            });
+
+            return { business };
+        }
+    }).mount('#app');
+</script>
+
+</body>
+</html>

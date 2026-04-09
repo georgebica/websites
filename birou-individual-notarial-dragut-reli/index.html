@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Birou Individual Notarial Drăguț Reli — servicii notariale în București, Sector 3. Program luni–vineri, 09:00–18:00." />
+  <title>BIROU INDIVIDUAL NOTARIAL DRAGUT RELI</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0d1320',
+            gold: '#c9a86a',
+            goldSoft: '#e8d7b7',
+            ivory: '#f8f5ef',
+            stoneDeep: '#1b2433',
+            wine: '#6b2230'
+          },
+          fontFamily: {
+            display: ['Cormorant Garamond', 'serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 20px 60px rgba(201,168,106,0.18)',
+            soft: '0 18px 45px rgba(13,19,32,0.12)'
+          },
+          backgroundImage: {
+            'fine-grid': 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0)',
+            'gold-radial': 'radial-gradient(circle at top, rgba(201,168,106,0.18), transparent 40%)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(201,168,106,0.12), transparent 28%),
+        linear-gradient(180deg, #0d1320 0%, #131c2b 30%, #f8f5ef 30%, #f8f5ef 100%);
+      color: #111827;
+    }
+    .glass {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .gold-line {
+      background: linear-gradient(90deg, transparent, rgba(201,168,106,0.85), transparent);
+      height: 1px;
+    }
+    .hero-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(8px);
+      opacity: 0.55;
+      animation: floatOrb 10s ease-in-out infinite;
+    }
+    .hero-orb.two { animation-delay: -3s; }
+    .hero-orb.three { animation-delay: -6s; }
+    @keyframes floatOrb {
+      0%,100% { transform: translateY(0) translateX(0) scale(1); }
+      50% { transform: translateY(-20px) translateX(12px) scale(1.06); }
+    }
+    .service-card:hover,
+    .trust-card:hover,
+    .review-card:hover,
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(13,19,32,0.12);
+    }
+    .section-shell {
+      position: relative;
+      overflow: hidden;
+    }
+    .section-shell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(13,19,32,0.04) 1px, transparent 0);
+      background-size: 22px 22px;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .text-balance { text-wrap: balance; }
+  </style>
+</head>
+<body class="font-body antialiased" x-data="{ mobileMenu:false, scrolled:false }" x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 16)">
+  <div id="app">
+    <nav class="fixed top-0 inset-x-0 z-50 transition-all duration-300" :class="scrolled ? 'bg-ink/90 backdrop-blur-xl border-b border-white/10 shadow-soft' : 'bg-transparent'">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="flex items-center justify-between h-20">
+          <a href="#hero" class="flex items-center gap-4 group">
+            <div class="w-11 h-11 rounded-full border border-gold/50 flex items-center justify-center text-gold bg-white/5 group-hover:bg-gold/10 transition">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div>
+              <div class="font-display text-2xl md:text-3xl font-semibold text-white leading-none">{{ business.shortName }}</div>
+              <div class="text-[11px] uppercase tracking-[0.28em] text-white/60 mt-1">Birou notarial · București</div>
+            </div>
+          </a>
+
+          <div class="hidden lg:flex items-center gap-8 text-sm text-white/80">
+            <a v-for="item in navItems" :key="item.href" :href="item.href" class="hover:text-gold transition">{{ item.label }}</a>
+            <a :href="'tel:' + business.phoneRaw" class="inline-flex items-center gap-2 rounded-full border border-gold/40 px-5 py-2.5 text-gold hover:bg-gold hover:text-ink transition">
+              <i class="fa-solid fa-phone"></i>
+              <span>Sună acum</span>
+            </a>
+          </div>
+
+          <button @click="mobileMenu = !mobileMenu" class="lg:hidden w-11 h-11 rounded-full border border-white/15 text-white flex items-center justify-center bg-white/5">
+            <i class="fa-solid" :class="mobileMenu ? 'fa-xmark' : 'fa-bars'"></i>
+          </button>
+        </div>
+      </div>
+
+      <div x-show="mobileMenu" x-transition.origin.top.duration.300ms class="lg:hidden border-t border-white/10 bg-ink/95 backdrop-blur-xl">
+        <div class="px-6 py-5 space-y-4 text-white/85">
+          <a @click="mobileMenu=false" v-for="item in navItems" :key="item.href + '-mobile'" :href="item.href" class="block hover:text-gold transition">{{ item.label }}</a>
+          <a @click="mobileMenu=false" :href="'tel:' + business.phoneRaw" class="inline-flex items-center gap-2 rounded-full border border-gold/40 px-5 py-2.5 text-gold hover:bg-gold hover:text-ink transition">
+            <i class="fa-solid fa-phone"></i>
+            <span>Sună acum</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-ink pt-24">
+        <div class="absolute inset-0 bg-fine-grid bg-[size:28px_28px] opacity-20"></div>
+        <div class="absolute inset-0 bg-gold-radial"></div>
+        <div class="hero-orb w-72 h-72 bg-gold/20 top-28 -left-16"></div>
+        <div class="hero-orb two w-60 h-60 bg-wine/25 bottom-16 right-10"></div>
+        <div class="hero-orb three w-44 h-44 bg-white/10 top-40 right-1/4"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-16 w-full">
+          <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
+            <div data-aos="fade-up" data-aos-duration="900">
+              <div class="inline-flex items-center gap-3 rounded-full border border-gold/30 bg-white/5 px-4 py-2 text-goldSoft text-sm tracking-[0.18em] uppercase">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Servicii notariale în Sector 3</span>
+              </div>
+              <h1 class="mt-8 font-display text-white text-5xl sm:text-6xl lg:text-8xl leading-[0.9] font-semibold text-balance">
+                Claritate juridică, rigoare notarială și o experiență care inspiră încredere de la primul contact.
+              </h1>
+              <p class="mt-8 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed text-balance">
+                Pentru acte, tranzacții și formalități care cer precizie, {{ business.shortName }} oferă un cadru profesionist, organizat și atent la fiecare detaliu — în București, cu program clar și comunicare directă.
+              </p>
+
+              <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                <a :href="'tel:' + business.phoneRaw" class="inline-flex items-center justify-center gap-3 rounded-full bg-gold px-7 py-4 text-ink font-semibold hover:-translate-y-0.5 hover:shadow-glow transition duration-300">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>Call Now</span>
+                </a>
+                <a :href="business.mapsUrl" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-white font-semibold hover:bg-white/10 transition duration-300">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Get Directions</span>
+                </a>
+              </div>
+
+              <div class="mt-14 grid sm:grid-cols-3 gap-4 max-w-3xl">
+                <div class="glass rounded-2xl p-5 border border-white/10">
+                  <div class="text-gold text-xl"><i class="fa-solid fa-star"></i></div>
+                  <div class="mt-3 text-3xl font-display text-white font-semibold">{{ business.ratingValue }}</div>
+                  <div class="text-white/65 text-sm">rating Google din {{ business.reviewCount }} recenzii</div>
+                </div>
+                <div class="glass rounded-2xl p-5 border border-white/10">
+                  <div class="text-gold text-xl"><i class="fa-solid fa-clock"></i></div>
+                  <div class="mt-3 text-3xl font-display text-white font-semibold">09:00–18:00</div>
+                  <div class="text-white/65 text-sm">program de luni până vineri</div>
+                </div>
+                <div class="glass rounded-2xl p-5 border border-white/10">
+                  <div class="text-gold text-xl"><i class="fa-solid fa-language"></i></div>
+                  <div class="mt-3 text-3xl font-display text-white font-semibold">RO / EN</div>
+                  <div class="text-white/65 text-sm">comunicare în română și engleză</div>
+                </div>
+              </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1000" class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-white/5 blur-3xl"></div>
+              <div class="relative rounded-[2rem] border border-white/10 bg-white/6 backdrop-blur-xl p-8 md:p-10 shadow-glow">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <div class="text-white/55 text-sm uppercase tracking-[0.22em]">Birou individual notarial</div>
+                    <div class="font-display text-white text-4xl mt-2">{{ business.shortName }}</div>
+                  </div>
+                  <div class="w-16 h-16 rounded-2xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold text-2xl">
+                    <i class="fa-solid fa-file-signature"></i>
+                  </div>
+                </div>
+
+                <div class="gold-line my-8"></div>
+
+                <div class="space-y-5 text-white/80">
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gold shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                      <div class="text-white/55 text-xs uppercase tracking-[0.18em]">Adresă</div>
+                      <div class="mt-1 leading-relaxed">{{ business.address }}</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gold shrink-0"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                      <div class="text-white/55 text-xs uppercase tracking-[0.18em]">Telefon</div>
+                      <a :href="'tel:' + business.phoneRaw" class="mt-1 inline-block hover:text-gold transition">{{ business.phone }}</a>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gold shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                      <div class="text-white/55 text-xs uppercase tracking-[0.18em]">E-mail</div>
+                      <a :href="'mailto:' + business.email" class="mt-1 inline-block break-all hover:text-gold transition">{{ business.email }}</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                  <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                    <div class="text-xs uppercase tracking-[0.18em] text-white/50">Regim lucru</div>
+                    <div class="mt-2 text-white font-semibold">Program afișat clar</div>
+                  </div>
+                  <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                    <div class="text-xs uppercase tracking-[0.18em] text-white/50">Locație</div>
+                    <div class="mt-2 text-white font-semibold">București · Sector 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="despre" class="section-shell relative py-24 lg:py-32 bg-ivory">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
+            <div data-aos="fade-right">
+              <div class="inline-flex items-center gap-3 rounded-full border border-ink/10 bg-white px-4 py-2 text-sm uppercase tracking-[0.2em] text-ink/65">
+                <i class="fa-solid fa-building-columns text-gold"></i>
+                <span>Despre birou</span>
+              </div>
+              <h2 class="mt-6 font-display text-5xl lg:text-6xl text-ink leading-[0.95]">
+                Un birou notarial construit pe seriozitate, organizare și comunicare limpede.
+              </h2>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100">
+              <p class="text-lg leading-8 text-slate-700">
+                {{ aboutText }}
+              </p>
+              <div class="mt-10 grid sm:grid-cols-3 gap-5">
+                <div v-for="stat in stats" :key="stat.label" class="rounded-3xl bg-white border border-slate-200 p-6 shadow-soft transition duration-300">
+                  <div class="w-12 h-12 rounded-2xl bg-ink text-gold flex items-center justify-center text-lg">
+                    <i :class="stat.icon"></i>
+                  </div>
+                  <div class="mt-5 font-display text-4xl text-ink font-semibold">{{ stat.value }}</div>
+                  <div class="mt-2 text-sm text-slate-600 leading-relaxed">{{ stat.label }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicii" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute -top-24 right-0 w-72 h-72 bg-gold/10 rounded-full blur-3xl"></div>
+          <div class="absolute bottom-0 -left-12 w-80 h-80 bg-ink/5 rounded-full blur-3xl"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <div class="inline-flex items-center gap-3 rounded-full border border-ink/10 bg-ivory px-4 py-2 text-sm uppercase tracking-[0.2em] text-ink/65">
+              <i class="fa-solid fa-folder-open text-gold"></i>
+              <span>Servicii</span>
+            </div>
+            <h2 class="mt-6 font-display text-5xl lg:text-6xl text-ink leading-[0.96]">Soluții notariale esențiale, prezentate clar și elegant.</h2>
+            <p class="mt-5 text-lg text-slate-600 leading-8">Portofoliul de servicii este construit în jurul activității notariale indicate în datele disponibile și al nevoilor frecvente ale clienților persoane fizice și juridice.</p>
+          </div>
+
+          <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <article v-for="(service, index) in services" :key="service.title" class="service-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft transition duration-500" :data-aos="index % 2 === 0 ? 'fade-up' : 'fade-down'" :data-aos-delay="(index+1) * 60">
+              <div class="w-14 h-14 rounded-2xl bg-ink text-gold flex items-center justify-center text-xl shadow-lg">
+                <i :class="service.icon"></i>
+              </div>
+              <h3 class="mt-6 font-display text-3xl text-ink leading-tight">{{ service.title }}</h3>
+              <p class="mt-4 text-slate-600 leading-7">{{ service.description }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="avantaje" class="relative py-24 lg:py-32 bg-ink text-white overflow-hidden">
+        <div class="absolute inset-0 bg-fine-grid bg-[size:26px_26px] opacity-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/[0.02] to-transparent"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm uppercase tracking-[0.2em] text-goldSoft">
+              <i class="fa-solid fa-shield-halved text-gold"></i>
+              <span>De ce să alegeți biroul</span>
+            </div>
+            <h2 class="mt-6 font-display text-5xl lg:text-6xl leading-[0.96]">Încrederea se câștigă prin rigoare, consecvență și modul în care ești tratat.</h2>
+          </div>
+
+          <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <article v-for="(item, index) in trustSignals" :key="item.title" class="trust-card rounded-[2rem] border border-white/10 bg-white/5 p-8 transition duration-500" data-aos="zoom-in" :data-aos-delay="index * 80">
+              <div class="w-14 h-14 rounded-2xl bg-gold/15 text-gold border border-gold/20 flex items-center justify-center text-xl">
+                <i :class="item.icon"></i>
+              </div>
+              <h3 class="mt-6 font-display text-3xl leading-tight">{{ item.title }}</h3>
+              <p class="mt-4 text-white/70 leading-7">{{ item.text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="relative py-24 lg:py-32 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8" data-aos="fade-up">
+            <div class="max-w-3xl">
+              <div class="inline-flex items-center gap-3 rounded-full border border-ink/10 bg-white px-4 py-2 text-sm uppercase tracking-[0.2em] text-ink/65">
+                <i class="fa-solid fa-star text-gold"></i>
+                <span>Recenzii reale</span>
+              </div>
+              <h2 class="mt-6 font-display text-5xl lg:text-6xl text-ink leading-[0.96]">Ce spun clienții despre experiența lor.</h2>
+            </div>
+            <a :href="business.reviewsUrl" target="_blank" rel="noopener" class="inline-flex items-center gap-3 rounded-full border border-ink/10 bg-white px-6 py-3 text-ink hover:border-gold hover:text-gold transition">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>Vezi profilul Google</span>
+            </a>
+          </div>
+
+          <div v-if="reviews.length" class="mt-14 grid lg:grid-cols-2 gap-6">
+            <article v-for="(review, index) in reviews" :key="review.name + index" class="review-card rounded-[2rem] bg-white border border-slate-200 p-8 shadow-soft transition duration-500" data-aos="fade-up" :data-aos-delay="index * 60">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-semibold text-xl text-ink">{{ review.name }}</h3>
+                  <p class="text-sm text-slate-500 mt-1">{{ review.date }}</p>
+                </div>
+                <div class="flex items-center gap-1 text-gold shrink-0">
+                  <i v-for="n in 5" :key="n" class="fa-solid fa-star" :class="n <= review.rating ? 'opacity-100' : 'opacity-20'"></i>
+                </div>
+              </div>
+              <p class="mt-5 text-slate-700 leading-8">{{ review.text }}</p>
+            </article>
+          </div>
+
+          <div v-else class="mt-14 rounded-[2rem] bg-white border border-slate-200 p-10 shadow-soft max-w-2xl" data-aos="fade-up">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-ink text-gold flex items-center justify-center text-2xl">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <div class="font-display text-4xl text-ink">{{ business.ratingValue }}</div>
+                <div class="text-slate-600">{{ business.reviewCount }} recenzii Google</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="grid xl:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
+            <div data-aos="fade-right">
+              <div class="inline-flex items-center gap-3 rounded-full border border-ink/10 bg-ivory px-4 py-2 text-sm uppercase tracking-[0.2em] text-ink/65">
+                <i class="fa-solid fa-address-card text-gold"></i>
+                <span>Contact</span>
+              </div>
+              <h2 class="mt-6 font-display text-5xl lg:text-6xl text-ink leading-[0.96]">Date clare, acces rapid și informații utile dintr-o privire.</h2>
+              <p class="mt-5 text-lg text-slate-600 leading-8">Secțiunea de contact este gândită pentru acces imediat la detaliile esențiale: adresă, telefon, program și evaluarea afișată în Google.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              <article class="contact-card rounded-[2rem] border border-slate-200 bg-ivory p-7 shadow-soft transition duration-500" data-aos="fade-up" data-aos-delay="50">
+                <div class="w-14 h-14 rounded-2xl bg-ink text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-location-dot"></i></div>
+                <h3 class="mt-5 font-display text-3xl text-ink">Adresă</h3>
+                <p class="mt-3 text-slate-700 leading-7">{{ business.address }}</p>
+                <a :href="business.mapsUrl" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 text-ink font-semibold hover:text-gold transition">
+                  <span>Get Directions</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="contact-card rounded-[2rem] border border-slate-200 bg-ivory p-7 shadow-soft transition duration-500" data-aos="fade-up" data-aos-delay="110">
+                <div class="w-14 h-14 rounded-2xl bg-ink text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-phone"></i></div>
+                <h3 class="mt-5 font-display text-3xl text-ink">Telefon</h3>
+                <a :href="'tel:' + business.phoneRaw" class="mt-3 inline-block text-slate-700 text-lg hover:text-gold transition">{{ business.phone }}</a>
+                <p class="mt-4 text-slate-500 leading-7">Contact direct pentru programare, informații și clarificări privind documentele notariale.</p>
+              </article>
+
+              <article class="contact-card rounded-[2rem] border border-slate-200 bg-ivory p-7 shadow-soft transition duration-500 sm:col-span-2" data-aos="fade-up" data-aos-delay="170">
+                <div class="w-14 h-14 rounded-2xl bg-ink text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-clock"></i></div>
+                <h3 class="mt-5 font-display text-3xl text-ink">Program</h3>
+                <div class="mt-5 grid md:grid-cols-2 gap-x-10 gap-y-3">
+                  <div v-for="hour in formattedHours" :key="hour.day" class="flex items-center justify-between border-b border-slate-200 py-2.5 gap-4">
+                    <span class="font-medium text-slate-700">{{ hour.day }}</span>
+                    <span class="text-slate-500 text-right">{{ hour.hours }}</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="contact-card rounded-[2rem] border border-slate-200 bg-ivory p-7 shadow-soft transition duration-500" data-aos="fade-up" data-aos-delay="230">
+                <div class="w-14 h-14 rounded-2xl bg-ink text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-star"></i></div>
+                <h3 class="mt-5 font-display text-3xl text-ink">Rating Google</h3>
+                <div class="mt-4 flex items-center gap-1 text-gold text-lg">
+                  <i v-for="n in 5" :key="n" class="fa-solid fa-star"></i>
+                </div>
+                <p class="mt-3 text-slate-700">{{ business.ratingValue }} din {{ business.reviewCount }} recenzii</p>
+              </article>
+
+              <article class="contact-card rounded-[2rem] border border-slate-200 bg-ivory p-7 shadow-soft transition duration-500" data-aos="fade-up" data-aos-delay="290">
+                <div class="w-14 h-14 rounded-2xl bg-ink text-gold flex items-center justify-center text-xl"><i class="fa-solid fa-envelope"></i></div>
+                <h3 class="mt-5 font-display text-3xl text-ink">E-mail</h3>
+                <a :href="'mailto:' + business.email" class="mt-3 inline-block text-slate-700 break-all hover:text-gold transition">{{ business.email }}</a>
+                <p class="mt-4 text-slate-500 leading-7">Canal util pentru transmiterea detaliilor inițiale și pentru comunicare administrativă.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="mt-12 rounded-[2rem] overflow-hidden border border-slate-200 shadow-soft" data-aos="fade-up" data-aos-delay="140">
+            <iframe
+              :src="mapEmbedUrl"
+              width="100%"
+              height="460"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Hartă locație">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative bg-ink text-white overflow-hidden">
+      <div class="absolute inset-0 bg-fine-grid bg-[size:28px_28px] opacity-10"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-12">
+        <div class="grid md:grid-cols-[1.15fr_0.85fr] gap-10 items-end">
+          <div>
+            <div class="font-display text-4xl">{{ business.shortName }}</div>
+            <p class="mt-3 text-white/65 max-w-2xl">Birou notarial din București orientat către rigoare procedurală, comunicare clară și o experiență profesionistă de la primul apel până la finalizarea actelor.</p>
+            <div class="mt-6 text-sm text-white/55 leading-7">
+              <div>{{ business.phone }} · {{ business.address }}</div>
+              <div>&copy; {{ currentYear }} {{ business.shortName }}. Toate drepturile rezervate.</div>
+            </div>
+          </div>
+
+          <div class="md:text-right">
+            <div class="flex md:justify-end gap-3">
+              <a :href="'tel:' + business.phoneRaw" class="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-ink transition"><i class="fa-solid fa-phone"></i></a>
+              <a :href="'mailto:' + business.email" class="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-ink transition"><i class="fa-solid fa-envelope"></i></a>
+              <a :href="business.mapsUrl" target="_blank" rel="noopener" class="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-ink transition"><i class="fa-solid fa-location-dot"></i></a>
+              <a :href="business.reviewsUrl" target="_blank" rel="noopener" class="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-gold hover:bg-gold hover:text-ink transition"><i class="fa-solid fa-star"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          currentYear: new Date().getFullYear(),
+          navItems: [
+            { label: 'Despre', href: '#despre' },
+            { label: 'Servicii', href: '#servicii' },
+            { label: 'Avantaje', href: '#avantaje' },
+            { label: 'Recenzii', href: '#recenzii' },
+            { label: 'Contact', href: '#contact' }
+          ],
+          business: {
+            shortName: 'Drăguț Reli',
+            fullName: 'BIROU INDIVIDUAL NOTARIAL DRAGUT RELI',
+            address: 'bl. V14A, Strada Vlad Județul 2, sc. 2, parter, 031304 București',
+            phone: '0765 965 224',
+            phoneRaw: '0765965224',
+            email: 'reli_dragut@yahoo.com',
+            mapsUrl: 'https://www.google.com/maps/place/BIROU+INDIVIDUAL+NOTARIAL+DRAGUT+RELI/data=!4m7!3m6!1s0x40b1fff83efc1513:0xe8dc8f4f2b5d66c3!8m2!3d44.4192365!4d26.1274065!16s%2Fg%2F11ybtcj1tg!19sChIJExX8Pvj_sUARw2ZdK0-P3Og?authuser=0&hl=en&rclk=1',
+            reviewsUrl: 'https://search.google.com/local/reviews?placeid=ChIJExX8Pvj_sUARw2ZdK0-P3Og&q=BIROU+INDIVIDUAL+NOTARIAL+DRAGUT+RELI&authuser=0&hl=en&gl=RO',
+            ratingValue: '5/5',
+            reviewCount: '24'
+          },
+          aboutText: 'Birou Individual Notarial Drăguț Reli activează în București și este prezentat în datele disponibile ca parte a unei societăți profesionale notariale, cu activitate în aria notarială curentă: autentificări, acte pentru tranzacții imobiliare, procuri, declarații, succesiuni, legalizări și consultanță notarială. Programul afișat este de luni până vineri, iar contactul poate fi realizat telefonic sau prin e-mail. În recenziile publice, clienții evidențiază frecvent promptitudinea, profesionalismul și modul clar în care sunt explicate etapele necesare.',
+          stats: [
+            { icon: 'fa-solid fa-star', value: '5/5', label: 'rating afișat în Google' },
+            { icon: 'fa-solid fa-users', value: '24', label: 'recenzii publice disponibile' },
+            { icon: 'fa-solid fa-clock', value: 'L–V', label: 'program 09:00–18:00' }
+          ],
+          services: [
+            {
+              icon: 'fa-solid fa-house-circle-check',
+              title: 'Acte pentru tranzacții imobiliare',
+              description: 'Asistență pentru acte notariale legate de vânzare-cumpărare, donații, contracte de închiriere și alte documente aferente proprietăților.'
+            },
+            {
+              icon: 'fa-solid fa-file-signature',
+              title: 'Procuri și declarații',
+              description: 'Întocmirea și autentificarea procurilor generale sau speciale, precum și a declarațiilor notariale necesare în diferite contexte juridice.'
+            },
+            {
+              icon: 'fa-solid fa-scroll',
+              title: 'Succesiuni și moșteniri',
+              description: 'Servicii pentru certificate de moștenitor, clarificarea documentației succesorale și formalitățile aferente transmiterii patrimoniului.'
+            },
+            {
+              icon: 'fa-solid fa-heart-circle-check',
+              title: 'Acte de familie',
+              description: 'Suport notarial pentru convenții matrimoniale, divorț prin acord și alte documente care țin de viața de familie și statutul civil.'
+            },
+            {
+              icon: 'fa-solid fa-stamp',
+              title: 'Legalizări și certificări',
+              description: 'Legalizarea de copii, semnături, traduceri și eliberarea de copii certificate sau extrase notariale, conform tipului de document solicitat.'
+            },
+            {
+              icon: 'fa-solid fa-globe',
+              title: 'Documente pentru uz internațional',
+              description: 'Sprijin pentru apostile și formalități de certificare care susțin recunoașterea documentelor în contexte internaționale.'
+            }
+          ],
+          trustSignals: [
+            {
+              icon: 'fa-solid fa-scale-balanced',
+              title: 'Cadru profesional notarial',
+              text: 'Datele disponibile indică funcționarea în cadrul unei societăți profesionale notariale, cu activitate verificată în registrele de profil.'
+            },
+            {
+              icon: 'fa-solid fa-bolt',
+              title: 'Promptitudine apreciată',
+              text: 'Mai multe recenzii menționează rapiditatea și buna organizare, un criteriu esențial când documentele trebuie pregătite fără întârzieri inutile.'
+            },
+            {
+              icon: 'fa-solid fa-comments',
+              title: 'Explicații clare',
+              text: 'Feedbackul public evidențiază modul în care etapele și documentele sunt explicate pe înțelesul clientului, cu atenție la claritate.'
+            },
+            {
+              icon: 'fa-solid fa-language',
+              title: 'Comunicare în română și engleză',
+              text: 'Capacitatea de lucru în două limbi adaugă accesibilitate pentru clienți locali și pentru cei care au nevoie de sprijin în contexte internaționale.'
+            }
+          ],
+          reviews: [
+            {
+              name: 'Floralia',
+              date: '21 august 2019',
+              rating: 5,
+              text: 'Profesional and quick services. Decent prices'
+            },
+            {
+              name: 'George Petrineanu',
+              date: 'Fără dată disponibilă',
+              rating: 1,
+              text: 'I called them in order to get a price quotation for a real estate transaction. They left me an unprofessional impression for their customer unfriendly attitude. They was not willing to give me the price quotation I asked neither to call me later as I asked. They seem to not care. It is not possible to pay by card, only cash, which is not acceptable in a capital and for relatively high expenses the transaction regarded. I will never disturb them again.'
+            },
+            {
+              name: 'Ramona Saleh',
+              date: 'Fără dată disponibilă',
+              rating: 5,
+              text: 'Best in town! Staff was very pleasent and professional, unlike other places.'
+            },
+            {
+              name: 'Simona Iliescu',
+              date: 'Fără dată disponibilă',
+              rating: 5,
+              text: 'Vă recomand să veniți aici cu încredere, sunt serioși, prompți, profesioniști. Lucrez cu doamnele de aici de ani de zile, tot felul de spețe și este o recomandare pe care trebuia să o fac de mult timp, pentru că totul a mers mereu fără niciun fel de probleme.'
+            },
+            {
+              name: 'Gabriel Amzulescu',
+              date: 'Fără dată disponibilă',
+              rating: 5,
+              text: 'O recomand pe Cristina Mihalache de la ei. Intelege problemele, iti explica pe intelesul tau pasii, face totul clar si facil pentru client si e foarte nice'
+            },
+            {
+              name: 'dumi stef',
+              date: 'Fără dată disponibilă',
+              rating: 5,
+              text: 'Extrem de profesionisti, printre putinele Birouri care isi merita buna reputatie! Nu buna reputatia definita sec si incomplet ca lipsa unor cercetari disciplinare ci buna reputatie la propiu! Parerea favorabila despre o persoana sau faptele acesteia, perceptia pozitiva asupra conduitei sale morale si profesionale in mediul social.'
+            },
+            {
+              name: 'Alexandru Gorun',
+              date: 'Fără dată disponibilă',
+              rating: 5,
+              text: 'Au fost extrem de prompti, desi am ajuns un pic inainte de ora 9.'
+            },
+            {
+              name: 'Radu Atanasescu',
+              date: 'Fără dată disponibilă',
+              rating: 5,
+              text: 'Prompti si foarte bine organizati. Comunicare pe e-mail, plata cu cardul.'
+            }
+          ],
+          openHours: {
+            Luni: '09:00–18:00',
+            Marți: '09:00–18:00',
+            Miercuri: '09:00–18:00',
+            Joi: '09:00–18:00',
+            Vineri: '09:00–18:00',
+            Sâmbătă: 'Închis',
+            Duminică: 'Închis'
+          }
+        }
+      },
+      computed: {
+        formattedHours() {
+          return Object.entries(this.openHours).map(([day, hours]) => ({ day, hours }));
+        },
+        mapEmbedUrl() {
+          return 'https://www.google.com/maps?q=44.419236,26.127406&z=16&output=embed';
+        }
+      },
+      mounted() {
+        AOS.init({ once: true, duration: 800, offset: 90, easing: 'ease-out-cubic' });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

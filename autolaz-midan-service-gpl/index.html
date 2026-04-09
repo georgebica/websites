@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autolaz Midan Service GPL — Instalari GPL Autorizate in Slatina</title>
+    <meta name="description" content="Instalari GPL autorizate RAR-OCP in Slatina. Economiseste 40-50% la combustibil cu Autolaz Midan Service. Telefon: 0724 275 777.">
+    <meta name="keywords" content="GPL Slatina, instalare GPL, conversie GPL auto, Autolaz Midan, RAR autorizat, LPG auto, AGR Autogas, Supergaz">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2E7D32">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        leaf: {
+                            50: '#E8F5E9',
+                            100: '#C8E6C9',
+                            200: '#A5D6A7',
+                            300: '#81C784',
+                            400: '#66BB6A',
+                            500: '#2E7D32',
+                            600: '#27692A',
+                            700: '#1B5E20',
+                            800: '#145218',
+                            900: '#0D3B11'
+                        },
+                        charcoal: '#1B1B1B',
+                        mint: '#E8F5E9'
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1B1B1B; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+
+        .eco-gradient {
+            background: linear-gradient(135deg, #2E7D32 0%, #66BB6A 100%);
+        }
+
+        .eco-shadow {
+            box-shadow: 0 4px 24px rgba(46, 125, 50, 0.12);
+        }
+
+        .eco-shadow-lg {
+            box-shadow: 0 8px 40px rgba(46, 125, 50, 0.18);
+        }
+
+        .eco-border {
+            border: 2px solid #C8E6C9;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(46, 125, 50, 0.22);
+        }
+
+        .leaf-pattern {
+            position: relative;
+        }
+        .leaf-pattern::before {
+            content: '\f06c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            font-size: 200px;
+            color: rgba(46, 125, 50, 0.03);
+            top: -20px;
+            right: -30px;
+            transform: rotate(-25deg);
+            pointer-events: none;
+        }
+
+        .progress-bar-fill {
+            background: linear-gradient(90deg, #2E7D32, #66BB6A);
+            border-radius: 999px;
+            height: 8px;
+            animation: progressFill 2s ease-out forwards;
+            transform-origin: left;
+        }
+
+        @keyframes progressFill {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        .floating-btn {
+            animation: floatPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes floatPulse {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-6px) scale(1.05); }
+        }
+
+        .badge-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .badge-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0%, 100% { transform: translateX(-100%) translateY(-100%); }
+            50% { transform: translateX(100%) translateY(100%); }
+        }
+
+        .star-rating i {
+            color: #FFC107;
+        }
+
+        .eco-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: #E8F5E9;
+            border-radius: 12px;
+            color: #2E7D32;
+            font-size: 20px;
+        }
+
+        .eco-icon-lg {
+            width: 64px;
+            height: 64px;
+            font-size: 26px;
+            border-radius: 16px;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #2E7D32, #66BB6A);
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Autolaz Midan Service GPL",
+        "legalName": "AUTOLAZ MIDAN SRL",
+        "description": "Instalari GPL autorizate RAR-OCP in Slatina. Conversii auto pe GPL, adaptari, inspectii si reparatii sisteme GPL.",
+        "url": "",
+        "telephone": "+40724275777",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Cireasov nr. 20",
+            "addressLocality": "Slatina",
+            "addressRegion": "Olt",
+            "postalCode": "230000",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.432307,
+            "longitude": 24.385262
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "08:00",
+                "closes": "16:30"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "ratingCount": "80"
+        },
+        "image": "",
+        "priceRange": "$$",
+        "paymentAccepted": "Cash, Card",
+        "areaServed": {
+            "@type": "City",
+            "name": "Slatina"
+        },
+        "hasMap": "https://maps.google.com/?q=44.432307,24.385262",
+        "amenityFeature": {
+            "@type": "LocationFeatureSpecification",
+            "name": "Wheelchair accessible entrance",
+            "value": true
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-inter antialiased">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-leaf-50 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+                    <div class="eco-gradient w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-white text-lg sm:text-xl shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="font-outfit font-bold text-charcoal text-base sm:text-lg block">Autolaz Midan</span>
+                        <span class="text-leaf-500 text-xs font-semibold tracking-wide uppercase">Service GPL</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#servicii" class="text-sm font-medium text-gray-600 hover:text-leaf-500 transition-colors">Servicii</a>
+                    <a href="#avantaje" class="text-sm font-medium text-gray-600 hover:text-leaf-500 transition-colors">Avantaje</a>
+                    <a href="#autorizari" class="text-sm font-medium text-gray-600 hover:text-leaf-500 transition-colors">Autorizari</a>
+                    <a href="#program" class="text-sm font-medium text-gray-600 hover:text-leaf-500 transition-colors">Program</a>
+                    <a href="tel:0724275777" class="eco-gradient text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity inline-flex items-center gap-2 shadow-md">
+                        <i class="fa-solid fa-phone"></i> 0724 275 777
+                    </a>
+                </div>
+
+                <!-- Mobile phone button -->
+                <a href="tel:0724275777" class="md:hidden eco-gradient text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-phone text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="pt-28 sm:pt-36 pb-16 sm:pb-24 bg-white leaf-pattern overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                <!-- Eco Badge -->
+                <div class="inline-flex items-center gap-2 bg-leaf-50 text-leaf-500 rounded-full px-4 py-2 text-sm font-semibold mb-6 sm:mb-8 eco-shadow">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>Autorizat RAR-OCP</span>
+                    <i class="fa-solid fa-circle-check text-leaf-400"></i>
+                </div>
+
+                <h1 class="font-outfit font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-charcoal leading-tight mb-5 sm:mb-6">
+                    Instal&#259;ri <span class="text-leaf-500">GPL</span> Autorizate &#238;n Slatina
+                </h1>
+
+                <p class="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto">
+                    Reduce&#539;i costurile cu combustibilul cu p&#226;n&#259; la 50%. Conversii auto pe GPL de calitate, cu autorizare RAR &#537;i garan&#539;ie complet&#259;.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:0724275777" class="eco-gradient text-white px-8 py-4 rounded-2xl font-outfit font-bold text-lg hover:opacity-90 transition-opacity inline-flex items-center gap-3 shadow-lg w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-phone"></i> Sun&#259; acum &#8212; 0724 275 777
+                    </a>
+                    <a href="#servicii" class="border-2 border-leaf-200 text-leaf-500 px-8 py-4 rounded-2xl font-outfit font-semibold text-lg hover:bg-leaf-50 transition-colors inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-wrench"></i> Vezi serviciile
+                    </a>
+                </div>
+
+                <!-- Trust Strip -->
+                <div class="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-gray-400 text-sm">
+                    <div class="flex items-center gap-2">
+                        <div class="star-rating flex gap-0.5">
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                        </div>
+                        <span class="font-semibold text-charcoal">5.0</span>
+                        <span>(80+ recenzii)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-leaf-500"></i>
+                        <span>Autorizat RAR</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-wheelchair text-leaf-500"></i>
+                        <span>Acces persoane cu dizabilit&#259;&#539;i</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DE CE GPL? ========== -->
+    <section id="avantaje" class="py-16 sm:py-24 bg-mint">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-white text-leaf-500 rounded-full px-4 py-2 text-sm font-semibold mb-4 eco-shadow">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Avantaje</span>
+                </div>
+                <h2 class="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-charcoal mb-4">De ce GPL?</h2>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 max-w-xl mx-auto">Conversia pe GPL aduce beneficii reale, imediate &#537;i pe termen lung.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 — Economie -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-border card-hover" data-aos="fade-up" data-aos-delay="0">
+                    <div class="eco-icon eco-icon-lg mb-5">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+                    <h3 class="font-outfit font-bold text-xl text-charcoal mb-3">Economie 40-50%</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">GPL-ul cost&#259; aproape jum&#259;tate fa&#539;&#259; de benzin&#259;. Investi&#539;ia se recupereaz&#259; rapid.</p>
+                    <div class="bg-leaf-50 rounded-full overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 50%;"></div>
+                    </div>
+                    <p class="text-leaf-500 text-xs font-semibold mt-2">~50% mai ieftin dec&#226;t benzina</p>
+                </div>
+
+                <!-- Card 2 — Ecologic -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-border card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="eco-icon eco-icon-lg mb-5">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="font-outfit font-bold text-xl text-charcoal mb-3">Ecologic</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Emisii CO2 reduse cu p&#226;n&#259; la 20%. Mai pu&#539;ine particule nocive, aer mai curat.</p>
+                    <div class="bg-leaf-50 rounded-full overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 35%;"></div>
+                    </div>
+                    <p class="text-leaf-500 text-xs font-semibold mt-2">~20% mai pu&#539;in CO2</p>
+                </div>
+
+                <!-- Card 3 — Performanta -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-border card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="eco-icon eco-icon-lg mb-5">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="font-outfit font-bold text-xl text-charcoal mb-3">Performan&#539;&#259; p&#259;strat&#259;</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Sistemele moderne GPL nu afecteaz&#259; puterea motorului. Comutare automat&#259; GPL/benzin&#259;.</p>
+                    <div class="bg-leaf-50 rounded-full overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 95%;"></div>
+                    </div>
+                    <p class="text-leaf-500 text-xs font-semibold mt-2">~100% din puterea original&#259;</p>
+                </div>
+
+                <!-- Card 4 — Autorizat -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-border card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="eco-icon eco-icon-lg mb-5">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="font-outfit font-bold text-xl text-charcoal mb-3">Autorizat RAR</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Toate instal&#259;rile sunt autorizate RAR-OCP. Documenta&#539;ie complet&#259; pentru ITP.</p>
+                    <div class="bg-leaf-50 rounded-full overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                    <p class="text-leaf-500 text-xs font-semibold mt-2">100% conform RAR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICII ========== -->
+    <section id="servicii" class="py-16 sm:py-24 bg-white leaf-pattern overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-leaf-50 text-leaf-500 rounded-full px-4 py-2 text-sm font-semibold mb-4 eco-shadow">
+                    <i class="fa-solid fa-wrench"></i>
+                    <span>Ce facem</span>
+                </div>
+                <h2 class="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-charcoal mb-4">Serviciile noastre</h2>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 max-w-xl mx-auto">Servicii complete de instalare, adaptare &#537;i &#238;ntre&#539;inere sisteme GPL auto.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Service 1 — Instalare GPL -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-shadow card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-start gap-5">
+                        <div class="eco-gradient w-14 h-14 rounded-2xl flex items-center justify-center text-white text-xl flex-shrink-0 shadow-md">
+                            <i class="fa-solid fa-gas-pump"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-outfit font-bold text-lg sm:text-xl text-charcoal mb-2">Instalare GPL</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">Montare complet&#259; de sisteme GPL pentru toate tipurile de autovehicule. Folosim echipamente de ultim&#259; genera&#539;ie de la branduri consacrate.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Autorizat RAR</span>
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Garan&#539;ie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 — Adaptare sisteme -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-shadow card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start gap-5">
+                        <div class="eco-gradient w-14 h-14 rounded-2xl flex items-center justify-center text-white text-xl flex-shrink-0 shadow-md">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-outfit font-bold text-lg sm:text-xl text-charcoal mb-2">Adaptare sisteme GPL</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">Reglaje fine, actualiz&#259;ri software &#537;i adaptarea sistemelor GPL existente la noi cerin&#539;e sau tipuri de motor.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Calibrare electronic&#259;</span>
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Diagnosticare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 — Inspectii periodice -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-shadow card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start gap-5">
+                        <div class="eco-gradient w-14 h-14 rounded-2xl flex items-center justify-center text-white text-xl flex-shrink-0 shadow-md">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-outfit font-bold text-lg sm:text-xl text-charcoal mb-2">Inspec&#539;ii periodice GPL</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">Verific&#259;ri obligatorii conform legisla&#539;iei. Inspec&#539;ia la timp previne problemele &#537;i asigur&#259; siguran&#539;a instala&#539;iei GPL.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Conform legisla&#539;ie</span>
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Siguran&#539;&#259;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 — Reparatii GPL -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-shadow card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start gap-5">
+                        <div class="eco-gradient w-14 h-14 rounded-2xl flex items-center justify-center text-white text-xl flex-shrink-0 shadow-md">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-outfit font-bold text-lg sm:text-xl text-charcoal mb-2">Repara&#539;ii sisteme GPL</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-3">Diagnosticarea &#537;i repararea rapid&#259; a defec&#539;iunilor la orice tip de instala&#539;ie GPL. Piese originale &#537;i manoper&#259; de calitate.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Piese originale</span>
+                                <span class="bg-leaf-50 text-leaf-500 text-xs font-semibold px-3 py-1 rounded-full">Rapid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AUTORIZARI ========== -->
+    <section id="autorizari" class="py-16 sm:py-24 bg-mint">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-white text-leaf-500 rounded-full px-4 py-2 text-sm font-semibold mb-4 eco-shadow">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>&#206;ncredere</span>
+                </div>
+                <h2 class="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-charcoal mb-4">Autoriz&#259;ri &#537;i parteneri</h2>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 max-w-xl mx-auto">Lucr&#259;m numai cu branduri de top &#537;i suntem autoriza&#539;i oficial pentru instal&#259;ri GPL.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
+                <!-- RAR-OCP Badge -->
+                <div class="bg-white rounded-2xl p-8 text-center eco-shadow-lg card-hover badge-shine" data-aos="fade-up" data-aos-delay="0">
+                    <div class="eco-gradient w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-5 shadow-lg">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-outfit font-bold text-lg text-charcoal mb-2">RAR-OCP</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Autoriza&#539;ie oficial&#259; Registrul Auto Rom&#226;n &#8212; Organism de Control &#537;i Prob&#259; pentru instal&#259;ri GPL</p>
+                    <div class="mt-4 inline-flex items-center gap-1 text-leaf-500 text-sm font-semibold">
+                        <i class="fa-solid fa-circle-check"></i> Verificat
+                    </div>
+                </div>
+
+                <!-- AGR Autogas -->
+                <div class="bg-white rounded-2xl p-8 text-center eco-shadow-lg card-hover badge-shine" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-charcoal w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-5 shadow-lg">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <h3 class="font-outfit font-bold text-lg text-charcoal mb-2">AGR Autogas Group</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Partener autorizat AGR Autogas Group &#8212; sisteme GPL de &#238;nalt&#259; calitate, recunoscute interna&#539;ional</p>
+                    <div class="mt-4 inline-flex items-center gap-1 text-leaf-500 text-sm font-semibold">
+                        <i class="fa-solid fa-circle-check"></i> Partener oficial
+                    </div>
+                </div>
+
+                <!-- Supergaz -->
+                <div class="bg-white rounded-2xl p-8 text-center eco-shadow-lg card-hover badge-shine" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-leaf-700 w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-5 shadow-lg">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 class="font-outfit font-bold text-lg text-charcoal mb-2">Supergaz Autoservice</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Colaborare Supergaz Autoservice &#8212; tehnologie avansat&#259; pentru conversii GPL de ultim&#259; genera&#539;ie</p>
+                    <div class="mt-4 inline-flex items-center gap-1 text-leaf-500 text-sm font-semibold">
+                        <i class="fa-solid fa-circle-check"></i> Partener oficial
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating highlight -->
+            <div class="mt-12 sm:mt-16 bg-white rounded-2xl p-8 sm:p-10 eco-shadow-lg max-w-2xl mx-auto text-center" data-aos="fade-up">
+                <div class="star-rating flex gap-1 justify-center mb-4 text-2xl">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="font-outfit font-bold text-3xl sm:text-4xl text-charcoal mb-2">5.0 / 5</p>
+                <p class="text-gray-500 text-sm mb-6">Bazat pe 80+ recenzii de la clien&#539;i mul&#539;umi&#539;i</p>
+                <div class="space-y-4 text-left max-w-md mx-auto">
+                    <div class="bg-leaf-50 rounded-xl p-4 border border-leaf-100">
+                        <div class="star-rating flex gap-0.5 mb-2 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm italic">"Fast and good"</p>
+                    </div>
+                    <div class="bg-leaf-50 rounded-xl p-4 border border-leaf-100">
+                        <div class="star-rating flex gap-0.5 mb-2 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm italic">"Atmosfer&#259; frumoas&#259;, po&#539;i servi o cafea."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROGRAM & LOCATIE ========== -->
+    <section id="program" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-leaf-50 text-leaf-500 rounded-full px-4 py-2 text-sm font-semibold mb-4 eco-shadow">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Informa&#539;ii practice</span>
+                </div>
+                <h2 class="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-charcoal mb-4">Program &#537;i loca&#539;ie</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+                <!-- Program Table -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 eco-shadow border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="eco-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h3 class="font-outfit font-bold text-xl text-charcoal">Program de lucru</h3>
+                    </div>
+                    <div class="space-y-0 rounded-xl overflow-hidden border border-gray-100">
+                        <div class="flex items-center justify-between px-5 py-3.5 bg-leaf-50">
+                            <span class="font-semibold text-charcoal text-sm">Luni</span>
+                            <span class="text-leaf-500 font-semibold text-sm">08:00 &#8212; 16:30</span>
+                        </div>
+                        <div class="flex items-center justify-between px-5 py-3.5 bg-white">
+                            <span class="font-semibold text-charcoal text-sm">Mar&#539;i</span>
+                            <span class="text-leaf-500 font-semibold text-sm">08:00 &#8212; 16:30</span>
+                        </div>
+                        <div class="flex items-center justify-between px-5 py-3.5 bg-leaf-50">
+                            <span class="font-semibold text-charcoal text-sm">Miercuri</span>
+                            <span class="text-leaf-500 font-semibold text-sm">08:00 &#8212; 16:30</span>
+                        </div>
+                        <div class="flex items-center justify-between px-5 py-3.5 bg-white">
+                            <span class="font-semibold text-charcoal text-sm">Joi</span>
+                            <span class="text-leaf-500 font-semibold text-sm">08:00 &#8212; 16:30</span>
+                        </div>
+                        <div class="flex items-center justify-between px-5 py-3.5 bg-leaf-50">
+                            <span class="font-semibold text-charcoal text-sm">Vineri</span>
+                            <span class="text-leaf-500 font-semibold text-sm">08:00 &#8212; 16:30</span>
+                        </div>
+                        <div class="flex items-center justify-between px-5 py-3.5 bg-white">
+                            <span class="font-semibold text-charcoal text-sm">S&#226;mb&#259;t&#259;</span>
+                            <span class="text-red-400 font-semibold text-sm">&#206;nchis</span>
+                        </div>
+                        <div class="flex items-center justify-between px-5 py-3.5 bg-leaf-50">
+                            <span class="font-semibold text-charcoal text-sm">Duminic&#259;</span>
+                            <span class="text-red-400 font-semibold text-sm">&#206;nchis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location & Accessibility -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Locatie -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 eco-shadow border border-gray-100">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="eco-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h3 class="font-outfit font-bold text-xl text-charcoal">Loca&#539;ie</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-map-pin text-leaf-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-charcoal text-sm">Adres&#259;</p>
+                                    <p class="text-gray-600 text-sm">Strada Cirea&#537;ov nr. 20, Slatina, Olt</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-building text-leaf-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-charcoal text-sm">Firm&#259;</p>
+                                    <p class="text-gray-600 text-sm">AUTOLAZ MIDAN SRL</p>
+                                </div>
+                            </div>
+                            <a href="https://maps.google.com/?q=44.432307,24.385262" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-leaf-500 text-sm font-semibold hover:text-leaf-700 transition-colors mt-2">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Deschide &#238;n Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Accesibilitate -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 eco-shadow border border-gray-100">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="eco-icon">
+                                <i class="fa-solid fa-universal-access"></i>
+                            </div>
+                            <h3 class="font-outfit font-bold text-xl text-charcoal">Accesibilitate</h3>
+                        </div>
+                        <div class="flex items-center gap-3 bg-leaf-50 rounded-xl p-4 border border-leaf-100">
+                            <i class="fa-solid fa-wheelchair text-leaf-500 text-xl"></i>
+                            <div>
+                                <p class="font-semibold text-charcoal text-sm">Intrare accesibil&#259;</p>
+                                <p class="text-gray-600 text-xs">Intrare adaptat&#259; pentru persoane cu dizabilit&#259;&#539;i motorii</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT CTA ========== -->
+    <section id="contact" class="py-16 sm:py-24 bg-charcoal relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 text-[200px] text-white"><i class="fa-solid fa-leaf"></i></div>
+            <div class="absolute bottom-10 right-10 text-[150px] text-white rotate-45"><i class="fa-solid fa-leaf"></i></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 bg-leaf-500/20 text-leaf-300 rounded-full px-4 py-2 text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>Contacteaz&#259;-ne</span>
+                </div>
+                <h2 class="font-outfit font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-4">Preg&#259;tit s&#259; economise&#537;ti la combustibil?</h2>
+                <p class="text-gray-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-lg mx-auto">
+                    Sun&#259;-ne pentru o programare sau pentru detalii despre instalarea GPL pe ma&#537;ina ta. Te a&#537;tept&#259;m cu o cafea!
+                </p>
+
+                <a href="tel:0724275777" class="eco-gradient text-white px-10 py-5 rounded-2xl font-outfit font-bold text-xl sm:text-2xl hover:opacity-90 transition-all inline-flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105 transform">
+                    <i class="fa-solid fa-phone"></i>
+                    0724 275 777
+                </a>
+
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-leaf-500"></i>
+                        <span>Luni &#8212; Vineri: 8:00 &#8212; 16:30</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-leaf-500"></i>
+                        <span>Str. Cirea&#537;ov 20, Slatina</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-charcoal border-t border-white/10 py-8 sm:py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <!-- Footer Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="eco-gradient w-9 h-9 rounded-lg flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div>
+                        <span class="font-outfit font-bold text-white text-sm block">Autolaz Midan Service GPL</span>
+                        <span class="text-gray-500 text-xs">AUTOLAZ MIDAN SRL</span>
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="flex items-center gap-6 text-gray-500 text-sm">
+                    <a href="#avantaje" class="hover:text-leaf-400 transition-colors">Avantaje</a>
+                    <a href="#servicii" class="hover:text-leaf-400 transition-colors">Servicii</a>
+                    <a href="#autorizari" class="hover:text-leaf-400 transition-colors">Autoriz&#259;ri</a>
+                    <a href="#program" class="hover:text-leaf-400 transition-colors">Program</a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="text-gray-600 text-xs">
+                    &copy; 2026 Autolaz Midan Service GPL. Toate drepturile rezervate.
+                </p>
+            </div>
+
+            <!-- Footer bottom info -->
+            <div class="mt-6 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-gray-600 text-xs">
+                <p>Strada Cirea&#537;ov nr. 20, Slatina, Olt &middot; Tel: 0724 275 777</p>
+                <p class="flex items-center gap-1">
+                    <i class="fa-solid fa-leaf text-leaf-500 text-[10px]"></i>
+                    Eco-friendly automotive solutions
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING PHONE BUTTON ========== -->
+    <a href="tel:0724275777"
+       class="fixed bottom-6 right-6 z-50 eco-gradient w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl shadow-xl floating-btn hover:scale-110 transition-transform"
+       aria-label="Sun&#259; la 0724 275 777">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 60
+        });
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

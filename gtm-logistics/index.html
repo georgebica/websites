@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTM Logistics | Craiova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+  <style>
+    :root{
+      --bg:#0d1117; --bg2:#121826; --panel:#171f2f; --ink:#f1f5fb; --muted:#9aa8ba; --blue:#103d63; --blue2:#1d5a90; --orange:#ff8b3d; --line:rgba(255,255,255,.09); --shadow:0 24px 60px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:'Inter',sans-serif;color:var(--ink);
+      background:
+        radial-gradient(circle at 15% 12%, rgba(255,139,61,.16), transparent 22%),
+        radial-gradient(circle at 85% 8%, rgba(29,90,144,.22), transparent 24%),
+        linear-gradient(180deg,#0d1117 0%, #111827 100%);
+      overflow-x:hidden;
+    }
+    body::before{
+      content:'';position:fixed;inset:0;pointer-events:none;opacity:.18;
+      background-image:linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size:24px 24px;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:60;
+      backdrop-filter:blur(14px);
+      background:rgba(13,17,23,.76);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--orange));color:#fff;box-shadow:0 14px 30px rgba(0,0,0,.28)}
+    .brand strong{display:block;font-size:1rem}
+    .brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:700}
+    .links{display:flex;align-items:center;gap:22px}
+    .links a{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .links a:hover{color:#fff}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 20px;border-radius:999px;border:1px solid transparent;
+      font-weight:800;transition:.25s ease;cursor:pointer;
+    }
+    .btn-primary{background:linear-gradient(135deg,var(--orange),#ffb35e);color:#111827;box-shadow:0 18px 40px rgba(255,139,61,.24)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+    .btn-ghost:hover{transform:translateY(-2px);background:rgba(255,255,255,.08)}
+    .menu{display:none;background:none;border:none;color:#fff;font-size:20px}
+    .hero{padding-top:110px;padding-bottom:48px}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:28px;align-items:center;padding:42px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;font-weight:900;color:#ffb35e}
+    h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+    h1{font-size:clamp(3.2rem,7vw,6.2rem);line-height:.95;margin:.4rem 0 1rem;color:#fff}
+    .lead{font-size:1.05rem;line-height:1.95;color:var(--muted);max-width:60ch}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .panel{
+      background:linear-gradient(160deg,#161d2b, #101827);
+      border:1px solid var(--line);
+      border-radius:30px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+    }
+    .panel::before,.panel::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08)}
+    .panel::before{width:260px;height:260px;top:-90px;right:-90px}
+    .panel::after{width:170px;height:170px;left:-60px;bottom:-60px}
+    .panel h3{font-size:2.7rem;line-height:1.03;color:#fff;margin:.2rem 0 12px}
+    .panel p{color:var(--muted);line-height:1.85}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:rgba(255,139,61,.1);color:#ffb35e;font-size:.86rem;font-weight:900}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;text-align:center}
+    .stat b{display:block;font-size:clamp(1.3rem,3vw,2.1rem);font-family:'Oswald',sans-serif;color:#fff}
+    .section{padding:92px 0}
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.06))}
+    .head{max-width:780px;margin:0 auto 36px;text-align:center}
+    .head h2{font-size:clamp(2.1rem,5vw,4rem);margin:.4rem 0;color:#fff}
+    .head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .benefits{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{
+      background:rgba(23,31,47,.92);
+      border:1px solid var(--line);
+      border-radius:24px;box-shadow:0 14px 40px rgba(0,0,0,.2);backdrop-filter:blur(10px);
+    }
+    .card{padding:24px;transition:.25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.16)}
+    .icon{
+      width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px;
+      background:linear-gradient(135deg,rgba(255,139,61,.14),rgba(29,90,144,.2));color:#ffb35e;font-size:1.08rem;
+    }
+    .card h3,.review h3,.contact h3{margin:0 0 10px;font-size:1.42rem;color:#fff}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .soft b{display:block;color:#fff;margin-bottom:6px}
+    .review{padding:22px}
+    .meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.95rem}
+    .stars{color:#ffb35e;letter-spacing:2px;margin-bottom:8px}
+    .contact{padding:22px}
+    .contact .big{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1.45rem;color:#fff;margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:#ffb35e;font-weight:900}
+    .hours{display:grid;gap:10px}
+    .hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,139,61,.1);color:#ffb35e;font-size:.84rem;font-weight:900}
+    .footer{padding:30px 0 42px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .mini{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.04);margin-top:16px;color:var(--muted)}
+    .menu-panel{display:none}
+    @media (max-width: 980px){
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .links,.desktop-cta{display:none}
+      .menu{display:block}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .menu-panel{display:none;padding-bottom:16px}
+      .menu-panel.open{display:block}
+      .menu-panel a{display:block;padding:12px 0;border-top:1px solid rgba(255,255,255,.08);font-weight:900;color:#fff}
+      h1{font-size:clamp(2.8rem,13vw,4.8rem)}
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header class="nav">
+      <div class="wrap">
+        <div class="nav-inner">
+          <a class="brand" href="#top">
+            <span class="mark"><i class="fa-solid fa-truck-fast"></i></span>
+            <span>
+              <strong>{{ business.name }}</strong>
+              <small>Craiova · transport rutier și dispatch</small>
+            </span>
+          </a>
+          <nav class="links">
+            <a href="#despre">Despre</a>
+            <a href="#servicii">Servicii</a>
+            <a href="#operare">Operare</a>
+            <a href="#recenzii">Recenzii</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="desktop-cta">
+            <a class="btn btn-primary" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> Sună acum</a>
+          </div>
+          <button class="menu" @click="mobileOpen = !mobileOpen" aria-label="Meniu">
+            <i class="fa-solid" :class="mobileOpen ? 'fa-xmark' : 'fa-bars'"></i>
+          </button>
+        </div>
+        <div class="menu-panel" :class="{ open: mobileOpen }">
+          <a href="#despre" @click="mobileOpen=false">Despre</a>
+          <a href="#servicii" @click="mobileOpen=false">Servicii</a>
+          <a href="#operare" @click="mobileOpen=false">Operare</a>
+          <a href="#recenzii" @click="mobileOpen=false">Recenzii</a>
+          <a href="#contact" @click="mobileOpen=false">Contact</a>
+          <a class="btn btn-primary" style="margin-top:10px" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> {{ business.phone }}</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div data-aos="fade-up">
+            <span class="eyebrow"><i class="fa-solid fa-route"></i> Freight · dispatch · coordonare</span>
+            <h1>Transport internațional cu ritm, disciplină și comunicare rapidă.</h1>
+            <p class="lead">
+              GTM Logistics operează în Craiova ca furnizor de transport rutier de marfă, cu activitate în România și pe culoarele europene, contracte flexibile și suport de dispatch în limba română.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> {{ business.phone }}</a>
+              <a class="btn btn-ghost" :href="business.maps" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+            </div>
+          </div>
+          <aside class="panel" data-aos="fade-left">
+            <span class="chip"><i class="fa-solid fa-truck-ramp-box"></i> Operare activă în Craiova</span>
+            <h3 class="display">Un operator de marfă construit în jurul controlului și al planificării.</h3>
+            <p>Compania menține contact direct prin telefon și email, iar prezența sa în platforme de recrutare și directoare sugerează o structură activă și stabilă.</p>
+            <div class="stats">
+              <div class="stat"><b>4</b><span>recenzii verificate</span></div>
+              <div class="stat"><b>3-18</b><span>luni pentru contracte</span></div>
+              <div class="stat"><b>EU</b><span>rute internaționale</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre companie</span>
+            <h2>Transport de marfă, planificare și legături operative în Europa</h2>
+            <p>GTM Logistics este prezentă în Craiova și lucrează pe segmentul de transport rutier de marfă, cu accent pe coordonare, dispatch și contracte flexibile pentru șoferi și proprietari de camion.</p>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+            <div class="soft"><b><i class="fa-solid fa-globe"></i> Internațional</b>Austria, Germania, Franța, Italia, UK și Benelux.</div>
+            <div class="soft"><b><i class="fa-solid fa-clipboard-list"></i> Contracte flexibile</b>Perioade de 3, 6 și 18 luni, conform datelor publice.</div>
+            <div class="soft"><b><i class="fa-solid fa-headset"></i> Dispatch românesc</b>Suport disponibil pentru coordonare și comunicare.</div>
+            <div class="soft"><i class="fa-solid fa-toilet"></i> Toaletă la locație</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicii" class="section">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-boxes-stacked"></i> Servicii</span>
+            <h2>Flux operațional pentru transport, planning și forwarding</h2>
+            <p>Oferta publică acoperă transport internațional și intern, cu documentare, urmărire și coordonare pentru clienți și parteneri.</p>
+          </div>
+          <div class="grid services">
+            <div class="card"><div class="icon"><i class="fa-solid fa-road"></i></div><h3>Transport rutier internațional</h3><p>Marfă pe coridoare europene, cu focus pe stabilitate și continuitate.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-truck"></i></div><h3>Transport intern</h3><p>Servicii de transport în România, inclusiv planificare între orașe.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-headset"></i></div><h3>Dispatch</h3><p>Coordonare în limba română pentru urmărirea curselor și optimizarea traseelor.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-paper-plane"></i></div><h3>Freight forwarding</h3><p>Suport pentru organizarea livrărilor și relația dintre partenerii de transport.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><h3>Contracte flexibile</h3><p>Oferte cu durate diferite și condiții adaptate fiecărui tip de colaborare.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-people-arrows"></i></div><h3>Coordonare administrativă</h3><p>Suport pentru departamentele de transport, coordonare și administrativ.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="operare" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-gears"></i> Operare</span>
+            <h2>O companie activă, cu semne clare de structură operațională</h2>
+          </div>
+          <div class="grid benefits">
+            <div class="card"><div class="icon"><i class="fa-solid fa-sitemap"></i></div><h3>Structură multiplă</h3><p>Dispatch, coordonare transport și administrativ.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-box-open"></i></div><h3>Volume europene</h3><p>Activitate pe piețe și rute din mai multe țări UE.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-phone-volume"></i></div><h3>Contact direct</h3><p>Comunicare rapidă prin telefon și email, fără site dedicat.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-briefcase"></i></div><h3>Recrutare activă</h3><p>Prezență documentată pe platforme de angajare și business.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="section">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-star"></i> Recenzii</span>
+            <h2>Rating excelent și un nume public identificat</h2>
+            <p>Din datele furnizate apare un singur nume public complet, fără comentariu extins, așa că am păstrat tratamentul onest și concis.</p>
+          </div>
+          <div class="grid reviews">
+            <article class="review">
+              <div class="meta"><strong>Scor public</strong><span>5/5</span></div>
+              <div class="stars">★★★★★</div>
+              <p>4 recenzii verificate în profilul public.</p>
+            </article>
+            <article class="review">
+              <div class="meta"><strong>Costin Iordache</strong><span>5/5</span></div>
+              <div class="stars">★★★★★</div>
+              <p>Nume listat în datele publice fără text de recenzie disponibil.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+            <h2>Contact prin email și telefon documentat</h2>
+          </div>
+          <div class="grid contact-grid">
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h3 class="big">Adresă</h3>
+              <p>Strada Toporași 64, Craiova</p>
+              <a class="maps" :href="business.maps" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <h3 class="big">Telefon</h3>
+              <p>0786 098 984</p>
+              <a class="maps" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> Sună acum</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+              <h3 class="big">Email</h3>
+              <p>contract@gtm-logistics.com<br />m.flaviu@gtm-logistics.com</p>
+              <a class="maps" href="mailto:contract@gtm-logistics.com"><i class="fa-solid fa-paper-plane"></i> Trimite mesaj</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-clock"></i></div>
+              <h3 class="big">Program</h3>
+              <p>Programul public nu este afișat în datele furnizate.</p>
+              <div class="mini"><i class="fa-solid fa-toilet"></i> Toaletă disponibilă la locație</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <strong style="color:#fff">GTM Logistics</strong>
+          <div>Craiova · transport rutier și coordonare logistică</div>
+        </div>
+        <div>Telefon: 0786 098 984 · Email: contract@gtm-logistics.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          mobileOpen: false,
+          business: {
+            name: 'GTM Logistics',
+            phone: '0786 098 984',
+            phoneDigits: '0786098984',
+            maps: 'https://www.google.com/maps/place/GTM+Logistics/data=!4m7!3m6!1s0x4752d9164e22416f:0x8f31e9d2a0e3c2b8!8m2!3d44.3336384!4d23.7720264!16s%2Fg%2F11t1l_lfv3!19sChIJb0EiThbZUkcRuMLjoNLpMY8?authuser=0&hl=en&rclk=1'
+          }
+        }
+      },
+      mounted() {
+        if (window.AOS) AOS.init({ duration: 800, once: true });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

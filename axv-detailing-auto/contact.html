@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Programări — AXV Detailing Auto | București</title>
+  <meta name="description" content="Contactează AXV Detailing Auto pentru programări detailing auto în București. Telefon: 0724 373 277. Bd. Constantin Brâncoveanu, Sector 4. Deschiși 7/7.">
+  <meta property="og:title" content="Contact & Programări — AXV Detailing Auto">
+  <meta property="og:description" content="Programează o ședință de detailing auto. Sună la 0724 373 277 sau trimite un mesaj. Deschiși 7 zile pe săptămână.">
+  <meta property="og:type" content="website">
+  <!-- TODO: Add og:image and og:url when domain is available -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="AXV Detailing Auto — Pagina principală">
+        <span>AXV</span> Detailing Auto
+      </a>
+      <nav role="navigation" aria-label="Navigare principală">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="about.html">Despre Noi</a></li>
+          <li><a href="services.html">Servicii</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="contact.html" class="nav-cta">Programează-te</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Deschide meniul" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact & <span class="text-blue">Programări</span></h1>
+      <p>Sună-ne, scrie-ne sau vino direct. Programările sunt recomandate pentru a-ți asigura un loc.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div>
+          <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:32px;">Informații de Contact</h2>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Adresă</h4>
+              <p>Bulevardul Constantin Brâncoveanu<br>Sector 4, București 041447, România</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Telefon</h4>
+              <p>
+                <a href="tel:0724373277">0724 373 277</a><br>
+                <a href="tel:0784051437">0784 051 437</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:axv.detailing@yahoo.com">axv.detailing@yahoo.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Program</h4>
+              <table class="hours-table" aria-label="Program de lucru">
+                <tbody>
+                  <tr><td>Luni</td><td>8:00 – 19:00</td></tr>
+                  <tr><td>Marți</td><td>8:00 – 19:00</td></tr>
+                  <tr><td>Miercuri</td><td>8:00 – 19:00</td></tr>
+                  <tr><td>Joi</td><td>8:00 – 19:00</td></tr>
+                  <tr><td>Vineri</td><td>8:00 – 19:00</td></tr>
+                  <tr><td>Sâmbătă</td><td>8:00 – 19:00</td></tr>
+                  <tr><td>Duminică</td><td>8:00 – 19:00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">♿</div>
+            <div>
+              <h4>Accesibilitate</h4>
+              <p>Intrare accesibilă cu scaun cu rotile</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📌</div>
+            <div>
+              <h4>Google Maps</h4>
+              <p><a href="https://www.google.com/maps/place/AXV+Detailing+Auto/data=!4m7!3m6!1s0x40b1ff9fbc04c285:0xed19e0b5e97558dc!8m2!3d44.3718991!4d26.1006903!16s%2Fg%2F11snrm7vqr" target="_blank" rel="noopener noreferrer">Deschide în Google Maps →</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form / Booking -->
+        <div class="contact-form" id="programare">
+          <h3>Solicită o Programare</h3>
+          <p style="color:var(--gray-400);font-size:0.9rem;margin-bottom:24px;">Completează formularul și te vom contacta pentru confirmare. Sau sună direct la <a href="tel:0724373277" style="color:var(--blue);">0724 373 277</a>.</p>
+          <!-- TODO: Add form action/backend endpoint for form submission -->
+          <form action="#" method="POST" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nume Complet *</label>
+              <input type="text" id="name" name="name" required placeholder="ex: Ion Popescu" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefon *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="ex: 07XX XXX XXX" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="ex: email@exemplu.ro" autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="car">Marca și Modelul Mașinii *</label>
+              <input type="text" id="car" name="car" required placeholder="ex: BMW Seria 3, 2022">
+            </div>
+            <div class="form-group">
+              <label for="service">Serviciul Dorit</label>
+              <select id="service" name="service">
+                <option value="">— Selectează un serviciu —</option>
+                <option value="essential">Pachet Essential</option>
+                <option value="premium">Pachet Premium</option>
+                <option value="ultimate">Pachet Ultimate</option>
+                <option value="exterior">Detailing Exterior</option>
+                <option value="interior">Detailing Interior</option>
+                <option value="corectie">Corecție Lac (Polish)</option>
+                <option value="hidrofob">Tratament Hidrofob</option>
+                <option value="ozon">Decontaminare Ozon</option>
+                <option value="motor">Curățare Motor</option>
+                <option value="altul">Altceva</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Data Preferată</label>
+              <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+              <label for="message">Mesaj / Detalii Suplimentare</label>
+              <textarea id="message" name="message" placeholder="Spune-ne mai multe despre ce ai nevoie..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Trimite Cererea de Programare</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Map -->
+      <div class="map-container" aria-label="Locația AXV Detailing Auto pe hartă">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.5!2d26.1006903!3d44.3718991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff9fbc04c285%3A0xed19e0b5e97558dc!2sAXV%20Detailing%20Auto!5e0!3m2!1sro!2sro!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Locația AXV Detailing Auto pe Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span>AXV</span> Detailing Auto</div>
+          <p>Servicii profesionale de detailing auto în București, Sector 4. Calitate premium, rezultate impecabile.</p>
+        </div>
+        <div>
+          <h4>Navigare</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="about.html">Despre Noi</a></li>
+            <li><a href="services.html">Servicii</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Servicii</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Detailing Exterior</a></li>
+            <li><a href="services.html">Detailing Interior</a></li>
+            <li><a href="services.html">Corecție Lac</a></li>
+            <li><a href="services.html">Tratament Hidrofob</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact">
+            <p>📍 Bd. Constantin Brâncoveanu, Sector 4, București</p>
+            <p>📞 <a href="tel:0724373277">0724 373 277</a></p>
+            <p>📞 <a href="tel:0784051437">0784 051 437</a></p>
+            <p>✉️ <a href="mailto:axv.detailing@yahoo.com">axv.detailing@yahoo.com</a></p>
+            <p>🕐 Luni – Duminică: 8:00 – 19:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AXV Detailing Auto. Toate drepturile rezervate.</p>
+        <p>București, România</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Închide meniul' : 'Deschide meniul');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Simple form feedback
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Cerere trimisă! Vă vom contacta în curând.';
+      btn.style.background = '#22c55e';
+      btn.disabled = true;
+      // TODO: Implement actual form submission (e.g., email API, backend endpoint)
+    });
+  </script>
+
+</body>
+</html>

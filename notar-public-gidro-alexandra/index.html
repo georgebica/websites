@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notar public Gidro Alexandra | Cluj-Napoca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{--bg:#eef6f1;--ink:#123024;--muted:#5d7168;--green:#1f6a4f;--sage:#4f8a6c;--gold:#b89559;--card:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:
+      radial-gradient(circle at top right, rgba(31,106,79,.12), transparent 25%),
+      radial-gradient(circle at left bottom, rgba(184,149,89,.14), transparent 20%),
+      linear-gradient(180deg,#fbfcfb 0%,#eef6f1 100%)}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(251,252,251,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(18,48,36,.08)}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 0}
+    .brand{display:flex;flex-direction:column}
+    .brand strong{font-family:Fraunces,serif;font-size:1.08rem}
+    .brand span{font-size:.83rem;color:var(--muted)}
+    .navlinks{display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+    .navlinks a:hover{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--green),#246e54);color:#fff}
+    .btn.ghost{border:1px solid rgba(18,48,36,.1);background:#fff}
+    .hero{padding:58px 0 26px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(31,106,79,.08);color:var(--green);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    h1,h2,h3{font-family:Fraunces,serif;margin:0}
+    h1{font-size:clamp(3rem,7vw,5.3rem);line-height:1.02;max-width:11ch;margin:18px 0 14px}
+    .lead{max-width:58ch;color:var(--muted);font-size:1.03rem;line-height:1.85}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .panel,.card,.review,.contact{background:var(--card);border:1px solid rgba(18,48,36,.08);border-radius:24px}
+    .panel{padding:24px}
+    .hero-panel{padding:22px;box-shadow:0 20px 50px rgba(18,48,36,.08)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{padding:18px;border-radius:20px;background:linear-gradient(180deg,#ffffff,#eff7f2);border:1px solid rgba(18,48,36,.06)}
+    .stat b{display:block;font-family:Fraunces,serif;font-size:1.55rem;color:var(--green);margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:.9rem}
+    section{padding:36px 0}
+    .title{display:flex;justify-content:space-between;gap:18px;align-items:end;flex-wrap:wrap;margin-bottom:18px}
+    .title p{margin:0;color:var(--muted);max-width:54ch;line-height:1.7}
+    .title h2{font-size:clamp(2rem,4vw,3.1rem)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .panel p,.card p,.review p,.contact p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:20px}
+    .card i,.contact i,.review .stars{color:var(--gold)}
+    .card h3,.contact h3,.review h3{font-size:1.48rem;margin:10px 0 8px}
+    .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .review{padding:20px}
+    .review header{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+    .review .name{font-weight:700}
+    .review .meta{color:var(--muted);font-size:.88rem}
+    .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .contact{padding:18px}
+    .footer{padding:28px 0 40px;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 22px;background:#fff;border:1px solid rgba(18,48,36,.08);border-radius:24px}
+    @media(max-width:900px){.hero-grid,.two-col,.grid,.reviews,.contact-grid{grid-template-columns:1fr}h1{max-width:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><strong>Gidro Alexandra</strong><span>Notar public, Cluj-Napoca</span></div>
+        <div class="navlinks"><a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#incredere">Încredere</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a></div>
+        <a class="btn primary" href="tel:0754616394"><i class="fa-solid fa-phone"></i> Sună acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-earth-europe"></i> Servicii notarială în centru</div>
+          <h1>Notariat clar, elegant și ușor de accesat.</h1>
+          <p class="lead">Biroul Alexandrei Gidro este amplasat în Piața Unirii, într-o zonă centrală din Cluj-Napoca, și se adresează clienților care caută limpezime în documente, comunicare directă și suport în limba engleză.</p>
+          <div class="actions">
+            <a class="btn primary" href="tel:0754616394"><i class="fa-solid fa-phone"></i> 0754 616 394</a>
+            <a class="btn ghost" href="https://www.google.com/maps/place/Notar+public+Gidro+Alexandra/data=!4m7!3m6!1s0x47490f45269fe6db:0xdc3ab8902d7f64c0!8m2!3d46.7705937!4d23.5886298!16s%2Fg%2F11w3jsnnqr!19sChIJ2-afJkUPSUcRwGR_LZC4Otw?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi harta</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="stats">
+            <div class="stat"><b>5/5</b><span>rating Google</span></div>
+            <div class="stat"><b>8</b><span>recenzii publice</span></div>
+            <div class="stat"><b>EN</b><span>suport în engleză</span></div>
+            <div class="stat"><b>8+</b><span>ani de experiență</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="despre">
+      <div class="wrap two-col">
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-circle-info"></i> Despre birou</div>
+          <h2 style="font-size:clamp(2rem,4vw,3.1rem);margin-top:12px">Centrul Clujului, tradus în limbaj notarial clar.</h2>
+          <p>Datele publice descriu o practică activă, cu sediu în Piața Unirii 21 și cu un profil foarte bun de reputație. Informațiile disponibile indică experiență, apartenență la structuri profesionale și deschidere către clienți locali sau internaționali.</p>
+          <p>Fiind un birou într-o zonă centrală, este gândit pentru clienți care au nevoie de programare simplă și de documente bine explicate, mai ales în tranzacții imobiliare, succesiuni și procuri.</p>
+        </div>
+        <div class="panel">
+          <div class="eyebrow"><i class="fa-solid fa-clock"></i> Program</div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Luni - Vineri</h3>
+            <p>09:00 - 17:00</p>
+          </div>
+          <div class="card" style="margin-top:12px;padding:18px">
+            <h3>Sâmbătă și duminică</h3>
+            <p>Închis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-pen-nib"></i> Servicii</div><h2>Acte uzuale, redactate cu grijă.</h2></div><p>Paleta de servicii urmărește tipologia standard a unui birou notarial din Cluj-Napoca.</p></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-house"></i><h3>Imobiliare</h3><p>Contracte pentru vânzare, donație, ipotecă și alte acte de proprietate.</p></article>
+          <article class="card"><i class="fa-solid fa-scroll"></i><h3>Succesiuni</h3><p>Testamente, moșteniri și documente pentru împărțirea bunurilor.</p></article>
+          <article class="card"><i class="fa-solid fa-user-check"></i><h3>Procuri</h3><p>Împuterniciri și reprezentări pentru tranzacții sau administrare.</p></article>
+          <article class="card"><i class="fa-solid fa-file-signature"></i><h3>Autentificări</h3><p>Semnături, copii certificate și declarații pentru uz curent.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Traduceri</h3><p>Legalizări de documente și traduceri pentru relații internaționale.</p></article>
+          <article class="card"><i class="fa-solid fa-people-group"></i><h3>Acte personale</h3><p>Convenții matrimoniale, acorduri și declarații de familie.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="incredere">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-shield"></i> Încredere</div><h2>Indicii clare din datele publice.</h2></div></div>
+        <div class="grid">
+          <article class="card"><i class="fa-solid fa-star"></i><h3>Reputație perfectă</h3><p>Rating public de 5/5, cu 8 recenzii afișate.</p></article>
+          <article class="card"><i class="fa-solid fa-language"></i><h3>Suport în engleză</h3><p>Util pentru clienți internaționali și documente cu componentă externă.</p></article>
+          <article class="card"><i class="fa-solid fa-location-dot"></i><h3>Centru central</h3><p>Piața Unirii 21, într-o zonă ușor de găsit în Cluj-Napoca.</p></article>
+          <article class="card"><i class="fa-solid fa-badge-check"></i><h3>Statut profesionist</h3><p>Birou notarial activ, cu afiliere în sistemul profesional românesc.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenzii">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-message"></i> Recenzii</div><h2>Feedback public verificabil.</h2></div></div>
+        <div class="reviews">
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">NEMES NICOLAE</div><div class="meta">Google</div></header><p>„Un notar pe care îl recomand, fiind foarte atent la detaliile unei tranzacții.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Maria Szasz</div><div class="meta">Google</div></header><p>„Recomand. Amabilitate, promptitudine și seriozitate.”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Erika Lukacs</div><div class="meta">Google</div></header><p>„O experiență foarte bună!”</p></article>
+          <article class="review"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><header><div class="name">Endre Vig</div><div class="meta">Google</div></header><p>„Promtitudine, rapiditate, eficiență.”</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="title"><div><div class="eyebrow"><i class="fa-solid fa-envelope"></i> Contact</div><h2>Datele oficiale de contact.</h2></div></div>
+        <div class="contact-grid">
+          <article class="contact"><i class="fa-solid fa-location-dot"></i><h3>Adresă</h3><p>Piața Unirii 21, 400113 Cluj-Napoca.</p><p><a href="https://www.google.com/maps/place/Notar+public+Gidro+Alexandra/data=!4m7!3m6!1s0x47490f45269fe6db:0xdc3ab8902d7f64c0!8m2!3d46.7705937!4d23.5886298!16s%2Fg%2F11w3jsnnqr!19sChIJ2-afJkUPSUcRwGR_LZC4Otw?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener">Vezi pe hartă</a></p></article>
+          <article class="contact"><i class="fa-solid fa-phone"></i><h3>Telefon</h3><p><a href="tel:0754616394">0754 616 394</a></p><p>Contact direct și rapid.</p></article>
+          <article class="contact"><i class="fa-solid fa-clock"></i><h3>Program</h3><p>Luni - Vineri: 09:00 - 17:00</p><p>Weekend: închis</p></article>
+          <article class="contact"><i class="fa-solid fa-at"></i><h3>Email</h3><p>notargidroalexandra@gmail.com</p><p>bnppoplenutaanisoara@yahoo.com</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div><strong style="font-family:Fraunces,serif;font-size:1.2rem;color:var(--ink)">Notar public Gidro Alexandra</strong><p style="margin:6px 0 0">Cluj-Napoca • suport în engleză</p></div>
+      <div>© 2026 • Birou notarial activ</div>
+    </div>
+  </footer>
+</body>
+</html>

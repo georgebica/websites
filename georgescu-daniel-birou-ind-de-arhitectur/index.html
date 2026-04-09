@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Georgescu Daniel, Birou Ind. De Arhitectură | Craiova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+  <style>
+    :root{
+      --bg:#f4efe5; --panel:#fffaf1; --ink:#171411; --muted:#6b6358; --forest:#203126; --forest2:#35513f; --bronze:#b38a55; --sand:#e4d5bb; --line:rgba(32,49,38,.12); --shadow:0 22px 60px rgba(32,49,38,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Manrope',sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(179,138,85,.16), transparent 22%),
+        radial-gradient(circle at 88% 8%, rgba(32,49,38,.16), transparent 24%),
+        linear-gradient(180deg,#f8f4eb 0%, #f0e8da 100%);
+      overflow-x:hidden;
+    }
+    body::before{
+      content:'';
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(32,49,38,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(32,49,38,.08) 1px, transparent 1px);
+      background-size:28px 28px;
+      opacity:.18;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:60;
+      backdrop-filter:blur(14px);
+      background:rgba(244,239,229,.76);
+      border-bottom:1px solid rgba(32,49,38,.08);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{
+      width:40px;height:40px;border-radius:14px;
+      display:grid;place-items:center;
+      color:#fff;background:linear-gradient(135deg,var(--forest),var(--forest2));
+      box-shadow:0 14px 30px rgba(32,49,38,.25);
+    }
+    .brand strong{display:block;font-size:1rem}
+    .brand small{display:block;color:var(--muted);font-size:.8rem;font-weight:700}
+    .links{display:flex;align-items:center;gap:22px}
+    .links a{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+    .links a:hover{color:var(--forest)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 20px;border-radius:999px;border:1px solid transparent;
+      font-weight:800;transition:.25s ease;cursor:pointer;
+    }
+    .btn-primary{background:linear-gradient(135deg,var(--forest),var(--forest2));color:#fff;box-shadow:0 18px 40px rgba(32,49,38,.22)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.56);border-color:rgba(32,49,38,.14)}
+    .btn-ghost:hover{transform:translateY(-2px)}
+    .menu{display:none;background:none;border:none;color:var(--forest);font-size:20px}
+    .hero{padding-top:110px;padding-bottom:48px}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:center;padding:42px 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--forest);text-transform:uppercase;letter-spacing:.2em;font-size:.75rem;font-weight:900}
+    h1,h2,h3,.display{font-family:'Cormorant Garamond',serif}
+    h1{font-size:clamp(3.1rem,7vw,6.2rem);line-height:.93;margin:.4rem 0 1rem;color:var(--forest)}
+    .lead{font-size:1.06rem;line-height:1.9;color:var(--muted);max-width:60ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .hero-panel{
+      background:linear-gradient(160deg,#fff9f1, #efe4d0);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-panel::before,.hero-panel::after{
+      content:'';
+      position:absolute;border-radius:50%;
+      border:1px solid rgba(179,138,85,.13);
+    }
+    .hero-panel::before{width:260px;height:260px;top:-90px;right:-90px}
+    .hero-panel::after{width:170px;height:170px;left:-60px;bottom:-60px}
+    .hero-panel h3{font-size:2.5rem;line-height:1.03;color:var(--forest);margin:.2rem 0 12px}
+    .hero-panel p{color:var(--muted);line-height:1.85}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:9px 13px;border-radius:999px;background:rgba(32,49,38,.06);
+      color:var(--forest);font-size:.86rem;font-weight:900;
+    }
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{
+      background:rgba(32,49,38,.05);
+      border:1px solid rgba(32,49,38,.08);
+      border-radius:18px;padding:18px;text-align:center
+    }
+    .stat b{display:block;font-size:clamp(1.3rem,3vw,2.1rem);font-family:'Cormorant Garamond',serif;color:var(--forest)}
+    .section{padding:92px 0}
+    .alt{background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.08))}
+    .head{max-width:780px;margin:0 auto 36px;text-align:center}
+    .head h2{font-size:clamp(2.1rem,5vw,4rem);margin:.4rem 0;color:var(--forest)}
+    .head p{color:var(--muted);line-height:1.8}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .benefits{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:repeat(4,1fr)}
+    .card,.review,.contact{
+      background:rgba(255,250,242,.9);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:0 14px 40px rgba(32,49,38,.08);
+      backdrop-filter:blur(10px);
+    }
+    .card{padding:24px;transition:.25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(32,49,38,.22)}
+    .icon{
+      width:54px;height:54px;border-radius:16px;
+      display:grid;place-items:center;margin-bottom:16px;
+      background:linear-gradient(135deg,rgba(32,49,38,.08),rgba(179,138,85,.22));
+      color:var(--forest);font-size:1.08rem;
+    }
+    .card h3,.review h3,.contact h3{margin:0 0 10px;font-size:1.42rem;color:var(--forest)}
+    .card p,.review p,.contact p{margin:0;color:var(--muted);line-height:1.8}
+    .soft{
+      padding:16px 18px;border-radius:18px;
+      background:rgba(32,49,38,.05);border:1px solid rgba(32,49,38,.08)
+    }
+    .soft b{display:block;color:var(--forest);margin-bottom:6px}
+    .review{padding:22px}
+    .meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:var(--muted);font-size:.95rem}
+    .stars{color:var(--bronze);letter-spacing:2px;margin-bottom:8px}
+    .contact{padding:22px}
+    .contact .big{font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:var(--forest);margin:.2rem 0 .45rem}
+    .maps{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--forest);font-weight:900}
+    .mini{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(32,49,38,.05);margin-top:16px;color:var(--muted)}
+    .hours{display:grid;gap:10px}
+    .hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid rgba(32,49,38,.08)}
+    .footer{padding:30px 0 42px;border-top:1px solid rgba(32,49,38,.1);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(32,49,38,.06);color:var(--forest);font-size:.84rem;font-weight:900}
+    .menu-panel{display:none}
+    @media (max-width: 980px){
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 760px){
+      .links,.desktop-cta{display:none}
+      .menu{display:block}
+      .hero{padding-top:96px}
+      .hero-grid,.services,.benefits,.reviews,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .menu-panel{display:none;padding-bottom:16px}
+      .menu-panel.open{display:block}
+      .menu-panel a{display:block;padding:12px 0;border-top:1px solid rgba(32,49,38,.08);font-weight:900;color:var(--forest)}
+      h1{font-size:clamp(2.8rem,13vw,4.8rem)}
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header class="nav">
+      <div class="wrap">
+        <div class="nav-inner">
+          <a class="brand" href="#top">
+            <span class="brand-mark"><i class="fa-solid fa-compass-drafting"></i></span>
+            <span>
+              <strong>{{ business.name }}</strong>
+              <small>Craiova · birou individual de arhitectură</small>
+            </span>
+          </a>
+          <nav class="links">
+            <a href="#despre">Despre</a>
+            <a href="#servicii">Servicii</a>
+            <a href="#proces">Proces</a>
+            <a href="#recenzii">Recenzii</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="desktop-cta">
+            <a class="btn btn-primary" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> Sună acum</a>
+          </div>
+          <button class="menu" @click="mobileOpen = !mobileOpen" aria-label="Meniu">
+            <i class="fa-solid" :class="mobileOpen ? 'fa-xmark' : 'fa-bars'"></i>
+          </button>
+        </div>
+        <div class="menu-panel" :class="{ open: mobileOpen }">
+          <a href="#despre" @click="mobileOpen=false">Despre</a>
+          <a href="#servicii" @click="mobileOpen=false">Servicii</a>
+          <a href="#proces" @click="mobileOpen=false">Proces</a>
+          <a href="#recenzii" @click="mobileOpen=false">Recenzii</a>
+          <a href="#contact" @click="mobileOpen=false">Contact</a>
+          <a class="btn btn-primary" style="margin-top:10px" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> {{ business.phone }}</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div data-aos="fade-up">
+            <span class="eyebrow"><i class="fa-solid fa-drafting-compass"></i> Arhitectură · documentație · coordonare</span>
+            <h1>Spatii gândite cu claritate, proporție și grijă pentru utilizare.</h1>
+            <p class="lead">
+              Biroul lui Georgescu Daniel din Craiova oferă proiectare pentru locuințe și spații comerciale, documentație urbanistică, consultanță tehnică și proiecte complete de casă, de la concept până la autorizare.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> {{ business.phone }}</a>
+              <a class="btn btn-ghost" :href="business.maps" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Vezi pe hartă</a>
+            </div>
+          </div>
+          <aside class="hero-panel" data-aos="fade-left">
+            <span class="chip"><i class="fa-solid fa-ruler-combined"></i> Proiecte complete prin autorizare</span>
+            <h3 class="display">Un birou individual cu abordare pragmatică și simț bun al detaliului.</h3>
+            <p>Lucrările sunt orientate spre soluții funcționale, scenarii clare de execuție și consultanță utilă încă din faza de achiziție a terenului.</p>
+            <div class="stats">
+              <div class="stat"><b>{{ stats.years }}</b><span>recenzii publice</span></div>
+              <div class="stat"><b>{{ stats.price }}</b><span>RON/m² pentru proiecte</span></div>
+              <div class="stat"><b>{{ stats.delivery }}</b><span>estimare casă completă</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="despre" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-circle-info"></i> Despre birou</span>
+            <h2>Arhitectură adaptată pentru locuire, funcționalitate și autorizare</h2>
+            <p>Practica este organizată ca birou individual, iar serviciile se bazează pe documentație coerentă, consultanță reală și coordonare atentă pentru proiecte rezidențiale și comerciale.</p>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+            <div class="soft"><b><i class="fa-solid fa-house"></i> Locuințe noi</b>Case individuale și construcții rezidențiale cu planificare clară.</div>
+            <div class="soft"><b><i class="fa-solid fa-pen-ruler"></i> Interior și amenajare</b>Spații rezidențiale sau comerciale cu identitate calmă și funcțională.</div>
+            <div class="soft"><b><i class="fa-solid fa-city"></i> Urbanism</b>PUD / PUZ și documente pentru dezvoltare și autorizații.</div>
+            <div class="soft"><b><i class="fa-solid fa-mountain-city"></i> Consultanță tehnică</b>Evaluări de structură, fezabilitate și sisteme de instalații.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicii" class="section">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-layer-group"></i> Servicii</span>
+            <h2>Pachet complet de la schiță la documentația pentru autorizație</h2>
+            <p>Serviciile sunt prezentate într-o ordine care reflectă felul în care se dezvoltă un proiect bun: teren, concept, documentație, coordonare și livrare.</p>
+          </div>
+          <div class="grid services">
+            <div class="card"><div class="icon"><i class="fa-solid fa-house"></i></div><h3>Proiecte de locuințe</h3><p>Locuințe individuale și clădiri rezidențiale proiectate pentru eficiență și echilibru estetic.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-couch"></i></div><h3>Design interior</h3><p>Aranjamente pentru locuințe și spații comerciale cu accent pe utilitate și atmosferă.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-city"></i></div><h3>Clădiri comerciale și instituționale</h3><p>Documentație pentru structuri comerciale, industriale sau instituționale.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-pen-to-square"></i></div><h3>Renovare și extindere</h3><p>Modificări, restaurări și extinderi pentru clădiri existente, tratate cu grijă.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-map"></i></div><h3>Urbanism PUD / PUZ</h3><p>Documentație urbanistică pentru dezvoltări și aliniere la cerințele de autorizare.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-clipboard-check"></i></div><h3>Autorizații și consultanță</h3><p>Sprijin tehnic și documentar pentru obținerea aprobărilor necesare.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proces" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-diagram-project"></i> Proces</span>
+            <h2>De la teren la proiect livrat</h2>
+          </div>
+          <div class="grid benefits">
+            <div class="card"><div class="icon"><i class="fa-solid fa-magnifying-glass-location"></i></div><h3>Căutare teren</h3><p>Consultanță pentru alegerea parcelei potrivite și evaluarea contextului.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-drafting-compass"></i></div><h3>Concept și studii</h3><p>Fezabilitate, schițe și direcție arhitecturală înainte de documentație.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-file-signature"></i></div><h3>Autorizare</h3><p>Documentație completă pentru autorizare și urmărirea pașilor necesari.</p></div>
+            <div class="card"><div class="icon"><i class="fa-solid fa-calendar-check"></i></div><h3>Livrare</h3><p>Proiecte complete, inclusiv estimări de timp pentru execuție și coordonare.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recenzii" class="section">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-star"></i> Recenzii</span>
+            <h2>Feedback public din datele furnizate</h2>
+            <p>Am afișat doar recenziile reale care apar în materialul primit, fără inventarea de citate noi.</p>
+          </div>
+          <div class="grid reviews">
+            <article class="review" v-for="review in reviews" :key="review.author || review.note">
+              <div class="meta">
+                <strong>{{ review.author }}</strong>
+                <span>{{ review.rating }}/5</span>
+              </div>
+              <div class="stars">{{ review.stars }}</div>
+              <p v-if="review.text">{{ review.text }}</p>
+              <p v-else class="muted">{{ review.note }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="wrap">
+          <div class="head">
+            <span class="tag"><i class="fa-solid fa-location-dot"></i> Contact</span>
+            <h2>Contact direct pentru proiecte și consultanță</h2>
+          </div>
+          <div class="grid contact-grid">
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h3 class="big">Adresă</h3>
+              <p>Strada Florilor 4, Craiova</p>
+              <a class="maps" :href="business.maps" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Deschide harta</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <h3 class="big">Telefon</h3>
+              <p>0251 533 157</p>
+              <a class="maps" :href="'tel:' + business.phoneDigits"><i class="fa-solid fa-phone"></i> Sună acum</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+              <h3 class="big">Email</h3>
+              <p>danutzmarian@yahoo.com</p>
+              <a class="maps" href="mailto:danutzmarian@yahoo.com"><i class="fa-solid fa-paper-plane"></i> Trimite mesaj</a>
+            </div>
+            <div class="contact">
+              <div class="icon"><i class="fa-solid fa-clock"></i></div>
+              <h3 class="big">Program</h3>
+              <div class="hours">
+                <div><span>Luni - Vineri</span><strong>09:00 - 17:00</strong></div>
+                <div><span>Sâmbătă - Duminică</span><strong>Închis</strong></div>
+              </div>
+              <div class="mini"><i class="fa-solid fa-ruler"></i> Proiecte la comandă, consultanță adaptată</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <strong style="color:var(--forest)">Georgescu Daniel, Birou Ind. De Arhitectură</strong>
+          <div>Craiova · proiectare și consultanță arhitecturală</div>
+        </div>
+        <div>Telefon: 0251 533 157 · Email: danutzmarian@yahoo.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          mobileOpen: false,
+          business: {
+            name: 'Georgescu Daniel, Birou Ind. De Arhitectură',
+            phone: '0251 533 157',
+            phoneDigits: '0251533157',
+            maps: 'https://www.google.com/maps/place/Georgescu+Daniel,+Birou+Ind.+De+Arhitectur%C4%83/data=!4m7!3m6!1s0x4752d77fb1778139:0x45298e55adbafb88!8m2!3d44.3261182!4d23.7789893!16s%2Fg%2F1hc9kcds8!19sChIJOYF3sX_XUkcRiPu6rVWOKUU?authuser=0&hl=en&rclk=1'
+          },
+          stats: { years: '4', price: '50-190', delivery: '5 luni' },
+          reviews: [
+            {
+              author: 'Codrin Mirea',
+              rating: 5,
+              stars: '★★★★★',
+              text: 'Calitate foarte buna. Am fost multumit de consultanță si ulterior de calitatea montajului si a tâmplăriei.'
+            },
+            {
+              author: 'Anca Andrei',
+              rating: 5,
+              stars: '★★★★★',
+              note: 'Nume afișat în datele publice, fără text suplimentar publicat.'
+            },
+            {
+              author: 'Raluca Tudora',
+              rating: 1,
+              stars: '★☆☆☆☆',
+              note: 'Recenzie publică fără text afișat în materialul furnizat.'
+            },
+            {
+              author: 'david gabriel smarandache',
+              rating: 1,
+              stars: '★☆☆☆☆',
+              note: 'Recenzie publică fără text afișat în materialul furnizat.'
+            }
+          ]
+        }
+      },
+      mounted() {
+        if (window.AOS) AOS.init({ duration: 800, once: true });
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
