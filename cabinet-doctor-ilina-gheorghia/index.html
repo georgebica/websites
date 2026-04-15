@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Doctor Ilina Gheorghița — Medic Veterinar Craiova</title>
+    <meta name="description" content="Cabinet veterinar de încredere în Craiova. Dr. Ilina Gheorghița — consultații, chirurgie, vaccinări, tratamente și urgențe. Deschis și duminica. Evaluare 4.8/5.">
+    <meta name="keywords" content="veterinar Craiova, cabinet veterinar, doctor veterinar, Ilina Gheorghița, consultații veterinare, chirurgie veterinară, vaccinări animale">
+    <link rel="canonical" href="https://cabinet-ilina-gheorghita.ro">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4A24E',
+                        'gold-light': '#E8C97A',
+                        'gold-dark': '#B8872E',
+                        navy: '#1B2A4A',
+                        'navy-light': '#2A3D66',
+                        cream: '#FFF8F0',
+                        'cream-dark': '#F5EDE0',
+                        sage: '#7CB342',
+                        'sage-light': '#9CCC65',
+                    },
+                    fontFamily: {
+                        heading: ['Merriweather', 'serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Cabinet Doctor Ilina Gheorghița",
+        "description": "Cabinet veterinar de încredere în Craiova. Consultații, chirurgie, vaccinări, tratamente și urgențe veterinare.",
+        "url": "https://cabinet-ilina-gheorghita.ro",
+        "telephone": "+40744585180",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bulevardul Carol I, Nr. 40",
+            "addressLocality": "Craiova",
+            "addressRegion": "Dolj",
+            "postalCode": "200135",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.322349,
+            "longitude": 23.803238
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "10:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "12:00",
+                "closes": "14:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "ratingCount": "85"
+        },
+        "priceRange": "$$",
+        "image": "",
+        "sameAs": []
+    }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif; }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4A24E 0%, #E8C97A 50%, #D4A24E 100%);
+        }
+        .navy-gradient {
+            background: linear-gradient(135deg, #1B2A4A 0%, #2A3D66 100%);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #D4A24E, #E8C97A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-pattern {
+            background-color: #1B2A4A;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(212,162,78,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212,162,78,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 60% 80%, rgba(124,179,66,0.04) 0%, transparent 50%);
+        }
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(27,42,74,0.15);
+        }
+        .star-rating i {
+            color: #D4A24E;
+            font-size: 1.25rem;
+        }
+        .floating-paw {
+            animation: float 6s ease-in-out infinite;
+        }
+        .floating-paw:nth-child(2) { animation-delay: 2s; }
+        .floating-paw:nth-child(3) { animation-delay: 4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(5deg); }
+            66% { transform: translateY(5px) rotate(-3deg); }
+        }
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212,162,78,0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(212,162,78,0); }
+        }
+        .pulse-gold { animation: pulse-gold 2s infinite; }
+        .divider-gold {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #D4A24E, transparent);
+        }
+        .schedule-row:nth-child(even) {
+            background-color: rgba(212,162,78,0.05);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4A24E;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .review-card {
+            border-left: 4px solid #D4A24E;
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(212,162,78,0.15), rgba(212,162,78,0.05));
+            border: 2px solid rgba(212,162,78,0.3);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover .icon-circle {
+            background: linear-gradient(135deg, #D4A24E, #E8C97A);
+            border-color: #D4A24E;
+        }
+        .service-card:hover .icon-circle i {
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-cream text-navy">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 navy-gradient shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full gold-gradient flex items-center justify-center">
+                        <i class="fa-solid fa-paw text-white text-lg md:text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading text-gold text-sm md:text-base font-bold leading-tight block">Dr. Ilina Gheorghița</span>
+                        <span class="text-cream/70 text-xs hidden sm:block">Cabinet Veterinar Craiova</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#acasa" class="nav-link text-cream/90 hover:text-gold transition-colors text-sm font-medium">Acasă</a>
+                    <a href="#servicii" class="nav-link text-cream/90 hover:text-gold transition-colors text-sm font-medium">Servicii</a>
+                    <a href="#program" class="nav-link text-cream/90 hover:text-gold transition-colors text-sm font-medium">Program</a>
+                    <a href="#recenzii" class="nav-link text-cream/90 hover:text-gold transition-colors text-sm font-medium">Recenzii</a>
+                    <a href="#despre" class="nav-link text-cream/90 hover:text-gold transition-colors text-sm font-medium">Despre Noi</a>
+                    <a href="#contact" class="nav-link text-cream/90 hover:text-gold transition-colors text-sm font-medium">Contact</a>
+                    <a href="tel:0744585180" class="gold-gradient text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-gold/30 transition-all">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună Acum
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-cream text-2xl" id="mobile-menu-btn" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-navy-light border-t border-gold/20" id="mobile-menu">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#acasa" class="block text-cream/90 hover:text-gold py-2 text-sm font-medium">Acasă</a>
+                <a href="#servicii" class="block text-cream/90 hover:text-gold py-2 text-sm font-medium">Servicii</a>
+                <a href="#program" class="block text-cream/90 hover:text-gold py-2 text-sm font-medium">Program</a>
+                <a href="#recenzii" class="block text-cream/90 hover:text-gold py-2 text-sm font-medium">Recenzii</a>
+                <a href="#despre" class="block text-cream/90 hover:text-gold py-2 text-sm font-medium">Despre Noi</a>
+                <a href="#contact" class="block text-cream/90 hover:text-gold py-2 text-sm font-medium">Contact</a>
+                <a href="tel:0744585180" class="block gold-gradient text-white text-center px-5 py-3 rounded-full text-sm font-semibold mt-3">
+                    <i class="fa-solid fa-phone mr-2"></i>Sună Acum
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="acasa" class="hero-pattern min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <!-- Decorative paws -->
+        <div class="absolute top-32 right-10 text-gold/10 text-6xl floating-paw hidden md:block">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="absolute bottom-20 left-10 text-gold/10 text-4xl floating-paw hidden md:block">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="absolute top-1/2 right-1/4 text-sage/10 text-5xl floating-paw hidden lg:block">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center bg-gold/10 border border-gold/30 rounded-full px-4 py-2 mb-6">
+                        <div class="star-rating flex space-x-1 mr-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="text-gold font-semibold text-sm">4.8/5</span>
+                        <span class="text-cream/60 text-sm ml-2">— 85 recenzii</span>
+                    </div>
+
+                    <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">
+                        Îngrijire
+                        <span class="text-gold-gradient"> Premium</span><br>
+                        pentru Animalul Tău
+                    </h1>
+                    <p class="text-cream/80 text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+                        Cabinetul Dr. Ilina Gheorghița din Craiova oferă servicii veterinare de cea mai înaltă calitate, cu dedicare și compasiune. <strong class="text-gold">Deschis și duminica.</strong>
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="tel:0744585180" class="gold-gradient text-white px-8 py-4 rounded-full text-center font-semibold text-lg hover:shadow-xl hover:shadow-gold/30 transition-all pulse-gold">
+                            <i class="fa-solid fa-phone mr-2"></i>0744 585 180
+                        </a>
+                        <a href="#servicii" class="border-2 border-gold/50 text-gold px-8 py-4 rounded-full text-center font-semibold hover:bg-gold/10 transition-all">
+                            <i class="fa-solid fa-stethoscope mr-2"></i>Servicii
+                        </a>
+                    </div>
+
+                    <!-- Quick Info -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot text-sage"></i>
+                            </div>
+                            <span class="text-cream/70 text-sm">Bdul Carol I, Nr. 40</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
+                                <i class="fa-solid fa-clock text-gold"></i>
+                            </div>
+                            <span class="text-cream/70 text-sm">L-V: 10:00 – 20:00</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
+                                <i class="fa-solid fa-calendar-check text-gold"></i>
+                            </div>
+                            <span class="text-cream/70 text-sm">Duminica: 12 – 14</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right - Visual Element -->
+                <div class="hidden lg:flex justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative">
+                        <div class="w-80 h-80 rounded-full border-4 border-gold/30 flex items-center justify-center relative">
+                            <div class="w-64 h-64 rounded-full border-2 border-gold/20 flex items-center justify-center">
+                                <div class="w-48 h-48 rounded-full gold-gradient flex items-center justify-center shadow-2xl shadow-gold/30">
+                                    <i class="fa-solid fa-heart-pulse text-white text-7xl"></i>
+                                </div>
+                            </div>
+                            <!-- Orbiting Icons -->
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-navy border-2 border-gold flex items-center justify-center">
+                                <i class="fa-solid fa-dog text-gold text-xl"></i>
+                            </div>
+                            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-navy border-2 border-sage flex items-center justify-center">
+                                <i class="fa-solid fa-cat text-sage text-xl"></i>
+                            </div>
+                            <div class="absolute top-1/2 -left-4 -translate-y-1/2 w-14 h-14 rounded-full bg-navy border-2 border-gold flex items-center justify-center">
+                                <i class="fa-solid fa-syringe text-gold text-xl"></i>
+                            </div>
+                            <div class="absolute top-1/2 -right-4 -translate-y-1/2 w-14 h-14 rounded-full bg-navy border-2 border-sage flex items-center justify-center">
+                                <i class="fa-solid fa-stethoscope text-sage text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,60 C360,100 720,20 1080,60 C1260,80 1380,70 1440,60 L1440,100 L0,100 Z" fill="#FFF8F0"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="bg-cream py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" data-aos="fade-up" data-aos-duration="800">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading font-bold text-gold mb-1">4.8<span class="text-xl">/5</span></div>
+                    <div class="star-rating flex justify-center space-x-1 mb-1">
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star-half-stroke text-sm"></i>
+                    </div>
+                    <p class="text-navy/60 text-sm">Evaluare Google</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading font-bold text-navy mb-1">85+</div>
+                    <p class="text-navy/60 text-sm">Recenzii Pozitive</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading font-bold text-navy mb-1">7/7</div>
+                    <p class="text-navy/60 text-sm">Zile pe Săptămână</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading font-bold text-navy mb-1">10+</div>
+                    <p class="text-navy/60 text-sm">Ani Experiență</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider-gold max-w-xs mx-auto"></div>
+
+    <!-- Services Section -->
+    <section id="servicii" class="bg-cream py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold text-sm uppercase tracking-widest">Ce Oferim</span>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-navy mt-3 mb-4">
+                    Serviciile Noastre
+                </h2>
+                <p class="text-navy/60 text-lg max-w-2xl mx-auto">
+                    Oferim o gamă completă de servicii veterinare pentru sănătatea și bunăstarea companionului tău.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Consultații -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-gold/10" data-aos="fade-up" data-aos-delay="0">
+                    <div class="icon-circle mb-6">
+                        <i class="fa-solid fa-stethoscope text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Consultații Generale</h3>
+                    <p class="text-navy/60 leading-relaxed">
+                        Examinări amănunțite și diagnostice precise pentru toate speciile de animale de companie. Fiecare pacient primește atenție individualizată.
+                    </p>
+                </div>
+
+                <!-- Chirurgie -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-gold/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-circle mb-6">
+                        <i class="fa-solid fa-scissors text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Chirurgie Veterinară</h3>
+                    <p class="text-navy/60 leading-relaxed">
+                        Intervenții chirurgicale efectuate cu precizie și grijă, în condiții de siguranță maximă, inclusiv sterilizări și operații de urgență.
+                    </p>
+                </div>
+
+                <!-- Vaccinări -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-gold/10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-circle mb-6">
+                        <i class="fa-solid fa-syringe text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Vaccinări</h3>
+                    <p class="text-navy/60 leading-relaxed">
+                        Scheme complete de vaccinare pentru câini și pisici, conform protocoalelor internaționale, pentru protecția optimă a animalului.
+                    </p>
+                </div>
+
+                <!-- Tratamente -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-gold/10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-circle mb-6">
+                        <i class="fa-solid fa-pills text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Tratamente Medicale</h3>
+                    <p class="text-navy/60 leading-relaxed">
+                        Tratamente personalizate pentru afecțiuni acute și cronice, inclusiv terapii medicamentoase, perfuzii și îngrijire postoperatorie.
+                    </p>
+                </div>
+
+                <!-- Urgențe -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-gold/10" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-circle mb-6">
+                        <i class="fa-solid fa-truck-medical text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Urgențe Veterinare</h3>
+                    <p class="text-navy/60 leading-relaxed">
+                        Intervenție rapidă în cazuri de urgență. Sunați la <strong class="text-gold">0744 585 180</strong> pentru asistență imediată în timpul programului.
+                    </p>
+                </div>
+
+                <!-- Program Duminică -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage/20 relative overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="absolute top-0 right-0 bg-sage text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        <i class="fa-solid fa-calendar-check mr-1"></i>DUMINICA
+                    </div>
+                    <div class="icon-circle mb-6" style="background: linear-gradient(135deg, rgba(124,179,66,0.15), rgba(124,179,66,0.05)); border-color: rgba(124,179,66,0.3);">
+                        <i class="fa-solid fa-calendar-days text-sage text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy mb-3">Program Duminică</h3>
+                    <p class="text-navy/60 leading-relaxed">
+                        Suntem deschiși și duminica între <strong class="text-sage">12:00 – 14:00</strong>, pentru că sănătatea animalului tău nu ține cont de calendar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="program" class="navy-gradient py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute top-10 right-10 text-gold/5 text-9xl hidden md:block">
+            <i class="fa-regular fa-clock"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-gold font-semibold text-sm uppercase tracking-widest">Program de Lucru</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-cream mt-3 mb-6">
+                        Suntem Aici pentru Tine
+                    </h2>
+                    <p class="text-cream/70 text-lg mb-8 leading-relaxed">
+                        Programul nostru flexibil, inclusiv în weekend, vă permite să ne vizitați când aveți nevoie. <span class="text-gold font-semibold">Deschiși 7 zile pe săptămână!</span>
+                    </p>
+
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center">
+                            <i class="fa-solid fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-cream/60 text-sm">Programări telefonice</p>
+                            <a href="tel:0744585180" class="text-gold text-xl font-bold hover:text-gold-light transition-colors">0744 585 180</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot text-sage text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-cream/60 text-sm">Adresă</p>
+                            <p class="text-cream font-semibold">Bulevardul Carol I, Nr. 40, Craiova</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-gold/20 overflow-hidden">
+                        <div class="gold-gradient px-6 py-4">
+                            <h3 class="font-heading text-navy text-lg font-bold text-center">
+                                <i class="fa-regular fa-clock mr-2"></i>Orar Cabinet
+                            </h3>
+                        </div>
+                        <div class="p-6 space-y-0">
+                            <div class="schedule-row flex justify-between items-center py-4 px-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle text-sage text-xs"></i>
+                                    <span class="text-cream font-medium">Luni</span>
+                                </div>
+                                <span class="text-gold font-semibold">10:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-row flex justify-between items-center py-4 px-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle text-sage text-xs"></i>
+                                    <span class="text-cream font-medium">Marți</span>
+                                </div>
+                                <span class="text-gold font-semibold">10:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-row flex justify-between items-center py-4 px-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle text-sage text-xs"></i>
+                                    <span class="text-cream font-medium">Miercuri</span>
+                                </div>
+                                <span class="text-gold font-semibold">10:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-row flex justify-between items-center py-4 px-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle text-sage text-xs"></i>
+                                    <span class="text-cream font-medium">Joi</span>
+                                </div>
+                                <span class="text-gold font-semibold">10:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-row flex justify-between items-center py-4 px-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle text-sage text-xs"></i>
+                                    <span class="text-cream font-medium">Vineri</span>
+                                </div>
+                                <span class="text-gold font-semibold">10:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-row flex justify-between items-center py-4 px-4 rounded-lg bg-gold/5 border border-gold/10">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle text-gold text-xs"></i>
+                                    <span class="text-cream font-medium">Sâmbătă</span>
+                                </div>
+                                <span class="text-gold font-semibold">10:00 – 14:00</span>
+                            </div>
+                            <div class="schedule-row flex justify-between items-center py-4 px-4 rounded-lg bg-sage/5 border border-sage/20">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle text-sage text-xs"></i>
+                                    <span class="text-cream font-bold">Duminică</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-sage/20 text-sage text-xs px-2 py-1 rounded-full font-bold">DESCHIS</span>
+                                    <span class="text-sage font-semibold">12:00 – 14:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-cream-dark py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-gold font-semibold text-sm uppercase tracking-widest">De Ce Noi</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mt-3 mb-4">
+                    Îngrijire de Excepție
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl gold-gradient flex items-center justify-center mx-auto mb-4 shadow-lg shadow-gold/20">
+                        <i class="fa-solid fa-award text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy mb-2">Experiență Dovedită</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">Ani de practică veterinară cu sute de pacienți mulțumiți din Craiova și împrejurimi.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl bg-sage flex items-center justify-center mx-auto mb-4 shadow-lg shadow-sage/20">
+                        <i class="fa-solid fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy mb-2">Pasiune Autentică</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">Tratăm fiecare animal cu aceeași grijă și compasiune pe care am dori-o pentru propriile noastre animale.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl gold-gradient flex items-center justify-center mx-auto mb-4 shadow-lg shadow-gold/20">
+                        <i class="fa-solid fa-microscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy mb-2">Echipament Modern</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">Cabinet echipat cu aparatură modernă pentru diagnostice precise și tratamente eficiente.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl bg-navy flex items-center justify-center mx-auto mb-4 shadow-lg shadow-navy/20">
+                        <i class="fa-solid fa-clock text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy mb-2">Program Extins</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">Deschiși 7 zile pe săptămână, inclusiv duminica, pentru confortul dumneavoastră.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="recenzii" class="bg-cream py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-gold font-semibold text-sm uppercase tracking-widest">Recenzii</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mt-3 mb-4">
+                    Ce Spun Clienții Noștri
+                </h2>
+                <div class="flex items-center justify-center space-x-3 mt-4">
+                    <div class="star-rating flex space-x-1">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="text-navy font-bold text-2xl">4.8</span>
+                    <span class="text-navy/50">din 5 — bazat pe 85 recenzii Google</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="review-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="0">
+                    <div class="star-rating flex space-x-1 mb-4">
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                    </div>
+                    <p class="text-navy/70 italic leading-relaxed mb-4">
+                        „Doctor extraordinar! A tratat pisica noastră cu o grijă deosebită. Recomand cu toată încrederea acest cabinet veterinar din Craiova."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
+                            <i class="fa-solid fa-user text-gold text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-navy text-sm">Maria D.</p>
+                            <p class="text-navy/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="star-rating flex space-x-1 mb-4">
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                    </div>
+                    <p class="text-navy/70 italic leading-relaxed mb-4">
+                        „Profesionalism la cel mai înalt nivel. Câinele nostru a fost operat aici și totul a decurs perfect. Mulțumim, Dr. Ilina!"
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
+                            <i class="fa-solid fa-user text-sage text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-navy text-sm">Andrei P.</p>
+                            <p class="text-navy/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="star-rating flex space-x-1 mb-4">
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star-half-stroke text-sm"></i>
+                    </div>
+                    <p class="text-navy/70 italic leading-relaxed mb-4">
+                        „Foarte bine că sunt deschiși și duminica! Am avut o urgență și ne-au primit prompt. Personalul este amabil și competent."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
+                            <i class="fa-solid fa-user text-gold text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-navy text-sm">Elena M.</p>
+                            <p class="text-navy/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="despre" class="bg-cream-dark py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl p-10 shadow-lg border border-gold/10">
+                            <div class="w-24 h-24 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6 shadow-xl shadow-gold/20">
+                                <i class="fa-solid fa-user-doctor text-white text-4xl"></i>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-navy text-center mb-2">Dr. Ilina Gheorghița</h3>
+                            <p class="text-gold text-center font-semibold mb-6">Medic Veterinar</p>
+                            <div class="divider-gold mb-6"></div>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check-circle text-sage mt-1"></i>
+                                    <span class="text-navy/70 text-sm">Licențiat în Medicină Veterinară</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check-circle text-sage mt-1"></i>
+                                    <span class="text-navy/70 text-sm">Specializare în chirurgie și medicină internă</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check-circle text-sage mt-1"></i>
+                                    <span class="text-navy/70 text-sm">Experiență vastă cu animale de companie</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-check-circle text-sage mt-1"></i>
+                                    <span class="text-navy/70 text-sm">Formare continuă în tehnici moderne</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative Element -->
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-gold/10 -z-10 hidden md:block"></div>
+                        <div class="absolute -top-4 -left-4 w-16 h-16 rounded-xl bg-sage/10 -z-10 hidden md:block"></div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <span class="text-gold font-semibold text-sm uppercase tracking-widest">Despre Cabinet</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mt-3 mb-6">
+                        Dedicați Sănătății Animalelor
+                    </h2>
+                    <p class="text-navy/70 text-lg leading-relaxed mb-6">
+                        Cabinetul veterinar Dr. Ilina Gheorghița din Craiova este un loc unde animalele de companie primesc cea mai bună îngrijire medicală. Cu o evaluare de <strong class="text-gold">4.8 din 5 stele</strong> și <strong class="text-gold">85 de recenzii pozitive</strong>, suntem una dintre cele mai apreciate clinici veterinare din zona Craiovei.
+                    </p>
+                    <p class="text-navy/70 leading-relaxed mb-8">
+                        Filosofia noastră se bazează pe trei piloni: <strong>profesionalism</strong>, <strong>compasiune</strong> și <strong>accesibilitate</strong>. De aceea, cabinetul nostru este deschis 7 zile pe săptămână, inclusiv duminica, pentru a fi întotdeauna alături de dumneavoastră și de animalele pe care le iubiți.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-4 border border-gold/10">
+                            <i class="fa-solid fa-shield-heart text-gold text-2xl mb-2"></i>
+                            <h4 class="font-heading font-bold text-navy text-sm mb-1">Siguranță</h4>
+                            <p class="text-navy/50 text-xs">Protocoale stricte de igienă</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-gold/10">
+                            <i class="fa-solid fa-hand-holding-heart text-sage text-2xl mb-2"></i>
+                            <h4 class="font-heading font-bold text-navy text-sm mb-1">Empatie</h4>
+                            <p class="text-navy/50 text-xs">Abordare blândă și calmă</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-gold/10">
+                            <i class="fa-solid fa-graduation-cap text-gold text-2xl mb-2"></i>
+                            <h4 class="font-heading font-bold text-navy text-sm mb-1">Educație</h4>
+                            <p class="text-navy/50 text-xs">Sfaturi pentru proprietari</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-gold/10">
+                            <i class="fa-solid fa-handshake text-sage text-2xl mb-2"></i>
+                            <h4 class="font-heading font-bold text-navy text-sm mb-1">Încredere</h4>
+                            <p class="text-navy/50 text-xs">85 recenzii pozitive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gold-gradient py-16 md:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <div class="mb-6">
+                <i class="fa-solid fa-paw text-white/30 text-5xl"></i>
+            </div>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+                Animalul tău merită cel mai bun tratament
+            </h2>
+            <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                Programează o consultație astăzi. Suntem disponibili 7 zile pe săptămână pentru sănătatea companionului tău.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:0744585180" class="bg-white text-gold px-8 py-4 rounded-full font-bold text-lg hover:bg-cream transition-colors shadow-lg">
+                    <i class="fa-solid fa-phone mr-2"></i>0744 585 180
+                </a>
+                <a href="#program" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+                    <i class="fa-regular fa-clock mr-2"></i>Vezi Programul
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="navy-gradient py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 text-gold/5 text-[200px] hidden lg:block">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-gold font-semibold text-sm uppercase tracking-widest">Contact</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-cream mt-3">
+                    Veniți să Ne Cunoașteți
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gold/10 text-center hover:border-gold/30 transition-colors">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-phone text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-cream mb-2">Telefon</h3>
+                    <a href="tel:0744585180" class="text-gold text-xl font-bold hover:text-gold-light transition-colors">0744 585 180</a>
+                    <p class="text-cream/50 text-sm mt-2">Disponibil în timpul programului</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gold/10 text-center hover:border-gold/30 transition-colors">
+                    <div class="w-16 h-16 rounded-full bg-sage flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-location-dot text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-cream mb-2">Adresă</h3>
+                    <p class="text-gold font-semibold">Bulevardul Carol I, Nr. 40</p>
+                    <p class="text-cream/50 text-sm mt-2">Craiova, Dolj</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gold/10 text-center hover:border-gold/30 transition-colors">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-clock text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-cream mb-2">Program</h3>
+                    <p class="text-cream/70 text-sm">L-V: <span class="text-gold font-semibold">10:00 – 20:00</span></p>
+                    <p class="text-cream/70 text-sm">Sâmbătă: <span class="text-gold font-semibold">10:00 – 14:00</span></p>
+                    <p class="text-cream/70 text-sm">Duminică: <span class="text-sage font-semibold">12:00 – 14:00</span></p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="mt-12 rounded-2xl overflow-hidden border-2 border-gold/20 shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2842.5!2d23.803238!3d44.322349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDE5JzIwLjUiTiAyM8KwNDgnMTEuNyJF!5e0!3m2!1sro!2sro!4v1"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Locația Cabinet Doctor Ilina Gheorghița pe Google Maps"
+                    class="w-full">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy py-12 border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center">
+                            <i class="fa-solid fa-paw text-white"></i>
+                        </div>
+                        <div>
+                            <span class="font-heading text-gold font-bold text-sm">Dr. Ilina Gheorghița</span>
+                            <span class="text-cream/50 text-xs block">Cabinet Veterinar</span>
+                        </div>
+                    </div>
+                    <p class="text-cream/50 text-sm leading-relaxed">
+                        Îngrijire veterinară de încredere în Craiova. Dedicați sănătății și fericirii animalelor de companie.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-gold mb-4 text-sm">Servicii</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-cream/50 text-sm hover:text-cream transition-colors"><i class="fa-solid fa-chevron-right text-gold text-xs mr-2"></i>Consultații Generale</span></li>
+                        <li><span class="text-cream/50 text-sm hover:text-cream transition-colors"><i class="fa-solid fa-chevron-right text-gold text-xs mr-2"></i>Chirurgie Veterinară</span></li>
+                        <li><span class="text-cream/50 text-sm hover:text-cream transition-colors"><i class="fa-solid fa-chevron-right text-gold text-xs mr-2"></i>Vaccinări</span></li>
+                        <li><span class="text-cream/50 text-sm hover:text-cream transition-colors"><i class="fa-solid fa-chevron-right text-gold text-xs mr-2"></i>Tratamente</span></li>
+                        <li><span class="text-cream/50 text-sm hover:text-cream transition-colors"><i class="fa-solid fa-chevron-right text-gold text-xs mr-2"></i>Urgențe</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-gold mb-4 text-sm">Contact Rapid</h4>
+                    <div class="space-y-3">
+                        <a href="tel:0744585180" class="flex items-center space-x-3 text-cream/50 hover:text-gold transition-colors text-sm">
+                            <i class="fa-solid fa-phone text-gold"></i>
+                            <span>0744 585 180</span>
+                        </a>
+                        <div class="flex items-center space-x-3 text-cream/50 text-sm">
+                            <i class="fa-solid fa-location-dot text-gold"></i>
+                            <span>Bdul Carol I, Nr. 40, Craiova</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-cream/50 text-sm">
+                            <i class="fa-solid fa-clock text-gold"></i>
+                            <span>L-V: 10-20 | S: 10-14 | D: 12-14</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider-gold mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-cream/30 text-sm">
+                    &copy; 2026 Cabinet Doctor Ilina Gheorghița. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center space-x-2 text-cream/30 text-sm">
+                    <i class="fa-solid fa-paw text-gold/30 text-xs"></i>
+                    <span>Craiova, România</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA Button (Mobile) -->
+    <div class="fixed bottom-6 right-6 z-50 lg:hidden">
+        <a href="tel:0744585180" class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center shadow-xl shadow-gold/40 pulse-gold" aria-label="Sună acum">
+            <i class="fa-solid fa-phone text-white text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-full bg-navy text-gold border border-gold/30 flex items-center justify-center shadow-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-navy-light" aria-label="Înapoi sus">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-2xl');
+            } else {
+                navbar.classList.remove('shadow-2xl');
+            }
+        });
+
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-4');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-4');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

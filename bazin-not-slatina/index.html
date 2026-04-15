@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazin Înot Slatina — Singurul bazin acoperit din județul Olt</title>
+    <meta name="description" content="Bazin Înot Slatina — bazin semi-olimpic acoperit, 25m x 12.5m, 5 culoare. Cursuri de înot, antrenament competitiv, aqua fitness. Programează-te acum!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pool: {
+                            deep: '#0277BD',
+                            aqua: '#00BCD4',
+                            sky: '#E1F5FE',
+                            dark: '#01579B',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Lexend', 'sans-serif'],
+                        body: ['Nunito Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Nunito Sans', sans-serif; color: #1a1a2e; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Lexend', sans-serif; }
+
+        /* Wave dividers */
+        .wave-divider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+        .wave-divider-flip svg {
+            transform: rotate(180deg);
+        }
+
+        /* Water ripple animation */
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+        .ripple-dot {
+            animation: ripple 2.5s ease-out infinite;
+        }
+        .ripple-dot:nth-child(2) { animation-delay: 0.8s; }
+        .ripple-dot:nth-child(3) { animation-delay: 1.6s; }
+
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .float-anim { animation: float 3s ease-in-out infinite; }
+        .float-anim-delay { animation: float 3s ease-in-out 1s infinite; }
+
+        /* Pulse glow for CTA */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 188, 212, 0.5); }
+            50% { box-shadow: 0 0 20px 8px rgba(0, 188, 212, 0.25); }
+        }
+        .pulse-glow { animation: pulseGlow 2.5s ease-in-out infinite; }
+
+        /* Water drop shape */
+        .water-drop {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00BCD4, #0277BD);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .water-drop i { transform: rotate(45deg); color: white; font-size: 1.25rem; }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00BCD4, #0277BD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card hover */
+        .card-lift {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .card-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(2, 119, 189, 0.18);
+        }
+
+        /* Nav scroll state */
+        .nav-scrolled {
+            background: rgba(1, 87, 155, 0.97) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Swimmer icon animation */
+        @keyframes swim {
+            0%, 100% { transform: translateX(0) scaleX(1); }
+            49% { transform: translateX(30px) scaleX(1); }
+            50% { transform: translateX(30px) scaleX(-1); }
+            99% { transform: translateX(0) scaleX(-1); }
+        }
+        .swim-icon { animation: swim 4s ease-in-out infinite; display: inline-block; }
+
+        /* Wave background pattern */
+        .wave-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.05' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        /* Hours table */
+        .hours-table tr:hover { background: rgba(2, 119, 189, 0.06); }
+
+        /* Mobile menu */
+        .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-menu.open { transform: translateX(0); }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav id="mainNav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background: linear-gradient(135deg, #01579B, #0277BD);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center gap-3 text-white no-underline">
+                    <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                        <i class="fa-solid fa-water text-pool-aqua text-lg"></i>
+                    </div>
+                    <span class="font-heading font-bold text-lg md:text-xl tracking-tight">Bazin Înot Slatina</span>
+                </a>
+
+                <!-- Desktop links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#despre" class="text-white/80 hover:text-white transition font-medium text-sm">Despre</a>
+                    <a href="#facilitati" class="text-white/80 hover:text-white transition font-medium text-sm">Facilități</a>
+                    <a href="#programe" class="text-white/80 hover:text-white transition font-medium text-sm">Programe</a>
+                    <a href="#program-orar" class="text-white/80 hover:text-white transition font-medium text-sm">Orar</a>
+                    <a href="#contact" class="text-white/80 hover:text-white transition font-medium text-sm">Contact</a>
+                    <a href="tel:0349880110" class="bg-pool-aqua hover:bg-cyan-400 text-white px-5 py-2 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                    </a>
+                </div>
+
+                <!-- Mobile toggle -->
+                <button id="menuToggle" class="md:hidden text-white text-2xl" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-gradient-to-b from-pool-dark to-pool-deep shadow-2xl md:hidden z-50">
+            <div class="p-6">
+                <button id="menuClose" class="text-white text-2xl mb-8 float-right" aria-label="Închide meniu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="clear-both"></div>
+                <div class="flex flex-col gap-5 mt-4">
+                    <a href="#despre" class="mobile-link text-white/80 hover:text-white text-lg font-medium transition">Despre</a>
+                    <a href="#facilitati" class="mobile-link text-white/80 hover:text-white text-lg font-medium transition">Facilități</a>
+                    <a href="#programe" class="mobile-link text-white/80 hover:text-white text-lg font-medium transition">Programe</a>
+                    <a href="#program-orar" class="mobile-link text-white/80 hover:text-white text-lg font-medium transition">Orar</a>
+                    <a href="#contact" class="mobile-link text-white/80 hover:text-white text-lg font-medium transition">Contact</a>
+                    <hr class="border-white/20 my-2">
+                    <a href="tel:0349880110" class="bg-pool-aqua text-white text-center py-3 rounded-full font-bold text-lg shadow-lg">
+                        <i class="fa-solid fa-phone mr-2"></i>0349 880 110
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden" style="background: linear-gradient(160deg, #01579B 0%, #0277BD 40%, #0288D1 70%, #039BE5 100%);">
+        <!-- Decorative circles -->
+        <div class="absolute top-20 right-10 w-64 h-64 rounded-full bg-white/5 blur-sm"></div>
+        <div class="absolute bottom-40 left-5 w-40 h-40 rounded-full bg-pool-aqua/10 blur-sm"></div>
+        <div class="absolute top-1/3 right-1/4 w-20 h-20 rounded-full bg-white/8"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 w-full">
+            <div class="max-w-3xl">
+                <!-- Swimmer icon -->
+                <div class="mb-6" data-aos="fade-down" data-aos-duration="800">
+                    <span class="swim-icon text-5xl md:text-6xl text-pool-aqua">
+                        <i class="fa-solid fa-person-swimming"></i>
+                    </span>
+                </div>
+
+                <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-5" data-aos="fade-up" data-aos-duration="900">
+                    Bazin Înot<br>
+                    <span class="text-pool-aqua">Slatina</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-white/80 font-light mb-8 max-w-xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+                    Singurul bazin acoperit din județul Olt
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-12" data-aos="fade-up" data-aos-delay="400">
+                    <a href="tel:0349880110" class="pulse-glow inline-flex items-center bg-pool-aqua hover:bg-cyan-400 text-white font-heading font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+                        <i class="fa-solid fa-calendar-check mr-3"></i>Programează-te
+                    </a>
+                    <a href="#despre" class="inline-flex items-center border-2 border-white/30 hover:border-white/60 text-white font-heading font-semibold px-8 py-4 rounded-full text-lg transition-all hover:bg-white/10">
+                        <i class="fa-solid fa-circle-info mr-3"></i>Află mai multe
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="flex flex-wrap gap-6 md:gap-10" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading font-extrabold text-white">25m</div>
+                        <div class="text-white/60 text-sm mt-1">Lungime bazin</div>
+                    </div>
+                    <div class="w-px bg-white/20 hidden sm:block"></div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading font-extrabold text-pool-aqua">5</div>
+                        <div class="text-white/60 text-sm mt-1">Culoare</div>
+                    </div>
+                    <div class="w-px bg-white/20 hidden sm:block"></div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading font-extrabold text-white">26-28°C</div>
+                        <div class="text-white/60 text-sm mt-1">Temperatura apei</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero wave bottom -->
+        <div class="absolute bottom-0 left-0 w-full" style="clip-path: polygon(0 60%, 100% 0%, 100% 100%, 0 100%);">
+            <div class="h-32 bg-white"></div>
+        </div>
+    </section>
+
+    <!-- ============ DESPRE BAZIN ============ -->
+    <section id="despre" class="py-20 md:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <!-- Text -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <span class="inline-block bg-pool-sky text-pool-deep font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-5">
+                        <i class="fa-solid fa-droplet mr-2"></i>Despre bazin
+                    </span>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-pool-dark mb-6 leading-tight">
+                        Bazin semi-olimpic de <span class="gradient-text">performanță</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Inaugurat în <strong>2014</strong>, Bazinul de Înot Slatina este singurul bazin acoperit din județul Olt, operat de <strong>CSM Slatina</strong>. Cu dimensiuni semi-olimpice de 25m x 12.5m, bazinul oferă condiții excelente atât pentru înotul recreativ, cât și pentru antrenamentele de performanță.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Dotat cu <strong>blocuri de start standard european</strong> și un sistem modern de filtrare a apei, bazinul menține temperatura constantă între <strong>26-28°C</strong>, asigurând confort maxim pe tot parcursul anului.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center bg-pool-sky/60 text-pool-deep px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fa-solid fa-check-circle mr-2 text-pool-aqua"></i>Bazin acoperit
+                        </span>
+                        <span class="inline-flex items-center bg-pool-sky/60 text-pool-deep px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fa-solid fa-check-circle mr-2 text-pool-aqua"></i>CSM Slatina
+                        </span>
+                        <span class="inline-flex items-center bg-pool-sky/60 text-pool-deep px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fa-solid fa-check-circle mr-2 text-pool-aqua"></i>Standard european
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Visual card -->
+                <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="relative bg-gradient-to-br from-pool-deep to-pool-dark rounded-3xl p-8 md:p-10 text-white shadow-2xl overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-pool-aqua/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 bg-pool-aqua/20 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-trophy text-pool-aqua text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-heading font-bold text-lg">Rating excelent</div>
+                                    <div class="text-white/60 text-sm">Bazat pe recenzii verificate</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="text-5xl font-heading font-extrabold">4.3</span>
+                                <span class="text-white/60 text-lg">/ 5</span>
+                            </div>
+
+                            <div class="flex gap-1 mb-3">
+                                <i class="fa-solid fa-star text-yellow-400"></i>
+                                <i class="fa-solid fa-star text-yellow-400"></i>
+                                <i class="fa-solid fa-star text-yellow-400"></i>
+                                <i class="fa-solid fa-star text-yellow-400"></i>
+                                <i class="fa-solid fa-star-half-stroke text-yellow-400"></i>
+                            </div>
+
+                            <p class="text-white/70 text-sm mb-6">Din <strong class="text-white">240 recenzii</strong></p>
+
+                            <div class="border-t border-white/15 pt-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-heading font-bold text-pool-aqua">2014</div>
+                                    <div class="text-white/60 text-xs mt-1">Anul inaugurării</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-heading font-bold">65</div>
+                                    <div class="text-white/60 text-xs mt-1">Capacitate persoane</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path fill="#E1F5FE" d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"></path>
+        </svg>
+    </div>
+
+    <!-- ============ FACILITĂȚI ============ -->
+    <section id="facilitati" class="py-20 md:py-28 bg-pool-sky relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-white text-pool-deep font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-5 shadow-sm">
+                    <i class="fa-solid fa-water mr-2"></i>Facilități
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-pool-dark mb-4">
+                    Specificații <span class="gradient-text">tehnice</span>
+                </h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Totul pentru o experiență de înot sigură, confortabilă și profesionistă.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Card 1 -->
+                <div class="card-lift bg-white rounded-2xl p-7 shadow-md" data-aos="fade-up" data-aos-delay="0">
+                    <div class="water-drop mb-5">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-pool-dark mb-2">25m x 12.5m</h3>
+                    <p class="text-gray-500">Dimensiuni semi-olimpice, ideale pentru antrenament și competiții locale la nivel regional.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-lift bg-white rounded-2xl p-7 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="water-drop mb-5">
+                        <i class="fa-solid fa-grip-lines-vertical"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-pool-dark mb-2">5 Culoare</h3>
+                    <p class="text-gray-500">Cinci culoare separate cu plute, permițând sesiuni simultane de antrenament și înot recreativ.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-lift bg-white rounded-2xl p-7 shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="water-drop mb-5">
+                        <i class="fa-solid fa-arrows-up-down"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-pool-dark mb-2">1.20m – 1.80m</h3>
+                    <p class="text-gray-500">Adâncime progresivă, potrivită atât pentru începători, cât și pentru înotătorii experimentați.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-lift bg-white rounded-2xl p-7 shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="water-drop mb-5">
+                        <i class="fa-solid fa-temperature-half"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-pool-dark mb-2">26 – 28°C</h3>
+                    <p class="text-gray-500">Temperatura apei menținută constant pentru confort optim în timpul înotului, tot anul.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card-lift bg-white rounded-2xl p-7 shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <div class="water-drop mb-5">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-pool-dark mb-2">65 Locuri</h3>
+                    <p class="text-gray-500">Capacitate maximă de 65 de persoane simultan, pentru siguranță și confort la fiecare sesiune.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card-lift bg-white rounded-2xl p-7 shadow-md" data-aos="fade-up" data-aos-delay="500">
+                    <div class="water-drop mb-5">
+                        <i class="fa-solid fa-flag-checkered"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-pool-dark mb-2">Blocuri de start</h3>
+                    <p class="text-gray-500">Echipate la standard european, perfecte pentru competiții și antrenament de performanță.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider wave-divider-flip" style="background: #E1F5FE;">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path fill="#ffffff" d="M0,20 C360,70 720,0 1080,50 C1260,70 1380,30 1440,20 L1440,80 L0,80 Z"></path>
+        </svg>
+    </div>
+
+    <!-- ============ PROGRAME ============ -->
+    <section id="programe" class="py-20 md:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-pool-sky text-pool-deep font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-5">
+                    <i class="fa-solid fa-person-swimming mr-2"></i>Programe
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-pool-dark mb-4">
+                    Programe de <span class="gradient-text">înot</span>
+                </h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">De la cursuri pentru începători până la antrenament competitiv — găsește programul potrivit pentru tine.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Program 1 -->
+                <div class="card-lift group bg-white border-2 border-pool-sky hover:border-pool-aqua rounded-2xl p-7 text-center transition-all" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 mx-auto mb-5 bg-gradient-to-br from-pool-aqua to-pool-deep rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-pool-dark mb-3">Cursuri înot</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Cursuri pentru toate vârstele și nivelurile, de la inițiere la perfecționare, cu instructori calificați.</p>
+                    <div class="mt-5 pt-4 border-t border-pool-sky">
+                        <span class="text-pool-deep font-semibold text-sm">
+                            <i class="fa-solid fa-circle-check mr-1 text-pool-aqua"></i>Toate vârstele
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="card-lift group bg-white border-2 border-pool-sky hover:border-pool-aqua rounded-2xl p-7 text-center transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto mb-5 bg-gradient-to-br from-pool-deep to-pool-dark rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-medal text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-pool-dark mb-3">Antrenament competitiv</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Program dedicat sportivilor de performanță, cu blocuri de start la standard european.</p>
+                    <div class="mt-5 pt-4 border-t border-pool-sky">
+                        <span class="text-pool-deep font-semibold text-sm">
+                            <i class="fa-solid fa-circle-check mr-1 text-pool-aqua"></i>Performanță
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="card-lift group bg-white border-2 border-pool-sky hover:border-pool-aqua rounded-2xl p-7 text-center transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto mb-5 bg-gradient-to-br from-cyan-400 to-pool-aqua rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart-pulse text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-pool-dark mb-3">Înot recreativ</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Sesiuni de înot liber pentru relaxare, sănătate și menținerea unei forme fizice excelente.</p>
+                    <div class="mt-5 pt-4 border-t border-pool-sky">
+                        <span class="text-pool-deep font-semibold text-sm">
+                            <i class="fa-solid fa-circle-check mr-1 text-pool-aqua"></i>Acces liber
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="card-lift group bg-white border-2 border-pool-sky hover:border-pool-aqua rounded-2xl p-7 text-center transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto mb-5 bg-gradient-to-br from-pool-aqua to-teal-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-dumbbell text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-pool-dark mb-3">Aqua fitness</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Exerciții de fitness în apă, ideale pentru tonifiere musculară și recuperare fizică.</p>
+                    <div class="mt-5 pt-4 border-t border-pool-sky">
+                        <span class="text-pool-deep font-semibold text-sm">
+                            <i class="fa-solid fa-circle-check mr-1 text-pool-aqua"></i>Tonifiere
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path fill="#01579B" d="M0,30 C180,70 360,0 540,40 C720,80 900,10 1080,50 C1260,80 1380,30 1440,20 L1440,80 L0,80 Z"></path>
+        </svg>
+    </div>
+
+    <!-- ============ ORAR & INFORMAȚII PRACTICE ============ -->
+    <section id="program-orar" class="py-20 md:py-28 relative wave-bg" style="background-color: #01579B;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-white/10 text-white font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-5">
+                    <i class="fa-solid fa-clock mr-2"></i>Informații practice
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    Orar & <span class="text-pool-aqua">Acces</span>
+                </h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">Tot ce trebuie să știi înainte de vizită.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Hours table -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <h3 class="font-heading font-bold text-xl text-white mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-days text-pool-aqua"></i>Program de funcționare
+                        </h3>
+                        <table class="w-full hours-table">
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="transition">
+                                    <td class="py-4 text-white font-medium">
+                                        <i class="fa-solid fa-briefcase mr-2 text-pool-aqua text-sm"></i>Luni
+                                    </td>
+                                    <td class="py-4 text-white/80 text-right font-semibold">08:00 – 22:00</td>
+                                </tr>
+                                <tr class="transition">
+                                    <td class="py-4 text-white font-medium">
+                                        <i class="fa-solid fa-briefcase mr-2 text-pool-aqua text-sm"></i>Marți
+                                    </td>
+                                    <td class="py-4 text-white/80 text-right font-semibold">08:00 – 22:00</td>
+                                </tr>
+                                <tr class="transition">
+                                    <td class="py-4 text-white font-medium">
+                                        <i class="fa-solid fa-briefcase mr-2 text-pool-aqua text-sm"></i>Miercuri
+                                    </td>
+                                    <td class="py-4 text-white/80 text-right font-semibold">08:00 – 22:00</td>
+                                </tr>
+                                <tr class="transition">
+                                    <td class="py-4 text-white font-medium">
+                                        <i class="fa-solid fa-briefcase mr-2 text-pool-aqua text-sm"></i>Joi
+                                    </td>
+                                    <td class="py-4 text-white/80 text-right font-semibold">08:00 – 22:00</td>
+                                </tr>
+                                <tr class="transition">
+                                    <td class="py-4 text-white font-medium">
+                                        <i class="fa-solid fa-briefcase mr-2 text-pool-aqua text-sm"></i>Vineri
+                                    </td>
+                                    <td class="py-4 text-white/80 text-right font-semibold">08:00 – 22:00</td>
+                                </tr>
+                                <tr class="transition">
+                                    <td class="py-4 text-white font-medium">
+                                        <i class="fa-solid fa-sun mr-2 text-yellow-400 text-sm"></i>Sâmbătă
+                                    </td>
+                                    <td class="py-4 text-pool-aqua text-right font-semibold">09:00 – 15:00</td>
+                                </tr>
+                                <tr class="transition">
+                                    <td class="py-4 text-white font-medium">
+                                        <i class="fa-solid fa-sun mr-2 text-yellow-400 text-sm"></i>Duminică
+                                    </td>
+                                    <td class="py-4 text-pool-aqua text-right font-semibold">09:00 – 15:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Accessibility & Payments -->
+                <div class="flex flex-col gap-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <!-- Accessibility -->
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex-1">
+                        <h3 class="font-heading font-bold text-xl text-white mb-5 flex items-center gap-3">
+                            <i class="fa-solid fa-universal-access text-pool-aqua"></i>Accesibilitate
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-pool-aqua/20 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5">
+                                    <i class="fa-solid fa-wheelchair text-pool-aqua"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1">Acces pentru persoane cu dizabilități</h4>
+                                    <p class="text-white/60 text-sm">Bazinul este complet accesibil pentru persoanele cu mobilitate redusă, cu rampe și facilități adaptate.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-pool-aqua/20 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5">
+                                    <i class="fa-solid fa-elevator text-pool-aqua"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1">Intrare accesibilă</h4>
+                                    <p class="text-white/60 text-sm">Intrare la nivel și spații amenajate corespunzător pentru toți vizitatorii.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payments -->
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex-1">
+                        <h3 class="font-heading font-bold text-xl text-white mb-5 flex items-center gap-3">
+                            <i class="fa-solid fa-credit-card text-pool-aqua"></i>Modalități de plată
+                        </h3>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-pool-aqua/20 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5">
+                                <i class="fa-solid fa-nfc-symbol text-pool-aqua"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Plăți NFC acceptate</h4>
+                                <p class="text-white/60 text-sm">Plătești rapid și simplu cu telefonul sau cardul contactless. Acceptăm și plata cu numerar.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 mt-5">
+                            <div class="bg-white/10 rounded-lg px-4 py-2 flex items-center gap-2">
+                                <i class="fa-solid fa-mobile-screen text-pool-aqua"></i>
+                                <span class="text-white/80 text-sm font-medium">NFC</span>
+                            </div>
+                            <div class="bg-white/10 rounded-lg px-4 py-2 flex items-center gap-2">
+                                <i class="fa-solid fa-credit-card text-pool-aqua"></i>
+                                <span class="text-white/80 text-sm font-medium">Card</span>
+                            </div>
+                            <div class="bg-white/10 rounded-lg px-4 py-2 flex items-center gap-2">
+                                <i class="fa-solid fa-money-bill-wave text-pool-aqua"></i>
+                                <span class="text-white/80 text-sm font-medium">Cash</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider wave-divider-flip" style="background: #01579B;">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path fill="#ffffff" d="M0,50 C300,0 600,70 900,30 C1100,10 1300,60 1440,40 L1440,80 L0,80 Z"></path>
+        </svg>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="py-20 md:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-pool-sky text-pool-deep font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-5">
+                    <i class="fa-solid fa-envelope mr-2"></i>Contact
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-pool-dark mb-4">
+                    Contactează-ne <span class="gradient-text">acum</span>
+                </h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Suntem aici să răspundem la toate întrebările tale despre bazin și programele disponibile.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Phone -->
+                <a href="tel:0349880110" class="card-lift group bg-gradient-to-br from-pool-deep to-pool-dark rounded-2xl p-8 text-center text-white no-underline shadow-xl" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 mx-auto mb-5 bg-pool-aqua/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-phone-volume text-pool-aqua text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Telefon</h3>
+                    <p class="text-white/70 text-sm mb-3">Sună pentru programări</p>
+                    <span class="text-pool-aqua font-heading font-bold text-xl">0349 880 110</span>
+                </a>
+
+                <!-- Address -->
+                <div class="card-lift bg-white border-2 border-pool-sky rounded-2xl p-8 text-center shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto mb-5 bg-pool-sky rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-location-dot text-pool-deep text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-pool-dark mb-2">Adresă</h3>
+                    <p class="text-gray-500 text-sm mb-3">Vino la bazin</p>
+                    <span class="text-pool-deep font-heading font-bold">Slatina, Olt</span>
+                </div>
+
+                <!-- Schedule -->
+                <div class="card-lift bg-white border-2 border-pool-sky rounded-2xl p-8 text-center shadow-md sm:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto mb-5 bg-pool-sky rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-clock text-pool-deep text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-pool-dark mb-2">Program</h3>
+                    <p class="text-gray-500 text-sm mb-1">L-V: 08:00 – 22:00</p>
+                    <p class="text-pool-deep font-semibold text-sm">S-D: 09:00 – 15:00</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">
+                <a href="tel:0349880110" class="pulse-glow inline-flex items-center bg-gradient-to-r from-pool-deep to-pool-aqua hover:from-pool-dark hover:to-pool-deep text-white font-heading font-bold px-10 py-5 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+                    <i class="fa-solid fa-phone mr-3"></i>Sună: 0349 880 110
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path fill="#01579B" d="M0,20 C480,80 960,0 1440,50 L1440,80 L0,80 Z"></path>
+        </svg>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="py-12 md:py-16 relative" style="background: linear-gradient(180deg, #01579B, #002f5e);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pool-aqua/20 flex items-center justify-center">
+                            <i class="fa-solid fa-water text-pool-aqua text-lg"></i>
+                        </div>
+                        <span class="font-heading font-bold text-white text-lg">Bazin Înot Slatina</span>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed">Singurul bazin acoperit din județul Olt. Bazin semi-olimpic operat de CSM Slatina, din 2014.</p>
+                </div>
+
+                <!-- Quick links -->
+                <div>
+                    <h4 class="font-heading font-bold text-white mb-4">Navigare rapidă</h4>
+                    <div class="flex flex-col gap-2">
+                        <a href="#despre" class="text-white/50 hover:text-pool-aqua transition text-sm">Despre bazin</a>
+                        <a href="#facilitati" class="text-white/50 hover:text-pool-aqua transition text-sm">Facilități</a>
+                        <a href="#programe" class="text-white/50 hover:text-pool-aqua transition text-sm">Programe</a>
+                        <a href="#program-orar" class="text-white/50 hover:text-pool-aqua transition text-sm">Orar</a>
+                        <a href="#contact" class="text-white/50 hover:text-pool-aqua transition text-sm">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Contact info -->
+                <div>
+                    <h4 class="font-heading font-bold text-white mb-4">Contact</h4>
+                    <div class="flex flex-col gap-3">
+                        <a href="tel:0349880110" class="flex items-center gap-3 text-white/50 hover:text-pool-aqua transition text-sm">
+                            <i class="fa-solid fa-phone text-pool-aqua w-4"></i>0349 880 110
+                        </a>
+                        <div class="flex items-center gap-3 text-white/50 text-sm">
+                            <i class="fa-solid fa-location-dot text-pool-aqua w-4"></i>Slatina, Județul Olt
+                        </div>
+                        <div class="flex items-center gap-3 text-white/50 text-sm">
+                            <i class="fa-solid fa-clock text-pool-aqua w-4"></i>L-V: 08:00-22:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-white/40 text-sm text-center md:text-left">
+                    &copy; 2024 Bazin Înot Slatina — CSM Slatina. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center gap-2 text-white/40 text-sm">
+                    <i class="fa-solid fa-star text-yellow-400 text-xs"></i>
+                    <span>4.3/5 din 240 recenzii</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ JSON-LD Structured Data ============ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Bazin Înot Slatina",
+        "description": "Singurul bazin acoperit din județul Olt. Bazin semi-olimpic de 25m x 12.5m, 5 culoare, operat de CSM Slatina.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Slatina",
+            "addressRegion": "Olt",
+            "addressCountry": "RO"
+        },
+        "telephone": "+40349880110",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.436127,
+            "longitude": 24.378873
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "09:00",
+                "closes": "15:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.3",
+            "bestRating": "5",
+            "ratingCount": "240"
+        },
+        "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Wheelchair Accessible", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "NFC Payments", "value": true }
+        ],
+        "url": "#"
+    }
+    </script>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Init AOS
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80
+        });
+
+        // Navbar scroll effect
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+        menuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        });
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('open') &&
+                !mobileMenu.contains(e.target) &&
+                !menuToggle.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

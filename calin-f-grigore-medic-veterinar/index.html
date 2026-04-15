@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Călin F. Grigore — Medic Veterinar | Slatina</title>
+    <meta name="description" content="Călin F. Grigore, medic veterinar în Slatina. Consultații, tratamente și îngrijire veterinară profesională. Str. Cornișei, Slatina.">
+    <meta name="keywords" content="medic veterinar Slatina, veterinar Slatina, Călin Grigore veterinar, cabinet veterinar Slatina">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        olive: '#6B8E23',
+                        'olive-dark': '#556B2F',
+                        'olive-light': '#8FBC3F',
+                        cream: '#FFFDE7',
+                        'cream-dark': '#FFF9C4',
+                        brown: '#5D4037',
+                        'brown-light': '#795548',
+                        rust: '#BF360C',
+                        'rust-light': '#E64A19',
+                    },
+                    fontFamily: {
+                        heading: ['Bitter', 'serif'],
+                        body: ['Source Sans 3', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Source Sans 3', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Bitter', serif; }
+        .rustic-bg {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(107,142,35,0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(93,64,55,0.05) 0%, transparent 50%);
+        }
+        .paw-track {
+            position: relative;
+        }
+        .paw-track::before {
+            content: '\f1b0';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            color: rgba(107,142,35,0.2);
+            font-size: 1.5rem;
+        }
+        .hero-rustic {
+            background: linear-gradient(135deg, #5D4037 0%, #4E342E 40%, #3E2723 70%, #6B8E23 100%);
+        }
+        .card-rustic {
+            border-radius: 1rem;
+            border-left: 4px solid #6B8E23;
+            transition: all 0.3s ease;
+        }
+        .card-rustic:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(93,64,55,0.15);
+        }
+        .fence-divider {
+            border-top: 3px dashed rgba(107,142,35,0.3);
+        }
+        .gentle-float {
+            animation: gentleFloat 4s ease-in-out infinite;
+        }
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(3deg); }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Călin F. Grigore — Medic Veterinar",
+        "description": "Medic veterinar în Slatina. Consultații, tratamente și îngrijire veterinară profesională.",
+        "url": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Cornișei",
+            "addressLocality": "Slatina",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.434875,
+            "longitude": 24.370143
+        }
+    }
+    </script>
+</head>
+<body class="bg-cream text-brown">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-cream/95 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-olive rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-paw text-white text-lg"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="font-heading font-bold text-brown text-sm md:text-base block">Dr. Călin F. Grigore</span>
+                        <span class="text-xs text-brown-light">Medic Veterinar</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8 font-heading font-semibold text-sm">
+                    <a href="#servicii" class="text-brown hover:text-olive transition-colors">Servicii</a>
+                    <a href="#despre" class="text-brown hover:text-olive transition-colors">Despre</a>
+                    <a href="#locatie" class="text-brown hover:text-olive transition-colors">Locație</a>
+                    <a href="#contact" class="bg-olive text-white px-5 py-2.5 rounded-lg hover:bg-olive-dark transition-colors">
+                        <i class="fa-solid fa-location-dot mr-2"></i>Vizitează-ne
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-olive text-2xl" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-cream-dark">
+            <div class="px-4 py-4 space-y-3 font-heading font-semibold text-sm">
+                <a href="#servicii" class="block py-2 text-brown hover:text-olive">Servicii</a>
+                <a href="#despre" class="block py-2 text-brown hover:text-olive">Despre</a>
+                <a href="#locatie" class="block py-2 text-brown hover:text-olive">Locație</a>
+                <a href="#contact" class="block bg-olive text-white text-center px-5 py-3 rounded-lg">
+                    <i class="fa-solid fa-location-dot mr-2"></i>Vizitează-ne
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-rustic min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 rustic-bg opacity-50"></div>
+        <div class="absolute top-20 right-10 opacity-10">
+            <i class="fa-solid fa-paw text-9xl text-white"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 bg-olive/30 text-olive-light px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Medic Veterinar — Slatina</span>
+                    </div>
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Grijă caldă pentru <span class="text-olive-light">prietenii tăi blănoși</span>
+                    </h1>
+                    <p class="text-white/70 text-lg md:text-xl mb-8 leading-relaxed font-body">
+                        Dr. Călin F. Grigore oferă servicii veterinare cu dedicare și profesionalism în Slatina. Fiecare animal primește atenția și tratamentul pe care îl merită.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-olive hover:bg-olive-light text-white font-heading font-bold px-8 py-4 rounded-lg text-center transition-all shadow-lg hover:shadow-xl">
+                            <i class="fa-solid fa-location-dot mr-2"></i>Vino la cabinet
+                        </a>
+                        <a href="#servicii" class="border-2 border-white/30 text-white font-heading font-semibold px-8 py-4 rounded-lg text-center hover:bg-white/10 transition-all">
+                            <i class="fa-solid fa-list-check mr-2"></i>Servicii oferite
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="hidden md:flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 lg:w-96 lg:h-96 bg-white/5 rounded-3xl flex items-center justify-center border-2 border-olive/30 backdrop-blur-sm">
+                            <div class="text-center">
+                                <div class="relative inline-block">
+                                    <i class="fa-solid fa-stethoscope text-7xl text-olive-light gentle-float"></i>
+                                    <i class="fa-solid fa-paw text-3xl text-white/30 absolute -bottom-2 -right-4"></i>
+                                </div>
+                                <p class="text-white/50 font-heading font-semibold mt-6 text-sm tracking-wide uppercase">Medicină cu suflet</p>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -left-4 w-16 h-16 bg-rust rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-heart-pulse text-white text-xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-olive rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-shield-dog text-white text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INFO BAR -->
+    <section class="bg-white py-8 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-12 h-12 bg-olive/10 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-location-dot text-olive text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-brown-light">Locație</p>
+                        <p class="font-heading font-bold text-brown">Str. Cornișei, Slatina</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-olive/10 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-user-doctor text-olive text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-brown-light">Specialist</p>
+                        <p class="font-heading font-bold text-brown">Dr. Călin F. Grigore</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-olive/10 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-paw text-olive text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-brown-light">Specializare</p>
+                        <p class="font-heading font-bold text-brown">Animale de companie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESPRE -->
+    <section id="despre" class="py-16 md:py-24 rustic-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-md text-center">
+                        <i class="fa-solid fa-user-doctor text-olive text-7xl mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold text-brown mb-2">Dr. Călin F. Grigore</h3>
+                        <p class="text-brown-light mb-4">Medic Veterinar — Slatina, Olt</p>
+                        <div class="fence-divider my-6"></div>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <i class="fa-solid fa-paw text-olive text-2xl mb-2"></i>
+                                <p class="font-heading font-semibold text-sm text-brown">Animale mici</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-horse text-olive text-2xl mb-2"></i>
+                                <p class="font-heading font-semibold text-sm text-brown">Animale mari</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-syringe text-olive text-2xl mb-2"></i>
+                                <p class="font-heading font-semibold text-sm text-brown">Vaccinări</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-heart-pulse text-olive text-2xl mb-2"></i>
+                                <p class="font-heading font-semibold text-sm text-brown">Urgențe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="inline-block bg-olive/10 text-olive px-4 py-2 rounded-full text-sm font-semibold mb-4">Despre doctor</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-brown mb-6">Un veterinar cu pasiune pentru animale</h2>
+                    <p class="text-brown-light text-lg mb-6 leading-relaxed">Dr. Călin F. Grigore este medic veterinar în Slatina, dedicat sănătății și bunăstării animalelor. Cu o abordare caldă și profesionistă, oferă consultații și tratamente adaptate nevoilor fiecărui pacient.</p>
+                    <p class="text-brown-light mb-8 leading-relaxed">Cabinetul din Slatina, situat pe Str. Cornișei, este un loc unde animalele primesc îngrijire de calitate, indiferent de specie sau dimensiune. Fiecare vizită este tratată cu aceeași atenție și grijă.</p>
+                    <div class="bg-rust/10 border-l-4 border-rust rounded-r-xl p-4">
+                        <p class="text-brown font-semibold"><i class="fa-solid fa-circle-info text-rust mr-2"></i>Vizitele la cabinet sunt recomandate — prezentați-vă direct la adresă.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII -->
+    <section id="servicii" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-olive/10 text-olive px-4 py-2 rounded-full text-sm font-semibold mb-4">Servicii</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brown mb-4">Ce oferim</h2>
+                <p class="text-brown-light text-lg max-w-2xl mx-auto">Servicii veterinare complete pentru sănătatea și fericirea animalelor dumneavoastră.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-rustic bg-cream p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-olive/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-stethoscope text-olive text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Consultații generale</h3>
+                    <p class="text-brown-light text-sm leading-relaxed">Examinare completă, evaluare a stării de sănătate și stabilirea unui plan de tratament adecvat.</p>
+                </div>
+                <div class="card-rustic bg-cream p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-olive/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-syringe text-olive text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Vaccinări</h3>
+                    <p class="text-brown-light text-sm leading-relaxed">Programe complete de vaccinare pentru câini, pisici și alte animale, conform protocoalelor actuale.</p>
+                </div>
+                <div class="card-rustic bg-cream p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-olive/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-bug text-olive text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Deparazitare</h3>
+                    <p class="text-brown-light text-sm leading-relaxed">Tratamente deparazitare interne și externe pentru protecția animalelor împotriva paraziților.</p>
+                </div>
+                <div class="card-rustic bg-cream p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-rust/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-scissors text-rust text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Chirurgie</h3>
+                    <p class="text-brown-light text-sm leading-relaxed">Intervenții chirurgicale de sterilizare, castrare și alte proceduri necesare pentru sănătatea animalului.</p>
+                </div>
+                <div class="card-rustic bg-cream p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-rust/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-capsules text-rust text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Tratamente medicale</h3>
+                    <p class="text-brown-light text-sm leading-relaxed">Tratamente medicamentoase, perfuzii și terapii adaptate fiecărei afecțiuni diagnosticate.</p>
+                </div>
+                <div class="card-rustic bg-cream p-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-rust/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-clipboard-check text-rust text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Eliberare documente</h3>
+                    <p class="text-brown-light text-sm leading-relaxed">Certificate de sănătate, carnete de vaccinare și alte documente veterinare oficiale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANIMALE TRATATE -->
+    <section class="py-16 md:py-24 bg-olive text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Animale pe care le tratăm</h2>
+                <p class="text-white/70 text-lg max-w-2xl mx-auto">Experiență cu o varietate de specii, de la animale de companie la animale de fermă.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fa-solid fa-dog text-4xl mb-3 text-cream"></i>
+                    <h3 class="font-heading font-bold">Câini</h3>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-cat text-4xl mb-3 text-cream"></i>
+                    <h3 class="font-heading font-bold">Pisici</h3>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-horse text-4xl mb-3 text-cream"></i>
+                    <h3 class="font-heading font-bold">Cai</h3>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-cow text-4xl mb-3 text-cream"></i>
+                    <h3 class="font-heading font-bold">Bovine</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DE CE NOI -->
+    <section class="py-16 md:py-24 rustic-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-olive/10 text-olive px-4 py-2 rounded-full text-sm font-semibold mb-4">Avantaje</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brown mb-4">De ce să alegi cabinetul nostru</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-20 h-20 bg-olive rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-hand-holding-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Abordare blândă</h3>
+                    <p class="text-brown-light text-sm">Fiecare animal este tratat cu răbdare și blândețe, reducând stresul vizitei la veterinar.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-rust rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-user-doctor text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Experiență</h3>
+                    <p class="text-brown-light text-sm">Cunoștințe solide și practică îndelungată în medicină veterinară, atât pentru animale mici, cât și mari.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-olive rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-map-location-dot text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Locație accesibilă</h3>
+                    <p class="text-brown-light text-sm">Situat pe Str. Cornișei din Slatina, ușor de găsit și cu acces direct.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-rust rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Timp dedicat</h3>
+                    <p class="text-brown-light text-sm">Fiecare consultație primește timpul necesar pentru un diagnostic corect și un tratament adecvat.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-olive rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-comments text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Comunicare deschisă</h3>
+                    <p class="text-brown-light text-sm">Explicații clare despre diagnostic, tratament și îngrijirea de acasă a animalului.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-20 h-20 bg-rust rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-seedling text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brown mb-2">Respect pentru natură</h3>
+                    <p class="text-brown-light text-sm">O abordare naturală și echilibrată, respectând bunăstarea fiecărui animal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCAȚIE -->
+    <section id="locatie" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-olive/10 text-olive px-4 py-2 rounded-full text-sm font-semibold mb-4">Locație</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brown mb-4">Unde ne găsești</h2>
+                <p class="text-brown-light text-lg">Veniți direct la cabinet pe Str. Cornișei, Slatina.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <div class="bg-cream rounded-2xl p-8 shadow-md">
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-olive/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot text-olive text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-brown mb-1">Adresă</h3>
+                                    <p class="text-brown-light">Str. Cornișei, Slatina, Olt</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-olive/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-user-doctor text-olive text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-brown mb-1">Medic</h3>
+                                    <p class="text-brown-light">Dr. Călin F. Grigore</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-rust/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-circle-info text-rust text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-brown mb-1">Informații</h3>
+                                    <p class="text-brown-light">Se recomandă vizita directă la cabinet. Prezentați-vă la adresă pentru consultații.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-olive/10 rounded-xl p-4 text-center">
+                            <p class="font-heading font-semibold text-olive"><i class="fa-solid fa-paw mr-2"></i>Vă așteptăm cu drag!</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-full min-h-[350px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d24.370143!3d44.434875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI2JzA1LjYiTiAyNMKwMjInMTIuNSJF!5e0!3m2!1sro!2sro!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Locație Cabinet Veterinar Călin F. Grigore"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contact" class="py-16 md:py-20 hero-rustic text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <i class="fa-solid fa-paw text-5xl text-olive-light mb-6"></i>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Animalul tău are nevoie de îngrijire?</h2>
+            <p class="text-white/70 text-lg mb-8">Vino la cabinetul nostru de pe Str. Cornișei din Slatina. Dr. Călin F. Grigore te așteaptă cu profesionalism și căldură.</p>
+            <a href="#locatie" class="inline-block bg-olive hover:bg-olive-light text-white font-heading font-bold px-10 py-4 rounded-lg transition-all shadow-lg text-lg">
+                <i class="fa-solid fa-map-location-dot mr-2"></i>Vezi locația pe hartă
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brown text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-olive rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-paw text-white"></i>
+                        </div>
+                        <span class="font-heading font-bold text-lg">Dr. Călin F. Grigore</span>
+                    </div>
+                    <p class="text-white/50 text-sm">Medic veterinar în Slatina. Îngrijire profesionistă pentru animalele de companie și de fermă.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Navigare</h4>
+                    <ul class="space-y-2 text-white/50 text-sm">
+                        <li><a href="#servicii" class="hover:text-olive-light transition-colors">Servicii</a></li>
+                        <li><a href="#despre" class="hover:text-olive-light transition-colors">Despre</a></li>
+                        <li><a href="#locatie" class="hover:text-olive-light transition-colors">Locație</a></li>
+                        <li><a href="#contact" class="hover:text-olive-light transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Adresă</h4>
+                    <ul class="space-y-3 text-white/50 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-olive"></i>Str. Cornișei, Slatina, Olt</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-paw text-olive"></i>Medic Veterinar</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-white/30 text-sm">
+                <p>&copy; 2026 Călin F. Grigore — Medic Veterinar. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+    </script>
+</body>
+</html>

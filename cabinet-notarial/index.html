@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabinet Notarial | Notar Public Bucure&#537;ti — &#536;os. Giurgiului, Sector 4</title>
+  <meta name="description" content="Cabinet Notarial — birou notarial &#238;n Bucure&#537;ti, Sector 4. 642 recenzii, rating 4.6/5. Autentific&#259;ri, contracte, succesiuni. Acces persoane cu dizabilit&#259;&#539;i. Tel: 031 429 5195.">
+  <meta property="og:title" content="Cabinet Notarial | Notar Public Bucure&#537;ti Sector 4">
+  <meta property="og:locale" content="ro_RO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            onyx: '#0F0F14',
+            'onyx-light': '#1A1A24',
+            'onyx-mid': '#252535',
+            pearl: '#F7F5F0',
+            'pearl-dark': '#ECE8E0',
+            bronze: '#A67C52',
+            'bronze-light': '#C49B6F',
+            'bronze-glow': '#D4B896',
+            ice: '#D1D5DB',
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body: ['Archivo', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Archivo', sans-serif; }
+    .notary-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(166,124,82,0.04) 1px, transparent 0); background-size: 32px 32px; }
+    .bronze-rule { height: 1px; background: linear-gradient(90deg, transparent 0%, #A67C52 50%, transparent 100%); }
+    .bronze-rule-left { height: 2px; background: linear-gradient(90deg, #A67C52, transparent); max-width: 60px; }
+    .nav-scroll { background: rgba(15,15,20,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .glass-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(8px); }
+    .stat-glow { text-shadow: 0 0 40px rgba(166,124,82,0.3); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Notary",
+    "name": "Cabinet Notarial",
+    "telephone": "+40314295195",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "\u0218oseaua Giurgiului 117, Ap. 225",
+      "addressLocality": "Bucure\u0219ti",
+      "postalCode": "040659",
+      "addressRegion": "Sector 4",
+      "addressCountry": "RO"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 44.390101, "longitude": 26.093126 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "642", "bestRating": "5" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "16:00" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-onyx text-pearl font-body">
+
+  <!-- NAV -->
+  <nav id="nav" class="fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-8 h-8 border border-bronze rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-stamp text-bronze text-xs"></i>
+        </div>
+        <span class="font-heading text-lg">Cabinet <span class="text-bronze">Notarial</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm text-ice/60">
+        <a href="#despre" class="hover:text-bronze transition">Despre</a>
+        <a href="#servicii" class="hover:text-bronze transition">Servicii</a>
+        <a href="#recenzii" class="hover:text-bronze transition">Recenzii</a>
+        <a href="#contact" class="hover:text-bronze transition">Contact</a>
+      </div>
+      <a href="tel:+40314295195" class="hidden md:inline-block bg-bronze text-onyx text-sm px-6 py-2.5 font-semibold hover:bg-bronze-light transition">
+        <i class="fa-solid fa-phone mr-1"></i> 031 429 5195
+      </a>
+      <button id="menuBtn" class="md:hidden text-ice/60 text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-onyx-light px-6 py-4 space-y-3 border-t border-white/5">
+      <a href="#despre" class="block text-ice/60 text-sm">Despre</a>
+      <a href="#servicii" class="block text-ice/60 text-sm">Servicii</a>
+      <a href="#recenzii" class="block text-ice/60 text-sm">Recenzii</a>
+      <a href="#contact" class="block text-ice/60 text-sm">Contact</a>
+      <a href="tel:+40314295195" class="block bg-bronze text-onyx text-center py-3 font-semibold mt-2">Sun&#259; acum</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center notary-pattern pt-20 relative overflow-hidden">
+    <div class="absolute top-1/3 right-0 w-96 h-96 bg-bronze/5 rounded-full blur-[100px]"></div>
+    <div class="max-w-6xl mx-auto px-6 py-24 relative z-10">
+      <div class="max-w-3xl" data-aos="fade-up">
+        <div class="bronze-rule-left mb-8"></div>
+        <p class="text-bronze text-xs tracking-[0.3em] uppercase font-bold mb-4">Notar Public &middot; Bucure&#537;ti, Sector 4</p>
+        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
+          Cabinet<br><span class="text-bronze italic">Notarial</span>
+        </h1>
+        <p class="text-ice/50 text-lg mb-4 max-w-xl">&#536;oseaua Giurgiului 117 — servicii notariale cu tradi&#539;ie, apreciate de sute de clien&#539;i.</p>
+
+        <!-- MEGA STATS -->
+        <div class="flex flex-wrap gap-8 my-10">
+          <div>
+            <div class="font-heading text-5xl text-bronze stat-glow">642</div>
+            <div class="text-ice/40 text-sm mt-1">recenzii Google</div>
+          </div>
+          <div>
+            <div class="font-heading text-5xl text-bronze stat-glow">4.6</div>
+            <div class="text-ice/40 text-sm mt-1">rating din 5</div>
+          </div>
+          <div>
+            <div class="font-heading text-5xl text-bronze stat-glow"><i class="fa-solid fa-wheelchair text-3xl"></i></div>
+            <div class="text-ice/40 text-sm mt-1">acces persoane cu dizabilit&#259;&#539;i</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:+40314295195" class="bg-bronze text-onyx font-semibold px-8 py-4 text-center hover:bg-bronze-light transition">
+            <i class="fa-solid fa-phone mr-2"></i> 031 429 5195
+          </a>
+          <a href="#servicii" class="border border-pearl/15 text-pearl px-8 py-4 text-center hover:border-bronze/50 transition">
+            Servicii <i class="fa-solid fa-arrow-down ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section id="despre" class="py-24 bg-onyx-light">
+    <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+      <div class="grid md:grid-cols-5 gap-12">
+        <div class="md:col-span-3">
+          <div class="bronze-rule-left mb-6"></div>
+          <h2 class="font-heading text-3xl italic mb-6">Despre birou</h2>
+          <p class="text-ice/60 leading-relaxed mb-5">
+            Cabinet Notarial func&#539;ioneaz&#259; pe &#536;oseaua Giurgiului 117, &#238;n Sectorul 4 din Bucure&#537;ti. Cu peste 642 de recenzii pe Google &#537;i un rating de 4.6 din 5, este unul dintre cele mai apreciate birouri notariale din Capital&#259;.
+          </p>
+          <p class="text-ice/60 leading-relaxed mb-5">
+            Echipa noastr&#259; ofer&#259; o gam&#259; complet&#259; de servicii notariale, de la autentificarea contractelor p&#226;n&#259; la proceduri succesorale complexe. Fiecare client beneficiaz&#259; de explica&#539;ii clare, seriozitate &#537;i promptitudine.
+          </p>
+          <p class="text-ice/60 leading-relaxed">
+            Biroul dispune de acces pentru persoane cu dizabilit&#259;&#539;i &#537;i func&#539;ioneaz&#259; de luni p&#226;n&#259; vineri, &#238;ntre orele 9:00 &#537;i 16:00.
+          </p>
+        </div>
+        <div class="md:col-span-2 space-y-4">
+          <div class="glass-card rounded-lg p-6 text-center">
+            <div class="font-heading text-3xl text-bronze mb-1">642</div>
+            <p class="text-ice/40 text-sm">Recenzii pe Google</p>
+          </div>
+          <div class="glass-card rounded-lg p-6 text-center">
+            <div class="font-heading text-3xl text-bronze mb-1">4.6/5</div>
+            <p class="text-ice/40 text-sm">Rating general</p>
+          </div>
+          <div class="glass-card rounded-lg p-6 text-center">
+            <div class="font-heading text-3xl text-bronze mb-1">Sector 4</div>
+            <p class="text-ice/40 text-sm">&#536;os. Giurgiului 117</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="py-24 bg-onyx notary-pattern">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="bronze-rule mb-8"></div>
+        <h2 class="font-heading text-3xl md:text-4xl italic">Servicii notariale</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div data-aos="fade-up" data-aos-delay="0" class="glass-card rounded-lg p-7 hover:border-bronze/20 transition">
+          <i class="fa-solid fa-file-signature text-bronze text-2xl mb-5"></i>
+          <h3 class="font-heading text-lg mb-2">Autentific&#259;ri</h3>
+          <p class="text-ice/50 text-sm leading-relaxed">Autentificarea contractelor de v&#226;nzare-cump&#259;rare, dona&#539;ii, procuri, declara&#539;ii &#537;i alte acte juridice.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="80" class="glass-card rounded-lg p-7 hover:border-bronze/20 transition">
+          <i class="fa-solid fa-house text-bronze text-2xl mb-5"></i>
+          <h3 class="font-heading text-lg mb-2">Tranzac&#539;ii imobiliare</h3>
+          <p class="text-ice/50 text-sm leading-relaxed">V&#226;nzare, cump&#259;rare, dona&#539;ie, schimb — verificare complet&#259; a documenta&#539;iei &#537;i a situa&#539;iei juridice.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="160" class="glass-card rounded-lg p-7 hover:border-bronze/20 transition">
+          <i class="fa-solid fa-landmark text-bronze text-2xl mb-5"></i>
+          <h3 class="font-heading text-lg mb-2">Succesiuni</h3>
+          <p class="text-ice/50 text-sm leading-relaxed">Dezb&#259;terea mo&#537;tenirilor, certificate de mo&#537;tenitor, partaj succesoral, ie&#537;ire din indiviziune.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="240" class="glass-card rounded-lg p-7 hover:border-bronze/20 transition">
+          <i class="fa-solid fa-file-contract text-bronze text-2xl mb-5"></i>
+          <h3 class="font-heading text-lg mb-2">Contracte</h3>
+          <p class="text-ice/50 text-sm leading-relaxed">Redactare &#537;i autentificare: &#238;mprumut, &#238;ntre&#539;inere, rent&#259; viager&#259;, partaj voluntar, cesiuni.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="320" class="glass-card rounded-lg p-7 hover:border-bronze/20 transition">
+          <i class="fa-solid fa-certificate text-bronze text-2xl mb-5"></i>
+          <h3 class="font-heading text-lg mb-2">Legalizare</h3>
+          <p class="text-ice/50 text-sm leading-relaxed">Legalizare semn&#259;turi, copii conforme, apostile &#537;i supralegaliz&#259;ri pentru documente interna&#539;ionale.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" class="glass-card rounded-lg p-7 hover:border-bronze/20 transition">
+          <i class="fa-solid fa-comments text-bronze text-2xl mb-5"></i>
+          <h3 class="font-heading text-lg mb-2">Consultan&#539;&#259;</h3>
+          <p class="text-ice/50 text-sm leading-relaxed">&#206;ndrumare notarial&#259; personalizat&#259; &#238;nainte de orice act, pentru claritate &#537;i siguran&#539;&#259; juridic&#259;.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENZII -->
+  <section id="recenzii" class="py-24 bg-pearl text-onyx">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="font-heading text-3xl md:text-4xl italic mb-4">Ce spun clien&#539;ii</h2>
+        <div class="flex items-center justify-center gap-2 text-bronze mb-2">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="text-onyx/40 text-sm">4.6/5 din 642 recenzii — unul dintre cele mai bine cotate birouri din Bucure&#537;ti</p>
+      </div>
+      <div class="space-y-6">
+        <div data-aos="fade-up" class="bg-white rounded-xl p-7 shadow-sm border-l-4 border-bronze">
+          <div class="flex gap-1 text-bronze text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-onyx/70 italic leading-relaxed mb-3">&laquo;V&#259; recomand s&#259; veni&#539;i aici cu &#238;ncredere, sunt serio&#537;i, promp&#539;i, profesioni&#537;ti. Lucrez cu doamnele de aici de ani de zile, tot felul de spe&#539;e &#537;i totul a mers mereu f&#259;r&#259; niciun fel de probleme.&raquo;</p>
+          <p class="text-bronze font-medium text-sm">Simona Iliescu</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-xl p-7 shadow-sm border-l-4 border-bronze">
+          <div class="flex gap-1 text-bronze text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-onyx/70 italic leading-relaxed mb-3">&laquo;O recomand pe Cristina Mihalache de la ei. &#206;n&#539;elege problemele, &#238;&#539;i explic&#259; pe &#238;n&#539;elesul t&#259;u pa&#537;ii, face totul clar &#537;i facil pentru client &#537;i e foarte nice.&raquo;</p>
+          <p class="text-bronze font-medium text-sm">Gabriel Amzulescu</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-xl p-7 shadow-sm border-l-4 border-bronze">
+          <div class="flex gap-1 text-bronze text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-onyx/70 italic leading-relaxed mb-3">&laquo;Best in town! Staff was very pleasant and professional, unlike other places.&raquo;</p>
+          <p class="text-bronze font-medium text-sm">Ramona Saleh</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-xl p-7 shadow-sm border-l-4 border-bronze">
+          <div class="flex gap-1 text-bronze text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-onyx/70 italic leading-relaxed mb-3">&laquo;Professional and quick services. Decent prices.&raquo;</p>
+          <p class="text-bronze font-medium text-sm">Floralia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="py-20 bg-onyx-light">
+    <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="bronze-rule-left mb-6"></div>
+          <h2 class="font-heading text-3xl italic mb-6">Program</h2>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between py-3 border-b border-white/5"><span class="text-ice/50">Luni — Vineri</span><span class="text-bronze font-medium">09:00 — 16:00</span></div>
+            <div class="flex justify-between py-3 border-b border-white/5"><span class="text-ice/50">S&#226;mb&#259;t&#259;</span><span class="text-ice/30">&#206;nchis</span></div>
+            <div class="flex justify-between py-3"><span class="text-ice/50">Duminic&#259;</span><span class="text-ice/30">&#206;nchis</span></div>
+          </div>
+          <div class="flex items-center gap-2 mt-6 text-xs text-ice/40">
+            <i class="fa-solid fa-wheelchair text-bronze"></i> Acces pentru persoane cu dizabilit&#259;&#539;i
+          </div>
+        </div>
+        <div class="glass-card rounded-lg p-8">
+          <i class="fa-solid fa-map-location-dot text-bronze text-2xl mb-4"></i>
+          <h3 class="font-heading text-lg mb-3">Loca&#539;ie</h3>
+          <p class="text-ice/60 text-sm mb-1">&#536;oseaua Giurgiului 117, Ap. 225</p>
+          <p class="text-ice/60 text-sm mb-4">Sector 4, Bucure&#537;ti</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=44.390101,26.093126" target="_blank" class="inline-flex items-center gap-2 text-bronze text-sm hover:text-bronze-light transition">
+            <i class="fa-solid fa-external-link"></i> Deschide &#238;n Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-bronze">
+    <div class="max-w-4xl mx-auto px-6 text-center" data-aos="zoom-in">
+      <h2 class="font-heading text-3xl italic text-onyx mb-4">Suna&#539;i pentru programare</h2>
+      <p class="text-onyx/60 mb-8">642 de clien&#539;i au ales deja acest birou. Suna&#539;i acum.</p>
+      <a href="tel:+40314295195" class="inline-flex items-center gap-3 bg-onyx text-pearl font-semibold text-lg px-10 py-4 hover:bg-onyx-light transition">
+        <i class="fa-solid fa-phone"></i> 031 429 5195
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-onyx notary-pattern">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-5" data-aos="fade-up">
+        <a href="tel:+40314295195" class="glass-card rounded-lg p-7 text-center hover:border-bronze/30 transition">
+          <div class="w-14 h-14 bg-bronze/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-phone text-bronze text-xl"></i>
+          </div>
+          <p class="font-heading font-bold mb-1">Telefon</p>
+          <p class="text-bronze font-medium">031 429 5195</p>
+        </a>
+        <div class="glass-card rounded-lg p-7 text-center">
+          <div class="w-14 h-14 bg-bronze/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-location-dot text-bronze text-xl"></i>
+          </div>
+          <p class="font-heading font-bold mb-1">Adres&#259;</p>
+          <p class="text-ice/60 text-sm">&#536;os. Giurgiului 117</p>
+          <p class="text-ice/60 text-sm">Ap. 225, Sector 4</p>
+        </div>
+        <div class="glass-card rounded-lg p-7 text-center">
+          <div class="w-14 h-14 bg-bronze/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-clock text-bronze text-xl"></i>
+          </div>
+          <p class="font-heading font-bold mb-1">Program</p>
+          <p class="text-ice/60 text-sm">Luni — Vineri</p>
+          <p class="text-bronze text-sm font-medium">09:00 — 16:00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-onyx-light border-t border-white/5 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 border border-bronze rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-stamp text-bronze text-[8px]"></i>
+        </div>
+        <span class="font-heading text-sm">Cabinet <span class="text-bronze">Notarial</span></span>
+      </div>
+      <div class="text-ice/30 text-sm text-center">
+        &#536;os. Giurgiului 117, Sector 4, Bucure&#537;ti &middot;
+        <a href="tel:+40314295195" class="text-bronze hover:underline">031 429 5195</a>
+      </div>
+      <span class="text-ice/15 text-xs">&copy; 2026 Cabinet Notarial</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY -->
+  <div class="fixed bottom-0 left-0 right-0 md:hidden bg-onyx/95 backdrop-blur border-t border-bronze/20 p-3 z-50">
+    <a href="tel:+40314295195" class="flex items-center justify-center gap-2 bg-bronze text-onyx font-semibold py-3 w-full">
+      <i class="fa-solid fa-phone"></i> 031 429 5195
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 80 });
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav-scroll', window.scrollY > 40), { passive: true });
+    const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+    mb.addEventListener('click', () => { mm.classList.toggle('hidden'); mb.innerHTML = mm.classList.contains('hidden') ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>'; });
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); mb.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+  </script>
+</body>
+</html>
