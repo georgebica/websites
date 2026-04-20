@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Auto Mobil 24/7 &middot; Diagnoz&#259; la domiciliu &icirc;n Bucure&#537;ti</title>
+<meta name="description" content="Service auto mobil 24/7 &icirc;n Bucure&#537;ti: diagnoz&#259; la domiciliu cu tester, golire rezervor, repara&#539;ii alternatoare &#537;i electromotoare. Telefon 0734 364 071.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { volt: '#1E6BFF', voltd: '#1551C7', amber: '#FFB100', ink: '#0E1320', inkd: '#060810', cream: '#F7F9FC', paper: '#FFFFFF', muted: '#6B7380', line: '#DFE4EC', wa: '#25D366' },
+  fontFamily: { display: ['"Readex Pro"', 'system-ui', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+}}}
+</script>
+
+<style>
+  html, body { background: #F7F9FC; color: #0E1320; }
+  body { font-family: Inter, system-ui, sans-serif; }
+  .display { font-family: "Readex Pro", system-ui, sans-serif; font-weight: 700; letter-spacing: -.015em; line-height: 1.02; }
+
+  .btn-volt { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #1E6BFF; color: #fff; font-weight: 600; border-radius: 10px; box-shadow: 0 14px 32px -14px rgba(30,107,255,.6); transition: all .25s; }
+  .btn-volt:hover { background: #1551C7; transform: translateY(-2px); }
+  .btn-ink { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #0E1320; color: #F7F9FC; font-weight: 600; border-radius: 10px; transition: all .25s; }
+  .btn-ink:hover { background: #1E6BFF; }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; font-weight: 600; border-radius: 10px; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip { display: inline-flex; align-items: center; gap: .45rem; padding: .4rem 1rem; background: rgba(30,107,255,.12); color: #1E6BFF; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; }
+  .chip-amber { background: rgba(255,177,0,.15); color: #B07800; }
+
+  .card { background: #fff; border: 1px solid #DFE4EC; border-radius: 16px; padding: 1.8rem; transition: all .35s; }
+  .card:hover { border-color: #1E6BFF; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(14,19,32,.25); }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Readex Pro", sans-serif; font-weight: 600; font-size: 1.6rem; border-bottom: 1px solid #DFE4EC; }
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dashed rgba(14,19,32,.15); font-size: .95rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.active-247 { color: #1E6BFF; font-weight: 600; }
+
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+  .pulse { animation: pulse 1.5s ease-in-out infinite; }
+
+  .radar-bg {
+    background:
+      radial-gradient(circle at 50% 50%, rgba(30,107,255,.15) 0, transparent 30%),
+      radial-gradient(circle at 50% 50%, transparent 29%, rgba(30,107,255,.3) 30%, transparent 31%),
+      radial-gradient(circle at 50% 50%, transparent 49%, rgba(30,107,255,.2) 50%, transparent 51%),
+      radial-gradient(circle at 50% 50%, transparent 69%, rgba(30,107,255,.1) 70%, transparent 71%);
+  }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-paper border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-xl bg-volt text-white flex items-center justify-center"><i class="fa-solid fa-truck-medical"></i></span>
+      <div class="leading-tight">
+        <p class="display text-base">Service Auto Mobil</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-volt inline-block pulse mr-1"></span> 24/7 &middot; Bucure&#537;ti</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[12px] font-semibold text-ink/80">
+      <a href="#despre" class="hover:text-volt">Despre</a>
+      <a href="#servicii" class="hover:text-volt">Servicii</a>
+      <a href="#acoperire" class="hover:text-volt">Acoperire</a>
+      <a href="#recenzii" class="hover:text-volt">Recenzii</a>
+      <a href="tel:0734364071" class="btn-volt !py-2.5 !px-4 !text-xs"><i class="fa-solid fa-phone"></i> 0734 364 071</a>
+    </nav>
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-xl bg-volt text-white flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-lg">Service Auto Mobil 24/7</span>
+    <button id="menu-close" class="w-11 h-11 rounded-xl bg-volt text-white flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre" class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#acoperire" class="mobile-link">Acoperire</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0734364071" class="btn-volt">Sun&#259;</a>
+    <a href="https://wa.me/40734364071" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-12 sm:py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex items-center gap-3">
+        <span class="chip"><span class="w-2 h-2 rounded-full bg-volt pulse"></span> Non-stop &middot; 24/7</span>
+        <span class="chip chip-amber"><i class="fa-solid fa-truck"></i> Venim la tine</span>
+      </div>
+      <h1 class="display mt-6 text-5xl sm:text-6xl lg:text-7xl">
+        Ma&#537;ina s-a stricat &icirc;n drum?<br>
+        <span class="text-volt">Venim cu service-ul la tine.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Diagnoz&#259; auto la domiciliu, golire rezervor, repara&#539;ii alternatoare &#537;i electromotoare. Bucure&#537;ti &#537;i &icirc;mprejurimi, 24 de ore din 24. Nu tractezi, nu plimbi ma&#537;ina prin ora&#537; &mdash; noi venim, diagnostic&#259;m pe loc, reparatam sau &icirc;&#539;i spunem exact ce ai.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0734364071" class="btn-volt"><i class="fa-solid fa-phone"></i> Urgen&#539;&#259; 0734 364 071</a>
+        <a href="https://wa.me/40734364071" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5 relative" data-aos="fade-up" data-aos-delay="120">
+      <div class="bg-ink text-cream p-7 rounded-3xl radar-bg">
+        <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-amber pulse"></span><p class="text-[10px] uppercase tracking-widest text-amber">De ce service mobil?</p></div>
+        <h3 class="display text-2xl mt-4">4 situa&#539;ii frecvente:</h3>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li class="flex gap-3"><i class="fa-solid fa-battery-empty text-amber mt-1"></i><span><strong>Nu porne&#537;te.</strong> Diagnoz&#259; pe loc &mdash; baterie, demaror, alternator sau electronic&#259;.</span></li>
+          <li class="flex gap-3"><i class="fa-solid fa-gas-pump text-amber mt-1"></i><span><strong>Motorin&#259; &icirc;n benzin&#259; sau invers.</strong> Golim rezervorul, cur&#259;&#539;&#259;m &#537;i punem combustibil bun.</span></li>
+          <li class="flex gap-3"><i class="fa-solid fa-triangle-exclamation text-amber mt-1"></i><span><strong>Becuri de eroare aprinse.</strong> Citim codurile cu tester &#537;i &icirc;&#539;i spunem clar ce ai.</span></li>
+          <li class="flex gap-3"><i class="fa-solid fa-bolt text-amber mt-1"></i><span><strong>Electric &#537;i electronic&#259;.</strong> Alternatoare, electromotoare, senzori &mdash; repara&#539;ii mobile sau &icirc;n atelier.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-paper border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">01 &middot; Despre</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">Meseria&#537;i <span class="text-volt">cu aparatele &icirc;n ma&#537;in&#259;.</span></h2>
+    </div>
+    <div class="lg:col-span-7 space-y-5">
+      <p class="text-lg text-ink/85 leading-relaxed">Suntem un service auto mobil din Bucure&#537;ti care vine la tine cu tester, unelte &#537;i piese de baz&#259; &icirc;n ma&#537;in&#259;. Dac&#259; repara&#539;ia se face pe loc, o facem pe loc. Dac&#259; trebuie atelier, &icirc;&#539;i organiz&#259;m tractarea.</p>
+      <p class="text-base text-muted leading-relaxed">Specializa&#539;i pe diagnoz&#259; cu tester, golire rezervor cu combustibil gre&#537;it, repara&#539;ii alternatoare &#537;i electromotoare. Non-stop &mdash; sun&#259;-ne la 2 diminea&#539;a dac&#259; ai r&#259;mas pe drum. R&#259;spundem.</p>
+      <div class="mt-6 grid sm:grid-cols-2 gap-4">
+        <div class="card !p-5"><i class="fa-regular fa-clock text-volt text-xl"></i><p class="display text-lg mt-2">24/7</p><p class="text-sm text-muted">Inclusiv weekend &#537;i s&#259;rb&#259;tori.</p></div>
+        <div class="card !p-5"><i class="fa-solid fa-location-arrow text-volt text-xl"></i><p class="display text-lg mt-2">La tine</p><p class="text-sm text-muted">Ne deplas&#259;m &icirc;n tot Bucure&#537;tiul &#537;i Ilfov.</p></div>
+        <div class="card !p-5"><i class="fa-solid fa-gauge-simple-high text-volt text-xl"></i><p class="display text-lg mt-2">Tester OBD</p><p class="text-sm text-muted">Citire coduri &#537;i diagnoz&#259; rapid&#259;.</p></div>
+        <div class="card !p-5"><i class="fa-solid fa-credit-card text-volt text-xl"></i><p class="display text-lg mt-2">Card / NFC</p><p class="text-sm text-muted">Pl&#259;&#539;i moderne acceptate.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">02 &middot; Servicii</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">Tot ce rezolv&#259;m <span class="text-volt">pe loc.</span></h2>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><i class="fa-solid fa-gauge text-volt text-2xl"></i><h3 class="display text-xl mt-3">Diagnoz&#259; cu tester</h3><p class="mt-2 text-sm text-muted">OBD, citire coduri eroare motor, cutie, ABS, airbag. Spunem clar ce are.</p></article>
+      <article class="card"><i class="fa-solid fa-gas-pump text-volt text-2xl"></i><h3 class="display text-xl mt-3">Golire rezervor</h3><p class="mt-2 text-sm text-muted">Combustibil gre&#537;it (motorin&#259; / benzin&#259;). Golire, cur&#259;&#539;are &#537;i re&icirc;nc&#259;rcare corect&#259;.</p></article>
+      <article class="card"><i class="fa-solid fa-bolt text-volt text-2xl"></i><h3 class="display text-xl mt-3">Alternator &amp; electromotor</h3><p class="mt-2 text-sm text-muted">Repara&#539;ii, &icirc;nlocuire perii, rectificare colector, teste sub sarcin&#259;.</p></article>
+      <article class="card"><i class="fa-solid fa-car-battery text-volt text-2xl"></i><h3 class="display text-xl mt-3">Baterie &amp; &icirc;nc&#259;rcare</h3><p class="mt-2 text-sm text-muted">Test tensiune, &icirc;nlocuire baterie, porniri pentru ma&#537;ini r&#259;mase pe drum.</p></article>
+      <article class="card"><i class="fa-solid fa-oil-can text-volt text-2xl"></i><h3 class="display text-xl mt-3">Schimb ulei &amp; filtre</h3><p class="mt-2 text-sm text-muted">Service de &icirc;ntre&#539;inere la tine acas&#259; sau la locul de munc&#259;.</p></article>
+      <article class="card"><i class="fa-solid fa-screwdriver-wrench text-volt text-2xl"></i><h3 class="display text-xl mt-3">Repara&#539;ii electrice</h3><p class="mt-2 text-sm text-muted">Probleme de curent, senzori, instala&#539;ii auto complete.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="acoperire" class="py-16 sm:py-24 bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip !bg-volt/20 !text-volt">03 &middot; Acoperire</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">&Icirc;n tot <span class="text-volt">Bucure&#537;tiul</span>, oric&#226;nd.</h2>
+    </div>
+    <div class="lg:col-span-7 grid grid-cols-2 gap-3 text-sm">
+      <div class="border border-white/15 p-4 rounded-xl"><i class="fa-solid fa-map-pin text-volt"></i> Sector 1 &amp; 2</div>
+      <div class="border border-white/15 p-4 rounded-xl"><i class="fa-solid fa-map-pin text-volt"></i> Sector 3 &amp; 4</div>
+      <div class="border border-white/15 p-4 rounded-xl"><i class="fa-solid fa-map-pin text-volt"></i> Sector 5 &amp; 6</div>
+      <div class="border border-white/15 p-4 rounded-xl"><i class="fa-solid fa-map-pin text-volt"></i> Ilfov &amp; &icirc;mprejurimi</div>
+      <div class="border border-white/15 p-4 rounded-xl col-span-2"><i class="fa-solid fa-road text-amber"></i> Pe autostrad&#259; &#537;i drumuri de centur&#259; &mdash; suna&#539;i pentru confirmare</div>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">04 &middot; Recenzii clien&#539;i</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">Ce spun <span class="text-volt">&#537;oferii.</span></h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-5">
+      <article class="card"><div class="flex text-volt"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mt-3 text-sm italic">&bdquo;Super ok.&rdquo;</p><p class="display text-sm mt-4 text-volt">&mdash; Adrian Dragut</p></article>
+      <article class="card"><div class="flex text-volt"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mt-3 text-sm italic">&bdquo;Efficient team.&rdquo;</p><p class="display text-sm mt-4 text-volt">&mdash; Mohamed Osman</p></article>
+      <article class="card"><div class="flex text-volt"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mt-3 text-sm italic">&bdquo;Service multimarca deservit de profesioni&#537;ti. Dl. Mihai prompt &#537;i operativ. Recomand cu &icirc;ncredere!&rdquo;</p><p class="display text-sm mt-4 text-volt">&mdash; Razvan Cimpoca</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-paper border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-7">
+      <span class="chip"><span class="w-2 h-2 rounded-full bg-volt pulse"></span> 05 &middot; Contact urgent</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        E&#537;ti pe drum?<br><span class="text-volt">Sun&#259; acum.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Pentru cazuri urgente (ma&#537;ina nu porne&#537;te, combustibil gre&#537;it, bloca&#539;i pe drum), sun&#259; &#537;i spunem &icirc;n c&#226;t ajungem.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0734364071" class="btn-volt"><i class="fa-solid fa-phone"></i> 0734 364 071</a>
+        <a href="https://wa.me/40734364071" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="card">
+        <p class="chip">Sediu</p>
+        <p class="display text-xl mt-3">Strada Verigiei</p>
+        <p class="text-sm text-muted">Sector 3, Bucure&#537;ti 050322</p>
+        <div class="mt-6 h-px bg-line"></div>
+        <ul id="hours" class="mt-5 text-xs">
+          <li data-day="1" class="hours-row active-247"><span>Luni</span><span>24 ore</span></li>
+          <li data-day="2" class="hours-row active-247"><span>Mar&#539;i</span><span>24 ore</span></li>
+          <li data-day="3" class="hours-row active-247"><span>Miercuri</span><span>24 ore</span></li>
+          <li data-day="4" class="hours-row active-247"><span>Joi</span><span>24 ore</span></li>
+          <li data-day="5" class="hours-row active-247"><span>Vineri</span><span>24 ore</span></li>
+          <li data-day="6" class="hours-row active-247"><span>S&#226;mb&#259;t&#259;</span><span>24 ore</span></li>
+          <li data-day="0" class="hours-row active-247"><span>Duminic&#259;</span><span>24 ore</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-inkd text-cream/65 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-volt text-white flex items-center justify-center"><i class="fa-solid fa-truck-medical"></i></span><span class="display text-lg text-cream">Service Auto Mobil</span></div>
+      <p class="mt-3 text-sm">Diagnoz&#259; auto la domiciliu, service mobil 24/7 &icirc;n Bucure&#537;ti. Venim la tine.</p>
+    </div>
+    <div>
+      <p class="display text-sm text-volt">Servicii</p>
+      <ul class="mt-3 space-y-1.5 text-sm"><li>Diagnoz&#259; cu tester</li><li>Golire rezervor</li><li>Alternator &amp; electromotor</li><li>Baterie &amp; porniri</li></ul>
+    </div>
+    <div>
+      <p class="display text-sm text-volt">Contact</p>
+      <ul class="mt-3 space-y-1.5 text-sm">
+        <li><i class="fa-solid fa-phone text-volt mr-2"></i>0734 364 071</li>
+        <li><i class="fa-brands fa-whatsapp text-volt mr-2"></i>wa.me/40734364071</li>
+        <li><i class="fa-solid fa-location-dot text-volt mr-2"></i>Sector 3, Bucure&#537;ti</li>
+        <li><i class="fa-regular fa-clock text-volt mr-2"></i>Non-stop</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-widest">
+    <span>&copy; 2026 Service Auto Mobil</span>
+    <span>Bucure&#537;ti &middot; Ilfov</span>
+    <span>24/7 &middot; La domiciliu</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0734364071" class="py-4 bg-volt text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40734364071" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Service Auto Mobil 24/7","telephone":"+40734364071","address":{"@type":"PostalAddress","streetAddress":"Strada Verigiei","addressLocality":"Bucuresti","addressRegion":"Sector 3","postalCode":"050322","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":44.4267674,"longitude":26.1025384},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}],"areaServed":["Bucuresti","Ilfov"]}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+  const menu = document.getElementById('menu'), openBtn = document.getElementById('menu-open'), closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+</body></html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LukStyleAuto Craiova | Polish Faruri, Triple Film &amp; PPF Protec&#539;ie</title>
+<meta name="description" content="LukStyleAuto Craiova &ndash; polish faruri, aplicare folie triple &#537;i PPF auto. Protec&#539;ie &#238;mpotriva UV, pietri&#537;ului &#537;i zg&#226;rieturilor. Str. General Magheru 46. Suna&#539;i 0720 403 330.">
+<meta name="keywords" content="polish faruri Craiova, PPF Craiova, folie protec&#539;ie auto, triple faruri, LukStyleAuto, detailing film Craiova">
+<meta name="robots" content="index, follow">
+<meta name="author" content="LukStyleAuto">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LukStyleAuto &middot; Polish Faruri &amp; PPF Craiova">
+<meta property="og:description" content="Polish faruri &#537;i aplicare folie de protec&#539;ie PPF pentru ma&#537;ina dvs. &#238;n Craiova.">
+<meta property="og:locale" content="ro_RO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LukStyleAuto Craiova">
+<meta name="twitter:description" content="Polish faruri &amp; PPF. Craiova, 0720 403 330.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['Barlow Condensed', 'sans-serif'],
+        'body': ['Rubik', 'sans-serif']
+      },
+      colors: {
+        'matte-lsa': '#0E0F12',
+        'matte-coal': '#1A1C20',
+        'matte-ash': '#2D3036',
+        'fluo-lsa': '#B8F245',
+        'fluo-dim': '#8ACD25',
+        'silver-lsa': '#B8BDC5',
+        'steel-lsa': '#4A4F5A',
+        'cream-lsa': '#F2EFE6',
+        'white-lsa': '#F8F7F3'
+      }
+    }
+  }
+}
+</script>
+<style>
+  body{font-family:'Rubik',sans-serif;background:#0E0F12;color:#F8F7F3}
+  h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:0.02em;text-transform:uppercase}
+  .noise-bg{background-color:#0E0F12;background-image:
+    repeating-linear-gradient(0deg,transparent 0px,transparent 40px,rgba(184,242,69,0.02) 40px,rgba(184,242,69,0.02) 41px),
+    repeating-linear-gradient(90deg,transparent 0px,transparent 40px,rgba(184,242,69,0.02) 40px,rgba(184,242,69,0.02) 41px)}
+  .carbon-bg{background-color:#1A1C20;background-image:
+    linear-gradient(27deg,#1A1C20 5px,transparent 5px),
+    linear-gradient(207deg,#1A1C20 5px,transparent 5px),
+    linear-gradient(-27deg,#2D3036 5px,transparent 5px),
+    linear-gradient(-207deg,#2D3036 5px,transparent 5px);
+    background-size:10px 10px}
+  .card-lsa{background:#1A1C20;border:1px solid #2D3036;transition:all .25s}
+  .card-lsa:hover{border-color:#B8F245;transform:translateY(-3px);box-shadow:0 0 40px rgba(184,242,69,0.15)}
+  .btn-fluo{background:#B8F245;color:#0E0F12;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;transition:all .2s}
+  .btn-fluo:hover{background:#8ACD25;box-shadow:0 0 30px rgba(184,242,69,0.4)}
+  .btn-ghost-lsa{border:1px solid #B8F245;color:#B8F245;font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;transition:all .2s}
+  .btn-ghost-lsa:hover{background:#B8F245;color:#0E0F12}
+  .chip-fluo{display:inline-block;background:#B8F245;color:#0E0F12;padding:.3rem .8rem;font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700}
+  .chip-outline-lsa{display:inline-block;border:1px solid #B8F245;color:#B8F245;padding:.3rem .8rem;font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700}
+  .big-title{font-size:clamp(3.5rem,10vw,8rem);font-weight:900;line-height:.85;letter-spacing:-.02em}
+  .num-lsa{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(3rem,6vw,5rem);line-height:1;color:#B8F245}
+  .hex-ring{width:80px;height:80px;background:#B8F245;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);display:flex;align-items:center;justify-content:center}
+  .ppf-layer{position:relative;background:linear-gradient(135deg,rgba(184,242,69,0.15),transparent);border:1px solid rgba(184,242,69,0.3);padding:2rem}
+  .divider-fluo{height:2px;background:linear-gradient(90deg,#B8F245,transparent);width:80px}
+  .beam-line{position:absolute;width:2px;background:linear-gradient(180deg,transparent,#B8F245,transparent);height:100px}
+  @media (max-width:768px){.pb-safe{padding-bottom:5rem}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRepair",
+  "name":"LukStyleAuto",
+  "description":"Servicii specializate de polish faruri, aplicare folie triple &#537;i PPF (paint protection film) &#238;n Craiova.",
+  "telephone":"+40720403330",
+  "address":{"@type":"PostalAddress","streetAddress":"Strada General Magheru 46","addressLocality":"Craiova","postalCode":"200539","addressCountry":"RO"},
+  "geo":{"@type":"GeoCoordinates","latitude":44.308504,"longitude":23.814194},
+  "priceRange":"$$",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"22"}
+}
+</script>
+</head>
+<body class="pb-safe">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-matte-lsa/90 backdrop-blur border-b border-fluo-lsa/20">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="hex-ring" style="width:42px;height:42px">
+        <span class="font-display font-black text-matte-lsa text-xl">L</span>
+      </div>
+      <div>
+        <div class="font-display font-bold text-white-lsa text-xl leading-none">LUK<span class="text-fluo-lsa">STYLE</span>AUTO</div>
+        <div class="text-[.65rem] tracking-[.3em] text-silver-lsa mt-1">POLISH FARURI &middot; TRIPLE &middot; PPF</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
+      <a href="#servicii" class="hover:text-fluo-lsa">Servicii</a>
+      <a href="#ppf" class="hover:text-fluo-lsa">PPF</a>
+      <a href="#faruri" class="hover:text-fluo-lsa">Faruri</a>
+      <a href="#pret" class="hover:text-fluo-lsa">Tarife</a>
+      <a href="#contact" class="hover:text-fluo-lsa">Contact</a>
+    </nav>
+    <a href="tel:0720403330" class="btn-fluo px-5 py-2.5 hidden sm:inline-flex items-center">
+      <i class="fa-solid fa-phone mr-2"></i>0720 403 330
+    </a>
+  </div>
+</header>
+
+<section class="noise-bg pt-36 pb-24 px-6 relative overflow-hidden">
+  <div class="beam-line" style="top:120px;left:10%"></div>
+  <div class="beam-line" style="top:300px;right:15%;height:150px"></div>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center relative">
+    <div class="md:col-span-7" data-aos="fade-right">
+      <span class="chip-outline-lsa mb-5">Detailing specialist &middot; Craiova</span>
+      <h1 class="big-title text-white-lsa">
+        FILM<br>
+        PESTE <span class="text-fluo-lsa">TOT</span>.<br>
+        ZG&#226;RIETURI<br>
+        NIC&#258;IERI.
+      </h1>
+      <div class="divider-fluo my-8"></div>
+      <p class="text-lg text-silver-lsa max-w-2xl leading-relaxed">
+        LukStyleAuto aplic&#259; folii de protec&#539;ie PPF pe caroserie, polish profesional la faruri &#537;i acoperiri triple pentru protec&#539;ie maxim&#259;. Totul cu programare, &#238;n atelier, cu aten&#539;ie la fiecare detaliu.
+      </p>
+      <div class="flex flex-wrap gap-4 mt-10">
+        <a href="tel:0720403330" class="btn-fluo px-8 py-4 inline-flex items-center">
+          <i class="fa-solid fa-phone mr-3"></i>PROGRAMARE
+        </a>
+        <a href="#servicii" class="btn-ghost-lsa px-8 py-4 inline-flex items-center">
+          VEZI SERVICII <i class="fa-solid fa-arrow-right ml-3"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 mt-12 max-w-2xl">
+        <div>
+          <div class="num-lsa">4.7</div>
+          <div class="text-xs text-silver-lsa mt-2 uppercase tracking-widest">rating Google</div>
+        </div>
+        <div>
+          <div class="num-lsa">75<span class="text-xl">min</span></div>
+          <div class="text-xs text-silver-lsa mt-2 uppercase tracking-widest">polish faruri</div>
+        </div>
+        <div>
+          <div class="num-lsa">PPF</div>
+          <div class="text-xs text-silver-lsa mt-2 uppercase tracking-widest">HEXIS self-healing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:col-span-5 relative" data-aos="fade-left">
+      <div class="ppf-layer">
+        <div class="absolute -top-4 -right-4 hex-ring">
+          <i class="fa-solid fa-shield-halved text-matte-lsa text-3xl"></i>
+        </div>
+        <div class="chip-fluo mb-5">STAR PACKAGE</div>
+        <h3 class="font-display font-bold text-4xl text-white-lsa mb-5">PPF + POLISH FARURI</h3>
+        <ul class="space-y-3 text-sm text-silver-lsa mb-6">
+          <li class="flex gap-3"><i class="fa-solid fa-check text-fluo-lsa mt-1"></i>Polish faruri complet (3 etape)</li>
+          <li class="flex gap-3"><i class="fa-solid fa-check text-fluo-lsa mt-1"></i>Film transparent pe faruri</li>
+          <li class="flex gap-3"><i class="fa-solid fa-check text-fluo-lsa mt-1"></i>Folie PPF capot&#259; + aripi</li>
+          <li class="flex gap-3"><i class="fa-solid fa-check text-fluo-lsa mt-1"></i>Prag portiere + m&#226;nere</li>
+          <li class="flex gap-3"><i class="fa-solid fa-check text-fluo-lsa mt-1"></i>Garan&#539;ie 10 ani</li>
+        </ul>
+        <div class="flex items-end justify-between pt-5 border-t border-fluo-lsa/30">
+          <div>
+            <div class="text-[.65rem] text-silver-lsa uppercase tracking-widest">De la</div>
+            <div class="font-display font-black text-4xl text-fluo-lsa">3.800 RON</div>
+          </div>
+          <a href="tel:0720403330" class="btn-fluo px-5 py-3 text-xs">DETALII</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-24 px-6 carbon-bg">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-12 gap-10 items-end mb-14">
+      <div class="md:col-span-6" data-aos="fade-right">
+        <span class="chip-outline-lsa mb-3">Servicii detailing</span>
+        <h2 class="font-display font-black text-6xl text-white-lsa mt-4">TREI <span class="text-fluo-lsa">NIVELURI</span> DE PROTEC&#538;IE.</h2>
+      </div>
+      <p class="md:col-span-6 text-silver-lsa leading-relaxed" data-aos="fade-left">Lucr&#259;m pe 3 nivele de protec&#539;ie: triple &ndash; strat transparent hidrofob, ceramic &ndash; coating durabil, PPF &ndash; folie fizic&#259;. Combin&#259;m unde are sens pentru client.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card-lsa p-8" data-aos="fade-up">
+        <div class="hex-ring mb-5">
+          <i class="fa-solid fa-spray-can text-matte-lsa text-2xl"></i>
+        </div>
+        <h3 class="font-display font-black text-3xl mb-3">TRIPLE</h3>
+        <p class="text-sm text-silver-lsa leading-relaxed mb-4">Acoperire &#238;n 3 etape: decontaminare, polish, sigilant. Efect hidrofob imediat, finisaj curat, durat&#259; 6-12 luni.</p>
+        <ul class="text-xs text-silver-lsa space-y-1">
+          <li class="text-fluo-lsa font-semibold">&bull; Rapid (1-2 ore)</li>
+          <li>&bull; Efect lotus la ap&#259;</li>
+          <li>&bull; Se poate aplica pe orice ma&#537;in&#259;</li>
+        </ul>
+      </div>
+      <div class="card-lsa p-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="hex-ring mb-5">
+          <i class="fa-solid fa-layer-group text-matte-lsa text-2xl"></i>
+        </div>
+        <h3 class="font-display font-black text-3xl mb-3">CERAMIC</h3>
+        <p class="text-sm text-silver-lsa leading-relaxed mb-4">Coating chimic care se &#238;nt&#259;re&#537;te &#537;i formeaz&#259; un strat dur pe vopsea. Protec&#539;ie UV, chimic&#259; &#537;i zg&#226;rieturi superficiale.</p>
+        <ul class="text-xs text-silver-lsa space-y-1">
+          <li class="text-fluo-lsa font-semibold">&bull; Durat&#259; 2-5 ani</li>
+          <li>&bull; Aspect umed permanent</li>
+          <li>&bull; Rezistent la p&#259;t&#259;rile chimice</li>
+        </ul>
+      </div>
+      <div class="card-lsa p-8 border-fluo-lsa" data-aos="fade-up" data-aos-delay="200">
+        <div class="hex-ring mb-5">
+          <i class="fa-solid fa-shield-halved text-matte-lsa text-2xl"></i>
+        </div>
+        <h3 class="font-display font-black text-3xl mb-3">PPF</h3>
+        <p class="text-sm text-silver-lsa leading-relaxed mb-4">Paint Protection Film &ndash; folie groas&#259; transparent&#259;, self-healing pentru zg&#226;rieturi superficiale. Protec&#539;ie fizic&#259; &#238;mpotriva pietrelor.</p>
+        <ul class="text-xs text-silver-lsa space-y-1">
+          <li class="text-fluo-lsa font-semibold">&bull; Self-healing cu c&#259;ldur&#259;</li>
+          <li>&bull; Garan&#539;ie 10 ani</li>
+          <li>&bull; HEXIS &middot; SunTek &middot; XPEL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ppf" class="py-24 px-6 noise-bg">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <span class="chip-fluo mb-3">Paint Protection Film</span>
+      <h2 class="font-display font-black text-6xl text-white-lsa mt-4">PPF &middot; <span class="text-fluo-lsa">COMPLET</span> SAU <span class="text-fluo-lsa">PAR&#538;IAL</span>.</h2>
+      <p class="text-silver-lsa mt-4 max-w-2xl mx-auto">PPF se aplic&#259; pe suprafa&#539;a vopselei &#537;i o protejeaz&#259; de pietre, insecte, r&#259;&#537;in&#259; &#537;i zg&#226;rieturi de sp&#259;lare. Se poate aplica par&#539;ial (doar pe zonele expuse) sau integral.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-5">
+      <div class="card-lsa p-6" data-aos="fade-up">
+        <div class="chip-outline-lsa mb-3">PARTIAL KIT</div>
+        <h3 class="font-display font-bold text-xl text-white-lsa mb-2">Zone expuse</h3>
+        <ul class="text-xs text-silver-lsa space-y-1 mb-4">
+          <li>&bull; Capot&#259; &amp; marginea fa&#539;&#259;</li>
+          <li>&bull; Aripi fa&#539;&#259; par&#539;ial</li>
+          <li>&bull; Prag portiere</li>
+          <li>&bull; M&#226;nere u&#537;i</li>
+        </ul>
+        <div class="font-display font-black text-2xl text-fluo-lsa">de la 2.200 RON</div>
+      </div>
+      <div class="card-lsa p-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="chip-outline-lsa mb-3">FRONT FULL</div>
+        <h3 class="font-display font-bold text-xl text-white-lsa mb-2">Fa&#539;a complet&#259;</h3>
+        <ul class="text-xs text-silver-lsa space-y-1 mb-4">
+          <li>&bull; Capot&#259; integral&#259;</li>
+          <li>&bull; Aripi fa&#539;&#259; complete</li>
+          <li>&bull; Bara fa&#539;&#259;</li>
+          <li>&bull; Oglinzi + faruri</li>
+        </ul>
+        <div class="font-display font-black text-2xl text-fluo-lsa">de la 4.800 RON</div>
+      </div>
+      <div class="card-lsa p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="chip-outline-lsa mb-3">FULL BODY</div>
+        <h3 class="font-display font-bold text-xl text-white-lsa mb-2">Integral ma&#537;in&#259;</h3>
+        <ul class="text-xs text-silver-lsa space-y-1 mb-4">
+          <li>&bull; Toata caroseria</li>
+          <li>&bull; Toate u&#537;ile &amp; aripile</li>
+          <li>&bull; Portbagaj &amp; plafon</li>
+          <li>&bull; Garan&#539;ie extins&#259;</li>
+        </ul>
+        <div class="font-display font-black text-2xl text-fluo-lsa">de la 12.500 RON</div>
+      </div>
+      <div class="card-lsa p-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="chip-fluo mb-3">HEADLIGHT</div>
+        <h3 class="font-display font-bold text-xl text-white-lsa mb-2">Faruri protejate</h3>
+        <ul class="text-xs text-silver-lsa space-y-1 mb-4">
+          <li>&bull; Folie transparent&#259;</li>
+          <li>&bull; Protec&#539;ie pietri&#537;</li>
+          <li>&bull; Anti-g&#259;lbenire UV</li>
+          <li>&bull; Dup&#259; polish</li>
+        </ul>
+        <div class="font-display font-black text-2xl text-fluo-lsa">de la 450 RON</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faruri" class="py-24 px-6 carbon-bg">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <span class="chip-outline-lsa mb-3">Polish faruri</span>
+      <h2 class="font-display font-black text-6xl text-white-lsa mt-4">75 <span class="text-fluo-lsa">MINUTE</span>.<br>FARURI <span class="text-fluo-lsa">CA NOI</span>.</h2>
+      <div class="divider-fluo my-6"></div>
+      <p class="text-silver-lsa leading-relaxed mb-4">
+        Faruri opacizate, g&#259;lbenite sau cu lacul dezlipit? Le aducem la standardul original printr-un proces &#238;n 3 etape: &#537;lefuire progresiv&#259;, polish rotativ &#537;i acoperire cu lac UV 2K.
+      </p>
+      <p class="text-silver-lsa leading-relaxed mb-8">
+        Pentru durat&#259; maxim&#259; recomand&#259;m &#537;i aplicarea unui film transparent deasupra lacului &ndash; op&#539;iune care triplica durata de via&#539;&#259; a rezultatului.
+      </p>
+
+      <div class="grid grid-cols-3 gap-4">
+        <div class="card-lsa p-5 text-center">
+          <div class="num-lsa">3</div>
+          <div class="text-xs text-silver-lsa mt-2 uppercase">etape lucru</div>
+        </div>
+        <div class="card-lsa p-5 text-center">
+          <div class="num-lsa">75m</div>
+          <div class="text-xs text-silver-lsa mt-2 uppercase">durat&#259;</div>
+        </div>
+        <div class="card-lsa p-5 text-center">
+          <div class="num-lsa">2-3y</div>
+          <div class="text-xs text-silver-lsa mt-2 uppercase">durata efect</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="ppf-layer">
+        <h3 class="font-display font-black text-3xl text-white-lsa mb-5">PROCES 3 ETAPE</h3>
+        <div class="space-y-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-fluo-lsa text-matte-lsa flex items-center justify-center font-display font-black text-xl">1</div>
+            <div>
+              <h4 class="font-display font-bold text-xl text-white-lsa">&#536;LEFUIRE</h4>
+              <p class="text-sm text-silver-lsa">Hartie abraziv&#259; la ud, grada&#539;ii 600 &rarr; 3000, elimin&#259;m total lacul oxidat.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-fluo-lsa text-matte-lsa flex items-center justify-center font-display font-black text-xl">2</div>
+            <div>
+              <h4 class="font-display font-bold text-xl text-white-lsa">POLISH ROTATIV</h4>
+              <p class="text-sm text-silver-lsa">Past&#259; abraziv&#259; + pad lana &#537;i burete, p&#226;n&#259; la transparen&#539;a optim&#259;.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-fluo-lsa text-matte-lsa flex items-center justify-center font-display font-black text-xl">3</div>
+            <div>
+              <h4 class="font-display font-bold text-xl text-white-lsa">LAC UV 2K</h4>
+              <p class="text-sm text-silver-lsa">Finalizare cu lac de calitate auto, 2 straturi, cu protec&#539;ie UV garantat&#259;.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pret" class="py-24 px-6 noise-bg">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <span class="chip-outline-lsa mb-3">Tarife principale</span>
+      <h2 class="font-display font-black text-5xl text-white-lsa mt-4">CE <span class="text-fluo-lsa">COST&#258;</span>.</h2>
+      <p class="text-silver-lsa mt-4">Valorile sunt orientative. Devizul final depinde de complexitatea ma&#537;inii &#537;i de starea suprafe&#539;elor.</p>
+    </div>
+
+    <div class="card-lsa p-8">
+      <div class="space-y-0">
+        <div class="flex justify-between items-baseline py-4 border-b border-matte-ash">
+          <div>
+            <div class="font-display font-bold text-xl text-white-lsa">POLISH FARURI (pereche)</div>
+            <div class="text-xs text-silver-lsa">&#537;lefuire + polish + lac UV</div>
+          </div>
+          <div class="font-display font-black text-2xl text-fluo-lsa">250 RON</div>
+        </div>
+        <div class="flex justify-between items-baseline py-4 border-b border-matte-ash">
+          <div>
+            <div class="font-display font-bold text-xl text-white-lsa">FOLIE TRANSPARENT&#258; FARURI</div>
+            <div class="text-xs text-silver-lsa">protec&#539;ie film dup&#259; polish</div>
+          </div>
+          <div class="font-display font-black text-2xl text-fluo-lsa">450 RON</div>
+        </div>
+        <div class="flex justify-between items-baseline py-4 border-b border-matte-ash">
+          <div>
+            <div class="font-display font-bold text-xl text-white-lsa">TRIPLE (cear&#259; + sigilant)</div>
+            <div class="text-xs text-silver-lsa">protec&#539;ie rapid&#259; 6-12 luni</div>
+          </div>
+          <div class="font-display font-black text-2xl text-fluo-lsa">350 RON</div>
+        </div>
+        <div class="flex justify-between items-baseline py-4 border-b border-matte-ash">
+          <div>
+            <div class="font-display font-bold text-xl text-white-lsa">PPF PARTIAL</div>
+            <div class="text-xs text-silver-lsa">zonele cele mai expuse</div>
+          </div>
+          <div class="font-display font-black text-2xl text-fluo-lsa">de la 2.200 RON</div>
+        </div>
+        <div class="flex justify-between items-baseline py-4 border-b border-matte-ash">
+          <div>
+            <div class="font-display font-bold text-xl text-white-lsa">PPF FRONT FULL</div>
+            <div class="text-xs text-silver-lsa">fata integral&#259;</div>
+          </div>
+          <div class="font-display font-black text-2xl text-fluo-lsa">de la 4.800 RON</div>
+        </div>
+        <div class="flex justify-between items-baseline py-4">
+          <div>
+            <div class="font-display font-bold text-xl text-white-lsa">PPF FULL BODY</div>
+            <div class="text-xs text-silver-lsa">integral caroserie</div>
+          </div>
+          <div class="font-display font-black text-2xl text-fluo-lsa">de la 12.500 RON</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-24 px-6 carbon-bg">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    <div data-aos="fade-right">
+      <span class="chip-fluo mb-3">Contact</span>
+      <h2 class="font-display font-black text-6xl text-white-lsa mt-4">PROGRAMA&#538;I <span class="text-fluo-lsa">VIZITA</span>.</h2>
+      <div class="divider-fluo my-6"></div>
+      <p class="text-silver-lsa mb-8">Atelierul este pe Strada General Magheru 46 &#238;n Craiova. Parcare accesibil&#259; (inclusiv pentru scaun cu rotile). Lucr&#259;m exclusiv cu programare.</p>
+
+      <div class="space-y-4">
+        <a href="tel:0720403330" class="flex items-center gap-4 p-5 card-lsa hover:bg-matte-ash">
+          <div class="hex-ring" style="width:56px;height:56px">
+            <i class="fa-solid fa-phone text-matte-lsa text-lg"></i>
+          </div>
+          <div>
+            <div class="chip-outline-lsa text-[.65rem]">TELEFON</div>
+            <div class="font-display font-bold text-2xl text-white-lsa mt-1">0720 403 330</div>
+          </div>
+        </a>
+        <div class="flex items-center gap-4 p-5 card-lsa">
+          <div class="w-14 h-14 bg-matte-ash flex items-center justify-center">
+            <i class="fa-solid fa-location-dot text-fluo-lsa text-xl"></i>
+          </div>
+          <div>
+            <div class="chip-outline-lsa text-[.65rem]">ADRES&#258;</div>
+            <div class="font-display font-bold text-lg text-white-lsa mt-1">Str. General Magheru 46</div>
+            <div class="text-silver-lsa text-sm">Craiova, 200539</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-5 card-lsa">
+          <div class="w-14 h-14 bg-matte-ash flex items-center justify-center">
+            <i class="fa-solid fa-calendar-check text-fluo-lsa text-xl"></i>
+          </div>
+          <div>
+            <div class="chip-outline-lsa text-[.65rem]">PROGRAMARE</div>
+            <div class="font-display font-bold text-lg text-white-lsa mt-1">OBLIGATORIE</div>
+            <div class="text-silver-lsa text-sm">Ma&#537;ina st&#259; 2-8 ore, dup&#259; serviciu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <div class="overflow-hidden border-2 border-fluo-lsa/40">
+        <iframe src="https://www.google.com/maps?q=44.308504,23.814194&amp;hl=ro&amp;z=17&amp;output=embed" width="100%" height="480" style="border:0;filter:invert(.9) hue-rotate(220deg) contrast(.85)" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-matte-lsa text-silver-lsa py-12 px-6 border-t border-fluo-lsa/20">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="hex-ring" style="width:42px;height:42px">
+          <span class="font-display font-black text-matte-lsa text-xl">L</span>
+        </div>
+        <div>
+          <div class="font-display font-bold text-white-lsa">LUK<span class="text-fluo-lsa">STYLE</span>AUTO</div>
+          <div class="text-[.65rem] tracking-[.3em]">POLISH &middot; TRIPLE &middot; PPF &middot; CRAIOVA</div>
+        </div>
+      </div>
+      <p class="text-sm">Specialist polish faruri, triple &#537;i PPF &#238;n Craiova. Aten&#539;ie la detalii, atelier cu programare.</p>
+    </div>
+    <div>
+      <div class="font-display font-bold text-white-lsa mb-4 uppercase tracking-wider text-sm">Servicii</div>
+      <ul class="space-y-2 text-sm">
+        <li>Polish faruri profesional</li>
+        <li>Triple (cear&#259; + sigilant)</li>
+        <li>Ceramic coating</li>
+        <li>PPF par&#539;ial / front / full</li>
+        <li>Folie transparent&#259; faruri</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-display font-bold text-white-lsa mb-4 uppercase tracking-wider text-sm">Contact</div>
+      <ul class="space-y-2 text-sm">
+        <li><i class="fa-solid fa-phone text-fluo-lsa mr-2"></i><a href="tel:0720403330">0720 403 330</a></li>
+        <li><i class="fa-solid fa-location-dot text-fluo-lsa mr-2"></i>Str. General Magheru 46, Craiova</li>
+        <li><i class="fa-solid fa-calendar-check text-fluo-lsa mr-2"></i>Cu programare</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-fluo-lsa/15 text-center text-xs text-silver-lsa/40 font-display tracking-widest">
+    &copy; 2026 LUKSTYLEAUTO &middot; CRAIOVA
+  </div>
+</footer>
+
+<div class="fixed bottom-0 inset-x-0 flex md:hidden z-50">
+  <a href="tel:0720403330" class="flex-1 bg-matte-lsa text-white-lsa py-3 text-center text-sm font-bold border-t border-fluo-lsa/30">
+    <i class="fa-solid fa-phone text-fluo-lsa mr-2"></i>SUN&#258;
+  </a>
+  <a href="#pret" class="flex-1 bg-fluo-lsa text-matte-lsa py-3 text-center text-sm font-bold">
+    <i class="fa-solid fa-tag mr-2"></i>TARIFE
+  </a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:700,once:true});</script>
+</body>
+</html>

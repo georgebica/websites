@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNT HOUSE &middot; Cazare &#537;i spa &icirc;n C&#226;rcea, l&#226;ng&#259; Craiova</title>
+<meta name="description" content="DNT HOUSE &mdash; pensiune &#537;i spa cu piscin&#259; &#537;i jacuzzi &icirc;n C&#226;rcea, la 6 km de Aeroportul Craiova. Rezerv&#259;ri la 0786 338 383.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy:    '#17334A',
+        navyd:   '#0E2235',
+        gold:    '#C49A5B',
+        goldl:   '#E2C793',
+        cream:   '#FBF7EF',
+        pearl:   '#F5EEDE',
+        pool:    '#5BA6C7',
+        ink:     '#17334A',
+        muted:   '#69747D',
+        line:    '#E1DACC',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['Marcellus', 'Georgia', 'serif'],
+        sans:    ['"Josefin Sans"', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FBF7EF; color: #17334A; }
+  body { font-family: "Josefin Sans", system-ui, sans-serif; }
+  .display { font-family: Marcellus, Georgia, serif; letter-spacing: -.005em; line-height: 1.02; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .35rem 1rem;
+    background: transparent;
+    color: #C49A5B;
+    border: 1px solid #C49A5B;
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+
+  .btn-navy {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #17334A;
+    color: #FBF7EF;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: all .25s;
+  }
+  .btn-navy:hover { background: #0E2235; }
+
+  .btn-gold {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #C49A5B;
+    color: #17334A;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-gold:hover { background: #E2C793; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); }
+
+  .hair-gold { height: 1px; background: #C49A5B; }
+  .hair { height: 1px; background: rgba(23,51,74,.15); }
+
+  .amenity-card {
+    background: #fff;
+    border: 1px solid #E1DACC;
+    padding: 1.8rem;
+    transition: all .35s;
+  }
+  .amenity-card:hover { transform: translateY(-4px); border-color: #C49A5B; box-shadow: 0 30px 50px -36px rgba(23,51,74,.3); }
+
+  .hero-bg {
+    background: linear-gradient(180deg, #FBF7EF 0%, #F5EEDE 100%);
+  }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Marcellus, serif; font-size: 1.7rem; border-bottom: 1px solid #E1DACC; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .7rem 0;
+    border-bottom: 1px dashed rgba(23,51,74,.15);
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full border border-navy flex items-center justify-center">
+        <span class="display text-xl">D</span>
+      </span>
+      <div class="leading-tight">
+        <p class="display text-xl">DNT House</p>
+        <p class="text-[10px] tracking-[.22em] uppercase text-muted mt-1">Pensiune &amp; Spa &middot; C&#226;rcea</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-[12px] font-medium text-ink/80 uppercase tracking-wider">
+      <a href="#despre"    class="hover:text-gold">Despre</a>
+      <a href="#facilitati" class="hover:text-gold">Facilit&#259;&#539;i</a>
+      <a href="#camere"    class="hover:text-gold">Camere</a>
+      <a href="#locatie"   class="hover:text-gold">Loca&#539;ie</a>
+      <a href="tel:0786338383" class="btn-gold !py-2.5 !px-4 !text-[11px]">0786 338 383</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 border border-navy flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8"><div class="hair-gold"></div></div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl">DNT House</span>
+    <button id="menu-close" class="w-11 h-11 border border-navy flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"    class="mobile-link">Despre</a>
+    <a href="#facilitati" class="mobile-link">Facilit&#259;&#539;i</a>
+    <a href="#camere"    class="mobile-link">Camere</a>
+    <a href="#locatie"   class="mobile-link">Loca&#539;ie</a>
+    <a href="#contact"   class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0786338383" class="btn-navy">Sun&#259;</a>
+    <a href="https://wa.me/40786338383" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="hero-bg pt-12 sm:pt-20 lg:pt-28 pb-16 sm:pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip" data-aos="fade-up"><i class="fa-solid fa-location-dot"></i> C&#226;rcea &middot; 6 km de Aeroportul Craiova</span>
+
+    <h1 class="display mt-8 text-5xl sm:text-7xl lg:text-[7.5rem]" data-aos="fade-up" data-aos-delay="40">
+      Un col&#539; de <span class="text-gold">lini&#537;te</span>,<br>
+      la por&#539;ile <span class="text-gold">Craiovei.</span>
+    </h1>
+
+    <p class="mt-10 max-w-2xl mx-auto text-lg text-ink/75 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+      DNT House este pensiunea cu spa din C&#226;rcea unde familiile &#537;i c&#259;l&#259;torii fac escal&#259; &icirc;ntre drum &#537;i aeroport. Piscin&#259; interioar&#259;, jacuzzi, cur&#539;i mari, camere noi &#537;i lini&#537;tea rurala &mdash; la 10 minute de centrul ora&#537;ului.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center" data-aos="fade-up" data-aos-delay="160">
+      <a href="tel:0786338383" class="btn-navy"><i class="fa-solid fa-phone"></i> Rezerv&#259; 0786 338 383</a>
+      <a href="https://wa.me/40786338383" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+    </div>
+
+    <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
+      <div>
+        <p class="display text-4xl text-gold">6 km</p>
+        <p class="text-[10px] uppercase tracking-widest text-muted mt-1">Aeroport Craiova</p>
+      </div>
+      <div>
+        <p class="display text-4xl text-gold">130+</p>
+        <p class="text-[10px] uppercase tracking-widest text-muted mt-1">recenzii Google</p>
+      </div>
+      <div>
+        <p class="display text-4xl text-gold">6 ani</p>
+        <p class="text-[10px] uppercase tracking-widest text-muted mt-1">de ospitalitate</p>
+      </div>
+      <div>
+        <p class="display text-4xl text-gold">24 h</p>
+        <p class="text-[10px] uppercase tracking-widest text-muted mt-1">securitate</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-pearl">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Despre DNT House</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">
+      Gazda se nume&#537;te Daniel.<br>
+      <span class="text-gold">Casa lui e casa ta.</span>
+    </h2>
+    <div class="mx-auto w-16 hair-gold mt-5"></div>
+
+    <p class="mt-10 text-lg text-ink/80 leading-relaxed">
+      DNT House este un spa&#539;iu de cazare &icirc;n regim hotelier, privat &#537;i gestionat direct de gazd&#259;. &#536;ase camere curate, aer condi&#539;ionat, televizor, mini-bar &#537;i bai private. &Icirc;n curte, piscin&#259; interioar&#259; &icirc;nc&#259;lzit&#259;, jacuzzi, gr&#259;din&#259; cu hamace, loc de joac&#259; pentru copii, barbecue &#537;i o buc&#259;t&#259;rie complet&#259; de unde po&#539;i s&#259;-&#539;i faci micul dejun.
+    </p>
+    <p class="mt-6 text-base text-muted leading-relaxed">
+      C&#226;nd vrei lini&#537;te f&#259;r&#259; s&#259; ie&#537;i din Dolj, ai g&#259;sit locul. Familiile vin pentru bazinul cald, cuplurile pentru spa, c&#259;l&#259;torii cu zboruri de dimineat&#259; pentru proximitatea de aeroport.
+    </p>
+  </div>
+</section>
+
+<section id="facilitati" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="chip">Facilit&#259;&#539;i</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">Tot ce ai nevoie.</h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="amenity-card" data-aos="fade-up">
+        <i class="fa-solid fa-person-swimming text-gold text-2xl"></i>
+        <h3 class="display text-xl mt-4">Piscin&#259; interioar&#259; &#537;i jacuzzi</h3>
+        <p class="mt-2 text-sm text-muted">Bazin &icirc;nc&#259;lzit, jacuzzi cu l&#259;mpi de c&#259;ldur&#259;, deschis tot anul.</p>
+      </article>
+
+      <article class="amenity-card" data-aos="fade-up" data-aos-delay="60">
+        <i class="fa-solid fa-umbrella-beach text-gold text-2xl"></i>
+        <h3 class="display text-xl mt-4">Piscin&#259; exterioar&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Piscin&#259; cu ap&#259; cu sare &#537;i bar la marginea bazinului, &icirc;n sezonul cald.</p>
+      </article>
+
+      <article class="amenity-card" data-aos="fade-up" data-aos-delay="120">
+        <i class="fa-solid fa-spa text-gold text-2xl"></i>
+        <h3 class="display text-xl mt-4">Spa &#537;i saun&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Zon&#259; de wellness complet&#259; pentru relaxare, cu sal&#259; de fitness.</p>
+      </article>
+
+      <article class="amenity-card" data-aos="fade-up" data-aos-delay="180">
+        <i class="fa-solid fa-children text-gold text-2xl"></i>
+        <h3 class="display text-xl mt-4">Loc de joac&#259; pentru copii</h3>
+        <p class="mt-2 text-sm text-muted">C&#259;su&#539;&#259;, tobogan, trambulin&#259;, mingi colorate. Familiile adora locul.</p>
+      </article>
+
+      <article class="amenity-card" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-mug-hot text-gold text-2xl"></i>
+        <h3 class="display text-xl mt-4">Cafenea pe loc</h3>
+        <p class="mt-2 text-sm text-muted">Coffee shop, pool bar &#537;i posibilit&#259;&#539;i de mic dejun, livrate &icirc;n camer&#259; la cerere.</p>
+      </article>
+
+      <article class="amenity-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-dog text-gold text-2xl"></i>
+        <h3 class="display text-xl mt-4">Pet-friendly</h3>
+        <p class="mt-2 text-sm text-muted">Accept&#259;m oaspe&#539;i cu animale de companie. Ne anun&#539;i &icirc;nainte &#537;i te primim.</p>
+      </article>
+
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-4 gap-5">
+      <div class="flex items-center gap-3 text-sm"><i class="fa-solid fa-wifi text-gold"></i> WiFi gratuit</div>
+      <div class="flex items-center gap-3 text-sm"><i class="fa-solid fa-parking text-gold"></i> Parcare gratuit&#259;</div>
+      <div class="flex items-center gap-3 text-sm"><i class="fa-solid fa-shield-halved text-gold"></i> Securitate 24h</div>
+      <div class="flex items-center gap-3 text-sm"><i class="fa-solid fa-plane text-gold"></i> Transfer aeroport</div>
+    </div>
+  </div>
+</section>
+
+<section id="camere" class="py-16 sm:py-24 bg-navy text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip"><i class="fa-solid fa-bed"></i> Camere</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">Camere noi, curate,<br><span class="text-gold">echipate complet.</span></h2>
+      <p class="mt-6 text-cream/75">Camerele au fost reamenajate recent, cu mobilier nou, paturi comfortabile &#537;i lenjerie de calitate. Aer condi&#539;ionat, televizor plat, minibar, seif, buc&#259;t&#259;rie comun&#259; &#537;i bai private.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-3 gap-5">
+      <div class="border border-cream/15 p-6">
+        <p class="display text-3xl text-gold">6</p>
+        <p class="mt-2 text-[11px] uppercase tracking-widest text-cream/65">camere</p>
+        <p class="mt-3 text-sm">Dormitoare cu pat dublu sau paturi separate.</p>
+      </div>
+      <div class="border border-cream/15 p-6">
+        <p class="display text-3xl text-gold">10</p>
+        <p class="mt-2 text-[11px] uppercase tracking-widest text-cream/65">paturi</p>
+        <p class="mt-3 text-sm">Inclusiv canapele extensibile pentru familii.</p>
+      </div>
+      <div class="border border-cream/15 p-6">
+        <p class="display text-3xl text-gold">5</p>
+        <p class="mt-2 text-[11px] uppercase tracking-widest text-cream/65">b&#259;i</p>
+        <p class="mt-3 text-sm">B&#259;i comune &#537;i b&#259;i private, cu bideu, papuci &#537;i usc&#259;tor de p&#259;r.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-6">
+      <span class="chip">Loca&#539;ie</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">
+        &Icirc;ntre drum, aeroport<br>&#537;i <span class="text-gold">centrul Craiovei.</span>
+      </h2>
+      <p class="mt-6 text-ink/80 leading-relaxed">DNT House se afl&#259; &icirc;n C&#226;rcea, la doar c&#226;teva minute de drum fa&#539;&#259; de Aeroportul Interna&#539;ional Craiova &#537;i la 6 km de centrul ora&#537;ului. Un loc strategic pentru c&#259;l&#259;torii cu zboruri de diminea&#539;&#259; sau seara t&#226;rziu.</p>
+
+      <ul class="mt-8 space-y-3 text-sm">
+        <li class="flex items-center gap-3"><i class="fa-solid fa-plane-arrival text-gold w-5"></i> Aeroport Craiova &mdash; 6 km (10&ndash;15 min)</li>
+        <li class="flex items-center gap-3"><i class="fa-solid fa-city text-gold w-5"></i> Centru Craiova &mdash; 6 km</li>
+        <li class="flex items-center gap-3"><i class="fa-solid fa-road text-gold w-5"></i> 500 m de centrul C&#226;rcea</li>
+      </ul>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0786338383" class="btn-navy"><i class="fa-solid fa-phone"></i> 0786 338 383</a>
+        <a href="https://wa.me/40786338383" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-6">
+      <div class="border border-line p-7 bg-pearl">
+        <p class="chip">&mdash; Adresa</p>
+        <p class="display text-2xl mt-4">Strada Prof. Vasile Truic&#259;</p>
+        <p class="text-sm text-muted">207450 C&#226;rcea, jud. Dolj</p>
+
+        <div class="mt-6 hair"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-gold w-5"></i> 0786 338 383</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-gold w-5"></i> wa.me/40786338383</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-door-open text-gold w-5"></i> Check-in 15:00 &ndash; 22:00</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-door-closed text-gold w-5"></i> Check-out p&#226;n&#259; la 12:00</div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/DNT+HOUSE/@44.2726795,23.896562,17z" class="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-gold font-semibold">
+          <i class="fa-solid fa-location-dot"></i> Deschide &icirc;n Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navyd text-cream/65 py-10 pb-24 md:pb-10" id="contact">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 DNT HOUSE &middot; C&#226;rcea, Dolj</span>
+    <span>Pensiune &middot; Spa &middot; Piscin&#259;</span>
+    <span>Toate drepturile rezervate</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0786338383" class="py-4 bg-navy text-cream text-center uppercase text-sm tracking-wider font-semibold"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40786338383" class="py-4 bg-wa text-white text-center uppercase text-sm tracking-wider font-semibold"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "DNT HOUSE",
+  "description": "Pensiune si spa cu piscina interioara si exterioara in Carcea, langa Aeroportul Craiova.",
+  "telephone": "+40786338383",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Prof. Vasile Truica",
+    "addressLocality": "Carcea",
+    "addressRegion": "Dolj",
+    "postalCode": "207450",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.272679, "longitude": 23.896562 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "130" },
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

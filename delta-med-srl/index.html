@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delta Med SRL &middot; Recuperare medical&#259; &#537;i fizioterapie &icirc;n Slatina</title>
+<meta name="description" content="Delta Med SRL &mdash; cabinet de recuperare medical&#259;, fizioterapie, kinetoterapie &#537;i masaj terapeutic &icirc;n Slatina. Bulevardul A.I. Cuza 46. Programare la 0749 164 961.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        nav:    '#0F2E3B',
+        navd:   '#081C25',
+        teal:   '#2AA5A0',
+        teald:  '#17706C',
+        mint:   '#E3F5F1',
+        mintl:  '#F2FAF8',
+        cream:  '#FCFBF6',
+        ink:    '#0F2E3B',
+        muted:  '#5B7378',
+        coral:  '#F26A5A',
+        line:   '#D4E4E2',
+        wa:     '#25D366',
+      },
+      fontFamily: {
+        sans: ['Urbanist', 'system-ui', 'sans-serif'],
+        serif: ['Newsreader', 'Georgia', 'serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FCFBF6; color: #0F2E3B; }
+  body { font-family: Urbanist, system-ui, sans-serif; }
+  .serif { font-family: Newsreader, Georgia, serif; font-variation-settings: "opsz" 32; }
+  .serif-i { font-family: Newsreader, Georgia, serif; font-style: italic; font-variation-settings: "opsz" 32; }
+
+  .dot-bg {
+    background-image: radial-gradient(circle, rgba(42,165,160,.22) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+
+  .btn-teal {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: .9rem 1.6rem;
+    background: #2AA5A0;
+    color: #fff;
+    border-radius: 14px;
+    font-weight: 600;
+    box-shadow: 0 12px 28px -14px rgba(42,165,160,.7);
+    transition: transform .25s, background .25s;
+  }
+  .btn-teal:hover { background: #17706C; transform: translateY(-2px); }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: .9rem 1.6rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 14px;
+    font-weight: 600;
+    transition: transform .25s;
+  }
+  .btn-wap:hover { transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: .9rem 1.6rem;
+    background: #fff;
+    border: 1.5px solid #0F2E3B;
+    color: #0F2E3B;
+    border-radius: 14px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-outline:hover { background: #0F2E3B; color: #fff; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .4rem .95rem;
+    background: #E3F5F1;
+    color: #17706C;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  .stat-card {
+    background: #fff;
+    border: 1px solid #D4E4E2;
+    border-radius: 20px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .svc {
+    background: #fff;
+    border: 1px solid #D4E4E2;
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  .svc::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: #2AA5A0;
+    transform: scaleX(.3);
+    transform-origin: left;
+    transition: transform .4s;
+  }
+  .svc:hover { border-color: #2AA5A0; box-shadow: 0 30px 60px -40px rgba(15,46,59,.3); transform: translateY(-4px); }
+  .svc:hover::before { transform: scaleX(1); }
+
+  .bubble {
+    width: 56px; height: 56px;
+    background: #E3F5F1;
+    border-radius: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #17706C;
+    font-size: 1.35rem;
+  }
+
+  .progress {
+    height: 6px; background: #E3F5F1; border-radius: 999px; overflow: hidden;
+  }
+  .progress > span { display: block; height: 100%; background: linear-gradient(90deg, #2AA5A0, #17706C); border-radius: 999px; }
+
+  .phase {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 2.5rem;
+  }
+  .phase::before {
+    content: "";
+    position: absolute;
+    left: 17px; top: 42px; bottom: 0;
+    width: 2px;
+    background: #D4E4E2;
+  }
+  .phase:last-child::before { display: none; }
+  .phase .num {
+    position: absolute;
+    left: 0; top: 0;
+    width: 36px; height: 36px;
+    background: #0F2E3B;
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: Newsreader, serif;
+    font-weight: 600;
+  }
+
+  .hours-line {
+    display: flex; justify-content: space-between;
+    padding: .7rem 0;
+    border-bottom: 1px dashed #D4E4E2;
+    font-size: .95rem;
+  }
+  .hours-line:last-child { border: 0; }
+  .hours-line.today { color: #17706C; font-weight: 700; }
+
+  .mobile-link { display:block; padding: 1rem 0; font-family: Newsreader, serif; font-size: 1.6rem; border-bottom: 1px solid #D4E4E2; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-2xl bg-nav text-cream flex items-center justify-center">
+        <i class="fa-solid fa-plus text-teal text-xl"></i>
+      </span>
+      <div class="leading-tight">
+        <p class="serif text-xl leading-none font-semibold">Delta Med <span class="text-teal">+</span></p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Recuperare medical&#259; &middot; Slatina</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-ink/80">
+      <a href="#despre"    class="hover:text-teal">Despre</a>
+      <a href="#servicii"  class="hover:text-teal">Servicii</a>
+      <a href="#proces"    class="hover:text-teal">Proces</a>
+      <a href="#program"   class="hover:text-teal">Program</a>
+      <a href="tel:0749164961" class="btn-teal !py-2.5 !px-4 !text-sm"><i class="fa-solid fa-phone"></i> Programare</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-xl bg-mint flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars text-teald"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="serif text-2xl">Delta Med +</span>
+    <button id="menu-close" class="w-11 h-11 rounded-xl bg-mint flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark text-teald"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#program"  class="mobile-link">Program</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0749164961" class="btn-teal">Sun&#259;</a>
+    <a href="https://wa.me/40749164961" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="relative pt-10 sm:pt-14 lg:pt-20 pb-16 sm:pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-heart-pulse"></i> Cabinet de recuperare medical&#259;</span>
+      <h1 class="serif mt-6 text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-medium">
+        Trupul are memorie.<br>
+        <span class="serif-i text-teal">Noi &icirc;i ajut&#259;m s&#259; &#537;i-o aminteasc&#259;.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Delta Med este cabinetul de fizioterapie &#537;i kinetoterapie din Slatina unde oamenii vin dup&#259; accident&#259;ri, opera&#539;ii sau dureri cronice. Lucr&#259;m cu fiecare pacient dup&#259; plan personalizat, cu r&#259;bdare &#537;i cu instrumente care chiar ajut&#259;.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0749164961" class="btn-teal"><i class="fa-solid fa-phone"></i> 0749 164 961</a>
+        <a href="https://wa.me/40749164961" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-3 gap-4 sm:gap-6">
+        <div class="stat-card">
+          <p class="serif text-3xl text-teal font-semibold">15+</p>
+          <p class="text-[11px] uppercase tracking-widest text-muted mt-1">ani experien&#539;&#259;</p>
+        </div>
+        <div class="stat-card">
+          <p class="serif text-3xl text-teal font-semibold">5 zile</p>
+          <p class="text-[11px] uppercase tracking-widest text-muted mt-1">luni&ndash;vineri</p>
+        </div>
+        <div class="stat-card">
+          <p class="serif text-3xl text-teal font-semibold">100%</p>
+          <p class="text-[11px] uppercase tracking-widest text-muted mt-1">accesibil</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 relative" data-aos="fade-up" data-aos-delay="120">
+      <div class="bg-nav text-cream rounded-[28px] p-8 relative overflow-hidden">
+        <div class="absolute inset-0 dot-bg opacity-25"></div>
+
+        <div class="relative">
+          <span class="chip !bg-teal/15 !text-teal">Pacient nou</span>
+          <h3 class="serif text-2xl mt-5 font-semibold">Prima consulta&#539;ie</h3>
+          <p class="mt-2 text-sm text-cream/80 leading-relaxed">Evaluare am&#259;nun&#539;it&#259; a durerii &#537;i mobilit&#259;&#539;ii, urmat&#259; de un plan de recuperare personalizat.</p>
+
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal"></i> Anamnez&#259; complet&#259;</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal"></i> Testare mobilitate &#537;i for&#539;&#259;</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal"></i> Plan scris cu obiective clare</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal"></i> Programarea edin&#539;elor</li>
+          </ul>
+
+          <div class="mt-6 pt-5 border-t border-cream/15">
+            <p class="text-xs text-cream/65 uppercase tracking-widest">Programare</p>
+            <a href="tel:0749164961" class="serif text-2xl block font-semibold mt-1">0749 164 961</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-mintl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip"><i class="fa-solid fa-notes-medical"></i> Despre clinic&#259;</span>
+      <h2 class="serif mt-4 text-3xl sm:text-4xl lg:text-5xl leading-[1.05] font-medium">
+        Recuperare complet&#259;,<br>
+        <span class="serif-i text-teal">&icirc;n ritmul t&#259;u.</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7 space-y-6">
+      <p class="text-lg text-muted leading-relaxed">Delta Med este un cabinet mic, cu un singur obiectiv: s&#259; te scoatem din durere &#537;i s&#259; te ducem &icirc;napoi la via&#539;a ta. Lucr&#259;m cu pacien&#539;i dup&#259; opera&#539;ii ortopedice, accident&#259;ri sportive, dureri cronice de spate, recuperare post-AVC.</p>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <p class="serif text-xl font-semibold">Plan personalizat</p>
+          <p class="text-sm text-muted mt-2">Fiecare pacient prime&#537;te un plan scris cu exerci&#539;ii, num&#259;r de &#537;edin&#539;e &#537;i obiective m&#259;surabile.</p>
+          <div class="mt-3 progress"><span style="width: 85%"></span></div>
+        </div>
+        <div>
+          <p class="serif text-xl font-semibold">Aparatur&#259; modern&#259;</p>
+          <p class="text-sm text-muted mt-2">Curen&#539;i terapeutici, ultrasunete, laser, magnetoterapie &#537;i parafin&#259; &mdash; toate sub control de kinetoterapeut.</p>
+          <div class="mt-3 progress"><span style="width: 92%"></span></div>
+        </div>
+        <div>
+          <p class="serif text-xl font-semibold">Cabinet accesibil</p>
+          <p class="text-sm text-muted mt-2">Rampa de acces, parcare pentru persoane cu dizabilit&#259;&#539;i &#537;i spa&#539;iu u&#537;or de parcurs cu c&#259;ruciorul.</p>
+          <div class="mt-3 progress"><span style="width: 100%"></span></div>
+        </div>
+        <div>
+          <p class="serif text-xl font-semibold">Kinetoterapeut certificat</p>
+          <p class="text-sm text-muted mt-2">B&#259;rbulescu Alin Ionu&#539;, 15 ani de experien&#539;&#259;, vorbe&#537;te rom&#226;n&#259; &#537;i englez&#259;.</p>
+          <div class="mt-3 progress"><span style="width: 95%"></span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip"><i class="fa-solid fa-capsules"></i> Servicii</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl leading-[1.05] font-medium">
+        De la durere<br>
+        <span class="serif-i text-teal">la recuperare complet&#259;.</span>
+      </h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <article class="svc" data-aos="fade-up">
+        <span class="bubble"><i class="fa-solid fa-person-walking"></i></span>
+        <h3 class="serif text-2xl mt-5 font-semibold">Kinetoterapie</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Exerci&#539;ii supravegheate pentru redob&#226;ndirea mobilit&#259;&#539;ii, for&#539;ei &#537;i rezisten&#539;ei. Plan individualizat pe fiecare caz.</p>
+      </article>
+
+      <article class="svc" data-aos="fade-up" data-aos-delay="80">
+        <span class="bubble"><i class="fa-solid fa-wave-square"></i></span>
+        <h3 class="serif text-2xl mt-5 font-semibold">Fizioterapie</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Curen&#539;i diadinamici, interferen&#539;iali, ultrasunete, laser terapeutic, magnetoterapie, TENS.</p>
+      </article>
+
+      <article class="svc" data-aos="fade-up" data-aos-delay="160">
+        <span class="bubble"><i class="fa-solid fa-hand-holding-medical"></i></span>
+        <h3 class="serif text-2xl mt-5 font-semibold">Masaj terapeutic</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Masaj de relaxare, decontractant, anticelulitic, limfatic &#537;i masaj pentru recuperare post-efort.</p>
+      </article>
+
+      <article class="svc" data-aos="fade-up" data-aos-delay="240">
+        <span class="bubble"><i class="fa-solid fa-bone"></i></span>
+        <h3 class="serif text-2xl mt-5 font-semibold">Recuperare ortopedic&#259;</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Dup&#259; fracturi, proteze de genunchi sau &#537;old, entorse, luxa&#539;ii sau interven&#539;ii chirurgicale.</p>
+      </article>
+
+      <article class="svc" data-aos="fade-up" data-aos-delay="320">
+        <span class="bubble"><i class="fa-solid fa-brain"></i></span>
+        <h3 class="serif text-2xl mt-5 font-semibold">Recuperare neurologic&#259;</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Program de recuperare dup&#259; accident vascular cerebral, pareze, afec&#539;iuni ale coloanei sau ale sistemului nervos periferic.</p>
+      </article>
+
+      <article class="svc" data-aos="fade-up" data-aos-delay="400">
+        <span class="bubble"><i class="fa-solid fa-shield-heart"></i></span>
+        <h3 class="serif text-2xl mt-5 font-semibold">Prevenire</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Programe de preven&#539;ie pentru posturi incorecte, dureri de spate &#537;i accident&#259;ri sportive &icirc;nainte s&#259; devin&#259; cronice.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-nav text-cream relative overflow-hidden">
+  <div class="absolute inset-0 dot-bg opacity-20"></div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip !bg-teal/15 !text-teal"><i class="fa-solid fa-route"></i> Etape</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl leading-[1.05] font-medium">Drumul t&#259;u prin clinic&#259;,</h2>
+      <h2 class="serif-i text-teal text-4xl sm:text-5xl leading-[1.05]">&icirc;n patru pa&#537;i clari.</h2>
+      <p class="mt-6 text-cream/80 max-w-md">Nu promitem minuni, promitem metod&#259;. La fiecare pas, vei &#537;ti exact unde e&#537;ti &#537;i c&#226;t mai ai de parcurs.</p>
+    </div>
+
+    <div class="lg:col-span-7">
+
+      <div class="phase">
+        <span class="num">1</span>
+        <h3 class="serif text-2xl font-semibold">Consulta&#539;ia ini&#539;ial&#259;</h3>
+        <p class="mt-2 text-cream/80 text-sm leading-relaxed">Discut&#259;m istoricul medical, examin&#259;m zona cu probleme &#537;i stabilim punctul de plecare.</p>
+      </div>
+
+      <div class="phase">
+        <span class="num">2</span>
+        <h3 class="serif text-2xl font-semibold">Plan personalizat</h3>
+        <p class="mt-2 text-cream/80 text-sm leading-relaxed">Prime&#537;ti &icirc;n scris numarul de &#537;edin&#539;e, tehnicile folosite &#537;i obiectivele de etap&#259;.</p>
+      </div>
+
+      <div class="phase">
+        <span class="num">3</span>
+        <h3 class="serif text-2xl font-semibold">&#536;edin&#539;ele de tratament</h3>
+        <p class="mt-2 text-cream/80 text-sm leading-relaxed">Combinam kinetoterapie, fizioterapie &#537;i masaj, adapt&#226;nd interven&#539;ia s&#259;pt&#259;m&#226;n&#259; de s&#259;pt&#259;m&#226;n&#259;.</p>
+      </div>
+
+      <div class="phase">
+        <span class="num">4</span>
+        <h3 class="serif text-2xl font-semibold">Evaluare &#537;i men&#539;inere</h3>
+        <p class="mt-2 text-cream/80 text-sm leading-relaxed">La final, reevalu&#259;m &#537;i &#539;i l&#259;s&#259;m un program de exerci&#539;ii ca rezultatele s&#259; r&#259;m&#226;n&#259;.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip"><i class="fa-regular fa-clock"></i> Program</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl leading-[1.05] font-medium">
+        Luni p&#226;n&#259; vineri,<br>
+        <span class="serif-i text-teal">9:00 &mdash; 19:00.</span>
+      </h2>
+      <p class="mt-6 text-muted">Ne g&#259;se&#537;ti la Bulevardul Alexandru Ioan Cuza 46, Slatina. Clinica are ramp&#259; de acces &#537;i parcare accesibil&#259;.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0749164961" class="btn-teal"><i class="fa-solid fa-phone"></i> Programare</a>
+        <a href="https://wa.me/40749164961" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="bg-mintl rounded-3xl p-6 sm:p-8 border border-line">
+        <ul id="hours">
+          <li data-day="1" class="hours-line"><span class="font-semibold">Luni</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="2" class="hours-line"><span class="font-semibold">Mar&#539;i</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="3" class="hours-line"><span class="font-semibold">Miercuri</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="4" class="hours-line"><span class="font-semibold">Joi</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="5" class="hours-line"><span class="font-semibold">Vineri</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="6" class="hours-line"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-line"><span class="font-semibold">Duminic&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="pb-16 sm:pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="bg-nav text-cream rounded-[32px] p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+      <div class="absolute inset-0 dot-bg opacity-20"></div>
+      <div class="relative grid lg:grid-cols-12 gap-10">
+
+        <div class="lg:col-span-7">
+          <span class="chip !bg-teal/15 !text-teal"><i class="fa-solid fa-phone-volume"></i> Contact</span>
+          <h2 class="serif mt-4 text-4xl sm:text-5xl lg:text-6xl leading-[1.02] font-medium">
+            Prima &#537;edin&#539;&#259;<br>
+            <span class="serif-i text-teal">&icirc;ncepe cu un telefon.</span>
+          </h2>
+          <p class="mt-6 max-w-lg text-cream/80">Descrie-ne ce te doare sau ce afec&#539;iune ai. &Icirc;&#539;i spunem dac&#259; te putem ajuta &#537;i &icirc;n c&#226;t timp, &icirc;nc&#259; din prima discu&#539;ie.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="tel:0749164961" class="btn-teal"><i class="fa-solid fa-phone"></i> 0749 164 961</a>
+            <a href="https://wa.me/40749164961" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> Mesaj WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-2xl p-7">
+            <p class="text-xs uppercase tracking-widest text-teal">Adresa cabinetului</p>
+            <p class="mt-2 serif text-xl font-semibold">Bulevardul Alexandru Ioan Cuza 46</p>
+            <p class="text-cream/80 text-sm mt-1">230062 Slatina, jud. Olt</p>
+
+            <div class="mt-6 pt-6 border-t border-cream/20 space-y-3 text-sm">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-teal w-5"></i> 0749 164 961</div>
+              <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-teal w-5"></i> wa.me/40749164961</div>
+              <div class="flex items-center gap-3"><i class="fa-regular fa-clock text-teal w-5"></i> Lun&ndash;Vin 9:00&ndash;19:00</div>
+              <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-teal w-5"></i> Acces complet</div>
+            </div>
+
+            <a href="https://www.google.com/maps/place/DELTA+MED+SRL/@44.426648,24.378378,17z" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal underline decoration-teal/40">
+              <i class="fa-solid fa-location-dot"></i> Vezi pe Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="pt-12 pb-24 md:pb-10 border-t border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-sm text-muted">
+    <span>&copy; 2026 Delta Med SRL &middot; Toate drepturile rezervate</span>
+    <span>Recuperare medical&#259; &middot; Fizioterapie &middot; Kinetoterapie</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0 shadow-[0_-10px_30px_-20px_rgba(0,0,0,.25)]">
+  <a href="tel:0749164961" class="py-4 bg-nav text-cream text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40749164961" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Delta Med SRL",
+  "description": "Cabinet de recuperare medicala, fizioterapie, kinetoterapie si masaj terapeutic in Slatina.",
+  "telephone": "+40749164961",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bulevardul Alexandru Ioan Cuza 46",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230062",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.426648, "longitude": 24.378378 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00", "closes": "19:00"
+  }],
+  "medicalSpecialty": "PhysicalTherapy"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

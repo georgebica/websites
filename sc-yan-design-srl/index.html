@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yan Design Craiova | Agen&#539;ie Web Design &amp; Dezvoltare Site-uri | 0786 355 712</title>
+<meta name="description" content="Yan Design &mdash; agen&#539;ie de web design în Craiova. Site-uri de prezentare, magazine online, identitate vizual&#259;. Proiect personalizat. Sun&#259;: 0786 355 712.">
+<meta name="keywords" content="web design Craiova, agentie web Craiova, site-uri web Craiova, dezvoltare web Dolj, magazine online Craiova, Yan Design, design digital Craiova">
+<meta name="robots" content="index,follow">
+<meta name="author" content="SC Yan Design SRL">
+<link rel="canonical" href="">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Yan Design Craiova">
+<meta property="og:title" content="Yan Design Craiova | Web design profesional">
+<meta property="og:description" content="Creăm site-uri web care aduc rezultate. Agen&#539;ie cu sediul în Craiova.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yan Design Craiova">
+<meta name="twitter:description" content="Web design &#537;i dezvoltare site-uri &middot; Craiova.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['Bricolage Grotesque', 'sans-serif'],
+        'sans': ['DM Sans', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace']
+      },
+      colors: {
+        'violet-yan': {
+          50: '#f3eefd',
+          100: '#d9c9fa',
+          300: '#a37af0',
+          500: '#7537db',
+          700: '#4d1eaf',
+          800: '#2f0d7a',
+          900: '#190a4d'
+        },
+        'electric-y': '#fbd82f',
+        'hot-pink-y': '#ff4d8d',
+        'mint-y': '#62f0a4',
+        'ivory-y': '#f7f4f0'
+      }
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: 'DM Sans', sans-serif; background: #f7f4f0; color: #190a4d; }
+  .font-display { font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -0.02em; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  .gradient-brand {
+    background: linear-gradient(135deg, #190a4d 0%, #7537db 50%, #ff4d8d 100%);
+  }
+  .code-block {
+    background: #190a4d;
+    color: #62f0a4;
+    border-radius: 12px;
+    padding: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+  .dot-accent {
+    background: radial-gradient(circle, #fbd82f 20%, transparent 20%);
+    background-size: 20px 20px;
+  }
+  .blob-shape {
+    border-radius: 48% 52% 38% 62% / 53% 45% 55% 47%;
+  }
+  .tag-pill {
+    display: inline-block;
+    background: #190a4d;
+    color: #fbd82f;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Top -->
+<div class="bg-violet-yan-900 text-electric-y text-center text-xs py-2 font-mono tracking-widest">
+  <i class="fa-solid fa-code mr-2"></i> HELLO_WORLD.yan &middot; WEB DESIGN &middot; CRAIOVA
+</div>
+
+<!-- Nav -->
+<header class="bg-ivory-y border-b-2 border-violet-yan-900 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-12 h-12 gradient-brand rounded-2xl flex items-center justify-center text-ivory-y font-display font-extrabold">Y</div>
+      <div class="leading-tight">
+        <div class="font-display text-2xl font-extrabold text-violet-yan-900">Yan Design</div>
+        <div class="text-[10px] tracking-[0.4em] uppercase text-hot-pink-y font-mono">Web &middot; Craiova</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-violet-yan-800">
+      <a href="#agentia" class="hover:text-hot-pink-y">Agen&#539;ia</a>
+      <a href="#servicii" class="hover:text-hot-pink-y">Servicii</a>
+      <a href="#proces" class="hover:text-hot-pink-y">Proces</a>
+      <a href="#pachete" class="hover:text-hot-pink-y">Pachete</a>
+      <a href="#contact" class="hover:text-hot-pink-y">Contact</a>
+    </nav>
+    <a href="tel:0786355712" class="hidden md:inline-flex items-center gap-2 bg-violet-yan-700 hover:bg-violet-yan-800 text-ivory-y px-5 py-2.5 rounded-full text-sm font-semibold">
+      <i class="fa-solid fa-phone"></i> 0786 355 712
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="py-20 md:py-28 relative overflow-hidden">
+  <div class="absolute top-20 -right-40 w-96 h-96 bg-electric-y blob-shape opacity-60"></div>
+  <div class="absolute bottom-10 -left-20 w-80 h-80 bg-hot-pink-y blob-shape opacity-40"></div>
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-12 gap-10 items-center relative">
+    <div class="md:col-span-7" data-aos="fade-right">
+      <div class="tag-pill mb-6">&lt;web_agency /&gt; est_Craiova</div>
+      <h1 class="font-display font-extrabold text-6xl md:text-8xl leading-[0.9] text-violet-yan-900">
+        Site-uri<br>
+        care <span class="text-hot-pink-y">atrag</span>.<br>
+        Care <span class="text-violet-yan-700">converg</span>.<br>
+        Care <span class="text-electric-y bg-violet-yan-900 px-2">func&#539;ioneaz&#259;</span>.
+      </h1>
+      <p class="mt-8 text-lg text-violet-yan-800 max-w-xl">
+        Yan Design este o agen&#539;ie de web design &#537;i dezvoltare din Craiova. Construim site-uri de prezentare, magazine online &#537;i platforme personalizate pentru afaceri de toate dimensiunile. Nu folosim &#537;abloane gata f&#259;cute &mdash; fiecare proiect primește aten&#539;ia pe care o merit&#259;.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="tel:0786355712" class="bg-violet-yan-900 hover:bg-violet-yan-800 text-ivory-y px-8 py-4 rounded-full font-bold inline-flex items-center gap-3">
+          <i class="fa-solid fa-phone-volume"></i> Cere o discu&#539;ie
+        </a>
+        <a href="https://wa.me/40786355712" class="bg-electric-y hover:bg-mint-y text-violet-yan-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-3">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <div class="mt-12 flex items-center gap-8 text-sm font-mono">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-mint-y rounded-full animate-pulse"></div>
+          <span class="text-violet-yan-700">ACCEPT&#258;M PROIECTE</span>
+        </div>
+        <div class="text-violet-yan-500">&middot;</div>
+        <div class="text-violet-yan-700">RESPONSE &lt; 24h</div>
+      </div>
+    </div>
+
+    <div class="md:col-span-5 relative" data-aos="fade-left">
+      <div class="code-block">
+        <div class="text-hot-pink-y">// brief.yan</div>
+        <div class="mt-3 text-ivory-y/60">const <span class="text-electric-y">clientul_t&#259;u</span> = {</div>
+        <div class="pl-4">nevoie: <span class="text-mint-y">"prezen&#539;&#259; web modern&#259;"</span>,</div>
+        <div class="pl-4">ritm: <span class="text-mint-y">"rezonabil"</span>,</div>
+        <div class="pl-4">buget: <span class="text-mint-y">"corect"</span>,</div>
+        <div class="pl-4">a&#537;tept&#259;ri: <span class="text-mint-y">"concrete"</span></div>
+        <div class="text-ivory-y/60">};</div>
+        <div class="mt-3 text-hot-pink-y">// proces.yan</div>
+        <div class="text-ivory-y/60">yan.<span class="text-electric-y">design</span>(clientul_t&#259;u);</div>
+        <div class="mt-4 border-t border-mint-y/30 pt-3 text-electric-y">&gt; rezultat: site live ✓</div>
+      </div>
+      <div class="absolute -top-5 -left-5 bg-hot-pink-y text-ivory-y px-4 py-2 rounded-full font-bold text-sm rotate-6 shadow-lg">
+        <i class="fa-solid fa-code mr-1"></i> cod curat
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Agentia -->
+<section id="agentia" class="py-20 bg-violet-yan-900 text-ivory-y relative overflow-hidden">
+  <div class="absolute top-10 right-10 w-32 h-32 dot-accent rounded-full opacity-20"></div>
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center relative">
+    <div data-aos="fade-right">
+      <div class="tag-pill mb-5" style="background: #fbd82f; color: #190a4d;">despre noi</div>
+      <h2 class="font-display font-extrabold text-5xl md:text-6xl leading-[0.95]">
+        O agen&#539;ie cu accent<br>pe <span class="text-electric-y">detaliu</span>
+      </h2>
+      <p class="mt-6 text-ivory-y/85 text-lg">
+        Yan Design func&#539;ioneaz&#259; în Craiova, pe Strada Paltinului 3. Lucr&#259;m cu clien&#539;i locali, din alte ora&#537;e române&#537;ti &#537;i cu firme mici din afara &#539;&#259;rii care au nevoie de suport constant în limba român&#259;.
+      </p>
+      <p class="mt-4 text-ivory-y/85 text-lg">
+        Nu suntem cea mai mare agen&#539;ie din România, dar &#537;tim s&#259; ascult&#259;m ce vrei cu adev&#259;rat &#537;i s&#259; transform&#259;m un simplu brief într-un site care face treab&#259;.
+      </p>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-electric-y text-violet-yan-900 p-6 rounded-2xl">
+          <i class="fa-solid fa-palette text-3xl"></i>
+          <div class="font-display font-extrabold text-2xl mt-3">Design</div>
+          <div class="text-xs font-mono mt-1">UI &middot; UX &middot; identity</div>
+        </div>
+        <div class="bg-hot-pink-y text-ivory-y p-6 rounded-2xl mt-8">
+          <i class="fa-solid fa-code text-3xl"></i>
+          <div class="font-display font-extrabold text-2xl mt-3">Dezvoltare</div>
+          <div class="text-xs font-mono mt-1">front-end &middot; back-end</div>
+        </div>
+        <div class="bg-mint-y text-violet-yan-900 p-6 rounded-2xl">
+          <i class="fa-solid fa-rocket text-3xl"></i>
+          <div class="font-display font-extrabold text-2xl mt-3">Lansare</div>
+          <div class="text-xs font-mono mt-1">deploy &middot; seo &middot; test</div>
+        </div>
+        <div class="bg-ivory-y text-violet-yan-900 p-6 rounded-2xl mt-8 border-2 border-violet-yan-700">
+          <i class="fa-solid fa-wrench text-3xl"></i>
+          <div class="font-display font-extrabold text-2xl mt-3">Mentenan&#539;&#259;</div>
+          <div class="text-xs font-mono mt-1">update &middot; backup &middot; fix</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicii -->
+<section id="servicii" class="py-20 bg-ivory-y">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+      <div class="tag-pill mb-5">&lt;servicii /&gt;</div>
+      <h2 class="font-display font-extrabold text-5xl md:text-6xl text-violet-yan-900 leading-[0.95]">Ce <span class="text-hot-pink-y">construim</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white rounded-2xl p-7 border-2 border-violet-yan-100 hover:border-hot-pink-y transition" data-aos="fade-up">
+        <div class="font-mono text-sm text-hot-pink-y mb-3">// 01</div>
+        <i class="fa-solid fa-window-maximize text-3xl text-violet-yan-700"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4 text-violet-yan-900">Site de prezentare</h3>
+        <p class="text-sm text-violet-yan-700 mt-2">Pentru firme care vor o prezen&#539;&#259; web profesional&#259; &mdash; site modern, responsive, cu toate sec&#539;iunile necesare.</p>
+      </div>
+      <div class="bg-violet-yan-900 text-ivory-y rounded-2xl p-7" data-aos="fade-up" data-aos-delay="50">
+        <div class="font-mono text-sm text-electric-y mb-3">// 02</div>
+        <i class="fa-solid fa-cart-shopping text-3xl text-electric-y"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4">Magazin online</h3>
+        <p class="text-sm text-ivory-y/85 mt-2">eCommerce complet cu ge&#537;tionarea produselor, stoc, pl&#259;&#539;i online &#537;i livrare. Pe WordPress + WooCommerce sau solu&#539;ii dedicate.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border-2 border-violet-yan-100 hover:border-hot-pink-y transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-mono text-sm text-hot-pink-y mb-3">// 03</div>
+        <i class="fa-solid fa-newspaper text-3xl text-violet-yan-700"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4 text-violet-yan-900">Landing page</h3>
+        <p class="text-sm text-violet-yan-700 mt-2">Pagin&#259; unic&#259; pentru lansare produs, campanie de marketing sau event. Focus pe conversie, rapid de implementat.</p>
+      </div>
+      <div class="bg-electric-y text-violet-yan-900 rounded-2xl p-7" data-aos="fade-up">
+        <div class="font-mono text-sm mb-3">// 04</div>
+        <i class="fa-solid fa-blog text-3xl"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4">Blog &amp; content</h3>
+        <p class="text-sm mt-2 opacity-90">Blog WordPress cu editor ușor de folosit de nespecialiști. Structur&#259; SEO pentru cre&#537;tere organic&#259;.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border-2 border-violet-yan-100 hover:border-hot-pink-y transition" data-aos="fade-up" data-aos-delay="50">
+        <div class="font-mono text-sm text-hot-pink-y mb-3">// 05</div>
+        <i class="fa-solid fa-mobile-screen text-3xl text-violet-yan-700"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4 text-violet-yan-900">Responsive redesign</h3>
+        <p class="text-sm text-violet-yan-700 mt-2">Ai deja un site vechi? Îl moderniz&#259;m, îl facem rapid &#537;i bine afișat pe telefon, f&#259;r&#259; s&#259; pierzi con&#539;inutul.</p>
+      </div>
+      <div class="bg-hot-pink-y text-ivory-y rounded-2xl p-7" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-mono text-sm mb-3">// 06</div>
+        <i class="fa-solid fa-magnifying-glass-chart text-3xl"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4">SEO &amp; vitez&#259;</h3>
+        <p class="text-sm mt-2 opacity-95">Optimizare pentru motoare de c&#259;utare, Google PageSpeed, structura datelor &#537;i accesibilitate tehnic&#259;.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border-2 border-violet-yan-100 hover:border-hot-pink-y transition" data-aos="fade-up">
+        <div class="font-mono text-sm text-hot-pink-y mb-3">// 07</div>
+        <i class="fa-solid fa-paintbrush text-3xl text-violet-yan-700"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4 text-violet-yan-900">Identitate vizual&#259;</h3>
+        <p class="text-sm text-violet-yan-700 mt-2">Logo, paletă de culori, tipografie, materiale print &#537;i digital. Oferi&#539;i brandului un aspect coerent.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border-2 border-violet-yan-100 hover:border-hot-pink-y transition" data-aos="fade-up" data-aos-delay="50">
+        <div class="font-mono text-sm text-hot-pink-y mb-3">// 08</div>
+        <i class="fa-solid fa-shield-halved text-3xl text-violet-yan-700"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4 text-violet-yan-900">Mentenan&#539;&#259;</h3>
+        <p class="text-sm text-violet-yan-700 mt-2">Update plugin-uri, backup-uri regulate, monitorizare securitate, interven&#539;ii în caz de probleme.</p>
+      </div>
+      <div class="bg-mint-y text-violet-yan-900 rounded-2xl p-7" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-mono text-sm mb-3">// 09</div>
+        <i class="fa-solid fa-at text-3xl"></i>
+        <h3 class="font-display text-2xl font-extrabold mt-4">Email profesional</h3>
+        <p class="text-sm mt-2">nume@firma.ro în loc de nume@gmail.com. G&#259;zduire email profesional&#259;, semnatura coerent&#259; cu brandul.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proces -->
+<section id="proces" class="py-20 gradient-brand text-ivory-y">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="tag-pill mb-5" style="background: #fbd82f; color: #190a4d;">workflow.yan</div>
+      <h2 class="font-display font-extrabold text-5xl md:text-6xl leading-[0.95]">Cum se întâmpl&#259; lucrurile</h2>
+    </div>
+
+    <div class="grid md:grid-cols-5 gap-4">
+      <div class="bg-violet-yan-900/40 backdrop-blur border border-electric-y/30 rounded-2xl p-6" data-aos="fade-up">
+        <div class="font-mono text-xs text-electric-y">[ step_01 ]</div>
+        <div class="font-display font-extrabold text-4xl mt-2">Discover</div>
+        <p class="text-sm text-ivory-y/75 mt-2">Vorbim despre business, obiective &#537;i clien&#539;ii c&#259;tre care vrei s&#259; ajungi.</p>
+      </div>
+      <div class="bg-violet-yan-900/40 backdrop-blur border border-electric-y/30 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-mono text-xs text-electric-y">[ step_02 ]</div>
+        <div class="font-display font-extrabold text-4xl mt-2">Design</div>
+        <p class="text-sm text-ivory-y/75 mt-2">Creăm wireframes &#537;i mock-up-uri. Îți trimitem pentru feedback înainte de cod.</p>
+      </div>
+      <div class="bg-violet-yan-900/40 backdrop-blur border border-electric-y/30 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="font-mono text-xs text-electric-y">[ step_03 ]</div>
+        <div class="font-display font-extrabold text-4xl mt-2">Develop</div>
+        <p class="text-sm text-ivory-y/75 mt-2">Scriem codul, integr&#259;m con&#539;inutul, facem integr&#259;rile necesare cu alte servicii.</p>
+      </div>
+      <div class="bg-violet-yan-900/40 backdrop-blur border border-electric-y/30 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="font-mono text-xs text-electric-y">[ step_04 ]</div>
+        <div class="font-display font-extrabold text-4xl mt-2">Test</div>
+        <p class="text-sm text-ivory-y/75 mt-2">Test&#259;m pe toate browser-ele &#537;i device-urile. Fix&#259;m tot ce trebuie.</p>
+      </div>
+      <div class="bg-electric-y text-violet-yan-900 rounded-2xl p-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="font-mono text-xs">[ step_05 ]</div>
+        <div class="font-display font-extrabold text-4xl mt-2">Launch</div>
+        <p class="text-sm mt-2 opacity-90">Punem site-ul live, monitoriz&#259;m primele zile, îți oferim instrucțiuni de folosire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pachete -->
+<section id="pachete" class="py-20 bg-ivory-y">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="tag-pill mb-5">&lt;pachete /&gt;</div>
+      <h2 class="font-display font-extrabold text-5xl md:text-6xl text-violet-yan-900 leading-[0.95]">Trei puncte de plecare</h2>
+      <p class="mt-4 text-violet-yan-700">Pre&#539;ul final depinde de complexitate. Pachetele sunt doar un cadru orientativ &mdash; toate proiectele sunt personalizate.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-3xl p-8 border-2 border-violet-yan-100 relative" data-aos="fade-up">
+        <div class="tag-pill mb-4">Starter</div>
+        <h3 class="font-display font-extrabold text-3xl text-violet-yan-900">Site de prezentare</h3>
+        <p class="text-sm text-violet-yan-700 mt-2">Firme la început sau cu nevoie minimalist&#259;</p>
+        <div class="my-6 border-t border-violet-yan-100"></div>
+        <ul class="space-y-2 text-sm text-violet-yan-800">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Design personalizat</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>5-7 pagini</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Mobile-responsive</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>SEO de baz&#259;</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Formular contact</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>G&#259;zduire prim an</li>
+        </ul>
+      </div>
+      <div class="bg-violet-yan-900 text-ivory-y rounded-3xl p-8 relative shadow-2xl -mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="tag-pill mb-4" style="background: #fbd82f; color: #190a4d;">Most popular</div>
+        <h3 class="font-display font-extrabold text-3xl">Magazin online</h3>
+        <p class="text-sm text-ivory-y/75 mt-2">Firme care vând produse sau servicii online</p>
+        <div class="my-6 border-t border-electric-y/20"></div>
+        <ul class="space-y-2 text-sm text-ivory-y/90">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-electric-y mt-1"></i>Design personalizat</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-electric-y mt-1"></i>Catalog produse nelimitat</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-electric-y mt-1"></i>Coș cump&#259;r&#259;turi &amp; checkout</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-electric-y mt-1"></i>Plat&#259; online integrat&#259;</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-electric-y mt-1"></i>Managementul comenzilor</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-electric-y mt-1"></i>Integrare curieri</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-electric-y mt-1"></i>Training pentru utilizare</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-3xl p-8 border-2 border-violet-yan-100" data-aos="fade-up" data-aos-delay="200">
+        <div class="tag-pill mb-4">Premium</div>
+        <h3 class="font-display font-extrabold text-3xl text-violet-yan-900">Platform&#259; custom</h3>
+        <p class="text-sm text-violet-yan-700 mt-2">Proiecte cu func&#539;ionalit&#259;&#539;i specifice</p>
+        <div class="my-6 border-t border-violet-yan-100"></div>
+        <ul class="space-y-2 text-sm text-violet-yan-800">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Arhitectur&#259; custom</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Zone pentru utilizatori</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Integr&#259;ri API cu al&#539;i furnizori</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Panou admin complet</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Suport dedicat</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-hot-pink-y mt-1"></i>Discu&#539;ie pre-proiect</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 gradient-brand text-ivory-y">
+  <div class="max-w-5xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <div class="tag-pill mb-5" style="background: #fbd82f; color: #190a4d;">// contact</div>
+      <h2 class="font-display font-extrabold text-5xl md:text-6xl leading-[0.95]">Începem <span class="text-electric-y">cu o discu&#539;ie</span></h2>
+      <p class="mt-5 text-ivory-y/85 text-lg">Sun&#259;-ne sau scrie-ne pe WhatsApp. Î&#539;i r&#259;spundem în 24 de ore cu o prim&#259; evaluare a proiectului t&#259;u.</p>
+
+      <div class="mt-8 space-y-3">
+        <a href="tel:0786355712" class="flex items-center gap-4 bg-ivory-y/10 border border-electric-y/30 backdrop-blur p-5 rounded-xl hover:bg-ivory-y/20 transition">
+          <i class="fa-solid fa-phone-volume text-2xl text-electric-y"></i>
+          <div>
+            <div class="text-xs font-mono text-electric-y">&gt; apel direct</div>
+            <div class="font-display text-2xl font-extrabold">0786 355 712</div>
+          </div>
+        </a>
+        <a href="https://wa.me/40786355712" class="flex items-center gap-4 bg-electric-y text-violet-yan-900 p-5 rounded-xl hover:bg-mint-y transition">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+          <div>
+            <div class="text-xs font-mono">&gt; mesaj asincron</div>
+            <div class="font-display text-2xl font-extrabold">WhatsApp</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="bg-ivory-y/10 backdrop-blur rounded-2xl p-2 border border-electric-y/30">
+        <iframe src="https://www.google.com/maps?q=44.339069,23.769485&hl=ro&z=17&output=embed" width="100%" height="480" style="border:0" allowfullscreen loading="lazy" class="rounded-xl"></iframe>
+      </div>
+      <div class="mt-4 font-mono text-xs text-electric-y text-center">&gt; Strada Paltinului 3, Bloc 174G, Craiova</div>
+    </div>
+  </div>
+</section>
+
+<!-- Program -->
+<section class="py-14 bg-violet-yan-900 text-ivory-y">
+  <div class="max-w-5xl mx-auto px-5 text-center">
+    <div class="font-mono text-electric-y text-xs mb-3">&gt; status</div>
+    <div class="font-display font-extrabold text-3xl md:text-4xl">
+      Disponibili <span class="text-electric-y">7 zile pe s&#259;pt&#259;mân&#259;</span>, între 08:00 &#537;i 20:00
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-ivory-y text-violet-yan-900/80 py-14 border-t-4 border-hot-pink-y">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 gradient-brand rounded-xl flex items-center justify-center text-ivory-y font-display font-extrabold">Y</div>
+        <div>
+          <div class="font-display text-2xl font-extrabold text-violet-yan-900">Yan Design</div>
+          <div class="text-[10px] tracking-[0.4em] uppercase text-hot-pink-y font-mono">Craiova &middot; web</div>
+        </div>
+      </div>
+      <p class="mt-5 text-sm max-w-md">Agen&#539;ie de web design &#537;i dezvoltare cu sediul în Craiova. Site-uri de prezentare, magazine online, platforme custom &#537;i identitate vizual&#259;.</p>
+    </div>
+    <div>
+      <div class="font-display text-lg font-extrabold text-violet-yan-900 mb-4">Contact</div>
+      <ul class="text-sm space-y-2">
+        <li><i class="fa-solid fa-phone w-5 text-hot-pink-y"></i> 0786 355 712</li>
+        <li><i class="fa-brands fa-whatsapp w-5 text-hot-pink-y"></i> WhatsApp</li>
+        <li><i class="fa-solid fa-location-dot w-5 text-hot-pink-y"></i> Paltinului 3</li>
+        <li><i class="fa-solid fa-city w-5 text-hot-pink-y"></i> Craiova, Dolj</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-display text-lg font-extrabold text-violet-yan-900 mb-4">Navigare</div>
+      <ul class="text-sm space-y-2">
+        <li><a href="#agentia" class="hover:text-hot-pink-y">Agen&#539;ia</a></li>
+        <li><a href="#servicii" class="hover:text-hot-pink-y">Servicii</a></li>
+        <li><a href="#proces" class="hover:text-hot-pink-y">Proces</a></li>
+        <li><a href="#pachete" class="hover:text-hot-pink-y">Pachete</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 mt-10 pt-6 border-t border-violet-yan-100 text-xs flex flex-wrap justify-between gap-3">
+    <div>&copy; 2026 SC Yan Design SRL. Toate drepturile rezervate.</div>
+    <div class="font-mono">&lt;/yan&gt;</div>
+  </div>
+</footer>
+
+<!-- Mobile sticky -->
+<div class="fixed bottom-0 inset-x-0 bg-violet-yan-900 flex md:hidden z-50 border-t-2 border-electric-y">
+  <a href="tel:0786355712" class="flex-1 py-4 text-center text-sm font-bold text-ivory-y border-r border-violet-yan-700">
+    <i class="fa-solid fa-phone mr-2 text-electric-y"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40786355712" class="flex-1 py-4 text-center text-sm font-bold text-ivory-y">
+    <i class="fa-brands fa-whatsapp mr-2 text-electric-y"></i> WhatsApp
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "SC Yan Design SRL",
+  "description": "Agen&#539;ie de web design &#537;i dezvoltare în Craiova",
+  "telephone": "+40786355712",
+  "url": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bloc 174G, Strada Paltinului 3",
+    "addressLocality": "Craiova",
+    "postalCode": "200282",
+    "addressRegion": "Dolj",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.339069,
+    "longitude": 23.769485
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "20:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "1"
+  }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 700, once: true, offset: 80});</script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DYG Service &middot; Anvelope &#537;i service auto &icirc;n Craiova</title>
+<meta name="description" content="DYG Service &mdash; magazin de anvelope &#537;i service auto &icirc;n Craiova, Centura de Nord, giratoriul Tancodrom. V&#226;nzare, montare, echilibrare &#537;i garan&#539;ie. Telefon 0765 386 744.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        asphalt: '#151515',
+        asphd:   '#0A0A0A',
+        graph:   '#262626',
+        concrete: '#E7E5E0',
+        concl:    '#F5F3EF',
+        tire:    '#FFD400',
+        tiredark:'#C9A600',
+        rust:    '#E63946',
+        paper:   '#FAFAF7',
+        muted:   '#7A7770',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['Oxanium', 'system-ui', 'sans-serif'],
+        sans:    ['Manrope', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FAFAF7; color: #151515; }
+  body { font-family: Manrope, system-ui, sans-serif; }
+  .display { font-family: Oxanium, system-ui, sans-serif; letter-spacing: -.01em; font-weight: 800; line-height: .95; }
+
+  .tread {
+    background-image: repeating-linear-gradient(90deg, #151515 0 14px, transparent 14px 22px);
+    height: 22px;
+  }
+  .tread-v {
+    background-image: repeating-linear-gradient(0deg, #151515 0 14px, transparent 14px 22px);
+    width: 22px;
+  }
+
+  .stripe {
+    background-image:
+      linear-gradient(135deg, rgba(21,21,21,.04) 25%, transparent 25%, transparent 50%, rgba(21,21,21,.04) 50%, rgba(21,21,21,.04) 75%, transparent 75%, transparent);
+    background-size: 12px 12px;
+  }
+
+  .btn-tire {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #FFD400;
+    color: #151515;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-family: Oxanium, system-ui, sans-serif;
+    font-size: .82rem;
+    border-radius: 4px;
+    transition: all .25s;
+  }
+  .btn-tire:hover { background: #151515; color: #FFD400; transform: translateY(-2px); }
+
+  .btn-ink {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #151515;
+    color: #FAFAF7;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-family: Oxanium, system-ui, sans-serif;
+    font-size: .82rem;
+    border-radius: 4px;
+    transition: all .25s;
+  }
+  .btn-ink:hover { background: #FFD400; color: #151515; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-family: Oxanium, system-ui, sans-serif;
+    font-size: .82rem;
+    border-radius: 4px;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(1.08); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .35rem .85rem;
+    background: #FFD400;
+    color: #151515;
+    font-family: Oxanium, sans-serif;
+    font-weight: 800;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+  .chip-dark {
+    background: #151515;
+    color: #FFD400;
+  }
+
+  .tire-ring {
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #151515 0%, #151515 45%, #262626 47%, #262626 85%, #151515 87%, #151515 100%);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .tire-ring::before {
+    content: "";
+    position: absolute;
+    inset: 45px;
+    border-radius: 50%;
+    border: 6px solid #FFD400;
+    border-left-color: transparent;
+    animation: spin 9s linear infinite;
+  }
+  .tire-ring::after {
+    content: "";
+    position: absolute;
+    inset: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,212,0,.25);
+  }
+  @keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+  .tire-ring .center {
+    position: relative; z-index: 2;
+    font-family: Oxanium, sans-serif;
+    color: #FFD400;
+    text-align: center;
+  }
+
+  .svc-card {
+    background: #fff;
+    border: 1px solid #E7E5E0;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    transition: all .35s;
+  }
+  .svc-card:hover { border-color: #151515; transform: translateY(-4px); box-shadow: 0 30px 50px -30px rgba(0,0,0,.25); }
+  .svc-card .num {
+    display: inline-block;
+    padding: .3rem .7rem;
+    background: #151515;
+    color: #FFD400;
+    font-family: Oxanium, sans-serif;
+    font-weight: 800;
+    font-size: .7rem;
+    letter-spacing: .1em;
+  }
+
+  .testi-card {
+    background: #151515;
+    color: #FAFAF7;
+    padding: 1.8rem;
+    border-radius: 8px;
+    border-left: 4px solid #FFD400;
+    position: relative;
+  }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 1px dashed rgba(21,21,21,.25);
+    font-size: .95rem;
+    font-family: Oxanium, sans-serif;
+    font-weight: 600;
+  }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { background: #FFD400; padding: .75rem .75rem; margin: 0 -.75rem; border-bottom-color: transparent; }
+
+  .mobile-link { display:block; padding: 1rem 0; font-family: Oxanium, sans-serif; font-weight: 800; font-size: 1.7rem; border-bottom: 1px solid #E7E5E0; text-transform: uppercase; letter-spacing: .03em; }
+
+  .stat {
+    background: #151515;
+    color: #fff;
+    padding: 1.1rem 1.3rem;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-paper border-b-4 border-asphalt">
+  <div class="tread bg-asphalt"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-12 h-12 rounded-full bg-asphalt border-4 border-tire flex items-center justify-center">
+        <i class="fa-solid fa-gear text-tire"></i>
+      </span>
+      <div class="leading-tight">
+        <p class="display text-xl">DYG SERVICE</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Anvelope &middot; Craiova</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[12px] font-bold uppercase tracking-wider text-asphalt/85 display">
+      <a href="#servicii"  class="hover:text-tiredark">Servicii</a>
+      <a href="#avantaje"  class="hover:text-tiredark">Avantaje</a>
+      <a href="#recenzii"  class="hover:text-tiredark">Recenzii</a>
+      <a href="#program"   class="hover:text-tiredark">Program</a>
+      <a href="tel:0765386744" class="btn-tire !py-2.5 !px-4 !text-[11px]">0765 386 744</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 bg-asphalt rounded flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars text-tire"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-paper z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-3xl">DYG SERVICE</span>
+    <button id="menu-close" class="w-11 h-11 bg-asphalt rounded flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark text-tire"></i></button>
+  </div>
+  <nav class="mt-8">
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#avantaje" class="mobile-link">Avantaje</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#program"  class="mobile-link">Program</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-2">
+    <a href="tel:0765386744" class="btn-tire">Sun&#259;</a>
+    <a href="https://wa.me/40765386744" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="bg-asphalt text-paper relative overflow-hidden">
+  <div class="absolute inset-0 stripe opacity-20"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-14 sm:pt-20 lg:pt-28 pb-20 sm:pb-32 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip chip-dark"><i class="fa-solid fa-bolt"></i> Centura de Nord Craiova</span>
+      <h1 class="display mt-6 text-5xl sm:text-7xl lg:text-8xl">
+        ANVELOPE.<br>
+        <span class="text-tire">MONTARE.</span><br>
+        <span class="text-paper/80">GARAN&#538;IE.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-paper/70 leading-relaxed">
+        DYG Service este magazinul de anvelope din Craiova care &#537;tie c&#259; timpul t&#259;u are valoare. Venim cu pre&#539;uri corecte, stoc mare &#537;i echipa care lucreaz&#259; f&#259;r&#259; drame.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0765386744" class="btn-tire"><i class="fa-solid fa-phone"></i> 0765 386 744</a>
+        <a href="https://wa.me/40765386744" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-3 gap-3">
+        <div class="stat">
+          <p class="display text-3xl text-tire">260+</p>
+          <p class="text-[10px] uppercase tracking-widest text-paper/60 mt-1">recenzii Google</p>
+        </div>
+        <div class="stat">
+          <p class="display text-3xl text-tire">4.4</p>
+          <p class="text-[10px] uppercase tracking-widest text-paper/60 mt-1">pe 5 stele</p>
+        </div>
+        <div class="stat">
+          <p class="display text-3xl text-tire">STOC</p>
+          <p class="text-[10px] uppercase tracking-widest text-paper/60 mt-1">permanent &icirc;n depozit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="120">
+      <div class="tire-ring">
+        <div class="center">
+          <p class="display text-xl">DYG</p>
+          <p class="display text-6xl mt-1">4.4</p>
+          <div class="flex justify-center text-tire text-xs mt-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+          <p class="text-[10px] uppercase tracking-widest mt-2 text-paper/60">260 recenzii</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="tread bg-tire"></div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl">
+      <span class="chip"><i class="fa-solid fa-list"></i> Serviciile noastre</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        Tot ce &#539;ine<br>de <span class="text-tiredark">anvelopele tale.</span>
+      </h2>
+      <p class="mt-4 text-muted">V&#226;nzare, montare, echilibrare, reparare &#537;i garan&#539;ie. Totul &icirc;ntr-un singur loc.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="svc-card" data-aos="fade-up">
+        <span class="num">01</span>
+        <i class="fa-solid fa-circle-dot mt-5 block text-asphalt text-3xl"></i>
+        <h3 class="display text-2xl mt-4">Anvelope noi &#537;i SH</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Stoc permanent de anvelope vara, iarna &#537;i all-season, pentru toate modelele de ma&#537;ini. M&#259;rci de top la pre&#539;uri accesibile.</p>
+      </article>
+
+      <article class="svc-card" data-aos="fade-up" data-aos-delay="60">
+        <span class="num">02</span>
+        <i class="fa-solid fa-screwdriver-wrench mt-5 block text-asphalt text-3xl"></i>
+        <h3 class="display text-2xl mt-4">Montare &#537;i dezechilibrare</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Montare rapid&#259;, echilibrare electronic&#259; &#537;i balansare cu aparatur&#259; profesional&#259;. R&#259;m&#226;i doar c&#226;teva minute.</p>
+      </article>
+
+      <article class="svc-card" data-aos="fade-up" data-aos-delay="120">
+        <span class="num">03</span>
+        <i class="fa-solid fa-bandage mt-5 block text-asphalt text-3xl"></i>
+        <h3 class="display text-2xl mt-4">Reparare pene &#537;i pierderi</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Reparare anvelope cu petec la cald, vulcanizare, pierdere de aer din jant&#259;, verificare presiune &#537;i curent&#259;.</p>
+      </article>
+
+      <article class="svc-card" data-aos="fade-up" data-aos-delay="180">
+        <span class="num">04</span>
+        <i class="fa-solid fa-warehouse mt-5 block text-asphalt text-3xl"></i>
+        <h3 class="display text-2xl mt-4">Hotel anvelope</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Depozit&#259;m anvelopele tale de sezon &icirc;n condi&#539;ii controlate (temperatur&#259;, umiditate), pe perioada &icirc;n care nu le folose&#537;ti.</p>
+      </article>
+
+      <article class="svc-card" data-aos="fade-up" data-aos-delay="240">
+        <span class="num">05</span>
+        <i class="fa-solid fa-oil-can mt-5 block text-asphalt text-3xl"></i>
+        <h3 class="display text-2xl mt-4">Service general auto</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Schimb ulei, filtre, pl&#259;cu&#539;e fr&#226;n&#259;, becuri &#537;i opera&#539;iuni de &icirc;ntre&#539;inere comune pentru ma&#537;ina ta.</p>
+      </article>
+
+      <article class="svc-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="num">06</span>
+        <i class="fa-solid fa-shield-halved mt-5 block text-asphalt text-3xl"></i>
+        <h3 class="display text-2xl mt-4">Garan&#539;ie &#537;i retur</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Pentru orice anvelop&#259; v&#226;ndut&#259; de noi, garan&#539;ia se onoreaz&#259; rapid. Defect de produc&#539;ie? &Icirc;&#539;i aducem alta.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="avantaje" class="py-16 sm:py-24 bg-concl">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip"><i class="fa-solid fa-award"></i> De ce DYG</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        Firm&#259; de aur,<br><span class="text-tiredark">din 260+ clien&#539;i.</span>
+      </h2>
+      <p class="mt-6 text-muted leading-relaxed">DYG Service este laureat al proiectului &bdquo;Firma de Aur&rdquo;. Recunoa&#537;tem pe dinafar&#259; c&#259; asta &icirc;nseamn&#259; c&#259; am f&#259;cut ceva bine.</p>
+    </div>
+
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+      <div class="bg-white border-l-4 border-tire p-5">
+        <i class="fa-solid fa-bolt text-tiredark text-xl"></i>
+        <p class="display text-xl mt-3">Servire prompt&#259;</p>
+        <p class="text-sm text-muted mt-2">Te a&#537;tept&#259;m la programare sau direct la atelier, iar lucrarea se face f&#259;r&#259; ore de a&#537;teptare.</p>
+      </div>
+      <div class="bg-white border-l-4 border-tire p-5">
+        <i class="fa-solid fa-tags text-tiredark text-xl"></i>
+        <p class="display text-xl mt-3">Pre&#539;uri corecte</p>
+        <p class="text-sm text-muted mt-2">Pre&#539;uri transparente, f&#259;r&#259; costuri ascunse. Ne pl&#259;tim oamenii, nu l&#259;comia.</p>
+      </div>
+      <div class="bg-white border-l-4 border-tire p-5">
+        <i class="fa-solid fa-wheelchair text-tiredark text-xl"></i>
+        <p class="display text-xl mt-3">Complet accesibil</p>
+        <p class="text-sm text-muted mt-2">Parcare &#537;i intrare accesibile persoanelor cu mobilitate redus&#259;.</p>
+      </div>
+      <div class="bg-white border-l-4 border-tire p-5">
+        <i class="fa-solid fa-credit-card text-tiredark text-xl"></i>
+        <p class="display text-xl mt-3">Card, NFC, numerar</p>
+        <p class="text-sm text-muted mt-2">Po&#539;i achita cu cardul, cu telefonul (NFC / Apple Pay / Google Pay) sau cu numerar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl">
+      <span class="chip chip-dark"><i class="fa-solid fa-star"></i> P&#259;reri clien&#539;i</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        Ce spun<br>b&#259;ie&#539;ii <span class="text-tiredark">&#537;i fetele</span> care ne-au c&#259;lcat pragul.
+      </h2>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="testi-card" data-aos="fade-up">
+        <div class="flex text-tire text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/85 leading-relaxed">Tot timpul am g&#259;sit pre&#539;uri bune &#537;i b&#259;ie&#539;i preg&#259;ti&#539;i care &#537;tiu s&#259; te sf&#259;tuiasc&#259;!</p>
+        <p class="display text-sm mt-5 text-tire">&mdash; Daniel Grigorascu</p>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="flex text-tire text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/85 leading-relaxed">B&#259;ie&#539;i foarte amabili &#537;i servire prompt&#259;.</p>
+        <p class="display text-sm mt-5 text-tire">&mdash; Flo Cyoby</p>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="flex text-tire text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/85 leading-relaxed">Foarte bun magazinul de piese auto &#537;i pre&#539;uri accesibile.</p>
+        <p class="display text-sm mt-5 text-tire">&mdash; Robert Bojenoiu</p>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="180">
+        <div class="flex text-tire text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/85 leading-relaxed">Seriozitate &#537;i pre&#539;uri corecte!</p>
+        <p class="display text-sm mt-5 text-tire">&mdash; Claudiu David</p>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="flex text-tire text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/85 leading-relaxed">Piese comandate profesional &#537;i rapid!</p>
+        <p class="display text-sm mt-5 text-tire">&mdash; Razvan-Cristian Marian</p>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex text-tire text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/85 leading-relaxed">Oameni extraordinari, pre&#539;uri excelente.</p>
+        <p class="display text-sm mt-5 text-tire">&mdash; &#536;tef&#259;nescu Cosmin Florin</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24 bg-concl">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip"><i class="fa-regular fa-clock"></i> Program de lucru</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        &#536;ase zile<br><span class="text-tiredark">pe s&#259;pt&#259;m&#226;n&#259;.</span>
+      </h2>
+      <p class="mt-6 text-muted">Luni-vineri stai pe drum non-stop, s&#226;mb&#259;ta pe jum&#259;tate. Duminica ne odihnim, la fel ca tine.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0765386744" class="btn-ink"><i class="fa-solid fa-phone"></i> Sun&#259;</a>
+        <a href="https://wa.me/40765386744" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="bg-paper border-2 border-asphalt p-6 sm:p-8">
+        <ul id="hours">
+          <li data-day="1" class="hours-row"><span>Luni</span><span>09:00 &ndash; 18:00</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span>09:00 &ndash; 18:00</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span>09:00 &ndash; 18:00</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span>09:00 &ndash; 18:00</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span>09:00 &ndash; 18:00</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span>09:00 &ndash; 15:00</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-asphalt text-paper">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip"><i class="fa-solid fa-phone-volume"></i> Contact</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+        VINO LA NOI<br><span class="text-tire">PE CENTUR&#258;.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-paper/70">Ne g&#259;se&#537;ti pe Centura de Nord a Craiovei, la giratoriul Tancodrom, pe direc&#539;ia spre &#536;imnic. U&#537;or de g&#259;sit &#537;i u&#537;or de parcat.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0765386744" class="btn-tire"><i class="fa-solid fa-phone"></i> 0765 386 744</a>
+        <a href="https://wa.me/40765386744" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> Mesaj WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-graph border-l-4 border-tire p-7">
+        <p class="chip chip-dark">Loca&#539;ie</p>
+        <p class="display text-2xl mt-4 text-tire">Calea Craiovei nr. 140</p>
+        <p class="text-sm text-paper/70 mt-2">Comuna &#536;imnicu de Sus, Sat Albe&#537;ti<br>Centura de Nord, giratoriul Tancodrom<br>Craiova 207550</p>
+
+        <div class="mt-6 h-px bg-paper/20"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-tire w-5"></i> 0765 386 744</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-tire w-5"></i> wa.me/40765386744</div>
+          <div class="flex items-center gap-3"><i class="fa-regular fa-clock text-tire w-5"></i> Lun-Vin 9-18 &middot; S&#226;m 9-15</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-credit-card text-tire w-5"></i> Card &middot; NFC &middot; Numerar</div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/DYG+service+-+Anvelope+Craiova/@44.3477114,23.7874041,17z" class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-tire font-bold">
+          <i class="fa-solid fa-location-dot"></i> Deschide &icirc;n Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-asphd text-paper/60 py-10 pb-24 md:pb-10 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 DYG SERVICE &middot; Toate drepturile rezervate</span>
+    <span>Craiova &middot; Dolj &middot; Rom&#226;nia</span>
+    <span>Firma de Aur &middot; Laureat</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0765386744" class="py-4 bg-tire text-asphalt text-center display text-sm"><i class="fa-solid fa-phone mr-2"></i> SUN&#258;</a>
+  <a href="https://wa.me/40765386744" class="py-4 bg-wa text-white text-center display text-sm"><i class="fa-brands fa-whatsapp mr-2"></i> WHATSAPP</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "DYG Service - Anvelope Craiova",
+  "description": "Magazin de anvelope si service auto in Craiova, Centura de Nord, giratoriul Tancodrom.",
+  "telephone": "+40765386744",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calea Craiovei nr 140, Comuna Simnicu de Sus, Sat Albesti",
+    "addressLocality": "Craiova",
+    "addressRegion": "Dolj",
+    "postalCode": "207550",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.347711, "longitude": 23.787404 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "260" },
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

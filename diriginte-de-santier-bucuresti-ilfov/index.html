@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diriginte de &#536;antier Bucure&#537;ti-Ilfov &middot; Supraveghere construc&#539;ii</title>
+<meta name="description" content="Diriginte de &#537;antier autorizat pentru construc&#539;ii &icirc;n Bucure&#537;ti &#537;i Ilfov. &#536;oseaua Colentina 26, Sector 2. Telefon 0727 753 763.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        hivis:   '#F4D40A',
+        hivisd:  '#C9AB00',
+        asphalt: '#1E1E1E',
+        asphd:   '#0E0E0E',
+        concr:   '#D1D0CB',
+        cream:   '#FBFBF8',
+        ink:     '#141414',
+        muted:   '#6B6B66',
+        line:    '#DEDCD2',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        sans: ['"Libre Franklin"', 'system-ui', 'sans-serif'],
+        mono: ['"Source Code Pro"', 'ui-monospace', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FBFBF8; color: #141414; }
+  body { font-family: "Libre Franklin", system-ui, sans-serif; }
+  .mono { font-family: "Source Code Pro", ui-monospace, monospace; }
+
+  .hivis-stripes {
+    background-image: repeating-linear-gradient(45deg, #F4D40A 0 28px, #1E1E1E 28px 56px);
+  }
+
+  .btn-hivis {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #F4D40A;
+    color: #141414;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: .8rem;
+    transition: all .25s;
+  }
+  .btn-hivis:hover { background: #C9AB00; transform: translateY(-2px); }
+
+  .btn-ink {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #141414;
+    color: #FBFBF8;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: .8rem;
+    transition: all .25s;
+  }
+  .btn-ink:hover { background: #F4D40A; color: #141414; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: .8rem;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .35rem .9rem;
+    background: #F4D40A;
+    color: #141414;
+    font-family: "Source Code Pro", monospace;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .blueprint {
+    background-color: #FBFBF8;
+    background-image:
+      linear-gradient(rgba(20,20,20,.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20,20,20,.08) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  .check-item {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #DEDCD2;
+    align-items: start;
+  }
+  .check-item:last-child { border: 0; }
+
+  .mobile-link { display: block; padding: 1rem 0; font-weight: 800; font-size: 1.6rem; border-bottom: 1px solid #DEDCD2; text-transform: uppercase; letter-spacing: .02em; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .7rem 0;
+    border-bottom: 1px dashed rgba(20,20,20,.2);
+    font-family: "Source Code Pro", monospace;
+    font-size: .9rem;
+  }
+  .hours-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b-4 border-ink">
+  <div class="hivis-stripes h-3"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 bg-hivis border-2 border-ink flex items-center justify-center"><i class="fa-solid fa-helmet-safety"></i></span>
+      <div class="leading-tight">
+        <p class="font-extrabold text-lg leading-none">DIRIGINTE DE &#536;ANTIER</p>
+        <p class="mono text-[10px] text-muted mt-0.5">Bucure&#537;ti &middot; Ilfov</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[11px] font-extrabold uppercase tracking-widest">
+      <a href="#despre"   class="hover:text-hivisd">Despre</a>
+      <a href="#servicii" class="hover:text-hivisd">Servicii</a>
+      <a href="#proces"   class="hover:text-hivisd">Proces</a>
+      <a href="#contact"  class="hover:text-hivisd">Contact</a>
+      <a href="tel:0727753763" class="btn-hivis !py-2.5 !px-4 !text-[10px]">0727 753 763</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 bg-hivis border-2 border-ink flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="font-extrabold text-2xl">DIRIGINTE DE &#536;ANTIER</span>
+    <button id="menu-close" class="w-11 h-11 bg-hivis border-2 border-ink flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-8">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-2">
+    <a href="tel:0727753763" class="btn-hivis">Sun&#259;</a>
+    <a href="https://wa.me/40727753763" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="blueprint py-14 sm:py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-triangle-exclamation"></i> Autorizat ISC</span>
+      <h1 class="mt-6 text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-[.92] tracking-tight">
+        Un &#537;antier<br>
+        bine condus<br>
+        <span class="text-hivisd bg-ink px-2">economise&#537;te bani.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Oferim servicii profesionale de diriginte de &#537;antier pentru construc&#539;ii reziden&#539;iale, comerciale &#537;i industriale &icirc;n Bucure&#537;ti &#537;i Ilfov. Verific&#259;m execu&#539;ia, document&#259;m, raport&#259;m &#537;i protej&#259;m interesul clientului pe toat&#259; durata proiectului.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0727753763" class="btn-hivis"><i class="fa-solid fa-phone"></i> 0727 753 763</a>
+        <a href="https://wa.me/40727753763" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+      <div class="bg-ink text-cream p-8 relative">
+        <div class="absolute top-4 right-4 w-16 h-16 border-2 border-hivis flex items-center justify-center">
+          <i class="fa-solid fa-check text-hivis text-2xl"></i>
+        </div>
+        <p class="mono text-[10px] text-hivis uppercase tracking-widest">&mdash; Autoriza&#539;ii</p>
+        <p class="text-3xl font-extrabold mt-3">Diriginte<br>autorizat.</p>
+        <p class="mt-3 text-sm text-cream/70">Autoriza&#539;ie emis&#259; de Inspectoratul de Stat &icirc;n Construc&#539;ii (ISC), pentru categoriile de construc&#539;ii permise de lege.</p>
+
+        <div class="mt-8 pt-6 border-t border-cream/15 grid grid-cols-3 gap-2 text-center">
+          <div>
+            <p class="text-3xl font-extrabold text-hivis">ISC</p>
+            <p class="mono text-[9px] text-cream/60 mt-1">autorizat</p>
+          </div>
+          <div>
+            <p class="text-3xl font-extrabold text-hivis">24h</p>
+            <p class="mono text-[9px] text-cream/60 mt-1">telefon</p>
+          </div>
+          <div>
+            <p class="text-3xl font-extrabold text-hivis">B+IF</p>
+            <p class="mono text-[9px] text-cream/60 mt-1">zon&#259; acoperit&#259;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">&gt; rolul dirigintei</span>
+      <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-[1.02]">
+        Ce face<br><span class="text-hivis">un diriginte de &#537;antier?</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7">
+      <p class="text-lg text-cream/85 leading-relaxed">Diriginte de &#537;antier este rolul legal al persoanei autorizate de ISC care reprezint&#259; beneficiarul pe &#537;antier. Verific&#259; executarea corect&#259; a lucr&#259;rilor conform proiectului autorizat, respectarea normelor de construc&#539;ie, calitatea materialelor &#537;i progresul &icirc;n termen.</p>
+
+      <div class="mt-8 grid sm:grid-cols-2 gap-4">
+        <div class="border border-cream/15 p-5">
+          <p class="mono text-[10px] text-hivis">01</p>
+          <p class="mt-2 font-extrabold text-lg">Reprezint&#259; beneficiarul</p>
+          <p class="mt-2 text-sm text-cream/70">Pe &#537;antier, &icirc;naintea executantului &#537;i a autorit&#259;&#539;ilor de control.</p>
+        </div>
+        <div class="border border-cream/15 p-5">
+          <p class="mono text-[10px] text-hivis">02</p>
+          <p class="mt-2 font-extrabold text-lg">Verific&#259; calitatea</p>
+          <p class="mt-2 text-sm text-cream/70">Materiale, tehnologie, respectare proiect, fazele de execu&#539;ie.</p>
+        </div>
+        <div class="border border-cream/15 p-5">
+          <p class="mono text-[10px] text-hivis">03</p>
+          <p class="mt-2 font-extrabold text-lg">Documenteaz&#259;</p>
+          <p class="mt-2 text-sm text-cream/70">Procese verbale, buletine de &icirc;ncerc&#259;ri, jurnal de &#537;antier.</p>
+        </div>
+        <div class="border border-cream/15 p-5">
+          <p class="mono text-[10px] text-hivis">04</p>
+          <p class="mt-2 font-extrabold text-lg">Particip&#259; la recep&#539;ie</p>
+          <p class="mt-2 text-sm text-cream/70">Recep&#539;ie pe faze determinante &#537;i final&#259; la terminarea lucr&#259;rilor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">&gt; ce oferim</span>
+    <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-[1.02]">
+      Servicii de<br><span class="text-hivisd">diriginte de &#537;antier.</span>
+    </h2>
+
+    <div class="mt-12">
+      <div class="check-item">
+        <i class="fa-solid fa-check-double text-hivisd text-xl mt-1"></i>
+        <div>
+          <p class="font-extrabold text-xl">Supraveghere execu&#539;ie</p>
+          <p class="mt-1 text-muted text-sm">Verificarea execut&#259;rii lucr&#259;rilor pe toate fazele &#537;i urm&#259;rirea conformit&#259;&#539;ii cu proiectul.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <i class="fa-solid fa-file-contract text-hivisd text-xl mt-1"></i>
+        <div>
+          <p class="font-extrabold text-xl">Jurnal de &#537;antier</p>
+          <p class="mt-1 text-muted text-sm">&#538;inerea jurnalului oficial de &#537;antier &#537;i a documenta&#539;iei &icirc;ntocmite &icirc;n teren.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <i class="fa-solid fa-clipboard-check text-hivisd text-xl mt-1"></i>
+        <div>
+          <p class="font-extrabold text-xl">Recep&#539;ii pe faze</p>
+          <p class="mt-1 text-muted text-sm">Verific&#259;ri la faze determinante, participare la recep&#539;ie la terminarea lucr&#259;rilor.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <i class="fa-solid fa-vial text-hivisd text-xl mt-1"></i>
+        <div>
+          <p class="font-extrabold text-xl">Analize &#537;i buletine</p>
+          <p class="mt-1 text-muted text-sm">Verificarea buletinelor de &icirc;ncerc&#259;ri pentru betoane, o&#539;el, agregate &#537;i alte materiale.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <i class="fa-solid fa-shield-halved text-hivisd text-xl mt-1"></i>
+        <div>
+          <p class="font-extrabold text-xl">Conformitate legal&#259;</p>
+          <p class="mt-1 text-muted text-sm">Respectarea normelor tehnice &icirc;n vigoare, a Legii calit&#259;&#539;ii &icirc;n construc&#539;ii.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <i class="fa-solid fa-comments text-hivisd text-xl mt-1"></i>
+        <div>
+          <p class="font-extrabold text-xl">Consultan&#539;&#259; pentru beneficiar</p>
+          <p class="mt-1 text-muted text-sm">Asisten&#539;&#259; tehnic&#259;, recomand&#259;ri &#537;i clarificarea documentelor pentru client.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-hivis">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip !bg-ink !text-hivis">&gt; proces</span>
+    <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-[1.02]">
+      De la contract<br>la recep&#539;ie.
+    </h2>
+
+    <div class="mt-12 grid sm:grid-cols-4 gap-4">
+      <div class="bg-cream border-2 border-ink p-5">
+        <p class="mono text-3xl font-extrabold">01</p>
+        <p class="mt-2 font-extrabold uppercase">Contract</p>
+        <p class="mt-1 text-sm text-muted">Analiz&#259;m proiectul, stabilim obiectivele &#537;i semn&#259;m contractul.</p>
+      </div>
+      <div class="bg-cream border-2 border-ink p-5">
+        <p class="mono text-3xl font-extrabold">02</p>
+        <p class="mt-2 font-extrabold uppercase">Monitorizare</p>
+        <p class="mt-1 text-sm text-muted">Vizite la &#537;antier, verific&#259;ri tehnice, rapoarte periodice.</p>
+      </div>
+      <div class="bg-cream border-2 border-ink p-5">
+        <p class="mono text-3xl font-extrabold">03</p>
+        <p class="mt-2 font-extrabold uppercase">Documente</p>
+        <p class="mt-1 text-sm text-muted">Jurnal, procese verbale, buletine, rapoarte c&#259;tre client.</p>
+      </div>
+      <div class="bg-cream border-2 border-ink p-5">
+        <p class="mono text-3xl font-extrabold">04</p>
+        <p class="mt-2 font-extrabold uppercase">Recep&#539;ie</p>
+        <p class="mt-1 text-sm text-muted">Participare la recep&#539;ia final&#259; &#537;i predarea documenta&#539;iei.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-7">
+      <span class="chip">&gt; contact</span>
+      <h2 class="mt-4 text-5xl sm:text-6xl font-extrabold leading-[1.02]">
+        Ave&#539;i un proiect?<br><span class="text-hivisd">Hai s&#259; discut&#259;m.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Acoperim Bucure&#537;tiul, Ilfovul &#537;i zona metropolitan&#259;. Apel direct sau WhatsApp. Ne deplas&#259;m la loca&#539;ia proiectului pentru prima evaluare.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0727753763" class="btn-ink"><i class="fa-solid fa-phone"></i> 0727 753 763</a>
+        <a href="https://wa.me/40727753763" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="border-2 border-ink p-6 bg-cream">
+        <p class="chip">&gt; sediu</p>
+        <p class="font-extrabold text-2xl mt-4">&#536;OSEAUA COLENTINA 26</p>
+        <p class="text-sm text-muted mt-2">Sector 2, Bucure&#537;ti 021181</p>
+
+        <div class="mt-6 h-px bg-ink"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-hivisd w-5"></i> 0727 753 763</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-hivisd w-5"></i> wa.me/40727753763</div>
+          <div class="flex items-center gap-3 mono text-xs"><i class="fa-solid fa-map text-hivisd w-5"></i> Bucure&#537;ti + Ilfov</div>
+        </div>
+
+        <ul id="hours" class="mt-6 pt-4 border-t border-ink/15 text-xs">
+          <li data-day="1" class="hours-row"><span>LUN</span><span>PROGRAM LA CERERE</span></li>
+          <li data-day="2" class="hours-row"><span>MAR</span><span>PROGRAM LA CERERE</span></li>
+          <li data-day="3" class="hours-row"><span>MIE</span><span>PROGRAM LA CERERE</span></li>
+          <li data-day="4" class="hours-row"><span>JOI</span><span>PROGRAM LA CERERE</span></li>
+          <li data-day="5" class="hours-row"><span>VIN</span><span>PROGRAM LA CERERE</span></li>
+          <li data-day="6" class="hours-row"><span>SAM</span><span>LA PROGRAMARE</span></li>
+          <li data-day="0" class="hours-row"><span>DUM</span><span class="text-muted">&Icirc;NCHIS</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-asphd text-cream/65 py-10 pb-24 md:pb-10 border-t-4 border-hivis">
+  <div class="hivis-stripes h-3 -mt-10 -mx-6"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-10 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest mono">
+    <span>&copy; 2026 DIRIGINTE DE &#536;ANTIER</span>
+    <span>BUCURE&#536;TI &middot; ILFOV</span>
+    <span>AUTORIZAT ISC</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0727753763" class="py-4 bg-hivis text-ink text-center font-extrabold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40727753763" class="py-4 bg-wa text-white text-center font-extrabold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Diriginte de Santier Bucuresti-Ilfov",
+  "description": "Servicii profesionale de diriginte de santier pentru constructii in Bucuresti si Ilfov.",
+  "telephone": "+40727753763",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Soseaua Colentina 26",
+    "addressLocality": "Bucuresti",
+    "addressRegion": "Sector 2",
+    "postalCode": "021181",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.4628762, "longitude": 26.1340711 },
+  "areaServed": ["Bucuresti","Ilfov"],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "7" }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

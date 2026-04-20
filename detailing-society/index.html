@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detailing Society &middot; Detailing auto premium &icirc;n Bucure&#537;ti</title>
+<meta name="description" content="Detailing Society &mdash; detailing auto &#537;i auto restoration &icirc;n Bucure&#537;ti, Bd. Bucure&#537;tii Noi 216, Sector 1. Programare la 0766 361 100.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        noir:    '#0A0A0A',
+        noird:   '#000000',
+        red:     '#E63946',
+        redd:    '#B7242E',
+        ivory:   '#F8F7F4',
+        ash:     '#1C1C1C',
+        metal:   '#9A9A9A',
+        muted:   '#707070',
+        line:    '#1F1F1F',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['"Big Shoulders Display"', 'Impact', 'sans-serif'],
+        sans:    ['Inter', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #0A0A0A; color: #F8F7F4; }
+  body { font-family: Inter, system-ui, sans-serif; }
+  .display { font-family: "Big Shoulders Display", Impact, sans-serif; letter-spacing: .005em; line-height: .86; font-weight: 900; }
+
+  .btn-red {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #E63946;
+    color: #F8F7F4;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: all .25s;
+  }
+  .btn-red:hover { background: #B7242E; transform: translateY(-2px); }
+
+  .btn-ghost {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: transparent;
+    color: #F8F7F4;
+    border: 1px solid #F8F7F4;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: all .25s;
+  }
+  .btn-ghost:hover { background: #F8F7F4; color: #0A0A0A; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(1.08); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .4rem .95rem;
+    border: 1px solid rgba(248,247,244,.3);
+    color: #F8F7F4;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+
+  .metal-grad {
+    background: linear-gradient(90deg, #9A9A9A 0%, #F8F7F4 40%, #9A9A9A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .card {
+    background: #1C1C1C;
+    border: 1px solid #2B2B2B;
+    padding: 1.8rem;
+    transition: all .35s;
+    position: relative;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 0;
+    background: #E63946;
+    transition: height .4s;
+  }
+  .card:hover::before { height: 100%; }
+  .card:hover { transform: translateY(-4px); border-color: #E63946; }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Big Shoulders Display", sans-serif; font-size: 2.2rem; font-weight: 900; border-bottom: 1px solid #2B2B2B; text-transform: uppercase; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 1px dashed #2B2B2B;
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 border border-red flex items-center justify-center">
+        <span class="display text-2xl text-red">DS</span>
+      </span>
+      <div class="leading-tight">
+        <p class="display text-2xl">DETAILING SOCIETY</p>
+        <p class="text-[10px] tracking-[.2em] uppercase text-metal mt-1">Auto restoration &middot; Bucure&#537;ti</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold uppercase tracking-wider display text-ivory/85">
+      <a href="#servicii" class="hover:text-red">Servicii</a>
+      <a href="#proces"   class="hover:text-red">Proces</a>
+      <a href="#why"      class="hover:text-red">De ce noi</a>
+      <a href="#contact"  class="hover:text-red">Contact</a>
+      <a href="tel:0766361100" class="btn-red !py-2.5 !px-4 !text-[10px]">0766 361 100</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 border border-ivory flex items-center justify-center"><i class="fa-solid fa-bars text-ivory"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-noir z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-3xl">DETAILING SOCIETY</span>
+    <button id="menu-close" class="w-11 h-11 border border-ivory flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-8">
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#why"      class="mobile-link">De ce noi</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-2">
+    <a href="tel:0766361100" class="btn-red">Sun&#259;</a>
+    <a href="https://wa.me/40766361100" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-14 sm:py-24 lg:py-32 text-center relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-noird/40 pointer-events-none"></div>
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 relative">
+
+    <span class="chip" data-aos="fade-up"><span class="w-2 h-2 rounded-full bg-red"></span> Gold award 2026</span>
+
+    <h1 class="display mt-10 text-[clamp(4rem,16vw,14rem)]" data-aos="fade-up" data-aos-delay="40">
+      <span class="metal-grad">LUXURY</span><br>
+      DETAILING.<br>
+      <span class="text-red">BUCURE&#536;TI.</span>
+    </h1>
+
+    <p class="mt-10 max-w-2xl mx-auto text-lg text-ivory/70 leading-relaxed" data-aos="fade-up" data-aos-delay="120">
+      Detailing Society este atelierul din Sector 1 unde ma&#537;ina ta prime&#537;te aten&#539;ia unui obiect rar. Detaliu dup&#259; detaliu, f&#259;r&#259; grab&#259;, f&#259;r&#259; compromis.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center" data-aos="fade-up" data-aos-delay="180">
+      <a href="tel:0766361100" class="btn-red"><i class="fa-solid fa-phone"></i> 0766 361 100</a>
+      <a href="https://wa.me/40766361100" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      <a href="#servicii" class="btn-ghost"><i class="fa-solid fa-arrow-down"></i> Vezi serviciile</a>
+    </div>
+
+    <div class="mt-16 grid grid-cols-3 gap-6 max-w-3xl mx-auto border-t border-line pt-10">
+      <div>
+        <p class="display text-5xl text-red">5.0</p>
+        <p class="text-[10px] uppercase tracking-widest text-metal mt-1">Google rating</p>
+      </div>
+      <div>
+        <p class="display text-5xl text-red">17</p>
+        <p class="text-[10px] uppercase tracking-widest text-metal mt-1">recenzii 5<i class="fa-solid fa-star ml-1 text-xs"></i></p>
+      </div>
+      <div>
+        <p class="display text-5xl text-red">S1</p>
+        <p class="text-[10px] uppercase tracking-widest text-metal mt-1">Sector 1 Bucure&#537;ti</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24 bg-ash">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <span class="chip">&mdash; Servicii</span>
+    <h2 class="display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+      LUCRUL NOSTRU,<br><span class="text-red">PE CATEGORII.</span>
+    </h2>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-noir">
+      <div class="card">
+        <p class="display text-[9px] text-red tracking-[.25em]">CAT 01</p>
+        <h3 class="display text-3xl mt-3">Exterior<br>Detailing</h3>
+        <p class="mt-4 text-sm text-ivory/65 leading-relaxed">Sp&#259;lare profesional&#259;, decontaminare vopsea, cear&#259;, tratament pentru caroserie, jenti &#537;i sticle.</p>
+      </div>
+      <div class="card">
+        <p class="display text-[9px] text-red tracking-[.25em]">CAT 02</p>
+        <h3 class="display text-3xl mt-3">Interior<br>Detailing</h3>
+        <p class="mt-4 text-sm text-ivory/65 leading-relaxed">Cur&#259;&#539;are profund&#259; tapi&#539;erie, plastice, plafon, mochete. Eliminare mirosuri.</p>
+      </div>
+      <div class="card">
+        <p class="display text-[9px] text-red tracking-[.25em]">CAT 03</p>
+        <h3 class="display text-3xl mt-3">Ceramic<br>Coating</h3>
+        <p class="mt-4 text-sm text-ivory/65 leading-relaxed">Aplicare ceramic coating pentru protec&#539;ia vopselei, cu garan&#539;ie pe strat.</p>
+      </div>
+      <div class="card">
+        <p class="display text-[9px] text-red tracking-[.25em]">CAT 04</p>
+        <h3 class="display text-3xl mt-3">Paint<br>Correction</h3>
+        <p class="mt-4 text-sm text-ivory/65 leading-relaxed">Polish, corec&#539;ie zg&#226;rieturi, refinishing pentru revenirea str&#259;lucirii originale.</p>
+      </div>
+      <div class="card">
+        <p class="display text-[9px] text-red tracking-[.25em]">CAT 05</p>
+        <h3 class="display text-3xl mt-3">Engine<br>Bay</h3>
+        <p class="mt-4 text-sm text-ivory/65 leading-relaxed">Degresare &#537;i &icirc;ntinerire compartiment motor, sigur pentru toate componentele.</p>
+      </div>
+      <div class="card">
+        <p class="display text-[9px] text-red tracking-[.25em]">CAT 06</p>
+        <h3 class="display text-3xl mt-3">Auto<br>Restoration</h3>
+        <p class="mt-4 text-sm text-ivory/65 leading-relaxed">Restaurare auto complet&#259;, pentru ma&#537;ini clasice sau ma&#537;ini abandonate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">&mdash; Proces</span>
+    <h2 class="display mt-4 text-5xl sm:text-6xl">PA&#536;ii c&#259;tre <span class="text-red">perfec&#539;iune.</span></h2>
+
+    <div class="mt-14 grid sm:grid-cols-4 gap-5 text-left">
+      <div class="card">
+        <p class="display text-6xl text-red">01</p>
+        <p class="display text-2xl mt-2">PROGRAMARE</p>
+        <p class="mt-2 text-sm text-ivory/60">Telefon sau WhatsApp, stabilim pachetul &#537;i ziua.</p>
+      </div>
+      <div class="card">
+        <p class="display text-6xl text-red">02</p>
+        <p class="display text-2xl mt-2">DIAGNOZ&#258;</p>
+        <p class="mt-2 text-sm text-ivory/60">Examinare complet&#259;, plan scris, cafea.</p>
+      </div>
+      <div class="card">
+        <p class="display text-6xl text-red">03</p>
+        <p class="display text-2xl mt-2">LUCRAREA</p>
+        <p class="mt-2 text-sm text-ivory/60">Detailing profesional cu produse premium.</p>
+      </div>
+      <div class="card">
+        <p class="display text-6xl text-red">04</p>
+        <p class="display text-2xl mt-2">PREDARE</p>
+        <p class="mt-2 text-sm text-ivory/60">Ma&#537;ina predat&#259; cu detalii explicate personal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="py-16 sm:py-24 bg-ash">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">&mdash; De ce Detailing Society</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">
+        FIECARE MA&#536;IN&#258;<br><span class="text-red">ESTE UNIC&#258;.</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7 space-y-4">
+      <div class="card flex gap-5 items-start">
+        <i class="fa-solid fa-medal text-red text-2xl mt-1"></i>
+        <div>
+          <p class="display text-2xl">Gold Award 2026</p>
+          <p class="mt-1 text-sm text-ivory/60">Recunoscu&#539;i &icirc;n top Bucure&#537;ti pentru auto detailing.</p>
+        </div>
+      </div>
+      <div class="card flex gap-5 items-start">
+        <i class="fa-solid fa-clock text-red text-2xl mt-1"></i>
+        <div>
+          <p class="display text-2xl">F&#259;r&#259; grab&#259;</p>
+          <p class="mt-1 text-sm text-ivory/60">Lu&#259;m un singur proiect odat&#259;. F&#259;r&#259; compromisuri.</p>
+        </div>
+      </div>
+      <div class="card flex gap-5 items-start">
+        <i class="fa-solid fa-spray-can-sparkles text-red text-2xl mt-1"></i>
+        <div>
+          <p class="display text-2xl">Produse premium</p>
+          <p class="mt-1 text-sm text-ivory/60">Folosim exclusiv produse profesionale top, importate.</p>
+        </div>
+      </div>
+      <div class="card flex gap-5 items-start">
+        <i class="fa-solid fa-wheelchair text-red text-2xl mt-1"></i>
+        <div>
+          <p class="display text-2xl">Complet accesibil</p>
+          <p class="mt-1 text-sm text-ivory/60">Intrare &#537;i parcare accesibile pentru to&#539;i clien&#539;ii.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-7">
+      <span class="chip">&mdash; Contact</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+        ADU-NE<br><span class="text-red">MA&#536;INA TA.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-ivory/70">Bulevardul Bucure&#537;tii Noi 216, Sector 1. Programare obligatorie. Ridicare &#537;i livrare la cerere.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0766361100" class="btn-red"><i class="fa-solid fa-phone"></i> 0766 361 100</a>
+        <a href="https://wa.me/40766361100" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="card !bg-ash">
+        <p class="chip">Atelier</p>
+        <p class="display text-3xl mt-4">BD. BUCURE&#536;TII<br>NOI 216</p>
+        <p class="text-sm text-ivory/65 mt-2">Sector 1, Bucure&#537;ti 012369</p>
+
+        <div class="mt-6 h-px bg-line"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-red w-5"></i> 0766 361 100</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-red w-5"></i> wa.me/40766361100</div>
+          <div class="flex items-center gap-3"><i class="fa-regular fa-clock text-red w-5"></i> Lun&ndash;Vin 9:00&ndash;19:30</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-red w-5"></i> Acces complet</div>
+        </div>
+
+        <ul id="hours" class="mt-6 pt-4 border-t border-line text-xs">
+          <li data-day="1" class="hours-row"><span class="display text-lg">LUN</span><span>09:00&mdash;19:30</span></li>
+          <li data-day="2" class="hours-row"><span class="display text-lg">MAR</span><span>09:00&mdash;19:30</span></li>
+          <li data-day="3" class="hours-row"><span class="display text-lg">MIE</span><span>09:00&mdash;19:30</span></li>
+          <li data-day="4" class="hours-row"><span class="display text-lg">JOI</span><span>09:00&mdash;19:30</span></li>
+          <li data-day="5" class="hours-row"><span class="display text-lg">VIN</span><span>09:00&mdash;19:30</span></li>
+          <li data-day="6" class="hours-row"><span class="display text-lg">SAM</span><span class="text-metal">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span class="display text-lg">DUM</span><span class="text-metal">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-10 pb-24 md:pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-[10px] uppercase tracking-widest text-metal">
+    <span>&copy; 2026 DETAILING SOCIETY</span>
+    <span>BUCURE&#536;TI &middot; SECTOR 1</span>
+    <span>AUTO RESTORATION &amp; DETAILING</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0766361100" class="py-4 bg-red text-ivory text-center display text-xl tracking-wider">SUN&#258;</a>
+  <a href="https://wa.me/40766361100" class="py-4 bg-wa text-white text-center display text-xl tracking-wider">WHATSAPP</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "Detailing Society",
+  "telephone": "+40766361100",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bulevardul Bucurestii Noi 216",
+    "addressLocality": "Bucuresti",
+    "addressRegion": "Sector 1",
+    "postalCode": "012369",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.5005544, "longitude": 26.0274577 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00", "closes": "19:30"
+  }],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "17" },
+  "priceRange": "$$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

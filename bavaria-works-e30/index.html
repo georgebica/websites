@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavaria Works E30 — Restaurări BMW Clasic | Slatina</title>
+    <meta name="description" content="Bavaria Works E30 — atelier specializat în restaurarea BMW E30 în Slatina. Restaurare completă, recondiționare motor, caroserie și piese originale.">
+
+    <!-- Google Fonts: Saira + Titillium Web -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700;800;900&family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bmw-blue': '#0066B1',
+                        'racing-silver': '#C5C6C8',
+                        'asphalt': '#1A1A2E',
+                        'brass': '#C5A55A',
+                        'asphalt-light': '#24243e',
+                    },
+                    fontFamily: {
+                        'saira': ['Saira', 'sans-serif'],
+                        'titillium': ['"Titillium Web"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            background-color: #1A1A2E;
+            color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Saira', sans-serif;
+        }
+
+        /* Racing stripe — blue-white-blue horizontal bar */
+        .racing-stripe {
+            height: 6px;
+            background: linear-gradient(to right,
+                #0066B1 0%, #0066B1 35%,
+                #FFFFFF 35%, #FFFFFF 50%,
+                #0066B1 50%, #0066B1 65%,
+                #FFFFFF 65%, #FFFFFF 80%,
+                #0066B1 80%, #0066B1 100%
+            );
+        }
+
+        .racing-stripe-thin {
+            height: 3px;
+            background: linear-gradient(to right,
+                #0066B1 0%, #0066B1 40%,
+                #FFFFFF 40%, #FFFFFF 60%,
+                #0066B1 60%, #0066B1 100%
+            );
+        }
+
+        /* Vertical racing stripe accent */
+        .racing-accent-left {
+            border-left: 4px solid #0066B1;
+            position: relative;
+        }
+        .racing-accent-left::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #FFFFFF;
+        }
+
+        /* Badge element */
+        .badge-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #0066B1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .badge-circle::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid #C5A55A;
+        }
+
+        /* Card blue top-accent */
+        .card-service {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-service::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #0066B1, #C5A55A);
+        }
+        .card-service:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 102, 177, 0.25);
+        }
+
+        /* Hero E30 massive text */
+        .e30-display {
+            font-size: clamp(7rem, 18vw, 16rem);
+            line-height: 0.85;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            color: transparent;
+            -webkit-text-stroke: 2px #0066B1;
+            text-shadow: 0 0 60px rgba(0, 102, 177, 0.3);
+        }
+
+        /* CTA button */
+        .cta-btn {
+            background: linear-gradient(135deg, #0066B1, #004a80);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.5s ease;
+        }
+        .cta-btn:hover::after {
+            left: 100%;
+        }
+        .cta-btn:hover {
+            box-shadow: 0 8px 30px rgba(0, 102, 177, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1A1A2E; }
+        ::-webkit-scrollbar-thumb { background: #0066B1; border-radius: 4px; }
+
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Section divider */
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #0066B1, #C5A55A);
+        }
+
+        /* Checkerboard flag pattern accent */
+        .flag-accent {
+            background-image:
+                linear-gradient(45deg, #C5C6C8 25%, transparent 25%),
+                linear-gradient(-45deg, #C5C6C8 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #C5C6C8 75%),
+                linear-gradient(-45deg, transparent 75%, #C5C6C8 75%);
+            background-size: 10px 10px;
+            background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+            opacity: 0.06;
+        }
+
+        /* Heritage timeline line */
+        .heritage-line {
+            position: relative;
+        }
+        .heritage-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #0066B1, #C5A55A, transparent);
+            transform: translateX(-50%);
+        }
+
+        /* Glow text */
+        .glow-blue {
+            text-shadow: 0 0 20px rgba(0, 102, 177, 0.5), 0 0 40px rgba(0, 102, 177, 0.2);
+        }
+
+        /* Star rating */
+        .star-filled { color: #C5A55A; }
+        .star-empty { color: #3a3a5a; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-asphalt/95 backdrop-blur-md border-b border-white/5">
+        <div class="racing-stripe"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-bmw-blue flex items-center justify-center group-hover:border-brass transition-colors">
+                        <span class="font-saira font-black text-bmw-blue text-sm group-hover:text-brass transition-colors">BW</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="font-saira font-bold text-white text-lg tracking-wide">BAVARIA</span>
+                        <span class="font-saira font-light text-racing-silver text-lg ml-1">WORKS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#despre" class="font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase">Despre</a>
+                    <a href="#servicii" class="font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase">Servicii</a>
+                    <a href="#e30" class="font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase">BMW E30</a>
+                    <a href="#info" class="font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase">Contact</a>
+                    <a href="https://www.google.com/maps/place/Strada+Pitești+235a,+Slatina+230001" target="_blank" rel="noopener"
+                       class="cta-btn font-saira font-semibold text-white px-5 py-2 rounded text-sm tracking-wider">
+                        Vizitează atelierul
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-racing-silver hover:text-bmw-blue transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-asphalt border-t border-white/5">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#despre" class="block font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase py-2">Despre</a>
+                <a href="#servicii" class="block font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase py-2">Servicii</a>
+                <a href="#e30" class="block font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase py-2">BMW E30</a>
+                <a href="#info" class="block font-titillium text-racing-silver hover:text-bmw-blue transition-colors text-sm tracking-wider uppercase py-2">Contact</a>
+                <a href="https://www.google.com/maps/place/Strada+Pitești+235a,+Slatina+230001" target="_blank" rel="noopener"
+                   class="block cta-btn font-saira font-semibold text-white text-center px-5 py-2 rounded text-sm tracking-wider mt-2">
+                    Vizitează atelierul
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background decorations -->
+        <div class="absolute inset-0 flag-accent"></div>
+        <div class="absolute top-1/4 right-0 w-1 h-48 bg-gradient-to-b from-bmw-blue to-transparent opacity-40"></div>
+        <div class="absolute bottom-1/4 left-0 w-1 h-48 bg-gradient-to-t from-brass to-transparent opacity-40"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <!-- Small badge -->
+            <div class="flex justify-center mb-8" data-aos="fade-down" data-aos-delay="100">
+                <div class="badge-circle">
+                    <span class="font-saira font-black text-bmw-blue text-xs tracking-widest">EST.</span>
+                </div>
+            </div>
+
+            <!-- Main title -->
+            <h1 data-aos="fade-up" data-aos-delay="200">
+                <span class="block font-saira font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-wider text-white uppercase glow-blue">
+                    Bavaria Works
+                </span>
+            </h1>
+
+            <!-- E30 massive display -->
+            <div class="my-4" data-aos="zoom-in" data-aos-delay="400">
+                <span class="e30-display font-saira">E30</span>
+            </div>
+
+            <!-- Racing stripe decoration -->
+            <div class="max-w-md mx-auto my-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="racing-stripe rounded-full"></div>
+            </div>
+
+            <!-- Tagline -->
+            <p class="font-titillium text-xl sm:text-2xl text-racing-silver font-light tracking-wide mb-4" data-aos="fade-up" data-aos-delay="600">
+                Restaurări BMW Clasic — Slatina
+            </p>
+            <p class="font-titillium text-base text-racing-silver/60 max-w-xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="700">
+                Fiecare BMW E30 are o poveste. Noi o readucem la viață cu precizie, pasiune și respect pentru tradiția bavareză.
+            </p>
+
+            <!-- CTA -->
+            <div data-aos="fade-up" data-aos-delay="800">
+                <a href="https://www.google.com/maps/place/Strada+Pitești+235a,+Slatina+230001" target="_blank" rel="noopener"
+                   class="cta-btn inline-flex items-center gap-3 font-saira font-bold text-white px-8 py-4 rounded-lg text-lg tracking-wider uppercase">
+                    <i class="fas fa-location-dot"></i>
+                    Vizitează atelierul
+                </a>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="mt-16 animate-bounce" data-aos="fade-up" data-aos-delay="1000">
+                <i class="fas fa-chevron-down text-bmw-blue/50 text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== DESPRE / PASIUNEA NOASTRĂ ====== -->
+    <section id="despre" class="relative py-24 bg-asphalt-light">
+        <div class="racing-stripe-thin mb-16"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <span class="font-saira text-bmw-blue text-sm tracking-[0.3em] uppercase font-semibold" data-aos="fade-up">Cine suntem</span>
+                <h2 class="font-saira font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mt-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    Pasiunea noastră
+                </h2>
+                <div class="section-divider mx-auto" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text content -->
+                <div data-aos="fade-right">
+                    <div class="racing-accent-left pl-6">
+                        <p class="font-titillium text-lg text-racing-silver leading-relaxed mb-6">
+                            <strong class="text-white">Bavaria Works E30</strong> este atelierul din Slatina dedicat exclusiv restaurării și recondiționării legendarului BMW E30. Suntem mai mult decât un service — suntem o echipă de entuziaști care trăiesc și respiră cultura BMW clasic.
+                        </p>
+                        <p class="font-titillium text-base text-racing-silver/80 leading-relaxed mb-6">
+                            Fiecare proiect pe care îl preluăm este tratat cu aceeași atenție la detalii pe care inginerii din München au pus-o în proiectarea E30-ului. De la motor la caroserie, de la interior la sistemul de frânare — fiecare componentă este inspectată, recondiționată sau înlocuită cu piese de calitate.
+                        </p>
+                        <p class="font-titillium text-base text-racing-silver/80 leading-relaxed">
+                            Cultul E30 nu este doar despre o mașină — este despre o filozofie a condusului pur, despre echilibrul perfect între putere și eleganță, despre o eră în care automobilul era o operă de artă mecanică.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stats / badges -->
+                <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+                    <div class="bg-asphalt rounded-xl p-6 text-center border border-white/5 hover:border-bmw-blue/30 transition-colors">
+                        <div class="text-4xl font-saira font-black text-bmw-blue mb-2">E30</div>
+                        <p class="font-titillium text-sm text-racing-silver/70 uppercase tracking-wider">Specializare<br>exclusivă</p>
+                    </div>
+                    <div class="bg-asphalt rounded-xl p-6 text-center border border-white/5 hover:border-bmw-blue/30 transition-colors">
+                        <div class="text-4xl font-saira font-black text-brass mb-2">4.1</div>
+                        <p class="font-titillium text-sm text-racing-silver/70 uppercase tracking-wider">Rating<br>Google</p>
+                    </div>
+                    <div class="bg-asphalt rounded-xl p-6 text-center border border-white/5 hover:border-bmw-blue/30 transition-colors">
+                        <i class="fas fa-wrench text-3xl text-bmw-blue mb-3"></i>
+                        <p class="font-titillium text-sm text-racing-silver/70 uppercase tracking-wider">Atenție la<br>detalii</p>
+                    </div>
+                    <div class="bg-asphalt rounded-xl p-6 text-center border border-white/5 hover:border-bmw-blue/30 transition-colors">
+                        <i class="fas fa-heart text-3xl text-brass mb-3"></i>
+                        <p class="font-titillium text-sm text-racing-silver/70 uppercase tracking-wider">Pasiune<br>autentică</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== SERVICII ====== -->
+    <section id="servicii" class="relative py-24 bg-asphalt">
+        <div class="absolute inset-0 flag-accent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <span class="font-saira text-brass text-sm tracking-[0.3em] uppercase font-semibold" data-aos="fade-up">Ce facem</span>
+                <h2 class="font-saira font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mt-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    Serviciile noastre
+                </h2>
+                <div class="section-divider mx-auto" data-aos="fade-up" data-aos-delay="200"></div>
+                <p class="font-titillium text-racing-silver/70 mt-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+                    De la restaurări complete la recondiționări punctuale — fiecare BMW E30 merită tratamentul de care are nevoie.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Card 1: Restaurare completă -->
+                <div class="card-service bg-asphalt-light rounded-xl p-8 border border-white/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-full bg-bmw-blue/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-car text-bmw-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-saira font-bold text-xl text-white mb-3">Restaurare completă</h3>
+                    <p class="font-titillium text-sm text-racing-silver/70 leading-relaxed">
+                        Transformăm BMW E30 aflat în orice stare într-un exemplar ca nou. Demontare totală, restaurare la standard de fabrică sau personalizare la cerere.
+                    </p>
+                    <div class="racing-stripe-thin mt-6 rounded-full"></div>
+                </div>
+
+                <!-- Card 2: Recondiționare motor -->
+                <div class="card-service bg-asphalt-light rounded-xl p-8 border border-white/5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-full bg-bmw-blue/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-gears text-bmw-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-saira font-bold text-xl text-white mb-3">Recondiționare motor</h3>
+                    <p class="font-titillium text-sm text-racing-silver/70 leading-relaxed">
+                        Motoarele M10, M20 și M40 reconditionate la specificațiile originale. Rectificare bloc, chiulasă, arbore cotit și distribuție completă.
+                    </p>
+                    <div class="racing-stripe-thin mt-6 rounded-full"></div>
+                </div>
+
+                <!-- Card 3: Caroserie & vopsitorie -->
+                <div class="card-service bg-asphalt-light rounded-xl p-8 border border-white/5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-full bg-bmw-blue/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-spray-can-sparkles text-bmw-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-saira font-bold text-xl text-white mb-3">Caroserie & vopsitorie</h3>
+                    <p class="font-titillium text-sm text-racing-silver/70 leading-relaxed">
+                        Tratament anticoroziune, reparații tablă, sudură în argon și vopsire în culori originale BMW sau scheme speciale de raliu.
+                    </p>
+                    <div class="racing-stripe-thin mt-6 rounded-full"></div>
+                </div>
+
+                <!-- Card 4: Piese originale & aftermarket -->
+                <div class="card-service bg-asphalt-light rounded-xl p-8 border border-white/5" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 rounded-full bg-bmw-blue/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-cubes text-bmw-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-saira font-bold text-xl text-white mb-3">Piese originale & aftermarket</h3>
+                    <p class="font-titillium text-sm text-racing-silver/70 leading-relaxed">
+                        Rețea de furnizori pentru piese OEM și aftermarket de calitate. De la garnituri la kit-uri de suspensie sport și frâne upgrade.
+                    </p>
+                    <div class="racing-stripe-thin mt-6 rounded-full"></div>
+                </div>
+
+            </div>
+
+            <!-- CTA under services -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                <a href="https://www.google.com/maps/place/Strada+Pitești+235a,+Slatina+230001" target="_blank" rel="noopener"
+                   class="cta-btn inline-flex items-center gap-3 font-saira font-semibold text-white px-7 py-3 rounded-lg text-sm tracking-wider uppercase">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Discută proiectul tău la atelier
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== BMW E30 HERITAGE ====== -->
+    <section id="e30" class="relative py-24 bg-asphalt-light overflow-hidden">
+        <!-- Decorative side stripes -->
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-bmw-blue to-transparent opacity-30"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-brass to-transparent opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <span class="font-saira text-bmw-blue text-sm tracking-[0.3em] uppercase font-semibold" data-aos="fade-up">Legenda</span>
+                <h2 class="font-saira font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mt-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    BMW E30
+                </h2>
+                <div class="section-divider mx-auto" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+
+            <!-- Heritage content -->
+            <div class="grid lg:grid-cols-3 gap-8">
+
+                <!-- Pillar 1: Istoria -->
+                <div class="bg-asphalt rounded-xl p-8 border border-white/5 relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-bmw-blue to-transparent"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full border-2 border-bmw-blue flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-flag-checkered text-bmw-blue"></i>
+                        </div>
+                        <h3 class="font-saira font-bold text-xl text-white">Născut pentru curse</h3>
+                    </div>
+                    <p class="font-titillium text-sm text-racing-silver/80 leading-relaxed mb-4">
+                        Produs între 1982 și 1994, BMW E30 a redefinit conceptul de sedan sport compact. A fost mașina care a transformat Seria 3 într-un fenomen global.
+                    </p>
+                    <p class="font-titillium text-sm text-racing-silver/60 leading-relaxed">
+                        De la circuitele DTM la drumurile de munte, E30-ul a demonstrat că performanța nu ține doar de cai putere — ci de echilibru, precizie și plăcerea pură a condusului.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Motorizări -->
+                <div class="bg-asphalt rounded-xl p-8 border border-white/5 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brass to-transparent"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full border-2 border-brass flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-gauge-high text-brass"></i>
+                        </div>
+                        <h3 class="font-saira font-bold text-xl text-white">Inginerie bavareză</h3>
+                    </div>
+                    <p class="font-titillium text-sm text-racing-silver/80 leading-relaxed mb-4">
+                        Motoarele M10, M20, M40 și legendarul S14 din M3 — fiecare agregat este o capodoperă a ingineriei mecanice. Patru și șase cilindri în linie, cu personalitate unică.
+                    </p>
+                    <p class="font-titillium text-sm text-racing-silver/60 leading-relaxed">
+                        Distribuția cu lanț, injecție mecanică sau electronică, turbosuflante — E30 a acoperit întreaga gamă de tehnologii ale epocii, toate cu fiabilitatea caracteristică BMW.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Cult status -->
+                <div class="bg-asphalt rounded-xl p-8 border border-white/5 relative" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-bmw-blue via-brass to-transparent"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-trophy text-white"></i>
+                        </div>
+                        <h3 class="font-saira font-bold text-xl text-white">Statut de cult</h3>
+                    </div>
+                    <p class="font-titillium text-sm text-racing-silver/80 leading-relaxed mb-4">
+                        E30 nu este doar o mașină veche — este un simbol al unei ere. Comunitatea globală de entuziaști crește an de an, iar exemplarele bine restaurate se apreciază constant.
+                    </p>
+                    <p class="font-titillium text-sm text-racing-silver/60 leading-relaxed">
+                        De la 316i la legendarele M3 și 325iX — fiecare variantă își are fanii dedicați. A restaura un E30 înseamnă a păstra vie o bucată din istoria automobilismului.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Iconic models strip -->
+            <div class="mt-12 flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                <span class="font-saira font-bold text-sm text-asphalt bg-bmw-blue/90 px-4 py-2 rounded-full tracking-wider">316i</span>
+                <span class="font-saira font-bold text-sm text-asphalt bg-racing-silver/90 px-4 py-2 rounded-full tracking-wider">318is</span>
+                <span class="font-saira font-bold text-sm text-asphalt bg-bmw-blue/90 px-4 py-2 rounded-full tracking-wider">320i</span>
+                <span class="font-saira font-bold text-sm text-asphalt bg-racing-silver/90 px-4 py-2 rounded-full tracking-wider">323i</span>
+                <span class="font-saira font-bold text-sm text-asphalt bg-bmw-blue/90 px-4 py-2 rounded-full tracking-wider">325i</span>
+                <span class="font-saira font-bold text-sm text-asphalt bg-brass/90 px-4 py-2 rounded-full tracking-wider">325iX</span>
+                <span class="font-saira font-bold text-sm text-white bg-gradient-to-r from-bmw-blue to-brass px-4 py-2 rounded-full tracking-wider">M3 S14</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== INFORMAȚII PRACTICE ====== -->
+    <section id="info" class="relative py-24 bg-asphalt">
+        <div class="racing-stripe mb-16"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <span class="font-saira text-brass text-sm tracking-[0.3em] uppercase font-semibold" data-aos="fade-up">Vino la noi</span>
+                <h2 class="font-saira font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mt-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    Informații practice
+                </h2>
+                <div class="section-divider mx-auto" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Location -->
+                <div class="bg-asphalt-light rounded-xl p-8 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-bmw-blue/10 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-bmw-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-saira font-bold text-lg text-white mb-3">Locație</h3>
+                    <p class="font-titillium text-racing-silver/80 mb-1">Strada Pitești 235a</p>
+                    <p class="font-titillium text-racing-silver/80 mb-4">Slatina 230001, Olt</p>
+                    <a href="https://www.google.com/maps/place/Strada+Pitești+235a,+Slatina+230001" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 font-saira text-bmw-blue hover:text-brass transition-colors text-sm tracking-wider">
+                        <i class="fas fa-directions"></i> Deschide în Maps
+                    </a>
+                </div>
+
+                <!-- Hours -->
+                <div class="bg-asphalt-light rounded-xl p-8 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-brass/10 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-brass text-2xl"></i>
+                    </div>
+                    <h3 class="font-saira font-bold text-lg text-white mb-3">Program</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between font-titillium text-sm">
+                            <span class="text-racing-silver/80">Luni — Vineri</span>
+                            <span class="text-white font-semibold">08:00 — 18:00</span>
+                        </div>
+                        <div class="flex justify-between font-titillium text-sm">
+                            <span class="text-racing-silver/80">Sâmbătă</span>
+                            <span class="text-racing-silver/50">Închis</span>
+                        </div>
+                        <div class="flex justify-between font-titillium text-sm">
+                            <span class="text-racing-silver/80">Duminică</span>
+                            <span class="text-racing-silver/50">Închis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility -->
+                <div class="bg-asphalt-light rounded-xl p-8 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-bmw-blue/10 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-universal-access text-bmw-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-saira font-bold text-lg text-white mb-3">Accesibilitate</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-center gap-2 font-titillium text-sm text-racing-silver/80">
+                            <i class="fas fa-wheelchair text-bmw-blue"></i>
+                            <span>Intrare accesibilă cu scaun rulant</span>
+                        </div>
+                        <div class="flex items-center justify-center gap-2 font-titillium text-sm text-racing-silver/80">
+                            <i class="fas fa-parking text-bmw-blue"></i>
+                            <span>Parcare disponibilă</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Rating display -->
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="inline-flex items-center gap-3 bg-asphalt-light rounded-full px-8 py-4 border border-white/5">
+                    <span class="font-saira font-black text-2xl text-brass">4.1</span>
+                    <div class="flex gap-0.5">
+                        <i class="fas fa-star star-filled"></i>
+                        <i class="fas fa-star star-filled"></i>
+                        <i class="fas fa-star star-filled"></i>
+                        <i class="fas fa-star star-filled"></i>
+                        <i class="fas fa-star-half-stroke star-filled"></i>
+                    </div>
+                    <span class="font-titillium text-sm text-racing-silver/60">(7 recenzii Google)</span>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="text-center mt-10" data-aos="fade-up" data-aos-delay="500">
+                <a href="https://www.google.com/maps/place/Strada+Pitești+235a,+Slatina+230001" target="_blank" rel="noopener"
+                   class="cta-btn inline-flex items-center gap-3 font-saira font-bold text-white px-8 py-4 rounded-lg text-lg tracking-wider uppercase">
+                    <i class="fas fa-location-dot"></i>
+                    Vizitează atelierul
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-[#12122a] border-t border-white/5">
+        <div class="racing-stripe"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+
+                <!-- Logo & tagline -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center gap-3 justify-center md:justify-start mb-3">
+                        <div class="w-10 h-10 rounded-full border-2 border-bmw-blue flex items-center justify-center">
+                            <span class="font-saira font-black text-bmw-blue text-sm">BW</span>
+                        </div>
+                        <div>
+                            <span class="font-saira font-bold text-white text-lg tracking-wide">BAVARIA</span>
+                            <span class="font-saira font-light text-racing-silver text-lg ml-1">WORKS</span>
+                        </div>
+                    </div>
+                    <p class="font-titillium text-sm text-racing-silver/50">Restaurări BMW E30 — Slatina, România</p>
+                </div>
+
+                <!-- Quick links -->
+                <div class="text-center">
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="#despre" class="font-titillium text-sm text-racing-silver/60 hover:text-bmw-blue transition-colors">Despre</a>
+                        <a href="#servicii" class="font-titillium text-sm text-racing-silver/60 hover:text-bmw-blue transition-colors">Servicii</a>
+                        <a href="#e30" class="font-titillium text-sm text-racing-silver/60 hover:text-bmw-blue transition-colors">BMW E30</a>
+                        <a href="#info" class="font-titillium text-sm text-racing-silver/60 hover:text-bmw-blue transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="text-center md:text-right">
+                    <p class="font-titillium text-sm text-racing-silver/50 mb-1">
+                        <i class="fas fa-map-marker-alt text-bmw-blue/50 mr-1"></i>
+                        Strada Pitești 235a, Slatina 230001
+                    </p>
+                    <p class="font-titillium text-sm text-racing-silver/50">
+                        <i class="fas fa-clock text-bmw-blue/50 mr-1"></i>
+                        Luni–Vineri: 08:00–18:00
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="racing-stripe-thin mt-8 mb-6"></div>
+            <div class="text-center">
+                <p class="font-titillium text-xs text-racing-silver/30">
+                    &copy; 2026 Bavaria Works E30. Toate drepturile rezervate.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ====== SCRIPTS ====== -->
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 60,
+        });
+    </script>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            });
+        });
+    </script>
+
+    <!-- Navbar scroll effect -->
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl', 'shadow-black/20');
+            } else {
+                nav.classList.remove('shadow-xl', 'shadow-black/20');
+            }
+        });
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Bavaria Works E30",
+        "description": "Atelier specializat în restaurarea și recondiționarea BMW E30 în Slatina, România.",
+        "url": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Pitești 235a",
+            "addressLocality": "Slatina",
+            "postalCode": "230001",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.45169,
+            "longitude": 24.39091
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.1",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "7"
+        },
+        "accessibility": "Wheelchair-accessible entrance",
+        "image": "",
+        "priceRange": "$$"
+    }
+    </script>
+
+</body>
+</html>

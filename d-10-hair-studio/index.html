@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D 10 Hair Studio &middot; Salon de coafur&#259; &#537;i beauty &icirc;n Drumul Taberei</title>
+<meta name="description" content="D 10 Hair Studio &mdash; salon de coafur&#259; &#537;i beauty din Drumul Taberei, Sector 6 Bucure&#537;ti. Coafur&#259;, tuns, culoare, manichiur&#259;, pedichiur&#259;. Programare telefonic&#259; la 0774 525 161.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        blush:   '#F4E3DC',
+        blushl:  '#FAF1ED',
+        wine:    '#6E1A2A',
+        wined:   '#4A0E1A',
+        rose:    '#C97E77',
+        cream:   '#FFFBF6',
+        ink:     '#191212',
+        muted:   '#7A6562',
+        gold:    '#C9A66B',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['"DM Serif Display"', 'Georgia', 'serif'],
+        sans:    ['Karla', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FFFBF6; color: #191212; }
+  body { font-family: Karla, system-ui, sans-serif; }
+  .display { font-family: "DM Serif Display", Georgia, serif; letter-spacing: -.01em; }
+  .italic-display { font-family: "DM Serif Display", Georgia, serif; font-style: italic; }
+
+  .stamp-10 {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    color: rgba(110,26,42,.08);
+    position: absolute;
+    font-size: 28rem;
+    line-height: .75;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .ticket {
+    background: #FFFBF6;
+    border: 1px solid #F4E3DC;
+    position: relative;
+  }
+  .ticket::before, .ticket::after {
+    content: "";
+    position: absolute;
+    left: -8px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: #FAF1ED;
+    border: 1px solid #F4E3DC;
+  }
+  .ticket::before { top: 30%; }
+  .ticket::after  { bottom: 30%; }
+
+  .price-dots {
+    flex: 1 1 auto;
+    height: 1px;
+    background-image: radial-gradient(circle, #C97E77 1px, transparent 1px);
+    background-size: 6px 6px;
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+    align-self: center;
+    margin: 0 .75rem;
+  }
+
+  .btn-wine {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: 1rem 1.8rem;
+    background: #6E1A2A;
+    color: #FFFBF6;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    transition: background .25s, transform .25s;
+  }
+  .btn-wine:hover { background: #4A0E1A; transform: translateY(-2px); }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform .25s;
+  }
+  .btn-wap:hover { transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: 1rem 1.8rem;
+    border: 1.5px solid #6E1A2A;
+    color: #6E1A2A;
+    border-radius: 999px;
+    font-weight: 600;
+    background: transparent;
+    transition: all .25s;
+  }
+  .btn-outline:hover { background: #6E1A2A; color: #FFFBF6; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .35rem .9rem;
+    background: #F4E3DC;
+    color: #6E1A2A;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "DM Serif Display", serif; font-size: 1.6rem; border-bottom: 1px solid #F4E3DC; }
+
+  .service-card {
+    background: #fff;
+    border: 1px solid #F4E3DC;
+    border-radius: 24px;
+    padding: 1.75rem;
+    transition: all .3s;
+  }
+  .service-card:hover { border-color: #6E1A2A; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(110,26,42,.25); }
+
+  .bubble {
+    width: 58px; height: 58px;
+    background: #FAF1ED;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #6E1A2A;
+    font-size: 1.3rem;
+  }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .7rem 0;
+    border-bottom: 1px dashed rgba(110,26,42,.2);
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #6E1A2A; font-weight: 700; }
+
+  .testimonial-card {
+    background: #FAF1ED;
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+  }
+  .testimonial-card .q {
+    font-family: "DM Serif Display", serif;
+    font-size: 5rem;
+    line-height: 0;
+    color: #C97E77;
+    vertical-align: -.55em;
+    margin-right: .05em;
+  }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-wine text-cream flex items-center justify-center display italic-display text-xl">D10</span>
+      <div class="leading-tight">
+        <p class="display text-xl leading-none">D 10 Hair Studio</p>
+        <p class="text-[11px] tracking-widest uppercase text-muted mt-1">Drumul Taberei &middot; Sector 6</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#servicii" class="hover:text-wine">Servicii</a>
+      <a href="#preturi"  class="hover:text-wine">Pre&#539;uri</a>
+      <a href="#recenzii" class="hover:text-wine">Recenzii</a>
+      <a href="#program"  class="hover:text-wine">Program</a>
+      <a href="tel:0774525161" class="btn-wine !py-2.5 !px-5 text-sm">0774 525 161</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-blush flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars text-wine"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl">D 10 Hair Studio</span>
+    <button id="menu-close" class="w-11 h-11 rounded-full bg-blush flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark text-wine"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#preturi"  class="mobile-link">Pre&#539;uri</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#program"  class="mobile-link">Program</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0774525161" class="btn-wine">Sun&#259;</a>
+    <a href="https://wa.me/40774525161" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="relative overflow-hidden">
+  <span class="stamp-10 -top-20 -right-10 hidden sm:block">10</span>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-16 lg:pt-24 pb-16 sm:pb-24 relative z-10 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-scissors"></i> Salon women-owned &middot; din 2014</span>
+
+      <h1 class="display mt-6 text-5xl sm:text-6xl lg:text-7xl leading-[1.02]">
+        Un salon mic<br>
+        <span class="italic-display text-wine">cu clien&#539;i fideli</span><br>
+        de 10 ani &icirc;ncoace.
+      </h1>
+
+      <p class="mt-8 text-lg text-muted max-w-xl leading-relaxed">
+        D 10 Hair Studio este locul din Drumul Taberei unde te tund, te coafez&#259; &#537;i te ascult&#259;. Un colectiv mic, cu oameni pe care &icirc;i &#537;tii dup&#259; nume, &icirc;ntr-un cartier care nu uit&#259; c&#259; frumuse&#539;ea se face cu r&#259;bdare.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0774525161" class="btn-wine"><i class="fa-solid fa-phone"></i> Programare 0774 525 161</a>
+        <a href="https://wa.me/40774525161" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center gap-6 text-sm">
+        <div class="flex items-center gap-2 text-muted">
+          <i class="fa-solid fa-venus text-rose"></i> Women-owned
+        </div>
+        <span class="w-px h-5 bg-blush"></span>
+        <div class="flex items-center gap-2 text-muted">
+          <i class="fa-solid fa-wheelchair text-rose"></i> Accesibil rampe
+        </div>
+        <span class="w-px h-5 bg-blush"></span>
+        <div class="flex items-center gap-2 text-muted">
+          <i class="fa-solid fa-credit-card text-rose"></i> Card &amp; NFC
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 relative" data-aos="fade-up" data-aos-delay="120">
+      <div class="ticket p-8 rounded-[32px]">
+        <div class="flex items-center justify-between">
+          <p class="chip !bg-wine !text-cream">Programare cerut&#259;</p>
+          <span class="display italic-display text-4xl text-wine">No. 10</span>
+        </div>
+
+        <h3 class="display text-2xl mt-5">Un moment pentru tine</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Programeaz&#259;-te cu o zi &icirc;nainte. Aloc&#259;m timp pentru fiecare client ca s&#259; nu te grabim &#537;i s&#259; ie&#537;i cu un rezultat &icirc;n care crezi.</p>
+
+        <div class="mt-6 pt-6 border-t border-dashed border-blush flex items-center justify-between">
+          <div>
+            <p class="text-[11px] uppercase tracking-widest text-muted">Luni&ndash;Vineri</p>
+            <p class="display text-2xl mt-1">9:00 &mdash; 20:00</p>
+          </div>
+          <div class="text-right">
+            <p class="text-[11px] uppercase tracking-widest text-muted">S&#226;mb&#259;t&#259;</p>
+            <p class="display text-2xl mt-1">9:00 &mdash; 18:00</p>
+          </div>
+        </div>
+
+        <div class="mt-6 flex gap-2">
+          <a href="tel:0774525161" class="flex-1 btn-outline !py-3 !text-sm"><i class="fa-solid fa-phone"></i> Sun&#259;</a>
+          <a href="https://wa.me/40774525161" class="flex-1 btn-wap !py-3 !text-sm"><i class="fa-brands fa-whatsapp"></i> Mesaj</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24 bg-blushl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl">
+      <span class="chip"><i class="fa-solid fa-sparkles"></i> Servicii</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl leading-[1.05]">
+        De la o tunsoare simpl&#259;<br>
+        <span class="italic-display text-wine">la o transformare complet&#259;.</span>
+      </h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <article class="service-card" data-aos="fade-up">
+        <span class="bubble"><i class="fa-solid fa-scissors"></i></span>
+        <h3 class="display text-2xl mt-4">Tuns dam&#259; &amp; domn</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed">Tunsori clasice sau moderne, adaptate formei fe&#539;ei &#537;i stilului personal. Consultan&#539;&#259; gratuit&#259; &icirc;nainte de foarfec&#259;.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <span class="bubble"><i class="fa-solid fa-palette"></i></span>
+        <h3 class="display text-2xl mt-4">Culoare &#537;i &#537;uvi&#539;e</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed">Vopsit complet, balayage, &#537;uvi&#539;e, tonuri reci sau calde, corec&#539;ii de culoare. Produse profesionale care protejeaz&#259; firul.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <span class="bubble"><i class="fa-solid fa-wind"></i></span>
+        <h3 class="display text-2xl mt-4">Coafur&#259; &amp; styling</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed">Coafuri de zi, ocazii speciale, nun&#539;i, boluri &#537;i bucle, drepte sau volum. Trecem prin evenimentele tale cu tine.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="240">
+        <span class="bubble"><i class="fa-solid fa-droplet"></i></span>
+        <h3 class="display text-2xl mt-4">Tratamente p&#259;r</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed">M&#259;&#537;ti de hidratare, botox capilar, keratin&#259;, reparare v&#226;rfuri. Pentru p&#259;rul obosit sau stresat de v&#259;ru.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="320">
+        <span class="bubble"><i class="fa-solid fa-hand-sparkles"></i></span>
+        <h3 class="display text-2xl mt-4">Manichiur&#259; &amp; gel</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed">Manichiur&#259; clasic&#259;, gel, semipermanent, construc&#539;ie unghii, nail art la cerere. Cu Alina, t&#259;cerea e garantat&#259; doar de clic-clic-clic-ul pilei.</p>
+      </article>
+
+      <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <span class="bubble"><i class="fa-solid fa-shoe-prints"></i></span>
+        <h3 class="display text-2xl mt-4">Pedichiur&#259;</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed">Pedichiur&#259; &icirc;ngrijit&#259;, tratament c&#259;lc&#226;ie, semipermanent pentru picioare &mdash; ca s&#259; te sim&#539;i bine p&#226;n&#259; jos.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="preturi" class="py-16 sm:py-24">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center">
+      <span class="chip"><i class="fa-solid fa-receipt"></i> Pre&#539;uri orientative</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl leading-[1.05]">
+        Transparente,<br>
+        <span class="italic-display text-wine">&icirc;nc&#259; de la telefon.</span>
+      </h2>
+      <p class="mt-4 text-muted max-w-xl mx-auto text-sm">Pentru lucr&#259;rile complexe (culoare, transformare, evenimente), stabilim pre&#539;ul dup&#259; consulta&#539;ia scurt&#259;, &icirc;nainte s&#259; &icirc;ncepem. F&#259;r&#259; surprize.</p>
+    </div>
+
+    <div class="mt-12 ticket p-8 sm:p-10 rounded-[28px]">
+      <ul class="space-y-4">
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">Tuns dam&#259;</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 80 lei</span>
+        </li>
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">Tuns domn</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 50 lei</span>
+        </li>
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">Sp&#259;lat &amp; coafat</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 90 lei</span>
+        </li>
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">Vopsit p&#259;r</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 180 lei</span>
+        </li>
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">&#536;uvi&#539;e / balayage</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 260 lei</span>
+        </li>
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">Tratament p&#259;r</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 120 lei</span>
+        </li>
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">Manichiur&#259; semipermanent&#259;</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 100 lei</span>
+        </li>
+        <li class="flex items-baseline text-lg">
+          <span class="display text-xl">Pedichiur&#259; semipermanent&#259;</span>
+          <span class="price-dots"></span>
+          <span class="text-wine font-semibold">de la 130 lei</span>
+        </li>
+      </ul>
+
+      <div class="mt-8 pt-6 border-t border-dashed border-blush text-center">
+        <p class="text-sm text-muted">Pl&#259;&#539;i cu card, NFC sau numerar &middot; programare recomandat&#259; cu o zi &icirc;nainte</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24 bg-blushl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip"><i class="fa-solid fa-heart"></i> Recenzii verificate</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl leading-[1.05]">
+        Clien&#539;i care revin<br>
+        <span class="italic-display text-wine">de peste 10 ani.</span>
+      </h2>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+
+      <article class="testimonial-card" data-aos="fade-up">
+        <span class="q">&ldquo;</span>
+        <p class="text-sm text-ink/85 leading-relaxed">Vin aici o dat&#259; pe lun&#259; din 2014 &#537;i este un loc grozav pentru relaxare. Fetele sunt foarte dr&#259;gu&#539;e &#537;i foarte profesioniste. Recomand din toat&#259; inima!</p>
+        <div class="mt-6 pt-4 border-t border-wine/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wine text-cream flex items-center justify-center font-bold">DL</div>
+          <div>
+            <p class="font-semibold">Diana Lupa&#537;cu</p>
+            <p class="text-xs text-muted">Client D 10 din 2014</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card" data-aos="fade-up" data-aos-delay="80">
+        <span class="q">&ldquo;</span>
+        <p class="text-sm text-ink/85 leading-relaxed">Cele mai faine fete! Super dr&#259;gu&#539;e &#537;i amabile, foarte atente la cerin&#539;ele clientei. Sunt foarte &icirc;nc&#226;ntat&#259; at&#226;t de unghiile f&#259;cute de Alina, c&#226;t &#537;i de coafura blond-modern de Gina.</p>
+        <div class="mt-6 pt-4 border-t border-wine/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wine text-cream flex items-center justify-center font-bold">DT</div>
+          <div>
+            <p class="font-semibold">Detty Tuzson</p>
+            <p class="text-xs text-muted">Client D 10 Hair Studio</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card" data-aos="fade-up" data-aos-delay="160">
+        <span class="q">&ldquo;</span>
+        <p class="text-sm text-ink/85 leading-relaxed">Doamna Mihaela este o super profesionist&#259;. De 10 ani m&#259; coafez &#537;i m&#259; tund la ea. Acum vin din Pope&#537;ti dup&#259; ce m-am mutat dup&#259; Vergului.</p>
+        <div class="mt-6 pt-4 border-t border-wine/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wine text-cream flex items-center justify-center font-bold">VS</div>
+          <div>
+            <p class="font-semibold">Victor Stan</p>
+            <p class="text-xs text-muted">Client din 2015</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card md:col-span-3" data-aos="fade-up" data-aos-delay="240">
+        <span class="q">&ldquo;</span>
+        <p class="text-ink/85 leading-relaxed italic-display text-xl">Un coafor mereu aproape, cu personal amabil. De c&#226;nd l-am descoperit, revin mereu, pentru c&#259; doamna Mihaela &#537;tie s&#259; dea forma perfect&#259; p&#259;rului meu cre&#539;.</p>
+        <div class="mt-6 pt-4 border-t border-wine/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wine text-cream flex items-center justify-center font-bold">IS</div>
+          <div>
+            <p class="font-semibold">Ioana Stan</p>
+            <p class="text-xs text-muted">Client fidel</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip"><i class="fa-regular fa-clock"></i> Program</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl leading-[1.05]">
+        <span class="italic-display text-wine">&#536;ase zile</span> pe s&#259;pt&#259;m&#226;n&#259;, &icirc;n Drumul Taberei.
+      </h2>
+      <p class="mt-6 text-muted text-sm">Duminica e zi de odihn&#259; pentru toat&#259; echipa. &Icirc;n restul zilelor, suntem aici, cu foarfece ascu&#539;ite &#537;i cafea cald&#259;.</p>
+
+      <div class="mt-8 p-5 rounded-2xl bg-blushl">
+        <p class="font-semibold text-wine text-sm uppercase tracking-wider">Important</p>
+        <p class="mt-2 text-sm text-muted">Programarea se face cu o zi &icirc;nainte prin telefon sau WhatsApp. A&#537;a reu&#537;im s&#259; &#539;i se acorde tot timpul care &#539;i se cuvine.</p>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="p-6 sm:p-8 rounded-3xl bg-blushl">
+        <ul id="hours">
+          <li data-day="1" class="hours-row"><span>Luni</span><span>09:00 &ndash; 20:00</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span>09:00 &ndash; 20:00</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span>09:00 &ndash; 20:00</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span>09:00 &ndash; 20:00</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span>09:00 &ndash; 20:00</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span>09:00 &ndash; 18:00</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-wine text-cream relative overflow-hidden">
+  <span class="stamp-10" style="color: rgba(255,251,246,.08); top: -80px; right: -40px;">10</span>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip !bg-cream/20 !text-cream"><i class="fa-solid fa-phone-volume"></i> Contact</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl leading-[1.02]">
+        Gata s&#259; te vedem<br>
+        <span class="italic-display text-rose">la No. 10?</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-cream/85 leading-relaxed">Suni, scrii pe WhatsApp sau treci pe la noi la parter, &icirc;n Drumul Taberei 21. Alegem &icirc;mpreun&#259; c&#226;nd ne vedem.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0774525161" class="btn-outline !text-cream !border-cream hover:!bg-cream hover:!text-wine"><i class="fa-solid fa-phone"></i> 0774 525 161</a>
+        <a href="https://wa.me/40774525161" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> Mesaj WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-3xl p-7">
+        <p class="text-xs uppercase tracking-widest text-rose">Adresa</p>
+        <p class="mt-2 display text-xl">Drumul Taberei 21</p>
+        <p class="text-cream/80 text-sm mt-1">Bloc 1S14, sc. 1, ap. 10, parter<br>Sector 6, Bucure&#537;ti 061354</p>
+
+        <div class="mt-6 pt-6 border-t border-cream/20 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-rose w-5"></i> 0774 525 161</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-rose w-5"></i> wa.me/40774525161</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-venus text-rose w-5"></i> Salon women-owned</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-credit-card text-rose w-5"></i> Card, NFC, numerar</div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/D+10+Hair+Studio/@44.4238329,26.047481,17z" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-rose underline decoration-rose/40">
+          <i class="fa-solid fa-location-dot"></i> Deschide &icirc;n Google Maps
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="pt-12 pb-24 md:pb-10 bg-cream border-t border-blush">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-6 text-sm">
+    <div>
+      <div class="flex items-center gap-3">
+        <span class="w-10 h-10 rounded-full bg-wine text-cream flex items-center justify-center display italic-display">D10</span>
+        <span class="display text-xl">D 10 Hair Studio</span>
+      </div>
+      <p class="mt-3 text-muted max-w-sm">Salon de coafur&#259; &#537;i beauty din Drumul Taberei, Sector 6 Bucure&#537;ti. Un loc mic, cu oameni pe care &icirc;i cuno&#537;ti dup&#259; nume.</p>
+    </div>
+    <div class="text-muted text-xs sm:text-right">
+      <p>&copy; 2026 D 10 Hair Studio</p>
+      <p class="mt-1">Drumul Taberei 21, Sector 6, Bucure&#537;ti</p>
+      <p class="mt-1">Programare: <a href="tel:0774525161" class="text-wine font-semibold">0774 525 161</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0774525161" class="py-4 bg-wine text-cream text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40774525161" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "D 10 Hair Studio",
+  "description": "Salon de coafura si beauty in Drumul Taberei, Sector 6, Bucuresti. Tuns, coafura, culoare, manichiura si pedichiura.",
+  "telephone": "+40774525161",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Drumul Taberei 21, Bloc 1S14, sc 1, ap 10, parter",
+    "addressLocality": "Bucuresti",
+    "addressRegion": "Sector 6",
+    "postalCode": "061354",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.4238329, "longitude": 26.047481 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "123" },
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

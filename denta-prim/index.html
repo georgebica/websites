@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Denta Prim SRL &middot; Cabinet stomatologic Dr. Raluca Ghi&#539;urin, Slatina</title>
+<meta name="description" content="Denta Prim SRL &mdash; cabinet stomatologic &icirc;n Slatina, Strada Trandafirilor 1, l&#226;ng&#259; Spitalul Jude&#539;ean. Cu Dr. Raluca Ghi&#539;urin, din 2005. Programare la 0766 241 941.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        peri:    '#6E7BD4',
+        perid:   '#434E9C',
+        peril:   '#E7EAFA',
+        cream:   '#FBFAF6',
+        butter:  '#F9E17D',
+        ink:     '#15162B',
+        muted:   '#6C6F87',
+        line:    '#E3E5F0',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans:    ['Onest', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FBFAF6; color: #15162B; }
+  body { font-family: Onest, system-ui, sans-serif; }
+  .display { font-family: Fraunces, Georgia, serif; font-variation-settings: "opsz" 144; letter-spacing: -.02em; line-height: .98; }
+
+  .bento { display: grid; gap: 1rem; grid-template-columns: repeat(6, 1fr); grid-auto-rows: minmax(140px, auto); }
+  @media (max-width: 768px) { .bento { grid-template-columns: repeat(2, 1fr); } }
+
+  .cell {
+    background: #fff;
+    border: 1px solid #E3E5F0;
+    border-radius: 24px;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-peri {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #6E7BD4;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-peri:hover { background: #434E9C; transform: translateY(-2px); }
+
+  .btn-ink {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #15162B;
+    color: #FBFAF6;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-ink:hover { background: #6E7BD4; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .35rem .9rem;
+    background: #E7EAFA;
+    color: #434E9C;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Fraunces, serif; font-size: 1.8rem; border-bottom: 1px solid #E3E5F0; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .6rem 0;
+    border-bottom: 1px dashed rgba(21,22,43,.15);
+    font-size: .9rem;
+  }
+  .hours-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-2xl bg-peri text-white flex items-center justify-center">
+        <span class="display text-xl font-semibold">Dp</span>
+      </span>
+      <div class="leading-tight">
+        <p class="display text-xl font-semibold">Denta Prim</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Cabinet stomatologic &middot; Slatina</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#despre"   class="hover:text-peri">Despre</a>
+      <a href="#servicii" class="hover:text-peri">Servicii</a>
+      <a href="#info"     class="hover:text-peri">Info</a>
+      <a href="#contact"  class="hover:text-peri">Contact</a>
+      <a href="tel:0766241941" class="btn-peri !py-2.5 !px-4 !text-xs">0766 241 941</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-xl bg-peril text-peri flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl font-semibold">Denta Prim</span>
+    <button id="menu-close" class="w-11 h-11 rounded-xl bg-peril text-peri flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#info"     class="mobile-link">Info</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0766241941" class="btn-peri">Sun&#259;</a>
+    <a href="https://wa.me/40766241941" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-12 sm:py-20 lg:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+    <div class="bento">
+      <div class="cell col-span-6 md:col-span-4 row-span-2 bg-peri text-white" data-aos="fade-up">
+        <span class="chip !bg-white/20 !text-white">Dr. Raluca Ghi&#539;urin</span>
+        <h1 class="display mt-6 text-5xl sm:text-6xl lg:text-7xl">
+          Stomatologie<br>
+          <span class="italic text-butter">cu m&#226;n&#259; sigur&#259;.</span>
+        </h1>
+        <p class="mt-8 max-w-lg text-base text-white/80">Denta Prim e cabinetul stomatologic din Slatina unde pacien&#539;ii vin pentru o &icirc;ngrijire atent&#259;, cu explica&#539;ii clare &#537;i programare respectat&#259;. Din 2005, pe Strada Trandafirilor.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="tel:0766241941" class="btn-ink"><i class="fa-solid fa-phone"></i> 0766 241 941</a>
+          <a href="https://wa.me/40766241941" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="cell col-span-3 md:col-span-2 bg-butter" data-aos="fade-up" data-aos-delay="80">
+        <p class="text-[10px] uppercase tracking-widest text-ink/60">Din anul</p>
+        <p class="display text-6xl mt-2">2005</p>
+        <p class="mt-2 text-xs text-ink/70">20 de ani activ&#259;</p>
+      </div>
+
+      <div class="cell col-span-3 md:col-span-2 bg-cream !border-peri/30" data-aos="fade-up" data-aos-delay="120">
+        <p class="text-[10px] uppercase tracking-widest text-muted">Rating</p>
+        <p class="display text-6xl mt-2 text-peri">5.0</p>
+        <div class="flex text-butter text-xs mt-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      </div>
+
+      <div class="cell col-span-6 md:col-span-2 bg-peril !border-peri/30" data-aos="fade-up" data-aos-delay="160">
+        <i class="fa-solid fa-wheelchair text-peri text-3xl"></i>
+        <p class="display text-xl mt-3">Acces ramp&#259;</p>
+        <p class="text-xs text-muted mt-1">Intrare accesibil&#259; pentru persoane cu mobilitate redus&#259;.</p>
+      </div>
+
+      <div class="cell col-span-3 md:col-span-2" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-credit-card text-peri text-2xl"></i>
+        <p class="display text-lg mt-3">Card &middot; NFC</p>
+        <p class="text-xs text-muted">Pl&#259;&#539;i moderne</p>
+      </div>
+
+      <div class="cell col-span-3 md:col-span-2" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-calendar-check text-peri text-2xl"></i>
+        <p class="display text-lg mt-3">Programare</p>
+        <p class="text-xs text-muted">Recomandat&#259; &icirc;n avans</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-peril">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Despre cabinet</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl font-medium">
+      Dou&#259;zeci de ani al&#259;turi<br>
+      <span class="italic text-peri">de pacien&#539;ii no&#537;tri.</span>
+    </h2>
+
+    <p class="mt-10 text-lg text-ink/80 leading-relaxed">
+      Denta Prim SRL este un cabinet stomatologic &icirc;nfiin&#539;at &icirc;n mai 2005 de Dr. Raluca Ghi&#539;urin. Este un cabinet de dimensiuni mici, cu doi oameni &icirc;n echip&#259;, focalizat pe servicii generale de stomatologie.
+    </p>
+    <p class="mt-5 text-base text-muted leading-relaxed">
+      Ne g&#259;si&#539;i pe Strada Trandafirilor nr. 1, la c&#226;teva sute de metri de Spitalul Jude&#539;ean de Urgen&#539;&#259; Slatina. Facem programari pentru toate serviciile, avem acces cu ramp&#259; &#537;i accept&#259;m pl&#259;&#539;i cu cardul sau NFC.
+    </p>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">Servicii</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">
+        Stomatologie <span class="italic text-peri">general&#259; complet&#259;.</span>
+      </h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="cell hover:border-peri transition-all">
+        <i class="fa-solid fa-magnifying-glass text-peri text-2xl"></i>
+        <h3 class="display text-xl mt-4">Consulta&#539;ie &#537;i diagnostic</h3>
+        <p class="mt-2 text-sm text-muted">Examen complet, radiografie intern&#259; &#537;i plan de tratament scris.</p>
+      </div>
+      <div class="cell hover:border-peri transition-all">
+        <i class="fa-solid fa-tooth text-peri text-2xl"></i>
+        <h3 class="display text-xl mt-4">Obtura&#539;ii</h3>
+        <p class="mt-2 text-sm text-muted">Tratamentul cariilor cu material compozit fizionomic.</p>
+      </div>
+      <div class="cell hover:border-peri transition-all">
+        <i class="fa-solid fa-spray-can-sparkles text-peri text-2xl"></i>
+        <h3 class="display text-xl mt-4">Detartraj &#537;i igien&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Detartraj ultrasonic, periaj profesional, men&#539;inere.</p>
+      </div>
+      <div class="cell hover:border-peri transition-all">
+        <i class="fa-solid fa-prescription text-peri text-2xl"></i>
+        <h3 class="display text-xl mt-4">Endodon&#539;ie</h3>
+        <p class="mt-2 text-sm text-muted">Tratament de canal, reinterven&#539;ii pe din&#539;i trata&#539;i.</p>
+      </div>
+      <div class="cell hover:border-peri transition-all">
+        <i class="fa-solid fa-teeth text-peri text-2xl"></i>
+        <h3 class="display text-xl mt-4">Protetic&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Coroane, pun&#539;i, proteze par&#539;iale sau totale.</p>
+      </div>
+      <div class="cell hover:border-peri transition-all">
+        <i class="fa-solid fa-hand-holding-medical text-peri text-2xl"></i>
+        <h3 class="display text-xl mt-4">Extrac&#539;ii</h3>
+        <p class="mt-2 text-sm text-muted">Extrac&#539;ii simple &#537;i recomand&#259;ri pentru recuperare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="info" class="py-16 sm:py-24 bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip !bg-peri/20 !text-peril">Datele firmei</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl font-medium">
+        Denta Prim SRL,<br><span class="italic text-butter">&icirc;nregistrat&#259; oficial.</span>
+      </h2>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+      <div class="border border-white/15 p-5 rounded-2xl">
+        <p class="text-[10px] uppercase tracking-widest text-peril">Firma</p>
+        <p class="display text-xl mt-2">Denta Prim SRL</p>
+      </div>
+      <div class="border border-white/15 p-5 rounded-2xl">
+        <p class="text-[10px] uppercase tracking-widest text-peril">CUI</p>
+        <p class="display text-xl mt-2">17610160</p>
+      </div>
+      <div class="border border-white/15 p-5 rounded-2xl">
+        <p class="text-[10px] uppercase tracking-widest text-peril">Registru</p>
+        <p class="display text-xl mt-2">J2005000434282</p>
+      </div>
+      <div class="border border-white/15 p-5 rounded-2xl">
+        <p class="text-[10px] uppercase tracking-widest text-peril">Fondat&#259;</p>
+        <p class="display text-xl mt-2">23 mai 2005</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-7">
+      <span class="chip">Contact</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">
+        Un telefon<br><span class="italic text-peri">&#537;i stabilim ora.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Luni-vineri, diminea&#539;a &#537;i dup&#259; amiaz&#259;. V&#259; a&#537;tept&#259;m pe Strada Trandafirilor 1, aproape de Spitalul Jude&#539;ean.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0766241941" class="btn-peri"><i class="fa-solid fa-phone"></i> 0766 241 941</a>
+        <a href="https://wa.me/40766241941" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="cell bg-peril !border-peri/30">
+        <p class="chip !bg-white !text-peri">Adresa</p>
+        <p class="display text-2xl mt-3">Strada Trandafirilor 1</p>
+        <p class="text-sm text-muted">Bl. 1, Sc. A, parter, ap. 2<br>230009 Slatina, jud. Olt</p>
+
+        <div class="mt-6 h-px bg-line"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-peri w-5"></i> 0766 241 941</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-peri w-5"></i> 0349 408 529</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-peri w-5"></i> wa.me/40766241941</div>
+        </div>
+
+        <ul id="hours" class="mt-6 pt-4 border-t border-line text-xs">
+          <li data-day="1" class="hours-row"><span>Luni</span><span>08:30 &mdash; 18:30</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span>08:30 &mdash; 18:30</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span>08:30 &mdash; 18:30</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span>08:30 &mdash; 18:30</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span>08:30 &mdash; 18:30</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-10 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest text-muted">
+    <span>&copy; 2026 Denta Prim SRL</span>
+    <span>CUI 17610160 &middot; J2005000434282</span>
+    <span>Slatina &middot; Olt</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0766241941" class="py-4 bg-peri text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40766241941" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Denta Prim SRL",
+  "telephone": "+40766241941",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Trandafirilor 1",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230009",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.4309385, "longitude": 24.3660882 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:30", "closes": "18:30"
+  }],
+  "foundingDate": "2005-05-23",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "11" }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

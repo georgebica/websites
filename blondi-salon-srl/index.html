@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blondi Salon SRL — Micropigmentare & Permanent Makeup | Slatina</title>
+    <meta name="description" content="Blondi Salon SRL din Slatina — clinică de micropigmentare și permanent makeup. Sprâncene, buze, eyeliner. Rating 4.7/5 din 121 recenzii. Programări: 0766 747 663.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: '#E91E63',
+                        'pink-light': '#F06292',
+                        blush: '#FCE4EC',
+                        charcoal: '#212121',
+                        'soft-white': '#FFF5F7',
+                        'pink-glow': 'rgba(233, 30, 99, 0.15)',
+                    },
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .pink-gradient { background: linear-gradient(135deg, #E91E63, #F06292); }
+        .pink-gradient-text {
+            background: linear-gradient(135deg, #E91E63, #F06292);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-rounded {
+            border-radius: 24px;
+            transition: all 0.4s ease;
+        }
+        .card-rounded:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.15);
+        }
+        .cta-pink {
+            background: linear-gradient(135deg, #E91E63, #C2185B);
+            border-radius: 50px;
+            transition: all 0.4s ease;
+        }
+        .cta-pink:hover {
+            background: linear-gradient(135deg, #F06292, #E91E63);
+            box-shadow: 0 8px 30px rgba(233, 30, 99, 0.4);
+            transform: translateY(-2px);
+        }
+        .cta-outline {
+            border: 2px solid #E91E63;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+        }
+        .cta-outline:hover {
+            background: #E91E63;
+            color: white;
+        }
+        .blob-bg {
+            background: radial-gradient(ellipse at 20% 50%, rgba(233, 30, 99, 0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 20%, rgba(252, 228, 236, 0.5) 0%, transparent 40%);
+        }
+        .review-card {
+            border-radius: 20px;
+            border: 1px solid rgba(233, 30, 99, 0.1);
+        }
+        .star-rating { color: #E91E63; }
+        @keyframes pulse-pink {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.3); }
+            50% { box-shadow: 0 0 0 15px rgba(233, 30, 99, 0); }
+        }
+        .pulse-pink { animation: pulse-pink 2s infinite; }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Blondi Salon SRL",
+        "description": "Clinică de micropigmentare și permanent makeup în Slatina. Sprâncene, buze, eyeliner, îngrijire post-procedură.",
+        "telephone": "+40766747663",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Slatina",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.43452,
+            "longitude": 24.368381
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "11:00",
+                "closes": "19:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "bestRating": "5",
+            "reviewCount": "121"
+        },
+        "paymentAccepted": "Cash, Card, NFC",
+        "url": "#"
+    }
+    </script>
+</head>
+<body class="bg-white text-charcoal overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 pink-gradient rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-spa text-white text-lg"></i>
+                    </div>
+                    <span class="font-playfair text-xl font-bold text-charcoal">Blondi <span class="text-pink">Salon</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#servicii" class="text-sm text-charcoal/70 hover:text-pink transition-colors font-medium">Servicii</a>
+                    <a href="#despre" class="text-sm text-charcoal/70 hover:text-pink transition-colors font-medium">Despre</a>
+                    <a href="#recenzii" class="text-sm text-charcoal/70 hover:text-pink transition-colors font-medium">Recenzii</a>
+                    <a href="#program" class="text-sm text-charcoal/70 hover:text-pink transition-colors font-medium">Program</a>
+                    <a href="tel:0766747663" class="cta-pink px-6 py-2.5 text-white text-sm font-semibold">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                    </a>
+                </div>
+                <button class="md:hidden text-charcoal text-2xl" id="menuBtn" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-t border-pink/10" id="mobileMenu">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="#servicii" class="text-charcoal/70 hover:text-pink font-medium text-sm">Servicii</a>
+                <a href="#despre" class="text-charcoal/70 hover:text-pink font-medium text-sm">Despre</a>
+                <a href="#recenzii" class="text-charcoal/70 hover:text-pink font-medium text-sm">Recenzii</a>
+                <a href="#program" class="text-charcoal/70 hover:text-pink font-medium text-sm">Program</a>
+                <a href="tel:0766747663" class="cta-pink px-6 py-3 text-white text-sm font-semibold text-center">
+                    <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center blob-bg pt-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-blush px-4 py-2 rounded-full mb-6" data-aos="fade-up">
+                        <div class="flex gap-0.5 star-rating text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="text-sm font-medium text-charcoal">4.7/5 — 121 recenzii</span>
+                    </div>
+                    <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+                        Frumusețe care <span class="pink-gradient-text italic">durează</span>
+                    </h1>
+                    <p class="text-charcoal/60 text-lg leading-relaxed mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+                        Clinică de micropigmentare și permanent makeup din Slatina. Tehnici profesionale, rezultate naturale, clienți încântați.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="tel:0766747663" class="cta-pink px-8 py-4 text-white font-semibold text-center">
+                            <i class="fa-solid fa-phone mr-2"></i>0766 747 663
+                        </a>
+                        <a href="#servicii" class="cta-outline px-8 py-4 text-pink font-semibold text-center">
+                            Servicii & Prețuri
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 text-sm text-charcoal/50" data-aos="fade-up" data-aos-delay="400">
+                        <span><i class="fa-solid fa-credit-card text-pink mr-2"></i>Plată card</span>
+                        <span><i class="fa-solid fa-wifi text-pink mr-2"></i>NFC</span>
+                        <span><i class="fa-solid fa-map-pin text-pink mr-2"></i>Slatina</span>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-br from-pink/20 to-blush flex items-center justify-center relative">
+                            <div class="w-56 h-56 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-pink/10 to-white flex items-center justify-center">
+                                <i class="fa-solid fa-wand-magic-sparkles text-pink text-6xl sm:text-7xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white shadow-lg rounded-2xl px-4 py-3 pulse-pink">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-heart text-pink"></i>
+                                <span class="font-semibold text-sm">121 clienți fericiți</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-0 bg-white shadow-lg rounded-2xl px-4 py-3">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-award text-pink"></i>
+                                <span class="font-semibold text-sm">Profesionalism</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicii" class="py-24 bg-soft-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-pink font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Serviciile noastre</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl mt-4 mb-6" data-aos="fade-up">Servicii de <span class="pink-gradient-text italic">micropigmentare</span></h2>
+                <p class="text-charcoal/60 text-lg" data-aos="fade-up">Tehnici avansate de permanent makeup pentru un look natural și durabil.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white card-rounded p-8 text-center shadow-sm" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blush rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-eye text-pink text-2xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3">Micropigmentare sprâncene</h3>
+                    <p class="text-charcoal/60 text-sm leading-relaxed">Sprâncene perfecte prin tehnici moderne: microblading, powder brows sau combinat. Aspect natural, durabil.</p>
+                    <div class="mt-6 pt-4 border-t border-pink/10">
+                        <a href="tel:0766747663" class="text-pink font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white card-rounded p-8 text-center shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blush rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-lips text-pink text-2xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3">Micropigmentare buze</h3>
+                    <p class="text-charcoal/60 text-sm leading-relaxed">Contur și umplere buze cu pigmenți de calitate superioară. Culori naturale, rezultate elegante.</p>
+                    <div class="mt-6 pt-4 border-t border-pink/10">
+                        <a href="tel:0766747663" class="text-pink font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white card-rounded p-8 text-center shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blush rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-eye-low-vision text-pink text-2xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3">Eyeliner permanent</h3>
+                    <p class="text-charcoal/60 text-sm leading-relaxed">Eyeliner subtil sau dramatic, aplicat cu precizie. Privire intensă fără efortul machiajului zilnic.</p>
+                    <div class="mt-6 pt-4 border-t border-pink/10">
+                        <a href="tel:0766747663" class="text-pink font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white card-rounded p-8 text-center shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-blush rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-shield-heart text-pink text-2xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3">Îngrijire post-procedură</h3>
+                    <p class="text-charcoal/60 text-sm leading-relaxed">Recomandări personalizate și control post-procedură pentru rezultate perfecte pe termen lung.</p>
+                    <div class="mt-6 pt-4 border-t border-pink/10">
+                        <a href="tel:0766747663" class="text-pink font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="despre" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-blush to-white rounded-3xl p-12 relative">
+                        <div class="absolute -top-4 -left-4 w-20 h-20 bg-pink/10 rounded-full"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-pink/5 rounded-full"></div>
+                        <div class="relative text-center">
+                            <i class="fa-solid fa-spa text-pink text-7xl mb-8"></i>
+                            <div class="flex justify-center gap-4 mt-6">
+                                <div class="bg-white rounded-2xl px-5 py-3 shadow-sm">
+                                    <p class="font-playfair text-2xl font-bold text-pink">4.7</p>
+                                    <p class="text-xs text-charcoal/50">Rating</p>
+                                </div>
+                                <div class="bg-white rounded-2xl px-5 py-3 shadow-sm">
+                                    <p class="font-playfair text-2xl font-bold text-pink">121</p>
+                                    <p class="text-xs text-charcoal/50">Recenzii</p>
+                                </div>
+                                <div class="bg-white rounded-2xl px-5 py-3 shadow-sm">
+                                    <p class="font-playfair text-2xl font-bold text-pink">L–V</p>
+                                    <p class="text-xs text-charcoal/50">Program</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="text-pink font-semibold text-sm tracking-wider uppercase">Despre Blondi Salon</span>
+                    <h2 class="font-playfair text-3xl sm:text-4xl mt-4 mb-6">Experiență și <span class="pink-gradient-text italic">pasiune</span></h2>
+                    <p class="text-charcoal/60 leading-relaxed mb-6 text-lg">
+                        La Blondi Salon din Slatina, transformăm frumusețea într-o artă. Cu tehnici moderne de micropigmentare și atenție la fiecare detaliu, oferim rezultate care depășesc așteptările.
+                    </p>
+                    <p class="text-charcoal/60 leading-relaxed mb-8">
+                        Salonul nostru este recunoscut pentru profesionalism, prețuri corecte și atmosfera prietenoasă. Cele 121 de recenzii pozitive confirmă dedicarea noastră față de fiecare clientă.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-pink"></i>
+                            <span class="text-sm">Tehnici moderne</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-pink"></i>
+                            <span class="text-sm">Pigmenți premium</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-pink"></i>
+                            <span class="text-sm">Prețuri corecte</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-pink"></i>
+                            <span class="text-sm">Igienă maximă</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="recenzii" class="py-24 bg-soft-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-pink font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Recenzii clienți</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl mt-4 mb-6" data-aos="fade-up">Ce spun <span class="pink-gradient-text italic">clientele</span> noastre</h2>
+                <p class="text-charcoal/60 text-lg" data-aos="fade-up">121 de recenzii verificate pe Google — fiecare poveste contează.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="review-card bg-white p-8" data-aos="fade-up">
+                    <div class="flex gap-1 star-rating mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-charcoal/70 leading-relaxed mb-6 italic">„Foarte mulțumită de rezultat! Sprâncenele arată absolut natural. Profesionalism desăvârșit și prețuri excelente. Recomand cu încredere!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blush rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-pink text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Andreea M.</p>
+                            <p class="text-charcoal/40 text-xs">Clientă verificată</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card bg-white p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 star-rating mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-charcoal/70 leading-relaxed mb-6 italic">„Am făcut micropigmentare buze și sunt încântată. Culoarea e perfectă, procedura nu a fost dureroasă deloc. Personal foarte amabil."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blush rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-pink text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Maria D.</p>
+                            <p class="text-charcoal/40 text-xs">Clientă verificată</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card bg-white p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 star-rating mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-charcoal/70 leading-relaxed mb-6 italic">„Salonul e impecabil, totul e foarte curat și profesionist. Am revenit pentru eyeliner după ce am făcut sprâncenele. Cel mai bun salon din Slatina!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blush rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-pink text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Elena P.</p>
+                            <p class="text-charcoal/40 text-xs">Clientă verificată</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 bg-blush rounded-full px-8 py-4">
+                    <div class="flex gap-1 star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="font-semibold">4.7 din 5</span>
+                    <span class="text-charcoal/50">— 121 recenzii Google</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-pink font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">De ce Blondi Salon</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl mt-4 mb-6" data-aos="fade-up">De ce ne <span class="pink-gradient-text italic">aleg</span> clientele</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex gap-5" data-aos="fade-up">
+                    <div class="w-14 h-14 min-w-[56px] bg-blush rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-gem text-pink text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-playfair text-lg font-bold mb-2">Prețuri competitive</h3>
+                        <p class="text-charcoal/60 text-sm leading-relaxed">Raport calitate-preț excelent, confirmat de zeci de recenzii care laudă prețurile accesibile.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 min-w-[56px] bg-blush rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-certificate text-pink text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-playfair text-lg font-bold mb-2">Personal calificat</h3>
+                        <p class="text-charcoal/60 text-sm leading-relaxed">Echipă cu pregătire profesională și experiență demonstrată în tehnici de micropigmentare.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 min-w-[56px] bg-blush rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-spray-can-sparkles text-pink text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-playfair text-lg font-bold mb-2">Igienă perfectă</h3>
+                        <p class="text-charcoal/60 text-sm leading-relaxed">Materiale de unică folosință, sterilizare completă și protocoale stricte de siguranță.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 min-w-[56px] bg-blush rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-credit-card text-pink text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-playfair text-lg font-bold mb-2">Plată flexibilă</h3>
+                        <p class="text-charcoal/60 text-sm leading-relaxed">Acceptăm plata cu cardul, NFC și numerar. Orice metodă vi se potrivește.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 min-w-[56px] bg-blush rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-pink text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-playfair text-lg font-bold mb-2">Rezultate naturale</h3>
+                        <p class="text-charcoal/60 text-sm leading-relaxed">Folosim tehnici care oferă un aspect cât mai natural, adaptat fizionomiei fiecărei cliente.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 min-w-[56px] bg-blush rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-handshake text-pink text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-playfair text-lg font-bold mb-2">Consultanță gratuită</h3>
+                        <p class="text-charcoal/60 text-sm leading-relaxed">Discutăm gratuit despre opțiuni, culori și tehnici înainte de procedură.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Contact -->
+    <section id="program" class="py-24 bg-soft-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <span class="text-pink font-semibold text-sm tracking-wider uppercase">Program</span>
+                    <h2 class="font-playfair text-3xl sm:text-4xl mt-4 mb-8">Program de <span class="pink-gradient-text italic">lucru</span></h2>
+                    <div class="bg-white rounded-3xl p-8 shadow-sm">
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-pink/10">
+                                <span class="font-medium">Luni</span>
+                                <span class="text-pink font-semibold">11:00 – 19:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-pink/10">
+                                <span class="font-medium">Marți</span>
+                                <span class="text-pink font-semibold">11:00 – 19:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-pink/10">
+                                <span class="font-medium">Miercuri</span>
+                                <span class="text-pink font-semibold">11:00 – 19:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-pink/10">
+                                <span class="font-medium">Joi</span>
+                                <span class="text-pink font-semibold">11:00 – 19:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-pink/10">
+                                <span class="font-medium">Vineri</span>
+                                <span class="text-pink font-semibold">11:00 – 19:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-pink/10">
+                                <span class="font-medium">Sâmbătă</span>
+                                <span class="text-charcoal/40">Închis</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="font-medium">Duminică</span>
+                                <span class="text-charcoal/40">Închis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" id="contact">
+                    <span class="text-pink font-semibold text-sm tracking-wider uppercase">Contact</span>
+                    <h2 class="font-playfair text-3xl sm:text-4xl mt-4 mb-8">Programează-te <span class="pink-gradient-text italic">acum</span></h2>
+                    <div class="bg-white rounded-3xl p-8 shadow-sm text-center">
+                        <div class="w-20 h-20 bg-blush rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-phone text-pink text-3xl"></i>
+                        </div>
+                        <h3 class="font-playfair text-2xl font-bold mb-4">Sună pentru programare</h3>
+                        <p class="text-charcoal/60 mb-8 max-w-sm mx-auto">Sună-ne pentru a programa o consultație gratuită și pentru a discuta despre procedura dorită.</p>
+                        <a href="tel:0766747663" class="cta-pink px-10 py-4 text-white font-semibold text-lg inline-block">
+                            <i class="fa-solid fa-phone mr-2"></i>0766 747 663
+                        </a>
+                        <div class="mt-8 grid grid-cols-2 gap-4">
+                            <div class="bg-blush rounded-2xl p-4 text-center">
+                                <i class="fa-solid fa-location-dot text-pink text-xl mb-2"></i>
+                                <p class="text-sm font-medium">Slatina</p>
+                            </div>
+                            <div class="bg-blush rounded-2xl p-4 text-center">
+                                <i class="fa-solid fa-clock text-pink text-xl mb-2"></i>
+                                <p class="text-sm font-medium">L–V: 11–19</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 pink-gradient relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl text-white mb-6" data-aos="fade-up">Pregătită pentru o transformare?</h2>
+            <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Alătură-te celor peste 121 de cliente mulțumite. Programează-te astăzi și descoperă diferența Blondi Salon.</p>
+            <a href="tel:0766747663" class="bg-white text-pink font-semibold px-10 py-4 rounded-full inline-block hover:shadow-lg hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-phone mr-2"></i>Sună: 0766 747 663
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-charcoal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 pink-gradient rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-spa text-white text-lg"></i>
+                        </div>
+                        <span class="font-playfair text-xl font-bold">Blondi Salon</span>
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed">Clinică de micropigmentare și permanent makeup în Slatina. Frumusețe care durează.</p>
+                </div>
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-4 text-pink">Servicii</h4>
+                    <ul class="space-y-2">
+                        <li class="text-white/60 text-sm">Micropigmentare sprâncene</li>
+                        <li class="text-white/60 text-sm">Micropigmentare buze</li>
+                        <li class="text-white/60 text-sm">Eyeliner permanent</li>
+                        <li class="text-white/60 text-sm">Îngrijire post-procedură</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-4 text-pink">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/60 text-sm">
+                            <i class="fa-solid fa-phone text-pink"></i>0766 747 663
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-sm">
+                            <i class="fa-solid fa-location-dot text-pink"></i>Slatina, România
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-sm">
+                            <i class="fa-solid fa-clock text-pink"></i>L–V: 11:00 – 19:00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/40 text-sm">&copy; 2026 Blondi Salon SRL. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>

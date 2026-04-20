@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty &amp; Style | Barber &amp; Grooming Lounge — Craiova</title>
+  <meta name="description" content="Beauty &amp; Style — frizerie premium &#238;n Craiova. Tuns b&#259;rba&#539;i, copii, styling, contur barb&#259;. Rating 4.9/5. Programare: 0767 117 064.">
+  <meta property="og:title" content="Beauty &amp; Style | Barber Craiova">
+  <meta property="og:locale" content="ro_RO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            matte: '#191919',
+            'matte-light': '#242424',
+            ivory: '#F5F1EB',
+            gold: '#C9B037',
+            'gold-dark': '#A89030',
+            espresso: '#3C2415',
+          },
+          fontFamily: {
+            heading: ['"DM Serif Display"', 'serif'],
+            body: ['Jost', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; }
+    .gold-line { height: 1px; background: linear-gradient(90deg, transparent, #C9B037, transparent); }
+    .nav-scroll { background: rgba(25,25,25,0.97); backdrop-filter: blur(8px); }
+    .linen { background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23C9B037' fill-opacity='0.03'/%3E%3C/svg%3E"); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Beauty & Style",
+    "telephone": "+40767117064",
+    "address": { "@type": "PostalAddress", "streetAddress": "Str. Sfin&#539;ii Apostoli 176", "addressLocality": "Craiova", "addressRegion": "Dolj", "addressCountry": "RO" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 44.311648, "longitude": 23.819556 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "28", "bestRating": "5" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-matte text-ivory font-body">
+
+  <!-- NAV -->
+  <nav id="nav" class="fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="font-heading text-2xl">Beauty <span class="text-gold">&amp;</span> Style</a>
+      <div class="hidden md:flex items-center gap-8 text-sm tracking-wider uppercase text-ivory/60">
+        <a href="#despre" class="hover:text-gold transition">Despre</a>
+        <a href="#servicii" class="hover:text-gold transition">Servicii</a>
+        <a href="#recenzii" class="hover:text-gold transition">Recenzii</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+      </div>
+      <a href="tel:+40767117064" class="hidden md:inline-block border border-gold text-gold text-sm px-5 py-2 tracking-wider uppercase hover:bg-gold hover:text-matte transition">Programare</a>
+      <button id="menuBtn" class="md:hidden text-ivory/60 text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-matte-light px-6 py-4 space-y-3 border-t border-white/5">
+      <a href="#despre" class="block text-ivory/60 uppercase text-sm tracking-wider">Despre</a>
+      <a href="#servicii" class="block text-ivory/60 uppercase text-sm tracking-wider">Servicii</a>
+      <a href="#recenzii" class="block text-ivory/60 uppercase text-sm tracking-wider">Recenzii</a>
+      <a href="#contact" class="block text-ivory/60 uppercase text-sm tracking-wider">Contact</a>
+      <a href="tel:+40767117064" class="block bg-gold text-matte text-center py-3 font-medium uppercase tracking-wider mt-2">Programare</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center linen pt-20">
+    <div class="max-w-5xl mx-auto px-6 py-24 text-center">
+      <div data-aos="fade-up">
+        <i class="fa-solid fa-scissors text-gold text-3xl mb-8 block"></i>
+        <h1 class="font-heading text-5xl md:text-7xl mb-4">Beauty <span class="text-gold">&amp;</span> Style</h1>
+        <p class="text-ivory/50 text-xl tracking-wider uppercase mb-3">Barber &amp; Grooming Lounge</p>
+        <p class="text-ivory/40 mb-2">Craiova &middot; Str. Sfin&#539;ii Apostoli 176</p>
+        <div class="flex items-center justify-center gap-2 text-gold mb-10">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gold/60"></i>
+          <span class="text-ivory/60 text-sm ml-2">4.9/5 din 28 recenzii</span>
+        </div>
+        <a href="tel:+40767117064" class="inline-block bg-gold text-matte font-medium px-10 py-4 tracking-wider uppercase hover:bg-gold-dark transition text-lg">
+          <i class="fa-solid fa-phone mr-2"></i> Programeaz&#259;-te
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section id="despre" class="py-24 bg-matte-light">
+    <div class="max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
+      <div class="gold-line mb-10"></div>
+      <p class="font-heading text-3xl mb-8">Un loc unde fiecare detaliu conteaz&#259;</p>
+      <p class="text-ivory/60 leading-relaxed mb-6">
+        Beauty &amp; Style este mai mult dec&#226;t o frizerie. Este un spa&#539;iu creat pentru b&#259;rba&#539;i &#537;i copii care apreciaz&#259; &#238;ngrijirea profesional&#259;, aten&#539;ia la detalii &#537;i o atmosfer&#259; curat&#259; &#537;i elegant&#259;. &#206;n centrul Craiovei, echipa noastr&#259; ofer&#259; servicii de calitate, apreciate de clien&#539;i din Rom&#226;nia &#537;i din str&#259;in&#259;tate.
+      </p>
+      <p class="text-ivory/60 leading-relaxed">
+        Clien&#539;ii no&#537;tri din Italia, Polonia &#537;i multe alte &#539;&#259;ri ne-au ales pentru profesionalismul echipei. Programarea este recomandat&#259; pentru a v&#259; asigura locul.
+      </p>
+      <div class="gold-line mt-10"></div>
+    </div>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="py-24 bg-matte linen">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <i class="fa-solid fa-scissors text-gold mb-4 block"></i>
+        <h2 class="font-heading text-4xl">Servicii</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-aos="fade-up" data-aos-delay="0" class="bg-matte-light border border-white/5 p-8 text-center hover:border-gold/30 transition">
+          <i class="fa-solid fa-scissors text-gold text-2xl mb-4"></i>
+          <h3 class="font-heading text-xl mb-2">Tuns b&#259;rba&#539;i</h3>
+          <p class="text-ivory/50 text-sm">Tuns clasic sau modern, adaptat stilului &#537;i preferin&#539;elor tale.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-matte-light border border-white/5 p-8 text-center hover:border-gold/30 transition">
+          <i class="fa-solid fa-child text-gold text-2xl mb-4"></i>
+          <h3 class="font-heading text-xl mb-2">Tuns copii</h3>
+          <p class="text-ivory/50 text-sm">Atmosfer&#259; prietenoas&#259; &#537;i r&#259;bdare pentru cei mici. Salon recomandat pentru familii.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-matte-light border border-white/5 p-8 text-center hover:border-gold/30 transition">
+          <i class="fa-solid fa-wand-magic-sparkles text-gold text-2xl mb-4"></i>
+          <h3 class="font-heading text-xl mb-2">Styling</h3>
+          <p class="text-ivory/50 text-sm">Aranjare, coafur&#259; &#537;i consiliere pentru un look complet &#537;i &#238;ngrijit.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-matte-light border border-white/5 p-8 text-center hover:border-gold/30 transition">
+          <i class="fa-solid fa-face-smile-beam text-gold text-2xl mb-4"></i>
+          <h3 class="font-heading text-xl mb-2">Barb&#259; &amp; Contur</h3>
+          <p class="text-ivory/50 text-sm">Aranjare barb&#259;, conturare precis&#259; &#537;i &#238;ngrijire facial&#259; de baz&#259;.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENZII -->
+  <section id="recenzii" class="py-24 bg-matte-light">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="font-heading text-4xl">Ce spun clien&#539;ii</h2>
+        <p class="text-ivory/40 mt-2">Recenzii reale de la clien&#539;i din Rom&#226;nia &#537;i din str&#259;in&#259;tate</p>
+      </div>
+      <div class="space-y-6">
+        <div data-aos="fade-up" class="border-l-2 border-gold pl-8 py-4">
+          <p class="text-ivory/70 italic text-lg mb-3">&laquo;Brava, bravissima, accogliente, grande professionalit&#224;, gentilissima in tutto. Grazie Nina&raquo;</p>
+          <p class="text-gold font-medium">Giovanni Faruolo <span class="text-ivory/30 font-normal">— Italia</span></p>
+          <div class="flex gap-1 text-gold text-xs mt-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="border-l-2 border-gold pl-8 py-4">
+          <p class="text-ivory/70 italic text-lg mb-3">&laquo;Profesjonalna obs&#322;uga, pani Nina poradzi&#322;a sobie bez problemu nawet bez znajomo&#347;ci polskiego j&#281;zyka :)&raquo;</p>
+          <p class="text-gold font-medium">Sebastian Sylwestrzak <span class="text-ivory/30 font-normal">— Polonia</span></p>
+          <div class="flex gap-1 text-gold text-xs mt-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="border-l-2 border-gold pl-8 py-4">
+          <p class="text-ivory/70 italic text-lg mb-3">&laquo;Curat &#537;i elegant. NUMAI PE PROGRAMARE v&#259; pute&#539;i aranja frizura.&raquo;</p>
+          <p class="text-gold font-medium">Marius C&#259;lin <span class="text-ivory/30 font-normal">— Craiova</span></p>
+          <div class="flex gap-1 text-gold text-xs mt-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="border-l-2 border-gold pl-8 py-4">
+          <p class="text-ivory/70 italic text-lg mb-3">&laquo;Personal amabil &#537;i servicii de nota 11.&raquo;</p>
+          <p class="text-gold font-medium">Ovidiu Ciurezu <span class="text-ivory/30 font-normal">— Craiova</span></p>
+          <div class="flex gap-1 text-gold text-xs mt-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM & CONTACT -->
+  <section id="contact" class="py-24 bg-matte linen">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="font-heading text-4xl mb-4">Program &amp; Contact</h2>
+        <p class="text-ivory/40">Programarea este recomandat&#259;</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-matte-light border border-white/5 p-8">
+          <h3 class="font-heading text-xl text-gold mb-6">Program</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-ivory/50">Luni — Vineri</span><span>09:00 — 20:00</span></div>
+            <div class="flex justify-between"><span class="text-ivory/50">S&#226;mb&#259;t&#259;</span><span>09:00 — 16:00</span></div>
+            <div class="flex justify-between"><span class="text-ivory/50">Duminic&#259;</span><span class="text-ivory/30">&#206;nchis</span></div>
+          </div>
+          <div class="mt-6 text-xs text-ivory/30 flex items-center gap-2">
+            <i class="fa-solid fa-calendar-check text-gold"></i> Programare recomandat&#259;
+          </div>
+        </div>
+        <div class="bg-matte-light border border-white/5 p-8 flex flex-col justify-between">
+          <div>
+            <h3 class="font-heading text-xl text-gold mb-4">Contact</h3>
+            <p class="text-ivory/50 text-sm mb-1"><i class="fa-solid fa-location-dot text-gold mr-2"></i>Str. Sfin&#539;ii Apostoli 176, Craiova</p>
+            <p class="text-ivory/50 text-sm mb-4"><i class="fa-solid fa-child text-gold mr-2"></i>Recomandat pentru copii</p>
+          </div>
+          <a href="tel:+40767117064" class="block bg-gold text-matte text-center font-medium py-4 tracking-wider uppercase hover:bg-gold-dark transition mt-4">
+            <i class="fa-solid fa-phone mr-2"></i> 0767 117 064
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-matte-light py-10 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <span class="font-heading text-lg">Beauty <span class="text-gold">&amp;</span> Style</span>
+      <span class="text-ivory/40 text-sm">Str. Sfin&#539;ii Apostoli 176, Craiova &middot; <a href="tel:+40767117064" class="text-gold">0767 117 064</a></span>
+      <span class="text-ivory/20 text-xs">&copy; 2026 Beauty &amp; Style</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY -->
+  <div class="fixed bottom-0 left-0 right-0 md:hidden bg-matte/95 backdrop-blur border-t border-gold/20 p-3 z-50">
+    <a href="tel:+40767117064" class="flex items-center justify-center gap-2 bg-gold text-matte font-medium py-3 tracking-wider uppercase w-full">
+      <i class="fa-solid fa-phone"></i> Programeaz&#259;-te
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 80 });
+    document.getElementById('nav').classList.add('nav-scroll');
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav-scroll', window.scrollY > 40), { passive: true });
+    const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+    mb.addEventListener('click', () => { mm.classList.toggle('hidden'); mb.innerHTML = mm.classList.contains('hidden') ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>'; });
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); mb.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+  </script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DMA Garage &middot; Detailing auto profesional &icirc;n Pope&#537;ti-Leordeni</title>
+<meta name="description" content="DMA Garage Atelier Detailing Auto &mdash; detailing exterior &#537;i interior, ceramic coating &#537;i protec&#539;ie vopsea &icirc;n Pope&#537;ti-Leordeni. Strada Gole&#537;ti 5A. Programare la 0737 151 746.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        night:   '#07090E',
+        carbon:  '#0F131B',
+        graph:   '#1A1F2A',
+        chrome:  '#C7CCD3',
+        silver:  '#8C94A1',
+        spark:   '#00E5FF',
+        sparkd:  '#00B8CC',
+        hot:     '#FF4D2E',
+        ink:     '#07090E',
+        paper:   '#F6F7FA',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['"Passion One"', 'Impact', 'sans-serif'],
+        sans:    ['Inter', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #07090E; color: #F6F7FA; }
+  body { font-family: Inter, system-ui, sans-serif; }
+  .display { font-family: "Passion One", Impact, sans-serif; letter-spacing: .01em; line-height: .9; }
+
+  .grid-carbon {
+    background-image:
+      linear-gradient(rgba(0,229,255,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .beams {
+    background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,.18) 0%, transparent 55%);
+  }
+
+  .chrome-grad {
+    background: linear-gradient(180deg, #FFFFFF 0%, #C7CCD3 40%, #8C94A1 65%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-spark {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.75rem;
+    background: #00E5FF;
+    color: #07090E;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: .82rem;
+    border-radius: 6px;
+    box-shadow: 0 14px 32px -14px rgba(0,229,255,.7);
+    transition: all .25s;
+  }
+  .btn-spark:hover { background: #FFFFFF; transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.75rem;
+    background: transparent;
+    color: #F6F7FA;
+    border: 1.5px solid rgba(199,204,211,.4);
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: .82rem;
+    border-radius: 6px;
+    transition: all .25s;
+  }
+  .btn-outline:hover { border-color: #00E5FF; color: #00E5FF; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.75rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: .82rem;
+    border-radius: 6px;
+    box-shadow: 0 14px 32px -14px rgba(37,211,102,.7);
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .35rem .85rem;
+    background: rgba(0,229,255,.12);
+    border: 1px solid rgba(0,229,255,.35);
+    color: #00E5FF;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+
+  .pkg-card {
+    background: #0F131B;
+    border: 1px solid rgba(199,204,211,.15);
+    border-radius: 14px;
+    padding: 2rem;
+    position: relative;
+    transition: all .35s;
+  }
+  .pkg-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(0,229,255,.35), transparent 50%);
+    padding: 1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  .pkg-card:hover { transform: translateY(-5px); border-color: rgba(0,229,255,.35); }
+  .pkg-card:hover::before { opacity: 1; }
+  .pkg-card.featured {
+    background: linear-gradient(180deg, #0F131B 0%, #1A1F2A 100%);
+    border-color: rgba(0,229,255,.45);
+  }
+  .pkg-card.featured::before { opacity: 1; }
+
+  .price {
+    font-family: "Passion One", sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+
+  .shine-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,229,255,.5) 50%, transparent 100%);
+  }
+
+  .metric {
+    background: #0F131B;
+    border: 1px solid rgba(199,204,211,.12);
+    padding: 1.3rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  .testi-card {
+    background: #0F131B;
+    border: 1px solid rgba(199,204,211,.15);
+    border-radius: 14px;
+    padding: 1.75rem;
+    position: relative;
+  }
+  .testi-card .qicon {
+    position: absolute;
+    top: 1rem; right: 1.25rem;
+    color: #00E5FF;
+    opacity: .4;
+    font-size: 2rem;
+  }
+
+  .mobile-link { display:block; padding: 1rem 0; font-family: "Passion One", sans-serif; font-size: 2rem; border-bottom: 1px solid rgba(199,204,211,.2); }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .7rem 0;
+    border-bottom: 1px dashed rgba(199,204,211,.2);
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #00E5FF; font-weight: 700; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<header class="relative z-40 border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded bg-spark text-night flex items-center justify-center display text-2xl">D</span>
+      <div class="leading-tight">
+        <p class="display text-2xl leading-none">DMA <span class="text-spark">/</span> Garage</p>
+        <p class="text-[10px] tracking-[.18em] uppercase text-silver mt-1">Atelier Detailing &middot; Pope&#537;ti-Leordeni</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[12px] font-semibold uppercase tracking-wider text-paper/85">
+      <a href="#pachete"  class="hover:text-spark">Pachete</a>
+      <a href="#proces"   class="hover:text-spark">Proces</a>
+      <a href="#recenzii" class="hover:text-spark">Recenzii</a>
+      <a href="#program"  class="hover:text-spark">Program</a>
+      <a href="tel:0737151746" class="btn-spark !py-2.5 !px-4 !text-xs">0737 151 746</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded bg-graph border border-white/10 flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars text-spark"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-night z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-3xl">DMA <span class="text-spark">/</span> Garage</span>
+    <button id="menu-close" class="w-11 h-11 border border-white/10 rounded flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark text-spark"></i></button>
+  </div>
+  <nav class="mt-8">
+    <a href="#pachete"  class="mobile-link">Pachete</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#program"  class="mobile-link">Program</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-2">
+    <a href="tel:0737151746" class="btn-spark">Sun&#259;</a>
+    <a href="https://wa.me/40737151746" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="relative overflow-hidden beams">
+  <div class="absolute inset-0 grid-carbon opacity-60"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 lg:pb-32">
+    <div class="flex items-center gap-3 text-xs uppercase tracking-[.2em] text-silver" data-aos="fade-up">
+      <span class="w-8 shine-line"></span>
+      <span>Detailing profesional din 2021</span>
+    </div>
+
+    <h1 class="display mt-6 text-[clamp(3rem,13vw,11rem)]" data-aos="fade-up" data-aos-delay="40">
+      <span class="chrome-grad">Ma&#537;ina ta</span><br>
+      <span class="text-spark">ca nou&#259;.</span> <span class="text-paper/80">Din interior,</span><br>
+      <span class="text-paper/80">p&#226;n&#259; la ceramic.</span>
+    </h1>
+
+    <p class="mt-10 max-w-xl text-lg text-paper/70 leading-relaxed" data-aos="fade-up" data-aos-delay="120">
+      La DMA Garage, fiecare ma&#537;in&#259; prime&#537;te aten&#539;ia pe care o merit&#259;. Lucr&#259;m cu produse de top, aparate profesionale &#537;i oameni care iubesc detailing-ul. Oprire la cafea, la plec&#259;rii ma&#537;ina sticle&#537;te.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3" data-aos="fade-up" data-aos-delay="180">
+      <a href="tel:0737151746" class="btn-spark"><i class="fa-solid fa-phone"></i> Programare 0737 151 746</a>
+      <a href="https://wa.me/40737151746" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      <a href="#pachete" class="btn-outline"><i class="fa-solid fa-list"></i> Vezi pachete</a>
+    </div>
+
+    <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5" data-aos="fade-up" data-aos-delay="240">
+      <div class="metric">
+        <p class="display text-4xl text-spark">5.0</p>
+        <p class="text-[11px] uppercase tracking-widest text-silver mt-1">Rating Google</p>
+      </div>
+      <div class="metric">
+        <p class="display text-4xl text-spark">74+</p>
+        <p class="text-[11px] uppercase tracking-widest text-silver mt-1">recenzii 5<i class="fa-solid fa-star ml-1 text-xs"></i></p>
+      </div>
+      <div class="metric">
+        <p class="display text-4xl text-spark">100%</p>
+        <p class="text-[11px] uppercase tracking-widest text-silver mt-1">produse profesionale</p>
+      </div>
+      <div class="metric">
+        <p class="display text-4xl text-spark">2021</p>
+        <p class="text-[11px] uppercase tracking-widest text-silver mt-1">din anul &icirc;nfiin&#539;&#259;rii</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pachete" class="py-16 sm:py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+      <div>
+        <span class="chip"><i class="fa-solid fa-car"></i> Pachete detailing</span>
+        <h2 class="display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+          Alege <span class="text-spark">pachetul</span><br>potrivit pentru ma&#537;in&#259;.
+        </h2>
+      </div>
+      <p class="sm:max-w-xs text-silver text-sm">Programul complet de detailing, de la sp&#259;lare la exterior la ceramic coating. Pre&#539;urile sunt orientative &#537;i se adapteaz&#259; la starea ma&#537;inii.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-3 gap-6">
+
+      <article class="pkg-card" data-aos="fade-up">
+        <p class="text-[10px] uppercase tracking-[.2em] text-silver">Pachet 01</p>
+        <h3 class="display text-4xl mt-3">Express Wash</h3>
+        <div class="mt-4 shine-line"></div>
+        <p class="mt-4 text-sm text-paper/65 leading-relaxed">Sp&#259;lare exterioar&#259; profesional&#259;, cear&#259; rapid&#259;, cur&#259;&#539;are geamuri &#537;i jenti. Pentru c&#226;nd vrei ma&#537;ina curat&#259; &#537;i gata de drum.</p>
+        <p class="price text-chrome mt-6">de la 120<span class="text-xl text-silver"> lei</span></p>
+        <ul class="mt-5 space-y-2 text-sm text-paper/75">
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Sp&#259;lare cu spum&#259; activ&#259;</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Cear&#259; rapid&#259;</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Jenti &#537;i anvelope</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Aspirare scurt&#259;</li>
+        </ul>
+      </article>
+
+      <article class="pkg-card featured" data-aos="fade-up" data-aos-delay="80">
+        <div class="absolute -top-3 left-6 px-3 py-1 bg-spark text-night text-[10px] uppercase tracking-widest font-bold rounded">Cel mai ales</div>
+        <p class="text-[10px] uppercase tracking-[.2em] text-silver">Pachet 02</p>
+        <h3 class="display text-4xl mt-3">Deep Clean</h3>
+        <div class="mt-4 shine-line"></div>
+        <p class="mt-4 text-sm text-paper/65 leading-relaxed">Detailing complet interior &#537;i exterior. Tapi&#539;erii, panouri, plastice, injec&#539;ie-extrac&#539;ie la scaune &#537;i tratamente de fine&#539;e.</p>
+        <p class="price text-spark mt-6">de la 450<span class="text-xl text-silver"> lei</span></p>
+        <ul class="mt-5 space-y-2 text-sm text-paper/85">
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Tot ce e la Express</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Cur&#259;&#539;are tapi&#539;erie complet&#259;</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Plastice interior / exterior</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Motor degresat</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Eliminare mirosuri</li>
+        </ul>
+      </article>
+
+      <article class="pkg-card" data-aos="fade-up" data-aos-delay="160">
+        <p class="text-[10px] uppercase tracking-[.2em] text-silver">Pachet 03</p>
+        <h3 class="display text-4xl mt-3">Ceramic Coating</h3>
+        <div class="mt-4 shine-line"></div>
+        <p class="mt-4 text-sm text-paper/65 leading-relaxed">Protec&#539;ie ceramic&#259; pentru vopsea, care dureaz&#259; ani &#537;i face ma&#537;ina s&#259; luceasc&#259; ca &icirc;n ziua &icirc;n care a ie&#537;it din show-room.</p>
+        <p class="price text-chrome mt-6">de la 1500<span class="text-xl text-silver"> lei</span></p>
+        <ul class="mt-5 space-y-2 text-sm text-paper/75">
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Deep Clean complet &icirc;nainte</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Decontaminare vopsea</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Polish &#537;i refinishing</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Aplicare ceramic coating</li>
+          <li><i class="fa-solid fa-check text-spark mr-2"></i> Garan&#539;ie pe strat</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <div class="mt-12 p-6 sm:p-8 rounded-xl bg-graph border border-white/10 flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+      <i class="fa-solid fa-truck-fast text-spark text-3xl"></i>
+      <div class="flex-1">
+        <p class="display text-2xl">La client acas&#259; sau la birou</p>
+        <p class="text-sm text-paper/65 mt-1">Oferim cur&#259;&#539;are la loca&#539;ia clientului, &icirc;n Bucure&#537;ti &#537;i &icirc;mprejurimi, cu toate aparatele profesionale.</p>
+      </div>
+      <a href="tel:0737151746" class="btn-outline"><i class="fa-solid fa-phone"></i> Programeaz&#259;</a>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-graph border-y border-white/5">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="chip"><i class="fa-solid fa-gears"></i> Procesul nostru</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        De la murd&#259;rie<br><span class="text-spark">la ceramic shine.</span>
+      </h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+
+      <div class="pkg-card !p-6" data-aos="fade-up">
+        <p class="display text-6xl text-spark">01</p>
+        <h3 class="display text-2xl mt-3">Programare</h3>
+        <p class="mt-2 text-sm text-paper/65">Telefon sau WhatsApp, alegem ziua &#537;i pachetul.</p>
+      </div>
+
+      <div class="pkg-card !p-6" data-aos="fade-up" data-aos-delay="80">
+        <p class="display text-6xl text-spark">02</p>
+        <h3 class="display text-2xl mt-3">Diagnoz&#259;</h3>
+        <p class="mt-2 text-sm text-paper/65">Evalu&#259;m ma&#537;ina, identific&#259;m pete, petru, zg&#226;rieturi.</p>
+      </div>
+
+      <div class="pkg-card !p-6" data-aos="fade-up" data-aos-delay="160">
+        <p class="display text-6xl text-spark">03</p>
+        <h3 class="display text-2xl mt-3">Lucrarea</h3>
+        <p class="mt-2 text-sm text-paper/65">Detailing profesional, cu produse premium &#537;i aparate industriale.</p>
+      </div>
+
+      <div class="pkg-card !p-6" data-aos="fade-up" data-aos-delay="240">
+        <p class="display text-6xl text-spark">04</p>
+        <h3 class="display text-2xl mt-3">Predare</h3>
+        <p class="mt-2 text-sm text-paper/65">Ma&#537;ina &#539;i-o d&#259;m sticlind &#537;i &icirc;&#539;i ar&#259;t&#259;m fiecare detaliu lucrat.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+      <div>
+        <span class="chip"><i class="fa-solid fa-star"></i> Recenzii verificate</span>
+        <h2 class="display mt-4 text-5xl sm:text-6xl">
+          74 de clien&#539;i,<br><span class="text-spark">5.0 pe Google.</span>
+        </h2>
+      </div>
+      <div class="sm:text-right">
+        <div class="flex text-spark text-xl sm:justify-end"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="text-sm text-silver mt-2">Not&#259; perfect&#259;, f&#259;r&#259; recenzii negative</p>
+      </div>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <article class="testi-card" data-aos="fade-up">
+        <i class="fa-solid fa-quote-right qicon"></i>
+        <div class="flex text-spark text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/80 leading-relaxed">Am adus ma&#537;ina aici pentru prima dat&#259; pentru o cur&#259;&#539;are profund&#259; &#537;i pot spune c&#259; sunt 100% mul&#539;umit! Pre&#539;urile sunt foarte bune &#537;i serviciile &#537;i mai bune. Nivelul de detaliu oferit ma&#537;inii a fost uimitor. Revin cu siguran&#539;&#259;!</p>
+        <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-spark/20 text-spark flex items-center justify-center font-bold">OV</div>
+          <div>
+            <p class="font-semibold text-sm">Ovi Visan</p>
+            <p class="text-xs text-silver">Client DMA Garage</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="80">
+        <i class="fa-solid fa-quote-right qicon"></i>
+        <div class="flex text-spark text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/80 leading-relaxed">Serviciu excelent de detailing! 100% recomand dac&#259; vrei ma&#537;ina s&#259; arate perfect.</p>
+        <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-spark/20 text-spark flex items-center justify-center font-bold">IP</div>
+          <div>
+            <p class="font-semibold text-sm">Ionu&#539; P.</p>
+            <p class="text-xs text-silver">Client DMA Garage</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="160">
+        <i class="fa-solid fa-quote-right qicon"></i>
+        <div class="flex text-spark text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/80 leading-relaxed">Am adus ma&#537;ina mea &#537;i a so&#539;iei mele &#537;i sunt foarte mul&#539;umit de mini valet pentru ma&#537;ina mea &#537;i de cur&#259;&#539;area interior/exterior la ma&#537;ina so&#539;iei. Sigur revin!</p>
+        <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-spark/20 text-spark flex items-center justify-center font-bold">GH</div>
+          <div>
+            <p class="font-semibold text-sm">Gary Hampson</p>
+            <p class="text-xs text-silver">Client DMA Garage</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-quote-right qicon"></i>
+        <div class="flex text-spark text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/80 leading-relaxed">Am adus ma&#537;ina aici pentru prima dat&#259; &#537;i cu siguran&#539;&#259; pot spune c&#259; am fost mul&#539;umit&#259;. Serviciul a fost excelent &#537;i pre&#539;urile sunt corecte. Ma&#537;ina ar&#259;ta &#537;i mirosea foarte curat&#259; la final. Mul&#539;umesc!</p>
+        <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-spark/20 text-spark flex items-center justify-center font-bold">PC</div>
+          <div>
+            <p class="font-semibold text-sm">P&#259;l&#259;rie Ioana Cristina</p>
+            <p class="text-xs text-silver">Client DMA Garage</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="320">
+        <i class="fa-solid fa-quote-right qicon"></i>
+        <div class="flex text-spark text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/80 leading-relaxed">Serviciu grozav pentru un pre&#539; rezonabil, u&#537;or de f&#259;cut programare!</p>
+        <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-spark/20 text-spark flex items-center justify-center font-bold">VB</div>
+          <div>
+            <p class="font-semibold text-sm">Vladislavs Blumbergs</p>
+            <p class="text-xs text-silver">Client DMA Garage</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fa-solid fa-quote-right qicon"></i>
+        <div class="flex text-spark text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-paper/80 leading-relaxed">Servicii &#537;i produse foarte profesionale. Merit&#259; &icirc;ncercate!</p>
+        <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-spark/20 text-spark flex items-center justify-center font-bold">DR</div>
+          <div>
+            <p class="font-semibold text-sm">David Ruska</p>
+            <p class="text-xs text-silver">Client DMA Garage</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24 bg-graph border-y border-white/5">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip"><i class="fa-regular fa-clock"></i> Program</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">
+        Deschis<br><span class="text-spark">luni-vineri.</span>
+      </h2>
+      <p class="mt-5 text-paper/70">Program de ziua, cu programare. Pentru cazuri de urgen&#539;&#259;, suna&#539;i &#537;i &icirc;ncerc&#259;m s&#259; v&#259; facem loc.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0737151746" class="btn-spark"><i class="fa-solid fa-phone"></i> 0737 151 746</a>
+        <a href="https://wa.me/40737151746" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="bg-night border border-white/10 rounded-xl p-6 sm:p-8">
+        <ul id="hours">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span class="text-silver">08:00 &ndash; 20:00</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span class="text-silver">08:00 &ndash; 20:00</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span class="text-silver">08:00 &ndash; 20:00</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span class="text-silver">08:00 &ndash; 20:00</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span class="text-silver">08:00 &ndash; 20:00</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span class="text-silver italic">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span class="text-silver italic">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
+  <div class="absolute inset-0 grid-carbon opacity-50"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip"><i class="fa-solid fa-phone-volume"></i> Contact</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+        <span class="chrome-grad">Preg&#259;tit</span><br>
+        <span class="text-spark">pentru ma&#537;ina ta?</span>
+      </h2>
+      <p class="mt-6 max-w-xl text-paper/70 text-lg">Un telefon, alegem pachetul, fix&#259;m ora. &Icirc;&#539;i spunem exact c&#226;t dureaz&#259; &#537;i c&#226;t cost&#259;, &icirc;nc&#259; din prima discu&#539;ie.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0737151746" class="btn-spark"><i class="fa-solid fa-phone"></i> 0737 151 746</a>
+        <a href="https://wa.me/40737151746" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> Mesaj WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-graph border border-white/10 rounded-xl p-7">
+        <p class="text-[10px] uppercase tracking-[.2em] text-spark">Atelier</p>
+        <p class="display text-3xl mt-2">Strada Gole&#537;ti 5A</p>
+        <p class="text-silver text-sm">Pope&#537;ti-Leordeni, Ilfov</p>
+        <p class="text-silver text-sm">Cod po&#537;tal 077160</p>
+
+        <div class="mt-6 shine-line"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-spark w-5"></i> 0737 151 746</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-spark w-5"></i> wa.me/40737151746</div>
+          <div class="flex items-center gap-3"><i class="fa-regular fa-clock text-spark w-5"></i> Lun&ndash;Vin 8&ndash;20</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-spark w-5"></i> Acces complet</div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/DMA+Garage+Atelier+Detailing+Auto/@44.379081,26.1726106,17z" class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[.18em] text-spark font-bold">
+          <i class="fa-solid fa-location-dot"></i> Deschide &icirc;n Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/5 pt-12 pb-24 md:pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col sm:flex-row justify-between gap-6">
+      <div>
+        <p class="display text-3xl">DMA <span class="text-spark">/</span> Garage</p>
+        <p class="text-sm text-silver mt-2 max-w-sm">Atelier de detailing auto profesional &icirc;n Pope&#537;ti-Leordeni. Interior, exterior, ceramic coating.</p>
+      </div>
+      <div class="text-xs text-silver sm:text-right uppercase tracking-[.18em]">
+        <p>&copy; 2026 DMA Garage SRL</p>
+        <p class="mt-1">CUI 43782199 &middot; J23/1148/2021</p>
+        <p class="mt-1">CAEN 4520 &middot; Pope&#537;ti-Leordeni, Ilfov</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0737151746" class="py-4 bg-spark text-night text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40737151746" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "DMA Garage Atelier Detailing Auto",
+  "description": "Atelier de detailing auto profesional in Popesti-Leordeni. Exterior, interior, ceramic coating.",
+  "telephone": "+40737151746",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Golesti 5A",
+    "addressLocality": "Popesti-Leordeni",
+    "addressRegion": "Ilfov",
+    "postalCode": "077160",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.379081, "longitude": 26.172611 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00", "closes": "20:00"
+  }],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "74" },
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

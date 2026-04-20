@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birou Notarial Serenec &amp; Roman | Notar Public Cluj-Napoca</title>
+  <meta name="description" content="Birou Notarial Serenec &amp; Roman — servicii notariale profesionale &#238;n Cluj-Napoca. Autentific&#259;ri, contracte, succesiuni, consultan&#539;&#259;. Tel: 0364 733 339.">
+  <meta property="og:title" content="Birou Notarial Serenec &amp; Roman | Cluj-Napoca">
+  <meta property="og:locale" content="ro_RO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            notary: { dark: '#1C1C28', charcoal: '#2A2A3C', plum: '#4A2C6A', gold: '#C5A55A', 'gold-light': '#D4B96A', cream: '#FAF8F4', muted: '#8B8B9E' },
+          },
+          fontFamily: {
+            heading: ['"Bodoni Moda"', 'serif'],
+            body: ['"Albert Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Albert Sans', sans-serif; }
+    .seal-bg { background-image: radial-gradient(circle at 50% 50%, rgba(197,165,90,0.04) 0%, transparent 60%); }
+    .gold-line { height: 1px; background: linear-gradient(90deg, transparent, #C5A55A, transparent); }
+    .gold-line-left { height: 1px; background: linear-gradient(90deg, #C5A55A 60%, transparent); max-width: 120px; }
+    .nav-scroll { background: rgba(28,28,40,0.97); backdrop-filter: blur(10px); box-shadow: 0 2px 15px rgba(0,0,0,0.3); }
+    .stamp { border: 2px solid #C5A55A; border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Notary",
+    "name": "Birou Notarial Serenec & Roman",
+    "telephone": "+40364733339",
+    "email": "bnpcarmenserenec@yahoo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Strada Alexandru Vaida Voevod 58",
+      "addressLocality": "Cluj-Napoca",
+      "postalCode": "400436",
+      "addressRegion": "Cluj",
+      "addressCountry": "RO"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 46.771433, "longitude": 23.624982 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4", "reviewCount": "56", "bestRating": "5" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:30", "closes": "16:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:30", "closes": "15:00" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-notary-dark text-notary-cream font-body">
+
+  <!-- NAV -->
+  <nav id="nav" class="fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-8 h-8 border border-notary-gold rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-scale-balanced text-notary-gold text-xs"></i>
+        </div>
+        <div>
+          <span class="font-heading text-lg leading-none">Serenec <span class="text-notary-gold">&amp;</span> Roman</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-notary-muted tracking-wide">
+        <a href="#despre" class="hover:text-notary-gold transition">Despre</a>
+        <a href="#servicii" class="hover:text-notary-gold transition">Servicii</a>
+        <a href="#recenzii" class="hover:text-notary-gold transition">Recenzii</a>
+        <a href="#contact" class="hover:text-notary-gold transition">Contact</a>
+      </div>
+      <a href="tel:+40364733339" class="hidden md:inline-block border border-notary-gold text-notary-gold text-sm px-5 py-2 tracking-wider hover:bg-notary-gold hover:text-notary-dark transition">
+        <i class="fa-solid fa-phone mr-1"></i> Programare
+      </a>
+      <button id="menuBtn" class="md:hidden text-notary-muted text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-notary-charcoal px-6 py-4 space-y-3 border-t border-white/5">
+      <a href="#despre" class="block text-notary-muted text-sm">Despre</a>
+      <a href="#servicii" class="block text-notary-muted text-sm">Servicii</a>
+      <a href="#recenzii" class="block text-notary-muted text-sm">Recenzii</a>
+      <a href="#contact" class="block text-notary-muted text-sm">Contact</a>
+      <a href="tel:+40364733339" class="block bg-notary-gold text-notary-dark text-center py-3 font-medium mt-2">Sun&#259; acum</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center seal-bg pt-20">
+    <div class="max-w-5xl mx-auto px-6 py-24 text-center">
+      <div data-aos="fade-up">
+        <div class="stamp mx-auto mb-8">
+          <i class="fa-solid fa-stamp text-notary-gold text-3xl"></i>
+        </div>
+        <p class="text-notary-gold tracking-[0.3em] uppercase text-sm mb-4">Birou Notarial</p>
+        <h1 class="font-heading text-5xl md:text-7xl mb-4 leading-tight">
+          Serenec <span class="text-notary-gold italic">&amp;</span> Roman
+        </h1>
+        <p class="text-notary-muted text-xl mb-2">Notar Public — Cluj-Napoca</p>
+        <p class="text-notary-muted/60 mb-10">Str. Alexandru Vaida Voevod 58</p>
+        <div class="gold-line mb-10"></div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+40364733339" class="bg-notary-gold text-notary-dark font-medium px-10 py-4 tracking-wider hover:bg-notary-gold-light transition">
+            <i class="fa-solid fa-phone mr-2"></i> 0364 733 339
+          </a>
+          <a href="mailto:bnpcarmenserenec@yahoo.com" class="border border-notary-cream/20 text-notary-cream px-10 py-4 tracking-wider hover:border-notary-gold/50 transition">
+            <i class="fa-solid fa-envelope mr-2"></i> Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section id="despre" class="py-24 bg-notary-charcoal">
+    <div class="max-w-3xl mx-auto px-6" data-aos="fade-up">
+      <div class="gold-line-left mb-8"></div>
+      <h2 class="font-heading text-3xl md:text-4xl mb-8">Despre biroul nostru</h2>
+      <p class="text-notary-muted leading-relaxed mb-6">
+        Biroul Notarial Serenec &amp; Roman func&#539;ioneaz&#259; &#238;n Cluj-Napoca, pe Strada Alexandru Vaida Voevod 58, oferind o gam&#259; complet&#259; de servicii notariale at&#226;t persoanelor fizice c&#226;t &#537;i companiilor.
+      </p>
+      <p class="text-notary-muted leading-relaxed mb-6">
+        Abord&#259;m fiecare dosar cu aten&#539;ie la detalii, transparen&#539;&#259; &#537;i grij&#259; pentru siguran&#539;a juridic&#259; a clien&#539;ilor no&#537;tri. Fie c&#259; ave&#539;i nevoie de o autentificare, un contract, o succesiune sau o consultan&#539;&#259; notarial&#259;, suntem preg&#259;ti&#539;i s&#259; v&#259; ghid&#259;m prin fiecare etap&#259;.
+      </p>
+      <p class="text-notary-muted leading-relaxed">
+        V&#259; a&#537;tept&#259;m la birou de luni p&#226;n&#259; joi &#238;ntre 8:30 &#537;i 16:00, iar vineri &#238;ntre 8:30 &#537;i 15:00. Serviciile sunt disponibile &#537;i la sediul clientului, la cerere.
+      </p>
+      <div class="flex flex-wrap gap-6 mt-10">
+        <div class="flex items-center gap-3 text-sm">
+          <i class="fa-solid fa-building text-notary-gold"></i>
+          <span class="text-notary-muted">Servicii la sediu &#537;i la domiciliu</span>
+        </div>
+        <div class="flex items-center gap-3 text-sm">
+          <i class="fa-solid fa-envelope text-notary-gold"></i>
+          <span class="text-notary-muted">bnpcarmenserenec@yahoo.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="py-24 bg-notary-dark seal-bg">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="gold-line-left mx-auto mb-6" style="max-width:80px"></div>
+        <h2 class="font-heading text-3xl md:text-4xl">Servicii notariale</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-aos="fade-up" data-aos-delay="0" class="bg-notary-charcoal border border-white/5 p-8 hover:border-notary-gold/20 transition">
+          <i class="fa-solid fa-file-signature text-notary-gold text-2xl mb-5"></i>
+          <h3 class="font-heading text-xl mb-3">Autentific&#259;ri</h3>
+          <p class="text-notary-muted text-sm leading-relaxed">Autentificarea actelor juridice: contracte de v&#226;nzare-cump&#259;rare, dona&#539;ii, procuri, declara&#539;ii.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-notary-charcoal border border-white/5 p-8 hover:border-notary-gold/20 transition">
+          <i class="fa-solid fa-file-contract text-notary-gold text-2xl mb-5"></i>
+          <h3 class="font-heading text-xl mb-3">Contracte</h3>
+          <p class="text-notary-muted text-sm leading-relaxed">Redactare &#537;i autentificare contracte: v&#226;nzare, schimb, &#238;ntre&#539;inere, rent&#259; viager&#259;, &#238;mprumut.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-notary-charcoal border border-white/5 p-8 hover:border-notary-gold/20 transition">
+          <i class="fa-solid fa-landmark text-notary-gold text-2xl mb-5"></i>
+          <h3 class="font-heading text-xl mb-3">Succesiuni</h3>
+          <p class="text-notary-muted text-sm leading-relaxed">Proceduri succesorale complete: dezb&#259;terea mo&#537;tenirilor, certificate de mo&#537;tenitor, partaje.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-notary-charcoal border border-white/5 p-8 hover:border-notary-gold/20 transition">
+          <i class="fa-solid fa-handshake text-notary-gold text-2xl mb-5"></i>
+          <h3 class="font-heading text-xl mb-3">Tranzac&#539;ii imobiliare</h3>
+          <p class="text-notary-muted text-sm leading-relaxed">Asisten&#539;&#259; complet&#259; pentru v&#226;nzarea, cump&#259;rarea &#537;i transferul propriet&#259;&#539;ilor imobiliare.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" class="bg-notary-charcoal border border-white/5 p-8 hover:border-notary-gold/20 transition">
+          <i class="fa-solid fa-gavel text-notary-gold text-2xl mb-5"></i>
+          <h3 class="font-heading text-xl mb-3">Legalizare</h3>
+          <p class="text-notary-muted text-sm leading-relaxed">Legalizare semn&#259;turi, copii conforme, traduceri, aposatile &#537;i supralegaliz&#259;ri.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="500" class="bg-notary-charcoal border border-white/5 p-8 hover:border-notary-gold/20 transition">
+          <i class="fa-solid fa-comments text-notary-gold text-2xl mb-5"></i>
+          <h3 class="font-heading text-xl mb-3">Consultan&#539;&#259; notarial&#259;</h3>
+          <p class="text-notary-muted text-sm leading-relaxed">&#206;ndrumare juridic&#259; personalizat&#259; &#238;nainte de orice act notarial, pentru siguran&#539;a tranzac&#539;iei.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENZII -->
+  <section id="recenzii" class="py-24 bg-notary-charcoal">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="font-heading text-3xl md:text-4xl mb-4">Ce spun clien&#539;ii</h2>
+        <div class="flex items-center justify-center gap-2 text-notary-gold">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+          <span class="text-notary-muted text-sm ml-2">4.0/5 din 56 recenzii Google</span>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <div data-aos="fade-up" class="border-l-2 border-notary-gold pl-8 py-2">
+          <div class="flex gap-1 text-notary-gold text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-notary-cream/80 italic leading-relaxed mb-3">&laquo;Un notar pe care &#238;l recomand, fiind foarte atent la detaliile unei tranzac&#539;ii.&raquo;</p>
+          <p class="text-notary-gold font-medium text-sm">Neme&#537; Nicolae</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="border-l-2 border-notary-gold pl-8 py-2">
+          <div class="flex gap-1 text-notary-gold text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-notary-cream/80 italic leading-relaxed mb-3">&laquo;Un profesionist des&#259;v&#226;r&#537;it. V&#259; recomand cu c&#259;ldur&#259; serviciile doamnei notar.&raquo;</p>
+          <p class="text-notary-gold font-medium text-sm">Cosmin Petru&#537;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="py-20 bg-notary-dark">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+        <div>
+          <div class="gold-line-left mb-6"></div>
+          <h2 class="font-heading text-3xl mb-6">Program de lucru</h2>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-white/5"><span class="text-notary-muted">Luni — Joi</span><span>08:30 — 16:00</span></div>
+            <div class="flex justify-between py-2 border-b border-white/5"><span class="text-notary-muted">Vineri</span><span>08:30 — 15:00</span></div>
+            <div class="flex justify-between py-2"><span class="text-notary-muted">S&#226;mb&#259;t&#259; — Duminic&#259;</span><span class="text-notary-muted/50">&#206;nchis</span></div>
+          </div>
+        </div>
+        <div class="bg-notary-charcoal border border-white/5 p-8">
+          <i class="fa-solid fa-map-location-dot text-notary-gold text-2xl mb-4"></i>
+          <h3 class="font-heading text-lg mb-3">Unde ne g&#259;si&#539;i</h3>
+          <p class="text-notary-muted text-sm mb-2">Str. Alexandru Vaida Voevod 58</p>
+          <p class="text-notary-muted text-sm mb-4">Cluj-Napoca, jud. Cluj</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=46.771433,23.624982" target="_blank" class="text-notary-gold text-sm hover:underline">
+            <i class="fa-solid fa-external-link mr-1"></i> Deschide &#238;n Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-notary-plum/30">
+    <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+      <div class="stamp mx-auto mb-8">
+        <i class="fa-solid fa-scale-balanced text-notary-gold text-2xl"></i>
+      </div>
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Ave&#539;i nevoie de un notar?</h2>
+      <p class="text-notary-muted mb-10 max-w-lg mx-auto">Suna&#539;i pentru programare sau trimite&#539;i un email. V&#259; r&#259;spundem &#238;n cel mai scurt timp.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+40364733339" class="bg-notary-gold text-notary-dark font-medium px-10 py-4 tracking-wider hover:bg-notary-gold-light transition text-lg">
+          <i class="fa-solid fa-phone mr-2"></i> 0364 733 339
+        </a>
+        <a href="mailto:bnpcarmenserenec@yahoo.com" class="border border-notary-cream/20 text-notary-cream px-10 py-4 tracking-wider hover:border-notary-gold/50 transition">
+          <i class="fa-solid fa-envelope mr-2"></i> bnpcarmenserenec@yahoo.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-notary-dark border-t border-white/5 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 border border-notary-gold rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-scale-balanced text-notary-gold text-[10px]"></i>
+          </div>
+          <span class="font-heading">Serenec <span class="text-notary-gold">&amp;</span> Roman</span>
+        </div>
+        <div class="text-notary-muted text-sm text-center">
+          Str. Al. Vaida Voevod 58, Cluj-Napoca &middot;
+          <a href="tel:+40364733339" class="text-notary-gold hover:underline">0364 733 339</a> &middot;
+          <a href="mailto:bnpcarmenserenec@yahoo.com" class="text-notary-gold hover:underline">Email</a>
+        </div>
+        <span class="text-notary-muted/30 text-xs">&copy; 2026 Birou Notarial Serenec &amp; Roman</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY -->
+  <div class="fixed bottom-0 left-0 right-0 md:hidden bg-notary-dark/95 backdrop-blur border-t border-notary-gold/20 p-3 z-50 flex gap-2">
+    <a href="tel:+40364733339" class="flex-1 flex items-center justify-center gap-2 bg-notary-gold text-notary-dark font-medium py-3">
+      <i class="fa-solid fa-phone"></i> Sun&#259;
+    </a>
+    <a href="mailto:bnpcarmenserenec@yahoo.com" class="flex-1 flex items-center justify-center gap-2 border border-notary-cream/20 text-notary-cream py-3">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 80 });
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav-scroll', window.scrollY > 40), { passive: true });
+    const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+    mb.addEventListener('click', () => { mm.classList.toggle('hidden'); mb.innerHTML = mm.classList.contains('hidden') ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>'; });
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); mb.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+  </script>
+</body>
+</html>
