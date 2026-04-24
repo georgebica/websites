@@ -51,8 +51,9 @@ tailwind.config = {
 </script>
 
 <style>
-  html, body { background: #FBFBF8; color: #141414; }
+  html, body { background: #FBFBF8; color: #141414; overflow-x: clip; }
   body { font-family: "Libre Franklin", system-ui, sans-serif; }
+  main, section, footer, header { overflow-x: clip; }
   .mono { font-family: "Source Code Pro", ui-monospace, monospace; }
 
   .hivis-stripes {
@@ -156,6 +157,7 @@ tailwind.config = {
     <nav class="hidden md:flex items-center gap-6 text-[11px] font-extrabold uppercase tracking-widest">
       <a href="#despre"   class="hover:text-hivisd">Despre</a>
       <a href="#servicii" class="hover:text-hivisd">Servicii</a>
+      <a href="#galerie"  class="hover:text-hivisd">Galerie</a>
       <a href="#zona"     class="hover:text-hivisd">Zon&#259;</a>
       <a href="#contact"  class="hover:text-hivisd">Contact</a>
       <a href="tel:0724216500" class="btn-hivis !py-2.5 !px-4 !text-[10px]">0724 216 500</a>
@@ -173,6 +175,7 @@ tailwind.config = {
   <nav class="mt-8">
     <a href="#despre"   class="mobile-link">Despre</a>
     <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#galerie"  class="mobile-link">Galerie</a>
     <a href="#zona"     class="mobile-link">Zon&#259;</a>
     <a href="#contact"  class="mobile-link">Contact</a>
   </nav>
@@ -187,10 +190,10 @@ tailwind.config = {
 
     <div class="lg:col-span-7" data-aos="fade-up">
       <span class="chip"><i class="fa-solid fa-trowel-bricks"></i> Finisaje &middot; Amenaj&#259;ri interioare</span>
-      <h1 class="mt-6 text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-[.92] tracking-tight">
+      <h1 class="mt-6 text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-[1.1] sm:leading-[.98] lg:leading-[.92] tracking-tight">
         Pere&#539;i drep&#539;i.<br>
         Rosturi egale.<br>
-        <span class="text-hivisd bg-ink px-2">Totul la timp.</span>
+        <span class="text-hivisd bg-ink px-2 inline-block mt-2 sm:mt-0">Totul la timp.</span>
       </h1>
       <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
         Execut&#259;m finisaje interioare &#537;i amenaj&#259;ri pentru apartamente &#537;i case &#238;n Domne&#537;ti, jude&#539;ul Ilfov &#537;i
@@ -204,27 +207,32 @@ tailwind.config = {
     </div>
 
     <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
-      <div class="bg-ink text-cream p-8 relative">
-        <div class="absolute top-4 right-4 w-16 h-16 border-2 border-hivis flex items-center justify-center">
-          <i class="fa-solid fa-paint-roller text-hivis text-2xl"></i>
+      <div class="relative">
+        <div class="aspect-[4/5] bg-ink border-4 border-ink overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=900&auto=format&fit=crop&q=80" alt="Apartament finisat &#238;n Bucure&#537;ti" class="w-full h-full object-cover" loading="lazy">
         </div>
-        <p class="mono text-[10px] text-hivis uppercase tracking-widest">&mdash; Ce facem</p>
-        <p class="text-3xl font-extrabold mt-3">Finisaj<br>complet.</p>
-        <p class="mt-3 text-sm text-cream/70">De la gletuit pere&#539;i la montajul parchetului &#537;i al obiectelor sanitare. &#206;ntr-un singur &#537;antier, cu o singur&#259; echip&#259;.</p>
+        <div class="absolute -bottom-5 -left-5 bg-hivis border-4 border-ink p-4 flex items-center gap-3">
+          <i class="fa-solid fa-paint-roller text-ink text-xl"></i>
+          <p class="mono text-[10px] text-ink font-bold uppercase tracking-widest leading-tight">Finisaj<br>complet</p>
+        </div>
+        <div class="absolute -top-4 -right-4 bg-ink text-cream px-4 py-3">
+          <p class="mono text-[9px] text-hivis uppercase tracking-widest">zon&#259;</p>
+          <p class="mono font-extrabold text-lg text-hivis">B + IF</p>
+        </div>
+      </div>
 
-        <div class="mt-8 pt-6 border-t border-cream/15 grid grid-cols-3 gap-2 text-center">
-          <div>
-            <p class="text-3xl font-extrabold text-hivis">B+IF</p>
-            <p class="mono text-[9px] text-cream/60 mt-1">zon&#259; acoperit&#259;</p>
-          </div>
-          <div>
-            <p class="text-3xl font-extrabold text-hivis">L-S</p>
-            <p class="mono text-[9px] text-cream/60 mt-1">program extins</p>
-          </div>
-          <div>
-            <p class="text-3xl font-extrabold text-hivis">DEV</p>
-            <p class="mono text-[9px] text-cream/60 mt-1">deviz &icirc;n scris</p>
-          </div>
+      <div class="mt-10 grid grid-cols-3 border-2 border-ink">
+        <div class="p-4 text-center border-r border-ink">
+          <p class="mono text-2xl font-extrabold">B+IF</p>
+          <p class="mono text-[9px] text-muted uppercase tracking-widest mt-1">zon&#259; lucru</p>
+        </div>
+        <div class="p-4 text-center border-r border-ink bg-hivis">
+          <p class="mono text-2xl font-extrabold">L-S</p>
+          <p class="mono text-[9px] text-ink uppercase tracking-widest mt-1">program</p>
+        </div>
+        <div class="p-4 text-center">
+          <p class="mono text-2xl font-extrabold">DEV</p>
+          <p class="mono text-[9px] text-muted uppercase tracking-widest mt-1">deviz scris</p>
         </div>
       </div>
     </div>
@@ -333,6 +341,42 @@ tailwind.config = {
   </div>
 </section>
 
+<section id="galerie" class="py-16 sm:py-24 bg-concr/30 border-y-4 border-ink">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col sm:flex-row justify-between items-start gap-6 mb-12">
+      <div>
+        <span class="chip">&gt; galerie</span>
+        <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold leading-[1.02]">
+          Cadre din<br><span class="text-hivisd">&#537;antier &#537;i predare.</span>
+        </h2>
+      </div>
+      <p class="max-w-sm text-sm text-muted mt-2">C&#226;teva imagini orientative pentru tipurile de lucr&#259;ri pe care le executam.</p>
+    </div>
+
+    <div class="grid grid-cols-12 gap-3 sm:gap-4">
+      <div class="col-span-12 md:col-span-8 aspect-[16/10] overflow-hidden border-4 border-ink" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&auto=format&fit=crop&q=80" alt="Living finisat cu parchet &#537;i pere&#539;i zugr&#259;vi&#539;i" class="w-full h-full object-cover hover:scale-105 transition duration-700" loading="lazy">
+      </div>
+      <div class="col-span-12 md:col-span-4 aspect-[16/10] md:aspect-auto overflow-hidden border-4 border-ink" data-aos="fade-up" data-aos-delay="80">
+        <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&auto=format&fit=crop&q=80" alt="Baie cu gresie &#537;i faian&#539;&#259;" class="w-full h-full object-cover hover:scale-105 transition duration-700" loading="lazy">
+      </div>
+
+      <div class="col-span-6 md:col-span-3 aspect-square overflow-hidden border-4 border-ink" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&auto=format&fit=crop&q=80" alt="Buc&#259;t&#259;rie finisat&#259;" class="w-full h-full object-cover hover:scale-105 transition duration-700" loading="lazy">
+      </div>
+      <div class="col-span-6 md:col-span-3 aspect-square overflow-hidden border-4 border-ink" data-aos="fade-up" data-aos-delay="80">
+        <img src="https://images.unsplash.com/photo-1615529162924-f8605388461d?w=700&auto=format&fit=crop&q=80" alt="Hol cu tavan fals" class="w-full h-full object-cover hover:scale-105 transition duration-700" loading="lazy">
+      </div>
+      <div class="col-span-12 md:col-span-6 aspect-[16/10] md:aspect-auto overflow-hidden border-4 border-ink" data-aos="fade-up" data-aos-delay="160">
+        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&auto=format&fit=crop&q=80" alt="Dormitor cu parchet &#537;i pere&#539;i albi" class="w-full h-full object-cover hover:scale-105 transition duration-700" loading="lazy">
+      </div>
+    </div>
+
+    <div class="mt-8 hivis-stripes h-3"></div>
+    <p class="mt-4 mono text-[10px] text-muted uppercase tracking-widest">*&nbsp;imagini cu titlu orientativ</p>
+  </div>
+</section>
+
 <section id="zona" class="py-16 sm:py-24 bg-hivis">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <span class="chip !bg-ink !text-hivis">&gt; zon&#259; acoperit&#259;</span>
@@ -413,13 +457,72 @@ tailwind.config = {
   </div>
 </section>
 
-<footer class="bg-asphd text-cream/65 py-10 pb-24 md:pb-10 border-t-4 border-hivis">
-  <div class="hivis-stripes h-3 -mt-10 -mx-6"></div>
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-10 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest mono">
-    <span>&copy; 2026 FINISAJE INTERIOARE</span>
-    <span>DOMNE&#536;TI &middot; ILFOV &middot; BUCURE&#536;TI</span>
-    <span>0724 216 500</span>
+<footer class="bg-asphd text-cream/75 pb-24 md:pb-0 border-t-4 border-hivis">
+  <div class="hivis-stripes h-3"></div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-4">
+      <div class="flex items-center gap-3">
+        <span class="w-11 h-11 bg-hivis border-2 border-hivis flex items-center justify-center text-ink"><i class="fa-solid fa-trowel"></i></span>
+        <div class="leading-tight">
+          <p class="font-extrabold text-lg leading-none text-cream">FINISAJE INTERIOARE</p>
+          <p class="mono text-[10px] text-cream/50 mt-0.5">Domne&#537;ti &middot; Ilfov &amp; Bucure&#537;ti</p>
+        </div>
+      </div>
+      <p class="mt-5 text-sm leading-relaxed max-w-xs">Execut&#259;m finisaje interioare &#537;i amenaj&#259;ri complete &#238;n apartamente &#537;i case &mdash; de la gletuit la cheile predate.</p>
+
+      <div class="mt-6 flex gap-2">
+        <a href="tel:0724216500" class="w-11 h-11 bg-hivis text-ink flex items-center justify-center hover:bg-hivisd transition" aria-label="Telefon"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/40724216500" class="w-11 h-11 bg-wa text-white flex items-center justify-center hover:brightness-95 transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#contact" class="w-11 h-11 border-2 border-cream/25 text-cream flex items-center justify-center hover:bg-hivis hover:text-ink hover:border-hivis transition" aria-label="Contact"><i class="fa-solid fa-location-dot"></i></a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-3">
+      <p class="mono text-[10px] text-hivis uppercase tracking-widest">&gt; servicii</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="#servicii" class="hover:text-hivis">Zugr&#259;veli</a></li>
+        <li><a href="#servicii" class="hover:text-hivis">Gips carton</a></li>
+        <li><a href="#servicii" class="hover:text-hivis">Gresie &amp; faian&#539;&#259;</a></li>
+        <li><a href="#servicii" class="hover:text-hivis">Parchet &amp; pardoseli</a></li>
+        <li><a href="#servicii" class="hover:text-hivis">Baie la cheie</a></li>
+        <li><a href="#servicii" class="hover:text-hivis">Amenajare complet&#259;</a></li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-2">
+      <p class="mono text-[10px] text-hivis uppercase tracking-widest">&gt; navigare</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="#top" class="hover:text-hivis">Sus</a></li>
+        <li><a href="#despre" class="hover:text-hivis">Despre</a></li>
+        <li><a href="#galerie" class="hover:text-hivis">Galerie</a></li>
+        <li><a href="#zona" class="hover:text-hivis">Zon&#259;</a></li>
+        <li><a href="#contact" class="hover:text-hivis">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-3">
+      <p class="mono text-[10px] text-hivis uppercase tracking-widest">&gt; contact</p>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li class="flex items-start gap-3"><i class="fa-solid fa-phone text-hivis w-4 mt-0.5"></i><a href="tel:0724216500" class="hover:text-hivis">0724 216 500</a></li>
+        <li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp text-hivis w-4 mt-0.5"></i><a href="https://wa.me/40724216500" class="hover:text-hivis">WhatsApp</a></li>
+        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-hivis w-4 mt-0.5"></i><span>&#536;oseaua Tudor Vladimirescu<br>Domne&#537;ti 077090, Ilfov</span></li>
+        <li class="flex items-start gap-3"><i class="fa-regular fa-clock text-hivis w-4 mt-0.5"></i><span>L-V 07:00 - 22:00<br>S&#226; 07:00 - 15:00</span></li>
+      </ul>
+    </div>
+
   </div>
+
+  <div class="border-t border-cream/10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-col sm:flex-row justify-between gap-3 text-[11px] uppercase tracking-widest mono text-cream/60">
+      <span>&copy; 2026 FINISAJE INTERIOARE</span>
+      <span class="hidden md:inline">Domne&#537;ti &middot; Ilfov &middot; Bucure&#537;ti</span>
+      <span>Contact: <a href="tel:0724216500" class="text-hivis hover:underline">0724 216 500</a></span>
+    </div>
+  </div>
+
+  <div class="hivis-stripes h-3"></div>
 </footer>
 
 <div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
