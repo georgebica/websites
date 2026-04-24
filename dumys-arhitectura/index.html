@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dumys Arhitectura &middot; Birou de arhitectur&#259; &icirc;n Craiova</title>
+<meta name="description" content="Birou de arhitectur&#259; din Craiova, fondat de arh. Dumitra&#537;cu Sorin (OAR Oltenia, TNA 2576). Proiecte case, interior, extinderi, PUD/PUZ &#537;i autoriza&#539;ii DTAC+DTOE. Telefon 0722 245 594.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bone:   '#F4F1EA',
+        paper:  '#FBFAF5',
+        ink:    '#111111',
+        graph:  '#272727',
+        rust:   '#B74D2A',
+        rustd:  '#7A2F17',
+        mute:   '#6B6963',
+        line:   '#1A1A1A',
+        softl:  '#DCD7C9',
+        wa:     '#25D366',
+      },
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans:    ['"Inter Tight"', 'system-ui', 'sans-serif'],
+        mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #F4F1EA; color: #111; }
+  body { font-family: 'Inter Tight', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .display { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144; letter-spacing: -.015em; }
+  .italic-display { font-family: 'Fraunces', Georgia, serif; font-style: italic; }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(17,17,17,.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17,17,17,.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .tick-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 10px;
+    letter-spacing: .14em;
+    color: #6B6963;
+    text-transform: uppercase;
+    border-top: 1px solid #1A1A1A;
+    padding-top: 6px;
+    margin-top: 18px;
+  }
+
+  .dotted-lead {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+  }
+  .dotted-lead > .t { flex: 1 1 auto; border-bottom: 1px dotted rgba(17,17,17,.3); transform: translateY(-4px); }
+
+  .stamp {
+    border: 1px solid #111;
+    padding: 10px 14px;
+    font-family: 'Inter Tight', sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .18em;
+    display: inline-block;
+    background: #FBFAF5;
+  }
+
+  .line-h { border-top: 1px solid #1A1A1A; }
+  .line-h-light { border-top: 1px solid rgba(26,26,26,.18); }
+
+  .num-badge {
+    font-family: 'Fraunces', serif;
+    font-size: 11px;
+    background: #111;
+    color: #F4F1EA;
+    padding: 2px 8px 3px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-family: 'Inter Tight', sans-serif;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    border: 1px solid rgba(17,17,17,.3);
+    color: #272727;
+    background: transparent;
+  }
+
+  .service-row {
+    border-top: 1px solid rgba(26,26,26,.2);
+    padding: 1.75rem 0;
+    transition: background .25s;
+  }
+  .service-row:hover { background: rgba(183,77,42,.04); }
+  .service-row:last-child { border-bottom: 1px solid rgba(26,26,26,.2); }
+
+  .btn-dark {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.5rem;
+    background: #111;
+    color: #F4F1EA;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    border: 1px solid #111;
+    transition: background .2s, color .2s;
+  }
+  .btn-dark:hover { background: #B74D2A; border-color: #B74D2A; }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    color: #111;
+    border: 1px solid #111;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    transition: background .2s, color .2s;
+  }
+  .btn-outline:hover { background: #111; color: #F4F1EA; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.5rem;
+    background: #25D366;
+    color: #FFF;
+    border: 1px solid #25D366;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    transition: background .2s;
+  }
+  .btn-wap:hover { background: #1EB957; border-color: #1EB957; }
+
+  .mega {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "wght" 400;
+    line-height: .88;
+    letter-spacing: -.025em;
+  }
+
+  .axono rect, .axono line, .axono path { stroke: #111; stroke-width: 1; fill: none; vector-effect: non-scaling-stroke; }
+  .axono .fill-r { fill: #B74D2A; opacity: .15; stroke: #B74D2A; }
+
+  .blueprint {
+    background: #FBFAF5;
+    border: 1px solid rgba(17,17,17,.18);
+    position: relative;
+  }
+  .blueprint::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(17,17,17,.12);
+    pointer-events: none;
+  }
+
+  .mobile-link { display:block; padding: 1rem 0; font-family: 'Fraunces', serif; font-size: 1.8rem; border-bottom: 1px solid rgba(17,17,17,.15); }
+
+  .coord-plate {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: .06em;
+    color: #6B6963;
+  }
+
+  .big-q::before {
+    content: "\201C";
+    font-family: 'Fraunces', serif;
+    font-size: 6rem;
+    line-height: 0;
+    color: #B74D2A;
+    vertical-align: -.55em;
+    margin-right: .05em;
+  }
+
+  .hours-line {
+    display: flex;
+    justify-content: space-between;
+    padding: .6rem 0;
+    border-bottom: 1px dashed rgba(17,17,17,.2);
+    font-size: .92rem;
+  }
+  .hours-line:last-child { border-bottom: 0; }
+  .hours-line.today { color: #B74D2A; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-8 h-8 border border-ink flex items-center justify-center">
+        <span class="display text-xl leading-none">D</span>
+      </span>
+      <div class="leading-tight">
+        <p class="display text-lg leading-none">Dumys Arhitectura</p>
+        <p class="text-[10px] tracking-[.18em] uppercase text-mute mt-1">Birou de arhitectur&#259; &middot; Craiova</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-ink/80">
+      <a href="#filozofie" class="hover:text-rust">01 &middot; Filozofie</a>
+      <a href="#servicii"  class="hover:text-rust">02 &middot; Servicii</a>
+      <a href="#proiecte"  class="hover:text-rust">03 &middot; Proiecte</a>
+      <a href="#contact"   class="hover:text-rust">04 &middot; Contact</a>
+      <a href="tel:0722245594" class="btn-dark !py-2 !px-4 !text-xs">0722 245 594</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 border border-ink flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="line-h"></div></div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-bone z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl">Dumys Arhitectura</span>
+    <button id="menu-close" class="w-11 h-11 border border-ink flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mt-6 line-h"></div>
+  <nav class="mt-4">
+    <a href="#filozofie" class="mobile-link">01 &middot; Filozofie</a>
+    <a href="#servicii"  class="mobile-link">02 &middot; Servicii</a>
+    <a href="#proiecte"  class="mobile-link">03 &middot; Proiecte</a>
+    <a href="#program"   class="mobile-link">05 &middot; Program</a>
+    <a href="#contact"   class="mobile-link">06 &middot; Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-0">
+    <a href="tel:0722245594" class="btn-dark">Sun&#259;</a>
+    <a href="https://wa.me/40722245594" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="relative grid-bg">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-20 pb-16 sm:pb-24 lg:pb-32">
+
+    <div class="flex items-center justify-between text-[10px] uppercase tracking-[.18em] text-mute">
+      <span>Craiova &middot; Dolj &middot; RO</span>
+      <span class="hidden sm:inline coord-plate">44&deg;18'44.7"N &middot; 23&deg;49'30.9"E</span>
+      <span>2015 &mdash; &rarr;</span>
+    </div>
+
+    <div class="mt-6 line-h"></div>
+
+    <div class="mt-10 sm:mt-14 grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-8">
+        <span class="num-badge" data-aos="fade-up">&mdash; DA / 001</span>
+        <h1 class="mega mt-6 text-[clamp(3rem,10vw,8.5rem)]" data-aos="fade-up" data-aos-delay="60">
+          Case<br>
+          <span class="italic-display text-rust">g&#226;ndite</span><br>
+          cu r&#259;bdare.
+        </h1>
+
+        <p class="mt-10 max-w-xl text-lg leading-relaxed text-graph" data-aos="fade-up" data-aos-delay="120">
+          Dumys Arhitectura este biroul din Craiova al arhitectului <strong>Dumitra&#537;cu Sorin</strong> (OAR Oltenia, TNA nr. 2576). Lucr&#259;m proiecte de case, interioare, extinderi &#537;i documenta&#539;ii de urbanism, cu aten&#539;ie pentru locul &icirc;n care construim &#537;i oamenii pentru care construim.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg" data-aos="fade-up" data-aos-delay="180">
+          <a href="tel:0722245594" class="btn-dark"><i class="fa-solid fa-phone"></i> 0722 245 594</a>
+          <a href="https://wa.me/40722245594" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- axonometric SVG visual -->
+      <div class="lg:col-span-4 relative hidden lg:block" data-aos="fade-up" data-aos-delay="240">
+        <div class="blueprint h-full min-h-[420px] p-10">
+          <svg class="axono w-full h-full" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- ground plane -->
+            <path d="M30,300 L150,240 L270,300 L150,360 Z"/>
+            <!-- base box -->
+            <path d="M60,285 L150,240 L240,285 L240,220 L150,175 L60,220 Z"/>
+            <path d="M150,240 L150,175"/>
+            <!-- left wall -->
+            <path d="M60,220 L60,170 L150,125 L150,175"/>
+            <!-- right wall -->
+            <path d="M240,220 L240,170 L150,125 L150,175"/>
+            <!-- roof ridge -->
+            <path d="M60,170 L150,105 L240,170 L150,125 Z" class="fill-r"/>
+            <!-- ridge line -->
+            <line x1="60" y1="170" x2="240" y2="170"/>
+            <!-- windows -->
+            <rect x="78" y="238" width="22" height="24"/>
+            <rect x="200" y="238" width="22" height="24"/>
+            <rect x="138" y="242" width="24" height="38"/>
+            <!-- dimensions -->
+            <line x1="30" y1="320" x2="270" y2="320" stroke-dasharray="2 3"/>
+            <line x1="30" y1="315" x2="30" y2="325"/>
+            <line x1="270" y1="315" x2="270" y2="325"/>
+          </svg>
+          <div class="tick-row">
+            <span>Axonometric</span>
+            <span>Sc. 1:200</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 grid sm:grid-cols-4 gap-6 text-xs uppercase tracking-[.15em] text-mute">
+      <div class="flex flex-col">
+        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">10+</span>
+        <span class="mt-2">ani de practic&#259; arhitectural&#259;</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">2576</span>
+        <span class="mt-2">&Icirc;nregistrat &icirc;n TNA, OAR</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">DTAC</span>
+        <span class="mt-2">+ DTOE complete</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">PUD</span>
+        <span class="mt-2">&#537;i PUZ documenta&#539;ii</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="line-h"></div></div>
+
+<section id="filozofie" class="py-16 sm:py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+    <div class="lg:col-span-4">
+      <span class="num-badge">&mdash; 01</span>
+      <p class="mt-4 text-[10px] tracking-[.18em] uppercase text-mute">Filozofie</p>
+      <h2 class="display mt-3 text-4xl sm:text-5xl leading-[.95]">Fiecare proiect &icirc;ncepe cu o &icirc;ntrebare simpl&#259;.</h2>
+    </div>
+
+    <div class="lg:col-span-8">
+      <p class="display italic-display text-2xl sm:text-3xl leading-snug text-graph big-q">
+        Cum vor tr&#259;i oamenii &icirc;n casa asta? Nu cum o s&#259; arate &icirc;n fotografii, ci cum o s&#259; arate diminea&#539;a la micul dejun, iarna c&#226;nd e frig, vara c&#226;nd e aglomerat&#259; de copii.
+      </p>
+
+      <div class="mt-10 grid sm:grid-cols-2 gap-8">
+        <div>
+          <p class="tag">Locul</p>
+          <h3 class="display text-xl mt-4">&Icirc;n&#539;elegem terenul</h3>
+          <p class="mt-3 text-graph text-sm leading-relaxed">&Icirc;nainte s&#259; desen&#259;m un zid, mergem pe loc &#537;i privim: orientare, vecin&#259;t&#259;&#539;i, v&#226;nt, lumin&#259;, regulamentul local. Casa se a&#537;az&#259; natural c&#226;nd terenul e citit corect.</p>
+        </div>
+        <div>
+          <p class="tag">Oamenii</p>
+          <h3 class="display text-xl mt-4">Ascult&#259;m cerin&#539;ele</h3>
+          <p class="mt-3 text-graph text-sm leading-relaxed">Un buget real, o familie real&#259;, obiceiuri reale. Nu facem proiecte &bdquo;standard&rdquo;. Facem proiecte care fac sens pentru dumneavoastr&#259;.</p>
+        </div>
+        <div>
+          <p class="tag">Detaliul</p>
+          <h3 class="display text-xl mt-4">Desen&#259;m complet</h3>
+          <p class="mt-3 text-graph text-sm leading-relaxed">&Icirc;ntre &bdquo;schi&#539;a frumoas&#259;&rdquo; &#537;i &bdquo;casa corect construit&#259;&rdquo; e distan&#539;a dintre DTAC &#537;i DTOE. Noi le d&#259;m pe am&#226;ndou&#259;, cu detalii tehnice care ajut&#259; constructorul.</p>
+        </div>
+        <div>
+          <p class="tag">Timpul</p>
+          <h3 class="display text-xl mt-4">R&#259;spundem &icirc;n termen</h3>
+          <p class="mt-3 text-graph text-sm leading-relaxed">Un proiect care stagneaz&#259; cost&#259; bani. Respect&#259;m termenele comunicate &#537;i &#539;inem clientul la curent cu fiecare pas din autorizare.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="line-h"></div></div>
+
+<section id="servicii" class="py-16 sm:py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+      <div>
+        <span class="num-badge">&mdash; 02</span>
+        <p class="mt-4 text-[10px] tracking-[.18em] uppercase text-mute">Servicii</p>
+        <h2 class="display mt-3 text-4xl sm:text-5xl lg:text-6xl leading-[.95]">Ce proiect&#259;m<br>
+          <span class="italic-display text-rust">la Dumys Arhitectura.</span>
+        </h2>
+      </div>
+      <p class="sm:max-w-xs text-sm text-graph leading-relaxed">&#536;ase pachete de servicii, de la prima schi&#539;&#259; conceptual&#259; p&#226;n&#259; la autoriza&#539;ia de construire &#537;i execu&#539;ie.</p>
+    </div>
+
+    <div class="mt-16">
+
+      <div class="service-row grid sm:grid-cols-12 gap-6 items-start" data-aos="fade-up">
+        <div class="sm:col-span-1"><span class="display italic-display text-2xl text-rust">i.</span></div>
+        <div class="sm:col-span-4">
+          <h3 class="display text-2xl">Proiect cas&#259; nou&#259;</h3>
+          <p class="mt-2 tag">Reziden&#539;ial</p>
+        </div>
+        <div class="sm:col-span-6 text-sm text-graph leading-relaxed">
+          Proiectare complet&#259; de cas&#259; de familie sau vil&#259;: concept, anteproiect, proiect tehnic, DTAC &#537;i DTOE. Realiz&#259;m vizualiz&#259;ri 3D &icirc;nainte de autorizare, ca s&#259; vede&#539;i cum va ar&#259;ta.
+        </div>
+        <div class="sm:col-span-1 text-right coord-plate hidden sm:block">/01</div>
+      </div>
+
+      <div class="service-row grid sm:grid-cols-12 gap-6 items-start" data-aos="fade-up">
+        <div class="sm:col-span-1"><span class="display italic-display text-2xl text-rust">ii.</span></div>
+        <div class="sm:col-span-4">
+          <h3 class="display text-2xl">Design interior</h3>
+          <p class="mt-2 tag">Amenajare</p>
+        </div>
+        <div class="sm:col-span-6 text-sm text-graph leading-relaxed">
+          Amenajarea apartamentelor &#537;i caselor: compartiment&#259;ri, plan mobilier, alegere materiale, croaz&#259; lumin&#259;, randare fotorealist&#259; &#537;i plan&#537;e de execu&#539;ie pentru echipele de montaj.
+        </div>
+        <div class="sm:col-span-1 text-right coord-plate hidden sm:block">/02</div>
+      </div>
+
+      <div class="service-row grid sm:grid-cols-12 gap-6 items-start" data-aos="fade-up">
+        <div class="sm:col-span-1"><span class="display italic-display text-2xl text-rust">iii.</span></div>
+        <div class="sm:col-span-4">
+          <h3 class="display text-2xl">Extinderi &#537;i recompartiment&#259;ri</h3>
+          <p class="mt-2 tag">Existent</p>
+        </div>
+        <div class="sm:col-span-6 text-sm text-graph leading-relaxed">
+          Relevee, expertize structurale, extinderi de cas&#259; sau apartament, recompartiment&#259;ri &#537;i consolid&#259;ri cu documenta&#539;ie complet&#259; pentru autoriza&#539;ia de construire.
+        </div>
+        <div class="sm:col-span-1 text-right coord-plate hidden sm:block">/03</div>
+      </div>
+
+      <div class="service-row grid sm:grid-cols-12 gap-6 items-start" data-aos="fade-up">
+        <div class="sm:col-span-1"><span class="display italic-display text-2xl text-rust">iv.</span></div>
+        <div class="sm:col-span-4">
+          <h3 class="display text-2xl">Cl&#259;diri non-reziden&#539;iale</h3>
+          <p class="mt-2 tag">Comercial</p>
+        </div>
+        <div class="sm:col-span-6 text-sm text-graph leading-relaxed">
+          Hale, spa&#539;ii comerciale, birouri, unit&#259;&#539;i de produc&#539;ie sau garaje cu containere temporare, cu respectarea regulamentului PUG &#537;i a normativelor &icirc;n vigoare.
+        </div>
+        <div class="sm:col-span-1 text-right coord-plate hidden sm:block">/04</div>
+      </div>
+
+      <div class="service-row grid sm:grid-cols-12 gap-6 items-start" data-aos="fade-up">
+        <div class="sm:col-span-1"><span class="display italic-display text-2xl text-rust">v.</span></div>
+        <div class="sm:col-span-4">
+          <h3 class="display text-2xl">Urbanism &middot; PUD / PUZ</h3>
+          <p class="mt-2 tag">Documenta&#539;ii</p>
+        </div>
+        <div class="sm:col-span-6 text-sm text-graph leading-relaxed">
+          Planuri Urbanistice de Detaliu &#537;i Zonale, de la analiza de situa&#539;ie existent&#259; la sus&#539;inerea &icirc;n comisia de urbanism. Obligatoriu pentru multe terenuri &icirc;n Craiova &#537;i zona metropolitan&#259;.
+        </div>
+        <div class="sm:col-span-1 text-right coord-plate hidden sm:block">/05</div>
+      </div>
+
+      <div class="service-row grid sm:grid-cols-12 gap-6 items-start" data-aos="fade-up">
+        <div class="sm:col-span-1"><span class="display italic-display text-2xl text-rust">vi.</span></div>
+        <div class="sm:col-span-4">
+          <h3 class="display text-2xl">Consultan&#539;&#259; &#537;i avize</h3>
+          <p class="mt-2 tag">Asisten&#539;&#259;</p>
+        </div>
+        <div class="sm:col-span-6 text-sm text-graph leading-relaxed">
+          V&#259; ajut&#259;m s&#259; parcurge&#539;i etapele de autorizare, ob&#539;inerea avizelor de la institu&#539;ii, certificatul de urbanism &#537;i asisten&#539;&#259; de &#537;antier p&#226;n&#259; la recep&#539;ie.
+        </div>
+        <div class="sm:col-span-1 text-right coord-plate hidden sm:block">/06</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="line-h"></div></div>
+
+<section id="proiecte" class="py-16 sm:py-24 lg:py-32 bg-paper">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+    <div class="lg:col-span-5">
+      <span class="num-badge">&mdash; 03</span>
+      <p class="mt-4 text-[10px] tracking-[.18em] uppercase text-mute">Portofoliu &middot; autoriza&#539;ii</p>
+      <h2 class="display mt-3 text-4xl sm:text-5xl leading-[.95]">Din registrul<br><span class="italic-display text-rust">de &#537;antier.</span></h2>
+      <p class="mt-6 text-sm text-graph leading-relaxed max-w-md">O selec&#539;ie din documenta&#539;iile depuse &#537;i autorizate la Prim&#259;ria Craiova, din 2021 &icirc;ncoace. Lista nu e exhaustiv&#259;, dar arat&#259; tipurile de proiecte &icirc;n care lucr&#259;m curent.</p>
+
+      <div class="mt-10 blueprint p-6">
+        <p class="coord-plate uppercase">Rev. 2026 &middot; indice DA</p>
+        <p class="display text-3xl mt-3">A-Z</p>
+        <p class="mt-2 text-sm text-graph">De la certificatul de urbanism p&#226;n&#259; la recep&#539;ia la terminarea lucr&#259;rilor.</p>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <ul class="space-y-5">
+
+        <li class="dotted-lead" data-aos="fade-left">
+          <span class="display text-lg">Cas&#259; unifamilial&#259; P+1E</span>
+          <span class="t"></span>
+          <span class="coord-plate">2025 &middot; Craiova</span>
+        </li>
+
+        <li class="dotted-lead" data-aos="fade-left" data-aos-delay="40">
+          <span class="display text-lg">Extindere locuin&#539;&#259; &#537;i recompartimentare</span>
+          <span class="t"></span>
+          <span class="coord-plate">2024 &middot; Dolj</span>
+        </li>
+
+        <li class="dotted-lead" data-aos="fade-left" data-aos-delay="80">
+          <span class="display text-lg">Container birou temporar</span>
+          <span class="t"></span>
+          <span class="coord-plate">2023 &middot; Craiova</span>
+        </li>
+
+        <li class="dotted-lead" data-aos="fade-left" data-aos-delay="120">
+          <span class="display text-lg">Garaj auto cu arie P</span>
+          <span class="t"></span>
+          <span class="coord-plate">2022 &middot; Craiova</span>
+        </li>
+
+        <li class="dotted-lead" data-aos="fade-left" data-aos-delay="160">
+          <span class="display text-lg">Foraj de adanc pu&#539; ap&#259;</span>
+          <span class="t"></span>
+          <span class="coord-plate">2022 &middot; Dolj</span>
+        </li>
+
+        <li class="dotted-lead" data-aos="fade-left" data-aos-delay="200">
+          <span class="display text-lg">Amenajare interior apartament</span>
+          <span class="t"></span>
+          <span class="coord-plate">2021 &middot; Craiova</span>
+        </li>
+
+        <li class="dotted-lead" data-aos="fade-left" data-aos-delay="240">
+          <span class="display text-lg">Proiect locuin&#539;&#259; colectiv&#259;</span>
+          <span class="t"></span>
+          <span class="coord-plate">2021 &middot; Craiova</span>
+        </li>
+
+      </ul>
+
+      <div class="mt-12 line-h-light"></div>
+
+      <div class="mt-8 grid sm:grid-cols-3 gap-6 text-center">
+        <div>
+          <p class="display italic-display text-4xl text-rust">35+</p>
+          <p class="text-[10px] uppercase tracking-[.15em] text-mute mt-2">proiecte finalizate</p>
+        </div>
+        <div>
+          <p class="display italic-display text-4xl text-rust">5+</p>
+          <p class="text-[10px] uppercase tracking-[.15em] text-mute mt-2">ani cu autoriza&#539;ii Prim&#259;ria Craiova</p>
+        </div>
+        <div>
+          <p class="display italic-display text-4xl text-rust">100%</p>
+          <p class="text-[10px] uppercase tracking-[.15em] text-mute mt-2">documenta&#539;ii complete DTAC+DTOE</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="line-h"></div></div>
+
+<section id="testimonial" class="py-16 sm:py-24 lg:py-32">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+    <span class="num-badge">&mdash; 04</span>
+    <p class="mt-4 text-[10px] tracking-[.18em] uppercase text-mute">P&#259;rerea unui client</p>
+
+    <blockquote class="display italic-display text-3xl sm:text-4xl lg:text-5xl leading-tight mt-10 text-ink">
+      &bdquo;Calitate foarte bun&#259;. Am fost mul&#539;umit de consultan&#539;&#259; &#537;i ulterior de calitatea montajului &#537;i a t&#226;mpl&#259;riei.&rdquo;
+    </blockquote>
+
+    <div class="mt-10 flex items-center justify-center gap-3 text-xs tracking-[.15em] uppercase text-mute">
+      <span class="w-6 line-h-light self-center"></span>
+      <span class="text-ink font-semibold">Codrin Mirea</span>
+      <span class="w-6 line-h-light self-center"></span>
+    </div>
+    <p class="mt-2 text-[10px] uppercase tracking-[.15em] text-rust">Recenzie verificat&#259; pe Google</p>
+  </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"><div class="line-h"></div></div>
+
+<section id="program" class="py-16 sm:py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+    <div class="lg:col-span-5">
+      <span class="num-badge">&mdash; 05</span>
+      <p class="mt-4 text-[10px] tracking-[.18em] uppercase text-mute">Program de birou</p>
+      <h2 class="display mt-3 text-4xl sm:text-5xl leading-[.95]">Cinci zile pe s&#259;pt&#259;m&#226;n&#259;.</h2>
+      <p class="mt-6 text-sm text-graph leading-relaxed max-w-md">Programul afi&#537;at este pentru &icirc;nt&#226;lniri la birou. Pentru discu&#539;ii telefonice sau pe WhatsApp, r&#259;spundem &#537;i &icirc;n afara orelor, &icirc;n m&#259;sura &icirc;n care suntem disponibili.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0722245594" class="btn-dark"><i class="fa-solid fa-phone"></i> Sun&#259; la birou</a>
+        <a href="https://wa.me/40722245594" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="blueprint p-6 sm:p-8">
+        <ul id="hours">
+          <li data-day="1" class="hours-line"><span>Luni</span><span class="coord-plate">09:30 &mdash; 17:30</span></li>
+          <li data-day="2" class="hours-line"><span>Mar&#539;i</span><span class="coord-plate">09:30 &mdash; 17:30</span></li>
+          <li data-day="3" class="hours-line"><span>Miercuri</span><span class="coord-plate">09:30 &mdash; 17:30</span></li>
+          <li data-day="4" class="hours-line"><span>Joi</span><span class="coord-plate">09:30 &mdash; 17:30</span></li>
+          <li data-day="5" class="hours-line"><span>Vineri</span><span class="coord-plate">09:30 &mdash; 17:30</span></li>
+          <li data-day="6" class="hours-line"><span>S&#226;mb&#259;t&#259;</span><span class="coord-plate text-mute">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-line"><span>Duminic&#259;</span><span class="coord-plate text-mute">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="bg-ink text-bone">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32">
+
+    <div class="flex items-center justify-between text-[10px] uppercase tracking-[.18em] text-mute">
+      <span>06 &middot; Contact</span>
+      <span class="coord-plate">44.312422 &middot; 23.825258</span>
+    </div>
+
+    <div class="mt-6" style="border-top: 1px solid rgba(244,241,234,.2)"></div>
+
+    <div class="mt-14 grid lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-7">
+        <h2 class="mega text-5xl sm:text-6xl lg:text-7xl">
+          Pleca&#539;i<br>
+          <span class="italic-display text-rust">cu planul bun.</span>
+        </h2>
+        <p class="mt-10 max-w-xl text-lg leading-relaxed text-softl">
+          Dac&#259; ave&#539;i un teren, o idee sau un proiect &icirc;n derulare, trece&#539;i pragul biroului nostru din Strada S&#259;rarilor 31 sau suna&#539;i-ne. Prima discu&#539;ie v&#259; ajut&#259; s&#259; &#537;ti&#539;i ce urmeaz&#259; de f&#259;cut.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-3">
+          <a href="tel:0722245594" class="btn-outline !text-bone !border-bone hover:!bg-bone hover:!text-ink"><i class="fa-solid fa-phone"></i> 0722 245 594</a>
+          <a href="https://wa.me/40722245594" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> Mesaj WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="border border-softl/30 p-7 sm:p-8">
+          <p class="tag !text-softl !border-softl/40">Sediu birou</p>
+          <p class="mt-5 display text-2xl">Strada S&#259;rarilor 31</p>
+          <p class="text-sm text-softl mt-1">200508 Craiova, jud. Dolj</p>
+
+          <div class="mt-8 pt-6 border-t border-softl/20 space-y-4 text-sm">
+            <div class="flex gap-3">
+              <span class="w-6 text-rust"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:0722245594">0722 245 594</a>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-6 text-rust"><i class="fa-brands fa-whatsapp"></i></span>
+              <a href="https://wa.me/40722245594">wa.me/40722245594</a>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-6 text-rust"><i class="fa-solid fa-building-columns"></i></span>
+              <span>OAR Oltenia &middot; TNA nr. 2576</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-6 text-rust"><i class="fa-solid fa-user-tie"></i></span>
+              <span>arh. Dumitra&#537;cu Sorin</span>
+            </div>
+          </div>
+
+          <a href="https://www.google.com/maps/place/Dumys+Arhitectura/@44.3124217,23.8252577,17z" class="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[.15em] text-rust border-b border-rust pb-1">
+            <i class="fa-solid fa-location-dot"></i> Vezi pe hart&#259;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink text-bone/70 pb-24 md:pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12" style="border-top: 1px solid rgba(244,241,234,.15)">
+    <div class="pt-10 flex flex-col sm:flex-row justify-between gap-6 text-[10px] uppercase tracking-[.18em]">
+      <span>&copy; 2026 Dumys Arhitectura SRL</span>
+      <span>CAEN 7111 &middot; Birou &icirc;nregistrat OAR</span>
+      <span>Craiova &middot; Dolj &middot; Rom&#226;nia</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2">
+  <a href="tel:0722245594" class="btn-dark !border-t-0 !border-l-0 !border-r-0"><i class="fa-solid fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40722245594" class="btn-wap !border-0"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ArchitecturalService",
+  "name": "Dumys Arhitectura",
+  "description": "Birou de arhitectura in Craiova. Proiecte case, design interior, extinderi, PUD/PUZ si documentatii DTAC+DTOE.",
+  "telephone": "+40722245594",
+  "founder": { "@type": "Person", "name": "Dumitrascu Sorin", "jobTitle": "Arhitect" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Sararilor 31",
+    "addressLocality": "Craiova",
+    "addressRegion": "Dolj",
+    "postalCode": "200508",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.312422, "longitude": 23.825258 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:30", "closes": "17:30"
+  }],
+  "areaServed": ["Craiova","Dolj","Oltenia"],
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, easing: 'ease-out-quart', once: true, offset: 60 });
+
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const day = now.getDay();
+    const row = document.querySelector('#hours li[data-day="' + day + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

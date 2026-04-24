@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decora Prod SRL &middot; Mobilier &#537;i t&#226;mpl&#259;rie la comand&#259; &icirc;n Slatina</title>
+<meta name="description" content="Decora Prod SRL &mdash; atelier de mobilier &#537;i t&#226;mpl&#259;rie &icirc;n Slatina din 2002. Mobilier la comand&#259;, u&#537;i interioare, buc&#259;t&#259;rii &#537;i profile aluminiu. Telefon 0249 437 108.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream:   '#FBF7EF',
+        walnut:  '#3E2A1A',
+        walnutd: '#271811',
+        oak:     '#8B5E3C',
+        oakl:    '#C39A72',
+        terra:   '#C96F3C',
+        olive:   '#606B2F',
+        sand:    '#EFE6D3',
+        ink:     '#1F1912',
+        muted:   '#746A5C',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['"Young Serif"', 'Georgia', 'serif'],
+        sans:    ['Rubik', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FBF7EF; color: #1F1912; }
+  body { font-family: Rubik, system-ui, sans-serif; }
+  .display { font-family: "Young Serif", Georgia, serif; letter-spacing: -.01em; line-height: 1.02; }
+
+  .wood-grain {
+    background-color: #FBF7EF;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(62,42,26,.035) 0 1px, transparent 1px 8px),
+      repeating-linear-gradient(0deg, rgba(62,42,26,.02) 0 1px, transparent 1px 20px);
+  }
+
+  .wood-dark {
+    background-color: #3E2A1A;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 10px);
+  }
+
+  .btn-walnut {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #3E2A1A;
+    color: #FBF7EF;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: .02em;
+    transition: all .25s;
+  }
+  .btn-walnut:hover { background: #C96F3C; transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: transparent;
+    color: #3E2A1A;
+    border: 1.5px solid #3E2A1A;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all .25s;
+  }
+  .btn-outline:hover { background: #3E2A1A; color: #FBF7EF; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .3rem .95rem;
+    background: transparent;
+    color: #C96F3C;
+    border: 1px solid #C96F3C;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+
+  .card-furniture {
+    background: #FBF7EF;
+    border: 1px solid #E5DCCB;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  .card-furniture:hover { border-color: #3E2A1A; transform: translateY(-4px); box-shadow: 0 30px 50px -36px rgba(62,42,26,.35); }
+
+  .card-furniture .art {
+    aspect-ratio: 4/3;
+    background: #EFE6D3;
+    display: flex; align-items: center; justify-content: center;
+    color: #8B5E3C;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-furniture .art::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(62,42,26,.04) 0 2px, transparent 2px 14px);
+  }
+
+  .spec-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    padding: .85rem 0;
+    border-bottom: 1px solid rgba(62,42,26,.15);
+    font-size: .9rem;
+  }
+  .spec-row:last-child { border: 0; }
+  .spec-row dt { color: #746A5C; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; padding-top: .2rem; }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Young Serif", serif; font-size: 1.7rem; border-bottom: 1px solid #E5DCCB; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 1px dashed rgba(62,42,26,.2);
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #C96F3C; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 wood-grain border-b border-oakl/40">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded bg-walnut text-cream flex items-center justify-center">
+        <span class="display text-xl leading-none">D</span>
+      </span>
+      <div class="leading-tight">
+        <p class="display text-xl leading-none">Decora Prod</p>
+        <p class="text-[10px] tracking-[.18em] uppercase text-muted mt-1">Mobilier la comand&#259; &middot; Est. 2002</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[13px] font-medium text-walnut/85">
+      <a href="#atelier"    class="hover:text-terra">Atelier</a>
+      <a href="#colectie"   class="hover:text-terra">Colec&#539;ie</a>
+      <a href="#spec"       class="hover:text-terra">Specifica&#539;ii</a>
+      <a href="#proces"     class="hover:text-terra">Proces</a>
+      <a href="tel:0249437108" class="btn-walnut !py-2.5 !px-4 !text-xs">0249 437 108</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded bg-walnut text-cream flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl">Decora Prod</span>
+    <button id="menu-close" class="w-11 h-11 bg-walnut text-cream flex items-center justify-center rounded" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#atelier"  class="mobile-link">Atelier</a>
+    <a href="#colectie" class="mobile-link">Colec&#539;ie</a>
+    <a href="#spec"     class="mobile-link">Specifica&#539;ii</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0249437108" class="btn-walnut">Sun&#259;</a>
+    <a href="https://wa.me/40249437108" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="wood-grain pt-10 sm:pt-16 lg:pt-24 pb-16 sm:pb-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-end">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-tree"></i> Atelier &icirc;n Slatina din 2002</span>
+      <h1 class="display mt-8 text-5xl sm:text-7xl lg:text-[7.5rem]">
+        Mobil&#259; f&#259;cut&#259;<br>
+        cu r&#259;bdare,<br>
+        <span class="text-terra">pentru casa ta.</span>
+      </h1>
+      <p class="mt-10 max-w-xl text-lg text-walnutd/80 leading-relaxed">
+        Decora Prod este atelierul de mobilier &#537;i t&#226;mpl&#259;rie care lucreaz&#259; din 2002 &icirc;n Slatina. Buc&#259;t&#259;rii, dormitoare, u&#537;i interioare &#537;i piese la comand&#259; pentru clien&#539;i care vor lucru f&#259;cut bine, nu doar repede.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0249437108" class="btn-walnut"><i class="fa-solid fa-phone"></i> Sun&#259; la atelier</a>
+        <a href="https://wa.me/40249437108" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+      <div class="bg-walnut text-cream p-8 rounded-lg">
+        <p class="chip !text-oakl !border-oakl">&mdash; CAEN 1623</p>
+        <h3 class="display text-3xl mt-5">T&#226;mpl&#259;rie, mobilier, profile aluminiu</h3>
+        <p class="mt-3 text-sm text-cream/70">Atelier cu experien&#539;&#259; de peste 20 de ani &icirc;n produc&#539;ie de mobilier &#537;i elemente de construc&#539;ii.</p>
+
+        <div class="mt-8 pt-6 border-t border-cream/15 grid grid-cols-3 gap-4 text-center">
+          <div>
+            <p class="display text-3xl text-oakl">23</p>
+            <p class="text-[10px] uppercase tracking-widest text-cream/60 mt-1">ani activi</p>
+          </div>
+          <div>
+            <p class="display text-3xl text-oakl">2002</p>
+            <p class="text-[10px] uppercase tracking-widest text-cream/60 mt-1">fondat</p>
+          </div>
+          <div>
+            <p class="display text-3xl text-oakl">SRL</p>
+            <p class="text-[10px] uppercase tracking-widest text-cream/60 mt-1">J28/291</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="atelier" class="py-16 sm:py-24 bg-sand">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+    <div class="lg:col-span-5">
+      <span class="chip">01 &middot; Atelierul</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        Un atelier care<br>nu gr&#259;be&#537;te lemnul.
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7 space-y-5">
+      <p class="text-lg text-walnutd/85 leading-relaxed">Nu suntem o fabric&#259; de serie. Suntem o echip&#259; mic&#259; de t&#226;mplari &#537;i me&#537;teri care lucreaz&#259; cot la cot, &icirc;n acela&#537;i atelier din 2002. Asta ne permite s&#259; facem lucruri pe care o linie automat&#259; nu le poate face.</p>
+
+      <p class="text-base text-walnutd/70 leading-relaxed">Primim un plan, o schi&#539;&#259; sau o idee pe telefon, venim la fa&#539;a locului dac&#259; e necesar, &#537;i ne apuc&#259;m de m&#259;surat. Ce iese din atelier pleac&#259; doar dup&#259; ce am verificat fiecare &icirc;mbinare &#537;i fiecare col&#539;.</p>
+
+      <div class="mt-8 grid sm:grid-cols-2 gap-4">
+        <div class="p-5 bg-cream border border-oakl/30 rounded">
+          <i class="fa-solid fa-hammer text-terra text-xl"></i>
+          <p class="display text-xl mt-3">Unelte &#537;i utilaje profesionale</p>
+          <p class="text-sm text-muted mt-2">Ma&#537;ini de format, bancuri de &#537;lefuit, preg&#259;tire suprafe&#539;e.</p>
+        </div>
+        <div class="p-5 bg-cream border border-oakl/30 rounded">
+          <i class="fa-solid fa-person-digging text-terra text-xl"></i>
+          <p class="display text-xl mt-3">Oameni cu experien&#539;&#259;</p>
+          <p class="text-sm text-muted mt-2">Me&#537;teri care au &icirc;mb&#259;tr&#226;nit cu atelierul.</p>
+        </div>
+        <div class="p-5 bg-cream border border-oakl/30 rounded">
+          <i class="fa-solid fa-tree text-terra text-xl"></i>
+          <p class="display text-xl mt-3">Materiale selec&#539;ionate</p>
+          <p class="text-sm text-muted mt-2">PAL melaminat, MDF, lemn masiv, profile aluminiu.</p>
+        </div>
+        <div class="p-5 bg-cream border border-oakl/30 rounded">
+          <i class="fa-solid fa-ruler-combined text-terra text-xl"></i>
+          <p class="display text-xl mt-3">La dimensiunile tale</p>
+          <p class="text-sm text-muted mt-2">Mobilier pe comand&#259;, dup&#259; m&#259;sur&#259;toare la fa&#539;a locului.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="colectie" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl">
+      <span class="chip">02 &middot; Colec&#539;ie</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">Ce produce&#539;i la Decora?</h2>
+      <p class="mt-4 text-muted">Lucr&#259;m pentru cas&#259;, pentru magazine, pentru birouri &#537;i pentru &#537;coli. Iat&#259; ce prime&#537;ti dac&#259; ne dai proiectul t&#259;u.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <article class="card-furniture" data-aos="fade-up">
+        <div class="art"><i class="fa-solid fa-kitchen-set"></i></div>
+        <div class="p-6">
+          <h3 class="display text-2xl">Buc&#259;t&#259;rii la comand&#259;</h3>
+          <p class="mt-2 text-sm text-muted">Mobilier de buc&#259;t&#259;rie din PAL melaminat, MDF vopsit sau lemn masiv, cu blaturi pe m&#259;sur&#259;.</p>
+        </div>
+      </article>
+
+      <article class="card-furniture" data-aos="fade-up" data-aos-delay="60">
+        <div class="art"><i class="fa-solid fa-bed"></i></div>
+        <div class="p-6">
+          <h3 class="display text-2xl">Dormitoare complete</h3>
+          <p class="mt-2 text-sm text-muted">Dressinguri, dulapuri, paturi &#537;i noptiere. Asortate dup&#259; paleta pe care o alegi tu.</p>
+        </div>
+      </article>
+
+      <article class="card-furniture" data-aos="fade-up" data-aos-delay="120">
+        <div class="art"><i class="fa-solid fa-door-closed"></i></div>
+        <div class="p-6">
+          <h3 class="display text-2xl">U&#537;i interioare</h3>
+          <p class="mt-2 text-sm text-muted">U&#537;i de interior clasice sau moderne, cu toc &#537;i feronerie complet&#259;.</p>
+        </div>
+      </article>
+
+      <article class="card-furniture" data-aos="fade-up" data-aos-delay="180">
+        <div class="art"><i class="fa-solid fa-couch"></i></div>
+        <div class="p-6">
+          <h3 class="display text-2xl">Mobilier living</h3>
+          <p class="mt-2 text-sm text-muted">Comode, biblioteci, vitrine &#537;i mese la dimensiunea camerei.</p>
+        </div>
+      </article>
+
+      <article class="card-furniture" data-aos="fade-up" data-aos-delay="240">
+        <div class="art"><i class="fa-solid fa-window-maximize"></i></div>
+        <div class="p-6">
+          <h3 class="display text-2xl">Profile aluminiu</h3>
+          <p class="mt-2 text-sm text-muted">T&#226;mpl&#259;rie aluminiu pentru vitrine, u&#537;i industriale sau elemente de fa&#539;ad&#259;.</p>
+        </div>
+      </article>
+
+      <article class="card-furniture" data-aos="fade-up" data-aos-delay="300">
+        <div class="art"><i class="fa-solid fa-store"></i></div>
+        <div class="p-6">
+          <h3 class="display text-2xl">Mobilier comercial</h3>
+          <p class="mt-2 text-sm text-muted">Rafturi &#537;i mobilier pentru magazine, birouri &#537;i spa&#539;ii comerciale.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="spec" class="py-16 sm:py-24 wood-dark text-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip !border-oakl !text-oakl">03 &middot; Specifica&#539;ii</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">
+        Datele atelierului,<br><span class="text-terra">pe scurt.</span>
+      </h2>
+      <p class="mt-5 text-cream/65 text-sm leading-relaxed">Suntem o firm&#259; &icirc;nregistrat&#259; oficial &icirc;n Slatina, Olt, activ&#259; de peste 20 de ani, cu experien&#539;&#259; continu&#259; &icirc;n produc&#539;ia de mobilier &#537;i t&#226;mpl&#259;rie.</p>
+    </div>
+
+    <div class="lg:col-span-7">
+      <dl class="mt-2">
+        <div class="spec-row">
+          <dt>Firma</dt>
+          <dd>Decora Prod S.R.L.</dd>
+        </div>
+        <div class="spec-row">
+          <dt>CUI</dt>
+          <dd>14841453</dd>
+        </div>
+        <div class="spec-row">
+          <dt>Registrul</dt>
+          <dd>J28/291/2002</dd>
+        </div>
+        <div class="spec-row">
+          <dt>Fondat&#259;</dt>
+          <dd>27 august 2002</dd>
+        </div>
+        <div class="spec-row">
+          <dt>CAEN</dt>
+          <dd>1623 &mdash; Fabricare elemente t&#226;mpl&#259;rie pentru construc&#539;ii</dd>
+        </div>
+        <div class="spec-row">
+          <dt>Atelier</dt>
+          <dd>Strada Constructorului 3, Slatina</dd>
+        </div>
+        <div class="spec-row">
+          <dt>Jude&#539;</dt>
+          <dd>Olt, Rom&#226;nia</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl">
+      <span class="chip">04 &middot; Cum lucr&#259;m</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">
+        De la o idee<br><span class="text-terra">la o cas&#259; mai frumoas&#259;.</span>
+      </h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-0 bg-oakl/20">
+
+      <div class="bg-cream p-7 m-px">
+        <p class="display text-5xl text-terra">01</p>
+        <h3 class="display text-2xl mt-2">Discu&#539;ie ini&#539;ial&#259;</h3>
+        <p class="mt-3 text-sm text-muted">Telefon, WhatsApp sau la atelier. Ne spui ce &icirc;&#539;i trebuie.</p>
+      </div>
+
+      <div class="bg-cream p-7 m-px">
+        <p class="display text-5xl text-terra">02</p>
+        <h3 class="display text-2xl mt-2">M&#259;sur&#259;toare</h3>
+        <p class="mt-3 text-sm text-muted">Venim la tine acas&#259; sau la spa&#539;iul comercial, cu ruleta &#537;i carnetul.</p>
+      </div>
+
+      <div class="bg-cream p-7 m-px">
+        <p class="display text-5xl text-terra">03</p>
+        <h3 class="display text-2xl mt-2">Ofert&#259; &#537;i plan</h3>
+        <p class="mt-3 text-sm text-muted">Prime&#537;ti o ofert&#259; clar&#259;, cu materiale, accesorii &#537;i termen.</p>
+      </div>
+
+      <div class="bg-cream p-7 m-px">
+        <p class="display text-5xl text-terra">04</p>
+        <h3 class="display text-2xl mt-2">Produc&#539;ie &#537;i montaj</h3>
+        <p class="mt-3 text-sm text-muted">Lucr&#259;m &icirc;n atelier &#537;i la final venim s&#259; &icirc;&#539;i mont&#259;m totul acas&#259;.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 wood-grain">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip">05 &middot; Contact</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+        Vino la noi<br><span class="text-terra">&icirc;n atelier.</span>
+      </h2>
+      <p class="mt-6 max-w-xl text-walnutd/80">Trece pe Strada Constructorului 3 din Slatina sau sun&#259;-ne. &Icirc;&#539;i ar&#259;t&#259;m materiale, exemple &#537;i &icirc;&#539;i facem un plan &icirc;nainte s&#259; pleci.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0249437108" class="btn-walnut"><i class="fa-solid fa-phone"></i> 0249 437 108</a>
+        <a href="https://wa.me/40249437108" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> Mesaj WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-walnut text-cream p-7 rounded-lg">
+        <p class="chip !text-oakl !border-oakl">Atelier</p>
+        <p class="display text-2xl mt-4">Strada Constructorului 3</p>
+        <p class="text-sm text-cream/70">230070 Slatina, jud. Olt</p>
+
+        <div class="mt-6 h-px bg-cream/15"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-oakl w-5"></i> 0249 437 108</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-mobile-screen w-5 text-oakl"></i> 0723 398 982</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-oakl w-5"></i> wa.me/40249437108</div>
+          <div class="flex items-center gap-3"><i class="fa-regular fa-calendar-check text-oakl w-5"></i> Activi din 2002</div>
+        </div>
+
+        <div class="mt-6 pt-5 border-t border-cream/15">
+          <p class="text-[10px] uppercase tracking-widest text-oakl">Program orientativ</p>
+          <ul id="hours" class="mt-3 text-xs">
+            <li data-day="1" class="hours-row"><span>Luni</span><span>08:00 &ndash; 16:00</span></li>
+            <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span>08:00 &ndash; 16:00</span></li>
+            <li data-day="3" class="hours-row"><span>Miercuri</span><span>08:00 &ndash; 16:00</span></li>
+            <li data-day="4" class="hours-row"><span>Joi</span><span>08:00 &ndash; 16:00</span></li>
+            <li data-day="5" class="hours-row"><span>Vineri</span><span>08:00 &ndash; 16:00</span></li>
+            <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span class="text-cream/60">La cerere</span></li>
+            <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-cream/60">&Icirc;nchis</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-walnutd text-cream/65 py-10 pb-24 md:pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 Decora Prod SRL</span>
+    <span>CUI 14841453 &middot; J28/291/2002</span>
+    <span>Slatina &middot; Olt &middot; RO</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0249437108" class="py-4 bg-walnut text-cream text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40249437108" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "Decora Prod SRL",
+  "description": "Atelier de mobilier la comanda si tamplarie in Slatina din 2002. Bucatarii, dulapuri, usi interioare, profile aluminiu.",
+  "telephone": "+40249437108",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Constructorului 3",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230070",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.4396, "longitude": 24.3857 },
+  "foundingDate": "2002-08-27",
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

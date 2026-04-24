@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deos Auto Service &middot; Service &#537;i &icirc;ntre&#539;inere auto &icirc;n Slatina</title>
+<meta name="description" content="Deos Auto Service &mdash; service auto &icirc;n Slatina, Strada Pite&#537;ti 90. &Icirc;ntre&#539;inere, revizii &#537;i repara&#539;ii. Telefon 0766 663 207.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        forest:  '#0F3024',
+        forestd: '#081C15',
+        lime:    '#C0F25E',
+        limed:   '#A1D33F',
+        graph:   '#1D1F1E',
+        cream:   '#F4F6F0',
+        muted:   '#6F7672',
+        line:    '#DCE0D6',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        sans: ['"Kumbh Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #F4F6F0; color: #0F3024; }
+  body { font-family: "Kumbh Sans", system-ui, sans-serif; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+  .btn-lime {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #C0F25E;
+    color: #0F3024;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all .25s;
+  }
+  .btn-lime:hover { background: #A1D33F; transform: translateY(-2px); }
+
+  .btn-forest {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #0F3024;
+    color: #F4F6F0;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all .25s;
+  }
+  .btn-forest:hover { background: #C0F25E; color: #0F3024; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .3rem .85rem;
+    background: #C0F25E;
+    color: #0F3024;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #DCE0D6;
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: all .35s;
+  }
+  .card:hover { border-color: #0F3024; transform: translateY(-4px); }
+
+  .dashboard-panel {
+    background: #081C15;
+    color: #F4F6F0;
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .dashboard-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 20%, rgba(192,242,94,.15) 0%, transparent 40%);
+  }
+
+  .mobile-link { display: block; padding: 1rem 0; font-size: 1.5rem; font-weight: 700; border-bottom: 1px solid #DCE0D6; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .7rem 0;
+    border-bottom: 1px dashed rgba(15,48,36,.2);
+    font-size: .9rem;
+  }
+  .hours-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-lg bg-forest text-lime flex items-center justify-center font-black">D</span>
+      <div class="leading-tight">
+        <p class="font-extrabold text-lg">Deos Auto</p>
+        <p class="text-[10px] mono uppercase tracking-widest text-muted mt-0.5">Service auto &middot; Slatina</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[12px] font-semibold mono uppercase tracking-wider">
+      <a href="#servicii" class="hover:text-forest">Servicii</a>
+      <a href="#stats"    class="hover:text-forest">Stats</a>
+      <a href="#cum"      class="hover:text-forest">Cum lucr&#259;m</a>
+      <a href="#contact"  class="hover:text-forest">Contact</a>
+      <a href="tel:0766663207" class="btn-lime !py-2.5 !px-4 !text-xs">0766 663 207</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-lg bg-forest text-lime flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="font-extrabold text-2xl">Deos Auto</span>
+    <button id="menu-close" class="w-11 h-11 rounded-lg bg-forest text-lime flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-8">
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#stats"    class="mobile-link">Stats</a>
+    <a href="#cum"      class="mobile-link">Cum lucr&#259;m</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0766663207" class="btn-forest">Sun&#259;</a>
+    <a href="https://wa.me/40766663207" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip">&gt; service_auto.exe</span>
+      <h1 class="mt-6 text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.02] tracking-tight">
+        Service auto<br>
+        f&#259;r&#259; dramaturgie.<br>
+        <span class="text-forest/70">Doar solu&#539;ii.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Deos Auto Service ia ma&#537;ina, o pune pe aparat, &icirc;&#539;i arat&#259; ce are. Facem doar ce trebuie, nu ce se poate vinde. De pe Strada Pite&#537;ti 90, &icirc;n Slatina, din 2017.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0766663207" class="btn-forest"><i class="fa-solid fa-phone"></i> 0766 663 207</a>
+        <a href="https://wa.me/40766663207" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+      <div class="dashboard-panel">
+        <div class="relative">
+          <p class="mono text-[10px] text-lime uppercase tracking-widest">&gt; system status</p>
+          <p class="text-4xl font-black mt-3">ONLINE</p>
+          <p class="text-sm text-cream/60 mt-1">Atelierul este deschis &#537;i prime&#537;te ma&#537;ini.</p>
+
+          <div class="mt-8 grid grid-cols-2 gap-3">
+            <div class="border border-lime/30 p-3 rounded-lg">
+              <p class="mono text-[9px] text-lime uppercase">Operatori</p>
+              <p class="text-2xl font-bold mt-1">03</p>
+            </div>
+            <div class="border border-lime/30 p-3 rounded-lg">
+              <p class="mono text-[9px] text-lime uppercase">Din anul</p>
+              <p class="text-2xl font-bold mt-1">2017</p>
+            </div>
+            <div class="border border-lime/30 p-3 rounded-lg">
+              <p class="mono text-[9px] text-lime uppercase">CAEN</p>
+              <p class="text-2xl font-bold mt-1">4520</p>
+            </div>
+            <div class="border border-lime/30 p-3 rounded-lg">
+              <p class="mono text-[9px] text-lime uppercase">Acces</p>
+              <p class="text-sm font-bold mt-1">RAMP&#258; DA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24 bg-cream border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">&gt; /servicii</span>
+    <h2 class="mt-4 text-4xl sm:text-5xl font-black leading-[1.02]">
+      Ce operam<br><span class="text-forest/60">&icirc;n atelier.</span>
+    </h2>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="card" data-aos="fade-up">
+        <p class="mono text-[10px] text-forest/60">SVC / 01</p>
+        <i class="fa-solid fa-wrench text-forest text-3xl mt-3 block"></i>
+        <h3 class="font-extrabold text-xl mt-4">Repara&#539;ii mecanice</h3>
+        <p class="mt-2 text-sm text-muted">Motor, cutie, ambreiaj, suspensii, direc&#539;ie, sistem de fr&#226;nare.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="60">
+        <p class="mono text-[10px] text-forest/60">SVC / 02</p>
+        <i class="fa-solid fa-gauge-high text-forest text-3xl mt-3 block"></i>
+        <h3 class="font-extrabold text-xl mt-4">Diagnoz&#259; computerizat&#259;</h3>
+        <p class="mt-2 text-sm text-muted">OBD, diagnoz&#259; erori motor, senzori, transmisie, ABS.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="120">
+        <p class="mono text-[10px] text-forest/60">SVC / 03</p>
+        <i class="fa-solid fa-oil-can text-forest text-3xl mt-3 block"></i>
+        <h3 class="font-extrabold text-xl mt-4">Revizii periodice</h3>
+        <p class="mt-2 text-sm text-muted">Schimb ulei, filtre, curea distribu&#539;ie, lichid fr&#226;n&#259;.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="180">
+        <p class="mono text-[10px] text-forest/60">SVC / 04</p>
+        <i class="fa-solid fa-car-battery text-forest text-3xl mt-3 block"></i>
+        <h3 class="font-extrabold text-xl mt-4">Electric &#537;i electronic&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Alternator, demaror, baterie, probleme electrice auto.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="240">
+        <p class="mono text-[10px] text-forest/60">SVC / 05</p>
+        <i class="fa-solid fa-wind text-forest text-3xl mt-3 block"></i>
+        <h3 class="font-extrabold text-xl mt-4">Clima &#537;i ventila&#539;ie</h3>
+        <p class="mt-2 text-sm text-muted">&Icirc;nc&#259;rcare freon, dezinfec&#539;ie, verificare conducte.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <p class="mono text-[10px] text-forest/60">SVC / 06</p>
+        <i class="fa-solid fa-tools text-forest text-3xl mt-3 block"></i>
+        <h3 class="font-extrabold text-xl mt-4">&Icirc;ntre&#539;inere general&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Schimb pl&#259;cu&#539;e, discuri, lichide, verific&#259;ri &icirc;nainte de drum lung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">&gt; /performance</span>
+    <h2 class="mt-4 text-4xl sm:text-5xl font-black leading-[1.02]">
+      Date &#537;i<br><span class="text-forest/60">cre&#537;tere.</span>
+    </h2>
+
+    <div class="mt-12 grid sm:grid-cols-4 gap-5">
+      <div class="dashboard-panel !p-5">
+        <p class="mono text-[9px] text-lime uppercase">Revenue 2024</p>
+        <p class="text-3xl font-black mt-2">544k</p>
+        <p class="text-xs text-cream/60 mt-1">RON, +13%</p>
+      </div>
+      <div class="dashboard-panel !p-5">
+        <p class="mono text-[9px] text-lime uppercase">Clien&#539;i activi</p>
+        <p class="text-3xl font-black mt-2">~19</p>
+        <p class="text-xs text-cream/60 mt-1">recenzii Google</p>
+      </div>
+      <div class="dashboard-panel !p-5">
+        <p class="mono text-[9px] text-lime uppercase">Rating</p>
+        <p class="text-3xl font-black mt-2">3.9</p>
+        <p class="text-xs text-cream/60 mt-1">pe Google</p>
+      </div>
+      <div class="dashboard-panel !p-5">
+        <p class="mono text-[9px] text-lime uppercase">Acces</p>
+        <p class="text-3xl font-black mt-2">100%</p>
+        <p class="text-xs text-cream/60 mt-1">ramp&#259; disponibil&#259;</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cum" class="py-16 sm:py-24 bg-cream border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip">&gt; /workflow</span>
+      <h2 class="mt-4 text-4xl sm:text-5xl font-black leading-[1.02]">
+        Workflow,<br><span class="text-forest/60">de la sunet la plecare.</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7 space-y-4">
+      <div class="card flex gap-5 items-start">
+        <span class="mono text-2xl font-black text-lime bg-forest px-3 py-1 rounded">01</span>
+        <div>
+          <p class="font-extrabold text-xl">Programare</p>
+          <p class="mt-1 text-sm text-muted">Telefon sau WhatsApp. &Icirc;&#539;i dam un interval clar de timp.</p>
+        </div>
+      </div>
+      <div class="card flex gap-5 items-start">
+        <span class="mono text-2xl font-black text-lime bg-forest px-3 py-1 rounded">02</span>
+        <div>
+          <p class="font-extrabold text-xl">Diagnoz&#259;</p>
+          <p class="mt-1 text-sm text-muted">Punem ma&#537;ina pe tester &#537;i vedem ce are cu adev&#259;rat.</p>
+        </div>
+      </div>
+      <div class="card flex gap-5 items-start">
+        <span class="mono text-2xl font-black text-lime bg-forest px-3 py-1 rounded">03</span>
+        <div>
+          <p class="font-extrabold text-xl">Deviz scris</p>
+          <p class="mt-1 text-sm text-muted">Prime&#537;ti deviz &icirc;nainte s&#259; &icirc;ncepem lucrarea. Tu decizi.</p>
+        </div>
+      </div>
+      <div class="card flex gap-5 items-start">
+        <span class="mono text-2xl font-black text-lime bg-forest px-3 py-1 rounded">04</span>
+        <div>
+          <p class="font-extrabold text-xl">Lucrare &#537;i verificare</p>
+          <p class="mt-1 text-sm text-muted">Interven&#539;ie, test drive, verificare final&#259; &#537;i predare.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip">&gt; /contact</span>
+      <h2 class="mt-4 text-5xl sm:text-6xl font-black leading-[1.02]">
+        Aduce ma&#537;ina<br><span class="text-forest/60">&#537;i te a&#537;tept&#259;m.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Strada Pite&#537;ti 90, Slatina. Telefon direct sau WhatsApp, v&#259; r&#259;spundem &icirc;n c&#226;teva minute.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0766663207" class="btn-forest"><i class="fa-solid fa-phone"></i> 0766 663 207</a>
+        <a href="https://wa.me/40766663207" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="dashboard-panel">
+        <p class="mono text-[10px] text-lime uppercase tracking-widest">&gt; location</p>
+        <p class="text-2xl font-black mt-3">Strada Pite&#537;ti 90</p>
+        <p class="text-sm text-cream/70 mt-1">Slatina, jud. Olt</p>
+
+        <div class="mt-6 h-px bg-lime/20"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-lime w-5"></i> 0766 663 207</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-lime w-5"></i> wa.me/40766663207</div>
+          <div class="flex items-center gap-3 mono text-xs"><i class="fa-solid fa-file-contract text-lime w-5"></i> CUI 37540760</div>
+          <div class="flex items-center gap-3 mono text-xs"><i class="fa-solid fa-file-contract text-lime w-5"></i> J28/545/2017</div>
+        </div>
+
+        <ul id="hours" class="mt-6 pt-4 border-t border-lime/20 text-xs">
+          <li data-day="1" class="hours-row !text-cream/85"><span>LUN</span><span class="mono">08:00&ndash;17:00</span></li>
+          <li data-day="2" class="hours-row !text-cream/85"><span>MAR</span><span class="mono">08:00&ndash;17:00</span></li>
+          <li data-day="3" class="hours-row !text-cream/85"><span>MIE</span><span class="mono">08:00&ndash;17:00</span></li>
+          <li data-day="4" class="hours-row !text-cream/85"><span>JOI</span><span class="mono">08:00&ndash;17:00</span></li>
+          <li data-day="5" class="hours-row !text-cream/85"><span>VIN</span><span class="mono">08:00&ndash;17:00</span></li>
+          <li data-day="6" class="hours-row !text-cream/60"><span>SAM</span><span class="mono">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row !text-cream/60"><span>DUM</span><span class="mono">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-forestd text-cream/65 py-10 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs mono uppercase tracking-widest">
+    <span>&copy; 2026 DEOS SERVICE GRUP SRL</span>
+    <span>CAEN 4520 &middot; Slatina, Olt</span>
+    <span>Activ din 2017</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0766663207" class="py-4 bg-forest text-lime text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40766663207" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Deos Auto Service",
+  "telephone": "+40766663207",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Pitesti 90",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.439332, "longitude": 24.372201 },
+  "foundingDate": "2017-05-10",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.9", "reviewCount": "19" }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dyatmir Funerare &middot; Servicii funerare complete &icirc;n Slatina</title>
+<meta name="description" content="Servicii funerare discrete &#537;i respectuoase &icirc;n Slatina, Olt. Disponibili non-stop, 24/7. Organiz&#259;m pomp&#259; funebr&#259;, transport, sicrie, coroane &#537;i formalit&#259;&#539;i. Telefon 0774 463 620.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:     '#1B1C1E',
+        paper:   '#F5F1EA',
+        cream:   '#EDE6D8',
+        brass:   '#8A6E3F',
+        brassl:  '#B28F55',
+        stone:   '#6B6A66',
+        line:    '#2F2E2B',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        serif: ['"EB Garamond"', 'Georgia', 'serif'],
+        sans:  ['"Nunito Sans"', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #F5F1EA; color: #1B1C1E; }
+  body { font-family: 'Nunito Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  .serif { font-family: 'EB Garamond', Georgia, serif; }
+  .smallcaps { font-variant: small-caps; letter-spacing: .14em; }
+
+  .ribbon {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent 0, rgba(138,110,63,.55) 8%, rgba(138,110,63,.55) 92%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .hair { height: 1px; background: #2F2E2B; opacity: .25; }
+  .hair-gold { height: 1px; background: #8A6E3F; opacity: .5; }
+
+  .diamond {
+    display: inline-block;
+    width: 6px; height: 6px;
+    transform: rotate(45deg);
+    background: #8A6E3F;
+    vertical-align: middle;
+    margin: 0 .6em;
+  }
+
+  .flame-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    border: 1px solid rgba(138,110,63,.4);
+    border-radius: 999px;
+  }
+  @keyframes flicker {
+    0%, 100% { opacity: 1; transform: scaleY(1); }
+    50%      { opacity: .82; transform: scaleY(.96); }
+  }
+  .flame path { animation: flicker 2.6s ease-in-out infinite; transform-origin: center; }
+
+  .card {
+    background: #FBF8F1;
+    border: 1px solid rgba(43,42,39,.1);
+    box-shadow: 0 1px 0 rgba(0,0,0,.03), 0 24px 48px -36px rgba(27,28,30,.25);
+  }
+
+  .fold {
+    position: relative;
+    background: #FBF8F1;
+    border: 1px solid rgba(43,42,39,.14);
+  }
+  .fold::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 38px; height: 38px;
+    background: linear-gradient(225deg, #EDE6D8 0 49%, rgba(27,28,30,.08) 49% 52%, #FBF8F1 52% 100%);
+  }
+
+  .uline {
+    background-image: linear-gradient(to right, #8A6E3F 0%, #8A6E3F 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    padding-bottom: 4px;
+  }
+
+  .mobile-link { display:block; padding: 1rem 0; font-family: 'EB Garamond', Georgia, serif; font-size: 1.6rem; border-bottom: 1px solid rgba(43,42,39,.15); }
+
+  .col { max-width: 38rem; margin-left: auto; margin-right: auto; }
+  .col-wide { max-width: 54rem; margin-left: auto; margin-right: auto; }
+
+  .num-label {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-style: italic;
+    color: #8A6E3F;
+    font-size: .95rem;
+  }
+
+  .rose {
+    width: 34px; height: 34px;
+    border: 1px solid #8A6E3F;
+    border-radius: 50%;
+    position: relative;
+  }
+  .rose::before, .rose::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(138,110,63,.55);
+    border-radius: 50%;
+  }
+  .rose::before { transform: scale(.68); }
+  .rose::after  { transform: scale(.36); background: #8A6E3F; }
+
+  .halo {
+    background:
+      radial-gradient(ellipse at 50% 18%, rgba(178,143,85,.12) 0%, rgba(178,143,85,0) 55%),
+      #F5F1EA;
+  }
+
+  .lift { transition: transform .5s ease, box-shadow .5s ease; }
+  .lift:hover { transform: translateY(-3px); box-shadow: 0 30px 50px -36px rgba(27,28,30,.3); }
+
+  .stickbar a { transition: background .2s ease; }
+  .stickbar a.call { background: #1B1C1E; color: #F5F1EA; }
+  .stickbar a.wap  { background: #25D366; color: #FFFFFF; }
+
+  .hours-list li {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: .55rem 0;
+    border-bottom: 1px dashed rgba(43,42,39,.18);
+    font-size: .95rem;
+  }
+  .hours-list li:last-child { border-bottom: 0; }
+
+  .h-hero { font-family: 'EB Garamond', Georgia, serif; line-height: 1.06; letter-spacing: -.005em; }
+
+  .q-lead::before { content: "\201C"; font-family: 'EB Garamond', Georgia, serif; font-size: 3.5rem; line-height: 0; vertical-align: -.55em; color: #8A6E3F; margin-right: .15em; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<header class="relative z-40">
+  <div class="col-wide px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="flame-wrap">
+        <svg class="flame" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 1 C9 4 12 6 12 10 C12 14 10 17 7 17 C4 17 2 14 2 10 C2 7 4 6 5 3 C5 5 6 6 7 1 Z" fill="#8A6E3F"/>
+        </svg>
+      </span>
+      <span class="serif text-2xl sm:text-3xl leading-none">Dyatmir<span class="text-brass"> .</span> Funerare</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm smallcaps text-ink/80">
+      <a href="#servicii" class="hover:text-brass">Servicii</a>
+      <a href="#proces" class="hover:text-brass">Cum proced&#259;m</a>
+      <a href="#program" class="hover:text-brass">Program</a>
+      <a href="#contact" class="hover:text-brass">Contact</a>
+      <a href="tel:0774463620" class="ml-2 inline-flex items-center gap-2 px-4 py-2 border border-ink/80 hover:bg-ink hover:text-paper transition">
+        <i class="fa-solid fa-phone"></i> 0774 463 620
+      </a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 border border-ink/40 flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars text-ink"></i>
+    </button>
+  </div>
+  <div class="col-wide px-5 sm:px-8"><div class="hair-gold"></div></div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-paper z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="serif text-2xl">Dyatmir Funerare</span>
+    <button id="menu-close" class="w-11 h-11 border border-ink/40 flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mt-6 hair-gold"></div>
+  <nav class="mt-4">
+    <a href="#servicii"  class="mobile-link">Servicii</a>
+    <a href="#proces"    class="mobile-link">Cum proced&#259;m</a>
+    <a href="#program"   class="mobile-link">Program</a>
+    <a href="#contact"   class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0774463620" class="py-4 text-center bg-ink text-paper smallcaps text-sm">Sun&#259; acum</a>
+    <a href="https://wa.me/40774463620" class="py-4 text-center bg-wa text-white smallcaps text-sm">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="relative halo pb-16 sm:pb-24 lg:pb-32">
+  <div class="ribbon left-1/2 hidden lg:block"></div>
+
+  <div class="col px-5 sm:px-8 pt-10 sm:pt-16 lg:pt-24 text-center">
+
+    <div class="flex items-center justify-center gap-4" data-aos="fade-up">
+      <div class="w-10 hair-gold"></div>
+      <span class="smallcaps text-xs text-brass">Slatina &middot; Olt &middot; Non&#8209;stop</span>
+      <div class="w-10 hair-gold"></div>
+    </div>
+
+    <h1 class="h-hero mt-8 text-4xl sm:text-5xl lg:text-6xl text-ink" data-aos="fade-up" data-aos-delay="60">
+      C&#226;nd timpul pare c&#259; s&#8209;a oprit,<br>
+      <em class="text-brass not-italic font-medium">noi r&#259;m&#226;nem al&#259;turi de familie.</em>
+    </h1>
+
+    <p class="mt-8 text-base sm:text-lg leading-relaxed text-stone" data-aos="fade-up" data-aos-delay="120">
+      Dyatmir Funerare organizeaz&#259; servicii complete de pomp&#259; funebr&#259; &icirc;n Slatina &#537;i &icirc;n jude&#539;ul Olt. Ne ocup&#259;m de tot ce trebuie c&#226;nd &icirc;n familie nimeni nu mai are putere s&#259; se g&#226;ndeasc&#259; la detalii. Discret, calm &#537;i cu respect.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="180">
+      <a href="tel:0774463620" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 bg-ink text-paper smallcaps text-sm hover:bg-line transition">
+        <i class="fa-solid fa-phone"></i> Sun&#259;-ne acum &middot; 0774 463 620
+      </a>
+      <a href="https://wa.me/40774463620" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 bg-wa text-white smallcaps text-sm hover:brightness-95 transition">
+        <i class="fa-brands fa-whatsapp text-lg"></i> Scrie pe WhatsApp
+      </a>
+    </div>
+
+    <div class="mt-12 flex items-center justify-center gap-6 text-xs smallcaps text-stone" data-aos="fade-up" data-aos-delay="240">
+      <span><i class="fa-regular fa-clock text-brass mr-2"></i>24 / 7</span>
+      <span class="diamond"></span>
+      <span><i class="fa-solid fa-location-dot text-brass mr-2"></i>B-dul N. Titulescu 2</span>
+      <span class="diamond"></span>
+      <span>Din 2015</span>
+    </div>
+
+  </div>
+
+  <div class="col px-5 sm:px-8 mt-16 sm:mt-24 flex items-center gap-6 justify-center">
+    <div class="flex-1 hair"></div>
+    <div class="rose" aria-hidden="true"></div>
+    <div class="flex-1 hair"></div>
+  </div>
+</section>
+
+<section class="py-14 sm:py-20">
+  <div class="col px-5 sm:px-8">
+    <p class="num-label text-center">I</p>
+    <h2 class="serif text-3xl sm:text-4xl text-center mt-3">Un g&#226;nd la &icirc;nceput</h2>
+    <div class="mx-auto w-16 hair-gold mt-5"></div>
+
+    <p class="mt-10 text-lg serif leading-relaxed text-ink/90 q-lead">
+      Nu exist&#259; un moment bun pentru a pierde pe cineva drag. Dar exist&#259; un fel de a trece prin zilele acelea cu pu&#539;in mai pu&#539;in&#259; povar&#259;: cineva care &#537;tie ce h&#226;rtii trebuie, cine sun&#259; unde, la ce or&#259; ajunge dubi&#539;a la biseric&#259; &#537;i cum se aranjeaz&#259; sicriul &icirc;n capel&#259;. Asta facem noi &mdash; ca dumneavoastr&#259; s&#259; v&#259; pute&#539;i concentra pe despar&#539;ire, nu pe formulare.
+    </p>
+
+    <p class="mt-6 text-base leading-relaxed text-stone">
+      Dyatmir Funerare este o firm&#259; local&#259;, &icirc;nfiin&#539;at&#259; &icirc;n 2015 &icirc;n Slatina. Am &icirc;nso&#539;it aproape 10 ani de familii din Olt &#537;i din comunele din jur &icirc;n cele mai grele zile. Evaluarea de 4,9 din 5 pe Google, adunat&#259; din 29 de recenzii, spune mai mult despre felul &icirc;n care am fost acolo dec&#226;t ar putea s-o fac&#259; noi &icirc;n&#537;ine.
+    </p>
+  </div>
+</section>
+
+<div class="col-wide px-5 sm:px-8"><div class="hair"></div></div>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="col-wide px-5 sm:px-8">
+
+    <div class="text-center">
+      <p class="num-label">II</p>
+      <h2 class="serif text-3xl sm:text-4xl mt-3">Serviciile noastre</h2>
+      <div class="mx-auto w-16 hair-gold mt-5"></div>
+      <p class="mt-6 max-w-xl mx-auto text-stone">Tot ce &#539;ine de un serviciu funerar complet, sub un singur num&#259;r de telefon.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 gap-6">
+
+      <article class="card p-7 sm:p-9 lift" data-aos="fade-up">
+        <div class="flex items-start justify-between">
+          <span class="num-label">&mdash; i</span>
+          <i class="fa-solid fa-hands-holding-circle text-brass text-2xl"></i>
+        </div>
+        <h3 class="serif text-2xl mt-5">Pomp&#259; funebr&#259; complet&#259;</h3>
+        <p class="mt-4 text-stone leading-relaxed">Organizare complet&#259; a ceremoniei: de la ridicarea celui drag, la capel&#259;, slujb&#259;, &icirc;nmorm&#226;ntare &#537;i pomen&#259;. Ne &icirc;ngrijim de fiecare pas, discret &#537;i la timp.</p>
+      </article>
+
+      <article class="card p-7 sm:p-9 lift" data-aos="fade-up" data-aos-delay="80">
+        <div class="flex items-start justify-between">
+          <span class="num-label">&mdash; ii</span>
+          <i class="fa-solid fa-van-shuttle text-brass text-2xl"></i>
+        </div>
+        <h3 class="serif text-2xl mt-5">Transport decedat</h3>
+        <p class="mt-4 text-stone leading-relaxed">Cu dub&#259; omologat&#259;, de acas&#259; la morg&#259;, &icirc;ntre localit&#259;&#539;i sau p&#226;n&#259; la locul de &icirc;nmorm&#226;ntare. Interven&#539;ie rapid&#259; &icirc;n Slatina &#537;i comunele jud. Olt.</p>
+      </article>
+
+      <article class="card p-7 sm:p-9 lift" data-aos="fade-up" data-aos-delay="160">
+        <div class="flex items-start justify-between">
+          <span class="num-label">&mdash; iii</span>
+          <i class="fa-solid fa-box-archive text-brass text-2xl"></i>
+        </div>
+        <h3 class="serif text-2xl mt-5">Sicrie &#537;i accesorii</h3>
+        <p class="mt-4 text-stone leading-relaxed">Gam&#259; divers&#259; de sicrie din lemn masiv, capitonate, cruci, lum&#226;n&#259;ri, colive &#537;i toate accesoriile necesare pentru o ceremonie demn&#259;.</p>
+      </article>
+
+      <article class="card p-7 sm:p-9 lift" data-aos="fade-up" data-aos-delay="240">
+        <div class="flex items-start justify-between">
+          <span class="num-label">&mdash; iv</span>
+          <i class="fa-solid fa-seedling text-brass text-2xl"></i>
+        </div>
+        <h3 class="serif text-2xl mt-5">Coroane &#537;i jerbe</h3>
+        <p class="mt-4 text-stone leading-relaxed">Aranjamente florale clasice &#537;i moderne: coroane rotunde, jerbe, buchete &#537;i ornamente pentru sicriu, realizate proasp&#259;t &icirc;n ziua ceremoniei.</p>
+      </article>
+
+      <article class="card p-7 sm:p-9 lift" data-aos="fade-up" data-aos-delay="320">
+        <div class="flex items-start justify-between">
+          <span class="num-label">&mdash; v</span>
+          <i class="fa-solid fa-file-signature text-brass text-2xl"></i>
+        </div>
+        <h3 class="serif text-2xl mt-5">Formalit&#259;&#539;i &#537;i acte</h3>
+        <p class="mt-4 text-stone leading-relaxed">Certificat de deces, aviz de &icirc;nhumare, acte pentru ajutorul de &icirc;nmorm&#226;ntare de la CAS / Casa de Pensii. Familia nu mai umbl&#259; pe la ghi&#537;ee.</p>
+      </article>
+
+      <article class="card p-7 sm:p-9 lift" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex items-start justify-between">
+          <span class="num-label">&mdash; vi</span>
+          <i class="fa-solid fa-cross text-brass text-2xl"></i>
+        </div>
+        <h3 class="serif text-2xl mt-5">Servicii religioase</h3>
+        <p class="mt-4 text-stone leading-relaxed">Leg&#259;tura cu preotul parohiei, cantori, sacristie, precum &#537;i coordonarea slujbei &icirc;n biseric&#259; sau la domiciliu, dup&#259; tradi&#539;ie.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="col-wide px-5 sm:px-8"><div class="hair"></div></div>
+
+<section id="proces" class="py-16 sm:py-24">
+  <div class="col px-5 sm:px-8 text-center">
+    <p class="num-label">III</p>
+    <h2 class="serif text-3xl sm:text-4xl mt-3">Cum proced&#259;m, pas cu pas</h2>
+    <div class="mx-auto w-16 hair-gold mt-5"></div>
+    <p class="mt-6 text-stone">Pentru familiile care nu au trecut prin asta &icirc;nainte, iat&#259; ce se &icirc;nt&#226;mpl&#259; din momentul &icirc;n care ne suna&#539;i.</p>
+  </div>
+
+  <div class="col px-5 sm:px-8 mt-14 space-y-10">
+
+    <div data-aos="fade-up">
+      <div class="flex items-baseline gap-4">
+        <span class="serif text-2xl text-brass">01</span>
+        <div class="flex-1 hair-gold self-center"></div>
+      </div>
+      <h3 class="serif text-2xl mt-3">Primul telefon</h3>
+      <p class="mt-3 text-stone leading-relaxed">Suna&#539;i la <a class="uline" href="tel:0774463620">0774 463 620</a>, oric&#226;nd, zi sau noapte. V&#259; ascult&#259;m, afl&#259;m unde se afl&#259; cel drag &#537;i v&#259; spunem exact ce trebuie f&#259;cut &icirc;n urm&#259;toarea or&#259;.</p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="80">
+      <div class="flex items-baseline gap-4">
+        <span class="serif text-2xl text-brass">02</span>
+        <div class="flex-1 hair-gold self-center"></div>
+      </div>
+      <h3 class="serif text-2xl mt-3">Ridicarea &#537;i transportul</h3>
+      <p class="mt-3 text-stone leading-relaxed">Ne deplas&#259;m de urgen&#539;&#259; la adres&#259; sau la spital, prelu&#259;m decedatul &#537;i &icirc;l transport&#259;m &icirc;n condi&#539;ii demne spre capela aleas&#259;.</p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="160">
+      <div class="flex items-baseline gap-4">
+        <span class="serif text-2xl text-brass">03</span>
+        <div class="flex-1 hair-gold self-center"></div>
+      </div>
+      <h3 class="serif text-2xl mt-3">Stabilirea ceremoniei</h3>
+      <p class="mt-3 text-stone leading-relaxed">&Icirc;mpreun&#259; cu familia alegem sicriul, cruciul&#539;a, lum&#226;n&#259;rile &#537;i coroanele. Fix&#259;m programul zilei de &icirc;nmorm&#226;ntare &icirc;mpreun&#259; cu preotul.</p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="240">
+      <div class="flex items-baseline gap-4">
+        <span class="serif text-2xl text-brass">04</span>
+        <div class="flex-1 hair-gold self-center"></div>
+      </div>
+      <h3 class="serif text-2xl mt-3">Actele &#537;i formalit&#259;&#539;ile</h3>
+      <p class="mt-3 text-stone leading-relaxed">Ne ocup&#259;m noi de acte: certificat de deces, aviz de &icirc;nhumare, adeverin&#539;e pentru ajutorul de &icirc;nmorm&#226;ntare. Familia semneaz&#259; doar ce trebuie.</p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="320">
+      <div class="flex items-baseline gap-4">
+        <span class="serif text-2xl text-brass">05</span>
+        <div class="flex-1 hair-gold self-center"></div>
+      </div>
+      <h3 class="serif text-2xl mt-3">Ziua de &icirc;nmorm&#226;ntare</h3>
+      <p class="mt-3 text-stone leading-relaxed">Coordon&#259;m totul: transportul la biseric&#259;, slujba, alaiul, cimitirul. R&#259;m&#226;nem al&#259;turi de familie p&#226;n&#259; la sf&#226;r&#537;itul ceremoniei.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="col-wide px-5 sm:px-8"><div class="hair"></div></div>
+
+<section class="py-16 sm:py-24">
+  <div class="col px-5 sm:px-8 text-center">
+    <p class="num-label">IV</p>
+    <h2 class="serif text-3xl sm:text-4xl mt-3">Promisiunea noastr&#259;</h2>
+    <div class="mx-auto w-16 hair-gold mt-5"></div>
+  </div>
+
+  <div class="col-wide px-5 sm:px-8 mt-12 grid sm:grid-cols-3 gap-6">
+    <div class="fold p-7" data-aos="fade-up">
+      <i class="fa-solid fa-clock text-brass text-xl"></i>
+      <h3 class="serif text-xl mt-4">Disponibili 24 / 7</h3>
+      <p class="mt-3 text-sm text-stone leading-relaxed">Oric&#226;nd se &icirc;nt&#226;mpl&#259;, diminea&#539;a, noaptea sau &icirc;n zi de s&#259;rb&#259;toare, telefonul r&#259;spunde.</p>
+    </div>
+    <div class="fold p-7" data-aos="fade-up" data-aos-delay="80">
+      <i class="fa-solid fa-hand-holding-heart text-brass text-xl"></i>
+      <h3 class="serif text-xl mt-4">Respect &#537;i discre&#539;ie</h3>
+      <p class="mt-3 text-sm text-stone leading-relaxed">F&#259;r&#259; presiune, f&#259;r&#259; v&#226;nzare agresiv&#259;. Doar ceea ce familia alege con&#537;tient s&#259; fac&#259;.</p>
+    </div>
+    <div class="fold p-7" data-aos="fade-up" data-aos-delay="160">
+      <i class="fa-solid fa-scale-balanced text-brass text-xl"></i>
+      <h3 class="serif text-xl mt-4">Pre&#539;uri corecte</h3>
+      <p class="mt-3 text-sm text-stone leading-relaxed">Comunic&#259;m clar costurile &icirc;nc&#259; de la primul telefon. F&#259;r&#259; surprize pe factur&#259;.</p>
+    </div>
+  </div>
+</section>
+
+<div class="col-wide px-5 sm:px-8"><div class="hair"></div></div>
+
+<section id="program" class="py-16 sm:py-24">
+  <div class="col px-5 sm:px-8">
+
+    <div class="text-center">
+      <p class="num-label">V</p>
+      <h2 class="serif text-3xl sm:text-4xl mt-3">Program de lucru</h2>
+      <div class="mx-auto w-16 hair-gold mt-5"></div>
+      <p class="mt-6 text-stone">R&#259;spundem zi &#537;i noapte. Orele de mai jos sunt doar orientative pentru vizitarea punctului de lucru.</p>
+    </div>
+
+    <div class="mt-10 fold p-7 sm:p-9">
+      <ul id="hours" class="hours-list serif">
+        <li data-day="1"><span>Luni</span><span class="smallcaps text-xs text-brass">Deschis 24 de ore</span></li>
+        <li data-day="2"><span>Mar&#539;i</span><span class="smallcaps text-xs text-brass">Deschis 24 de ore</span></li>
+        <li data-day="3"><span>Miercuri</span><span class="smallcaps text-xs text-brass">Deschis 24 de ore</span></li>
+        <li data-day="4"><span>Joi</span><span class="smallcaps text-xs text-brass">Deschis 24 de ore</span></li>
+        <li data-day="5"><span>Vineri</span><span class="smallcaps text-xs text-brass">Deschis 24 de ore</span></li>
+        <li data-day="6"><span>S&#226;mb&#259;t&#259;</span><span class="smallcaps text-xs text-brass">Deschis 24 de ore</span></li>
+        <li data-day="0"><span>Duminic&#259;</span><span class="smallcaps text-xs text-brass">Deschis 24 de ore</span></li>
+      </ul>
+      <div class="mt-6 hair"></div>
+      <p class="mt-5 text-sm text-stone leading-relaxed">Pentru urgen&#539;e, telefonul este activ f&#259;r&#259; &icirc;ntrerupere. Nu exist&#259; or&#259; nepotrivit&#259; pentru a ne suna &mdash; asta e meseria noastr&#259;.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-ink text-paper relative">
+  <div class="col px-5 sm:px-8 text-center">
+    <p class="num-label" style="color:#B28F55">VI</p>
+    <h2 class="serif text-3xl sm:text-4xl text-paper mt-3">Suna&#539;i-ne c&#226;nd ave&#539;i nevoie</h2>
+    <div class="mx-auto w-16 h-px bg-brassl mt-5 opacity-80"></div>
+    <p class="mt-6 text-paper/80">Un apel scurt &#537;i v&#259; scutim de sute de pa&#537;i. R&#259;spundem non-stop.</p>
+  </div>
+
+  <div class="col-wide px-5 sm:px-8 mt-12 grid lg:grid-cols-2 gap-6">
+
+    <div class="bg-paper text-ink p-7 sm:p-9">
+      <p class="num-label">&mdash; contact</p>
+      <h3 class="serif text-2xl mt-2">Telefon &#537;i WhatsApp</h3>
+      <div class="mt-4 hair-gold"></div>
+
+      <a href="tel:0774463620" class="mt-6 flex items-center gap-4 group">
+        <span class="w-12 h-12 border border-ink/60 flex items-center justify-center group-hover:bg-ink group-hover:text-paper transition">
+          <i class="fa-solid fa-phone"></i>
+        </span>
+        <div>
+          <p class="text-xs smallcaps text-stone">Apel direct</p>
+          <p class="serif text-2xl leading-none mt-1">0774 463 620</p>
+        </div>
+      </a>
+
+      <a href="https://wa.me/40774463620" class="mt-5 flex items-center gap-4 group">
+        <span class="w-12 h-12 border border-ink/60 flex items-center justify-center group-hover:bg-wa group-hover:border-wa group-hover:text-white transition">
+          <i class="fa-brands fa-whatsapp"></i>
+        </span>
+        <div>
+          <p class="text-xs smallcaps text-stone">Mesaj rapid</p>
+          <p class="serif text-2xl leading-none mt-1">WhatsApp</p>
+        </div>
+      </a>
+
+      <div class="mt-8 hair"></div>
+
+      <p class="num-label mt-8">&mdash; adresa</p>
+      <h3 class="serif text-xl mt-2">Punct de lucru</h3>
+      <p class="mt-3 text-stone leading-relaxed">
+        B-dul Nicolae Titulescu nr. 2, Bloc 2<br>
+        230099 Slatina, Jud. Olt
+      </p>
+      <a href="https://www.google.com/maps/place/Dyatmir+Funerare/@44.4306543,24.3549695,17z" class="mt-5 inline-flex items-center gap-2 uline text-sm smallcaps">
+        <i class="fa-solid fa-location-dot"></i> Vezi pe hart&#259;
+      </a>
+    </div>
+
+    <div class="bg-paper text-ink p-7 sm:p-9">
+      <p class="num-label">&mdash; despre firm&#259;</p>
+      <h3 class="serif text-2xl mt-2">Dyatmir Funerare SRL</h3>
+      <div class="mt-4 hair-gold"></div>
+
+      <dl class="mt-6 text-sm space-y-4">
+        <div class="flex justify-between gap-6">
+          <dt class="text-stone smallcaps">Fondat&#259;</dt>
+          <dd class="serif text-base">30 octombrie 2015</dd>
+        </div>
+        <div class="flex justify-between gap-6">
+          <dt class="text-stone smallcaps">CUI</dt>
+          <dd class="serif text-base">35182525</dd>
+        </div>
+        <div class="flex justify-between gap-6">
+          <dt class="text-stone smallcaps">Nr. Registru</dt>
+          <dd class="serif text-base">J2015000745288</dd>
+        </div>
+        <div class="flex justify-between gap-6">
+          <dt class="text-stone smallcaps">CAEN</dt>
+          <dd class="serif text-base">9603 &middot; Servicii funerare</dd>
+        </div>
+        <div class="flex justify-between gap-6">
+          <dt class="text-stone smallcaps">Jude&#539;</dt>
+          <dd class="serif text-base">Olt</dd>
+        </div>
+      </dl>
+
+      <div class="mt-8 hair"></div>
+
+      <p class="mt-6 text-sm text-stone leading-relaxed">
+        Firm&#259; local&#259; din Slatina, cu aproape 10 ani de experien&#539;&#259; &icirc;n serviciile funerare. Not&#259; de 4,9 / 5 pe Google, din 29 de recenzii ale familiilor pe care le-am &icirc;nso&#539;it de-a lungul anilor.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-paper border-t border-ink/15 pb-24 md:pb-10 pt-14">
+  <div class="col-wide px-5 sm:px-8">
+
+    <div class="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8">
+      <div class="text-center sm:text-left">
+        <div class="flex items-center gap-3 justify-center sm:justify-start">
+          <span class="flame-wrap">
+            <svg class="flame" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 1 C9 4 12 6 12 10 C12 14 10 17 7 17 C4 17 2 14 2 10 C2 7 4 6 5 3 C5 5 6 6 7 1 Z" fill="#8A6E3F"/>
+            </svg>
+          </span>
+          <span class="serif text-2xl">Dyatmir Funerare</span>
+        </div>
+        <p class="mt-4 text-sm text-stone max-w-sm">Servicii funerare complete, discret &#537;i cu respect, &icirc;n Slatina &#537;i jude&#539;ul Olt. Non-stop, din 2015.</p>
+      </div>
+
+      <div class="text-center sm:text-right text-sm">
+        <p class="smallcaps text-stone">Contact non-stop</p>
+        <a href="tel:0774463620" class="serif text-2xl block mt-1">0774 463 620</a>
+        <p class="mt-2 text-stone">B-dul N. Titulescu 2, Slatina</p>
+      </div>
+    </div>
+
+    <div class="mt-10 hair"></div>
+
+    <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs smallcaps text-stone">
+      <span>&copy; 2026 Dyatmir Funerare SRL &middot; Toate drepturile rezervate</span>
+      <span>CUI 35182525 &middot; J2015000745288</span>
+    </div>
+  </div>
+</footer>
+
+<div class="stickbar fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 shadow-[0_-14px_30px_-20px_rgba(0,0,0,.3)]">
+  <a href="tel:0774463620" class="call py-4 text-center smallcaps text-sm">
+    <i class="fa-solid fa-phone mr-2"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40774463620" class="wap py-4 text-center smallcaps text-sm">
+    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FuneralHome",
+  "name": "Dyatmir Funerare",
+  "description": "Servicii funerare complete in Slatina si judetul Olt. Disponibili non-stop, 24/7.",
+  "telephone": "+40774463620",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bulevardul Nicolae Titulescu nr 2, Bloc 2",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230099",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.430654, "longitude": 24.354969 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00", "closes": "23:59"
+  }],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "29" },
+  "areaServed": ["Slatina","Judetul Olt"],
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, easing: 'ease-out-quart', once: true, offset: 60 });
+
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const day = now.getDay();
+    const row = document.querySelector('#hours li[data-day="' + day + '"]');
+    if (row) {
+      row.classList.add('bg-cream');
+      row.style.padding = '.75rem .75rem';
+      row.style.margin = '0 -.75rem';
+      var last = row.querySelector('span:last-child');
+      if (last) last.classList.add('text-ink');
+    }
+  } catch (e) {}
+</script>
+
+</body>
+</html>

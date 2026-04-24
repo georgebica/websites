@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birou Notarial Tinta Alina Mihaela | Notar Public Bucure&#537;ti</title>
+  <meta name="description" content="Birou Notarial Tinta Alina Mihaela — servicii notariale &#238;n Bucure&#537;ti, Sector 2. Programare online, autentific&#259;ri, contracte, succesiuni. Tel: 0732 146 690.">
+  <meta property="og:title" content="Birou Notarial Tinta Alina Mihaela | Bucure&#537;ti">
+  <meta property="og:locale" content="ro_RO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1A1A2E',
+            'ink-light': '#252540',
+            parchment: '#F7F3ED',
+            'parchment-dark': '#EDE7DC',
+            wine: '#6B2D5B',
+            'wine-light': '#8B3D7B',
+            copper: '#B87333',
+            'copper-light': '#D4955A',
+            warm: '#9E8E7E',
+          },
+          fontFamily: {
+            heading: ['Unna', 'serif'],
+            body: ['Cabin', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Cabin', sans-serif; }
+    .parchment-texture { background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B87333' fill-opacity='0.03'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); }
+    .copper-line { height: 2px; background: linear-gradient(90deg, transparent, #B87333, transparent); }
+    .copper-line-short { height: 2px; background: linear-gradient(90deg, #B87333, transparent); max-width: 80px; }
+    .nav-scroll { background: rgba(247,243,237,0.97); backdrop-filter: blur(10px); box-shadow: 0 1px 10px rgba(0,0,0,0.08); }
+    .wine-glow { box-shadow: 0 4px 20px rgba(107,45,91,0.15); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Notary",
+    "name": "Birou Notarial Tinta Alina Mihaela",
+    "telephone": "+40732146690",
+    "email": "tinta_alina@yahoo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Strada Tunari 83",
+      "addressLocality": "Bucure\u0219ti",
+      "postalCode": "052083",
+      "addressRegion": "Sector 2",
+      "addressCountry": "RO"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 44.452373, "longitude": 26.105099 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "58", "bestRating": "5" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "17:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "15:00" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-parchment text-ink font-body">
+
+  <!-- NAV -->
+  <nav id="nav" class="fixed top-0 w-full z-50 transition-all duration-300 bg-parchment/80">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <i class="fa-solid fa-stamp text-wine text-lg"></i>
+        <span class="font-heading font-bold text-lg">Notar Tinta</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-warm">
+        <a href="#despre" class="hover:text-wine transition">Despre</a>
+        <a href="#servicii" class="hover:text-wine transition">Servicii</a>
+        <a href="#recenzii" class="hover:text-wine transition">Recenzii</a>
+        <a href="#contact" class="hover:text-wine transition">Contact</a>
+      </div>
+      <a href="tel:+40732146690" class="hidden md:inline-block bg-wine text-white text-sm px-5 py-2.5 rounded-lg hover:bg-wine-light transition font-medium">
+        <i class="fa-solid fa-phone mr-1"></i> Programare
+      </a>
+      <button id="menuBtn" class="md:hidden text-warm text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-parchment border-t border-ink/5 px-6 py-4 space-y-3">
+      <a href="#despre" class="block text-warm">Despre</a>
+      <a href="#servicii" class="block text-warm">Servicii</a>
+      <a href="#recenzii" class="block text-warm">Recenzii</a>
+      <a href="#contact" class="block text-warm">Contact</a>
+      <a href="tel:+40732146690" class="block bg-wine text-white text-center py-3 rounded-lg font-medium mt-2">Sun&#259; acum</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center parchment-texture pt-20">
+    <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+      <div data-aos="fade-right">
+        <div class="copper-line-short mb-6"></div>
+        <p class="text-copper tracking-widest uppercase text-xs font-bold mb-3">Notar Public &middot; Bucure&#537;ti</p>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
+          Birou Notarial<br><span class="text-wine">Tinta Alina Mihaela</span>
+        </h1>
+        <p class="text-warm text-lg mb-2">Strada Tunari 83, Sector 2</p>
+        <div class="flex items-center gap-2 text-copper mb-8">
+          <i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star-half-stroke text-sm"></i>
+          <span class="text-warm text-sm ml-1">4.6/5 din 58 recenzii</span>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:+40732146690" class="bg-wine text-white font-medium px-8 py-3.5 rounded-lg text-center hover:bg-wine-light transition wine-glow">
+            <i class="fa-solid fa-phone mr-2"></i> 0732 146 690
+          </a>
+          <a href="mailto:tinta_alina@yahoo.com" class="border-2 border-copper/30 text-copper font-medium px-8 py-3.5 rounded-lg text-center hover:border-copper transition">
+            <i class="fa-solid fa-envelope mr-2"></i> Email
+          </a>
+        </div>
+      </div>
+      <div data-aos="fade-left" class="hidden md:block">
+        <div class="bg-white rounded-2xl p-10 shadow-lg text-center">
+          <i class="fa-solid fa-scale-balanced text-wine text-5xl mb-6"></i>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-3 text-left"><i class="fa-solid fa-check-circle text-copper"></i><span class="text-ink/70">Programare online disponibil&#259;</span></div>
+            <div class="flex items-center gap-3 text-left"><i class="fa-solid fa-check-circle text-copper"></i><span class="text-ink/70">Programare obligatorie</span></div>
+            <div class="flex items-center gap-3 text-left"><i class="fa-solid fa-check-circle text-copper"></i><span class="text-ink/70">58 recenzii Google</span></div>
+            <div class="flex items-center gap-3 text-left"><i class="fa-solid fa-check-circle text-copper"></i><span class="text-ink/70">Sector 2, Bucure&#537;ti</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section id="despre" class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
+      <div class="copper-line mb-10"></div>
+      <h2 class="font-heading text-3xl md:text-4xl mb-8">Despre biroul nostru</h2>
+      <p class="text-warm leading-relaxed mb-6">
+        Biroul Notarial Tinta Alina Mihaela func&#539;ioneaz&#259; pe Strada Tunari 83, &#238;n Sectorul 2 din Bucure&#537;ti. Oferim o gam&#259; complet&#259; de servicii notariale, cu accent pe profesionalism, claritate &#537;i respect fa&#539;&#259; de timpul clien&#539;ilor.
+      </p>
+      <p class="text-warm leading-relaxed mb-6">
+        Echipa noastr&#259; — inclusiv Cristina Mihalache, apreciat&#259; constant de clien&#539;i pentru modul clar &#537;i accesibil &#238;n care explic&#259; fiecare pas — v&#259; st&#259; la dispozi&#539;ie de luni p&#226;n&#259; vineri, cu programare.
+      </p>
+      <p class="text-warm leading-relaxed">
+        Programarea online este disponibil&#259;, iar programarea este obligatorie pentru a v&#259; asigura c&#259; primi&#539;i aten&#539;ia cuvenit&#259; f&#259;r&#259; timpi de a&#537;teptare.
+      </p>
+      <div class="copper-line mt-10"></div>
+    </div>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="py-24 bg-parchment parchment-texture">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="copper-line-short mx-auto mb-6"></div>
+        <h2 class="font-heading text-3xl md:text-4xl">Servicii notariale</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-aos="fade-up" data-aos-delay="0" class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition border-l-4 border-wine">
+          <i class="fa-solid fa-file-signature text-wine text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-xl mb-3">Autentific&#259;ri</h3>
+          <p class="text-warm text-sm leading-relaxed">Autentificarea contractelor, procurilor, declara&#539;iilor &#537;i altor acte juridice cu valoare legal&#259;.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition border-l-4 border-copper">
+          <i class="fa-solid fa-house text-copper text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-xl mb-3">Tranzac&#539;ii imobiliare</h3>
+          <p class="text-warm text-sm leading-relaxed">V&#226;nzare-cump&#259;rare, dona&#539;ie, schimb, &#238;ntre&#539;inere. Documenta&#539;ie complet&#259; &#537;i verificare cadastral&#259;.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition border-l-4 border-wine">
+          <i class="fa-solid fa-landmark text-wine text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-xl mb-3">Succesiuni</h3>
+          <p class="text-warm text-sm leading-relaxed">Dezb&#259;terea mo&#537;tenirilor, certificate de mo&#537;tenitor, partaj succesoral, ie&#537;ire din indiviziune.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition border-l-4 border-copper">
+          <i class="fa-solid fa-file-contract text-copper text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-xl mb-3">Contracte</h3>
+          <p class="text-warm text-sm leading-relaxed">Redactare &#537;i autentificare contracte civile, comerciale, de &#238;mprumut, rent&#259; viager&#259;.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition border-l-4 border-wine">
+          <i class="fa-solid fa-certificate text-wine text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-xl mb-3">Legalizare</h3>
+          <p class="text-warm text-sm leading-relaxed">Legalizare semn&#259;turi, copii conforme cu originalul, apostile &#537;i supralegaliz&#259;ri.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="500" class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition border-l-4 border-copper">
+          <i class="fa-solid fa-comments text-copper text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-xl mb-3">Consultan&#539;&#259;</h3>
+          <p class="text-warm text-sm leading-relaxed">Consultan&#539;&#259; notarial&#259; gratuit&#259; &#238;nainte de &#238;ncheierea oric&#259;rui act, pentru claritate total&#259;.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENZII -->
+  <section id="recenzii" class="py-24 bg-ink text-parchment">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="font-heading text-3xl md:text-4xl mb-4">Ce spun clien&#539;ii</h2>
+        <div class="flex items-center justify-center gap-2 text-copper">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          <span class="text-warm text-sm ml-2">4.6/5 din 58 recenzii</span>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <div data-aos="fade-up" class="border-l-2 border-copper pl-8 py-2">
+          <div class="flex gap-1 text-copper text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-parchment/80 italic leading-relaxed mb-3">&laquo;V&#259; recomand s&#259; veni&#539;i aici cu &#238;ncredere, sunt serio&#537;i, promp&#539;i, profesioni&#537;ti. Lucrez cu doamnele de aici de ani de zile, tot felul de spe&#539;e &#537;i totul a mers mereu f&#259;r&#259; niciun fel de probleme.&raquo;</p>
+          <p class="text-copper font-medium text-sm">Simona Iliescu</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="border-l-2 border-copper pl-8 py-2">
+          <div class="flex gap-1 text-copper text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-parchment/80 italic leading-relaxed mb-3">&laquo;O recomand pe Cristina Mihalache de la ei. &#206;n&#539;elege problemele, &#238;&#539;i explic&#259; pe &#238;n&#539;elesul t&#259;u pa&#537;ii, face totul clar &#537;i facil pentru client &#537;i e foarte nice.&raquo;</p>
+          <p class="text-copper font-medium text-sm">Gabriel Amzulescu</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="border-l-2 border-copper pl-8 py-2">
+          <div class="flex gap-1 text-copper text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-parchment/80 italic leading-relaxed mb-3">&laquo;Best in town! Staff was very pleasant and professional, unlike other places.&raquo;</p>
+          <p class="text-copper font-medium text-sm">Ramona Saleh</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="py-20 bg-parchment-dark">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        <div>
+          <div class="copper-line-short mb-6"></div>
+          <h2 class="font-heading text-3xl mb-6">Program</h2>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between py-2 border-b border-ink/5"><span class="text-warm">Luni — Joi</span><span class="font-medium">09:00 — 17:00</span></div>
+              <div class="flex justify-between py-2 border-b border-ink/5"><span class="text-warm">Vineri</span><span class="font-medium">09:00 — 15:00</span></div>
+              <div class="flex justify-between py-2"><span class="text-warm">S&#226;mb&#259;t&#259; — Duminic&#259;</span><span class="text-warm/50">&#206;nchis</span></div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-ink/5 flex items-center gap-2 text-xs text-wine">
+              <i class="fa-solid fa-calendar-check"></i> Programarea este obligatorie
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="copper-line-short mb-6"></div>
+          <h2 class="font-heading text-3xl mb-6">Loca&#539;ie</h2>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="flex items-start gap-3 mb-4">
+              <i class="fa-solid fa-map-pin text-wine mt-1"></i>
+              <div>
+                <p class="font-medium">Strada Tunari 83</p>
+                <p class="text-warm text-sm">Sector 2, Bucure&#537;ti</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 mb-4">
+              <i class="fa-solid fa-laptop text-copper mt-1"></i>
+              <div>
+                <p class="text-warm text-sm">Programare online disponibil&#259;</p>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=44.452373,26.105099" target="_blank" class="inline-flex items-center gap-2 text-wine text-sm hover:underline mt-2">
+              <i class="fa-solid fa-external-link"></i> Deschide &#238;n Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-wine text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+      <i class="fa-solid fa-stamp text-copper-light text-3xl mb-6"></i>
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Contacta&#539;i-ne</h2>
+      <p class="text-white/60 mb-10 max-w-lg mx-auto">Suna&#539;i pentru programare sau trimite&#539;i un email. R&#259;spundem &#238;n cel mai scurt timp posibil.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+40732146690" class="bg-white text-wine font-medium px-10 py-4 rounded-lg hover:bg-parchment transition text-lg">
+          <i class="fa-solid fa-phone mr-2"></i> 0732 146 690
+        </a>
+        <a href="mailto:tinta_alina@yahoo.com" class="border border-white/30 text-white px-10 py-4 rounded-lg hover:border-white/60 transition">
+          <i class="fa-solid fa-envelope mr-2"></i> tinta_alina@yahoo.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-warm/60 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-stamp text-wine text-sm"></i>
+        <span class="font-heading text-parchment">Notar Tinta Alina Mihaela</span>
+      </div>
+      <div class="text-sm text-center">
+        Str. Tunari 83, Sector 2, Bucure&#537;ti &middot;
+        <a href="tel:+40732146690" class="text-copper hover:underline">0732 146 690</a> &middot;
+        <a href="mailto:tinta_alina@yahoo.com" class="text-copper hover:underline">Email</a>
+      </div>
+      <span class="text-xs text-warm/30">&copy; 2026 Birou Notarial Tinta Alina Mihaela</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY -->
+  <div class="fixed bottom-0 left-0 right-0 md:hidden bg-parchment/95 backdrop-blur border-t border-ink/10 p-3 z-50 flex gap-2">
+    <a href="tel:+40732146690" class="flex-1 flex items-center justify-center gap-2 bg-wine text-white font-medium py-3 rounded-lg">
+      <i class="fa-solid fa-phone"></i> Sun&#259;
+    </a>
+    <a href="mailto:tinta_alina@yahoo.com" class="flex-1 flex items-center justify-center gap-2 border border-copper/30 text-copper py-3 rounded-lg">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 80 });
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav-scroll', window.scrollY > 40), { passive: true });
+    const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+    mb.addEventListener('click', () => { mm.classList.toggle('hidden'); mb.innerHTML = mm.classList.contains('hidden') ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>'; });
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); mb.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+  </script>
+</body>
+</html>

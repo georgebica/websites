@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Hope Non-Stop Craiova | Urgen&#539;e Veterinare 24/7 &middot; Dr. Alex Cernea</title>
+<meta name="description" content="One Hope Non-Stop &ndash; clinic&#259; veterinar&#259; de urgen&#539;&#259; &#238;n Craiova, deschis&#259; 24/7. Dr. Alex Cernea &#537;i echipa sa intervin &#238;n situa&#539;ii critice. Bd. Gheorghe Chi&#539;u 53b. Apela&#539;i 0769 656 889.">
+<meta name="keywords" content="urgen&#539;e veterinare Craiova, veterinar non stop Craiova, clinic&#259; veterinar&#259; 24/7 Dolj, Dr Cernea urgen&#539;e, otr&#259;viri c&#226;ini pisici">
+<meta name="robots" content="index, follow">
+<meta name="author" content="One Hope Non-Stop">
+<meta property="og:type" content="website">
+<meta property="og:title" content="One Hope Non-Stop | Urgen&#539;e Veterinare 24/7 Craiova">
+<meta property="og:description" content="Clinic&#259; veterinar&#259; non-stop &#238;n Craiova. Interven&#539;ii 24/7 pentru otr&#259;viri, traume, urgen&#539;e post-opera&#539;ie.">
+<meta property="og:locale" content="ro_RO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One Hope Non-Stop &middot; Urgen&#539;e Veterinare Craiova">
+<meta name="twitter:description" content="24/7. Suna&#539;i 0769 656 889.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['Space Grotesk', 'sans-serif'],
+        'body': ['IBM Plex Sans', 'sans-serif'],
+        'mono': ['IBM Plex Mono', 'monospace']
+      },
+      colors: {
+        'er-red': '#E63946',
+        'er-dark': '#A71D2A',
+        'er-pink': '#FFE1E4',
+        'clinic-ink': '#0A1120',
+        'clinic-slate': '#1A2435',
+        'clinic-steel': '#475569',
+        'clinic-white': '#FDFDFD',
+        'clinic-bg': '#F4F6FA',
+        'signal-green': '#10B981',
+        'signal-amber': '#F59E0B'
+      }
+    }
+  }
+}
+</script>
+<style>
+  body{font-family:'IBM Plex Sans',sans-serif;background:#F4F6FA;color:#0A1120}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .live-dot{width:10px;height:10px;background:#10B981;border-radius:50%;display:inline-block;animation:blink 1.5s ease-in-out infinite;box-shadow:0 0 0 0 rgba(16,185,129,0.6)}
+  @keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(16,185,129,0.5)}50%{opacity:.6;box-shadow:0 0 0 10px rgba(16,185,129,0)}}
+  .er-gradient{background:
+    radial-gradient(circle at 20% 10%, rgba(230,57,70,0.15), transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(167,29,42,0.1), transparent 50%),
+    linear-gradient(180deg,#0A1120,#1A2435)}
+  .grid-bg{background-image:
+    linear-gradient(rgba(230,57,70,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(230,57,70,0.04) 1px,transparent 1px);
+    background-size:40px 40px}
+  .card-er{background:#FDFDFD;border:1px solid #E2E8F0;border-radius:4px;transition:all .2s}
+  .card-er:hover{border-color:#E63946;box-shadow:0 10px 30px -10px rgba(230,57,70,0.15)}
+  .btn-er{background:#E63946;color:#FDFDFD;font-weight:600;transition:all .2s;border:1px solid #E63946}
+  .btn-er:hover{background:#A71D2A;border-color:#A71D2A}
+  .btn-ghost-er{border:1px solid #FDFDFD;color:#FDFDFD;transition:all .2s}
+  .btn-ghost-er:hover{background:#FDFDFD;color:#0A1120}
+  .chip-clinic{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .7rem;background:rgba(230,57,70,0.1);color:#E63946;border:1px solid rgba(230,57,70,0.3);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .chip-green{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .7rem;background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .number-large{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(4rem,9vw,8rem);line-height:.9;letter-spacing:-.05em}
+  .triage-row{display:grid;grid-template-columns:50px 1fr auto;gap:1.5rem;align-items:center;padding:1.25rem 0;border-bottom:1px solid #E2E8F0}
+  .triage-row:last-child{border-bottom:none}
+  .priority-high{background:#E63946;color:#FFF}
+  .priority-med{background:#F59E0B;color:#FFF}
+  .priority-low{background:#10B981;color:#FFF}
+  .stamp-alert{background:#E63946;color:#FDFDFD;padding:.35rem 1rem;font-weight:700;letter-spacing:.2em;font-size:.75rem;display:inline-block;text-transform:uppercase;font-family:'Space Grotesk',sans-serif}
+  .divider-er{height:1px;background:linear-gradient(90deg,transparent,#E63946,transparent)}
+  .clock-display{background:#0A1120;color:#10B981;font-family:'IBM Plex Mono',monospace;padding:1rem;border:1px solid rgba(16,185,129,0.3);font-size:1.2rem;letter-spacing:.2em}
+  .pulse-ring{position:relative}
+  .pulse-ring::before{content:'';position:absolute;inset:-6px;border:2px solid #E63946;border-radius:inherit;animation:ring 2s ease-out infinite;opacity:0}
+  @keyframes ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.4);opacity:0}}
+  @media (max-width:768px){.pb-safe{padding-bottom:5rem}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"EmergencyService",
+  "name":"One Hope Non-Stop - Dr. Alex Cernea",
+  "description":"Clinic&#259; veterinar&#259; de urgen&#539;&#259; 24/7 &#238;n Craiova. Interven&#539;ii rapide pentru otr&#259;viri, traume, urgen&#539;e post-opera&#539;ie.",
+  "telephone":"+40769656889",
+  "address":{"@type":"PostalAddress","streetAddress":"Bulevardul Gheorghe Chi&#539;u 53B","addressLocality":"Craiova","postalCode":"200541","addressRegion":"Dolj","addressCountry":"RO"},
+  "geo":{"@type":"GeoCoordinates","latitude":44.308471,"longitude":23.804512},
+  "openingHours":"Mo-Su 00:00-24:00",
+  "priceRange":"$$",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.1","reviewCount":"140"}
+}
+</script>
+</head>
+<body class="pb-safe">
+
+<div class="bg-er-red text-clinic-white py-2 text-center text-xs md:text-sm font-semibold tracking-wider">
+  <span class="live-dot mr-2"></span>CLINIC&#258; DESCHIS&#258; &middot; URGEN&#538;E NON-STOP &middot; SUNA&#538;I <a href="tel:0769656889" class="underline ml-1">0769 656 889</a>
+</div>
+
+<header class="bg-clinic-ink text-clinic-white sticky top-0 z-50 border-b border-er-red/30">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-11 h-11 bg-er-red flex items-center justify-center pulse-ring">
+        <i class="fa-solid fa-plus text-clinic-white text-xl"></i>
+      </div>
+      <div>
+        <div class="font-display font-bold text-clinic-white text-lg leading-none">ONE HOPE <span class="text-er-red">NON-STOP</span></div>
+        <div class="text-[.65rem] tracking-[.25em] text-clinic-white/50 mt-1">URGEN&#538;E VETERINARE 24/7</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
+      <a href="#triage" class="hover:text-er-red">Triere</a>
+      <a href="#servicii" class="hover:text-er-red">Servicii urgen&#539;&#259;</a>
+      <a href="#echipa" class="hover:text-er-red">Echipa</a>
+      <a href="#instructiuni" class="hover:text-er-red">Instruc&#539;iuni</a>
+      <a href="#contact" class="hover:text-er-red">Contact</a>
+    </nav>
+    <a href="tel:0769656889" class="btn-er px-5 py-2.5 text-sm rounded-sm hidden sm:inline-flex items-center">
+      <i class="fa-solid fa-phone mr-2"></i>URGEN&#538;&#258;
+    </a>
+  </div>
+</header>
+
+<section class="er-gradient grid-bg pt-20 pb-24 px-6 text-clinic-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+    <div class="md:col-span-7" data-aos="fade-right">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="chip-clinic"><span class="live-dot"></span>STATUS: ACTIV</span>
+        <span class="chip-green">MEDIC DE GARD&#258;</span>
+      </div>
+      <h1 class="font-display font-bold text-5xl md:text-7xl leading-[0.95]">
+        C&#226;nd fiecare<br>
+        <span class="text-er-red">minut conteaz&#259;</span>,<br>
+        u&#537;ile noastre<br>
+        sunt deschise.
+      </h1>
+      <div class="divider-er my-8"></div>
+      <p class="text-lg text-clinic-white/70 max-w-2xl leading-relaxed">
+        One Hope Non-Stop este clinica de urgen&#539;&#259; veterinar&#259; din Craiova, &#238;n care Dr. Alex Cernea &#537;i echipa sa r&#259;spund la apeluri 24 de ore pe zi, 7 zile pe s&#259;pt&#259;m&#226;n&#259;. Traume, otr&#259;viri, complica&#539;ii post-operatorii &ndash; r&#259;m&#226;nem deschi&#537;i c&#226;nd alte cabinete &#238;nchid.
+      </p>
+      <div class="flex flex-wrap gap-4 mt-10">
+        <a href="tel:0769656889" class="btn-er px-8 py-4 rounded-sm inline-flex items-center text-sm uppercase tracking-wider">
+          <i class="fa-solid fa-phone-volume mr-3"></i>APEL URGEN&#538;&#258;
+        </a>
+        <a href="#triage" class="btn-ghost-er px-8 py-4 rounded-sm inline-flex items-center text-sm uppercase tracking-wider">
+          Ghid de triaj <i class="fa-solid fa-arrow-right ml-3"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mt-12 max-w-xl">
+        <div>
+          <div class="number-large text-er-red">24</div>
+          <div class="text-xs uppercase tracking-widest text-clinic-white/50 mt-2 mono">/ 7 disponibili</div>
+        </div>
+        <div>
+          <div class="number-large text-clinic-white">140<span class="text-2xl text-clinic-white/60">+</span></div>
+          <div class="text-xs uppercase tracking-widest text-clinic-white/50 mt-2 mono">recenzii Google</div>
+        </div>
+        <div>
+          <div class="number-large text-clinic-white">4.1</div>
+          <div class="text-xs uppercase tracking-widest text-clinic-white/50 mt-2 mono">rating mediu</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:col-span-5" data-aos="fade-left">
+      <div class="bg-clinic-slate border border-er-red/30 p-8 rounded-sm">
+        <div class="flex items-center justify-between mb-5">
+          <span class="stamp-alert">STATUS</span>
+          <span class="mono text-xs text-clinic-white/50">&#538;INTA &middot; CRAIOVA</span>
+        </div>
+        <div class="clock-display mb-5" id="liveclock">--:--:--</div>
+
+        <div class="space-y-3">
+          <div class="flex items-center justify-between py-2 border-b border-clinic-white/10">
+            <span class="text-sm text-clinic-white/70 flex items-center gap-2"><span class="live-dot"></span>Medic de gard&#259;</span>
+            <span class="chip-green">DISPONIBIL</span>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-clinic-white/10">
+            <span class="text-sm text-clinic-white/70 flex items-center gap-2"><i class="fa-solid fa-bed-pulse text-er-red"></i>Box urgen&#539;e</span>
+            <span class="mono text-sm text-clinic-white">2 / 3 libere</span>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-clinic-white/10">
+            <span class="text-sm text-clinic-white/70 flex items-center gap-2"><i class="fa-solid fa-vials text-er-red"></i>Laborator rapid</span>
+            <span class="chip-green">OPERA&#538;IONAL</span>
+          </div>
+          <div class="flex items-center justify-between py-2">
+            <span class="text-sm text-clinic-white/70 flex items-center gap-2"><i class="fa-solid fa-droplet text-er-red"></i>Banc&#259; de s&#226;nge</span>
+            <span class="chip-green">STOC OK</span>
+          </div>
+        </div>
+
+        <a href="tel:0769656889" class="btn-er w-full mt-6 py-4 rounded-sm text-center block uppercase tracking-wider text-sm font-bold">
+          <i class="fa-solid fa-phone-volume mr-2"></i>0769 656 889
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="triage" class="py-24 px-6 bg-clinic-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <span class="chip-clinic mb-4">Ghid de triaj</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-clinic-ink mt-4">C&#226;nd s&#259; suna&#539;i <span class="text-er-red">imediat</span>.</h2>
+      <p class="text-clinic-steel mt-4 max-w-2xl mx-auto">Tabelul de mai jos este un ghid orientativ. &#206;n caz de dubiu, apela&#539;i oricum &ndash; mai bine verific&#259;m o alarm&#259; fals&#259; dec&#226;t s&#259; pierdem o urgen&#539;&#259; real&#259;.</p>
+    </div>
+
+    <div class="card-er p-2 md:p-8" data-aos="fade-up">
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-high rounded-sm flex items-center justify-center font-bold">01</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">Otr&#259;vire</div>
+          <div class="text-sm text-clinic-steel">Momeli suspecte, produse menajere, rodenticide, antigel</div>
+        </div>
+        <span class="chip-clinic">PRIORITATE 1</span>
+      </div>
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-high rounded-sm flex items-center justify-center font-bold">02</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">Traume majore</div>
+          <div class="text-sm text-clinic-steel">Accidente rutiere, c&#259;deri de la &#238;n&#259;l&#539;ime, mu&#537;c&#259;turi profunde</div>
+        </div>
+        <span class="chip-clinic">PRIORITATE 1</span>
+      </div>
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-high rounded-sm flex items-center justify-center font-bold">03</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">Respira&#539;ie dificil&#259; / sufocare</div>
+          <div class="text-sm text-clinic-steel">Corpi str&#259;ini &#238;n esofag, traheit&#259;, edem laringian</div>
+        </div>
+        <span class="chip-clinic">PRIORITATE 1</span>
+      </div>
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-med rounded-sm flex items-center justify-center font-bold">04</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">Convulsii / lipotimie</div>
+          <div class="text-sm text-clinic-steel">Episoade care se repet&#259;, pierderi de con&#537;tien&#539;&#259;, pareze</div>
+        </div>
+        <span style="background:#F59E0B;color:#fff;padding:.3rem .7rem;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">PRIORITATE 2</span>
+      </div>
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-med rounded-sm flex items-center justify-center font-bold">05</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">Hemoragie abundent&#259;</div>
+          <div class="text-sm text-clinic-steel">Plag&#259; care nu se opre&#537;te, epistaxis sever, hematemez&#259;</div>
+        </div>
+        <span style="background:#F59E0B;color:#fff;padding:.3rem .7rem;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">PRIORITATE 2</span>
+      </div>
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-med rounded-sm flex items-center justify-center font-bold">06</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">F&#259;tare distocic&#259;</div>
+          <div class="text-sm text-clinic-steel">Contrac&#539;ii prelungite f&#259;r&#259; expulzie, pui bloca&#539;i</div>
+        </div>
+        <span style="background:#F59E0B;color:#fff;padding:.3rem .7rem;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">PRIORITATE 2</span>
+      </div>
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-low rounded-sm flex items-center justify-center font-bold">07</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">V&#259;rs&#259;turi / diaree</div>
+          <div class="text-sm text-clinic-steel">Dac&#259; persist&#259; peste 24h sau prezint&#259; s&#226;nge</div>
+        </div>
+        <span style="background:#10B981;color:#fff;padding:.3rem .7rem;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">PRIORITATE 3</span>
+      </div>
+      <div class="triage-row">
+        <div class="w-12 h-12 priority-low rounded-sm flex items-center justify-center font-bold">08</div>
+        <div>
+          <div class="font-display font-bold text-clinic-ink text-lg">Febr&#259; neexplicat&#259;</div>
+          <div class="text-sm text-clinic-steel">Apatie, refuz de m&#226;ncare 24h+</div>
+        </div>
+        <span style="background:#10B981;color:#fff;padding:.3rem .7rem;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase">PRIORITATE 3</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-24 px-6 bg-clinic-bg">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-10 items-end mb-14">
+      <div data-aos="fade-right">
+        <span class="chip-clinic mb-3">Servicii urgen&#539;&#259;</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-clinic-ink mt-4">Ce putem <span class="text-er-red">rezolva</span> <br>&#238;n camera de gard&#259;.</h2>
+      </div>
+      <p class="text-clinic-steel leading-relaxed" data-aos="fade-left">Clinica este echipat&#259; pentru interven&#539;ii chirurgicale de urgen&#539;&#259;, stabilizare &#537;i monitorizare. Pentru cazuri care necesit&#259; echipamente speciale (RMN, oncologie), orient&#259;m cazul &#537;i transfer&#259;m &#238;n siguran&#539;&#259;.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="card-er p-6" data-aos="fade-up">
+        <i class="fa-solid fa-syringe text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Stabilizare</h3>
+        <p class="text-sm text-clinic-steel">Fluide, oxigen, terapie &#537;oc, control durere.</p>
+      </div>
+      <div class="card-er p-6" data-aos="fade-up" data-aos-delay="50">
+        <i class="fa-solid fa-hand-holding-medical text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Chirurgie de urgen&#539;&#259;</h3>
+        <p class="text-sm text-clinic-steel">Piometru, torsiune gastric&#259;, fracturi deschise.</p>
+      </div>
+      <div class="card-er p-6" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-vials text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Analize rapide</h3>
+        <p class="text-sm text-clinic-steel">Babesioz&#259;, parvoviroz&#259;, biochimie, hemoleucogram&#259;.</p>
+      </div>
+      <div class="card-er p-6" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-droplet text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Transfuzii</h3>
+        <p class="text-sm text-clinic-steel">Banc&#259; de s&#226;nge canin&#259; proprie, administrare &#238;n minute.</p>
+      </div>
+      <div class="card-er p-6" data-aos="fade-up">
+        <i class="fa-solid fa-bed-pulse text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Spitalizare</h3>
+        <p class="text-sm text-clinic-steel">Box-uri supravegheate, monitorizare vitale 24h.</p>
+      </div>
+      <div class="card-er p-6" data-aos="fade-up" data-aos-delay="50">
+        <i class="fa-solid fa-capsules text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Farmacie intern&#259;</h3>
+        <p class="text-sm text-clinic-steel">Antidoturi, antibiotice injectabile, sedare, analgezice.</p>
+      </div>
+      <div class="card-er p-6" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-dna text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Obstetric&#259;</h3>
+        <p class="text-sm text-clinic-steel">Ceza&#259;rian&#259; de urgen&#539;&#259;, asisten&#539;&#259; la f&#259;tare distocic&#259;.</p>
+      </div>
+      <div class="card-er p-6" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-bone text-er-red text-2xl mb-4"></i>
+        <h3 class="font-display font-bold text-clinic-ink mb-2">Radiologie</h3>
+        <p class="text-sm text-clinic-steel">Radiografii pentru fracturi, corpi str&#259;ini, torace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instructiuni" class="py-24 px-6 bg-clinic-ink text-clinic-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-4" data-aos="fade-right">
+        <span class="chip-clinic mb-3">Instruc&#539;iuni clien&#539;i</span>
+        <h2 class="text-4xl font-bold mt-4">&#206;nainte de a ajunge aici.</h2>
+        <div class="divider-er my-6"></div>
+        <p class="text-clinic-white/60 leading-relaxed">
+          Un apel de 30 de secunde cu echipa de gard&#259; poate schimba prognosticul. V&#259; spunem ce s&#259; face&#539;i pe drum &#537;i cum transport&#259;m &#238;n siguran&#539;&#259; animalul.
+        </p>
+      </div>
+      <div class="md:col-span-8 grid md:grid-cols-2 gap-5" data-aos="fade-left">
+        <div class="bg-clinic-slate p-6 border-l-2 border-er-red">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="mono text-er-red">[01]</span>
+            <h4 class="font-display font-bold">Suna&#539;i &#238;nt&#226;i</h4>
+          </div>
+          <p class="text-sm text-clinic-white/70">Descrie&#539;i simptomele &#238;n 1-2 fraze. Medicul de gard&#259; v&#259; spune dac&#259; interven&#539;ia imediat&#259; este necesar&#259;.</p>
+        </div>
+        <div class="bg-clinic-slate p-6 border-l-2 border-er-red">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="mono text-er-red">[02]</span>
+            <h4 class="font-display font-bold">Transport &#238;n siguran&#539;&#259;</h4>
+          </div>
+          <p class="text-sm text-clinic-white/70">Cu&#537;c&#259; pentru pisici, les&#259; pentru c&#226;ini mari. Acoperi&#539;i cu un prosop &#238;n caz de &#537;oc.</p>
+        </div>
+        <div class="bg-clinic-slate p-6 border-l-2 border-er-red">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="mono text-er-red">[03]</span>
+            <h4 class="font-display font-bold">Nu induce&#539;i voma acas&#259;</h4>
+          </div>
+          <p class="text-sm text-clinic-white/70">&#206;n caz de otr&#259;vire, induc&#539;ia vomei depinde de substan&#539;&#259;. Ave&#539;i &#238;ncredere &#238;n indica&#539;iile telefonice.</p>
+        </div>
+        <div class="bg-clinic-slate p-6 border-l-2 border-er-red">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="mono text-er-red">[04]</span>
+            <h4 class="font-display font-bold">Aduce&#539;i mostra</h4>
+          </div>
+          <p class="text-sm text-clinic-white/70">Dac&#259; e posibil, aduce&#539;i ambalajul produsului ingerat sau o fotografie a plantei/insectei.</p>
+        </div>
+        <div class="bg-clinic-slate p-6 border-l-2 border-er-red">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="mono text-er-red">[05]</span>
+            <h4 class="font-display font-bold">Date medicale</h4>
+          </div>
+          <p class="text-sm text-clinic-white/70">Lua&#539;i carnetul de s&#259;n&#259;tate &#537;i lista medicamentelor administrate recent.</p>
+        </div>
+        <div class="bg-clinic-slate p-6 border-l-2 border-er-red">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="mono text-er-red">[06]</span>
+            <h4 class="font-display font-bold">Nu hr&#259;ni&#539;i</h4>
+          </div>
+          <p class="text-sm text-clinic-white/70">Dac&#259; este posibil s&#259; necesite anestezie sau chirurgie, nu oferi&#539;i ap&#259; sau m&#226;ncare.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="echipa" class="py-24 px-6 bg-clinic-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <span class="chip-clinic mb-3">Echipa</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-clinic-ink mt-4">Medici cu <span class="text-er-red">experien&#539;&#259; &#238;n urgen&#539;&#259;</span>.</h2>
+      <div class="divider-er my-6"></div>
+      <p class="text-clinic-steel leading-relaxed mb-4">
+        Clinica este condus&#259; de Dr. Alex Cernea, fondatorul One Hope. Pentru a asigura disponibilitate non-stop, clinica opereaz&#259; cu ture medicale &#537;i tehnicieni veterinari care acoper&#259; &#537;i nop&#539;ile, &#537;i zilele libere.
+      </p>
+      <p class="text-clinic-steel leading-relaxed">
+        Fiecare caz critic este preluat direct de medicul de gard&#259;. Nu transfer&#259;m apeluri &#238;ntre operatori f&#259;r&#259; preg&#259;tire veterinar&#259;.
+      </p>
+    </div>
+    <div data-aos="fade-left" class="grid grid-cols-2 gap-4">
+      <div class="card-er p-6">
+        <i class="fa-solid fa-user-doctor text-er-red text-3xl mb-3"></i>
+        <h3 class="font-display font-bold text-clinic-ink">Medicin&#259; intern&#259;</h3>
+        <p class="text-xs text-clinic-steel mt-2">Diagnostic clinic, tratament &#537;i monitorizare boli sistemice.</p>
+      </div>
+      <div class="card-er p-6">
+        <i class="fa-solid fa-scissors text-er-red text-3xl mb-3"></i>
+        <h3 class="font-display font-bold text-clinic-ink">Chirurgie</h3>
+        <p class="text-xs text-clinic-steel mt-2">Chirurgia &#539;esuturilor moi &#537;i interven&#539;ii de urgen&#539;&#259;.</p>
+      </div>
+      <div class="card-er p-6">
+        <i class="fa-solid fa-heart-pulse text-er-red text-3xl mb-3"></i>
+        <h3 class="font-display font-bold text-clinic-ink">Reanimare</h3>
+        <p class="text-xs text-clinic-steel mt-2">Proceduri ATI pentru pacien&#539;i &#238;n stare critic&#259;.</p>
+      </div>
+      <div class="card-er p-6">
+        <i class="fa-solid fa-microscope text-er-red text-3xl mb-3"></i>
+        <h3 class="font-display font-bold text-clinic-ink">Diagnostic</h3>
+        <p class="text-xs text-clinic-steel mt-2">Laborator, teste rapide, radiografii &#238;n aceea&#537;i vizit&#259;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-24 px-6 bg-clinic-bg">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    <div data-aos="fade-right">
+      <span class="chip-clinic mb-3">Contact 24/7</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-clinic-ink mt-4">Suna&#539;i-ne &#238;n orice <span class="text-er-red">or&#259; a nop&#539;ii</span>.</h2>
+      <div class="divider-er my-6"></div>
+      <p class="text-clinic-steel mb-8">Bd. Gheorghe Chi&#539;u 53b, Craiova. Parcare disponibil&#259; &#238;n fa&#539;a clinicii. Cabinetul este la strad&#259;, intrare dreapta.</p>
+
+      <div class="space-y-4">
+        <a href="tel:0769656889" class="flex items-center gap-4 p-5 bg-clinic-white border-l-4 border-er-red hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-er-red flex items-center justify-center">
+            <i class="fa-solid fa-phone text-clinic-white text-xl"></i>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-widest text-er-red mono">LINIE URGEN&#538;&#258; 24/7</div>
+            <div class="font-display font-bold text-2xl text-clinic-ink">0769 656 889</div>
+          </div>
+        </a>
+        <div class="flex items-center gap-4 p-5 bg-clinic-white border-l-4 border-clinic-ink">
+          <div class="w-12 h-12 bg-clinic-ink flex items-center justify-center">
+            <i class="fa-solid fa-location-dot text-clinic-white text-xl"></i>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-widest text-clinic-steel mono">ADRES&#258;</div>
+            <div class="font-bold text-clinic-ink">Bd. Gheorghe Chi&#539;u 53B, Craiova</div>
+            <div class="text-sm text-clinic-steel">Cod postal 200541, Dolj</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-5 bg-clinic-white border-l-4 border-signal-green">
+          <div class="w-12 h-12 bg-signal-green flex items-center justify-center">
+            <i class="fa-solid fa-clock text-clinic-white text-xl"></i>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-widest text-signal-green mono">PROGRAM CLINIC&#258;</div>
+            <div class="font-bold text-clinic-ink">Consulta&#539;ii L-V 09:00-19:00</div>
+            <div class="text-sm text-clinic-steel">S-D 10:00-13:00 &middot; Urgen&#539;e NON-STOP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <div class="border-4 border-er-red overflow-hidden">
+        <iframe src="https://www.google.com/maps?q=44.308471,23.804512&amp;hl=ro&amp;z=17&amp;output=embed" width="100%" height="480" style="border:0" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-clinic-ink text-clinic-white/60 py-12 px-6 border-t border-er-red/20">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 bg-er-red flex items-center justify-center">
+          <i class="fa-solid fa-plus text-clinic-white text-xl"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-clinic-white">ONE HOPE <span class="text-er-red">NON-STOP</span></div>
+          <div class="text-[.6rem] tracking-[.25em] text-clinic-white/40">URGEN&#538;E VETERINARE 24/7</div>
+        </div>
+      </div>
+      <p class="text-sm">Clinica veterinar&#259; de urgen&#539;&#259; din Craiova, deschis&#259; 24 de ore. Dr. Alex Cernea.</p>
+    </div>
+    <div>
+      <div class="font-display text-clinic-white mb-4 text-sm uppercase tracking-wider">Urgen&#539;e</div>
+      <ul class="space-y-2 text-sm">
+        <li>Otr&#259;viri &amp; intoxica&#539;ii</li>
+        <li>Traume, accidente</li>
+        <li>Convulsii, &#537;oc</li>
+        <li>Distocie / f&#259;tare</li>
+        <li>Transfuzii de s&#226;nge</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-display text-clinic-white mb-4 text-sm uppercase tracking-wider">Contact</div>
+      <ul class="space-y-2 text-sm">
+        <li><i class="fa-solid fa-phone text-er-red mr-2"></i><a href="tel:0769656889">0769 656 889</a></li>
+        <li><i class="fa-solid fa-location-dot text-er-red mr-2"></i>Bd. Gheorghe Chi&#539;u 53b, Craiova</li>
+        <li><i class="fa-solid fa-clock text-er-red mr-2"></i>Urgen&#539;e NON-STOP</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-er-red/15 text-center text-xs text-clinic-white/30 mono">
+    &copy; 2026 One Hope Non-Stop &middot; Dr. Alex Cernea
+  </div>
+</footer>
+
+<div class="fixed bottom-0 inset-x-0 flex md:hidden z-50">
+  <a href="tel:0769656889" class="flex-1 bg-er-red text-clinic-white py-3 text-center text-sm font-bold">
+    <i class="fa-solid fa-phone mr-2"></i>URGEN&#538;&#258;
+  </a>
+  <a href="#contact" class="flex-1 bg-clinic-ink text-clinic-white py-3 text-center text-sm font-bold border-t border-er-red/30">
+    <i class="fa-solid fa-location-dot text-er-red mr-2"></i>Adres&#259;
+  </a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:700,once:true});
+function updateClock(){
+  const d=new Date();
+  const pad=n=>String(n).padStart(2,'0');
+  const el=document.getElementById('liveclock');
+  if(el)el.textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds())+' &middot; CRAIOVA';
+}
+updateClock();setInterval(updateClock,1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colour Design &middot; Designer interior &middot; Craiova</title>
+<meta name="description" content="Colour Design &#8212; studio de design interior &#238;n Craiova. Proiecte reziden&#539;iale &#537;i comerciale: amenaj&#259;ri, consultan&#539;&#259; culori &#537;i selec&#539;ie materiale. Str. &#206;mp&#259;ratul Traian. Tel 0723 072 408.">
+<meta name="keywords" content="design interior Craiova, Colour Design, amenajari apartament Craiova, consultanta interior, designer Dolj">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#206a6a">
+<meta property="og:title" content="Colour Design &middot; Design interior Craiova">
+<meta property="og:description" content="Design interior pentru locuin&#539;e &#537;i spa&#539;ii comerciale, cu accent pe culoare &#537;i materiale.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        teal2: {50:'#e8f4f4',100:'#c4e2e2',200:'#88c7c7',300:'#4cacac',400:'#2e8f8f',500:'#206a6a',600:'#195555',700:'#124040',800:'#0b2a2a',900:'#061414'},
+        coral: {50:'#ffeeea',100:'#fec9bd',200:'#fc9b87',300:'#f96e52',400:'#ee5132',500:'#d13615',600:'#a02810',700:'#6f1c0a',800:'#401005',900:'#1e0702'},
+        blush: '#fce9e3',
+        cream: '#faf6f1',
+        ink: '#1a1410'
+      },
+      fontFamily: {
+        display: ['Syne','system-ui','sans-serif'],
+        sans: ['Inter','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --teal2:#206a6a; --coral:#d13615; --blush:#fce9e3; --cream:#faf6f1; --ink:#1a1410; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--cream); }
+  h1,h2,h3,h4 { font-family:'Syne',system-ui,sans-serif; letter-spacing:-.025em; font-weight:600; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 85% 18%, rgba(249,110,82,.25), transparent 45%),
+      radial-gradient(circle at 12% 85%, rgba(32,106,106,.22), transparent 55%),
+      linear-gradient(172deg,#faf6f1 0%,#fce9e3 50%,#c4e2e2 100%);
+  }
+  .swatch-bg { background-image:radial-gradient(circle at 50% 50%, rgba(32,106,106,.05) 3px, transparent 3px); background-size:32px 32px; }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.5rem 1.1rem; border-radius:999px; font-size:.75rem; letter-spacing:.08em; font-weight:600; }
+  .chip-teal { background:rgba(32,106,106,.12); color:#124040; }
+  .chip-coral { background:rgba(209,54,21,.15); color:#6f1c0a; }
+  .btn-primary { background:var(--teal2); color:var(--cream); padding:1rem 1.9rem; border-radius:999px; font-weight:600; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-primary:hover { background:#124040; transform:translateY(-2px); box-shadow:0 16px 30px -14px rgba(32,106,106,.7); }
+  .btn-coral { background:var(--coral); color:#fff; padding:1rem 1.9rem; border-radius:999px; font-weight:600; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-coral:hover { background:#a02810; transform:translateY(-2px); }
+  .btn-outline { background:transparent; color:var(--teal2); padding:1rem 1.9rem; border-radius:999px; font-weight:600; display:inline-flex; align-items:center; gap:.55rem; border:1.5px solid var(--teal2); transition:all .25s; }
+  .btn-outline:hover { background:var(--teal2); color:var(--cream); }
+  .btn-wa { background:#25d366; color:#fff; padding:1rem 1.6rem; border-radius:999px; font-weight:600; display:inline-flex; align-items:center; gap:.5rem; transition:all .25s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#fff; border:1px solid rgba(32,106,106,.12); border-radius:20px; padding:1.85rem; transition:all .25s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--coral); box-shadow:0 22px 44px -24px rgba(26,20,16,.22); }
+  .service-ico { width:54px; height:54px; border-radius:16px; background:linear-gradient(135deg,#206a6a,#4cacac); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+  .section-label { display:inline-block; font-size:.75rem; letter-spacing:.28em; text-transform:uppercase; color:var(--coral); font-weight:600; }
+  .headline { font-size:clamp(2.1rem,4.8vw,3.75rem); line-height:1.05; color:var(--ink); font-family:'Syne',sans-serif; font-weight:700; letter-spacing:-.035em; }
+  .headline em { font-style:normal; color:var(--teal2); font-weight:600; }
+  .stat-num { font-family:'Syne',sans-serif; font-size:2.85rem; color:var(--teal2); line-height:1; font-weight:700; letter-spacing:-.03em; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px dashed rgba(32,106,106,.2); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:42px; height:42px; border-radius:50%; background:rgba(209,54,21,.15); color:var(--coral); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:var(--ink); font-weight:500; font-size:.9rem; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:50%; bottom:-4px; width:0; height:2px; background:var(--coral); transition:all .25s; border-radius:2px; }
+  .nav-link:hover::after { width:100%; left:0; }
+  .map-wrap { border-radius:20px; overflow:hidden; border:1px solid rgba(32,106,106,.2); box-shadow:0 24px 48px -28px rgba(26,20,16,.25); }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:#fff; border-top:1px solid rgba(32,106,106,.15); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; box-shadow:0 -10px 30px -16px rgba(0,0,0,.25); }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; border-radius:999px; font-weight:600; font-size:.95rem; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+  .palette-dot { width:60px; height:60px; border-radius:50%; box-shadow:0 6px 16px -6px rgba(26,20,16,.3); }
+  .hours-table { width:100%; }
+  .hours-table tr { border-bottom:1px dashed rgba(32,106,106,.15); }
+  .hours-table tr:last-child { border-bottom:none; }
+  .hours-table th { text-align:left; padding:.75rem 0; color:var(--ink); font-family:'Syne',sans-serif; font-weight:500; }
+  .hours-table td { text-align:right; padding:.75rem 0; font-weight:600; color:var(--teal2); }
+  .hours-table .closed { color:var(--coral); font-style:italic; }
+</style>
+</head>
+<body class="bg-cream text-ink">
+
+<!-- TOP BAR -->
+<div class="bg-teal2-700 text-cream/90 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span><i class="fas fa-palette mr-1"></i> Designer interior Craiova</span>
+      <span class="hidden sm:inline"><i class="far fa-clock mr-1"></i> Lun&#259;-Vineri 9-17</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:0723072408" class="hover:text-coral-200"><i class="fas fa-phone mr-1"></i> 0723 072 408</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="bg-cream/95 backdrop-blur sticky top-0 z-50 border-b border-teal2-100">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-full bg-teal2-500 text-cream flex items-center justify-center">
+        <i class="fas fa-palette"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-xl text-teal2-700 font-bold">Colour Design</div>
+        <div class="text-[10px] tracking-[.28em] uppercase text-coral-500 font-semibold">Craiova &middot; Interior</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#proces" class="nav-link">Proces</a>
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+    </nav>
+    <a href="tel:0723072408" class="btn-primary hidden md:inline-flex text-sm"><i class="fas fa-phone"></i> Consultan&#539;&#259;</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-surface swatch-bg">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-6">
+        <span class="chip chip-teal"><i class="fas fa-compass-drafting"></i> Design interior</span>
+        <span class="chip chip-coral"><i class="fas fa-swatchbook"></i> Consultan&#539;&#259; culori</span>
+      </div>
+      <h1 class="headline mb-6">
+        Spa&#539;ii locuite<br>cu <em>culoarea potrivit&#259;</em>,<br>&#238;n Craiova.
+      </h1>
+      <p class="text-lg text-ink/75 leading-relaxed max-w-2xl mb-8">Colour Design este un studio de design interior din Craiova. Crem concepte pentru apartamente, case &#537;i spa&#539;ii comerciale unde culoarea nu e aleas&#259; la &#238;nt&#226;mplare &#8212; ea devine liantul care face ca un spa&#539;iu s&#259; se simt&#259; al dumneavoastr&#259;.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0723072408" class="btn-primary"><i class="fas fa-phone"></i> 0723 072 408</a>
+        <a href="https://wa.me/40723072408" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#servicii" class="btn-outline">Vezi serviciile</a>
+      </div>
+      <div class="flex items-center gap-4 max-w-lg">
+        <div class="palette-dot" style="background:#206a6a;"></div>
+        <div class="palette-dot" style="background:#d13615;"></div>
+        <div class="palette-dot" style="background:#fce9e3;"></div>
+        <div class="palette-dot" style="background:#faf6f1;"></div>
+        <div class="palette-dot" style="background:#1a1410;"></div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-br from-coral-200 to-teal2-200 rounded-[28px] opacity-60 blur-2xl"></div>
+        <div class="relative bg-white rounded-[24px] p-8 border border-teal2-100 shadow-xl">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-teal2-50">
+            <div class="w-12 h-12 rounded-full bg-coral-500 text-white flex items-center justify-center"><i class="fas fa-compass-drafting"></i></div>
+            <div>
+              <h3 class="font-display text-2xl text-teal2-700 font-bold">Prim proiect</h3>
+              <p class="text-xs text-ink/60">Consulta&#539;ie preliminar&#259; la studio</p>
+            </div>
+          </div>
+          <ul class="space-y-1 text-sm">
+            <li class="info-row" style="padding-top:0;">
+              <span class="info-ico"><i class="fas fa-phone"></i></span>
+              <div>
+                <div class="text-[10px] uppercase tracking-[.22em] text-coral-500 font-semibold">Telefon</div>
+                <a href="tel:0723072408" class="font-display text-2xl text-teal2-700 font-bold">0723 072 408</a>
+              </div>
+            </li>
+            <li class="info-row">
+              <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+              <div>
+                <div class="text-[10px] uppercase tracking-[.22em] text-coral-500 font-semibold">Studio</div>
+                <div class="font-medium">Strada &#206;mp&#259;ratul Traian</div>
+                <div class="text-xs text-ink/60">Craiova, Dolj</div>
+              </div>
+            </li>
+            <li class="info-row">
+              <span class="info-ico"><i class="far fa-clock"></i></span>
+              <div>
+                <div class="text-[10px] uppercase tracking-[.22em] text-coral-500 font-semibold">Program</div>
+                <div class="font-medium">Lu &ndash; Vi &middot; 09:00 &ndash; 17:00</div>
+                <div class="text-xs text-ink/60">Weekend &#8211; cu programare</div>
+              </div>
+            </li>
+            <li class="info-row" style="border-bottom:none;">
+              <span class="info-ico"><i class="fas fa-users"></i></span>
+              <div>
+                <div class="text-[10px] uppercase tracking-[.22em] text-coral-500 font-semibold">Pentru</div>
+                <div class="font-medium text-sm">Persoane &#537;i companii</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre studio</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6 font-bold">Design care <em class="text-teal2-600">&#238;ncepe cu poveste</em>, se termin&#259; cu spa&#539;iu.</h2>
+      <p class="text-lg text-ink/75 leading-relaxed mb-4">Colour Design este un studio mic din Craiova, cu specializare &#238;n design interior pentru locuin&#539;e private &#537;i spa&#539;ii comerciale. &#206;ncepem fiecare proiect cu o discu&#539;ie despre cum vreti s&#259; tr&#259;i&#539;i &#238;n casa dumneavoastr&#259; &#537;i care sunt obi&#537;nuin&#539;ele pe care vre&#539;i s&#259; le sus&#539;in&#259;.</p>
+      <p class="text-lg text-ink/75 leading-relaxed">De acolo, construim un concept coerent: paleta cromatic&#259;, mood board, amenajare spa&#539;ial&#259;, selec&#539;ie mobilier &#537;i finisaje. La cerere, asist&#259;m &#537;i execu&#539;ia proiectului p&#226;n&#259; la predare.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-swatchbook"></i></div>
+        <h3 class="font-display text-xl text-teal2-700 font-bold mb-2">Culoare cu sens</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Alegem culorile pe baza luminii naturale, func&#539;iunii camerei &#537;i a personalit&#259;&#539;ii voastre, nu dup&#259; trend-urile Pinterest.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-compass-drafting"></i></div>
+        <h3 class="font-display text-xl text-teal2-700 font-bold mb-2">Spa&#539;iu func&#539;ional</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Amenajare spa&#539;ial&#259; care optimizeaz&#259; fluxurile de circula&#539;ie, depozitare &#537;i lumin&#259;. F&#259;r&#259; piese decorative inutile.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-layer-group"></i></div>
+        <h3 class="font-display text-xl text-teal2-700 font-bold mb-2">Mood board &#537;i planuri</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Primi&#539;i planuri de execu&#539;ie clare, mood board-uri &#537;i rendere realiste &#238;nainte s&#259; comanda&#539;i un singur lucru.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-handshake"></i></div>
+        <h3 class="font-display text-xl text-teal2-700 font-bold mb-2">Rela&#539;ia cu execu&#539;ia</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">La cerere asist&#259;m coordonarea cu echipele de execu&#539;ie &#537;i vendorii de mobilier, ca designul s&#259; ajung&#259; fidel la final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 lg:py-28 bg-teal2-50/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Servicii de design</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4 font-bold">Design interior <em class="text-teal2-600">complet</em></h2>
+      <p class="text-lg text-ink/75 max-w-2xl mx-auto">De la consultan&#539;&#259; simpl&#259; de culori p&#226;n&#259; la amenajare complet&#259; cu plan, mobilier &#537;i supervizare execu&#539;ie.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-home"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Design reziden&#539;ial</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Apartamente &#537;i case, cu plan complet: configuratie, palete, finisaje &#537;i selec&#539;ie mobilier.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-briefcase"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Spa&#539;ii comerciale</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Birouri, magazine, cabinete, s&#259;li de evenimente &#8212; spa&#539;ii care comunica coerent cu brandul.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-swatchbook"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Consultan&#539;&#259; culori</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Pachet punctual pentru o palet&#259; cromatic&#259; coerent&#259; pentru una sau mai multe camere.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-ruler-combined"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Plan spa&#539;ial</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Amenajare configura&#539;ional&#259; a unei camere sau a unui apartament &#238;ntreg, cu op&#539;iuni alternative.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-couch"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Selec&#539;ie mobilier</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Cur&#259;m liste de mobilier &#537;i obiecte decorative &#238;n bugetul &#537;i stilul dorit, cu linkuri directe.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-lightbulb"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Schem&#259; de lumini</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Lumina ambiental&#259;, focalizat&#259; &#537;i decorativ&#259; planificat&#259; pe zone, cu specifica&#539;ii pentru electrician.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Mood board &#537;i redare 3D</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Reprezentari vizuale realiste, ca s&#259; vizualiza&#539;i rezultatul final &#238;nainte de comanda de materiale.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-users-between-lines"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Coordonare execu&#539;ie</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Asist&#259;m coordonarea cu meseria&#537;i, furnizori &#537;i supervizam execu&#539;ia proiectului.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <h3 class="font-display text-xl font-bold text-teal2-700 mb-2">Restilizare existent&#259;</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Pachet pentru casa deja mobilat&#259;: recomand&#259;ri de modific&#259;ri minore cu impact vizual major.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 text-center" data-aos="fade-up">
+      <a href="tel:0723072408" class="btn-coral"><i class="fas fa-phone"></i> Stabilim o consulta&#539;ie</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCES -->
+<section id="proces" class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Cum lucr&#259;m</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 font-bold">De la <em class="text-teal2-600">idee</em> la <em class="text-teal2-600">spa&#539;iu locuit</em></h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-2xl border border-teal2-100" data-aos="fade-up">
+        <div class="w-14 h-14 rounded-full bg-coral-500 text-white flex items-center justify-center font-display text-2xl font-bold mb-4">1</div>
+        <h3 class="font-display text-lg text-teal2-700 font-bold mb-2">Brief</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Discu&#539;ie despre spa&#539;iu, buget, obiceiuri &#537;i stilul preferat. La studio sau direct la locuin&#539;&#259;.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-teal2-100" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-full bg-coral-500 text-white flex items-center justify-center font-display text-2xl font-bold mb-4">2</div>
+        <h3 class="font-display text-lg text-teal2-700 font-bold mb-2">Concept</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Propunere cu palet&#259; cromatic&#259;, mood board &#537;i direc&#539;ii principale. Prezentare cu feedback &#537;i ajust&#259;ri.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-teal2-100" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-14 h-14 rounded-full bg-coral-500 text-white flex items-center justify-center font-display text-2xl font-bold mb-4">3</div>
+        <h3 class="font-display text-lg text-teal2-700 font-bold mb-2">Proiect detaliat</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Planuri de execu&#539;ie, selec&#539;ii complete, bugete pe categorii &#537;i redari 3D pentru vizualizare.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-teal2-100" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-14 h-14 rounded-full bg-coral-500 text-white flex items-center justify-center font-display text-2xl font-bold mb-4">4</div>
+        <h3 class="font-display text-lg text-teal2-700 font-bold mb-2">Execu&#539;ie</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">La cerere, coordon&#259;m furnizorii &#537;i meseria&#537;ii. Supervizam procesul &#537;i am grij&#259; ca detaliile s&#259; ias&#259; corect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program" class="py-20 lg:py-28 bg-teal2-50/60">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Program</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6 font-bold">C&#226;nd ne g&#259;si&#539;i la <em class="text-teal2-600">studio</em></h2>
+      <p class="text-lg text-ink/75 leading-relaxed mb-6">Studio-ul este deschis luni-vineri, dup&#259; orele clasice de birou. Pentru weekend, organiz&#259;m &#238;nt&#226;lniri cu programare &#238;n avans &#8212; c&#226;nd este practic pentru ambele p&#259;r&#539;i.</p>
+      <div class="flex gap-3">
+        <a href="tel:0723072408" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+        <a href="https://wa.me/40723072408" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="bg-white rounded-2xl border border-teal2-100 p-8">
+        <table class="hours-table">
+          <tr><th>Luni</th><td>09:00 &ndash; 17:00</td></tr>
+          <tr><th>Mar&#539;i</th><td>09:00 &ndash; 17:00</td></tr>
+          <tr><th>Miercuri</th><td>09:00 &ndash; 17:00</td></tr>
+          <tr><th>Joi</th><td>09:00 &ndash; 17:00</td></tr>
+          <tr><th>Vineri</th><td>09:00 &ndash; 17:00</td></tr>
+          <tr><th>S&#226;mb&#259;t&#259;</th><td class="closed">Cu programare</td></tr>
+          <tr><th>Duminic&#259;</th><td class="closed">&#206;nchis</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIE -->
+<section id="locatie" class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label">Unde ne g&#259;si&#539;i</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 font-bold">Studio pe <em class="text-teal2-600">&#206;mp&#259;ratul Traian</em>, Craiova</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-white rounded-2xl p-8 border border-teal2-100" data-aos="fade-right">
+        <h3 class="font-display text-2xl text-teal2-700 font-bold mb-5">Studio Colour Design</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-location-dot"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-coral-500 font-semibold">Adres&#259;</div>
+              <div class="font-medium">Strada &#206;mp&#259;ratul Traian</div>
+              <div class="text-sm text-ink/65">Craiova, Dolj</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-coral-500 font-semibold">Telefon</div>
+              <a href="tel:0723072408" class="font-display text-2xl text-teal2-700 font-bold">0723 072 408</a>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-map"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-coral-500 font-semibold">Cod Plus</div>
+              <div class="font-medium">8R82+PP Craiova</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=44.3167789,23.8018359&hl=ro&z=17&output=embed" width="100%" height="500" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Colour Design Craiova"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section class="py-20 lg:py-28 bg-teal2-600 text-cream">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#fc9b87;">Hai s&#259; vorbim</div>
+    <h2 class="text-4xl lg:text-5xl mt-4 mb-5 font-bold">Spa&#539;iul t&#259;u merit&#259; <em style="color:#fce9e3;">personalizare</em></h2>
+    <p class="text-cream/85 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Sun&#259; pentru o prim&#259; discu&#539;ie &#537;i stabilim ora pentru brief-ul proiectului. Tariful depinde de dimensiunea spa&#539;iului &#537;i nivelul de detaliu dorit.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0723072408" class="btn-coral"><i class="fas fa-phone"></i> 0723 072 408</a>
+      <a href="https://wa.me/40723072408" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-cream/75 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 rounded-full bg-coral-500 text-white flex items-center justify-center"><i class="fas fa-palette"></i></div>
+        <div>
+          <div class="font-display text-xl text-cream font-bold">Colour Design</div>
+          <div class="text-[10px] tracking-[.28em] uppercase text-coral-300 font-semibold">Craiova &middot; Interior</div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">Studio de design interior din Craiova cu focus pe culoare, func&#539;iune &#537;i personalitate.</p>
+    </div>
+    <div>
+      <h4 class="font-display text-cream text-lg mb-4 font-bold">Naviga&#539;ie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#despre" class="hover:text-coral-300">Despre</a></li>
+        <li><a href="#servicii" class="hover:text-coral-300">Servicii</a></li>
+        <li><a href="#proces" class="hover:text-coral-300">Proces</a></li>
+        <li><a href="#program" class="hover:text-coral-300">Program</a></li>
+        <li><a href="#locatie" class="hover:text-coral-300">Loca&#539;ie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-cream text-lg mb-4 font-bold">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fas fa-phone text-coral-300 mr-2"></i> <a href="tel:0723072408" class="hover:text-coral-300">0723 072 408</a></li>
+        <li><i class="fas fa-map-marker-alt text-coral-300 mr-2"></i> Str. &#206;mp&#259;ratul Traian, Craiova</li>
+        <li><i class="far fa-clock text-coral-300 mr-2"></i> Lu &ndash; Vi &middot; 09:00 &ndash; 17:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-xs text-cream/50">
+    <div>&copy; 2026 Colour Design. Toate drepturile rezervate.</div>
+    <div>Design interior &middot; Craiova, Dolj</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:0723072408" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40723072408" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InteriorDesignStudio",
+  "name": "Colour Design",
+  "telephone": "+40723072408",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada &#206;mp&#259;ratul Traian",
+    "addressLocality": "Craiova",
+    "addressRegion": "Dolj",
+    "addressCountry": "RO"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":44.3167789,"longitude":23.8018359},
+  "areaServed": "Craiova, Dolj",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"}
+  ]
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+</body>
+</html>

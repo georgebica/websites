@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinica Dentar&#259; Denisa &middot; Stomatologie &icirc;n Slatina</title>
+<meta name="description" content="Clinica Dentar&#259; Denisa &mdash; cabinet stomatologic privat &icirc;n Slatina, Aleea Gr&#259;di&#537;te. Programare la 0768 351 413. Un loc calm, pentru &icirc;ngrijire atent&#259;.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        mint:    '#E2F1EA',
+        mintl:   '#F0F9F4',
+        teal:    '#115E52',
+        teald:   '#06392F',
+        sage:    '#83B2A1',
+        cream:   '#FDFBF5',
+        coral:   '#F07A6A',
+        ink:     '#0D2623',
+        muted:   '#5E7874',
+        line:    '#D5E5DD',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        sans:  ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FDFBF5; color: #0D2623; }
+  body { font-family: "Hanken Grotesk", system-ui, sans-serif; }
+  .serif { font-family: "Instrument Serif", Georgia, serif; letter-spacing: -.01em; line-height: 1.02; }
+  .italic { font-family: "Instrument Serif", Georgia, serif; font-style: italic; }
+
+  .btn-teal {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #115E52;
+    color: #FDFBF5;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: all .25s;
+  }
+  .btn-teal:hover { background: #06392F; transform: translateY(-2px); }
+
+  .btn-coral {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #F07A6A;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: all .25s;
+  }
+  .btn-coral:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .35rem 1rem;
+    background: #E2F1EA;
+    color: #115E52;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+
+  .card-svc {
+    background: #fff;
+    border: 1px solid #D5E5DD;
+    border-radius: 24px;
+    padding: 1.8rem;
+    transition: all .35s;
+  }
+  .card-svc:hover { transform: translateY(-4px); border-color: #115E52; box-shadow: 0 30px 50px -32px rgba(13,38,35,.25); }
+
+  .bubble {
+    width: 58px; height: 58px;
+    background: #E2F1EA;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #115E52;
+    font-size: 1.3rem;
+  }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Instrument Serif", serif; font-size: 1.8rem; border-bottom: 1px solid #D5E5DD; }
+
+  .smile {
+    width: 260px; height: 260px;
+    background: radial-gradient(circle at 50% 40%, #FDFBF5 0%, #E2F1EA 100%);
+    border-radius: 50%;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .smile i { font-size: 7rem; color: #115E52; }
+
+  .feature-row {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(13,38,35,.08);
+  }
+  .feature-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-teal text-cream flex items-center justify-center">
+        <i class="fa-solid fa-tooth"></i>
+      </span>
+      <div class="leading-tight">
+        <p class="serif text-2xl">Denisa</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Clinic&#259; dentar&#259; &middot; Slatina</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#despre"   class="hover:text-teal">Despre</a>
+      <a href="#servicii" class="hover:text-teal">Servicii</a>
+      <a href="#experienta" class="hover:text-teal">Experien&#539;&#259;</a>
+      <a href="#contact"  class="hover:text-teal">Contact</a>
+      <a href="tel:0768351413" class="btn-teal !py-2.5 !px-4 !text-xs">0768 351 413</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-mint text-teal flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="serif text-2xl">Denisa</span>
+    <button id="menu-close" class="w-11 h-11 rounded-full bg-mint text-teal flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"    class="mobile-link">Despre</a>
+    <a href="#servicii"  class="mobile-link">Servicii</a>
+    <a href="#experienta" class="mobile-link">Experien&#539;&#259;</a>
+    <a href="#contact"   class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0768351413" class="btn-teal">Sun&#259;</a>
+    <a href="https://wa.me/40768351413" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-heart-pulse"></i> Slatina &middot; Aleea Gr&#259;di&#537;te</span>
+
+      <h1 class="serif mt-8 text-5xl sm:text-7xl lg:text-[7.5rem]">
+        O clinic&#259; mic&#259;<br>
+        cu <span class="italic text-coral">timp pentru tine.</span>
+      </h1>
+
+      <p class="mt-10 max-w-xl text-lg text-muted leading-relaxed">
+        La Denisa nu veni&#539;i s&#259; lua&#539;i num&#259;r de ordine. Veni&#539;i pentru o programare clar&#259;, o consulta&#539;ie explicat&#259; pe &icirc;n&#539;eles &#537;i un tratament f&#259;r&#259; gr&#259;bire. Ne place cum lucr&#259;m &#537;i asta se vede.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0768351413" class="btn-teal"><i class="fa-solid fa-phone"></i> Programare 0768 351 413</a>
+        <a href="https://wa.me/40768351413" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="120">
+      <div class="smile"><i class="fa-regular fa-face-smile-beam"></i></div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-mintl">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Despre clinic&#259;</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl">
+      O clinic&#259; privat&#259;, <span class="italic text-coral">f&#259;cut&#259; pentru pacient.</span>
+    </h2>
+
+    <p class="mt-10 text-lg text-ink/80 leading-relaxed">
+      Clinica Dentar&#259; Denisa e un cabinet stomatologic privat, cu program pe baz&#259; de programare. Nu avem s&#259;li de a&#537;teptare aglomerate. Fiecare pacient prime&#537;te intervalul lui de timp, explica&#539;ii pentru tratamentul propus, &#537;i un plan corect adaptat nevoilor lui.
+    </p>
+
+    <p class="mt-6 text-base text-muted leading-relaxed">
+      Ne ocup&#259;m de stomatologie general&#259;, tratamente conservative, profilaxie &#537;i &icirc;ngrijiri de baz&#259;. Pentru cazuri complexe, colabor&#259;m cu parteneri pe care &icirc;i recomand&#259;m cu &icirc;ncredere.
+    </p>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">Servicii</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl">Ce putem face <span class="italic text-coral">&icirc;n cabinet.</span></h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="card-svc" data-aos="fade-up">
+        <span class="bubble"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <h3 class="serif text-2xl mt-5">Consulta&#539;ie</h3>
+        <p class="mt-3 text-sm text-muted">Examinare complet&#259;, plan de tratament scris, r&#259;spunsuri la toate &icirc;ntreb&#259;rile.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="60">
+        <span class="bubble"><i class="fa-solid fa-spray-can-sparkles"></i></span>
+        <h3 class="serif text-2xl mt-5">Profilaxie &#537;i detartraj</h3>
+        <p class="mt-3 text-sm text-muted">Detartraj ultrasonic, periaj profesional, instruc&#539;iuni pentru igiena zilnic&#259;.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="120">
+        <span class="bubble"><i class="fa-solid fa-tooth"></i></span>
+        <h3 class="serif text-2xl mt-5">Tratamente conservative</h3>
+        <p class="mt-3 text-sm text-muted">Obtura&#539;ii cu compozit, tratarea cariilor simple sau complexe, restaur&#259;ri estetice.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="180">
+        <span class="bubble"><i class="fa-solid fa-prescription"></i></span>
+        <h3 class="serif text-2xl mt-5">Endodon&#539;ie</h3>
+        <p class="mt-3 text-sm text-muted">Tratament de canal, devitalizare &#537;i obturare de canal cu tehnici moderne.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="240">
+        <span class="bubble"><i class="fa-solid fa-teeth-open"></i></span>
+        <h3 class="serif text-2xl mt-5">Extrac&#539;ii</h3>
+        <p class="mt-3 text-sm text-muted">Extrac&#539;ii simple, asisten&#539;&#259; &#537;i recomand&#259;ri pentru recuperare.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="300">
+        <span class="bubble"><i class="fa-solid fa-shield-heart"></i></span>
+        <h3 class="serif text-2xl mt-5">Urgen&#539;e stomatologice</h3>
+        <p class="mt-3 text-sm text-muted">Pentru dureri sau probleme nea&#537;teptate, sun&#259; &#537;i &icirc;ncerc&#259;m s&#259; te vedem rapid.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="experienta" class="py-16 sm:py-24 bg-teal text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip !bg-cream/15 !text-cream">Experien&#539;a ta</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        C&#226;nd vii la noi,<br><span class="italic text-coral">te sim&#539;i v&#259;zut.</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="feature-row">
+        <i class="fa-solid fa-clock text-coral text-xl mt-1"></i>
+        <div>
+          <p class="serif text-xl">Programare respectat&#259;</p>
+          <p class="mt-1 text-sm text-cream/70">F&#259;r&#259; s&#259; a&#537;tep&#539;i o or&#259; pe scaun. Ora programat&#259; este ora de intrare.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <i class="fa-solid fa-comments text-coral text-xl mt-1"></i>
+        <div>
+          <p class="serif text-xl">Explica&#539;ii clare</p>
+          <p class="mt-1 text-sm text-cream/70">&Icirc;&#539;i spunem ce ai, ce propunem, ce cost&#259;, dinainte. F&#259;r&#259; termeni latine&#537;ti.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <i class="fa-solid fa-hand-holding-medical text-coral text-xl mt-1"></i>
+        <div>
+          <p class="serif text-xl">Blande&#539;e la interven&#539;ii</p>
+          <p class="mt-1 text-sm text-cream/70">Cu aten&#539;ie la pacien&#539;ii anxio&#537;i, cu pauze dac&#259; e nevoie &#537;i control al durerii.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <i class="fa-solid fa-file-lines text-coral text-xl mt-1"></i>
+        <div>
+          <p class="serif text-xl">Deviz scris</p>
+          <p class="mt-1 text-sm text-cream/70">Pentru tratamente mai mari, prime&#537;ti &icirc;n scris planul &#537;i costurile, &icirc;nainte s&#259; &icirc;ncepem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip">Contact</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        Programare rapid&#259;,<br><span class="italic text-coral">la un telefon distan&#539;&#259;.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Suni, &icirc;&#539;i alegem intervalul, pleci cu dinamica stabilit&#259;. Simplu. Pentru urgen&#539;e, suna&#539;i oricum &#537;i g&#259;sim solu&#539;ie.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0768351413" class="btn-teal"><i class="fa-solid fa-phone"></i> 0768 351 413</a>
+        <a href="https://wa.me/40768351413" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> Mesaj WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-mintl border border-line rounded-3xl p-7">
+        <p class="chip">Adresa</p>
+        <p class="serif text-2xl mt-3">Aleea Gr&#259;di&#537;te</p>
+        <p class="text-sm text-muted">727812 Slatina, jud. Olt</p>
+
+        <div class="mt-6 h-px bg-line"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-teal w-5"></i> 0768 351 413</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-teal w-5"></i> wa.me/40768351413</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-calendar-check text-teal w-5"></i> Programare recomandat&#259;</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-restroom text-teal w-5"></i> Facilit&#259;&#539;i pentru pacien&#539;i</div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/Denisa/@44.4280414,24.3525122,17z" class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-teal font-semibold">
+          <i class="fa-solid fa-location-dot"></i> Vezi pe hart&#259;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-10 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest text-muted">
+    <span>&copy; 2026 Clinica Dentar&#259; Denisa</span>
+    <span>Aleea Gr&#259;di&#537;te &middot; Slatina</span>
+    <span>Stomatologie</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0768351413" class="py-4 bg-teal text-cream text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40768351413" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Clinica Dentara Denisa",
+  "telephone": "+40768351413",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Aleea Gradiste",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "727812",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.4280414, "longitude": 24.3525122 }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

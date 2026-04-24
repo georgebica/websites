@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cur&#259;&#539;enie Deluxe Craiova &middot; Reziden&#539;ial &#537;i comercial &middot; Premium</title>
+<meta name="description" content="Cur&#259;&#539;enie Deluxe Craiova &#8212; servicii premium de cur&#259;&#539;enie reziden&#539;ial&#259; &#537;i comercial&#259; &#238;n Craiova. Cur&#259;&#539;enie specializat&#259;, geamuri, covoare &#537;i tapi&#539;erii. Str. Constantin Br&#226;ncoveanu 62B. Tel 0771 522 893.">
+<meta name="keywords" content="curatenie Craiova, curatenie birouri Craiova, curatenie apartament Craiova, Curatenie Deluxe, firma curatenie Craiova">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#3c2a5d">
+<meta property="og:title" content="Cur&#259;&#539;enie Deluxe Craiova">
+<meta property="og:description" content="Servicii premium de cur&#259;&#539;enie reziden&#539;ial&#259; &#537;i comercial&#259; &#238;n Craiova.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        lilac: {50:'#f6f2fb',100:'#e8defb',200:'#d1bdf4',300:'#b39aec',400:'#8c6edc',500:'#6b4bc4',600:'#523698',700:'#3c2a5d',800:'#2a1d42',900:'#181126'},
+        silver: {50:'#f8f8fa',100:'#edeef2',200:'#d8dae2',300:'#b4b8c7',400:'#8489a0',500:'#5b6078',600:'#3f4459',700:'#2a2d3d',800:'#181a27',900:'#0b0c14'},
+        blush: '#fdf5f3',
+        paper: '#fbf9fd',
+        slate3: '#0f1220'
+      },
+      fontFamily: {
+        display: ['DM Serif Display','Georgia','serif'],
+        sans: ['Karla','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --lilac:#3c2a5d; --silver:#5b6078; --paper:#fbf9fd; --slate3:#0f1220; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Karla',system-ui,sans-serif; color:var(--slate3); background:var(--paper); }
+  h1,h2,h3,h4 { font-family:'DM Serif Display',Georgia,serif; font-weight:400; letter-spacing:-.01em; }
+  .serif-italic { font-family:'DM Serif Display',serif; font-style:italic; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 85% 12%, rgba(179,154,236,.25), transparent 45%),
+      radial-gradient(circle at 12% 88%, rgba(60,42,93,.2), transparent 50%),
+      linear-gradient(168deg,#fbf9fd 0%,#f6f2fb 55%,#e8defb 100%);
+  }
+  .sparkle-bg {
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(179,154,236,.12) 2px, transparent 2px),
+      radial-gradient(circle at 75% 60%, rgba(60,42,93,.08) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 50% 85%, rgba(179,154,236,.1) 2px, transparent 2px);
+    background-size: 60px 60px, 80px 80px, 70px 70px;
+  }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.45rem 1rem; border-radius:4px; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600; }
+  .chip-lilac { background:rgba(60,42,93,.1); color:var(--lilac); border:1px solid rgba(60,42,93,.25); }
+  .chip-silver { background:rgba(91,96,120,.12); color:#3f4459; border:1px solid rgba(91,96,120,.2); }
+  .btn-primary { background:var(--lilac); color:#fff; padding:.95rem 1.8rem; border-radius:2px; font-weight:600; letter-spacing:.04em; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-primary:hover { background:#2a1d42; transform:translateY(-2px); box-shadow:0 16px 30px -16px rgba(60,42,93,.6); }
+  .btn-secondary { background:#fff; color:var(--lilac); padding:.95rem 1.8rem; border-radius:2px; font-weight:600; letter-spacing:.04em; display:inline-flex; align-items:center; gap:.55rem; border:1px solid var(--lilac); transition:all .25s; }
+  .btn-secondary:hover { background:var(--lilac); color:#fff; }
+  .btn-wa { background:#25d366; color:#fff; padding:.95rem 1.5rem; border-radius:2px; font-weight:600; letter-spacing:.04em; display:inline-flex; align-items:center; gap:.5rem; transition:all .25s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#fff; border:1px solid rgba(60,42,93,.12); border-radius:4px; padding:2rem; transition:all .25s; position:relative; overflow:hidden; }
+  .card::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--lilac); transition:width .3s; }
+  .card:hover::after { width:100%; }
+  .card:hover { transform:translateY(-4px); border-color:rgba(60,42,93,.3); box-shadow:0 20px 40px -24px rgba(15,18,32,.25); }
+  .service-ico { width:52px; height:52px; border:1px solid var(--lilac); color:var(--lilac); display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+  .section-label { display:inline-block; font-size:.72rem; letter-spacing:.38em; text-transform:uppercase; color:#523698; font-weight:700; position:relative; padding-left:3.5rem; }
+  .section-label::before { content:''; position:absolute; left:0; top:50%; width:3rem; height:1px; background:#523698; }
+  .headline { font-size:clamp(2.1rem,4.5vw,3.6rem); line-height:1.06; color:var(--slate3); font-family:'DM Serif Display',serif; font-weight:400; }
+  .headline em { font-style:italic; color:var(--lilac); }
+  .stat-num { font-family:'DM Serif Display',serif; font-size:3rem; color:var(--lilac); line-height:1; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid rgba(60,42,93,.12); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:40px; height:40px; border:1px solid #b39aec; color:var(--lilac); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:#0f1220; font-weight:500; font-size:.9rem; letter-spacing:.04em; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--lilac); transform:scaleX(0); transition:transform .25s; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .hours-table { width:100%; }
+  .hours-table tr { border-bottom:1px dashed rgba(60,42,93,.15); }
+  .hours-table tr:last-child { border-bottom:none; }
+  .hours-table th { text-align:left; padding:.7rem 0; color:var(--lilac); font-family:'DM Serif Display',serif; font-weight:400; font-size:1.05rem; }
+  .hours-table td { text-align:right; padding:.7rem 0; font-weight:500; color:#0f1220; }
+  .hours-table .closed { color:#8489a0; font-style:italic; font-family:'DM Serif Display',serif; }
+  .map-wrap { border-radius:4px; overflow:hidden; border:1px solid rgba(60,42,93,.2); box-shadow:0 20px 40px -24px rgba(15,18,32,.3); }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:#fff; border-top:1px solid rgba(60,42,93,.15); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; box-shadow:0 -10px 30px -16px rgba(0,0,0,.25); }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; border-radius:2px; font-weight:600; font-size:.95rem; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+  .step-num { font-family:'DM Serif Display',serif; font-size:3rem; color:var(--lilac); line-height:1; opacity:.7; }
+</style>
+</head>
+<body class="bg-paper text-slate3">
+
+<!-- TOP BAR -->
+<div class="bg-lilac-700 text-white/90 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span><i class="far fa-clock mr-1"></i> Luni-Vineri &middot; 08:30-16:30</span>
+      <span class="hidden sm:inline"><i class="fas fa-map-marker-alt mr-1"></i> Constantin Br&#226;ncoveanu 62B, Craiova</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:0771522893" class="hover:text-lilac-200"><i class="fas fa-phone mr-1"></i> 0771 522 893</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="bg-paper/95 backdrop-blur sticky top-0 z-50 border-b border-lilac-100">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-11 h-11 bg-lilac-700 text-white flex items-center justify-center" style="border-radius:2px;">
+        <i class="fas fa-sparkles"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-2xl text-lilac-700">Cur&#259;&#539;enie Deluxe</div>
+        <div class="text-[10px] tracking-[.38em] uppercase text-silver-500">Craiova &middot; Premium</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#proces" class="nav-link">Proces</a>
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="tel:0771522893" class="btn-primary hidden md:inline-flex text-sm"><i class="fas fa-phone"></i> Ofert&#259;</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-surface sparkle-bg">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-6">
+        <span class="chip chip-lilac"><i class="fas fa-gem"></i> Serviciu premium</span>
+        <span class="chip chip-silver"><i class="fas fa-home"></i> Reziden&#539;ial &amp; comercial</span>
+      </div>
+      <h1 class="headline mb-6">
+        Cur&#259;&#539;enia perfect&#259; nu e un lux &#8212;<br>e un <em>standard</em>.
+      </h1>
+      <p class="text-lg text-silver-600 leading-relaxed max-w-2xl mb-8">Cur&#259;&#539;enie Deluxe Craiova este o firm&#259; de servicii de cur&#259;&#539;enie profesional&#259;, specializat&#259; &#238;n spa&#539;ii reziden&#539;iale &#537;i comerciale. Punem atitudinea potrivit&#259;, echipamente bune &#537;i produse verificate &#238;ntr-un singur cadrul, ca s&#259; revi&#539;i acas&#259; sau la birou &#238;ntr-un spa&#539;iu impecabil.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0771522893" class="btn-primary"><i class="fas fa-phone"></i> 0771 522 893</a>
+        <a href="https://wa.me/40771522893" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#servicii" class="btn-secondary">Vezi serviciile</a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 max-w-lg border-t border-lilac-200 pt-6">
+        <div>
+          <div class="stat-num">5.0</div>
+          <div class="text-[10px] uppercase tracking-[.2em] text-lilac-600 mt-1 font-semibold">Rating clien&#539;i</div>
+        </div>
+        <div>
+          <div class="stat-num">3+</div>
+          <div class="text-[10px] uppercase tracking-[.2em] text-lilac-600 mt-1 font-semibold">Tipuri de spa&#539;ii</div>
+        </div>
+        <div>
+          <div class="stat-num">L-V</div>
+          <div class="text-[10px] uppercase tracking-[.2em] text-lilac-600 mt-1 font-semibold">Program fix</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="bg-white p-8 border border-lilac-100 shadow-xl">
+        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-lilac-100">
+          <div class="w-12 h-12 bg-lilac-700 text-white flex items-center justify-center"><i class="fas fa-calendar-check"></i></div>
+          <div>
+            <h3 class="font-display text-2xl text-lilac-700">Solicita&#539;i o ofert&#259;</h3>
+            <p class="text-xs text-silver-500 serif-italic">Primi&#539;i estimare telefonic&#259;</p>
+          </div>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.24em] text-lilac-600 font-semibold">Telefon</div>
+              <a href="tel:0771522893" class="font-display text-2xl text-lilac-700">0771 522 893</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.24em] text-lilac-600 font-semibold">Birou</div>
+              <div class="font-medium">Str. Constantin Br&#226;ncoveanu 62B</div>
+              <div class="text-xs text-silver-500">200440 Craiova, Dolj</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="far fa-clock"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.24em] text-lilac-600 font-semibold">Program</div>
+              <div class="font-medium">Luni &ndash; Vineri &middot; 08:30 &ndash; 16:30</div>
+            </div>
+          </li>
+        </ul>
+        <a href="tel:0771522893" class="btn-primary w-full justify-center mt-6"><i class="fas fa-phone"></i> Solicit ofert&#259;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre firm&#259;</div>
+      <h2 class="text-4xl lg:text-5xl mt-5 mb-6">Cur&#259;&#539;enie <em class="serif-italic text-lilac-700">profesional&#259;</em>, pentru rezultate m&#259;surabile.</h2>
+      <p class="text-lg text-silver-600 leading-relaxed mb-4">Cur&#259;&#539;enie Deluxe Craiova se adreseaz&#259; clien&#539;ilor care a&#537;teapt&#259; mai mult de la un serviciu de cur&#259;&#539;enie &#8212; predictibilitate, oameni la locul lor, echipamente moderne &#537;i aten&#539;ie la detalii care fac diferen&#539;a.</p>
+      <p class="text-lg text-silver-600 leading-relaxed">Lucr&#259;m at&#226;t &#238;n apartamente &#537;i case, c&#226;t &#537;i &#238;n birouri, cabinete, clinici &#537;i spa&#539;ii comerciale din Craiova &#537;i &#238;mprejurimi. Stabilim un plan pe baza fiec&#259;rui spa&#539;iu, cu tarife corecte &#537;i predictibile.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-medal"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Rating 5.0/5</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Ranking de top &#238;n directoarele locale de specialitate din Craiova, cu nota maxim&#259; din partea clien&#539;ilor verifica&#539;i.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-list-check"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Checklist transparent</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Fiecare vizit&#259; are un checklist clar: ce include, ce nu include &#537;i cu ce frecven&#539;&#259;. F&#259;r&#259; interpret&#259;ri.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-shield-alt"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Echip&#259; de &#238;ncredere</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Personal permanent, verificat &#537;i instruit. Acelea&#537;i persoane revin la clien&#539;ii recurenti &#8212; continuitate &#537;i confort.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-pump-soap"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Echipament profesional</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Aspiratoare industriale, mono-disc, ma&#537;ini de sp&#259;lat covoare &#537;i tapi&#539;erii, produse de &#238;nalt&#259; calitate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 lg:py-28 bg-lilac-50/50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label" style="padding-left:0;">Gama de servicii</div>
+      <div class="w-12 h-px bg-lilac-600 mx-auto my-4"></div>
+      <h2 class="text-4xl lg:text-5xl mt-3 mb-4">Solu&#539;ii complete de <em class="serif-italic text-lilac-700">cur&#259;&#539;enie</em></h2>
+      <p class="text-lg text-silver-600 max-w-2xl mx-auto">Trei categorii majore &#8212; reziden&#539;ial, comercial &#537;i specializat &#8212; fiecare cu proceduri, echipamente &#537;i pre&#539;uri definite.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-home"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Cur&#259;&#539;enie la domiciliu</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Cur&#259;&#539;enie reziden&#539;ial&#259; pentru apartamente &#537;i case, de rutin&#259; sau general&#259;.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Abonamente s&#259;pt&#259;m&#226;nale</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Cur&#259;&#539;enie sezonier&#259;</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-building"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Cur&#259;&#539;enie birouri</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Spa&#539;ii de birouri men&#539;inute impecabil, zilnic sau saptaminal, dup&#259; program.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Cur&#259;&#539;enie zilnic&#259;</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Men&#539;inere grupuri sanitare</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-store"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Spa&#539;ii comerciale</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Magazine, cabinete, s&#259;li de sport &#537;i spa&#539;ii cu trafic intens, cu echipamente profesionale.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Program &#238;n afara orelor</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Mono-disc &#537;i tratare pardoseli</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-window-maximize"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Sp&#259;lat geamuri</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Geamuri &#537;i fa&#539;ade din sticl&#259;, la &#238;n&#259;l&#539;ime sau la parter, interior/exterior, cu produse f&#259;r&#259; urme.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Geamuri termopan</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Ram&#259; + perva&#539; inclus</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-couch"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Sp&#259;lat tapi&#539;erii</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Canapele, fotolii, scaune &#537;i matresante &#8212; sp&#259;late cu extractor profesional.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Extrac&#539;ie profund&#259;</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>&#206;ndep&#259;rtare pete &#537;i mirosuri</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-water"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Sp&#259;lat covoare</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Sp&#259;lare covoare prin injec&#539;ie-extrac&#539;ie, cu tratament anti-acarieni &#537;i parfumare discret&#259;.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Covoare &#537;i traverse</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Tratament anti-acarieni</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-paint-roller"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Cur&#259;&#539;enie post-constructie</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Eliminarea prafului fin, stropilor de vopsea, adezivilor &#537;i reziduurilor de &#537;antier.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Preg&#259;tire pentru locuire</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Detaliu pe fereastr&#259; &#537;i ram&#259;</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-truck-moving"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Predare apartament</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Cur&#259;&#539;enie profund&#259; &#238;nainte de mutare sau de returnarea unei locuin&#539;e &#238;nchiriate.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Detaliu total</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Livrare c&#259;tre proprietar</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-spa"></i></div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Cur&#259;&#539;enie specializat&#259;</h3>
+        <p class="text-sm text-silver-600 leading-relaxed mb-3">Solicit&#259;ri speciale: dezinfec&#539;ie, tratamente pentru mucegai, cur&#259;&#539;are profund&#259; grupuri sanitare.</p>
+        <ul class="text-xs text-silver-500 space-y-1">
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Dezinfec&#539;ie</li>
+          <li><i class="fas fa-check text-lilac-600 mr-2"></i>Tratamente dedicate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCES -->
+<section id="proces" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="section-label" style="padding-left:0;">Cum lucr&#259;m</div>
+      <div class="w-12 h-px bg-lilac-600 mx-auto my-4"></div>
+      <h2 class="text-4xl lg:text-5xl mt-3">De la telefon la <em class="serif-italic text-lilac-700">spa&#539;iu curat</em></h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div data-aos="fade-up">
+        <div class="step-num mb-4">01</div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Solicitare</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Suna&#539;i sau trimite&#539;i un mesaj. Discut&#259;m despre spa&#539;iu, frecven&#539;&#259; &#537;i cerin&#539;e.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <div class="step-num mb-4">02</div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Ofert&#259;</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Primi&#539;i ofert&#259; cu tarif clar &#537;i durata estimat&#259; a interven&#539;iei. F&#259;r&#259; costuri ascunse.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <div class="step-num mb-4">03</div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Execu&#539;ie</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Echipa vine la ora stabilit&#259;, cu echipament &#537;i produse proprii. Lucrare dup&#259; checklist.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <div class="step-num mb-4">04</div>
+        <h3 class="font-display text-xl text-lilac-700 mb-2">Predare</h3>
+        <p class="text-sm text-silver-600 leading-relaxed">Verificare &#238;mpreun&#259; &#537;i feedback. Plata se face la final, cum prefera&#539;i.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM & LOCATIE -->
+<section id="program" class="py-20 lg:py-28 bg-lilac-50/50">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Program</div>
+      <h2 class="text-4xl lg:text-5xl mt-5 mb-6">Orele noastre <em class="serif-italic text-lilac-700">de lucru</em></h2>
+      <p class="text-lg text-silver-600 leading-relaxed mb-4">R&#259;spundem la telefon &#238;n timpul programului de birou. Pentru contracte recurrente comerciale, pute&#539;i discuta intervale personalizate, inclusiv &#238;n afara orelor de birou.</p>
+      <div class="flex gap-3 mt-6">
+        <a href="tel:0771522893" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+        <a href="https://wa.me/40771522893" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="bg-white border border-lilac-100 p-8">
+        <table class="hours-table">
+          <tr><th>Luni</th><td>08:30 &ndash; 16:30</td></tr>
+          <tr><th>Mar&#539;i</th><td>08:30 &ndash; 16:30</td></tr>
+          <tr><th>Miercuri</th><td>08:30 &ndash; 16:30</td></tr>
+          <tr><th>Joi</th><td>08:30 &ndash; 16:30</td></tr>
+          <tr><th>Vineri</th><td>08:30 &ndash; 16:30</td></tr>
+          <tr><th>S&#226;mb&#259;t&#259;</th><td class="closed">&Icirc;nchis</td></tr>
+          <tr><th>Duminic&#259;</th><td class="closed">&Icirc;nchis</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIE -->
+<section id="locatie" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label" style="padding-left:0;">Unde ne g&#259;si&#539;i</div>
+      <div class="w-12 h-px bg-lilac-600 mx-auto my-4"></div>
+      <h2 class="text-4xl lg:text-5xl mt-3">Birou <em class="serif-italic text-lilac-700">&#238;n centrul Craiovei</em></h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-white p-8 border border-lilac-100" data-aos="fade-right">
+        <h3 class="font-display text-2xl text-lilac-700 mb-5">Adresa birou</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-location-dot"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.24em] text-lilac-600 font-semibold">Adres&#259;</div>
+              <div class="font-medium">Str. Constantin Br&#226;ncoveanu 62B</div>
+              <div class="text-sm text-silver-500">200440 Craiova, Dolj</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.24em] text-lilac-600 font-semibold">Telefon</div>
+              <a href="tel:0771522893" class="font-display text-2xl text-lilac-700">0771 522 893</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.24em] text-lilac-600 font-semibold">Cod Plus</div>
+              <div class="font-medium">8QMM+9H Craiova</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-globe"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.24em] text-lilac-600 font-semibold">Zon&#259; servit&#259;</div>
+              <div class="font-medium">Craiova &#537;i &#238;mprejurimi</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=44.3334854,23.7839014&hl=ro&z=17&output=embed" width="100%" height="520" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Harta Cur&#259;&#539;enie Deluxe Craiova"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section id="contact" class="py-20 lg:py-28 bg-lilac-700 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[.1] sparkle-bg"></div>
+  <div class="relative max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#d1bdf4;padding-left:0;">Contact</div>
+    <div class="w-12 h-px bg-lilac-200 mx-auto my-4"></div>
+    <h2 class="text-4xl lg:text-5xl mt-3 mb-5">Un apel &#537;i stabilim <em class="serif-italic" style="color:#d1bdf4;">detaliile</em></h2>
+    <p class="text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Spune&#539;i-ne ce tip de spa&#539;iu ave&#539;i, ce frecven&#539;&#259; dori&#539;i &#537;i ne ocup&#259;m de restul. Ofert&#259; &#238;n 24 de ore, f&#259;r&#259; angajament.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0771522893" class="btn-primary" style="background:#fff;color:#3c2a5d;"><i class="fas fa-phone"></i> 0771 522 893</a>
+      <a href="https://wa.me/40771522893" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="#servicii" class="btn-secondary" style="background:transparent;color:#fff;border-color:#fff;"><i class="fas fa-list"></i> Vezi serviciile</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate3 text-white/70 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 bg-lilac-600 text-white flex items-center justify-center" style="border-radius:2px;"><i class="fas fa-sparkles"></i></div>
+        <div>
+          <div class="font-display text-xl text-white">Cur&#259;&#539;enie Deluxe</div>
+          <div class="text-[10px] tracking-[.38em] uppercase text-lilac-300">Craiova</div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">Servicii premium de cur&#259;&#539;enie reziden&#539;ial&#259; &#537;i comercial&#259; &#238;n Craiova. Echip&#259; de &#238;ncredere, echipament profesional, rezultate predictibile.</p>
+    </div>
+    <div>
+      <h4 class="font-display text-white text-lg mb-4">Naviga&#539;ie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#despre" class="hover:text-lilac-300">Despre</a></li>
+        <li><a href="#servicii" class="hover:text-lilac-300">Servicii</a></li>
+        <li><a href="#proces" class="hover:text-lilac-300">Cum lucr&#259;m</a></li>
+        <li><a href="#program" class="hover:text-lilac-300">Program</a></li>
+        <li><a href="#locatie" class="hover:text-lilac-300">Loca&#539;ie</a></li>
+        <li><a href="#contact" class="hover:text-lilac-300">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-white text-lg mb-4">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fas fa-phone text-lilac-300 mr-2"></i> <a href="tel:0771522893" class="hover:text-lilac-300">0771 522 893</a></li>
+        <li><i class="fas fa-map-marker-alt text-lilac-300 mr-2"></i> Str. Constantin Br&#226;ncoveanu 62B, Craiova</li>
+        <li><i class="far fa-clock text-lilac-300 mr-2"></i> Luni &ndash; Vineri 08:30 &ndash; 16:30</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-xs text-white/50">
+    <div>&copy; 2026 Cur&#259;&#539;enie Deluxe Craiova. Toate drepturile rezervate.</div>
+    <div>Cur&#259;&#539;enie reziden&#539;ial&#259; &middot; comercial&#259; &middot; specializat&#259; &middot; Craiova</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:0771522893" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40771522893" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HouseCleaningService",
+  "name": "Cur&#259;&#539;enie Deluxe Craiova",
+  "telephone": "+40771522893",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Constantin Br&#226;ncoveanu 62B",
+    "addressLocality": "Craiova",
+    "addressRegion": "Dolj",
+    "postalCode": "200440",
+    "addressCountry": "RO"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":44.3334854,"longitude":23.7839014},
+  "areaServed": "Craiova, Dolj",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"16:30"}
+  ]
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+</body>
+</html>

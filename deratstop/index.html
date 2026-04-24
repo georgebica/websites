@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deratstop &middot; DDD &#537;i pest control &icirc;n Bucure&#537;ti, non-stop</title>
+<meta name="description" content="Deratstop &mdash; servicii de deratizare, dezinsec&#539;ie &#537;i dezinfec&#539;ie &icirc;n Bucure&#537;ti. Calea Rahovei 301, Sector 5. Disponibili non-stop. Telefon 0727 675 085.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy:    '#0B1E2A',
+        navyd:   '#061420',
+        shield:  '#1F9A6A',
+        shieldd: '#127149',
+        alert:   '#FF8A3D',
+        paper:   '#F7F8F6',
+        mint:    '#E5F2EA',
+        mintd:   '#C9E5D4',
+        ink:     '#0B1E2A',
+        muted:   '#566874',
+        line:    '#D7E1DC',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        sans:  ['Sora', 'system-ui', 'sans-serif'],
+        serif: ['Merriweather', 'Georgia', 'serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #F7F8F6; color: #0B1E2A; }
+  body { font-family: Sora, system-ui, sans-serif; }
+  .serif { font-family: Merriweather, Georgia, serif; }
+
+  .radar {
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(31,154,106,.18) 0%, transparent 70%);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .radar::before, .radar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(31,154,106,.4);
+    animation: pulse 3s ease-out infinite;
+  }
+  .radar::after { animation-delay: 1.5s; }
+  @keyframes pulse {
+    0% { transform: scale(.3); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+  }
+  .radar .core {
+    position: relative; z-index: 2;
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: #1F9A6A;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 20px 40px -12px rgba(31,154,106,.55);
+  }
+
+  .btn-shield {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.7rem;
+    background: #1F9A6A;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 14px 32px -14px rgba(31,154,106,.6);
+    transition: all .25s;
+  }
+  .btn-shield:hover { background: #127149; transform: translateY(-2px); }
+
+  .btn-alert {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.7rem;
+    background: #FF8A3D;
+    color: #0B1E2A;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: all .25s;
+  }
+  .btn-alert:hover { background: #FF7000; transform: translateY(-2px); }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.7rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .35rem .95rem;
+    background: #E5F2EA;
+    color: #127149;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+  .chip-alert {
+    background: rgba(255,138,61,.18);
+    color: #A8461A;
+  }
+
+  .prob-card {
+    background: #fff;
+    border: 1px solid #D7E1DC;
+    padding: 1.75rem;
+    border-radius: 16px;
+    transition: all .35s;
+    position: relative;
+  }
+  .prob-card:hover { transform: translateY(-4px); border-color: #1F9A6A; box-shadow: 0 30px 50px -32px rgba(11,30,42,.2); }
+  .prob-card i { color: #1F9A6A; }
+  .prob-card .num {
+    position: absolute;
+    top: 1.75rem; right: 1.75rem;
+    font-family: Merriweather, serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #E5F2EA;
+    line-height: 1;
+  }
+
+  .shield-svg {
+    width: 180px; height: 180px;
+    background: #1F9A6A;
+    clip-path: polygon(50% 0, 100% 20%, 100% 60%, 50% 100%, 0 60%, 0 20%);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  .phase-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(11,30,42,.08);
+  }
+  .phase-item:last-child { border: 0; }
+  .phase-item .num {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: #0B1E2A;
+    color: #1F9A6A;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: Merriweather, serif;
+    font-weight: 900;
+  }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Merriweather, serif; font-size: 1.6rem; font-weight: 900; border-bottom: 1px solid #D7E1DC; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 1px dashed #D7E1DC;
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #1F9A6A; font-weight: 700; }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+  .blink-dot { animation: blink 2s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-white border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-xl bg-shield text-white flex items-center justify-center">
+        <i class="fa-solid fa-shield-halved"></i>
+      </span>
+      <div class="leading-tight">
+        <p class="serif text-xl leading-none font-black">Deratstop</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">DDD &middot; Bucure&#537;ti &middot; Non-stop</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[13px] font-semibold text-navy/85">
+      <a href="#probleme" class="hover:text-shield">Probleme</a>
+      <a href="#servicii" class="hover:text-shield">Servicii</a>
+      <a href="#proces"   class="hover:text-shield">Proces</a>
+      <a href="#program"  class="hover:text-shield">Program</a>
+      <a href="tel:0727675085" class="btn-shield !py-2.5 !px-4 !text-xs">0727 675 085</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-xl bg-shield text-white flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-paper z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="serif text-2xl font-black">Deratstop</span>
+    <button id="menu-close" class="w-11 h-11 rounded-xl bg-shield text-white flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#probleme" class="mobile-link">Probleme</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#program"  class="mobile-link">Program</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0727675085" class="btn-shield">Sun&#259;</a>
+    <a href="https://wa.me/40727675085" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-16 sm:py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex items-center gap-3">
+        <span class="chip-alert chip"><span class="w-2 h-2 bg-alert rounded-full blink-dot"></span> Interven&#539;ie non-stop</span>
+        <span class="chip"><i class="fa-solid fa-shield-halved"></i> Autoriza&#539;i ANSVSA</span>
+      </div>
+
+      <h1 class="serif mt-8 text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.02]">
+        C&#226;nd d&#259;un&#259;torii<br>
+        intr&#259; &icirc;n cas&#259;,<br>
+        <span class="text-shield">noi intr&#259;m dup&#259; ei.</span>
+      </h1>
+
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Deratstop este serviciul de dezinsec&#539;ie, deratizare &#537;i dezinfec&#539;ie din Bucure&#537;ti care ajunge la tine &icirc;n aceea&#537;i zi. Ploni&#539;e, g&#226;ndaci, &#537;oareci, viespi, furnici sau rozatoare &mdash; &#537;tim ce avem de f&#259;cut &#537;i facem s&#259; dispar&#259;.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0727675085" class="btn-shield"><i class="fa-solid fa-phone"></i> 0727 675 085</a>
+        <a href="https://wa.me/40727675085" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-3 gap-4">
+        <div>
+          <p class="serif text-4xl font-black text-shield">24/7</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-1">Disponibili non-stop</p>
+        </div>
+        <div>
+          <p class="serif text-4xl font-black text-shield">DDD</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-1">Deratizare &middot; Dezinsec&#539;ie &middot; Dezinfec&#539;ie</p>
+        </div>
+        <div>
+          <p class="serif text-4xl font-black text-shield">Buc</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-1">Tot sectorul Bucure&#537;ti &#537;i Ilfov</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="120">
+      <div class="radar">
+        <div class="core">
+          <div class="text-center">
+            <i class="fa-solid fa-bug-slash text-2xl"></i>
+            <p class="text-[11px] uppercase tracking-widest mt-2">protejat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="probleme" class="py-16 sm:py-24 bg-mint border-y border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-2xl">
+      <span class="chip"><i class="fa-solid fa-triangle-exclamation"></i> Probleme comune</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-black leading-[1.05]">
+        Ce putem<br>s&#259; <span class="text-shield">elimin&#259;m?</span>
+      </h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="prob-card" data-aos="fade-up">
+        <span class="num">01</span>
+        <i class="fa-solid fa-bed text-2xl"></i>
+        <h3 class="serif text-xl mt-4 font-black">Ploni&#539;e &icirc;n pat</h3>
+        <p class="mt-2 text-sm text-muted">Tratament complet pentru dormitor, saltele &#537;i canapele. Nu dai jos pere&#539;ii, dar sc&#259;pat de ele definitiv.</p>
+      </article>
+
+      <article class="prob-card" data-aos="fade-up" data-aos-delay="60">
+        <span class="num">02</span>
+        <i class="fa-solid fa-bug text-2xl"></i>
+        <h3 class="serif text-xl mt-4 font-black">G&#226;ndaci de buc&#259;t&#259;rie</h3>
+        <p class="mt-2 text-sm text-muted">Gel &#537;i stropiri dedicate pentru g&#226;ndaci negri &#537;i ro&#537;ii. Folosim produse sigure cu alimentele &#537;i copiii &icirc;n jur.</p>
+      </article>
+
+      <article class="prob-card" data-aos="fade-up" data-aos-delay="120">
+        <span class="num">03</span>
+        <i class="fa-solid fa-biohazard text-2xl"></i>
+        <h3 class="serif text-xl mt-4 font-black">&#536;oareci &#537;i &#537;obolani</h3>
+        <p class="mt-2 text-sm text-muted">Deratizare pentru case, blocuri &#537;i spa&#539;ii comerciale. Investiga&#539;ie, capcane &#537;i monitorizare ulterior.</p>
+      </article>
+
+      <article class="prob-card" data-aos="fade-up" data-aos-delay="180">
+        <span class="num">04</span>
+        <i class="fa-solid fa-mosquito text-2xl"></i>
+        <h3 class="serif text-xl mt-4 font-black">&#538;&#226;n&#539;ari &#537;i mu&#537;te</h3>
+        <p class="mt-2 text-sm text-muted">Stropiri profesionale &icirc;n cur&#539;i, terase, gr&#259;dini, restaurante &#537;i spa&#539;ii exterioare.</p>
+      </article>
+
+      <article class="prob-card" data-aos="fade-up" data-aos-delay="240">
+        <span class="num">05</span>
+        <i class="fa-solid fa-person-military-to-person text-2xl"></i>
+        <h3 class="serif text-xl mt-4 font-black">Viespi &#537;i albine</h3>
+        <p class="mt-2 text-sm text-muted">Eliminare cuiburi, la &icirc;n&#259;l&#539;ime sau &icirc;n acoperi&#537;. Lucr&#259;m cu echipament protector &#537;i metode verificate.</p>
+      </article>
+
+      <article class="prob-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="num">06</span>
+        <i class="fa-solid fa-spray-can text-2xl"></i>
+        <h3 class="serif text-xl mt-4 font-black">Dezinfec&#539;ie complet&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Dezinfec&#539;ie de spa&#539;ii, birouri, cl&#259;diri &#537;i locuin&#539;e pentru prevenire, dup&#259; cazuri de boli sau sezonier.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip">Serviciile principale</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-black leading-[1.05]">
+        Trei metode,<br>o singur&#259; <span class="text-shield">echip&#259;.</span>
+      </h2>
+      <p class="mt-6 text-muted leading-relaxed">Oric&#226;nd e nevoie, oriunde &icirc;n Bucure&#537;ti &#537;i Ilfov, cu echipament profesional &#537;i substan&#539;e autorizate de ANSVSA.</p>
+    </div>
+
+    <div class="lg:col-span-7 space-y-5">
+
+      <div class="bg-navy text-paper p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+        <div class="relative flex items-start gap-5">
+          <div class="shrink-0 w-14 h-14 rounded-xl bg-shield flex items-center justify-center">
+            <i class="fa-solid fa-bug-slash text-xl"></i>
+          </div>
+          <div>
+            <p class="text-[11px] uppercase tracking-widest text-shield">&mdash; Dezinsec&#539;ie</p>
+            <h3 class="serif text-2xl font-black mt-1">Insecte &#537;i d&#259;un&#259;tori</h3>
+            <p class="mt-3 text-sm text-paper/75 leading-relaxed">Pentru ploni&#539;e, g&#226;ndaci, furnici, &#539;&#226;n&#539;ari, purici, p&#259;ianjeni, viespi &#537;i orice alte insecte care &#539;i-au ocupat casa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-navy text-paper p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+        <div class="relative flex items-start gap-5">
+          <div class="shrink-0 w-14 h-14 rounded-xl bg-shield flex items-center justify-center">
+            <i class="fa-solid fa-skull-crossbones text-xl"></i>
+          </div>
+          <div>
+            <p class="text-[11px] uppercase tracking-widest text-shield">&mdash; Deratizare</p>
+            <h3 class="serif text-2xl font-black mt-1">&#536;oareci, &#537;obolani, rozatoare</h3>
+            <p class="mt-3 text-sm text-paper/75 leading-relaxed">Identificare puncte de intrare, amplasarea de capcane, substan&#539;e profesionale &#537;i monitorizare dup&#259; interven&#539;ie.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-navy text-paper p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+        <div class="relative flex items-start gap-5">
+          <div class="shrink-0 w-14 h-14 rounded-xl bg-shield flex items-center justify-center">
+            <i class="fa-solid fa-spray-can-sparkles text-xl"></i>
+          </div>
+          <div>
+            <p class="text-[11px] uppercase tracking-widest text-shield">&mdash; Dezinfec&#539;ie</p>
+            <h3 class="serif text-2xl font-black mt-1">Spa&#539;ii complet dezinfectate</h3>
+            <p class="mt-3 text-sm text-paper/75 leading-relaxed">Dezinfec&#539;ie pentru locuin&#539;e, spa&#539;ii comerciale, birouri, &#537;coli, gr&#259;dini&#539;e, clinici &#537;i depozite.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-mint border-y border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip">Cum lucr&#259;m</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-black leading-[1.05]">
+        5 pa&#537;i,<br>de la telefon la <span class="text-shield">linite.</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="phase-item">
+        <span class="num">1</span>
+        <div>
+          <p class="serif text-xl font-black">Apel telefonic</p>
+          <p class="mt-1 text-sm text-muted">Suni, ne descrii problema. &#538;i spunem dac&#259; e urgent&#259; &#537;i c&#226;nd putem veni.</p>
+        </div>
+      </div>
+      <div class="phase-item">
+        <span class="num">2</span>
+        <div>
+          <p class="serif text-xl font-black">Inspec&#539;ie la fa&#539;a locului</p>
+          <p class="mt-1 text-sm text-muted">Ajungem la tine, identific&#259;m cauza, stabilim tratamentul &#537;i pre&#539;ul. F&#259;r&#259; surprize.</p>
+        </div>
+      </div>
+      <div class="phase-item">
+        <span class="num">3</span>
+        <div>
+          <p class="serif text-xl font-black">Interven&#539;ia</p>
+          <p class="mt-1 text-sm text-muted">Echipa cu echipament profesional aplic&#259; tratamentul specific, &icirc;n toate zonele afectate.</p>
+        </div>
+      </div>
+      <div class="phase-item">
+        <span class="num">4</span>
+        <div>
+          <p class="serif text-xl font-black">Monitorizare</p>
+          <p class="mt-1 text-sm text-muted">&Icirc;&#539;i spunem ce s&#259; faci &icirc;n urm&#259;toarele zile &#537;i revenim dac&#259; e cazul pentru tratament secundar.</p>
+        </div>
+      </div>
+      <div class="phase-item">
+        <span class="num">5</span>
+        <div>
+          <p class="serif text-xl font-black">Garan&#539;ie</p>
+          <p class="mt-1 text-sm text-muted">Pentru tratamentele de interior, oferim garan&#539;ie pe eliminarea infestar&#259;rii.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip"><i class="fa-regular fa-clock"></i> Program</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-black leading-[1.05]">
+        Non-stop,<br>7 zile din 7.
+      </h2>
+      <p class="mt-6 text-muted">Nu exist&#259; or&#259; nepotrivit&#259; pentru o urgen&#539;&#259;. Telefonul nostru r&#259;spunde &icirc;ntotdeauna.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0727675085" class="btn-shield"><i class="fa-solid fa-phone"></i> 0727 675 085</a>
+        <a href="https://wa.me/40727675085" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="bg-white border border-line p-6 sm:p-8 rounded-2xl">
+        <ul id="hours">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span class="text-shield font-bold">Deschis 24 ore</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span class="text-shield font-bold">Deschis 24 ore</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span class="text-shield font-bold">Deschis 24 ore</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span class="text-shield font-bold">Deschis 24 ore</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span class="text-shield font-bold">Deschis 24 ore</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span class="text-shield font-bold">Deschis 24 ore</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span class="text-shield font-bold">Deschis 24 ore</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-navy text-paper relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip !bg-shield/20 !text-shield"><i class="fa-solid fa-phone-volume"></i> Contact urgent</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.02]">
+        Sun&#259;-ne acum<br>&#537;i ajungem la tine<br><span class="text-shield">ast&#259;zi.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-paper/70">Pentru cazuri urgente, sun&#259; direct. Nu trebuie s&#259; a&#537;tep&#539;i e-mailuri sau programari online. Vorbim, ajungem, rezolv&#259;m.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0727675085" class="btn-alert"><i class="fa-solid fa-phone"></i> 0727 675 085</a>
+        <a href="https://wa.me/40727675085" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-white/5 border border-white/15 rounded-2xl p-7">
+        <p class="text-xs uppercase tracking-widest text-shield">Sediu</p>
+        <p class="serif text-2xl mt-2 font-black">Calea Rahovei 301</p>
+        <p class="text-sm text-paper/70">Sector 5, Bucure&#537;ti 051214</p>
+
+        <div class="mt-6 h-px bg-paper/15"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-shield w-5"></i> 0727 675 085</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-shield w-5"></i> wa.me/40727675085</div>
+          <div class="flex items-center gap-3"><i class="fa-regular fa-clock text-shield w-5"></i> Non-stop, 24/7</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-map text-shield w-5"></i> Bucure&#537;ti &#537;i Ilfov</div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/Deratstop/@44.4122686,26.0730008,17z" class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-shield font-bold">
+          <i class="fa-solid fa-location-dot"></i> Deschide &icirc;n Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navyd text-paper/65 py-10 pb-24 md:pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 Deratstop &middot; Toate drepturile rezervate</span>
+    <span>DDD Bucure&#537;ti &middot; Non-stop</span>
+    <span>Sector 5 &middot; Calea Rahovei</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0727675085" class="py-4 bg-shield text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40727675085" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PestControl",
+  "name": "Deratstop",
+  "description": "Servicii de deratizare, dezinsectie si dezinfectie in Bucuresti. Non-stop, echipa autorizata.",
+  "telephone": "+40727675085",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calea Rahovei 301",
+    "addressLocality": "Bucuresti",
+    "addressRegion": "Sector 5",
+    "postalCode": "051214",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.412269, "longitude": 26.073001 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00", "closes": "23:59"
+  }],
+  "areaServed": ["Bucuresti","Ilfov"],
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Avocat Alexandru Morărescu — Drept Civil, Penal, Comercial | București</title>
+    <meta name="description" content="Cabinet de avocat Alexandru Morărescu, București Sector 3. Servicii juridice: drept civil, drept penal, drept comercial, consultanță juridică. Rating 5/5.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1A237E',
+                        'navy-light': '#283593',
+                        amber: '#FFA000',
+                        'amber-dark': '#FF8F00',
+                        'blue-pale': '#E8EAF6',
+                        'blue-soft': '#C5CAE9',
+                    },
+                    fontFamily: {
+                        display: ['Clash Display', 'sans-serif'],
+                        body: ['Satoshi', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Clash Display';
+            src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Satoshi', sans-serif; }
+        .font-display { font-family: 'Outfit', 'Clash Display', sans-serif; }
+
+        .scale-line {
+            background: repeating-linear-gradient(
+                0deg,
+                #FFA000 0px,
+                #FFA000 2px,
+                transparent 2px,
+                transparent 8px
+            );
+            width: 3px;
+        }
+
+        .service-card {
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(26,35,126,0.15);
+        }
+
+        .amber-gradient {
+            background: linear-gradient(135deg, #FFA000, #FF8F00);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #E8EAF6; }
+        ::-webkit-scrollbar-thumb { background: #1A237E; border-radius: 4px; }
+
+        .rating-badge {
+            background: linear-gradient(135deg, #FFA000, #FFB300);
+            box-shadow: 0 4px 15px rgba(255,160,0,0.4);
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Cabinet Avocat Alexandru Morărescu",
+        "description": "Cabinet de avocat specializat în drept civil, drept penal, drept comercial și consultanță juridică.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bdul Mircea Vodă 44, bloc M17, et.5, ap.24",
+            "addressLocality": "București",
+            "addressRegion": "Sector 3",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.419132,
+            "longitude": 26.112636
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "5"
+        },
+        "url": "https://avocat-morarescu.ro"
+    }
+    </script>
+</head>
+<body class="bg-white text-navy">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-blue-pale">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="flex items-center gap-1">
+                        <i class="fas fa-balance-scale text-amber text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-lg text-navy block leading-tight">Av. MORĂRESCU</span>
+                        <span class="text-xs text-navy/50 tracking-wider">CABINET DE AVOCAT</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#acasa" class="text-sm text-navy/70 hover:text-navy transition-colors font-medium">Acasă</a>
+                    <a href="#servicii" class="text-sm text-navy/70 hover:text-navy transition-colors font-medium">Servicii</a>
+                    <a href="#despre" class="text-sm text-navy/70 hover:text-navy transition-colors font-medium">Despre</a>
+                    <a href="#recenzii" class="text-sm text-navy/70 hover:text-navy transition-colors font-medium">Recenzii</a>
+                    <a href="#contact" class="text-sm px-6 py-2.5 bg-navy text-white hover:bg-navy-light transition-all rounded-sm font-medium">Contact</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-navy text-2xl" aria-label="Meniu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-blue-pale">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#acasa" class="block text-sm text-navy/70 hover:text-navy py-2 font-medium">Acasă</a>
+                <a href="#servicii" class="block text-sm text-navy/70 hover:text-navy py-2 font-medium">Servicii</a>
+                <a href="#despre" class="block text-sm text-navy/70 hover:text-navy py-2 font-medium">Despre</a>
+                <a href="#recenzii" class="block text-sm text-navy/70 hover:text-navy py-2 font-medium">Recenzii</a>
+                <a href="#contact" class="block text-sm text-navy py-2 font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="acasa" class="relative min-h-screen flex items-center bg-blue-pale overflow-hidden">
+        <!-- Subtle pattern -->
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 50%, rgba(26,35,126,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,160,0,0.05) 0%, transparent 50%);"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0 w-full relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-[2px] bg-amber"></div>
+                        <span class="text-sm text-amber font-medium tracking-wider uppercase">Cabinet de Avocat</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6 text-navy">
+                        Alexandru<br>
+                        <span class="text-amber">Morărescu</span>
+                    </h1>
+                    <p class="text-navy/60 text-lg max-w-md mb-8 leading-relaxed">
+                        Expertiză juridică de încredere în București. Apărăm drepturile dumneavoastră cu profesionalism și dedicare.
+                    </p>
+
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-3 rating-badge text-white px-5 py-3 rounded-sm mb-8">
+                        <div class="flex text-white text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="font-bold">5.0 / 5</span>
+                        <span class="text-white/80 text-sm">— 5 recenzii</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-navy hover:bg-navy-light text-white font-medium text-sm px-8 py-4 transition-all rounded-sm">
+                            <i class="fas fa-calendar-check"></i> PROGRAMARE
+                        </a>
+                        <a href="#servicii" class="inline-flex items-center gap-2 border-2 border-navy/20 text-navy hover:border-navy font-medium text-sm px-8 py-4 transition-all rounded-sm">
+                            SERVICII <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative">
+                        <!-- Legal symbol composition -->
+                        <div class="w-72 h-72 bg-white rounded-sm shadow-2xl shadow-navy/10 flex items-center justify-center relative">
+                            <i class="fas fa-balance-scale text-navy/10 text-[120px]"></i>
+                            <div class="absolute bottom-0 left-0 w-full h-1 bg-amber"></div>
+                        </div>
+                        <!-- Floating elements -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-amber/10 flex items-center justify-center">
+                            <i class="fas fa-gavel text-amber text-xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-navy/10 flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-navy text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicii" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-sm text-amber font-medium tracking-wider uppercase">Arii de practică</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 text-navy">Servicii Juridice</h2>
+                <p class="text-navy/50 mt-4 max-w-2xl mx-auto">Oferim asistență juridică completă într-o gamă largă de domenii ale dreptului.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card bg-blue-pale p-8 rounded-sm border border-transparent" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-navy text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-handshake text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Drept Civil</h3>
+                    <p class="text-navy/50 text-sm leading-relaxed">Contracte, succesiuni, proprietăți, litigii civile. Vă reprezentăm interesele cu maximă atenție.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-amber to-transparent"></div>
+                </div>
+
+                <div class="service-card bg-blue-pale p-8 rounded-sm border border-transparent" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-navy text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-gavel text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Drept Penal</h3>
+                    <p class="text-navy/50 text-sm leading-relaxed">Apărare în cauze penale, asistență în timpul urmăririi penale și în fața instanțelor.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-amber to-transparent"></div>
+                </div>
+
+                <div class="service-card bg-blue-pale p-8 rounded-sm border border-transparent" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-navy text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-briefcase text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Drept Comercial</h3>
+                    <p class="text-navy/50 text-sm leading-relaxed">Consultanță pentru societăți comerciale, contracte comerciale, litigii între parteneri de afaceri.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-amber to-transparent"></div>
+                </div>
+
+                <div class="service-card bg-blue-pale p-8 rounded-sm border border-transparent" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-navy text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Consultanță Juridică</h3>
+                    <p class="text-navy/50 text-sm leading-relaxed">Consiliere juridică preventivă, analiză documente, opinii legale și strategii procesuale.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-amber to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="despre" class="py-20 md:py-28 bg-blue-pale">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative bg-white p-10 rounded-sm shadow-lg shadow-navy/5">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-amber"></div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-20 h-20 bg-navy text-white flex items-center justify-center rounded-sm">
+                                <span class="font-display font-bold text-2xl">AM</span>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl">Alexandru Morărescu</h3>
+                                <p class="text-amber font-medium text-sm">Avocat titular</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 text-sm text-navy/60">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-university text-amber w-5"></i>
+                                <span>Membru al Baroului București</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-map-marker-alt text-amber w-5"></i>
+                                <span>Sector 3, București</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-star text-amber w-5"></i>
+                                <span>Rating perfect: 5.0 din 5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-[2px] bg-amber"></div>
+                        <span class="text-sm text-amber font-medium tracking-wider uppercase">Despre cabinet</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-navy">Profesionalism și<br><span class="text-amber">dedicare totală</span></h2>
+                    <p class="text-navy/60 leading-relaxed mb-6">
+                        Cabinetul de avocat Alexandru Morărescu oferă servicii juridice de calitate superioară în București. Cu experiență vastă în domeniul dreptului civil, penal și comercial, ne angajăm să oferim soluții juridice eficiente și personalizate.
+                    </p>
+                    <p class="text-navy/60 leading-relaxed mb-8">
+                        Fiecare caz primește atenția cuvenită, iar clienții noștri beneficiază de o abordare transparentă și orientată spre rezultate. Rating-ul nostru de 5 stele reflectă dedicarea noastră față de excelență.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-sm text-center">
+                            <div class="font-display font-bold text-2xl text-navy">5.0</div>
+                            <p class="text-xs text-navy/50 mt-1">Rating Google</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-sm text-center">
+                            <div class="font-display font-bold text-2xl text-navy">100%</div>
+                            <p class="text-xs text-navy/50 mt-1">Clienți mulțumiți</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="py-20 md:py-28 bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-sm text-amber font-medium tracking-wider uppercase">Valorile noastre</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mt-4">De Ce Să Ne Alegeți</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 border border-white/10 rounded-sm" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto amber-gradient text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-user-shield text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Confidențialitate</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Protejăm informațiile clienților noștri cu maximă discreție și respectăm secretul profesional.</p>
+                </div>
+                <div class="text-center p-8 border border-white/10 rounded-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto amber-gradient text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Rezultate</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Ne concentrăm pe obținerea celor mai bune rezultate posibile pentru fiecare client în parte.</p>
+                </div>
+                <div class="text-center p-8 border border-white/10 rounded-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto amber-gradient text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Disponibilitate</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Suntem mereu disponibili pentru clienții noștri, oferind răspunsuri rapide și suport constant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="recenzii" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-sm text-amber font-medium tracking-wider uppercase">Recenzii</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 text-navy">Ce Spun Clienții</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-pale p-8 rounded-sm" data-aos="fade-up">
+                    <div class="flex text-amber mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-navy/60 text-sm leading-relaxed mb-4">„Profesionalism desăvârșit și o implicare reală în rezolvarea cazului meu. Recomand cu cea mai mare încredere!"</p>
+                    <p class="font-display font-bold text-sm text-navy">— Ion S.</p>
+                </div>
+                <div class="bg-blue-pale p-8 rounded-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-amber mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-navy/60 text-sm leading-relaxed mb-4">„Am apelat pentru o problemă de drept comercial și am fost impresionat de rapiditatea și calitatea serviciilor."</p>
+                    <p class="font-display font-bold text-sm text-navy">— Maria D.</p>
+                </div>
+                <div class="bg-blue-pale p-8 rounded-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-amber mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-navy/60 text-sm leading-relaxed mb-4">„Comunicare excelentă, explicații clare și rezultate pe măsura așteptărilor. Un avocat de încredere!"</p>
+                    <p class="font-display font-bold text-sm text-navy">— Cristian V.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AREAS OF EXPERTISE DETAILED -->
+    <section class="py-20 md:py-28 bg-blue-pale">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-sm text-amber font-medium tracking-wider uppercase">Expertiză</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 text-navy">Domenii de Activitate</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-sm flex gap-6" data-aos="fade-up">
+                    <div class="w-1 bg-amber flex-shrink-0"></div>
+                    <div>
+                        <h3 class="font-display font-bold text-lg mb-3 text-navy">Litigii Civile</h3>
+                        <p class="text-navy/50 text-sm leading-relaxed">Reprezentare în fața instanțelor de judecată în cauze civile: revendicări, evacuări, pretenții, obligații contractuale.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-sm flex gap-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-1 bg-amber flex-shrink-0"></div>
+                    <div>
+                        <h3 class="font-display font-bold text-lg mb-3 text-navy">Dreptul Familiei</h3>
+                        <p class="text-navy/50 text-sm leading-relaxed">Divorțuri, partaje, custodia copiilor, pensii de întreținere, adopții și alte aspecte de dreptul familiei.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-sm flex gap-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-1 bg-amber flex-shrink-0"></div>
+                    <div>
+                        <h3 class="font-display font-bold text-lg mb-3 text-navy">Dreptul Muncii</h3>
+                        <p class="text-navy/50 text-sm leading-relaxed">Consultanță în relația angajat-angajator, contracte de muncă, concedieri, discriminare la locul de muncă.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-sm flex gap-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-1 bg-amber flex-shrink-0"></div>
+                    <div>
+                        <h3 class="font-display font-bold text-lg mb-3 text-navy">Recuperare Creanțe</h3>
+                        <p class="text-navy/50 text-sm leading-relaxed">Proceduri de executare silită, somații de plată, ordonanțe de plată și alte mecanisme de recuperare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-24 bg-navy text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <div class="inline-flex items-center gap-2 bg-amber/20 text-amber px-4 py-2 rounded-sm mb-6">
+                <i class="fas fa-star"></i>
+                <span class="font-medium text-sm">Rating 5.0 / 5 — Excelent</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Aveți nevoie de<br>consiliere juridică?</h2>
+            <p class="text-white/70 text-lg mb-10 max-w-xl mx-auto">Programați o consultare la cabinetul nostru din București, Sector 3.</p>
+            <a href="#contact" class="inline-flex items-center gap-3 amber-gradient text-white font-bold px-10 py-4 rounded-sm hover:opacity-90 transition-all text-lg">
+                <i class="fas fa-calendar-check"></i> Programare Vizită
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-sm text-amber font-medium tracking-wider uppercase">Contact</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 text-navy">Vizitați-ne</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-pale p-8 rounded-sm text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto bg-navy text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold mb-3 text-navy">Adresă</h3>
+                    <p class="text-navy/60 text-sm">Bdul Mircea Vodă 44<br>Bloc M17, Et.5, Ap.24<br>Sector 3, București</p>
+                </div>
+                <div class="bg-blue-pale p-8 rounded-sm text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-navy text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold mb-3 text-navy">Programare</h3>
+                    <p class="text-navy/60 text-sm">Vizitați-ne la cabinet<br>pentru o consultare<br>personalizată</p>
+                </div>
+                <div class="bg-blue-pale p-8 rounded-sm text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-navy text-white flex items-center justify-center rounded-sm mb-6">
+                        <i class="fas fa-star text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold mb-3 text-navy">Rating</h3>
+                    <div class="flex justify-center text-amber mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-navy/60 text-sm">5.0 din 5 — 5 recenzii</p>
+                </div>
+            </div>
+            <div class="mt-12" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d26.112636!3d44.419132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI1JzA5LjAiTiAyNsKwMDYnNDUuNSJF!5e0!3m2!1sro!2sro!4v1" width="100%" height="350" style="border:0; filter: grayscale(0.3);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-balance-scale text-amber"></i>
+                    <span class="font-display font-bold">Av. Alexandru <span class="text-amber">Morărescu</span></span>
+                </div>
+                <p class="text-white/50 text-sm">&copy; 2026 Cabinet Avocat Alexandru Morărescu. Toate drepturile rezervate.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center text-white/60 hover:bg-amber hover:text-white hover:border-amber transition-all rounded-sm" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center text-white/60 hover:bg-amber hover:text-white hover:border-amber transition-all rounded-sm" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Dorian Costescu &middot; Medicin&#259; de familie &#537;i pediatrie &icirc;n Slatina</title>
+<meta name="description" content="Cabinet medical Dr. Dorian Costescu &mdash; medic primar, medicina de familie &#537;i pediatrie, Slatina. Strada Gr&#259;dini&#539;ei 5. Programare la 0723 556 226.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { sky: '#5D9CEC', skyd: '#3D7AB8', skyl: '#E1EEFB', cream: '#FFFAF0', ink: '#1B2B3C', muted: '#5F7185', line: '#DDE4EC', sun: '#FFC65C', wa: '#25D366' },
+  fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] }
+}}}
+</script>
+
+<style>
+  html, body { background: #FFFAF0; color: #1B2B3C; }
+  body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; }
+  .serif { font-family: "Source Serif 4", Georgia, serif; letter-spacing: -.005em; line-height: 1.05; }
+  .italic { font-family: "Source Serif 4", Georgia, serif; font-style: italic; }
+
+  .btn-sky { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #5D9CEC; color: #fff; font-weight: 600; border-radius: 999px; box-shadow: 0 14px 32px -14px rgba(93,156,236,.6); transition: all .25s; }
+  .btn-sky:hover { background: #3D7AB8; transform: translateY(-2px); }
+  .btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: transparent; color: #1B2B3C; border: 1.5px solid #1B2B3C; font-weight: 600; border-radius: 999px; transition: all .25s; }
+  .btn-outline:hover { background: #1B2B3C; color: #FFFAF0; }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; font-weight: 600; border-radius: 999px; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); }
+
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .4rem 1rem; background: #E1EEFB; color: #3D7AB8; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; }
+
+  .card { background: #fff; border: 1px solid #DDE4EC; border-radius: 24px; padding: 1.8rem; transition: all .35s; }
+  .card:hover { border-color: #5D9CEC; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(27,43,60,.2); }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Source Serif 4", serif; font-size: 1.7rem; border-bottom: 1px solid #DDE4EC; }
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dashed rgba(27,43,60,.15); font-size: .9rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #3D7AB8; font-weight: 600; }
+
+  .sun-circle { width: 58px; height: 58px; background: #FFC65C; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #1B2B3C; font-size: 1.4rem; }
+
+  .stat-pill { background: #fff; border: 1px solid #DDE4EC; padding: 1rem 1.5rem; border-radius: 999px; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-sky text-white flex items-center justify-center"><i class="fa-solid fa-stethoscope"></i></span>
+      <div class="leading-tight">
+        <p class="serif text-xl">Dr. Dorian Costescu</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-0.5">Medicin&#259; de familie &middot; Pediatrie</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#doctor"   class="hover:text-sky">Doctor</a>
+      <a href="#servicii" class="hover:text-sky">Servicii</a>
+      <a href="#locatie"  class="hover:text-sky">Loca&#539;ie</a>
+      <a href="#contact"  class="hover:text-sky">Contact</a>
+      <a href="tel:0723556226" class="btn-sky !py-2.5 !px-4 !text-xs">0723 556 226</a>
+    </nav>
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-sky text-white flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="serif text-xl">Dr. Dorian Costescu</span>
+    <button id="menu-close" class="w-11 h-11 rounded-full bg-sky text-white flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#doctor" class="mobile-link">Doctor</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#locatie" class="mobile-link">Loca&#539;ie</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0723556226" class="btn-sky">Sun&#259;</a>
+    <a href="https://wa.me/40723556226" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-heart-pulse"></i> Medic primar &middot; Cabinet propriu din Slatina</span>
+      <h1 class="serif mt-8 text-5xl sm:text-6xl lg:text-7xl">
+        Medicul<br>
+        <span class="italic text-sky">&icirc;n care familia ta</span><br>
+        are &icirc;ncredere.
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Cabinetul Dr. Dorian Costescu este locul din Slatina unde familiile g&#259;sesc consulta&#539;ii pentru copii &#537;i adul&#539;i, cu un medic care ascult&#259;, explic&#259; &#537;i nu gr&#259;be&#537;te. Medicin&#259; de familie &#537;i pediatrie, cu grij&#259; pentru fiecare pacient.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0723556226" class="btn-sky"><i class="fa-solid fa-phone"></i> Programare 0723 556 226</a>
+        <a href="https://wa.me/40723556226" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <span class="stat-pill text-sm"><strong class="text-sky">4.8</strong>/5 &middot; 21 recenzii</span>
+        <span class="stat-pill text-sm"><strong class="text-sky">Medic Primar</strong></span>
+        <span class="stat-pill text-sm"><strong class="text-sky">RO / EN</strong></span>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+      <div class="card !p-8 relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-sun/30 rounded-full"></div>
+        <div class="relative">
+          <span class="sun-circle"><i class="fa-solid fa-child-reaching"></i></span>
+          <h3 class="serif text-2xl mt-5">Pentru cei mici</h3>
+          <p class="text-sm text-muted mt-2">Pediatrie cu r&#259;bdare: vaccin&#259;ri, consulta&#539;ii, controale de rutin&#259;, boli frecvente ale copil&#259;riei.</p>
+
+          <div class="mt-6 pt-5 border-t border-line">
+            <span class="w-11 h-11 rounded-full bg-sky text-white inline-flex items-center justify-center"><i class="fa-solid fa-user-doctor"></i></span>
+            <h3 class="serif text-2xl mt-4">Pentru adul&#539;i</h3>
+            <p class="text-sm text-muted mt-2">Medicin&#259; de familie complet&#259;: consulta&#539;ii generale, re&#539;ete, trimiteri, monitorizare boli cronice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" class="py-16 sm:py-24 bg-skyl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">Despre doctor</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl">Dr. Constantin <span class="italic text-sky">Dorian Costescu.</span></h2>
+      <p class="mt-6 text-muted">Medic primar specializat &icirc;n medicina de familie &#537;i pediatrie, cu o practic&#259; independent&#259; &icirc;n Slatina.</p>
+    </div>
+    <div class="lg:col-span-7 space-y-4">
+      <div class="card"><div class="flex items-start gap-4"><i class="fa-solid fa-graduation-cap text-sky text-2xl mt-1"></i><div><p class="serif text-xl">Universitatea de Medicin&#259; &#537;i Farmacie</p><p class="text-sm text-muted mt-1">Educa&#539;ie medical&#259; la una dintre cele mai respectate universit&#259;&#539;i din Rom&#226;nia.</p></div></div></div>
+      <div class="card"><div class="flex items-start gap-4"><i class="fa-solid fa-award text-sky text-2xl mt-1"></i><div><p class="serif text-xl">Medic primar</p><p class="text-sm text-muted mt-1">Cel mai &icirc;nalt rang profesional &icirc;n practica medical&#259; rom&#226;neasc&#259;.</p></div></div></div>
+      <div class="card"><div class="flex items-start gap-4"><i class="fa-solid fa-leaf text-sky text-2xl mt-1"></i><div><p class="serif text-xl">Certificat Fitoterapie &#537;i Homeopatie</p><p class="text-sm text-muted mt-1">Abord&#259;ri complementare de s&#259;n&#259;tate, al&#259;turi de medicina clasic&#259;.</p></div></div></div>
+      <div class="card"><div class="flex items-start gap-4"><i class="fa-solid fa-shield-virus text-sky text-2xl mt-1"></i><div><p class="serif text-xl">Membru ESPID</p><p class="text-sm text-muted mt-1">European Society of Pediatric Infectious Diseases &mdash; educa&#539;ie continu&#259; &icirc;n pediatrie.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">Servicii medicale</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl">Ce se poate face <span class="italic text-sky">&icirc;n cabinet.</span></h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><i class="fa-solid fa-child text-sky text-2xl"></i><h3 class="serif text-2xl mt-3">Consulta&#539;ii pediatrice</h3><p class="mt-2 text-sm text-muted">Pentru nou-n&#259;scu&#539;i, sugari, copii &#537;i adolescen&#539;i. Examen clinic, sfaturi p&#259;rin&#539;i.</p></article>
+      <article class="card"><i class="fa-solid fa-syringe text-sky text-2xl"></i><h3 class="serif text-2xl mt-3">Vaccin&#259;ri pediatrice</h3><p class="mt-2 text-sm text-muted">Schema na&#539;ional&#259; &#537;i vaccin&#259;ri op&#539;ionale. Consiliere &icirc;nainte &#537;i urm&#259;rire dup&#259;.</p></article>
+      <article class="card"><i class="fa-solid fa-heart text-sky text-2xl"></i><h3 class="serif text-2xl mt-3">Medicina familiei</h3><p class="mt-2 text-sm text-muted">Consulta&#539;ii, re&#539;ete compensate, adeverin&#539;e, trimiteri la specialist.</p></article>
+      <article class="card"><i class="fa-solid fa-clipboard-check text-sky text-2xl"></i><h3 class="serif text-2xl mt-3">Controale periodice</h3><p class="mt-2 text-sm text-muted">Bilanturi anuale, monitorizare boli cronice, urm&#259;rire tratamente.</p></article>
+      <article class="card"><i class="fa-solid fa-leaf text-sky text-2xl"></i><h3 class="serif text-2xl mt-3">Fitoterapie &amp; homeopatie</h3><p class="mt-2 text-sm text-muted">Abord&#259;ri complementare c&#226;nd sunt indicate &#537;i &icirc;n acord cu tratamentul clasic.</p></article>
+      <article class="card"><i class="fa-solid fa-file-medical text-sky text-2xl"></i><h3 class="serif text-2xl mt-3">Certificate medicale</h3><p class="mt-2 text-sm text-muted">Pentru &#537;coal&#259;, loc de munc&#259;, sport, c&#259;l&#259;torii sau alte nevoi administrative.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24 bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip !bg-sky/20 !text-sky">Loca&#539;ie &amp; program</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl">Strada Gr&#259;dini&#539;ei 5,<br><span class="italic text-sun">Slatina.</span></h2>
+      <p class="mt-6 text-cream/75 leading-relaxed">Cabinetul are acces accesibil pentru persoane cu mobilitate redus&#259; &mdash; intrare &#537;i parcare adaptate. &Icirc;n centru Slatina, u&#537;or de g&#259;sit.</p>
+      <div class="mt-8 space-y-3 text-sm">
+        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-sun w-5"></i> Strada Gr&#259;dini&#539;ei nr. 5, Cabinet 1</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-city text-sun w-5"></i> 230086 Slatina, jud. Olt</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-sun w-5"></i> 0723 556 226</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-sun w-5"></i> Intrare &#537;i parcare accesibile</div>
+      </div>
+      <a href="https://www.google.com/maps/place/Dorian+COSTESCU/@44.4300603,24.3573546,17z" target="_blank" rel="noopener" class="mt-8 btn-sky inline-flex"><i class="fa-solid fa-map-location-dot"></i> Vezi pe hart&#259;</a>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="bg-cream text-ink p-6 sm:p-8 rounded-2xl">
+        <p class="chip">Program</p>
+        <ul id="hours" class="mt-5">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span>08:00&ndash;12:00 / 16:00&ndash;18:00</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span>08:00&ndash;12:00 / 16:00&ndash;18:00</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span>08:00&ndash;12:00 / 16:00&ndash;18:00</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span>08:00&ndash;12:00 / 16:00&ndash;18:00</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span>08:00&ndash;12:00</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+        <p class="mt-5 text-sm text-muted">Recomand&#259;m programarea telefonic&#259; pentru a evita a&#537;teptarea.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Contact</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl">Programare <span class="italic text-sky">telefonic&#259;.</span></h2>
+    <p class="mt-6 text-muted">Un apel scurt, un interval stabilit. Pentru urgen&#539;e, suna&#539;i &#537;i &icirc;ncerc&#259;m s&#259; v&#259; primim mai repede.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:0723556226" class="btn-sky"><i class="fa-solid fa-phone"></i> 0723 556 226</a>
+      <a href="https://wa.me/40723556226" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-12 pb-24 md:pb-12 bg-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8 text-sm">
+    <div>
+      <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-full bg-sky text-white flex items-center justify-center"><i class="fa-solid fa-stethoscope"></i></span><span class="serif text-lg">Dr. Dorian Costescu</span></div>
+      <p class="mt-3 text-muted">Cabinet medical &mdash; medicina de familie &#537;i pediatrie &icirc;n Slatina.</p>
+    </div>
+    <div>
+      <p class="serif text-lg text-sky">Servicii</p>
+      <ul class="mt-3 space-y-1.5 text-muted"><li>Consulta&#539;ii pediatrice</li><li>Vaccin&#259;ri</li><li>Medicina familiei</li><li>Controale periodice</li></ul>
+    </div>
+    <div>
+      <p class="serif text-lg text-sky">Contact</p>
+      <ul class="mt-3 space-y-1.5 text-muted">
+        <li><i class="fa-solid fa-phone text-sky mr-2"></i>0723 556 226</li>
+        <li><i class="fa-brands fa-whatsapp text-sky mr-2"></i>wa.me/40723556226</li>
+        <li><i class="fa-solid fa-location-dot text-sky mr-2"></i>Gr&#259;dini&#539;ei 5, Slatina</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-line flex flex-col sm:flex-row justify-between gap-3 text-xs uppercase tracking-widest text-muted">
+    <span>&copy; 2026 Medical Baby SRL</span>
+    <span>Slatina &middot; Olt</span>
+    <span>Medicin&#259; de familie &amp; pediatrie</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0723556226" class="py-4 bg-sky text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40723556226" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Physician","name":"Dr. Dorian Costescu","medicalSpecialty":["FamilyMedicine","Pediatrics"],"telephone":"+40723556226","address":{"@type":"PostalAddress","streetAddress":"Strada Gradinitei 5","addressLocality":"Slatina","addressRegion":"Olt","postalCode":"230086","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":44.4300603,"longitude":24.3573546},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"21"}}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+  const menu = document.getElementById('menu'), openBtn = document.getElementById('menu-open'), closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try { const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' })); const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]'); if (row) row.classList.add('today'); } catch (e) {}
+</script>
+</body></html>

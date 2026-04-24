@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tehnic&#259; Dentar&#259; Florea | Laborator Dentar Slatina</title>
+<meta name="description" content="Cabinet de Tehnic&#259; Dentar&#259; Florea — laborator de tehnic&#259; dentar&#259; &#238;n Slatina, Strada Cri&#537;an 18. Lucr&#259;ri protetice, proteze, coroane. Tel: 0723 322 077.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: {
+        porcelain: '#FEFEFE',
+        'porcelain-warm': '#F8F6F1',
+        'porcelain-cool': '#EEF2F5',
+        steel: { dark: '#1E293B', mid: '#475569', light: '#94A3B8' },
+        cyan: { bright: '#06B6D4', deep: '#0E7490', soft: '#CFFAFE' },
+        rose: '#F43F5E',
+      },
+      fontFamily: { heading: ['Syne', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+    }}
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, sans-serif; }
+  .dot-grid { background-image: radial-gradient(circle, rgba(14,116,144,0.08) 1px, transparent 1px); background-size: 24px 24px; }
+  .cyan-bar { width: 50px; height: 3px; background: #06B6D4; border-radius: 2px; }
+  .nav-scroll { background: rgba(254,254,254,0.97); backdrop-filter: blur(10px); box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+  .card-lab { transition: all 0.3s; }
+  .card-lab:hover { transform: translateY(-4px); box-shadow: 0 12px 35px rgba(14,116,144,0.1); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Cabinet de Tehnic\u0103 Dentar\u0103 Florea",
+  "telephone": "+40723322077",
+  "address": { "@type": "PostalAddress", "streetAddress": "Strada Cri\u0219an 18", "addressLocality": "Slatina", "postalCode": "230001", "addressRegion": "Olt", "addressCountry": "RO" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.432396, "longitude": 24.372217 }
+}
+</script>
+</head>
+<body class="bg-porcelain text-steel-dark font-body">
+
+<nav id="nav" class="fixed top-0 w-full z-50 transition-all bg-porcelain/80">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-cyan-deep rounded-lg flex items-center justify-center"><i class="fa-solid fa-tooth text-white text-sm"></i></div>
+      <span class="font-heading font-bold">Tehnic&#259; Dentar&#259; <span class="text-cyan-deep">Florea</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm text-steel-light">
+      <a href="#despre" class="hover:text-cyan-deep transition">Despre</a>
+      <a href="#lucrari" class="hover:text-cyan-deep transition">Lucr&#259;ri</a>
+      <a href="#program" class="hover:text-cyan-deep transition">Program</a>
+      <a href="#contact" class="hover:text-cyan-deep transition">Contact</a>
+    </div>
+    <a href="tel:+40723322077" class="hidden md:inline-block bg-cyan-deep text-white text-sm px-5 py-2.5 rounded-lg hover:bg-cyan-bright transition font-medium">
+      <i class="fa-solid fa-phone mr-1"></i> 0723 322 077
+    </a>
+    <button id="menuBtn" class="md:hidden text-steel-light text-xl"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-porcelain border-t border-steel-dark/5 px-6 py-4 space-y-3">
+    <a href="#despre" class="block text-steel-light text-sm">Despre</a>
+    <a href="#lucrari" class="block text-steel-light text-sm">Lucr&#259;ri</a>
+    <a href="#program" class="block text-steel-light text-sm">Program</a>
+    <a href="#contact" class="block text-steel-light text-sm">Contact</a>
+    <a href="tel:+40723322077" class="block bg-cyan-deep text-white text-center py-3 rounded-lg font-medium mt-2">Sun&#259; acum</a>
+  </div>
+</nav>
+
+<section class="min-h-screen flex items-center dot-grid pt-20">
+  <div class="max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+    <div data-aos="fade-right">
+      <div class="cyan-bar mb-8"></div>
+      <p class="text-cyan-deep text-xs tracking-[0.25em] uppercase font-bold mb-4">Laborator de Tehnic&#259; Dentar&#259;</p>
+      <h1 class="font-heading font-extrabold text-5xl md:text-6xl leading-[1.1] mb-6">
+        Florea
+      </h1>
+      <p class="text-steel-mid text-lg mb-3">Slatina &middot; Strada Cri&#537;an 18</p>
+      <p class="text-steel-light mb-8 max-w-md">Lucr&#259;ri dentare de precizie pentru medicii stomatologi &#537;i pacien&#539;i. Rating 5/5 pe Google.</p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="tel:+40723322077" class="bg-cyan-deep text-white font-semibold px-8 py-4 rounded-lg text-center hover:bg-cyan-bright transition">
+          <i class="fa-solid fa-phone mr-2"></i> 0723 322 077
+        </a>
+        <a href="#lucrari" class="border-2 border-steel-dark/10 text-steel-dark font-medium px-8 py-4 rounded-lg text-center hover:border-cyan-deep transition">
+          Lucr&#259;ri
+        </a>
+      </div>
+    </div>
+    <div data-aos="fade-left" class="hidden md:block">
+      <div class="bg-white rounded-3xl p-10 shadow-lg">
+        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-steel-dark/5">
+          <div class="w-14 h-14 bg-cyan-soft rounded-2xl flex items-center justify-center">
+            <i class="fa-solid fa-tooth text-cyan-deep text-2xl"></i>
+          </div>
+          <div>
+            <p class="font-heading font-bold">Laborator Dentar</p>
+            <p class="text-steel-light text-sm">Precizie &#537;i calitate</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-sm text-steel-mid">
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-bright"></i> Coroane &#537;i pun&#539;i</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-bright"></i> Proteze dentare</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-bright"></i> Fa&#539;ete ceramice</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-bright"></i> Lucr&#259;ri pe implant</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-24 bg-porcelain-warm">
+  <div class="max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
+    <div class="cyan-bar mx-auto mb-6"></div>
+    <h2 class="font-heading font-bold text-3xl mb-8">Despre laborator</h2>
+    <p class="text-steel-mid leading-relaxed mb-5">
+      Cabinetul de Tehnic&#259; Dentar&#259; Florea func&#539;ioneaz&#259; &#238;n Slatina, pe Strada Cri&#537;an 18. Ne adres&#259;m at&#226;t medicilor stomatologi care au nevoie de lucr&#259;ri protetice de calitate, c&#226;t &#537;i pacien&#539;ilor care caut&#259; solu&#539;ii dentare personalizate.
+    </p>
+    <p class="text-steel-mid leading-relaxed mb-5">
+      Execut&#259;m lucr&#259;ri de precizie: coroane, pun&#539;i, proteze, fa&#539;ete ceramice &#537;i lucr&#259;ri pe implanturi. Fiecare pies&#259; este realizat&#259; cu aten&#539;ie la detalii &#537;i respect pentru timpul pacientului.
+    </p>
+    <p class="text-steel-mid leading-relaxed">
+      Rating perfect 5/5 pe Google — colabor&#259;m cu &#238;ncredere cu medicii &#537;i pacien&#539;ii din zon&#259;.
+    </p>
+  </div>
+</section>
+
+<section id="lucrari" class="py-24 bg-porcelain dot-grid">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="cyan-bar mx-auto mb-6"></div>
+      <h2 class="font-heading font-bold text-3xl">Lucr&#259;ri dentare</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div data-aos="fade-up" class="bg-white rounded-2xl p-7 card-lab border border-steel-dark/5">
+        <div class="w-12 h-12 bg-cyan-soft rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-tooth text-cyan-deep text-lg"></i>
+        </div>
+        <h3 class="font-heading font-bold text-lg mb-2">Coroane dentare</h3>
+        <p class="text-steel-light text-sm leading-relaxed">Coroane ceramice, metalo-ceramice &#537;i zirconiu de &#238;nalt&#259; calitate.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-white rounded-2xl p-7 card-lab border border-steel-dark/5">
+        <div class="w-12 h-12 bg-cyan-soft rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-teeth text-cyan-deep text-lg"></i>
+        </div>
+        <h3 class="font-heading font-bold text-lg mb-2">Pun&#539;i dentare</h3>
+        <p class="text-steel-light text-sm leading-relaxed">Pun&#539;i fixe pentru &#238;nlocuirea mai multor din&#539;i lips&#259;, adaptate fiec&#259;rui caz.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-white rounded-2xl p-7 card-lab border border-steel-dark/5">
+        <div class="w-12 h-12 bg-cyan-soft rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-teeth-open text-cyan-deep text-lg"></i>
+        </div>
+        <h3 class="font-heading font-bold text-lg mb-2">Proteze dentare</h3>
+        <p class="text-steel-light text-sm leading-relaxed">Proteze totale, par&#539;iale, scheletate — confort &#537;i func&#539;ionalitate.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="240" class="bg-white rounded-2xl p-7 card-lab border border-steel-dark/5">
+        <div class="w-12 h-12 bg-cyan-soft rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-gem text-cyan-deep text-lg"></i>
+        </div>
+        <h3 class="font-heading font-bold text-lg mb-2">Fa&#539;ete ceramice</h3>
+        <p class="text-steel-light text-sm leading-relaxed">Estetic&#259; dentar&#259; de top — fa&#539;ete sub&#539;iri din ceramic&#259; presat&#259;.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="320" class="bg-white rounded-2xl p-7 card-lab border border-steel-dark/5">
+        <div class="w-12 h-12 bg-cyan-soft rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-screwdriver-wrench text-cyan-deep text-lg"></i>
+        </div>
+        <h3 class="font-heading font-bold text-lg mb-2">Lucr&#259;ri pe implant</h3>
+        <p class="text-steel-light text-sm leading-relaxed">Supracoroane &#537;i lucr&#259;ri protetice pentru implanturi dentare.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400" class="bg-white rounded-2xl p-7 card-lab border border-steel-dark/5">
+        <div class="w-12 h-12 bg-cyan-soft rounded-xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-hammer text-cyan-deep text-lg"></i>
+        </div>
+        <h3 class="font-heading font-bold text-lg mb-2">Repara&#539;ii proteze</h3>
+        <p class="text-steel-light text-sm leading-relaxed">Reparare &#537;i ajustare proteze existente — rapid &#537;i de calitate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 bg-porcelain-cool">
+  <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+    <div class="bg-white rounded-2xl p-8 shadow-sm">
+      <div class="text-center mb-6">
+        <h2 class="font-heading font-bold text-2xl">Program de lucru</h2>
+      </div>
+      <div class="space-y-3 text-sm max-w-md mx-auto">
+        <div class="flex justify-between py-3 border-b border-steel-dark/5"><span class="text-steel-light">Luni</span><span class="font-medium text-cyan-deep">13:00 — 19:00</span></div>
+        <div class="flex justify-between py-3 border-b border-steel-dark/5"><span class="text-steel-light">Mar&#539;i</span><span class="font-medium text-cyan-deep">13:00 — 19:00</span></div>
+        <div class="flex justify-between py-3 border-b border-steel-dark/5"><span class="text-steel-light">Miercuri</span><span class="font-medium text-cyan-deep">13:00 — 19:00</span></div>
+        <div class="flex justify-between py-3 border-b border-steel-dark/5"><span class="text-steel-light">Joi</span><span class="font-medium text-cyan-deep">13:00 — 19:00</span></div>
+        <div class="flex justify-between py-3 border-b border-steel-dark/5"><span class="text-steel-light">Vineri</span><span class="text-steel-light/50">&#206;nchis</span></div>
+        <div class="flex justify-between py-3"><span class="text-steel-light">Weekend</span><span class="text-steel-light/50">&#206;nchis</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-24 bg-porcelain">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="cyan-bar mx-auto mb-6"></div>
+      <h2 class="font-heading font-bold text-3xl">Contact</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5" data-aos="fade-up">
+      <a href="tel:+40723322077" class="bg-porcelain-warm rounded-2xl p-8 text-center card-lab">
+        <div class="w-14 h-14 bg-cyan-soft rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-phone text-cyan-deep text-xl"></i></div>
+        <p class="font-heading font-bold text-lg mb-1">Telefon</p>
+        <p class="text-cyan-deep font-medium text-lg">0723 322 077</p>
+      </a>
+      <div class="bg-porcelain-warm rounded-2xl p-8 text-center">
+        <div class="w-14 h-14 bg-cyan-soft rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-location-dot text-cyan-deep text-xl"></i></div>
+        <p class="font-heading font-bold text-lg mb-1">Adres&#259;</p>
+        <p class="text-steel-light text-sm">Strada Cri&#537;an 18, Slatina</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=44.432396,24.372217" target="_blank" class="text-cyan-deep text-xs hover:underline mt-2 inline-block"><i class="fa-solid fa-external-link mr-1"></i> Hart&#259;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-steel-dark py-12">
+  <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-7 h-7 bg-cyan-bright rounded-lg flex items-center justify-center"><i class="fa-solid fa-tooth text-steel-dark text-xs"></i></div>
+      <span class="font-heading font-bold text-white">Tehnic&#259; Dentar&#259; <span class="text-cyan-bright">Florea</span></span>
+    </div>
+    <div class="text-white/40 text-sm text-center">
+      Str. Cri&#537;an 18, Slatina &middot;
+      <a href="tel:+40723322077" class="text-cyan-bright hover:underline">0723 322 077</a>
+    </div>
+    <span class="text-white/20 text-xs">&copy; 2026</span>
+  </div>
+</footer>
+
+<div class="fixed bottom-0 left-0 right-0 md:hidden bg-porcelain/95 backdrop-blur border-t border-steel-dark/10 p-3 z-50">
+  <a href="tel:+40723322077" class="flex items-center justify-center gap-2 bg-cyan-deep text-white font-semibold py-3 rounded-lg w-full">
+    <i class="fa-solid fa-phone"></i> 0723 322 077
+  </a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 80 });
+  window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav-scroll', window.scrollY > 40), { passive: true });
+  const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', () => { mm.classList.toggle('hidden'); mb.innerHTML = mm.classList.contains('hidden') ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>'; });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); mb.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+</script>
+</body>
+</html>

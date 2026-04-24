@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris 15 Beauty Salon &middot; Salon de frumuse&#539;e &middot; Cluj-Napoca</title>
+<meta name="description" content="Paris 15 Beauty Salon &#8212; p&#259;r, unghii &#537;i tratamente faciale &#238;n Cluj-Napoca. Strada Paris 15. Echip&#259; dedicat&#259; &#537;i 4.9/5 pe Google din 40 de recenzii. Telefon 0756 322 006.">
+<meta name="keywords" content="salon frumusete Cluj, coafura Cluj, manichiura Cluj, tratamente faciale Cluj, Paris 15 salon, beauty Cluj-Napoca">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#b07058">
+<meta property="og:title" content="Paris 15 Beauty Salon &middot; Cluj-Napoca">
+<meta property="og:description" content="Hair, nails &#537;i facial &#238;n Cluj. Program&#259;ri la 0756 322 006.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        rosegold: {50:'#fbf1ec',100:'#f4d7ca',200:'#e8b3a0',300:'#d99278',400:'#c5755a',500:'#b07058',600:'#8c5745',700:'#683f31',800:'#44281f',900:'#221310'},
+        blush: {50:'#fdecec',100:'#f8cbcb',200:'#f0a3a3',300:'#e77b7b',400:'#dc5757',500:'#c63b3b',600:'#9d2a2a',700:'#6f1c1c',800:'#3f0e0e',900:'#1d0606'},
+        pearl: '#fbf6f0',
+        onyx2: '#18100e'
+      },
+      fontFamily: {
+        display: ['Italiana','Georgia','serif'],
+        sans: ['Jost','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --rosegold:#b07058; --blush:#c63b3b; --pearl:#fbf6f0; --onyx2:#18100e; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Jost',system-ui,sans-serif; color:var(--onyx2); background:var(--pearl); font-weight:400; }
+  h1,h2,h3,h4 { font-family:'Italiana',Georgia,serif; letter-spacing:.01em; font-weight:400; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 82% 18%, rgba(198,59,59,.15), transparent 45%),
+      radial-gradient(circle at 15% 85%, rgba(176,112,88,.22), transparent 55%),
+      linear-gradient(168deg,#fbf6f0 0%,#fbf1ec 55%,#f4d7ca 100%);
+  }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem 1rem; border-radius:999px; font-size:.7rem; letter-spacing:.28em; text-transform:uppercase; font-weight:500; }
+  .chip-rg { background:rgba(176,112,88,.12); color:#683f31; border:1px solid rgba(176,112,88,.3); }
+  .chip-bl { background:rgba(198,59,59,.1); color:#9d2a2a; border:1px solid rgba(198,59,59,.3); }
+  .btn-primary { background:var(--onyx2); color:var(--pearl); padding:.95rem 2rem; border-radius:0; font-weight:400; letter-spacing:.25em; text-transform:uppercase; font-size:.78rem; font-family:'Jost',sans-serif; display:inline-flex; align-items:center; gap:.55rem; transition:all .3s; }
+  .btn-primary:hover { background:#44281f; transform:translateY(-2px); }
+  .btn-rose { background:var(--rosegold); color:var(--pearl); padding:.95rem 2rem; border-radius:0; font-weight:400; letter-spacing:.25em; text-transform:uppercase; font-size:.78rem; font-family:'Jost',sans-serif; display:inline-flex; align-items:center; gap:.55rem; transition:all .3s; }
+  .btn-rose:hover { background:#8c5745; transform:translateY(-2px); }
+  .btn-outline { background:transparent; color:var(--onyx2); padding:.95rem 2rem; border-radius:0; font-weight:400; letter-spacing:.25em; text-transform:uppercase; font-size:.78rem; font-family:'Jost',sans-serif; display:inline-flex; align-items:center; gap:.55rem; border:1px solid var(--onyx2); transition:all .3s; }
+  .btn-outline:hover { background:var(--onyx2); color:var(--pearl); }
+  .btn-wa { background:#25d366; color:#fff; padding:.95rem 1.6rem; border-radius:0; font-weight:500; letter-spacing:.2em; text-transform:uppercase; font-size:.78rem; display:inline-flex; align-items:center; gap:.5rem; transition:all .3s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#fff; border:1px solid rgba(176,112,88,.15); padding:2rem; transition:all .3s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--rosegold); box-shadow:0 20px 40px -24px rgba(24,16,14,.2); }
+  .service-ico { width:54px; height:54px; border:1px solid var(--rosegold); color:var(--rosegold); display:flex; align-items:center; justify-content:center; font-size:1.25rem; }
+  .section-label { display:inline-block; font-size:.72rem; letter-spacing:.44em; text-transform:uppercase; color:var(--rosegold); font-weight:500; }
+  .headline { font-size:clamp(2.4rem,5.5vw,4.5rem); line-height:1.02; color:var(--onyx2); font-family:'Italiana',serif; font-weight:400; letter-spacing:.005em; }
+  .headline em { font-style:italic; color:var(--rosegold); }
+  .stat-num { font-family:'Italiana',serif; font-size:3rem; color:var(--rosegold); line-height:1; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px dashed rgba(176,112,88,.25); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:42px; height:42px; background:rgba(176,112,88,.12); color:var(--rosegold); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:var(--onyx2); font-weight:500; font-size:.8rem; letter-spacing:.28em; text-transform:uppercase; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--rosegold); transform:scaleX(0); transition:transform .3s; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .ornament { display:flex; align-items:center; gap:.75rem; justify-content:center; margin:1rem auto; max-width:260px; }
+  .ornament span { flex:1; height:1px; background:var(--rosegold); opacity:.55; }
+  .ornament i { color:var(--rosegold); font-size:.85rem; }
+  .review-card { background:#fff; border:1px solid rgba(176,112,88,.15); padding:2rem; position:relative; }
+  .review-card::before { content:'\201C'; position:absolute; top:-10px; left:18px; font-family:'Italiana',serif; font-size:5rem; color:var(--rosegold); line-height:1; }
+  .stars { color:#d4a15a; letter-spacing:.2em; font-size:.95rem; }
+  .map-wrap { overflow:hidden; border:1px solid rgba(176,112,88,.3); }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:#fff; border-top:1px solid rgba(176,112,88,.2); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; font-weight:500; font-size:.82rem; text-transform:uppercase; letter-spacing:.15em; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+  .hours-table { width:100%; }
+  .hours-table tr { border-bottom:1px dashed rgba(176,112,88,.2); }
+  .hours-table tr:last-child { border-bottom:none; }
+  .hours-table th { text-align:left; padding:.85rem 0; color:var(--onyx2); font-family:'Italiana',serif; font-weight:400; font-size:1.1rem; }
+  .hours-table td { text-align:right; padding:.85rem 0; font-weight:500; color:var(--rosegold); letter-spacing:.08em; }
+  .hours-table .closed { color:#8c5745; font-style:italic; font-family:'Italiana',serif; }
+</style>
+</head>
+<body class="bg-pearl text-onyx2">
+
+<!-- TOP BAR -->
+<div class="bg-onyx2 text-pearl/85 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span style="letter-spacing:.15em;text-transform:uppercase;"><i class="fas fa-star text-rosegold-300 mr-1"></i> 4.9 / 40 recenzii</span>
+      <span class="hidden sm:inline" style="letter-spacing:.15em;text-transform:uppercase;"><i class="fas fa-map-marker-alt text-rosegold-300 mr-1"></i> Strada Paris 15, Cluj-Napoca</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:0756322006" class="hover:text-rosegold-200"><i class="fas fa-phone mr-1"></i> 0756 322 006</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="bg-pearl/95 backdrop-blur sticky top-0 z-50 border-b border-rosegold-100">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-11 h-11 border border-rosegold-500 text-rosegold-500 flex items-center justify-center"><i class="fas fa-spa"></i></div>
+      <div class="leading-tight">
+        <div class="font-display text-2xl text-onyx2 tracking-wider">Paris 15</div>
+        <div class="text-[10px] tracking-[.42em] uppercase text-rosegold-600">Beauty Salon &middot; Cluj</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#echipa" class="nav-link">Echipa</a>
+      <a href="#recenzii" class="nav-link">Recenzii</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+    </nav>
+    <a href="tel:0756322006" class="btn-primary hidden md:inline-flex"><i class="fas fa-calendar"></i> Programare</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-surface">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="chip chip-rg"><i class="fas fa-scissors"></i> P&#259;r</span>
+        <span class="chip chip-rg"><i class="fas fa-hand-sparkles"></i> Unghii</span>
+        <span class="chip chip-bl"><i class="fas fa-spa"></i> Facial</span>
+      </div>
+      <h1 class="headline mb-6">
+        Un salon <em>&#238;n care</em><br>te sim&#539;i acas&#259;,<br>&#238;n Cluj-Napoca.
+      </h1>
+      <div class="ornament" style="margin-left:0;max-width:220px;"><i class="fas fa-gem"></i><span></span></div>
+      <p class="text-lg text-onyx2/75 leading-relaxed max-w-2xl mb-8 mt-6">Paris 15 Beauty Salon adun&#259; sub acela&#537;i acoperi&#537; trei domenii &#8212; p&#259;r, unghii &#537;i tratamente faciale &#8212; &#238;ntr-o formul&#259; unde fiecare procedur&#259; prime&#537;te aten&#539;ia &#537;i timpul pe care &#238;l merit&#259;. Andrevia la p&#259;r, Andrada la unghii, Karina la cosmetic&#259;. Echipa &#238;n care clientele revin de ani buni.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0756322006" class="btn-primary"><i class="fas fa-phone"></i> 0756 322 006</a>
+        <a href="https://wa.me/40756322006" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#servicii" class="btn-outline">Vezi serviciile</a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 max-w-lg border-t border-rosegold-200 pt-6">
+        <div>
+          <div class="stat-num">4.9</div>
+          <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600 mt-1 font-medium">Rating Google</div>
+        </div>
+        <div>
+          <div class="stat-num">40</div>
+          <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600 mt-1 font-medium">Recenzii</div>
+        </div>
+        <div>
+          <div class="stat-num">3</div>
+          <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600 mt-1 font-medium">Specialiste</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="bg-white p-8 border border-rosegold-200 shadow-xl">
+        <div class="ornament"><span></span><i class="fas fa-gem"></i><span></span></div>
+        <h3 class="font-display text-3xl text-onyx2 text-center mb-1">Programeaz&#259;-te</h3>
+        <p class="text-center text-xs text-rosegold-600 mb-6" style="letter-spacing:.28em;text-transform:uppercase;">Recomand&#259;m programare</p>
+        <ul class="space-y-1 text-sm">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600">Telefon</div>
+              <a href="tel:0756322006" class="font-display text-2xl text-onyx2">0756 322 006</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600">Adres&#259;</div>
+              <div class="font-medium">Strada Paris 15</div>
+              <div class="text-xs text-onyx2/65">400394 Cluj-Napoca</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-credit-card"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600">Plat&#259;</div>
+              <div class="font-medium">Card &middot; cash</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-restroom"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600">Facilit&#259;&#539;i</div>
+              <div class="font-medium">Toalet&#259; pentru cliente</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="py-20 lg:py-28 bg-pearl">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre Paris 15</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Trei arte, <em class="text-rosegold-600">un singur salon</em>.</h2>
+      <div class="ornament" style="margin-left:0;max-width:140px;"><i class="fas fa-gem"></i><span></span></div>
+      <p class="text-lg text-onyx2/75 leading-relaxed mb-4 mt-6">Paris 15 Beauty Salon este locul unde trei specialiste lucreaz&#259; sub acela&#537;i acoperi&#537;, fiecare cu domeniul ei: Andrevia pentru coafura &#537;i culoare (&bdquo;blondul perfect&rdquo;, dup&#259; cum spun clientele), Andrada pentru manichiur&#259; &#537;i pedichiur&#259;, iar Karina Corpodean pentru tratamente faciale.</p>
+      <p class="text-lg text-onyx2/75 leading-relaxed">Rezultatul: un singur drum &#238;n centrul Clujului pentru tot programul dumneavoastr&#259; de &#238;nfrumuse&#539;are. Cu 40 de recenzii pe Google &#537;i o not&#259; medie de 4.9, suntem unul dintre cele mai bine clasate saloane din ora&#537;.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-scissors"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Echip&#259; constant&#259;</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Acelea&#537;i persoane de ani buni. Nu schimb&#259;m echipa la fiecare c&#226;teva luni. Continuitate &#537;i rela&#539;ie real&#259; cu clientele.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-clock"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Timp alocat corect</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Nu punem trei cliente pe aceea&#537;i or&#259;. Fiecare programare prime&#537;te ora ei &#537;i toat&#259; aten&#539;ia necesar&#259;.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-heart"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Consultan&#539;&#259; real&#259;</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Nu spunem doar &bdquo;da&rdquo;. Dac&#259; ceea ce cere&#539;i nu se potrive&#537;te, discut&#259;m solu&#539;ii alternative realiste pentru p&#259;rul sau tenul dvs.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-shield-halved"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Produse de calitate</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Lucr&#259;m cu produse profesionale de saloane, pentru rezultate durabile &#537;i sanatatea p&#259;rului sau tenului.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 lg:py-28 bg-rosegold-50/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Servicii</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4">Tot ce ai nevoie <em class="text-rosegold-600">&#238;ntr-un loc</em></h2>
+      <div class="ornament"><span></span><i class="fas fa-gem"></i><span></span></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-scissors"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Tuns p&#259;r</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Tuns clasic, bob, long bob, butterfly cut, shag &#537;i layered. Cu consultan&#539;&#259; &#238;nainte pentru forma potrivit&#259;.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-palette"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">V&#259;psit &#537;i blond</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Balayage, foli&#539;e, blond complet, nuan&#539;are &#537;i cur&#259;&#539;area culorii. Specializate &#238;n blonduri complexe.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-wind"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Coafuri &#537;i evenimente</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Coafuri pentru nunti, botezuri &#537;i alte evenimente. Ondula&#539;ii, up-do, inclusiv cu accesorii.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-hand-sparkles"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Manichiur&#259; cu gel</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Manichiur&#259; cu gel polish sau construc&#539;ie, cu nail art la cerere. Andrada lucreaz&#259; personalizat, dup&#259; preferin&#539;&#259;.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-shoe-prints"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Pedichiur&#259;</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Pedichiur&#259; spa sau cu gel. Cur&#259;&#539;are, &#238;ndep&#259;rtare piele uscat&#259; &#537;i aplicare tratamente regeneratoare.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-face-smile-beam"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Tratamente faciale</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Cur&#259;&#539;are facial&#259; profund&#259;, hidratari, peeling &#537;i tratamente anti-aging. Consultan&#539;&#259; personalizat&#259; pentru tenul dvs.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-eye"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Cosmetic&#259; detaliat&#259;</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Design spr&#226;ncene, laminare, henna, extensii g&#259;ne &#537;i alte tratamente de finisaj pentru privire.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-gem"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Pachete cadou</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Vouchere cadou combinate (p&#259;r + unghii, p&#259;r + facial) pentru momentele speciale: aniversari, 8 martie sau surprize.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-ring"></i></div>
+        <h3 class="font-display text-2xl text-onyx2 mb-2">Bridal &amp; Evenimente</h3>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Proba &#537;i programare &#238;n ziua evenimentului pentru mirese: p&#259;r, machiaj, manichiur&#259;. Pachete complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECHIPA -->
+<section id="echipa" class="py-20 lg:py-28 bg-pearl">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Echipa</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4">Specialistele <em class="text-rosegold-600">Paris 15</em></h2>
+      <div class="ornament"><span></span><i class="fas fa-gem"></i><span></span></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card text-center" data-aos="fade-up">
+        <div class="w-20 h-20 rounded-full bg-rosegold-500 text-pearl flex items-center justify-center font-display text-3xl mx-auto mb-5">A</div>
+        <h3 class="font-display text-2xl text-onyx2 mb-1">Andrevia</h3>
+        <div class="text-[10px] uppercase tracking-[.32em] text-rosegold-600 mb-4 font-medium">Coafur&#259; &middot; Culoare</div>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Specialist&#259; &#238;n blondul perfect, balayage &#537;i tunsuri pe m&#259;sur&#259;. Clientele o urmeaz&#259; de 6+ ani.</p>
+      </div>
+      <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-20 h-20 rounded-full bg-rosegold-500 text-pearl flex items-center justify-center font-display text-3xl mx-auto mb-5">A</div>
+        <h3 class="font-display text-2xl text-onyx2 mb-1">Andrada</h3>
+        <div class="text-[10px] uppercase tracking-[.32em] text-rosegold-600 mb-4 font-medium">Unghii</div>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Manichiur&#259; cu gel, construc&#539;ie &#537;i nail art. Lucreaz&#259; personalizat, pe preferin&#539;&#259;, cu aten&#539;ie la detalii.</p>
+      </div>
+      <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-20 h-20 rounded-full bg-rosegold-500 text-pearl flex items-center justify-center font-display text-3xl mx-auto mb-5">K</div>
+        <h3 class="font-display text-2xl text-onyx2 mb-1">Karina</h3>
+        <div class="text-[10px] uppercase tracking-[.32em] text-rosegold-600 mb-4 font-medium">Cosmetic&#259;</div>
+        <p class="text-sm text-onyx2/75 leading-relaxed">Karina Corpodean &#8212; tratamente faciale, consultan&#539;&#259; pentru &#238;ngrijirea tenului. Cliente care revin mereu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENZII -->
+<section id="recenzii" class="py-20 lg:py-28 bg-rosegold-50/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Recenzii cliente</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4">Ce spun <em class="text-rosegold-600">clientele</em></h2>
+      <div class="flex items-center justify-center gap-3 mt-4">
+        <span class="stars text-2xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="font-display text-4xl text-onyx2">4.9</span>
+        <span class="text-onyx2/70">&middot; 40 recenzii Google</span>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+      <div class="review-card">
+        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="text-onyx2/85 leading-relaxed mb-4" style="font-family:'Italiana',serif;font-size:1.15rem;line-height:1.5;">If you want a perfect haircolour and a sweet and kind conversation, AndreVia should be your choice. The most talented girl I know &#8212; doing her magic on my hair for 6+ years.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-rosegold-100">
+          <div class="w-10 h-10 rounded-full bg-rosegold-500 text-pearl flex items-center justify-center font-medium">A</div>
+          <div>
+            <div class="font-medium text-onyx2">Andreea Babbee</div>
+            <div class="text-xs text-onyx2/60">Cliente de 6+ ani</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="text-onyx2/85 leading-relaxed mb-4" style="font-family:'Italiana',serif;font-size:1.15rem;line-height:1.5;">I had various facial treatments at Karina Corpodean. She really helped me and has a nice personality. Gives advice and I'm always having the best time there.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-rosegold-100">
+          <div class="w-10 h-10 rounded-full bg-rosegold-500 text-pearl flex items-center justify-center font-medium">O</div>
+          <div>
+            <div class="font-medium text-onyx2">Orsolya Ol&aacute;h</div>
+            <div class="text-xs text-onyx2/60">Recenzie Google Maps</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="text-onyx2/85 leading-relaxed mb-4" style="font-family:'Italiana',serif;font-size:1.15rem;line-height:1.5;">For hair services, I highly recommend Andrevia. I've been her client for years, and I've always been pleased with her work &#8212; including achieving my perfect blonde and cutting.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-rosegold-100">
+          <div class="w-10 h-10 rounded-full bg-rosegold-500 text-pearl flex items-center justify-center font-medium">M</div>
+          <div>
+            <div class="font-medium text-onyx2">Melinda Balazs</div>
+            <div class="text-xs text-onyx2/60">Recenzie Google Maps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIE -->
+<section id="locatie" class="py-20 lg:py-28 bg-pearl">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label">Loca&#539;ie</div>
+      <h2 class="text-4xl lg:text-5xl mt-4">Pe <em class="text-rosegold-600">Strada Paris</em>, &#238;n Cluj-Napoca</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-white p-8 border border-rosegold-100" data-aos="fade-right">
+        <h3 class="font-display text-3xl text-onyx2 mb-5">Paris 15 Salon</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-location-dot"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600">Adres&#259;</div>
+              <div class="font-medium">Strada Paris 15</div>
+              <div class="text-sm text-onyx2/65">400394 Cluj-Napoca</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600">Telefon</div>
+              <a href="tel:0756322006" class="font-display text-2xl text-onyx2">0756 322 006</a>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-map"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-rosegold-600">Cod Plus</div>
+              <div class="font-medium">QHGX+G3 Cluj-Napoca</div>
+            </div>
+          </li>
+        </ul>
+        <a href="https://www.google.com/maps/place/Paris+15+Beauty+Salon" target="_blank" rel="noopener" class="btn-rose w-full justify-center mt-6"><i class="fas fa-directions"></i> Direc&#539;ii Google</a>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=46.776333,23.597672&hl=ro&z=17&output=embed" width="100%" height="500" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Paris 15 Beauty Salon"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section class="py-20 lg:py-28 bg-onyx2 text-pearl">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#e8b3a0;">Programare</div>
+    <h2 class="text-4xl lg:text-5xl mt-4 mb-5">R&#259;sfa&#539;&#259;-te <em class="text-rosegold-300">ca la Paris</em>, &#238;n Cluj</h2>
+    <div class="ornament"><span style="background:#e8b3a0;"></span><i class="fas fa-gem" style="color:#e8b3a0;"></i><span style="background:#e8b3a0;"></span></div>
+    <p class="text-pearl/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed mt-4">Sun&#259; sau scrie pe WhatsApp pentru o programare la Andrevia, Andrada sau Karina. &#206;&#539;i propunem un interval convenabil &#537;i preg&#259;tim tot ce ai nevoie pentru programarea ta.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0756322006" class="btn-primary" style="background:#fbf6f0;color:#18100e;border:1px solid #fbf6f0;"><i class="fas fa-phone"></i> 0756 322 006</a>
+      <a href="https://wa.me/40756322006" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-rosegold-800 text-pearl/75 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 border border-rosegold-200 text-pearl flex items-center justify-center"><i class="fas fa-spa"></i></div>
+        <div>
+          <div class="font-display text-2xl text-pearl">Paris 15</div>
+          <div class="text-[10px] tracking-[.42em] uppercase text-rosegold-200">Beauty Salon Cluj</div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">Salon de frumuse&#539;e &#238;n Cluj-Napoca, cu servicii complete pentru p&#259;r, unghii &#537;i tratamente faciale.</p>
+    </div>
+    <div>
+      <h4 class="font-display text-pearl text-xl mb-4">Naviga&#539;ie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#despre" class="hover:text-rosegold-200">Despre salon</a></li>
+        <li><a href="#servicii" class="hover:text-rosegold-200">Servicii</a></li>
+        <li><a href="#echipa" class="hover:text-rosegold-200">Echipa</a></li>
+        <li><a href="#recenzii" class="hover:text-rosegold-200">Recenzii</a></li>
+        <li><a href="#locatie" class="hover:text-rosegold-200">Loca&#539;ie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-pearl text-xl mb-4">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fas fa-phone text-rosegold-200 mr-2"></i> <a href="tel:0756322006" class="hover:text-rosegold-200">0756 322 006</a></li>
+        <li><i class="fas fa-map-marker-alt text-rosegold-200 mr-2"></i> Strada Paris 15, Cluj-Napoca</li>
+        <li><i class="fas fa-star text-rosegold-200 mr-2"></i> 4.9 / 40 recenzii Google</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-rosegold-700 flex flex-wrap justify-between gap-3 text-xs text-pearl/50">
+    <div>&copy; 2026 Paris 15 Beauty Salon. Toate drepturile rezervate.</div>
+    <div>Hair &middot; Nails &middot; Skin &middot; Cluj-Napoca</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:0756322006" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40756322006" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Paris 15 Beauty Salon",
+  "telephone": "+40756322006",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Paris 15",
+    "addressLocality": "Cluj-Napoca",
+    "postalCode": "400394",
+    "addressCountry": "RO"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":46.776333,"longitude":23.597672},
+  "areaServed": "Cluj-Napoca",
+  "priceRange": "$$",
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"40","bestRating":"5","worstRating":"1"}
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+</body>
+</html>
