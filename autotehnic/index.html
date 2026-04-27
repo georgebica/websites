@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autotehnic — Transport Profesional in Craiova</title>
+    <meta name="description" content="Autotehnic ofera servicii de transport si sofer profesionist in Craiova. Transfer aeroport, curse corporate, inchiriere cu sofer. Suna acum: 0760 539 333.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fonts: Manrope + Karla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1565C0',
+                        'primary-dark': '#0D47A1',
+                        'primary-light': '#42A5F5',
+                        navy: '#0D1B2A',
+                        'blue-grey': '#ECEFF1',
+                        'blue-grey-dark': '#B0BEC5',
+                    },
+                    fontFamily: {
+                        heading: ['Manrope', 'sans-serif'],
+                        body: ['Karla', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Karla', sans-serif;
+            color: #1a1a2e;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Manrope', sans-serif;
+        }
+        .top-stripe {
+            height: 5px;
+            background: linear-gradient(90deg, #0D47A1, #1565C0, #42A5F5);
+        }
+        .service-card {
+            border-top: 4px solid #1565C0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(21, 101, 192, 0.15);
+        }
+        .review-card {
+            border-left: 3px solid #1565C0;
+            transition: transform 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-3px);
+        }
+        .stars { color: #F9A825; }
+        .btn-primary {
+            background: #1565C0;
+            color: #fff;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: #0D47A1;
+            transform: translateY(-2px);
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn-whatsapp:hover {
+            background: #1DA851;
+            transform: translateY(-2px);
+        }
+        .info-card { border-top: 3px solid #1565C0; }
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: #1565C0;
+            border-radius: 2px;
+        }
+        .mobile-bar {
+            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+        }
+        .rating-badge {
+            background: rgba(21, 101, 192, 0.08);
+            border: 1px solid rgba(21, 101, 192, 0.2);
+        }
+        section[id] { scroll-margin-top: 80px; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #1565C0;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(21, 101, 192, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(21, 101, 192, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(21, 101, 192, 0); }
+        }
+        .pulse-icon {
+            animation: pulse-ring 2s ease-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Top blue stripe -->
+    <div class="top-stripe"></div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-car text-white text-lg"></i>
+                    </div>
+                    <span class="font-heading font-extrabold text-xl text-navy tracking-tight">Autotehnic</span>
+                </a>
+
+                <!-- Desktop nav links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#despre" class="nav-link font-body text-sm font-semibold text-gray-600 hover:text-primary">Despre noi</a>
+                    <a href="#servicii" class="nav-link font-body text-sm font-semibold text-gray-600 hover:text-primary">Servicii</a>
+                    <a href="#recenzii" class="nav-link font-body text-sm font-semibold text-gray-600 hover:text-primary">Recenzii</a>
+                    <a href="#info" class="nav-link font-body text-sm font-semibold text-gray-600 hover:text-primary">Informa&#x21B;ii</a>
+                    <a href="tel:0760539333" class="btn-primary px-5 py-2.5 rounded-lg font-body font-bold text-sm inline-flex items-center gap-2">
+                        <i class="fas fa-phone text-xs"></i> Sun&#x103; acum
+                    </a>
+                </div>
+
+                <!-- Mobile hamburger button -->
+                <button id="menuBtn" class="md:hidden text-navy text-2xl" aria-label="Meniu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 top-16 bg-white z-40 md:hidden">
+            <div class="flex flex-col px-6 py-8 gap-6">
+                <a href="#despre" class="mobile-nav-link font-heading text-lg font-bold text-navy">Despre noi</a>
+                <a href="#servicii" class="mobile-nav-link font-heading text-lg font-bold text-navy">Servicii</a>
+                <a href="#recenzii" class="mobile-nav-link font-heading text-lg font-bold text-navy">Recenzii</a>
+                <a href="#info" class="mobile-nav-link font-heading text-lg font-bold text-navy">Informa&#x21B;ii</a>
+                <a href="#contact" class="mobile-nav-link font-heading text-lg font-bold text-navy">Contact</a>
+                <hr class="border-blue-grey">
+                <a href="tel:0760539333" class="btn-primary px-6 py-3 rounded-lg font-body font-bold text-center text-base inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-phone"></i> 0760 539 333
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="bg-white relative overflow-hidden">
+        <!-- Subtle dot pattern background -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#1565C0 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 relative">
+            <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+                <!-- Blue accent bar -->
+                <div class="section-divider mb-8"></div>
+
+                <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-navy leading-tight mb-6">
+                    Autotehnic
+                </h1>
+                <p class="font-heading font-semibold text-xl sm:text-2xl text-primary mb-4">
+                    Transport Profesional &#x00EE;n Craiova
+                </p>
+                <p class="font-body text-lg text-gray-600 mb-8 max-w-xl leading-relaxed">
+                    Servicii de transport cu &#x219;ofer, transfer aeroport &#x219;i curse corporate. Punctualitate, confort &#x219;i siguran&#x21B;&#x103; la fiecare curs&#x103;.
+                </p>
+
+                <!-- Rating badge -->
+                <div class="rating-badge inline-flex items-center gap-3 px-5 py-3 rounded-xl mb-10">
+                    <div class="stars text-lg">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="font-heading font-bold text-navy text-lg">4.7</span>
+                    <span class="text-gray-500 font-body text-sm">din 117 recenzii</span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:0760539333" class="btn-primary px-8 py-4 rounded-xl font-body font-bold text-base inline-flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
+                        <i class="fas fa-phone"></i> Sun&#x103;: 0760 539 333
+                    </a>
+                    <a href="https://wa.me/40760539333?text=Bun%C4%83%20ziua%2C%20a%C8%99%20dori%20s%C4%83%20solicit%20o%20curs%C4%83." class="btn-whatsapp px-8 py-4 rounded-xl font-body font-bold text-base inline-flex items-center justify-center gap-3 shadow-lg shadow-green-500/20" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Decorative circles -->
+            <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-primary/5 -mr-16"></div>
+            <div class="hidden lg:block absolute right-16 top-1/2 -translate-y-1/3 w-48 h-48 rounded-full bg-primary/[0.08] -mr-8"></div>
+        </div>
+    </section>
+
+    <!-- ==================== DESPRE NOI ==================== -->
+    <section id="despre" class="bg-blue-grey py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Text column -->
+                <div data-aos="fade-right" data-aos-duration="700">
+                    <div class="section-divider mb-6"></div>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-navy mb-6">Despre noi</h2>
+                    <p class="font-body text-gray-700 text-lg leading-relaxed mb-6">
+                        <strong class="text-navy">Autotehnic</strong> este partenerul dumneavoastr&#x103; de &#x00EE;ncredere pentru transport profesional &#x00EE;n Craiova &#x219;i &#x00EE;mprejurimi. Cu o echip&#x103; dedicat&#x103; &#x219;i vehicule &#x00EE;ntre&#x21B;inute impecabil, oferim servicii de transport adaptate nevoilor fiec&#x103;rui client.
+                    </p>
+                    <p class="font-body text-gray-600 text-base leading-relaxed mb-8">
+                        De la deplas&#x103;ri zilnice p&#x00E2;n&#x103; la transferuri la aeroport sau curse corporate, punem accent pe punctualitate, siguran&#x21B;&#x103; &#x219;i confort. Fiecare curs&#x103; este gestionat&#x103; cu profesionalism, astfel &#x00EE;nc&#x00E2;t s&#x103; ajunge&#x21B;i la destina&#x21B;ie f&#x103;r&#x103; griji.
+                    </p>
+
+                    <!-- Key stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="font-heading font-extrabold text-3xl text-primary mb-1">4.7</div>
+                            <div class="font-body text-sm text-gray-500">Rating</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-heading font-extrabold text-3xl text-primary mb-1">117</div>
+                            <div class="font-body text-sm text-gray-500">Recenzii</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-heading font-extrabold text-3xl text-primary mb-1">100%</div>
+                            <div class="font-body text-sm text-gray-500">Dedicare</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features grid column -->
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-primary text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-navy text-sm mb-1">Siguran&#x21B;&#x103;</h4>
+                        <p class="font-body text-gray-500 text-xs">Vehicule verificate &#x219;i &#x00EE;ntre&#x21B;inute</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-clock text-primary text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-navy text-sm mb-1">Punctualitate</h4>
+                        <p class="font-body text-gray-500 text-xs">Mereu la timp, f&#x103;r&#x103; &#x00EE;nt&#x00E2;rzieri</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-hand-holding-heart text-primary text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-navy text-sm mb-1">Profesionalism</h4>
+                        <p class="font-body text-gray-500 text-xs">&#x218;oferi preg&#x103;ti&#x21B;i &#x219;i amabili</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-wallet text-primary text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-navy text-sm mb-1">Pre&#x21B;uri corecte</h4>
+                        <p class="font-body text-gray-500 text-xs">Tarife transparente, f&#x103;r&#x103; surprize</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICII ==================== -->
+    <section id="servicii" class="bg-white py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="600">
+                <div class="section-divider mx-auto mb-6"></div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-navy mb-4">Serviciile noastre</h2>
+                <p class="font-body text-gray-500 text-lg max-w-xl mx-auto">
+                    Solu&#x21B;ii complete de transport pentru orice nevoie, de la curse zilnice la transferuri de lung&#x103; distan&#x21B;&#x103;.
+                </p>
+            </div>
+
+            <!-- 4 Service cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Transport privat -->
+                <div class="service-card bg-white rounded-xl p-7 shadow-md" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-car-side text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy text-lg mb-3">Transport privat</h3>
+                    <p class="font-body text-gray-500 text-sm leading-relaxed">
+                        Deplas&#x103;ri confortabile oriunde &#x00EE;n Craiova &#x219;i &#x00EE;mprejurimi. Vehicule curate, climatizate, cu &#x219;oferi profesioni&#x219;ti.
+                    </p>
+                </div>
+
+                <!-- Card 2: Transfer aeroport -->
+                <div class="service-card bg-white rounded-xl p-7 shadow-md" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-plane-departure text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy text-lg mb-3">Transfer aeroport</h3>
+                    <p class="font-body text-gray-500 text-sm leading-relaxed">
+                        Transfer rapid &#x219;i sigur c&#x103;tre aeroporturile din zon&#x103;. Monitoriz&#x103;m zborul &#x219;i v&#x103; a&#x219;tept&#x103;m la sosire.
+                    </p>
+                </div>
+
+                <!-- Card 3: Curse corporate -->
+                <div class="service-card bg-white rounded-xl p-7 shadow-md" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy text-lg mb-3">Curse corporate</h3>
+                    <p class="font-body text-gray-500 text-sm leading-relaxed">
+                        Solu&#x21B;ii de transport pentru companii. Contracte flexibile, facturare lunar&#x103; &#x219;i vehicule dedicate.
+                    </p>
+                </div>
+
+                <!-- Card 4: Inchiriere cu sofer -->
+                <div class="service-card bg-white rounded-xl p-7 shadow-md" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-tie text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy text-lg mb-3">&#x00CE;nchiriere cu &#x219;ofer</h3>
+                    <p class="font-body text-gray-500 text-sm leading-relaxed">
+                        &#x00CE;nchiria&#x21B;i un vehicul cu &#x219;ofer pentru evenimente, excursii sau deplas&#x103;ri de o zi &#x00EE;ntreag&#x103;.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA under services -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                <a href="tel:0760539333" class="btn-primary px-8 py-4 rounded-xl font-body font-bold text-base inline-flex items-center gap-3">
+                    <i class="fas fa-phone"></i> Solicit&#x103; o curs&#x103;: 0760 539 333
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RECENZII ==================== -->
+    <section id="recenzii" class="bg-blue-grey py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="600">
+                <div class="section-divider mx-auto mb-6"></div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-navy mb-4">Ce spun clien&#x21B;ii</h2>
+                <p class="font-body text-gray-500 text-lg">
+                    <span class="font-heading font-bold text-primary text-2xl">4.7</span>
+                    <span class="stars ml-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span class="ml-2">din 117 recenzii Google</span>
+                </p>
+            </div>
+
+            <!-- 4 Review cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Review 1 -->
+                <div class="review-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="stars text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-body text-gray-700 text-sm leading-relaxed mb-5 italic">
+                        &#x201E;Pre&#x21B;uri bune &#x219;i b&#x103;ie&#x21B;i preg&#x103;ti&#x21B;i. Am apelat de mai multe ori &#x219;i de fiecare dat&#x103; am fost mul&#x21B;umit de servicii.&#x201D;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-primary text-xs"></i>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-navy text-sm">Client verificat</div>
+                            <div class="font-body text-gray-400 text-xs">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="stars text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-body text-gray-700 text-sm leading-relaxed mb-5 italic">
+                        &#x201E;Amabili &#x219;i servire prompt&#x103;. Au venit exact la ora stabilit&#x103; &#x219;i m-au dus la destina&#x21B;ie rapid &#x219;i &#x00EE;n siguran&#x21B;&#x103;.&#x201D;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-primary text-xs"></i>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-navy text-sm">Client verificat</div>
+                            <div class="font-body text-gray-400 text-xs">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="stars text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-body text-gray-700 text-sm leading-relaxed mb-5 italic">
+                        &#x201E;Seriozitate &#x219;i pre&#x21B;uri corecte. Recomand cu &#x00EE;ncredere pentru oricine are nevoie de transport de calitate &#x00EE;n Craiova.&#x201D;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-primary text-xs"></i>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-navy text-sm">Client verificat</div>
+                            <div class="font-body text-gray-400 text-xs">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <div class="stars text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-body text-gray-700 text-sm leading-relaxed mb-5 italic">
+                        &#x201E;Oameni extraordinari! Profesioni&#x219;ti des&#x103;v&#x00E2;r&#x219;i&#x21B;i, ma&#x219;ini curate &#x219;i confortabile. O experien&#x21B;&#x103; pl&#x103;cut&#x103; de fiecare dat&#x103;.&#x201D;
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-primary text-xs"></i>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-navy text-sm">Client verificat</div>
+                            <div class="font-body text-gray-400 text-xs">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INFORMATII PRACTICE ==================== -->
+    <section id="info" class="bg-white py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section header -->
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="600">
+                <div class="section-divider mx-auto mb-6"></div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-navy mb-4">Informa&#x21B;ii practice</h2>
+                <p class="font-body text-gray-500 text-lg">Tot ce trebuie s&#x103; &#x219;ti&#x21B;i &#x00EE;nainte de a ne contacta.</p>
+            </div>
+
+            <!-- 3 Info cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Program -->
+                <div class="info-card bg-blue-grey rounded-xl p-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-clock text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy text-lg mb-4">Program de lucru</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-body text-gray-600 text-sm">Luni &#x2014; Vineri</span>
+                            <span class="font-heading font-bold text-navy text-sm">09:00 &#x2014; 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-body text-gray-600 text-sm">S&#x00E2;mb&#x103;t&#x103;</span>
+                            <span class="font-heading font-bold text-navy text-sm">09:00 &#x2014; 14:00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-body text-gray-600 text-sm">Duminic&#x103;</span>
+                            <span class="font-heading font-bold text-red-500 text-sm">&#x00CE;nchis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accesibilitate -->
+                <div class="info-card bg-blue-grey rounded-xl p-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-wheelchair text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy text-lg mb-4">Accesibilitate</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                            <span class="font-body text-gray-600 text-sm">Parcare accesibil&#x103; scaun rulant</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                            <span class="font-body text-gray-600 text-sm">Intrare accesibil&#x103; scaun rulant</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                            <span class="font-body text-gray-600 text-sm">Toalet&#x103; accesibil&#x103;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plati -->
+                <div class="info-card bg-blue-grey rounded-xl p-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-credit-card text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-navy text-lg mb-4">Metode de plat&#x103;</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                            <span class="font-body text-gray-600 text-sm">Card de credit</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                            <span class="font-body text-gray-600 text-sm">Card de debit</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                            <span class="font-body text-gray-600 text-sm">Plat&#x103; contactless (NFC)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-500 text-sm"></i>
+                            <span class="font-body text-gray-600 text-sm">Numerar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="bg-navy py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Contact text -->
+                <div data-aos="fade-right" data-aos-duration="700">
+                    <div class="w-[60px] h-1 bg-primary rounded mb-6"></div>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-6">Contacta&#x21B;i-ne</h2>
+                    <p class="font-body text-blue-grey-dark text-lg leading-relaxed mb-8">
+                        Suntem preg&#x103;ti&#x21B;i s&#x103; v&#x103; oferim cea mai bun&#x103; experien&#x21B;&#x103; de transport. Contacta&#x21B;i-ne prin telefon sau WhatsApp pentru a solicita o curs&#x103; sau pentru informa&#x21B;ii suplimentare.
+                    </p>
+
+                    <!-- Contact buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="tel:0760539333" class="btn-primary px-8 py-4 rounded-xl font-body font-bold text-base inline-flex items-center justify-center gap-3 shadow-lg pulse-icon">
+                            <i class="fas fa-phone"></i> 0760 539 333
+                        </a>
+                        <a href="https://wa.me/40760539333?text=Bun%C4%83%20ziua%2C%20a%C8%99%20dori%20s%C4%83%20solicit%20o%20curs%C4%83." class="btn-whatsapp px-8 py-4 rounded-xl font-body font-bold text-base inline-flex items-center justify-center gap-3 shadow-lg" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact details card -->
+                <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+                    <div class="space-y-6">
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-map-marker-alt text-primary-light text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-white text-sm mb-1">Adres&#x103;</h4>
+                                <p class="font-body text-blue-grey-dark text-sm">Strada Bariera V&#x00E2;lcii 213, Craiova</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-phone text-primary-light text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-white text-sm mb-1">Telefon</h4>
+                                <a href="tel:0760539333" class="font-body text-primary-light text-sm hover:underline">0760 539 333</a>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-clock text-primary-light text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-white text-sm mb-1">Program</h4>
+                                <p class="font-body text-blue-grey-dark text-sm">Luni &#x2014; Vineri: 09:00 &#x2014; 18:00</p>
+                                <p class="font-body text-blue-grey-dark text-sm">S&#x00E2;mb&#x103;t&#x103;: 09:00 &#x2014; 14:00</p>
+                            </div>
+                        </div>
+
+                        <!-- Payments -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-credit-card text-primary-light text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-white text-sm mb-1">Pl&#x103;&#x21B;i acceptate</h4>
+                                <p class="font-body text-blue-grey-dark text-sm">Card credit/debit, NFC, Numerar</p>
+                            </div>
+                        </div>
+
+                        <!-- Map link -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=44.347417,23.819388" target="_blank" rel="noopener" class="flex items-center gap-2 text-primary-light font-body font-semibold text-sm hover:underline pt-2">
+                            <i class="fas fa-directions"></i> Deschide &#x00EE;n Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-navy border-t border-white/10 py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Logo + copyright -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+                        <i class="fas fa-car text-white text-sm"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-white text-sm">Autotehnic</span>
+                        <span class="text-blue-grey-dark text-xs ml-2">&copy; 2026 Toate drepturile rezervate.</span>
+                    </div>
+                </div>
+
+                <!-- Footer links -->
+                <div class="flex items-center gap-6">
+                    <a href="tel:0760539333" class="text-blue-grey-dark hover:text-primary-light text-sm font-body transition-colors">
+                        <i class="fas fa-phone mr-1"></i> 0760 539 333
+                    </a>
+                    <a href="https://wa.me/40760539333" target="_blank" rel="noopener" class="text-blue-grey-dark hover:text-green-400 text-sm font-body transition-colors">
+                        <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=44.347417,23.819388" target="_blank" rel="noopener" class="text-blue-grey-dark hover:text-primary-light text-sm font-body transition-colors">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Hart&#x103;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== STICKY MOBILE BAR ==================== -->
+    <div class="mobile-bar fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 md:hidden pb-[env(safe-area-inset-bottom)]">
+        <div class="grid grid-cols-2 divide-x divide-gray-200">
+            <a href="tel:0760539333" class="flex items-center justify-center gap-2.5 py-3.5 text-primary font-body font-bold text-sm active:bg-blue-50 transition-colors">
+                <i class="fas fa-phone text-base"></i>
+                <span>Sun&#x103; acum</span>
+            </a>
+            <a href="https://wa.me/40760539333?text=Bun%C4%83%20ziua%2C%20a%C8%99%20dori%20s%C4%83%20solicit%20o%20curs%C4%83." target="_blank" rel="noopener" class="flex items-center justify-center gap-2.5 py-3.5 text-green-600 font-body font-bold text-sm active:bg-green-50 transition-colors">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom padding on mobile for sticky bar -->
+    <div class="h-14 md:hidden"></div>
+
+    <!-- ==================== JSON-LD STRUCTURED DATA ==================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Autotehnic",
+        "description": "Servicii de transport profesional cu \u0219ofer \u00een Craiova. Transfer aeroport, curse corporate, \u00eenchiriere cu \u0219ofer.",
+        "url": "https://autotehnic.ro",
+        "telephone": "+40760539333",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Bariera V\u00e2lcii 213",
+            "addressLocality": "Craiova",
+            "addressRegion": "Dolj",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.347417,
+            "longitude": 23.819388
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "14:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "bestRating": "5",
+            "ratingCount": "117"
+        },
+        "paymentAccepted": "Cash, Credit Card, Debit Card, NFC",
+        "currenciesAccepted": "RON",
+        "priceRange": "$$"
+    }
+    </script>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 60,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+
+    <!-- Mobile menu toggle -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open');
+            if (mobileMenu.classList.contains('open')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close mobile menu on nav link click
+        var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        for (var i = 0; i < mobileLinks.length; i++) {
+            mobileLinks[i].addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close menu on resize to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.remove('open');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+    <!-- Nav shadow on scroll -->
+    <script>
+        var navEl = document.querySelector('nav');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 10) {
+                navEl.classList.add('shadow-md');
+                navEl.classList.remove('shadow-sm');
+            } else {
+                navEl.classList.add('shadow-sm');
+                navEl.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

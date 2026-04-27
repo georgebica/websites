@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Felicia Faget &middot; Cardiolog &icirc;n Slatina, 30 de ani de experien&#539;&#259;</title>
+<meta name="description" content="Dr. Felicia Faget &mdash; medic primar cardiolog &icirc;n Slatina, 30+ ani de experien&#539;&#259;. Ecografie vascular&#259; &#537;i cardiac&#259;. Telefon 0763 144 774.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { heart: '#C22238', heartd: '#8C1526', heartl: '#FCE4E7', navy: '#101624', cream: '#FBF8F2', creaml: '#FFFDF7', ink: '#1A1F2B', muted: '#6B7280', line: '#E3E0D3', wa: '#25D366' },
+  fontFamily: { display: ['Gabarito', 'system-ui', 'sans-serif'], sans: ['Poppins', 'system-ui', 'sans-serif'] }
+}}}
+</script>
+
+<style>
+  html, body { background: #FBF8F2; color: #1A1F2B; }
+  body { font-family: Poppins, system-ui, sans-serif; }
+  .display { font-family: Gabarito, system-ui, sans-serif; font-weight: 800; letter-spacing: -.015em; line-height: 1.02; }
+
+  .btn-heart { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #C22238; color: #fff; font-weight: 600; border-radius: 12px; box-shadow: 0 14px 32px -14px rgba(194,34,56,.5); transition: all .25s; }
+  .btn-heart:hover { background: #8C1526; transform: translateY(-2px); }
+  .btn-navy { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #101624; color: #FBF8F2; font-weight: 600; border-radius: 12px; transition: all .25s; }
+  .btn-navy:hover { background: #C22238; }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; font-weight: 600; border-radius: 12px; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); }
+
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .4rem 1rem; background: #FCE4E7; color: #8C1526; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; }
+
+  .card { background: #fff; border: 1px solid #E3E0D3; border-radius: 18px; padding: 1.8rem; transition: all .35s; }
+  .card:hover { border-color: #C22238; transform: translateY(-3px); box-shadow: 0 24px 40px -30px rgba(26,31,43,.25); }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Gabarito, sans-serif; font-weight: 700; font-size: 1.7rem; border-bottom: 1px solid #E3E0D3; }
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dashed rgba(26,31,43,.15); font-size: .95rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #C22238; font-weight: 700; }
+
+  @keyframes heartbeat { 0%, 60%, 100% { transform: scale(1); } 30% { transform: scale(1.08); } }
+  .pulse-heart { animation: heartbeat 1.4s ease-in-out infinite; }
+
+  .ecg-line {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 40' preserveAspectRatio='none'><path d='M0,20 L60,20 L70,10 L80,30 L90,5 L100,35 L110,20 L200,20 L210,10 L220,30 L230,5 L240,35 L250,20 L400,20' fill='none' stroke='%23C22238' stroke-width='2'/></svg>");
+    background-repeat: no-repeat; background-size: 100% 100%;
+    height: 40px;
+  }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-2xl bg-heart text-white flex items-center justify-center pulse-heart"><i class="fa-solid fa-heart-pulse"></i></span>
+      <div class="leading-tight"><p class="display text-lg">Dr. Felicia Faget</p><p class="text-[10px] tracking-widest uppercase text-muted mt-0.5">Medic primar cardiolog</p></div>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#doctor" class="hover:text-heart">Doctor</a>
+      <a href="#servicii" class="hover:text-heart">Servicii</a>
+      <a href="#preturi" class="hover:text-heart">Pre&#539;uri</a>
+      <a href="#locatie" class="hover:text-heart">Loca&#539;ie</a>
+      <a href="tel:0763144774" class="btn-heart !py-2.5 !px-4 !text-xs">0763 144 774</a>
+    </nav>
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-xl bg-heart text-white flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8"><div class="ecg-line"></div></div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between"><span class="display text-xl">Dr. Felicia Faget</span><button id="menu-close" class="w-11 h-11 rounded-xl bg-heart text-white flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="mt-6">
+    <a href="#doctor" class="mobile-link">Doctor</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#preturi" class="mobile-link">Pre&#539;uri</a>
+    <a href="#locatie" class="mobile-link">Loca&#539;ie</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3"><a href="tel:0763144774" class="btn-heart">Sun&#259;</a><a href="https://wa.me/40763144774" class="btn-wap">WhatsApp</a></div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-heart pulse-heart"></i> Cardiologie &middot; Slatina</span>
+      <h1 class="display mt-8 text-5xl sm:text-6xl lg:text-7xl">
+        Inima ta,<br>
+        <span class="text-heart">ascultat&#259; cu aten&#539;ie.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Dr. Felicia Faget este medic primar cardiolog cu 30+ ani de experien&#539;&#259;, cu cabinet privat &icirc;n Slatina. Ecografii, consulta&#539;ii &#537;i monitorizare pentru afec&#539;iuni cardiace &#537;i vasculare.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0763144774" class="btn-heart"><i class="fa-solid fa-phone"></i> Programare 0763 144 774</a>
+        <a href="https://wa.me/40763144774" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-3 gap-4 max-w-lg">
+        <div class="card !p-4 text-center"><p class="display text-3xl text-heart">30+</p><p class="text-[11px] uppercase tracking-widest text-muted mt-1">ani experien&#539;&#259;</p></div>
+        <div class="card !p-4 text-center"><p class="display text-3xl text-heart">M.P.</p><p class="text-[11px] uppercase tracking-widest text-muted mt-1">medic primar</p></div>
+        <div class="card !p-4 text-center"><p class="display text-3xl text-heart">UMF</p><p class="text-[11px] uppercase tracking-widest text-muted mt-1">craiova</p></div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+      <div class="card !bg-heartl !border-heart/30 !p-8 text-center">
+        <div class="w-32 h-32 mx-auto bg-heart text-white rounded-full flex items-center justify-center pulse-heart">
+          <i class="fa-solid fa-heart-pulse text-5xl"></i>
+        </div>
+        <p class="display text-2xl mt-6 text-heartd">&Icirc;ngrijire pentru inim&#259;</p>
+        <p class="text-sm text-muted mt-2">&Icirc;ntre 1994 &#537;i azi &mdash; mii de pacien&#539;i cu afec&#539;iuni cardiovasculare consulta&#539;i &#537;i monitoriza&#539;i.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" class="py-16 sm:py-24 bg-navy text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip !bg-heart/20 !text-heartl">Despre doctor</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">Dr. Felicia <span class="text-heart">Faget.</span></h2>
+      <p class="mt-6 text-cream/80">Medic primar &icirc;n cardiologie, cu practic&#259; &icirc;ncep&#226;nd din 1994. Cabinet medical individual &icirc;n Slatina.</p>
+    </div>
+    <div class="lg:col-span-7 space-y-4">
+      <div class="border border-cream/20 rounded-2xl p-5 flex items-start gap-4"><i class="fa-solid fa-graduation-cap text-heart text-2xl mt-1"></i><div><p class="display text-xl">UMF Craiova</p><p class="text-sm text-cream/75 mt-1">Universitatea de Medicin&#259; &#537;i Farmacie din Craiova, una dintre cele mai respectate institu&#539;ii medicale din Rom&#226;nia.</p></div></div>
+      <div class="border border-cream/20 rounded-2xl p-5 flex items-start gap-4"><i class="fa-solid fa-award text-heart text-2xl mt-1"></i><div><p class="display text-xl">Medic primar cardiolog</p><p class="text-sm text-cream/75 mt-1">Cel mai &icirc;nalt rang profesional &icirc;n practica medical&#259; rom&#226;neasc&#259;, ob&#539;inut prin examene de specialitate &#537;i experien&#539;&#259; pe teren.</p></div></div>
+      <div class="border border-cream/20 rounded-2xl p-5 flex items-start gap-4"><i class="fa-solid fa-clock-rotate-left text-heart text-2xl mt-1"></i><div><p class="display text-xl">Din 1994 p&#226;n&#259; azi</p><p class="text-sm text-cream/75 mt-1">Peste trei decenii de practic&#259; &icirc;n cabinet &#537;i &icirc;n sistemul medical. Experien&#539;&#259; cu genera&#539;ii de pacien&#539;i din Slatina &#537;i Olt.</p></div></div>
+      <div class="border border-cream/20 rounded-2xl p-5 flex items-start gap-4"><i class="fa-solid fa-language text-heart text-2xl mt-1"></i><div><p class="display text-xl">Rom&#226;n&#259; &amp; Englez&#259;</p><p class="text-sm text-cream/75 mt-1">Consulta&#539;ii disponibile &icirc;n ambele limbi pentru pacien&#539;ii str&#259;ini din zon&#259;.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">Servicii medicale</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">Cardiologie <span class="text-heart">complet&#259;.</span></h2>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><i class="fa-solid fa-stethoscope text-heart text-2xl"></i><h3 class="display text-xl mt-3">Consulta&#539;ie cardiologic&#259;</h3><p class="mt-2 text-sm text-muted">Examen clinic, anamnez&#259;, evaluare risc, recomand&#259;ri terapeutice.</p></article>
+      <article class="card"><i class="fa-solid fa-wave-square text-heart text-2xl"></i><h3 class="display text-xl mt-3">Ecografie cardiac&#259;</h3><p class="mt-2 text-sm text-muted">Ecocardiografie pentru evaluarea structurii &#537;i func&#539;iei inimii.</p></article>
+      <article class="card"><i class="fa-solid fa-diagram-project text-heart text-2xl"></i><h3 class="display text-xl mt-3">Ecografie vascular&#259;</h3><p class="mt-2 text-sm text-muted">Investiga&#539;ia vaselor carotide, arteriale sau venoase, la nevoie.</p></article>
+      <article class="card"><i class="fa-solid fa-heart-circle-check text-heart text-2xl"></i><h3 class="display text-xl mt-3">Monitorizare</h3><p class="mt-2 text-sm text-muted">Urm&#259;rire boli cronice: HTA, insuficien&#539;&#259;, aritmii. Reevalu&#259;ri periodice.</p></article>
+      <article class="card"><i class="fa-solid fa-pills text-heart text-2xl"></i><h3 class="display text-xl mt-3">Ajustare tratament</h3><p class="mt-2 text-sm text-muted">Optimizarea scheme terapeutice &icirc;n func&#539;ie de rezultatele clinice.</p></article>
+      <article class="card"><i class="fa-solid fa-file-medical text-heart text-2xl"></i><h3 class="display text-xl mt-3">Certificate &amp; adeverin&#539;e</h3><p class="mt-2 text-sm text-muted">Documenta&#539;ie medical&#259; pentru sport, &#537;coal&#259;, munc&#259;, c&#259;l&#259;torii.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="preturi" class="py-16 sm:py-24 bg-cream border-y border-line">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+    <span class="chip">Pre&#539;uri orientative</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">Transparen&#539;&#259; <span class="text-heart">&icirc;n costuri.</span></h2>
+
+    <div class="mt-10 card">
+      <ul class="space-y-4 text-lg">
+        <li class="flex items-baseline justify-between border-b border-line pb-3"><span class="display">Ecografie vascular&#259;</span><span class="display text-heart">150 lei</span></li>
+        <li class="flex items-baseline justify-between border-b border-line pb-3"><span class="display">Consulta&#539;ie cardiologic&#259;</span><span class="display text-heart">la cabinet</span></li>
+        <li class="flex items-baseline justify-between border-b border-line pb-3"><span class="display">Ecocardiografie</span><span class="display text-heart">la cabinet</span></li>
+        <li class="flex items-baseline justify-between"><span class="display">Control / ajustare tratament</span><span class="display text-heart">la cabinet</span></li>
+      </ul>
+      <p class="mt-6 text-sm text-muted">* Pre&#539;urile finale se comunic&#259; dup&#259; evaluarea cazului. Confirm&#259;m costurile &icirc;nainte de consulta&#539;ie.</p>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip">Loca&#539;ie &amp; program</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">Bulevardul Alexandru Ioan <span class="text-heart">Cuza 27.</span></h2>
+      <p class="mt-6 text-ink/85 leading-relaxed">Cabinetul se afl&#259; la parterul blocului F6, u&#537;or accesibil, &icirc;n centrul Slatinei. Programul este &icirc;n timpul zilei, luni p&#226;n&#259; vineri.</p>
+      <div class="mt-8 space-y-3 text-sm">
+        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-heart w-5"></i> Bd. A.I. Cuza 27, Bl. F6, parter</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-city text-heart w-5"></i> 230044 Slatina, jud. Olt</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-heart w-5"></i> 0763 144 774 &middot; 0770 613 068</div>
+        <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-heart w-5"></i> wa.me/40763144774</div>
+      </div>
+      <a href="https://www.google.com/maps/place/Dr.+Faget+Felicia/@44.427192,24.378221,17z" target="_blank" rel="noopener" class="mt-8 btn-heart inline-flex"><i class="fa-solid fa-map-location-dot"></i> Vezi pe hart&#259;</a>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="card">
+        <p class="chip">Program</p>
+        <ul id="hours" class="mt-5">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span>08:00 &mdash; 16:00</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span>08:00 &mdash; 16:00</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span>08:00 &mdash; 16:00</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span>08:00 &mdash; 16:00</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span>08:00 &mdash; 16:00</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+        <p class="mt-5 text-sm text-muted">Programare telefonic&#259; recomandat&#259; pentru a evita timpul de a&#537;teptare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-heartl">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Contact</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">Programeaz&#259; <span class="text-heart">consulta&#539;ia.</span></h2>
+    <p class="mt-6 text-muted">Apeleaz&#259; pentru ecografie, control sau doar &icirc;n consult o &icirc;ntrebare. V&#259; r&#259;spundem personal.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:0763144774" class="btn-heart"><i class="fa-solid fa-phone"></i> 0763 144 774</a>
+      <a href="https://wa.me/40763144774" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navy text-cream/65 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div><div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-heart text-white flex items-center justify-center"><i class="fa-solid fa-heart-pulse"></i></span><span class="display text-lg text-cream">Dr. Felicia Faget</span></div><p class="mt-3 text-sm">Cabinet medical individual &mdash; cardiologie, Slatina.</p></div>
+    <div><p class="display text-sm text-heart">Servicii</p><ul class="mt-3 space-y-1.5 text-sm"><li>Consulta&#539;ie cardiologic&#259;</li><li>Ecocardiografie</li><li>Ecografie vascular&#259;</li><li>Monitorizare cronice</li></ul></div>
+    <div><p class="display text-sm text-heart">Contact</p><ul class="mt-3 space-y-1.5 text-sm"><li><i class="fa-solid fa-phone text-heart mr-2"></i>0763 144 774</li><li><i class="fa-solid fa-phone text-heart mr-2"></i>0770 613 068</li><li><i class="fa-brands fa-whatsapp text-heart mr-2"></i>wa.me/40763144774</li><li><i class="fa-solid fa-location-dot text-heart mr-2"></i>Bd. A.I. Cuza 27, Slatina</li></ul></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-widest">
+    <span>&copy; 2026 CMI Dr. Faget Felicia</span><span>Slatina &middot; Olt</span><span>Cardiologie</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0763144774" class="py-4 bg-heart text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40763144774" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Physician","name":"Dr. Felicia Faget","medicalSpecialty":"Cardiology","telephone":"+40763144774","address":{"@type":"PostalAddress","streetAddress":"Bulevardul Alexandru Ioan Cuza 27, Bl F6","addressLocality":"Slatina","addressRegion":"Olt","postalCode":"230044","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":44.427192,"longitude":24.378221},"aggregateRating":{"@type":"AggregateRating","ratingValue":"3.9","reviewCount":"18"}}</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+  const menu = document.getElementById('menu'), openBtn = document.getElementById('menu-open'), closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try { const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' })); const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]'); if (row) row.classList.add('today'); } catch (e) {}
+</script>
+</body></html>

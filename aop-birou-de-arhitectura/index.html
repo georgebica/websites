@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOP Birou de Arhitectur&#259; Cluj-Napoca - Proiecte Arhitectur&#259; | 0741 146 951</title>
+<meta name="description" content="AOP Birou de Arhitectur&#259; Cluj-Napoca - proiecte reziden&#539;iale, comerciale &#537;i urbanistice. Arhitectur&#259; contemporan&#259; cu aten&#539;ie la context. Sun&#259; 0741 146 951.">
+<meta name="keywords" content="arhitect Cluj, birou arhitectura Cluj, proiecte arhitectura Cluj-Napoca, AOP, arhitect Horea, proiectare cluj">
+<meta name="robots" content="index,follow">
+<meta name="author" content="AOP Birou de Arhitectura">
+<link rel="canonical" href="">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="AOP Birou de Arhitectur&#259;">
+<meta property="og:title" content="AOP - Birou de Arhitectur&#259; Cluj-Napoca">
+<meta property="og:description" content="Proiecte de arhitectur&#259; contemporan&#259; &#238;n Cluj-Napoca.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AOP Birou de Arhitectur&#259;">
+<meta name="twitter:description" content="Birou de arhitectur&#259; &#238;n Cluj-Napoca cu proiecte contemporane.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Architect",
+  "name": "AOP Birou de Arhitectur&#259;",
+  "telephone": "+40741146951",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Horea 1",
+    "addressLocality": "Cluj-Napoca",
+    "postalCode": "400394",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.774443,
+    "longitude": 23.587252
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "6"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        chalk: '#f6f5f0',
+        ink: {
+          600: '#2b2b2a',
+          900: '#050505'
+        },
+        ocher: {
+          400: '#d6a34a',
+          600: '#a77615'
+        },
+        iron: '#a5a5a0'
+      },
+      fontFamily: {
+        sans: ['Host Grotesk', 'sans-serif'],
+        serif: ['Crimson Pro', 'serif']
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  body { font-family: 'Host Grotesk', sans-serif; background: #f6f5f0; color: #050505; }
+  .serif { font-family: 'Crimson Pro', serif; }
+  .italic-serif { font-family: 'Crimson Pro', serif; font-style: italic; font-weight: 400; }
+  .mono-label { font-family: 'Host Grotesk', sans-serif; text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.7rem; font-weight: 500; }
+  .hairline { width: 40px; height: 1px; background: currentColor; display: inline-block; vertical-align: middle; margin-right: 12px; }
+  .project-title { transition: color .3s ease; }
+  .project-row:hover .project-title { color: #a77615; }
+  .index-list { list-style: none; padding: 0; }
+  .index-list li { display: grid; grid-template-columns: 60px 1fr auto; gap: 2rem; padding: 2rem 0; border-top: 1px solid rgba(5,5,5,0.15); align-items: baseline; }
+  .index-list li:last-child { border-bottom: 1px solid rgba(5,5,5,0.15); }
+  .column-rule { border-left: 1px solid rgba(5,5,5,0.15); padding-left: 2rem; }
+  .pillar-num { font-family: 'Crimson Pro', serif; font-size: 4rem; line-height: 1; color: #a77615; font-weight: 400; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- Header minimal -->
+<header class="sticky top-0 z-40 bg-chalk border-b border-ink-900/10">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+    <a href="#" class="flex items-baseline gap-3">
+      <span class="text-2xl font-bold tracking-tight text-ink-900">AOP</span>
+      <span class="mono-label text-ink-600 hidden sm:inline">Birou de Arhitectur&#259;</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-10 text-sm text-ink-600">
+      <a href="#studio" class="hover:text-ocher-600">Studio</a>
+      <a href="#proiecte" class="hover:text-ocher-600">Proiecte</a>
+      <a href="#servicii" class="hover:text-ocher-600">Servicii</a>
+      <a href="#abordare" class="hover:text-ocher-600">Abordare</a>
+      <a href="#contact" class="hover:text-ocher-600">Contact</a>
+    </nav>
+    <a href="tel:0741146951" class="text-sm hidden md:inline-block border-b border-ink-900 pb-1 hover:text-ocher-600">
+      0741 146 951
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-24 md:pt-36 pb-20 md:pb-32">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+    <p class="mono-label text-ocher-600 mb-10" data-aos="fade-down"><span class="hairline"></span>CLUJ-NAPOCA &middot; HOREA 1 &middot; EST.</p>
+
+    <h1 class="text-6xl md:text-8xl lg:text-[9.5rem] leading-[0.92] text-ink-900 font-medium tracking-tight max-w-5xl" data-aos="fade-up">
+      Arhitectura ca <span class="italic-serif font-normal">r&#259;spuns</span>,<br>
+      nu ca <span class="italic-serif font-normal">decor</span>.
+    </h1>
+
+    <div class="mt-16 grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5" data-aos="fade-up">
+        <p class="mono-label text-ink-600 mb-3">01 / Studio</p>
+        <p class="serif text-2xl text-ink-900 leading-relaxed">
+          AOP este un birou de arhitectur&#259; din Cluj-Napoca. Lucr&#259;m la proiecte reziden&#539;iale,
+          spa&#539;ii comerciale &#537;i interven&#539;ii urbane &#238;n ora&#537; &#537;i &#238;n Transilvania.
+        </p>
+      </div>
+      <div class="md:col-span-4 column-rule" data-aos="fade-up" data-aos-delay="100">
+        <p class="mono-label text-ink-600 mb-3">02 / Abordare</p>
+        <p class="text-ink-600 leading-relaxed">
+          Fiecare proiect &#238;ncepe cu &#238;ntrebarea: cui &#238;i apar&#539;ine locul? R&#259;spunsul devine arhitectur&#259;, nu invers.
+        </p>
+      </div>
+      <div class="md:col-span-3 column-rule" data-aos="fade-up" data-aos-delay="200">
+        <p class="mono-label text-ink-600 mb-3">03 / Contact</p>
+        <a href="tel:0741146951" class="serif text-xl text-ink-900 hover:text-ocher-600 block">0741 146 951</a>
+        <a href="https://wa.me/40741146951" class="mono-label text-ocher-600 hover:text-ink-900">WhatsApp &rarr;</a>
+      </div>
+    </div>
+
+    <div class="mt-16 grid grid-cols-4 gap-8 border-t border-ink-900/15 pt-10" data-aos="fade-up">
+      <div>
+        <p class="serif text-5xl text-ocher-600">5.0</p>
+        <p class="mono-label mt-2">Rating</p>
+      </div>
+      <div>
+        <p class="serif text-5xl text-ocher-600">6</p>
+        <p class="mono-label mt-2">Recenzii</p>
+      </div>
+      <div>
+        <p class="serif text-5xl text-ocher-600">CJ</p>
+        <p class="mono-label mt-2">Cluj &amp; Transilvania</p>
+      </div>
+      <div>
+        <p class="serif text-5xl text-ocher-600">*</p>
+        <p class="mono-label mt-2">Proiect la cheie</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Manifest -->
+<section id="studio" class="py-20 md:py-32 bg-ink-900 text-chalk">
+  <div class="max-w-5xl mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4" data-aos="fade-right">
+      <p class="mono-label text-ocher-400 mb-4"><span class="hairline"></span>&sect; MANIFEST</p>
+      <h2 class="serif text-5xl md:text-6xl leading-tight">
+        Construim doar<br>
+        <span class="italic-serif text-ocher-400">ce credem</span>.
+      </h2>
+    </div>
+    <div class="lg:col-span-8 space-y-6 text-chalk/85 text-lg leading-loose" data-aos="fade-left">
+      <p>
+        Biroul nostru se afl&#259; &#238;n centrul Clujului, pe strada Horea, &#238;ntr-o cl&#259;dire pe care am reabilitat-o
+        cu mintea arhitectului - adic&#259; respect&#226;nd proprietatea, nu inven&#539;ia. Aceea&#537;i m&#226;n&#259; o folosim cu fiecare client.
+      </p>
+      <p>
+        Nu desen&#259;m r&#259;spunsuri gata f&#259;cute. Lucr&#259;m cu contextul, cu terenul, cu clientul. Proiect&#259;m case
+        reziden&#539;iale, amenaj&#259;ri comerciale, studii urbanistice &#537;i interven&#539;ii pe construc&#539;ii existente.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Proiecte index -->
+<section id="proiecte" class="py-20 md:py-28 bg-chalk">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+    <div class="flex items-end justify-between mb-14 flex-wrap gap-4" data-aos="fade-up">
+      <div>
+        <p class="mono-label text-ocher-600 mb-4"><span class="hairline"></span>&sect; PROIECTE</p>
+        <h2 class="text-5xl md:text-7xl leading-none text-ink-900 font-medium tracking-tight">Selec&#539;ie din portofoliu.</h2>
+      </div>
+      <p class="max-w-sm text-ink-600">Proiecte livrate sau &#238;n proces pentru beneficiari priva&#539;i &#537;i institu&#539;ionali.</p>
+    </div>
+
+    <ul class="index-list">
+      <li class="project-row" data-aos="fade-up">
+        <p class="mono-label text-ocher-600">01</p>
+        <div>
+          <p class="serif text-3xl text-ink-900 project-title">Cas&#259; &#238;n Zorilor</p>
+          <p class="text-sm text-ink-600 mt-1">Reziden&#539;ial individual &middot; 2024</p>
+        </div>
+        <p class="mono-label text-ink-600">280 mp</p>
+      </li>
+      <li class="project-row" data-aos="fade-up">
+        <p class="mono-label text-ocher-600">02</p>
+        <div>
+          <p class="serif text-3xl text-ink-900 project-title">Birouri Hipodrom</p>
+          <p class="text-sm text-ink-600 mt-1">Comercial &middot; 2023</p>
+        </div>
+        <p class="mono-label text-ink-600">1200 mp</p>
+      </li>
+      <li class="project-row" data-aos="fade-up">
+        <p class="mono-label text-ocher-600">03</p>
+        <div>
+          <p class="serif text-3xl text-ink-900 project-title">Reabilitare Horea 1</p>
+          <p class="text-sm text-ink-600 mt-1">Patrimoniu &middot; 2023</p>
+        </div>
+        <p class="mono-label text-ink-600">650 mp</p>
+      </li>
+      <li class="project-row" data-aos="fade-up">
+        <p class="mono-label text-ocher-600">04</p>
+        <div>
+          <p class="serif text-3xl text-ink-900 project-title">Ansamblu M&#259;n&#259;&#537;tur</p>
+          <p class="text-sm text-ink-600 mt-1">Reziden&#539;ial colectiv &middot; &#206;n proiect</p>
+        </div>
+        <p class="mono-label text-ink-600">5400 mp</p>
+      </li>
+      <li class="project-row" data-aos="fade-up">
+        <p class="mono-label text-ocher-600">05</p>
+        <div>
+          <p class="serif text-3xl text-ink-900 project-title">Atelier industrial Dej</p>
+          <p class="text-sm text-ink-600 mt-1">Industrial &middot; 2022</p>
+        </div>
+        <p class="mono-label text-ink-600">2100 mp</p>
+      </li>
+      <li class="project-row" data-aos="fade-up">
+        <p class="mono-label text-ocher-600">06</p>
+        <div>
+          <p class="serif text-3xl text-ink-900 project-title">Studiu urbanistic Centrul Vechi</p>
+          <p class="text-sm text-ink-600 mt-1">Urbanism &middot; 2022</p>
+        </div>
+        <p class="mono-label text-ink-600">PUZ</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Servicii -->
+<section id="servicii" class="py-20 md:py-28 bg-ink-900/5">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4" data-aos="fade-up">
+      <p class="mono-label text-ocher-600 mb-4"><span class="hairline"></span>&sect; SERVICII</p>
+      <h2 class="serif text-4xl md:text-6xl text-ink-900 leading-tight">Ce livr&#259;m.</h2>
+    </div>
+    <div class="lg:col-span-8" data-aos="fade-up">
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div>
+          <p class="pillar-num mb-2">I</p>
+          <h3 class="serif text-2xl text-ink-900 mb-2">Proiect de arhitectur&#259;</h3>
+          <p class="text-ink-600">Anteproiect, D.T.A.C., proiect tehnic &#537;i detalii de execu&#539;ie.</p>
+        </div>
+        <div>
+          <p class="pillar-num mb-2">II</p>
+          <h3 class="serif text-2xl text-ink-900 mb-2">Avize &amp; autorizare</h3>
+          <p class="text-ink-600">Asigur&#259;m toat&#259; documenta&#539;ia pentru ob&#539;inerea autoriza&#539;iei de construire.</p>
+        </div>
+        <div>
+          <p class="pillar-num mb-2">III</p>
+          <h3 class="serif text-2xl text-ink-900 mb-2">Amenaj&#259;ri interior</h3>
+          <p class="text-ink-600">Design interior pentru locuin&#539;e &#537;i spa&#539;ii comerciale.</p>
+        </div>
+        <div>
+          <p class="pillar-num mb-2">IV</p>
+          <h3 class="serif text-2xl text-ink-900 mb-2">Interven&#539;ii urbanistice</h3>
+          <p class="text-ink-600">Studii &#537;i planuri PUZ, PUD pentru zone din Cluj-Napoca.</p>
+        </div>
+        <div>
+          <p class="pillar-num mb-2">V</p>
+          <h3 class="serif text-2xl text-ink-900 mb-2">Reabilit&#259;ri</h3>
+          <p class="text-ink-600">Construc&#539;ii existente, patrimoniu, consolid&#259;ri &#537;i extensii.</p>
+        </div>
+        <div>
+          <p class="pillar-num mb-2">VI</p>
+          <h3 class="serif text-2xl text-ink-900 mb-2">Consultan&#539;&#259; de proiect</h3>
+          <p class="text-ink-600">Studii de fezabilitate, analiz&#259; sit, strategie de proiect.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Abordare / Principii -->
+<section id="abordare" class="py-20 md:py-28 bg-chalk">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="mono-label text-ocher-600 mb-4">&sect; ABORDARE</p>
+      <h2 class="serif text-4xl md:text-6xl text-ink-900 leading-tight">Trei principii &#238;n care lucr&#259;m.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <div data-aos="fade-up">
+        <p class="pillar-num">i.</p>
+        <h3 class="serif text-2xl text-ink-900 mt-3 mb-3">Contextul &#238;nt&#226;i</h3>
+        <p class="text-ink-600 leading-relaxed">Lucrul &#238;ncepe cu locul. Casa apar&#539;ine oamenilor, dar &#537;i str&#259;zii &#537;i copacilor lng&#259; ea.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <p class="pillar-num">ii.</p>
+        <h3 class="serif text-2xl text-ink-900 mt-3 mb-3">Material cu sens</h3>
+        <p class="text-ink-600 leading-relaxed">Alegem materiale care &#238;mb&#259;tr&#226;nesc bine &#537;i se &#238;mbin&#259; cu tradi&#539;ia constructiv&#259; a locului.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <p class="pillar-num">iii.</p>
+        <h3 class="serif text-2xl text-ink-900 mt-3 mb-3">Responsabilitate</h3>
+        <p class="text-ink-600 leading-relaxed">Semn&#259;m ce desen&#259;m. Suntem al&#259;turi &#537;i dup&#259; recep&#539;ie, pentru ce urmeaz&#259;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-ink-900 text-chalk">
+  <div class="grid lg:grid-cols-2">
+    <div class="p-10 md:p-20">
+      <p class="mono-label text-ocher-400 mb-4"><span class="hairline"></span>&sect; CONTACT</p>
+      <h2 class="serif text-4xl md:text-6xl leading-tight mt-4 mb-12">
+        Povestea<br>
+        &#238;ncepe cu<br>
+        un <span class="italic-serif text-ocher-400">apel</span>.
+      </h2>
+
+      <div class="space-y-6">
+        <a href="tel:0741146951" class="flex items-start gap-5 group">
+          <div class="w-10 h-10 border border-ocher-400 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-phone text-ocher-400 text-sm"></i></div>
+          <div>
+            <p class="mono-label text-ocher-400">Telefon</p>
+            <p class="serif text-2xl group-hover:text-ocher-400">0741 146 951</p>
+          </div>
+        </a>
+        <a href="https://wa.me/40741146951" class="flex items-start gap-5 group">
+          <div class="w-10 h-10 border border-ocher-400 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-brands fa-whatsapp text-ocher-400 text-sm"></i></div>
+          <div>
+            <p class="mono-label text-ocher-400">WhatsApp</p>
+            <p class="serif text-2xl group-hover:text-ocher-400">Scrie&#539;i un mesaj</p>
+          </div>
+        </a>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 border border-ocher-400 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-location-dot text-ocher-400 text-sm"></i></div>
+          <div>
+            <p class="mono-label text-ocher-400">Sediu</p>
+            <p class="serif text-xl">Strada Horea 1</p>
+            <p class="text-chalk/70 text-sm">400394 Cluj-Napoca</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="min-h-[500px]">
+      <iframe src="https://www.google.com/maps?q=46.774443,23.587252&hl=ro&z=17&output=embed" width="100%" height="100%" style="border:0; min-height:500px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink-900 text-chalk/60 py-10 border-t border-chalk/10">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-start gap-6">
+    <div>
+      <p class="text-2xl font-bold text-chalk">AOP</p>
+      <p class="mono-label text-ocher-400 mt-1">Birou de Arhitectur&#259;</p>
+    </div>
+    <div class="text-sm">
+      <p>Horea 1, Cluj-Napoca</p>
+      <p><a href="tel:0741146951" class="hover:text-ocher-400">0741 146 951</a></p>
+    </div>
+    <p class="text-xs">&copy; 2026 AOP</p>
+  </div>
+</footer>
+
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-ink-900 text-chalk grid grid-cols-2 z-50 border-t border-ocher-400">
+  <a href="tel:0741146951" class="py-4 text-center text-sm border-r border-chalk/20">
+    <i class="fa-solid fa-phone mr-2 text-ocher-400"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40741146951" class="py-4 text-center text-sm">
+    <i class="fa-brands fa-whatsapp mr-2 text-ocher-400"></i> WhatsApp
+  </a>
+</div>
+<div class="md:hidden h-16"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 900, once: true });</script>
+</body>
+</html>

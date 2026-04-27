@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Design S.R.L. | Magazin Craiova</title>
+<meta name="description" content="Class Design S.R.L. — magazin &#238;n Craiova, Strada R&#226;ului 320. Tel: 0251 412 233. Rating 4.5/5.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: {
+      onyx: { dark: '#000000', mid: '#1F1F1F', light: '#3F3F3F' },
+      pure: '#FFFFFF',
+      cream: '#F5F5F4',
+      gold: '#EAB308',
+    },
+    fontFamily: { heading: ['"Archivo Black"','sans-serif'], body: ['Inter','sans-serif'] }
+  }}}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, sans-serif; }
+  .grid-bg { background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 50px 50px; }
+  .gold-bar { width: 60px; height: 4px; background: #EAB308; }
+</style>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "Store", "name": "Class Design S.R.L.", "telephone": "+40251412233",
+"address": { "@type": "PostalAddress", "streetAddress": "Str. R\u00e2ului 320", "addressLocality": "Craiova", "postalCode": "200636", "addressRegion": "Dolj", "addressCountry": "RO" },
+"geo": { "@type": "GeoCoordinates", "latitude": 44.30173, "longitude": 23.78826 },
+"aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "2", "bestRating": "5" }}
+</script>
+</head>
+<body class="bg-pure text-onyx-dark font-body">
+
+<nav class="fixed top-0 w-full z-50 bg-pure/95 backdrop-blur border-b border-onyx-dark/10">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="font-heading text-xl tracking-tight">CLASS<span class="text-gold">.</span>DESIGN</a>
+    <a href="tel:+40251412233" class="bg-onyx-dark text-pure text-sm px-5 py-2.5 hover:bg-onyx-mid transition font-bold">0251 412 233</a>
+  </div>
+</nav>
+
+<section class="min-h-screen flex items-center grid-bg pt-20">
+  <div class="max-w-5xl mx-auto px-6 py-24" data-aos="fade-up">
+    <div class="gold-bar mb-6"></div>
+    <p class="text-onyx-mid text-xs tracking-[0.4em] uppercase font-bold mb-4">MAGAZIN &middot; CRAIOVA</p>
+    <h1 class="font-heading text-7xl md:text-9xl mb-6 tracking-tighter leading-none">CLASS<br><span class="text-gold">DESIGN</span></h1>
+    <p class="text-onyx-light text-lg mb-3">Strada R&#226;ului 320, Craiova</p>
+    <a href="tel:+40251412233" class="inline-block mt-6 bg-onyx-dark text-pure font-bold px-12 py-4 hover:bg-onyx-mid transition tracking-wider"><i class="fa-solid fa-phone mr-2"></i> 0251 412 233</a>
+  </div>
+</section>
+
+<section class="py-24 bg-cream">
+  <div class="max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
+    <div class="gold-bar mx-auto mb-6"></div>
+    <h2 class="font-heading text-3xl mb-8 tracking-tight">DESPRE NOI</h2>
+    <p class="text-onyx-light leading-relaxed mb-5">Class Design S.R.L. este un magazin situat &#238;n Craiova, pe Strada R&#226;ului 320. Cu un rating de 4.5/5 pe Google.</p>
+    <p class="text-onyx-light leading-relaxed">Program: Luni — Vineri 9:00 — 18:00, S&#226;mb&#259;t&#259; 10:00 — 13:00.</p>
+  </div>
+</section>
+
+<section class="py-12 bg-onyx-dark text-pure">
+  <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-3 gap-6 text-center" data-aos="fade-up">
+    <div><i class="fa-solid fa-clock text-gold text-2xl mb-2"></i><p class="font-heading tracking-wider">L-V</p><p class="text-pure/60 text-sm">9:00 — 18:00</p></div>
+    <div><i class="fa-solid fa-clock text-gold text-2xl mb-2"></i><p class="font-heading tracking-wider">SÂMBĂTĂ</p><p class="text-pure/60 text-sm">10:00 — 13:00</p></div>
+    <div><i class="fa-solid fa-location-dot text-gold text-2xl mb-2"></i><p class="font-heading tracking-wider">CRAIOVA</p><p class="text-pure/60 text-sm">Str. R&#226;ului 320</p></div>
+  </div>
+</section>
+
+<section class="py-24 bg-pure grid-bg">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-12" data-aos="fade-up"><div class="gold-bar mx-auto mb-6"></div><h2 class="font-heading text-3xl tracking-tight">CONTACT</h2></div>
+    <div class="grid md:grid-cols-2 gap-5" data-aos="fade-up">
+      <a href="tel:+40251412233" class="bg-cream p-8 text-center border-l-4 border-gold">
+        <i class="fa-solid fa-phone text-onyx-dark text-2xl mb-4"></i>
+        <p class="font-heading mb-1">TELEFON</p>
+        <p class="text-onyx-dark">0251 412 233</p>
+      </a>
+      <div class="bg-cream p-8 text-center border-l-4 border-gold">
+        <i class="fa-solid fa-location-dot text-onyx-dark text-2xl mb-4"></i>
+        <p class="font-heading mb-1">ADRES&#258;</p>
+        <p class="text-onyx-light text-sm">Strada R&#226;ului 320, Craiova</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-onyx-dark py-10">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <p class="font-heading text-pure">CLASS<span class="text-gold">.</span>DESIGN</p>
+    <p class="text-pure/40 text-sm mt-2">Craiova &middot; <a href="tel:+40251412233" class="text-gold">0251 412 233</a></p>
+  </div>
+</footer>
+
+<div class="fixed bottom-0 left-0 right-0 md:hidden bg-pure/95 backdrop-blur border-t border-onyx-dark/10 p-3 z-50">
+  <a href="tel:+40251412233" class="flex items-center justify-center gap-2 bg-onyx-dark text-pure font-bold py-3 w-full"><i class="fa-solid fa-phone"></i> 0251 412 233</a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 700, once: true });</script>
+</body>
+</html>

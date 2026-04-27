@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acub Studio Cluj-Napoca - Arhitectur&#259; Contemporan&#259; | 0740 078 890</title>
+<meta name="description" content="Acub Studio - birou de arhitectur&#259; &#238;n Cluj-Napoca. Proiecte reziden&#539;iale, comerciale &#537;i concepte urbane. Sun&#259; 0740 078 890.">
+<meta name="keywords" content="arhitect Cluj-Napoca, Acub Studio, birou arhitectura Cluj, proiect arhitectura Cluj, arhitectura contemporana Cluj">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Acub Studio">
+<link rel="canonical" href="">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Acub Studio">
+<meta property="og:title" content="Acub Studio - Arhitectur&#259; Cluj-Napoca">
+<meta property="og:description" content="Studio de arhitectur&#259; contemporan&#259; &#238;n Cluj-Napoca.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Acub Studio Cluj">
+<meta name="twitter:description" content="Arhitectur&#259; care respect&#259; contextul &#537;i oamenii.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Architect",
+  "name": "Acub Studio",
+  "telephone": "+40740078890",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Inocen&#539;iu Micu Klein 5",
+    "addressLocality": "Cluj-Napoca",
+    "postalCode": "400000",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.767382,
+    "longitude": 23.589198
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "2"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        concrete: {
+          50: '#eeece8',
+          100: '#d7d5cf',
+          700: '#39373a',
+          900: '#1a181b'
+        },
+        ink: {
+          700: '#202634',
+          900: '#0c101a'
+        },
+        mustard: {
+          400: '#e5b82e',
+          500: '#c49911'
+        }
+      },
+      fontFamily: {
+        display: ['Big Shoulders Display', 'sans-serif'],
+        sans: ['Heebo', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  body { font-family: 'Heebo', sans-serif; background: #eeece8; color: #0c101a; }
+  .display { font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; letter-spacing: 0.01em; }
+  .caps-xs { text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.68rem; font-weight: 500; }
+  .grid-guide { background-image: linear-gradient(to right, rgba(32,38,52,0.06) 1px, transparent 1px); background-size: 80px 100%; }
+  .vert-label { writing-mode: vertical-rl; transform: rotate(180deg); }
+  .big-border { border: 3px solid currentColor; }
+  .numbered-list { counter-reset: n; }
+  .numbered-list li::before { counter-increment: n; content: counter(n, decimal-leading-zero); font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 2rem; color: #c49911; display: block; margin-bottom: 0.5rem; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-concrete-50/95 backdrop-blur z-50 border-b border-ink-900/10">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+    <a href="#" class="flex items-baseline gap-2">
+      <span class="display text-3xl font-black text-ink-900">ACUB</span>
+      <span class="caps-xs text-mustard-500">/ studio</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 display font-bold text-sm text-ink-900 tracking-wider">
+      <a href="#studio" class="hover:text-mustard-500">STUDIO</a>
+      <a href="#servicii" class="hover:text-mustard-500">SERVICII</a>
+      <a href="#portofoliu" class="hover:text-mustard-500">PORTOFOLIU</a>
+      <a href="#proces" class="hover:text-mustard-500">PROCES</a>
+      <a href="#contact" class="hover:text-mustard-500">CONTACT</a>
+    </nav>
+    <a href="tel:0740078890" class="text-sm hidden md:inline-block display font-bold text-ink-900 border-b-2 border-mustard-500 pb-1 hover:text-mustard-500">
+      +40 740 078 890
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-32 md:pt-44 pb-20 md:pb-28 grid-guide">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-6">
+
+    <!-- Left: number marker -->
+    <div class="lg:col-span-1 hidden lg:flex items-start">
+      <span class="vert-label caps-xs text-mustard-500">&sect; Cluj-Napoca &middot; Klein 5</span>
+    </div>
+
+    <!-- Main -->
+    <div class="lg:col-span-11" data-aos="fade-up">
+      <div class="flex gap-4 items-center mb-6">
+        <span class="display text-mustard-500 font-black text-2xl">&mdash;</span>
+        <span class="caps-xs text-ink-700">Arhitectur&#259; &middot; Urbanism &middot; Interior</span>
+      </div>
+
+      <h1 class="display text-[20vw] md:text-[14vw] lg:text-[12vw] leading-[0.82] text-ink-900 font-black">
+        DESEN&#258;M<br>
+        <span class="text-mustard-500">CL&#258;DIRI</span><br>
+        CU CARE<br>
+        OAMENII <span class="italic font-normal">TR&#258;IESC</span>.
+      </h1>
+
+      <div class="mt-14 grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-5">
+          <p class="text-lg md:text-xl text-ink-700 leading-relaxed">
+            Acub este un studio de arhitectur&#259; din centrul Cluj-Napoca, fondat ca r&#259;spuns la nevoile de arhitectur&#259;
+            contemporan&#259; care nu uit&#259; de istoria locului.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="tel:0740078890" class="bg-ink-900 text-concrete-50 px-8 py-4 display font-bold hover:bg-mustard-500 hover:text-ink-900 transition inline-flex items-center gap-3">
+              <i class="fa-solid fa-phone"></i> 0740 078 890
+            </a>
+            <a href="https://wa.me/40740078890" target="_blank" class="border-2 border-ink-900 text-ink-900 px-8 py-4 display font-bold hover:bg-ink-900 hover:text-concrete-50 transition inline-flex items-center gap-3">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-4 gap-3">
+            <div class="big-border border-ink-900 p-5">
+              <p class="display text-5xl font-black text-mustard-500">CJ</p>
+              <p class="caps-xs text-ink-700 mt-2">Sediu central</p>
+            </div>
+            <div class="big-border border-ink-900 p-5">
+              <p class="display text-5xl font-black text-mustard-500">5.0</p>
+              <p class="caps-xs text-ink-700 mt-2">Rating Google</p>
+            </div>
+            <div class="big-border border-ink-900 p-5 bg-ink-900 text-concrete-50">
+              <p class="display text-5xl font-black text-mustard-400">RES</p>
+              <p class="caps-xs text-concrete-100 mt-2">Reziden&#539;ial</p>
+            </div>
+            <div class="big-border border-ink-900 p-5 bg-mustard-500 text-ink-900">
+              <p class="display text-5xl font-black">PUB</p>
+              <p class="caps-xs mt-2">Public</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Studio -->
+<section id="studio" class="py-20 md:py-28 bg-ink-900 text-concrete-50">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4" data-aos="fade-right">
+      <span class="caps-xs text-mustard-400">001 / STUDIO</span>
+      <h2 class="display text-5xl md:text-6xl font-black mt-6 leading-[0.95]">
+        CINE<br>
+        SUNTEM.
+      </h2>
+    </div>
+    <div class="lg:col-span-8 space-y-6 text-concrete-100 text-lg leading-loose" data-aos="fade-left">
+      <p>
+        Acub lucr&#259;m cu un principiu simplu: fiecare m&#259; ridicat&#259; trebuie s&#259; &#238;mbun&#259;t&#259;&#539;easc&#259; locul unde se a&#537;az&#259;,
+        nu doar s&#259;-l ocupe. Pentru asta citim ora&#537;ul, citim terenul, &#537;i citim familia sau echipa care ne vine cu un vis.
+      </p>
+      <p>
+        Suntem o echip&#259; tnar&#259; care crede &#238;n arhitectura g&#226;ndit&#259; pentru clima &#537;i cultura Rom&#226;niei, nu &#238;mprumutat&#259;
+        din portofolii str&#259;ine. Folosim materiale care &#238;mb&#259;tr&#226;nesc frumos &#537;i detalii care rezist&#259;.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Servicii -->
+<section id="servicii" class="py-20 md:py-28 bg-concrete-50">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10">
+    <div class="mb-14" data-aos="fade-up">
+      <span class="caps-xs text-mustard-500">002 / SERVICII</span>
+      <h2 class="display text-6xl md:text-8xl font-black mt-6 leading-[0.9] text-ink-900">
+        CE FACEM.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-1 bg-ink-900">
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">01</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">PROIECTE REZIDEN&#538;IALE</h3>
+        <p class="text-sm text-ink-700">Case, vile &#537;i imobile locative.</p>
+      </div>
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up" data-aos-delay="80">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">02</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">CL&#258;DIRI COMERCIALE</h3>
+        <p class="text-sm text-ink-700">Birouri, magazine &#537;i spa&#539;ii mixte.</p>
+      </div>
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up" data-aos-delay="160">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">03</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">URBANISM</h3>
+        <p class="text-sm text-ink-700">Studii PUZ, PUD &#537;i interven&#539;ii publice.</p>
+      </div>
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up" data-aos-delay="240">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">04</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">INTERIOR</h3>
+        <p class="text-sm text-ink-700">Design interior pentru reziden&#539;ial &#537;i comercial.</p>
+      </div>
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">05</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">CONSULTAN&#538;&#258;</h3>
+        <p class="text-sm text-ink-700">Studii preliminare &#537;i analiz&#259; de sit.</p>
+      </div>
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up" data-aos-delay="80">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">06</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">REABILIT&#258;RI</h3>
+        <p class="text-sm text-ink-700">Interven&#539;ii pe patrimoniu &#537;i cl&#259;diri existente.</p>
+      </div>
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up" data-aos-delay="160">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">07</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">AVIZE</h3>
+        <p class="text-sm text-ink-700">Prelu&#259;m documenta&#539;ia pentru autorizare.</p>
+      </div>
+      <div class="bg-concrete-50 p-8 hover:bg-mustard-500 transition" data-aos="fade-up" data-aos-delay="240">
+        <p class="display font-black text-5xl text-mustard-500 mb-3">08</p>
+        <h3 class="display text-2xl font-black text-ink-900 mb-2">SUPERVIZARE</h3>
+        <p class="text-sm text-ink-700">Asisten&#539;&#259; pe &#537;antier p&#226;n&#259; la recep&#539;ie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portofoliu -->
+<section id="portofoliu" class="py-20 md:py-28 bg-concrete-100">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10">
+    <div class="mb-14" data-aos="fade-up">
+      <span class="caps-xs text-mustard-500">003 / PORTOFOLIU</span>
+      <h2 class="display text-6xl md:text-8xl font-black mt-6 leading-[0.9] text-ink-900">
+        PROIECTE.
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div data-aos="fade-up">
+        <div class="aspect-[4/5] overflow-hidden big-border border-ink-900">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=700&auto=format&fit=crop&q=80" alt="Casa contemporana" class="w-full h-full object-cover">
+        </div>
+        <p class="caps-xs text-mustard-500 mt-4">2024 / REZIDEN&#538;IAL</p>
+        <h3 class="display text-2xl font-black text-ink-900">Casa H / Floresti</h3>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <div class="aspect-[4/5] overflow-hidden big-border border-ink-900">
+          <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=700&auto=format&fit=crop&q=80" alt="Birouri" class="w-full h-full object-cover">
+        </div>
+        <p class="caps-xs text-mustard-500 mt-4">2023 / COMERCIAL</p>
+        <h3 class="display text-2xl font-black text-ink-900">Spa&#539;iu birouri / Centru Cluj</h3>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <div class="aspect-[4/5] overflow-hidden big-border border-ink-900">
+          <img src="https://images.unsplash.com/photo-1612637968894-660373e23b03?w=700&auto=format&fit=crop&q=80" alt="Studiu urbanistic" class="w-full h-full object-cover">
+        </div>
+        <p class="caps-xs text-mustard-500 mt-4">2023 / URBANISM</p>
+        <h3 class="display text-2xl font-black text-ink-900">Studiu PUZ / Zorilor</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proces numbered -->
+<section id="proces" class="py-20 md:py-28 bg-concrete-50">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="mb-14" data-aos="fade-up">
+      <span class="caps-xs text-mustard-500">004 / PROCES</span>
+      <h2 class="display text-6xl md:text-8xl font-black mt-6 leading-[0.9] text-ink-900">CUM LUCR&#258;M.</h2>
+    </div>
+
+    <ol class="numbered-list grid md:grid-cols-5 gap-8">
+      <li data-aos="fade-up">
+        <p class="display text-xl font-black mt-2 mb-2">BRIEF</p>
+        <p class="text-sm text-ink-700">Discu&#539;ie, vizit&#259; la teren &#537;i clarific&#259;ri.</p>
+      </li>
+      <li data-aos="fade-up" data-aos-delay="80">
+        <p class="display text-xl font-black mt-2 mb-2">STUDIU</p>
+        <p class="text-sm text-ink-700">Analiz&#259; sit, regulamente, context.</p>
+      </li>
+      <li data-aos="fade-up" data-aos-delay="160">
+        <p class="display text-xl font-black mt-2 mb-2">CONCEPT</p>
+        <p class="text-sm text-ink-700">Dou&#259;-trei variante pentru alegere.</p>
+      </li>
+      <li data-aos="fade-up" data-aos-delay="240">
+        <p class="display text-xl font-black mt-2 mb-2">PROIECT</p>
+        <p class="text-sm text-ink-700">Documenta&#539;ie complet&#259; pentru autorizare.</p>
+      </li>
+      <li data-aos="fade-up" data-aos-delay="320">
+        <p class="display text-xl font-black mt-2 mb-2">&#536;ANTIER</p>
+        <p class="text-sm text-ink-700">Supervizare &#537;i predare final&#259;.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-ink-900 text-concrete-50">
+  <div class="grid lg:grid-cols-2">
+    <div class="p-10 md:p-16">
+      <span class="caps-xs text-mustard-400">005 / CONTACT</span>
+      <h2 class="display text-5xl md:text-7xl font-black mt-6 mb-12 leading-[0.9]">
+        SUN&#258;.<br>
+        <span class="text-mustard-400">DESEN&#258;M</span>.
+      </h2>
+      <div class="space-y-5">
+        <a href="tel:0740078890" class="flex items-center gap-5 big-border border-mustard-400 p-5 hover:bg-mustard-500 hover:text-ink-900 transition">
+          <i class="fa-solid fa-phone text-mustard-400 text-xl"></i>
+          <div>
+            <p class="caps-xs text-mustard-400">TEL</p>
+            <p class="display text-2xl font-black">0740 078 890</p>
+          </div>
+        </a>
+        <a href="https://wa.me/40740078890" class="flex items-center gap-5 big-border border-mustard-400 p-5 hover:bg-mustard-500 hover:text-ink-900 transition">
+          <i class="fa-brands fa-whatsapp text-mustard-400 text-xl"></i>
+          <div>
+            <p class="caps-xs text-mustard-400">WA</p>
+            <p class="display text-2xl font-black">Scrie&#539;i aici</p>
+          </div>
+        </a>
+        <div class="flex items-start gap-5 big-border border-mustard-400 p-5">
+          <i class="fa-solid fa-location-dot text-mustard-400 text-xl mt-1"></i>
+          <div>
+            <p class="caps-xs text-mustard-400">SEDIU</p>
+            <p class="display text-xl font-black">Strada Inocen&#539;iu Micu Klein 5</p>
+            <p class="text-concrete-100 text-sm">400000 Cluj-Napoca</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 big-border border-mustard-400 p-5">
+          <i class="fa-regular fa-clock text-mustard-400 text-xl mt-1"></i>
+          <div>
+            <p class="caps-xs text-mustard-400">PROGRAM</p>
+            <p class="display text-xl font-black">LUN - VIN 09:00 - 17:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="min-h-[500px]">
+      <iframe src="https://www.google.com/maps?q=46.767382,23.589198&hl=ro&z=17&output=embed" width="100%" height="100%" style="border:0; min-height:500px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink-900 text-concrete-100/70 py-10 border-t border-mustard-500/30">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-start gap-6">
+    <div>
+      <p class="display text-2xl font-black text-concrete-50">ACUB <span class="text-mustard-400">/ STUDIO</span></p>
+      <p class="text-sm mt-2">Birou de arhitectur&#259;, Cluj-Napoca.</p>
+    </div>
+    <div class="text-sm">
+      <p>Strada Klein 5, Cluj-Napoca</p>
+      <p><a href="tel:0740078890" class="hover:text-mustard-400">0740 078 890</a></p>
+    </div>
+    <p class="text-xs">&copy; 2026 ACUB</p>
+  </div>
+</footer>
+
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-mustard-500 text-ink-900 grid grid-cols-2 z-50">
+  <a href="tel:0740078890" class="py-4 text-center display font-black text-sm border-r border-ink-900">
+    <i class="fa-solid fa-phone mr-2"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40740078890" class="py-4 text-center display font-black text-sm">
+    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+  </a>
+</div>
+<div class="md:hidden h-16"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 900, once: true });</script>
+</body>
+</html>

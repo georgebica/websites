@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocat Executări Silite — Stan Ionel | București Sector 3</title>
+    <meta name="description" content="Avocat Stan Ionel — specialist în executări silite, dreptul muncii, drept administrativ și drept comercial. Cabinet avocat București, Sector 3, Bulevardul Unirii 43.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        steel: '#455A64',
+                        slate_dark: '#263238',
+                        copper: '#BF6A3D',
+                        copper_hover: '#A85A30',
+                    },
+                    fontFamily: {
+                        sora: ['Sora', 'sans-serif'],
+                        sourceserif: ['"Source Serif 4"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animate On Scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            color: #263238;
+            background: #FFFFFF;
+        }
+        h1, h2, h3, h4, h5, h6, .font-sora {
+            font-family: 'Sora', sans-serif;
+        }
+
+        /* Copper accent line */
+        .copper-line {
+            width: 60px;
+            height: 3px;
+            background: #BF6A3D;
+            display: block;
+        }
+        .copper-line-center {
+            width: 60px;
+            height: 3px;
+            background: #BF6A3D;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Sticky nav shadow on scroll */
+        .nav-scrolled {
+            box-shadow: 0 2px 20px rgba(38, 50, 56, 0.15);
+        }
+
+        /* Star rating color */
+        .star-gold { color: #F59E0B; }
+
+        /* Card hover */
+        .spec-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .spec-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(38, 50, 56, 0.12);
+            border-color: #BF6A3D;
+        }
+
+        /* Testimonial card */
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(38, 50, 56, 0.1);
+        }
+
+        /* Gradient overlay */
+        .gradient-slate {
+            background: linear-gradient(135deg, #263238 0%, #37474F 50%, #455A64 100%);
+        }
+
+        /* Hero subtle gradient */
+        .hero-bg {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F5F7F8 100%);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F5F7F8; }
+        ::-webkit-scrollbar-thumb { background: #455A64; border-radius: 4px; }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* CTA pulse subtle */
+        @keyframes subtle-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(191, 106, 61, 0.3); }
+            50% { box-shadow: 0 0 0 8px rgba(191, 106, 61, 0); }
+        }
+        .cta-pulse {
+            animation: subtle-pulse 3s infinite;
+        }
+
+        /* Stat block accent */
+        .stat-block {
+            border-left: 3px solid #BF6A3D;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ========== STICKY NAVIGATION ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-steel transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-18">
+                <!-- Logo / Brand -->
+                <a href="#acasa" class="flex items-center space-x-2 group">
+                    <i class="fa-solid fa-scale-balanced text-copper text-xl md:text-2xl group-hover:rotate-12 transition-transform duration-300"></i>
+                    <div class="leading-tight">
+                        <span class="font-sora font-bold text-white text-sm md:text-base tracking-wide">Avocat Stan Ionel</span>
+                        <span class="block text-xs text-gray-300 font-sourceserif">Executări Silite</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#acasa" class="text-gray-200 hover:text-white font-sora text-sm font-medium transition-colors duration-200">Acasă</a>
+                    <a href="#despre" class="text-gray-200 hover:text-white font-sora text-sm font-medium transition-colors duration-200">Despre</a>
+                    <a href="#specializari" class="text-gray-200 hover:text-white font-sora text-sm font-medium transition-colors duration-200">Specializări</a>
+                    <a href="#testimoniale" class="text-gray-200 hover:text-white font-sora text-sm font-medium transition-colors duration-200">Recenzii</a>
+                    <a href="#contact" class="text-gray-200 hover:text-white font-sora text-sm font-medium transition-colors duration-200">Contact</a>
+                    <a href="tel:0213323733" class="bg-copper hover:bg-copper_hover text-white font-sora text-sm font-semibold px-5 py-2 rounded transition-colors duration-200">
+                        <i class="fa-solid fa-phone mr-1"></i> Sună acum
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="menuToggle" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-slate_dark shadow-2xl md:hidden z-50">
+            <div class="flex items-center justify-between px-6 py-5 border-b border-gray-700">
+                <span class="font-sora font-bold text-white">Meniu</span>
+                <button id="menuClose" class="text-gray-300 hover:text-white text-2xl focus:outline-none" aria-label="Închide meniu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="flex flex-col px-6 py-6 space-y-5">
+                <a href="#acasa" class="mobile-link text-gray-200 hover:text-copper font-sora text-base font-medium transition-colors">Acasă</a>
+                <a href="#despre" class="mobile-link text-gray-200 hover:text-copper font-sora text-base font-medium transition-colors">Despre</a>
+                <a href="#specializari" class="mobile-link text-gray-200 hover:text-copper font-sora text-base font-medium transition-colors">Specializări</a>
+                <a href="#testimoniale" class="mobile-link text-gray-200 hover:text-copper font-sora text-base font-medium transition-colors">Recenzii</a>
+                <a href="#contact" class="mobile-link text-gray-200 hover:text-copper font-sora text-base font-medium transition-colors">Contact</a>
+                <span class="copper-line"></span>
+                <a href="tel:0213323733" class="bg-copper hover:bg-copper_hover text-white font-sora text-sm font-semibold px-5 py-3 rounded text-center transition-colors">
+                    <i class="fa-solid fa-phone mr-2"></i> 021 332 3733
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="acasa" class="hero-bg pt-24 md:pt-32 pb-16 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Left content -->
+                <div class="md:col-span-7" data-aos="fade-right" data-aos-duration="800">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="copper-line"></span>
+                        <span class="font-sora text-copper text-sm font-semibold uppercase tracking-widest">Cabinet de Avocat</span>
+                    </div>
+
+                    <h1 class="font-sora font-extrabold text-slate_dark text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4">
+                        Executări Silite
+                    </h1>
+                    <p class="font-sora font-medium text-steel text-xl sm:text-2xl mb-6">
+                        Avocat Stan Ionel — București
+                    </p>
+                    <p class="font-sourceserif text-gray-600 text-lg leading-relaxed mb-8 max-w-xl">
+                        Apărare profesionistă în executări silite, dreptul muncii, drept administrativ și comercial. Experiență dovedită în litigii complexe împotriva instituțiilor de stat.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+                        <a href="tel:0213323733" class="cta-pulse inline-flex items-center bg-copper hover:bg-copper_hover text-white font-sora font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg shadow-copper/20">
+                            <i class="fa-solid fa-phone-volume mr-3"></i> Consultație gratuită
+                        </a>
+                        <a href="#specializari" class="inline-flex items-center border-2 border-steel text-steel hover:bg-steel hover:text-white font-sora font-semibold text-base px-7 py-3.5 rounded-lg transition-all duration-200">
+                            Servicii <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Rating badge -->
+                    <div class="inline-flex items-center bg-white border border-gray-200 rounded-full px-5 py-2.5 shadow-sm">
+                        <div class="flex items-center mr-3">
+                            <i class="fa-solid fa-star star-gold text-sm"></i>
+                            <i class="fa-solid fa-star star-gold text-sm"></i>
+                            <i class="fa-solid fa-star star-gold text-sm"></i>
+                            <i class="fa-solid fa-star star-gold text-sm"></i>
+                            <i class="fa-solid fa-star-half-stroke star-gold text-sm"></i>
+                        </div>
+                        <span class="font-sora font-bold text-slate_dark text-sm">4.5</span>
+                        <span class="text-gray-400 mx-1.5">|</span>
+                        <span class="font-sourceserif text-gray-500 text-sm">din 67 recenzii</span>
+                    </div>
+                </div>
+
+                <!-- Right decorative block -->
+                <div class="md:col-span-5 hidden md:flex justify-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="relative">
+                        <div class="gradient-slate rounded-2xl p-10 text-center w-80">
+                            <i class="fa-solid fa-gavel text-copper text-6xl mb-6"></i>
+                            <h3 class="font-sora font-bold text-white text-2xl mb-2">Dreptate prin Lege</h3>
+                            <span class="copper-line-center mb-4"></span>
+                            <p class="text-gray-300 font-sourceserif text-base mt-4">
+                                Peste 15 ani de experiență în executări silite și litigii civile
+                            </p>
+                            <div class="mt-6 flex justify-center space-x-4 text-gray-400 text-2xl">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                                <i class="fa-solid fa-landmark"></i>
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                        </div>
+                        <!-- Decorative corner accent -->
+                        <div class="absolute -top-3 -right-3 w-16 h-16 border-t-3 border-r-3 border-copper rounded-tr-xl"></div>
+                        <div class="absolute -bottom-3 -left-3 w-16 h-16 border-b-3 border-l-3 border-copper rounded-bl-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== DESPRE CABINET ========== -->
+    <section id="despre" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-10 lg:gap-16 items-start">
+                <!-- Left: Text content -->
+                <div class="md:col-span-7" data-aos="fade-up" data-aos-duration="700">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="copper-line"></span>
+                        <span class="font-sora text-copper text-sm font-semibold uppercase tracking-widest">Despre Cabinet</span>
+                    </div>
+
+                    <h2 class="font-sora font-bold text-slate_dark text-3xl sm:text-4xl mb-6 leading-tight">
+                        Experiență solidă în executări silite și litigii complexe
+                    </h2>
+
+                    <div class="space-y-4 font-sourceserif text-gray-600 text-base leading-relaxed">
+                        <p>
+                            Cabinetul de Avocat Stan Ionel, situat pe <strong class="text-slate_dark">Bulevardul Unirii 43, Sector 3, București</strong>, este specializat în domeniul executărilor silite — unul dintre cele mai complexe și sensibile ramuri ale dreptului civil.
+                        </p>
+                        <p>
+                            Cu o practică îndelungată în instanțele din București, avocat Stan Ionel a obținut rezultate notabile în litigii împotriva instituțiilor publice majore, inclusiv <strong class="text-slate_dark">ISMB (Inspectoratul Școlar al Municipiului București)</strong> și <strong class="text-slate_dark">Ministerul Educației</strong>. Fiecare caz este tratat cu maximă atenție, strategie juridică adaptată și dedicare totală.
+                        </p>
+                        <p>
+                            Abordarea noastră se bazează pe transparență, comunicare constantă cu clientul și o pregătire meticuloasă a dosarului. Fie că sunteți creditor sau debitor într-o procedură de executare silită, vă oferim asistență juridică completă — de la analiza inițială până la finalizarea procedurii.
+                        </p>
+                        <p>
+                            Pe lângă executări silite, oferim consultanță și reprezentare în <strong class="text-slate_dark">dreptul muncii, drept administrativ și drept comercial</strong>, asigurând o acoperire juridică completă pentru persoane fizice și juridice.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Stat block -->
+                <div class="md:col-span-5" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                    <div class="bg-gradient-to-b from-gray-50 to-white border border-gray-200 rounded-xl p-8">
+                        <h3 class="font-sora font-bold text-slate_dark text-lg mb-6 flex items-center">
+                            <i class="fa-solid fa-chart-simple text-copper mr-3"></i>
+                            Cabinetul în cifre
+                        </h3>
+
+                        <div class="space-y-6">
+                            <div class="stat-block pl-4">
+                                <span class="font-sora font-extrabold text-3xl text-slate_dark">15+</span>
+                                <p class="font-sourceserif text-gray-500 text-sm mt-1">Ani de experiență în avocatură</p>
+                            </div>
+                            <div class="stat-block pl-4">
+                                <span class="font-sora font-extrabold text-3xl text-slate_dark">500+</span>
+                                <p class="font-sourceserif text-gray-500 text-sm mt-1">Dosare de executare silită gestionate</p>
+                            </div>
+                            <div class="stat-block pl-4">
+                                <span class="font-sora font-extrabold text-3xl text-slate_dark">4.5<span class="text-copper text-xl">/5</span></span>
+                                <p class="font-sourceserif text-gray-500 text-sm mt-1">Rating mediu din 67 de recenzii</p>
+                            </div>
+                            <div class="stat-block pl-4">
+                                <span class="font-sora font-extrabold text-3xl text-slate_dark">95%</span>
+                                <p class="font-sourceserif text-gray-500 text-sm mt-1">Rata de succes în instanță</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-location-dot text-copper mt-1"></i>
+                                <div>
+                                    <p class="font-sora font-semibold text-slate_dark text-sm">Bulevardul Unirii 43</p>
+                                    <p class="font-sourceserif text-gray-500 text-sm">Sector 3, București</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== SPECIALIZĂRI ========== -->
+    <section id="specializari" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section heading -->
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="600">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <span class="copper-line-center"></span>
+                </div>
+                <span class="font-sora text-copper text-sm font-semibold uppercase tracking-widest">Arii de practică</span>
+                <h2 class="font-sora font-bold text-slate_dark text-3xl sm:text-4xl mt-3">
+                    Specializări juridice
+                </h2>
+                <p class="font-sourceserif text-gray-500 text-base mt-4 max-w-2xl mx-auto">
+                    Oferim asistență juridică completă în cele mai importante domenii ale dreptului civil și comercial.
+                </p>
+            </div>
+
+            <!-- 4 Cards grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Card 1: Executări Silite -->
+                <div class="spec-card bg-white border border-gray-200 rounded-xl p-7 cursor-default" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-copper/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-gavel text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-sora font-bold text-slate_dark text-lg mb-3">Executări Silite</h3>
+                    <span class="copper-line mb-4"></span>
+                    <p class="font-sourceserif text-gray-500 text-sm leading-relaxed mt-4">
+                        Reprezentare completă în proceduri de executare silită — contestații la executare, suspendări, întoarcere executare. Experiență dovedită împotriva instituțiilor publice.
+                    </p>
+                </div>
+
+                <!-- Card 2: Dreptul Muncii -->
+                <div class="spec-card bg-white border border-gray-200 rounded-xl p-7 cursor-default" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-copper/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-briefcase text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-sora font-bold text-slate_dark text-lg mb-3">Dreptul Muncii</h3>
+                    <span class="copper-line mb-4"></span>
+                    <p class="font-sourceserif text-gray-500 text-sm leading-relaxed mt-4">
+                        Contestații desfacere contract de muncă, drepturi salariale restante, hărțuire la locul de muncă, negociere contracte individuale și colective de muncă.
+                    </p>
+                </div>
+
+                <!-- Card 3: Drept Administrativ -->
+                <div class="spec-card bg-white border border-gray-200 rounded-xl p-7 cursor-default" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-copper/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-landmark text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-sora font-bold text-slate_dark text-lg mb-3">Drept Administrativ</h3>
+                    <span class="copper-line mb-4"></span>
+                    <p class="font-sourceserif text-gray-500 text-sm leading-relaxed mt-4">
+                        Litigii cu autoritățile publice, contestarea actelor administrative, acțiuni în contencios administrativ, obținerea de despăgubiri de la stat.
+                    </p>
+                </div>
+
+                <!-- Card 4: Drept Comercial -->
+                <div class="spec-card bg-white border border-gray-200 rounded-xl p-7 cursor-default" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-copper/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-handshake text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-sora font-bold text-slate_dark text-lg mb-3">Drept Comercial</h3>
+                    <span class="copper-line mb-4"></span>
+                    <p class="font-sourceserif text-gray-500 text-sm leading-relaxed mt-4">
+                        Recuperare creanțe comerciale, litigii între parteneri de afaceri, consultanță contractuală, insolvență și reorganizare judiciară.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== TESTIMONIALE ========== -->
+    <section id="testimoniale" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section heading -->
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="600">
+                <span class="font-sora text-copper text-sm font-semibold uppercase tracking-widest">Recenzii clienți</span>
+                <h2 class="font-sora font-bold text-slate_dark text-3xl sm:text-4xl mt-3">
+                    Ce spun clienții noștri
+                </h2>
+                <span class="copper-line-center mt-4"></span>
+                <p class="font-sourceserif text-gray-500 text-base mt-6 max-w-2xl mx-auto">
+                    Rezultatele obținute vorbesc de la sine. Iată experiențele reale ale clienților care ne-au acordat încrederea lor.
+                </p>
+            </div>
+
+            <!-- 3 Testimonials -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gradient-to-b from-gray-50 to-white border border-gray-200 rounded-xl p-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <i class="fa-solid fa-quote-left text-copper/30 text-3xl mb-3"></i>
+                    <p class="font-sourceserif text-gray-600 text-base leading-relaxed mb-6">
+                        „Domnul avocat Stan Ionel este un profesionist desăvârșit. A câștigat procesul meu împotriva ISMB, după ce alți avocați refuzaseră dosarul. Comunicare excelentă, strategie clară și rezultate pe măsură. Recomand cu toată încrederea!"
+                    </p>
+                    <div class="flex items-center pt-4 border-t border-gray-200">
+                        <div class="w-10 h-10 bg-steel rounded-full flex items-center justify-center mr-3">
+                            <span class="font-sora font-bold text-white text-sm">AS</span>
+                        </div>
+                        <div>
+                            <p class="font-sora font-semibold text-slate_dark text-sm">Alina Samoila</p>
+                            <p class="font-sourceserif text-gray-400 text-xs">Client verificat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gradient-to-b from-gray-50 to-white border border-gray-200 rounded-xl p-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <i class="fa-solid fa-quote-left text-copper/30 text-3xl mb-3"></i>
+                    <p class="font-sourceserif text-gray-600 text-base leading-relaxed mb-6">
+                        „Am apelat la domnul Stan Ionel pentru o executare silită și am fost impresionată de profesionalismul și dedicarea cu care a tratat cazul meu. A reușit să obțină o hotărâre favorabilă împotriva Ministerului Educației. Un avocat de excepție!"
+                    </p>
+                    <div class="flex items-center pt-4 border-t border-gray-200">
+                        <div class="w-10 h-10 bg-steel rounded-full flex items-center justify-center mr-3">
+                            <span class="font-sora font-bold text-white text-sm">FU</span>
+                        </div>
+                        <div>
+                            <p class="font-sora font-semibold text-slate_dark text-sm">Florentina Ujica</p>
+                            <p class="font-sourceserif text-gray-400 text-xs">Client verificat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gradient-to-b from-gray-50 to-white border border-gray-200 rounded-xl p-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                        <i class="fa-solid fa-star star-gold text-sm"></i>
+                    </div>
+                    <i class="fa-solid fa-quote-left text-copper/30 text-3xl mb-3"></i>
+                    <p class="font-sourceserif text-gray-600 text-base leading-relaxed mb-6">
+                        „Recomand cu căldură cabinetul domnului avocat Stan Ionel. Am avut un caz dificil de dreptul muncii și dânsul a dat dovadă de o cunoaștere aprofundată a legislației. M-a ținut la curent cu fiecare etapă și am câștigat procesul. Mulțumesc!"
+                    </p>
+                    <div class="flex items-center pt-4 border-t border-gray-200">
+                        <div class="w-10 h-10 bg-steel rounded-full flex items-center justify-center mr-3">
+                            <span class="font-sora font-bold text-white text-sm">RR</span>
+                        </div>
+                        <div>
+                            <p class="font-sora font-semibold text-slate_dark text-sm">Rodica Racasanu</p>
+                            <p class="font-sourceserif text-gray-400 text-xs">Client verificat</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="py-16 md:py-24 gradient-slate">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section heading -->
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="600">
+                <span class="font-sora text-copper text-sm font-semibold uppercase tracking-widest">Contactează-ne</span>
+                <h2 class="font-sora font-bold text-white text-3xl sm:text-4xl mt-3">
+                    Programează o consultație
+                </h2>
+                <span class="copper-line-center mt-4"></span>
+                <p class="font-sourceserif text-gray-300 text-base mt-6 max-w-2xl mx-auto">
+                    Suntem aici să vă ajutăm. Contactați-ne telefonic sau vizitați-ne la cabinet pentru o consultație juridică personalizată.
+                </p>
+            </div>
+
+            <!-- Contact cards -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+                <!-- Phone -->
+                <div class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-copper/20 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-phone text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-sora font-bold text-white text-lg mb-2">Telefon</h3>
+                    <a href="tel:0213323733" class="font-sora font-semibold text-copper text-xl hover:text-white transition-colors duration-200 block mb-2">
+                        021 332 3733
+                    </a>
+                    <p class="font-sourceserif text-gray-400 text-sm">
+                        Apelați pentru programări și consultații
+                    </p>
+                </div>
+
+                <!-- Address -->
+                <div class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-16 h-16 bg-copper/20 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-location-dot text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-sora font-bold text-white text-lg mb-2">Adresă</h3>
+                    <p class="font-sora font-semibold text-copper text-base mb-1">
+                        Bulevardul Unirii 43
+                    </p>
+                    <p class="font-sourceserif text-gray-300 text-sm mb-2">
+                        Sector 3, București
+                    </p>
+                    <p class="font-sourceserif text-gray-400 text-sm">
+                        Lângă Piața Unirii
+                    </p>
+                </div>
+
+                <!-- Hours -->
+                <div class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-copper/20 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-clock text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-sora font-bold text-white text-lg mb-2">Program</h3>
+                    <p class="font-sora font-semibold text-copper text-base mb-1">
+                        Luni — Vineri
+                    </p>
+                    <p class="font-sourceserif text-gray-300 text-base mb-2">
+                        09:00 — 17:00
+                    </p>
+                    <p class="font-sourceserif text-gray-400 text-sm">
+                        Sâmbătă — Duminică: Închis
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="100">
+                <a href="tel:0213323733" class="inline-flex items-center bg-copper hover:bg-copper_hover text-white font-sora font-bold text-lg px-10 py-4 rounded-lg transition-colors duration-200 shadow-lg shadow-black/20">
+                    <i class="fa-solid fa-phone-volume mr-3"></i> Sună acum: 021 332 3733
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-slate_dark border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa-solid fa-scale-balanced text-copper text-xl"></i>
+                        <span class="font-sora font-bold text-white text-base">Avocat Stan Ionel</span>
+                    </div>
+                    <p class="font-sourceserif text-gray-400 text-sm leading-relaxed">
+                        Cabinet de avocat specializat în executări silite, dreptul muncii, drept administrativ și drept comercial. Sector 3, București.
+                    </p>
+                </div>
+
+                <!-- Quick links -->
+                <div>
+                    <h4 class="font-sora font-semibold text-white text-sm mb-4">Navigare rapidă</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#acasa" class="font-sourceserif text-gray-400 hover:text-copper text-sm transition-colors">Acasă</a></li>
+                        <li><a href="#despre" class="font-sourceserif text-gray-400 hover:text-copper text-sm transition-colors">Despre Cabinet</a></li>
+                        <li><a href="#specializari" class="font-sourceserif text-gray-400 hover:text-copper text-sm transition-colors">Specializări</a></li>
+                        <li><a href="#testimoniale" class="font-sourceserif text-gray-400 hover:text-copper text-sm transition-colors">Recenzii</a></li>
+                        <li><a href="#contact" class="font-sourceserif text-gray-400 hover:text-copper text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact info -->
+                <div>
+                    <h4 class="font-sora font-semibold text-white text-sm mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-copper mt-0.5 text-sm"></i>
+                            <span class="font-sourceserif text-gray-400 text-sm">Bulevardul Unirii 43, Sector 3, București</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-copper text-sm"></i>
+                            <a href="tel:0213323733" class="font-sourceserif text-gray-400 hover:text-copper text-sm transition-colors">021 332 3733</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-clock text-copper text-sm"></i>
+                            <span class="font-sourceserif text-gray-400 text-sm">Luni — Vineri, 09:00 — 17:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between">
+                <p class="font-sourceserif text-gray-500 text-sm">
+                    &copy; 2026 Cabinet Avocat Stan Ionel. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center space-x-2 mt-4 md:mt-0">
+                    <i class="fa-solid fa-scale-balanced text-gray-600 text-xs"></i>
+                    <span class="font-sourceserif text-gray-500 text-xs">Membru al Baroului București</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ========== ATTORNEY JSON-LD STRUCTURED DATA ========== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Avocat Stan Ionel",
+        "description": "Cabinet de avocat specializat în executări silite, dreptul muncii, drept administrativ și drept comercial.",
+        "url": "",
+        "telephone": "+40213323733",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bulevardul Unirii 43",
+            "addressLocality": "București",
+            "addressRegion": "Sector 3",
+            "postalCode": "030825",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.426844,
+            "longitude": 26.112493
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "67"
+        },
+        "priceRange": "$$",
+        "image": "",
+        "areaServed": {
+            "@type": "City",
+            "name": "București"
+        },
+        "knowsAbout": [
+            "Executări silite",
+            "Dreptul Muncii",
+            "Drept Administrativ",
+            "Drept Comercial"
+        ]
+    }
+    </script>
+
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- AOS Init -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            easing: 'ease-out-cubic',
+            offset: 60
+        });
+    </script>
+
+    <!-- Navbar scroll shadow & Mobile menu -->
+    <script>
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileMenu.classList.add('open');
+            menuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+
+</body>
+</html>

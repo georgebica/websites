@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solmag &middot; Platforma Prosumatorilor de Energie Solar&#259; &middot; Conect&#259;m Instalatori &#537;i Beneficiari &middot; 0722 615 776</title>
+<meta name="description" content="Solmag &#8211; platform&#259; B2B pentru energia solar&#259;: conect&#259;m firmele de instalare cu prosumatorii. Marketplace, hart&#259; de prosumatori, monitorizare flux de energie. Sun&#259; 0722 615 776.">
+<meta name="keywords" content="solmag, platforma solara, prosumator, marketplace fotovoltaic, instalare panouri, energie regenerabila, solar romania">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Solmag">
+<link rel="canonical" href="">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Solmag">
+<meta property="og:title" content="Solmag &middot; Platforma Prosumatorilor">
+<meta property="og:description" content="Marketplace &#537;i instrumente digitale pentru ecosistemul prosumatorilor de energie solar&#259;.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solmag &middot; 0722 615 776">
+<meta name="twitter:description" content="Platforma pentru instalatori &#537;i prosumatori fotovoltaici.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Bricolage Grotesque', 'system-ui'],
+        sans: ['Readex Pro', 'system-ui']
+      },
+      colors: {
+        void: '#0A0F1C',
+        midnight: '#111828',
+        slate: '#1E293B',
+        iron: '#334155',
+        paper: '#F5F4EE',
+        cloud: '#E2E8F0',
+        electric: '#6D87FF',
+        lime: '#BEF264',
+        amber: '#F59E0B',
+        violet: '#A78BFA',
+        gray: '#94A3B8'
+      }
+    }
+  }
+}
+</script>
+<style>
+body{font-family:'Readex Pro',system-ui;background:#0A0F1C;color:#F5F4EE}
+.display{font-family:'Bricolage Grotesque',system-ui;letter-spacing:-.025em}
+.massive{font-size:clamp(3.2rem,8.5vw,7.5rem);line-height:.95;font-weight:700;letter-spacing:-.03em}
+.grid-bg{background-image:linear-gradient(#ffffff07 1px,transparent 1px),linear-gradient(90deg,#ffffff07 1px,transparent 1px);background-size:60px 60px}
+.glow-electric{box-shadow:0 0 80px -10px #6D87FF60}
+.card-soft{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+.card-soft:hover{border-color:#6D87FF40}
+.tag{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .8rem;border-radius:999px;font-size:.72rem;font-weight:500;letter-spacing:.05em}
+.dashboard{position:relative;background:#111828;border:1px solid #334155;border-radius:18px;padding:1.25rem}
+.chart-bar{background:linear-gradient(180deg,#BEF264 0%,#BEF26440 100%);border-radius:4px 4px 0 0}
+.ring{width:120px;height:120px;border-radius:999px;background:conic-gradient(#BEF264 0 75%,#334155 75%);display:grid;place-content:center;position:relative}
+.ring::before{content:"";position:absolute;inset:12px;background:#111828;border-radius:999px}
+.node-line{stroke:#6D87FF;stroke-width:1.5;stroke-dasharray:3 5;opacity:.6}
+.gradient-line{background:linear-gradient(90deg,#6D87FF,#BEF264,#F59E0B);height:2px}
+.orb{position:absolute;border-radius:999px;filter:blur(60px);pointer-events:none}
+.monospaced{font-family:'Courier New',monospace;letter-spacing:.04em}
+</style>
+</head>
+<body>
+
+<!-- Top -->
+<div class="bg-midnight border-b border-iron/50">
+<div class="max-w-7xl mx-auto px-5 py-2 flex items-center justify-between text-[11px]">
+<span class="flex items-center gap-2 text-lime"><span class="w-1.5 h-1.5 rounded-full bg-lime animate-pulse"></span> PLATFORM STATUS: LIVE</span>
+<span class="text-gray">Ecosistem prosumatori energie solar&#259;</span>
+<a href="tel:0722615776" class="text-electric hover:text-lime">0722 615 776</a>
+</div>
+</div>
+
+<!-- NAV -->
+<header class="bg-void/90 backdrop-blur border-b border-iron/50 sticky top-0 z-40">
+<div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+<a href="#" class="flex items-center gap-3">
+<span class="w-10 h-10 grid place-content-center rounded-lg" style="background:conic-gradient(from 135deg,#6D87FF,#BEF264,#F59E0B,#6D87FF)"><span class="w-6 h-6 bg-void rounded display text-lime text-xs grid place-content-center font-bold">S</span></span>
+<div>
+<div class="display text-2xl font-bold leading-none text-paper">Solmag</div>
+<div class="text-[10px] text-gray tracking-[.2em] uppercase mt-0.5">Prosumer Platform</div>
+</div>
+</a>
+<nav class="hidden md:flex items-center gap-7 text-sm text-gray">
+<a href="#platform" class="hover:text-paper">Platform&#259;</a>
+<a href="#cum" class="hover:text-paper">Cum lucr&#259;m</a>
+<a href="#cine" class="hover:text-paper">Pentru cine</a>
+<a href="#ecosistem" class="hover:text-paper">Ecosistem</a>
+<a href="#contact" class="hover:text-paper">Contact</a>
+</nav>
+<a href="tel:0722615776" class="hidden md:inline-flex items-center gap-2 bg-lime text-void px-5 py-2.5 rounded-lg font-semibold hover:bg-paper transition"><i class="fa-solid fa-phone"></i> 0722 615 776</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="relative overflow-hidden grid-bg pt-16 pb-24">
+<div class="orb w-[500px] h-[500px] bg-electric/25 -top-40 -right-20"></div>
+<div class="orb w-80 h-80 bg-lime/20 bottom-0 left-10"></div>
+
+<div class="max-w-7xl mx-auto px-5 relative grid md:grid-cols-12 gap-10 items-start">
+
+<div class="md:col-span-7" data-aos="fade-up">
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="tag bg-electric/10 text-electric border border-electric/30"><i class="fa-solid fa-circle text-[.4rem]"></i> B2B Marketplace</span>
+<span class="tag bg-lime/10 text-lime border border-lime/30"><i class="fa-solid fa-chart-line"></i> 1.1 GWh &#238;n re&#539;ea</span>
+<span class="tag bg-amber/10 text-amber border border-amber/30"><i class="fa-solid fa-bolt"></i> Data + AI</span>
+</div>
+
+<h1 class="display massive text-paper">
+Ecosistemul <span class="text-lime">energiei solare</span>,<br>
+conectat digital.
+</h1>
+
+<p class="mt-8 max-w-xl text-lg text-cloud/75 leading-relaxed">
+Solmag construie&#537;te puntea &#238;ntre firmele de instalare fotovoltaic&#259; &#537;i prosumatorii de energie. Un marketplace, o hart&#259; global&#259;, un motor de monitorizare &mdash; toate &#238;n aceea&#537;i platform&#259;.
+</p>
+
+<div class="mt-9 flex flex-wrap gap-3">
+<a href="tel:0722615776" class="inline-flex items-center gap-3 bg-lime text-void px-7 py-4 rounded-lg font-semibold hover:bg-paper transition"><i class="fa-solid fa-phone-volume"></i> 0722 615 776</a>
+<a href="https://wa.me/40722615776" class="inline-flex items-center gap-3 bg-slate border border-iron text-paper px-7 py-4 rounded-lg font-semibold hover:border-electric hover:text-electric transition"><i class="fa-brands fa-whatsapp"></i> Intr&#259; &#238;n re&#539;ea</a>
+</div>
+
+<div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div><div class="display text-3xl font-bold text-lime">~100K</div><div class="text-xs text-gray mt-1">prosumatori mapa&#539;i</div></div>
+<div><div class="display text-3xl font-bold text-electric">1,1 GWh</div><div class="text-xs text-gray mt-1">capacitate &#238;n comunitate</div></div>
+<div><div class="display text-3xl font-bold text-amber">18</div><div class="text-xs text-gray mt-1">&#539;&#259;ri &#238;n extindere</div></div>
+<div><div class="display text-3xl font-bold text-violet">15%</div><div class="text-xs text-gray mt-1">din consumul RO</div></div>
+</div>
+</div>
+
+<!-- dashboard mockup -->
+<aside class="md:col-span-5" data-aos="fade-left" data-aos-delay="150">
+<div class="dashboard glow-electric">
+
+<div class="flex items-center justify-between mb-4">
+<div>
+<div class="text-xs text-gray">Energy Flow &middot; Live</div>
+<div class="display font-bold text-paper text-lg">Prosumator #043</div>
+</div>
+<span class="tag bg-lime/15 text-lime border border-lime/40"><span class="w-1.5 h-1.5 rounded-full bg-lime"></span> online</span>
+</div>
+
+<div class="flex items-end gap-2 h-32 mb-4">
+<div class="chart-bar flex-1" style="height:45%"></div>
+<div class="chart-bar flex-1" style="height:62%"></div>
+<div class="chart-bar flex-1" style="height:80%"></div>
+<div class="chart-bar flex-1" style="height:95%"></div>
+<div class="chart-bar flex-1" style="height:85%"></div>
+<div class="chart-bar flex-1" style="height:68%"></div>
+<div class="chart-bar flex-1" style="height:50%"></div>
+<div class="chart-bar flex-1" style="height:34%"></div>
+</div>
+
+<div class="grid grid-cols-2 gap-3 mb-4">
+<div class="bg-slate/60 rounded-lg p-3">
+<div class="text-[10px] text-gray uppercase tracking-widest">Produc&#539;ie azi</div>
+<div class="display font-bold text-xl text-lime mt-1">24,8 kWh</div>
+</div>
+<div class="bg-slate/60 rounded-lg p-3">
+<div class="text-[10px] text-gray uppercase tracking-widest">Surplus re&#539;ea</div>
+<div class="display font-bold text-xl text-electric mt-1">+9,2 kWh</div>
+</div>
+</div>
+
+<div class="flex items-center justify-between border-t border-iron pt-4">
+<div class="ring">
+<div class="relative text-center">
+<div class="display text-2xl font-bold text-paper">75%</div>
+<div class="text-[10px] text-gray">autoconsum</div>
+</div>
+</div>
+<div class="flex-1 pl-5 space-y-2">
+<div class="flex items-center justify-between text-xs"><span class="text-gray">Panou &middot; 8 x 450W</span><span class="text-paper font-semibold">3,6 kWp</span></div>
+<div class="flex items-center justify-between text-xs"><span class="text-gray">Invertor hibrid</span><span class="text-paper font-semibold">5 kW</span></div>
+<div class="flex items-center justify-between text-xs"><span class="text-gray">Baterie LFP</span><span class="text-paper font-semibold">10,24 kWh</span></div>
+<div class="flex items-center justify-between text-xs"><span class="text-gray">ROI estimat</span><span class="text-lime font-semibold">4,3 ani</span></div>
+</div>
+</div>
+
+<div class="mt-4 text-[10px] text-gray monospaced text-center">&middot; &middot; Dashboard demonstrativ &middot; &middot;</div>
+</div>
+</aside>
+</div>
+</section>
+
+<!-- ECOSYSTEM / PLATFORM -->
+<section id="platform" class="py-20 md:py-28 bg-midnight border-y border-iron/50">
+<div class="max-w-7xl mx-auto px-5">
+
+<div class="text-center mb-14" data-aos="fade-up">
+<div class="tag bg-electric/10 text-electric border border-electric/30 inline-flex">// Ecosistem Solmag</div>
+<h2 class="display text-5xl md:text-6xl font-bold mt-5 text-paper leading-[.95]">Trei piloni, <span class="text-lime">o singur&#259; re&#539;ea.</span></h2>
+</div>
+
+<div class="grid md:grid-cols-3 gap-5">
+<div class="card-soft rounded-2xl p-7 transition" data-aos="fade-up">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-xl bg-electric/15 text-electric grid place-content-center"><i class="fa-solid fa-handshake text-xl"></i></span>
+<span class="tag bg-electric/10 text-electric">01</span>
+</div>
+<h3 class="display font-bold text-2xl mt-4 text-paper">Marketplace</h3>
+<p class="text-sm text-gray mt-2">Conect&#259;m firmele de instalare cu clien&#539;i reali. Lead-uri calificate, proiecte cu volum, colaborare pe termen lung.</p>
+<ul class="mt-5 space-y-1.5 text-sm text-cloud/80">
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> Lead-uri verificate</li>
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> Colaborare franciz&#259;</li>
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> Pachete la volum</li>
+</ul>
+</div>
+
+<div class="card-soft rounded-2xl p-7 transition" data-aos="fade-up" data-aos-delay="80">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-xl bg-lime/15 text-lime grid place-content-center"><i class="fa-solid fa-map-location-dot text-xl"></i></span>
+<span class="tag bg-lime/10 text-lime">02</span>
+</div>
+<h3 class="display font-bold text-2xl mt-4 text-paper">Hart&#259; prosumatori</h3>
+<p class="text-sm text-gray mt-2">Instrument interactiv pentru distribu&#539;ia prosumatorilor &#537;i cerin&#539;ele pie&#539;ei de echilibrare. MVP func&#539;ional, &#238;n extindere.</p>
+<ul class="mt-5 space-y-1.5 text-sm text-cloud/80">
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> ~100K prosumatori mapa&#539;i</li>
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> Date &#238;n timp real</li>
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> Scalabil pe 18 &#539;&#259;ri</li>
+</ul>
+</div>
+
+<div class="card-soft rounded-2xl p-7 transition" data-aos="fade-up" data-aos-delay="160">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-xl bg-amber/15 text-amber grid place-content-center"><i class="fa-solid fa-chart-simple text-xl"></i></span>
+<span class="tag bg-amber/10 text-amber">03</span>
+</div>
+<h3 class="display font-bold text-2xl mt-4 text-paper">Monitorizare AI</h3>
+<p class="text-sm text-gray mt-2">Aplica&#539;ie bazat&#259; pe deep learning geometric &#537;i optimizare blockchain. Agregare descentralizat&#259; pentru balansarea re&#539;elei.</p>
+<ul class="mt-5 space-y-1.5 text-sm text-cloud/80">
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> AI predic&#539;ii consum</li>
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> Decentralized cloud</li>
+<li class="flex items-center gap-2"><i class="fa-solid fa-check text-lime text-xs"></i> Micro-grid solutions</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- NETWORK DIAGRAM -->
+<section class="py-20 md:py-28 relative grid-bg">
+<div class="orb w-72 h-72 bg-electric/15 top-1/2 left-1/4"></div>
+<div class="max-w-7xl mx-auto px-5">
+
+<div class="mb-14 text-center" data-aos="fade-up">
+<div class="tag bg-lime/10 text-lime border border-lime/30 inline-flex">// Re&#539;eaua Solmag</div>
+<h2 class="display text-5xl md:text-6xl font-bold mt-5 text-paper leading-[.95]">&#536;apte noduri care <span class="text-electric">fac re&#539;eaua s&#259; func&#539;ioneze.</span></h2>
+</div>
+
+<div class="relative card-soft rounded-3xl p-6 md:p-10">
+<svg viewBox="0 0 800 400" class="w-full h-auto">
+<!-- connecting lines -->
+<line x1="150" y1="200" x2="400" y2="100" class="node-line"/>
+<line x1="150" y1="200" x2="400" y2="200" class="node-line"/>
+<line x1="150" y1="200" x2="400" y2="300" class="node-line"/>
+<line x1="650" y1="100" x2="400" y2="200" class="node-line"/>
+<line x1="650" y1="200" x2="400" y2="200" class="node-line"/>
+<line x1="650" y1="300" x2="400" y2="200" class="node-line"/>
+<!-- central -->
+<circle cx="400" cy="200" r="60" fill="#6D87FF" opacity=".2"/>
+<circle cx="400" cy="200" r="36" fill="#6D87FF"/>
+<text x="400" y="206" text-anchor="middle" fill="#0A0F1C" font-family="Bricolage Grotesque" font-weight="700" font-size="18">HUB</text>
+<!-- left nodes (installers) -->
+<circle cx="150" cy="100" r="22" fill="#BEF264"/>
+<text x="150" y="106" text-anchor="middle" fill="#0A0F1C" font-size="11" font-weight="700">I1</text>
+<circle cx="150" cy="200" r="22" fill="#BEF264"/>
+<text x="150" y="206" text-anchor="middle" fill="#0A0F1C" font-size="11" font-weight="700">I2</text>
+<circle cx="150" cy="300" r="22" fill="#BEF264"/>
+<text x="150" y="306" text-anchor="middle" fill="#0A0F1C" font-size="11" font-weight="700">I3</text>
+<!-- right nodes (prosumers) -->
+<circle cx="650" cy="100" r="22" fill="#F59E0B"/>
+<text x="650" y="106" text-anchor="middle" fill="#0A0F1C" font-size="11" font-weight="700">P1</text>
+<circle cx="650" cy="200" r="22" fill="#F59E0B"/>
+<text x="650" y="206" text-anchor="middle" fill="#0A0F1C" font-size="11" font-weight="700">P2</text>
+<circle cx="650" cy="300" r="22" fill="#F59E0B"/>
+<text x="650" y="306" text-anchor="middle" fill="#0A0F1C" font-size="11" font-weight="700">P3</text>
+<!-- labels -->
+<text x="150" y="60" text-anchor="middle" fill="#BEF264" font-family="Readex Pro" font-size="12" font-weight="600">Instalatori</text>
+<text x="650" y="60" text-anchor="middle" fill="#F59E0B" font-family="Readex Pro" font-size="12" font-weight="600">Prosumatori</text>
+<text x="400" y="290" text-anchor="middle" fill="#6D87FF" font-family="Readex Pro" font-size="12" font-weight="600">Cloud de date</text>
+</svg>
+
+<div class="mt-8 grid md:grid-cols-3 gap-5 text-sm">
+<div class="flex items-start gap-3">
+<span class="w-8 h-8 rounded-lg bg-lime/15 text-lime grid place-content-center shrink-0"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+<div><div class="font-semibold text-paper">Instalatori certifica&#539;i</div><div class="text-gray">Firme verificate de execu&#539;ie &#537;i mentenan&#539;&#259;.</div></div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-8 h-8 rounded-lg bg-electric/15 text-electric grid place-content-center shrink-0"><i class="fa-solid fa-cloud"></i></span>
+<div><div class="font-semibold text-paper">Cloud de date</div><div class="text-gray">Agregare, predic&#539;ii &#537;i distribu&#539;ie la balansare.</div></div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-8 h-8 rounded-lg bg-amber/15 text-amber grid place-content-center shrink-0"><i class="fa-solid fa-house-signal"></i></span>
+<div><div class="font-semibold text-paper">Prosumatori</div><div class="text-gray">Gospod&#259;rii, firme, ferme cu sisteme fotovoltaice.</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOR installers / FOR prosumers -->
+<section id="cine" class="py-20 md:py-24 bg-midnight border-y border-iron/50">
+<div class="max-w-7xl mx-auto px-5">
+
+<div class="text-center mb-14" data-aos="fade-up">
+<div class="tag bg-amber/10 text-amber border border-amber/30 inline-flex">// Pentru cine</div>
+<h2 class="display text-5xl md:text-6xl font-bold mt-5 text-paper leading-[.95]">Dou&#259; direc&#539;ii, <span class="text-amber">un singur c&#226;mp.</span></h2>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+<div class="card-soft rounded-3xl p-8" data-aos="fade-up">
+<span class="tag bg-lime/15 text-lime border border-lime/30"><i class="fa-solid fa-screwdriver-wrench"></i> Instalatori</span>
+<h3 class="display text-3xl font-bold mt-5 text-paper">Lead-uri pre-calificate, proiecte cu volum.</h3>
+<ul class="mt-6 space-y-3 text-cloud/80 text-sm">
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-lime mt-1"></i>Acces la 100 de lead-uri verificate pe campanie</li>
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-lime mt-1"></i>Colaborare pe baz&#259; de franciz&#259; pentru extindere regional&#259;</li>
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-lime mt-1"></i>Integrare &#238;n ecosistemul de monitorizare post-instalare</li>
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-lime mt-1"></i>Campanii promo&#539;ionale pentru primii parteneri</li>
+</ul>
+<a href="tel:0722615776" class="inline-flex items-center gap-2 mt-7 text-lime hover:text-paper transition font-semibold">Afl&#259; detalii &rarr;</a>
+</div>
+<div class="card-soft rounded-3xl p-8" data-aos="fade-up" data-aos-delay="80">
+<span class="tag bg-amber/15 text-amber border border-amber/30"><i class="fa-solid fa-house-signal"></i> Prosumatori</span>
+<h3 class="display text-3xl font-bold mt-5 text-paper">Instalatori verifica&#539;i, costuri transparente.</h3>
+<ul class="mt-6 space-y-3 text-cloud/80 text-sm">
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-amber mt-1"></i>Ofert&#259; comparativ&#259; de la mai multe firme de instalare</li>
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-amber mt-1"></i>Proiecte de micro-grid cu finan&#539;are comunitar&#259;</li>
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-amber mt-1"></i>Dashboard cu produc&#539;ie &#537;i autoconsum &#238;n timp real</li>
+<li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-amber mt-1"></i>Venit pasiv din energia livrat&#259; &#238;n re&#539;ea</li>
+</ul>
+<a href="tel:0722615776" class="inline-flex items-center gap-2 mt-7 text-amber hover:text-paper transition font-semibold">&Icirc;nscrie-te acum &rarr;</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- VISION / NUMBERS -->
+<section id="ecosistem" class="py-20 md:py-24 bg-void">
+<div class="max-w-7xl mx-auto px-5">
+
+<div class="mb-12" data-aos="fade-up">
+<div class="tag bg-violet/10 text-violet border border-violet/30 inline-flex">// Viziunea 2030</div>
+<h2 class="display text-5xl md:text-6xl font-bold mt-5 text-paper leading-[.95]">C&#259;tre cel mai mare pool <span class="text-violet">european de prosumatori.</span></h2>
+</div>
+
+<div class="grid md:grid-cols-4 gap-0 border border-iron rounded-2xl overflow-hidden">
+<div class="p-7 border-b md:border-b-0 md:border-r border-iron card-soft">
+<div class="text-xs text-gray uppercase tracking-widest">2026</div>
+<h4 class="display text-xl font-bold text-paper mt-2">Consolidare RO + UK</h4>
+<p class="text-sm text-cloud/70 mt-2">Marketplace opera&#539;ional 100%. Dashboard prosumator complet.</p>
+</div>
+<div class="p-7 border-b md:border-b-0 md:border-r border-iron card-soft">
+<div class="text-xs text-lime uppercase tracking-widest">2027</div>
+<h4 class="display text-xl font-bold text-paper mt-2">Furnizor descentralizat</h4>
+<p class="text-sm text-cloud/70 mt-2">Licen&#539;&#259; de furnizor &#238;n Europa, Asia sau Africa. Transform&#259;m prosumatorii &#238;n re&#539;ea balansat&#259;.</p>
+</div>
+<div class="p-7 border-b md:border-b-0 md:border-r border-iron card-soft">
+<div class="text-xs text-electric uppercase tracking-widest">2028</div>
+<h4 class="display text-xl font-bold text-paper mt-2">Storage la scar&#259;</h4>
+<p class="text-sm text-cloud/70 mt-2">Focus pe baterii de stocare &#537;i putere computa&#539;ional&#259;. 500K prosumatori activi.</p>
+</div>
+<div class="p-7 card-soft">
+<div class="text-xs text-amber uppercase tracking-widest">2030</div>
+<h4 class="display text-xl font-bold text-paper mt-2">18 &#539;&#259;ri, 4M+ prosumatori</h4>
+<p class="text-sm text-cloud/70 mt-2">Franciz&#259; global&#259;. Cea mai mare comunitate european&#259; de prosumatori.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="py-24 border-y border-iron/50 relative overflow-hidden grid-bg">
+<div class="orb w-[500px] h-[500px] bg-lime/20 -top-40 left-1/4"></div>
+<div class="orb w-96 h-96 bg-electric/20 bottom-0 right-20"></div>
+<div class="max-w-5xl mx-auto px-5 text-center relative">
+<div class="tag bg-lime/10 text-lime border border-lime/30 inline-flex" data-aos="fade-up">// Intr&#259; &#238;n re&#539;ea</div>
+<h2 class="display massive text-paper mt-6" data-aos="fade-up">
+Fii <span class="text-lime">parte</span> din<br>
+revolu&#539;ia energetic&#259;.
+</h2>
+<p class="mt-6 text-lg text-cloud/75 max-w-2xl mx-auto" data-aos="fade-up">Un apel sau un mesaj, un on-boarding scurt &#537;i sunte&#539;i parte din ecosistem &mdash; fie ca instalator, fie ca prosumator.</p>
+<div class="mt-9 flex flex-wrap justify-center gap-4" data-aos="fade-up">
+<a href="tel:0722615776" class="bg-lime text-void px-8 py-4 rounded-lg font-semibold text-lg hover:bg-paper transition"><i class="fa-solid fa-phone-volume mr-2"></i> 0722 615 776</a>
+<a href="https://wa.me/40722615776" class="bg-slate border border-iron text-paper px-8 py-4 rounded-lg font-semibold text-lg hover:border-lime hover:text-lime transition"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-midnight border-t border-iron/50">
+<div class="max-w-7xl mx-auto px-5 py-14 grid md:grid-cols-4 gap-10">
+<div class="md:col-span-2">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 grid place-content-center rounded-lg" style="background:conic-gradient(from 135deg,#6D87FF,#BEF264,#F59E0B,#6D87FF)"><span class="w-6 h-6 bg-void rounded display text-lime text-xs grid place-content-center font-bold">S</span></span>
+<div>
+<div class="display text-2xl font-bold leading-none text-paper">Solmag</div>
+<div class="text-[10px] text-gray tracking-[.2em] uppercase mt-0.5">Prosumer Platform</div>
+</div>
+</div>
+<p class="text-gray mt-4 max-w-md text-sm">Solmag este platforma digital&#259; care conecteaz&#259; firmele de instalare fotovoltaic&#259; cu prosumatorii de energie din Rom&#226;nia, UK &#537;i 18 alte pie&#539;e &#238;n extindere.</p>
+</div>
+<div>
+<div class="text-xs uppercase tracking-widest text-lime">Module</div>
+<ul class="mt-3 space-y-1.5 text-sm text-cloud/70">
+<li>Marketplace</li>
+<li>Prosumer Map</li>
+<li>Monitorizare AI</li>
+<li>Decentralized Cloud</li>
+<li>Micro-grid solutions</li>
+</ul>
+</div>
+<div>
+<div class="text-xs uppercase tracking-widest text-lime">Contact</div>
+<ul class="mt-3 space-y-1.5 text-sm text-cloud/70">
+<li><i class="fa-solid fa-phone w-4 text-amber"></i> 0722 615 776</li>
+<li><i class="fa-brands fa-whatsapp w-4 text-lime"></i> Ecosistem 24/7</li>
+<li><i class="fa-solid fa-globe w-4 text-electric"></i> RO &middot; UK</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-iron/50">
+<div class="max-w-7xl mx-auto px-5 py-5 text-center text-xs text-gray">&copy; 2026 Solmag &middot; Prosumer platform</div>
+</div>
+</footer>
+
+<!-- Mobile bar -->
+<div class="fixed bottom-0 left-0 right-0 md:hidden bg-void border-t border-iron flex z-50">
+<a href="tel:0722615776" class="flex-1 text-center py-3 font-semibold bg-lime text-void"><i class="fa-solid fa-phone"></i> Sun&#259;</a>
+<a href="https://wa.me/40722615776" class="flex-1 text-center py-3 font-semibold text-paper border-l border-iron"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:650,once:true,offset:60});</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Organization",
+"name":"Solmag",
+"image":"",
+"telephone":"+40722615776",
+"description":"Platform&#259; B2B pentru ecosistemul prosumatorilor de energie solar&#259;.",
+"geo":{"@type":"GeoCoordinates","latitude":45.942507,"longitude":25.020108},
+"url":"",
+"areaServed":["Rom&#226;nia","UK","Europa"]
+}
+</script>
+</body>
+</html>

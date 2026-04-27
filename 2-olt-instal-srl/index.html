@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Olt Instal S.R.L. — Instalații Sanitare, Încălzire și Aer Condiționat | Slatina, Olt</title>
+    <meta name="description" content="Instalații sanitare, încălzire centrală și aer condiționat în Slatina, Olt. Echipă cu peste 25 de ani de experiență. Sună acum: 0249 433 211.">
+    <meta name="keywords" content="instalații sanitare Slatina, încălzire centrală Olt, aer condiționat Slatina, instalator Slatina, 2 Olt Instal">
+    <meta property="og:title" content="2 Olt Instal S.R.L. — Instalații de Calitate din 2001">
+    <meta property="og:description" content="Instalații sanitare, încălzire centrală și aer condiționat în Slatina și județul Olt. Peste 25 de ani de experiență.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ro_RO">
+    <link rel="canonical" href="index.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        terracotta: '#C4673A',
+                        copper: '#B87333',
+                        'dark-copper': '#8B5E3C',
+                        cream: '#FDF8F3',
+                        'cream-alt': '#F5EDE4',
+                        'accent-light': '#E8D5C0',
+                        'text-primary': '#2C2017',
+                        'text-secondary': '#6B5B4F',
+                        'footer-dark': '#2C2017',
+                    },
+                    fontFamily: {
+                        heading: ['"Roboto Slab"', 'serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2C2017;
+            background-color: #FDF8F3;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        /* Pipe connector pulse */
+        @keyframes pipeFlow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.85; }
+        }
+        .pipe-line {
+            animation: pipeFlow 3s ease-in-out infinite;
+        }
+
+        /* Copper line under header */
+        .header-pipe {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #B87333 20%, #B87333 80%, transparent 100%);
+        }
+
+        /* Hero right panel texture */
+        .hero-texture {
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(255,255,255,0.03) 10px,
+                    rgba(255,255,255,0.03) 20px
+                ),
+                linear-gradient(135deg, #B87333 0%, #C4673A 40%, #8B5E3C 70%, #B87333 100%);
+        }
+
+        /* Service card hover */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(139,94,60,0.18);
+        }
+
+        /* Brushed metal texture */
+        .brushed-metal {
+            background-image:
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(184,115,51,0.03) 2px,
+                    rgba(184,115,51,0.03) 4px
+                );
+        }
+
+        /* Warm radial pattern */
+        .warm-pattern {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(184,115,51,0.04) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(196,103,58,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 60% 80%, rgba(184,115,51,0.04) 0%, transparent 50%);
+        }
+
+        /* Mobile CTA slide-up */
+        .mobile-cta {
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        .mobile-cta.visible {
+            transform: translateY(0);
+        }
+
+        /* Hamburger animation */
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        .hamburger-active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger-active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Mobile menu slide */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.35s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Contact card gradient border */
+        .contact-card-border {
+            background: linear-gradient(135deg, #B87333, #C4673A, #8B5E3C);
+            padding: 3px;
+            border-radius: 16px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDF8F3; }
+        ::-webkit-scrollbar-thumb { background: #B87333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8B5E3C; }
+    </style>
+</head>
+<body class="font-body text-text-primary">
+
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 bg-cream/95 backdrop-blur-sm transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+            <!-- Logo -->
+            <a href="#acasa" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-lg bg-terracotta flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-wrench text-white text-lg"></i>
+                </div>
+                <span class="font-heading font-bold text-lg md:text-xl text-text-primary group-hover:text-terracotta transition-colors">
+                    2 Olt Instal
+                </span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#acasa" class="font-medium text-text-secondary hover:text-terracotta transition-colors">Acasă</a>
+                <a href="#servicii" class="font-medium text-text-secondary hover:text-terracotta transition-colors">Servicii</a>
+                <a href="#despre" class="font-medium text-text-secondary hover:text-terracotta transition-colors">Despre Noi</a>
+                <a href="#contact" class="font-medium text-text-secondary hover:text-terracotta transition-colors">Contact</a>
+                <a href="tel:+40249433211" class="inline-flex items-center gap-2 bg-terracotta text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-dark-copper transition-colors text-sm">
+                    <i class="fa-solid fa-phone"></i>
+                    0249 433 211
+                </a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Meniu navigare">
+                <span class="hamburger-line block w-6 h-0.5 bg-text-primary rounded"></span>
+                <span class="hamburger-line block w-6 h-0.5 bg-text-primary rounded"></span>
+                <span class="hamburger-line block w-6 h-0.5 bg-text-primary rounded"></span>
+            </button>
+        </div>
+        <!-- Copper pipe under header -->
+        <div class="header-pipe"></div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-cream shadow-2xl z-50 md:hidden">
+            <div class="flex justify-end p-4">
+                <button id="closeMenu" class="p-2 text-text-primary" aria-label="Închide meniul">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-1 px-6 pt-4">
+                <a href="#acasa" class="mobile-nav-link py-3 px-4 rounded-lg text-lg font-medium text-text-primary hover:bg-accent-light/50 transition-colors">Acasă</a>
+                <a href="#servicii" class="mobile-nav-link py-3 px-4 rounded-lg text-lg font-medium text-text-primary hover:bg-accent-light/50 transition-colors">Servicii</a>
+                <a href="#despre" class="mobile-nav-link py-3 px-4 rounded-lg text-lg font-medium text-text-primary hover:bg-accent-light/50 transition-colors">Despre Noi</a>
+                <a href="#contact" class="mobile-nav-link py-3 px-4 rounded-lg text-lg font-medium text-text-primary hover:bg-accent-light/50 transition-colors">Contact</a>
+                <div class="mt-6 flex flex-col gap-3">
+                    <a href="tel:+40249433211" class="flex items-center justify-center gap-2 bg-terracotta text-white py-3 rounded-lg font-semibold">
+                        <i class="fa-solid fa-phone"></i> Sună Acum
+                    </a>
+                    <a href="https://wa.me/40745644001" class="flex items-center justify-center gap-2 border-2 border-copper text-copper py-3 rounded-lg font-semibold hover:bg-copper hover:text-white transition-colors">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION (Split-Screen) ========== -->
+    <section id="acasa" class="pt-16 md:pt-20">
+        <div class="flex flex-col md:flex-row min-h-[85vh] md:min-h-[90vh]">
+            <!-- Left Content Half -->
+            <div class="w-full md:w-[55%] flex items-center bg-cream warm-pattern">
+                <div class="max-w-xl mx-auto px-6 sm:px-10 lg:px-16 py-16 md:py-0">
+                    <div data-aos="fade-right" data-aos-duration="800">
+                        <p class="text-copper font-semibold text-sm tracking-wider uppercase mb-4">Din 2001 pentru Slatina și județul Olt</p>
+                        <h1 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-text-primary leading-tight mb-6">
+                            Instalații făcute cu pricepere, pentru confortul casei tale
+                        </h1>
+                        <p class="text-text-secondary text-lg leading-relaxed mb-8 max-w-md">
+                            Montăm, reparăm și întreținem instalații sanitare, de încălzire și aer condiționat. Lucrări corecte, la termen, cu garanție.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+                        <a href="tel:+40249433211" class="inline-flex items-center justify-center gap-2.5 bg-terracotta text-white px-7 py-3.5 rounded-xl font-semibold text-base hover:bg-dark-copper transition-colors shadow-lg shadow-terracotta/20">
+                            <i class="fa-solid fa-phone"></i>
+                            Sună Acum
+                        </a>
+                        <a href="https://wa.me/40745644001" class="inline-flex items-center justify-center gap-2.5 border-2 border-copper text-copper px-7 py-3.5 rounded-xl font-semibold text-base hover:bg-copper hover:text-white transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            Scrie pe WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-text-secondary" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-copper"></i>
+                            25+ ani experiență
+                        </span>
+                        <span class="hidden sm:inline text-accent-light">|</span>
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-map-marker-alt text-copper"></i>
+                            Slatina, Olt
+                        </span>
+                        <span class="hidden sm:inline text-accent-light">|</span>
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-copper"></i>
+                            5/5 Google
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Decorative Panel -->
+            <div class="w-full md:w-[45%] hero-texture flex items-center justify-center min-h-[220px] md:min-h-0 relative overflow-hidden">
+                <!-- Large background icon -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class="fa-solid fa-tools text-white/[0.07] text-[10rem] md:text-[18rem] transform -rotate-12"></i>
+                </div>
+                <!-- Decorative circles -->
+                <div class="absolute top-10 right-10 w-32 h-32 rounded-full border border-white/10"></div>
+                <div class="absolute bottom-16 left-8 w-20 h-20 rounded-full border border-white/[0.07]"></div>
+                <div class="absolute top-1/3 left-1/4 w-48 h-48 rounded-full border border-white/[0.05]"></div>
+                <!-- Central content -->
+                <div class="relative z-10 text-center px-8">
+                    <div class="inline-flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-white/20 mb-4 backdrop-blur-sm bg-white/[0.05]">
+                        <i class="fa-solid fa-wrench text-white/70 text-4xl md:text-5xl"></i>
+                    </div>
+                    <p class="font-heading text-white/80 text-xl md:text-2xl font-semibold">Instalații de Calitate</p>
+                    <p class="text-white/50 text-sm mt-1">din 2001</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PIPE CONNECTOR 1 ========== -->
+    <div class="flex flex-col items-center py-2" aria-hidden="true">
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+        <div class="w-0.5 h-14 bg-copper/40 pipe-line"></div>
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+    </div>
+
+    <!-- ========== WELCOME / ABOUT SECTION ========== -->
+    <section id="despre" class="py-16 md:py-24 bg-cream warm-pattern">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-copper font-semibold text-sm tracking-wider uppercase mb-3">Despre noi</p>
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-text-primary mb-8">
+                    Peste 25 de ani alături de comunitatea din Slatina
+                </h2>
+            </div>
+
+            <div class="space-y-5 text-text-secondary text-lg leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <p>
+                    Din 2001, echipa 2 Olt Instal a crescut alături de orașul Slatina. Am început cu lucrări de instalații sanitare și am ajuns să oferim soluții complete de încălzire centrală și climatizare pentru case, apartamente și spații comerciale din tot județul Olt.
+                </p>
+                <p>
+                    Am montat calorifere în sute de locuințe, am înlocuit țevi vechi în blocuri, am instalat centrale termice și split-uri, și am rezolvat urgențe la care alții nu au răspuns. Fiecare lucrare este tratată cu aceeași atenție, fie că e vorba de o reparație la un robinet sau de o instalație completă într-o casă nouă.
+                </p>
+                <p>
+                    Suntem o echipă mică, dar exact asta ne face eficienți. Lucrăm direct cu proprietarii, fără intermediari, fără birocrație inutilă. Când suni la noi, vorbești cu cineva care înțelege meseria și îți poate da un răspuns clar pe loc.
+                </p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm border border-accent-light/40">
+                    <div class="text-3xl font-heading font-bold text-terracotta mb-1">25+</div>
+                    <div class="text-text-secondary text-sm font-medium">Ani de Experiență</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm border border-accent-light/40">
+                    <div class="text-3xl font-heading font-bold text-terracotta mb-1">Slatina</div>
+                    <div class="text-text-secondary text-sm font-medium">și Județul Olt</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm border border-accent-light/40">
+                    <div class="flex items-center justify-center gap-1 mb-1">
+                        <i class="fa-solid fa-star text-terracotta text-lg"></i>
+                        <span class="text-3xl font-heading font-bold text-terracotta">5/5</span>
+                    </div>
+                    <div class="text-text-secondary text-sm font-medium">Rating Google</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PIPE CONNECTOR 2 ========== -->
+    <div class="flex flex-col items-center py-2 bg-cream" aria-hidden="true">
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+        <div class="w-0.5 h-14 bg-copper/40 pipe-line"></div>
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+    </div>
+
+    <!-- ========== SERVICES SECTION (Asymmetric Grid) ========== -->
+    <section id="servicii" class="py-16 md:py-24 bg-cream-alt brushed-metal">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-copper font-semibold text-sm tracking-wider uppercase mb-3">Ce facem</p>
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-text-primary mb-4">
+                    Serviciile Noastre
+                </h2>
+                <p class="text-text-secondary text-lg max-w-xl mx-auto">
+                    De la o reparație simplă la o instalație completă, acoperim toate nevoile de confort ale locuinței tale.
+                </p>
+            </div>
+
+            <!-- Asymmetric Masonry Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Service 1: Instalații Sanitare (Featured - 2 cols) -->
+                <div class="md:col-span-2 md:grid md:grid-cols-2 md:gap-0 service-card bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-terracotta" data-aos="fade-up" data-aos-duration="800">
+                    <div class="p-8 md:p-10 flex flex-col justify-center">
+                        <div class="w-14 h-14 rounded-xl bg-copper/10 flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-wrench text-copper text-2xl"></i>
+                        </div>
+                        <h3 class="font-heading font-semibold text-xl md:text-2xl text-text-primary mb-3">Instalații Sanitare</h3>
+                        <p class="text-text-secondary leading-relaxed mb-4">
+                            Montaj și înlocuire țevi de apă caldă, apă rece și canalizare. Instalare obiecte sanitare: chiuvete, căzi, cabine de duș, vase WC. Reparații la robineți, baterii și sifoane. Rezolvăm scurgeri, înfundări și orice problemă legată de instalația de apă a locuinței.
+                        </p>
+                        <p class="text-text-secondary leading-relaxed">
+                            Lucrăm atât în construcții noi, cât și în renovări de apartamente și case vechi, cu materiale durabile și soluții adaptate fiecărui spațiu.
+                        </p>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center bg-gradient-to-br from-copper/[0.06] to-terracotta/[0.06] p-10 relative">
+                        <div class="relative">
+                            <i class="fa-solid fa-faucet-drip text-copper/[0.12] text-9xl"></i>
+                        </div>
+                        <div class="absolute bottom-6 right-6 w-20 h-20 rounded-full border-2 border-copper/15"></div>
+                        <div class="absolute top-8 left-10 w-12 h-12 rounded-full border-2 border-terracotta/10"></div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Încălzire Centrală -->
+                <div class="service-card bg-white rounded-xl shadow-md p-8 border-t-4 border-copper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-xl bg-copper/10 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-fire text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-text-primary mb-3">Încălzire Centrală</h3>
+                    <p class="text-text-secondary leading-relaxed">
+                        Proiectare și montaj sisteme de încălzire centrală. Instalare centrale termice pe gaz, montaj și înlocuire calorifere, distribuție cu țevi de cupru sau PPR. Realizăm și sisteme de încălzire în pardoseală. Asigurăm funcționare eficientă și consum redus de energie.
+                    </p>
+                </div>
+
+                <!-- Service 3: Aer Condiționat -->
+                <div class="service-card bg-white rounded-xl shadow-md p-8 border-t-4 border-copper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-xl bg-copper/10 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-snowflake text-copper text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-text-primary mb-3">Aer Condiționat</h3>
+                    <p class="text-text-secondary leading-relaxed">
+                        Instalare aparate de aer condiționat tip split și multi-split pentru locuințe, birouri și spații comerciale. Ne ocupăm de montaj complet, punere în funcțiune, încărcare cu freon și verificări periodice de sezon.
+                    </p>
+                </div>
+
+                <!-- Service 4: Livrare (Full width banner) -->
+                <div class="md:col-span-2 service-card bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-dark-copper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="flex flex-col sm:flex-row items-center gap-6 p-8">
+                        <div class="w-14 h-14 rounded-xl bg-copper/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-truck text-copper text-2xl"></i>
+                        </div>
+                        <div class="text-center sm:text-left flex-1">
+                            <h3 class="font-heading font-semibold text-xl text-text-primary mb-2">Livrare Echipamente și Materiale</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                Oferim livrare directă la domiciliu pentru echipamentele și materialele necesare instalațiilor. Centrale termice, calorifere, țevi, fitinguri, aparate de aer condiționat -- toate aduse la ușa ta în Slatina și împrejurimi.
+                            </p>
+                        </div>
+                        <a href="tel:+40249433211" class="flex-shrink-0 inline-flex items-center gap-2 bg-terracotta text-white px-6 py-3 rounded-lg font-semibold hover:bg-dark-copper transition-colors text-sm whitespace-nowrap">
+                            <i class="fa-solid fa-phone"></i>
+                            Comandă Acum
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PIPE CONNECTOR 3 ========== -->
+    <div class="flex flex-col items-center py-2 bg-cream-alt" aria-hidden="true">
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+        <div class="w-0.5 h-14 bg-copper/40 pipe-line"></div>
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+    </div>
+
+    <!-- ========== PROCESS TIMELINE — "Cum Lucrăm" ========== -->
+    <section class="py-16 md:py-24 bg-cream-alt">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-copper font-semibold text-sm tracking-wider uppercase mb-3">Procesul nostru</p>
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-text-primary mb-4">
+                    Cum Lucrăm
+                </h2>
+                <p class="text-text-secondary text-lg max-w-xl mx-auto">
+                    Patru pași simpli de la primul apel până la lucrarea finalizată cu garanție.
+                </p>
+            </div>
+
+            <!-- Desktop Timeline (horizontal) -->
+            <div class="hidden md:block">
+                <div class="relative">
+                    <!-- Horizontal copper pipe -->
+                    <div class="absolute top-16 left-[12.5%] right-[12.5%] h-[3px] bg-gradient-to-r from-copper to-terracotta rounded-full pipe-line"></div>
+
+                    <div class="grid grid-cols-4 gap-8">
+                        <!-- Step 1: Evaluare -->
+                        <div class="text-center relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+                            <div class="relative inline-block mb-8">
+                                <span class="absolute -top-5 -left-5 text-7xl font-heading font-bold text-copper/[0.08] select-none leading-none">01</span>
+                                <div class="relative z-10 w-[4.5rem] h-[4.5rem] rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md mx-auto">
+                                    <i class="fa-solid fa-clipboard-check text-copper text-xl"></i>
+                                </div>
+                                <div class="absolute bottom-[-1.05rem] left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-copper border-2 border-white z-20"></div>
+                            </div>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mb-2">Evaluare</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Venim la fața locului, evaluăm necesarul și discutăm opțiunile împreună cu dumneavoastră.
+                            </p>
+                        </div>
+
+                        <!-- Step 2: Proiect -->
+                        <div class="text-center relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                            <div class="relative inline-block mb-8">
+                                <span class="absolute -top-5 -left-5 text-7xl font-heading font-bold text-copper/[0.08] select-none leading-none">02</span>
+                                <div class="relative z-10 w-[4.5rem] h-[4.5rem] rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md mx-auto">
+                                    <i class="fa-solid fa-drafting-compass text-copper text-xl"></i>
+                                </div>
+                                <div class="absolute bottom-[-1.05rem] left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-copper border-2 border-white z-20"></div>
+                            </div>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mb-2">Proiect</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Proiectăm soluția tehnică optimă pentru spațiul dumneavoastră, cu deviz detaliat și transparent.
+                            </p>
+                        </div>
+
+                        <!-- Step 3: Instalare -->
+                        <div class="text-center relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                            <div class="relative inline-block mb-8">
+                                <span class="absolute -top-5 -left-5 text-7xl font-heading font-bold text-copper/[0.08] select-none leading-none">03</span>
+                                <div class="relative z-10 w-[4.5rem] h-[4.5rem] rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md mx-auto">
+                                    <i class="fa-solid fa-tools text-copper text-xl"></i>
+                                </div>
+                                <div class="absolute bottom-[-1.05rem] left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-copper border-2 border-white z-20"></div>
+                            </div>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mb-2">Instalare</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Echipa noastră realizează instalația cu materiale de calitate, la termenul stabilit.
+                            </p>
+                        </div>
+
+                        <!-- Step 4: Garanție -->
+                        <div class="text-center relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="450">
+                            <div class="relative inline-block mb-8">
+                                <span class="absolute -top-5 -left-5 text-7xl font-heading font-bold text-copper/[0.08] select-none leading-none">04</span>
+                                <div class="relative z-10 w-[4.5rem] h-[4.5rem] rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md mx-auto">
+                                    <i class="fa-solid fa-shield-alt text-copper text-xl"></i>
+                                </div>
+                                <div class="absolute bottom-[-1.05rem] left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-copper border-2 border-white z-20"></div>
+                            </div>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mb-2">Garanție</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Oferim garanție pentru lucrări și suport post-instalare. Suntem mereu la un telefon distanță.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Timeline (vertical) -->
+            <div class="md:hidden">
+                <div class="relative pl-12">
+                    <!-- Vertical pipe -->
+                    <div class="absolute left-5 top-0 bottom-0 w-[3px] bg-gradient-to-b from-copper to-terracotta rounded-full pipe-line"></div>
+
+                    <!-- Step 1 -->
+                    <div class="relative pb-12" data-aos="fade-up" data-aos-duration="800">
+                        <div class="absolute left-[-1.85rem] top-0 w-10 h-10 rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md z-10">
+                            <i class="fa-solid fa-clipboard-check text-copper text-sm"></i>
+                        </div>
+                        <div class="pl-6">
+                            <span class="text-copper text-xs font-semibold tracking-wider uppercase">Pasul 01</span>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mt-1 mb-2">Evaluare</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Venim la fața locului, evaluăm necesarul și discutăm opțiunile împreună cu dumneavoastră.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative pb-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="absolute left-[-1.85rem] top-0 w-10 h-10 rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md z-10">
+                            <i class="fa-solid fa-drafting-compass text-copper text-sm"></i>
+                        </div>
+                        <div class="pl-6">
+                            <span class="text-copper text-xs font-semibold tracking-wider uppercase">Pasul 02</span>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mt-1 mb-2">Proiect</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Proiectăm soluția tehnică optimă pentru spațiul dumneavoastră, cu deviz detaliat și transparent.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative pb-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="absolute left-[-1.85rem] top-0 w-10 h-10 rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md z-10">
+                            <i class="fa-solid fa-tools text-copper text-sm"></i>
+                        </div>
+                        <div class="pl-6">
+                            <span class="text-copper text-xs font-semibold tracking-wider uppercase">Pasul 03</span>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mt-1 mb-2">Instalare</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Echipa noastră realizează instalația cu materiale de calitate, la termenul stabilit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="absolute left-[-1.85rem] top-0 w-10 h-10 rounded-full bg-white border-[3px] border-copper flex items-center justify-center shadow-md z-10">
+                            <i class="fa-solid fa-shield-alt text-copper text-sm"></i>
+                        </div>
+                        <div class="pl-6">
+                            <span class="text-copper text-xs font-semibold tracking-wider uppercase">Pasul 04</span>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary mt-1 mb-2">Garanție</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Oferim garanție pentru lucrări și suport post-instalare. Suntem mereu la un telefon distanță.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PIPE CONNECTOR 4 (with horizontal branch) ========== -->
+    <div class="flex flex-col items-center py-2 bg-cream-alt" aria-hidden="true">
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+        <div class="w-0.5 h-10 bg-copper/40 pipe-line"></div>
+        <div class="flex items-center" aria-hidden="true">
+            <div class="w-16 md:w-36 h-0.5 bg-copper/30 pipe-line"></div>
+            <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+            <div class="w-16 md:w-36 h-0.5 bg-copper/30 pipe-line"></div>
+        </div>
+        <div class="w-0.5 h-10 bg-copper/40 pipe-line"></div>
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+    </div>
+
+    <!-- ========== LOCAL CONTEXT SECTION ========== -->
+    <section class="py-16 md:py-24 bg-cream warm-pattern">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-copper font-semibold text-sm tracking-wider uppercase mb-3">Unde ne găsiți</p>
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-text-primary mb-4">
+                    În inima orașului Slatina
+                </h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Sediul nostru se află pe Strada Primăverii, la numărul 18, într-o zonă ușor accesibilă din orice colț al orașului. Deservim Slatina și comunitățile din tot județul Olt.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <!-- Working Hours -->
+                <div class="bg-white rounded-xl shadow-md p-8 border border-accent-light/30" data-aos="fade-right" data-aos-duration="800">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-copper/10 flex items-center justify-center">
+                            <i class="fa-solid fa-clock text-copper"></i>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-text-primary">Program de Lucru</h3>
+                    </div>
+                    <div class="space-y-0">
+                        <div class="flex justify-between items-center py-2.5 border-b border-accent-light/30">
+                            <span class="text-text-primary font-medium text-sm">Luni</span>
+                            <span class="text-text-secondary text-sm">08:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5 border-b border-accent-light/30">
+                            <span class="text-text-primary font-medium text-sm">Marți</span>
+                            <span class="text-text-secondary text-sm">08:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5 border-b border-accent-light/30">
+                            <span class="text-text-primary font-medium text-sm">Miercuri</span>
+                            <span class="text-text-secondary text-sm">08:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5 border-b border-accent-light/30">
+                            <span class="text-text-primary font-medium text-sm">Joi</span>
+                            <span class="text-text-secondary text-sm">08:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5 border-b border-accent-light/30">
+                            <span class="text-text-primary font-medium text-sm">Vineri</span>
+                            <span class="text-text-secondary text-sm">08:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5 border-b border-accent-light/30">
+                            <span class="text-text-primary font-medium text-sm">Sâmbătă</span>
+                            <span class="text-copper font-medium text-sm">09:00 - 14:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5">
+                            <span class="text-text-primary font-medium text-sm">Duminică</span>
+                            <span class="text-text-secondary/60 text-sm">Închis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column: Address + Payment -->
+                <div class="space-y-6" data-aos="fade-left" data-aos-duration="800">
+                    <!-- Address Card -->
+                    <div class="bg-white rounded-xl shadow-md p-8 border border-accent-light/30">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-10 h-10 rounded-lg bg-copper/10 flex items-center justify-center">
+                                <i class="fa-solid fa-map-marker-alt text-copper"></i>
+                            </div>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary">Adresă</h3>
+                        </div>
+                        <p class="text-text-secondary leading-relaxed mb-5">
+                            Str. Primăverii 18, Slatina<br>
+                            Județul Olt, România
+                        </p>
+                        <a href="https://www.google.com/maps/place/2+Olt+Instal+S.R.L./data=!4m7!3m6!1s0x40ad383430605725:0xa1b4ab1b57ec7a80!8m2!3d44.4291573!4d24.3733935!16s%2Fg%2F1hc1ccvzh!19sChIJJVdgMDQ4rUARgHrsVxurtKE?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-cream-alt hover:bg-accent-light/60 text-copper font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm">
+                            <i class="fa-solid fa-map"></i>
+                            Deschide în Google Maps
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="bg-white rounded-xl shadow-md p-8 border border-accent-light/30">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-10 h-10 rounded-lg bg-copper/10 flex items-center justify-center">
+                                <i class="fa-solid fa-credit-card text-copper"></i>
+                            </div>
+                            <h3 class="font-heading font-semibold text-lg text-text-primary">Metode de Plată</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 bg-cream-alt px-4 py-2.5 rounded-lg text-sm text-text-secondary font-medium">
+                                <i class="fa-solid fa-credit-card text-copper"></i>
+                                Card de credit
+                            </span>
+                            <span class="inline-flex items-center gap-2 bg-cream-alt px-4 py-2.5 rounded-lg text-sm text-text-secondary font-medium">
+                                <i class="fa-regular fa-credit-card text-copper"></i>
+                                Card de debit
+                            </span>
+                            <span class="inline-flex items-center gap-2 bg-cream-alt px-4 py-2.5 rounded-lg text-sm text-text-secondary font-medium">
+                                <i class="fa-solid fa-truck text-copper"></i>
+                                Livrare la domiciliu
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PIPE CONNECTOR 5 ========== -->
+    <div class="flex flex-col items-center py-2 bg-cream" aria-hidden="true">
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+        <div class="w-0.5 h-14 bg-copper/40 pipe-line"></div>
+        <div class="w-3 h-3 rounded-full border-2 border-copper pipe-line"></div>
+    </div>
+
+    <!-- ========== CONTACT CARD SECTION ========== -->
+    <section id="contact" class="py-16 md:py-24 bg-cream warm-pattern">
+        <div class="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-copper font-semibold text-sm tracking-wider uppercase mb-3">Contactați-ne</p>
+                <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-text-primary mb-4">
+                    Suntem la un apel distanță
+                </h2>
+                <p class="text-text-secondary text-lg">
+                    Sunați-ne sau scrieți-ne pe WhatsApp. Răspundem rapid și oferim evaluare gratuită.
+                </p>
+            </div>
+
+            <!-- Business Card with gradient border -->
+            <div class="contact-card-border" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="bg-white rounded-[13px] p-8 md:p-10">
+
+                    <!-- Card Header -->
+                    <div class="text-center mb-8 pb-8 border-b border-accent-light/50">
+                        <div class="flex items-center justify-center gap-3 mb-2">
+                            <div class="w-10 h-10 rounded-lg bg-terracotta flex items-center justify-center">
+                                <i class="fa-solid fa-wrench text-white text-sm"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl text-text-primary">2 Olt Instal S.R.L.</h3>
+                        </div>
+                        <p class="text-text-secondary text-sm">Instalații Sanitare, Încălzire și Aer Condiționat</p>
+                    </div>
+
+                    <!-- Contact Info Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <!-- Landline -->
+                        <a href="tel:+40249433211" class="flex items-center gap-4 p-4 rounded-xl bg-cream hover:bg-cream-alt transition-colors group">
+                            <div class="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center flex-shrink-0 group-hover:bg-terracotta/20 transition-colors">
+                                <i class="fa-solid fa-phone text-terracotta text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-secondary mb-0.5">Telefon Fix</p>
+                                <p class="font-semibold text-text-primary">0249 433 211</p>
+                            </div>
+                        </a>
+
+                        <!-- Mobile -->
+                        <a href="tel:+40745644001" class="flex items-center gap-4 p-4 rounded-xl bg-cream hover:bg-cream-alt transition-colors group">
+                            <div class="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center flex-shrink-0 group-hover:bg-terracotta/20 transition-colors">
+                                <i class="fa-solid fa-mobile-screen text-terracotta text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-secondary mb-0.5">Mobil</p>
+                                <p class="font-semibold text-text-primary">0745 644 001</p>
+                            </div>
+                        </a>
+
+                        <!-- Address -->
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-cream">
+                            <div class="w-12 h-12 rounded-xl bg-copper/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-copper text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-secondary mb-0.5">Adresă</p>
+                                <p class="font-medium text-text-primary text-sm">Str. Primăverii 18, Slatina</p>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-cream">
+                            <div class="w-12 h-12 rounded-xl bg-copper/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-clock text-copper text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-secondary mb-0.5">Program</p>
+                                <p class="font-medium text-text-primary text-sm">L-V: 08-18 / S: 09-14</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                        <a href="tel:+40249433211" class="flex-1 flex items-center justify-center gap-2.5 bg-terracotta text-white py-3.5 rounded-xl font-semibold hover:bg-dark-copper transition-colors shadow-lg shadow-terracotta/15">
+                            <i class="fa-solid fa-phone"></i>
+                            Sună Acum
+                        </a>
+                        <a href="https://wa.me/40745644001" class="flex-1 flex items-center justify-center gap-2.5 bg-green-600 text-white py-3.5 rounded-xl font-semibold hover:bg-green-700 transition-colors shadow-lg shadow-green-600/15">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            Scrie pe WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div class="text-center mb-6">
+                        <a href="https://www.google.com/maps/place/2+Olt+Instal+S.R.L./data=!4m7!3m6!1s0x40ad383430605725:0xa1b4ab1b57ec7a80!8m2!3d44.4291573!4d24.3733935!16s%2Fg%2F1hc1ccvzh!19sChIJJVdgMDQ4rUARgHrsVxurtKE?authuser=0&hl=en&rclk=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-copper text-sm font-medium hover:text-terracotta transition-colors">
+                            <i class="fa-solid fa-map"></i>
+                            Vezi locația pe Google Maps
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- CUI / Legal -->
+                    <div class="pt-5 border-t border-accent-light/30 text-center">
+                        <p class="text-xs text-text-secondary/50">CUI: 13666222 | Reg. Com.: J20/0100/00006283</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-footer-dark relative">
+        <!-- Copper pipe at top of footer -->
+        <div class="h-1 bg-gradient-to-r from-transparent via-copper to-transparent"></div>
+
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+
+                <!-- Column 1: Company Info -->
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-copper flex items-center justify-center">
+                            <i class="fa-solid fa-wrench text-white text-sm"></i>
+                        </div>
+                        <span class="font-heading font-bold text-lg text-white">2 Olt Instal S.R.L.</span>
+                    </div>
+                    <p class="text-accent-light/60 text-sm leading-relaxed mb-5">
+                        Instalații sanitare, de încălzire și aer condiționat în Slatina și județul Olt. Cu experiență din 2001.
+                    </p>
+                    <p class="text-accent-light/30 text-xs">CUI: 13666222</p>
+                </div>
+
+                <!-- Column 2: Contact -->
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-5">Contact</h4>
+                    <div class="space-y-3.5">
+                        <a href="tel:+40249433211" class="flex items-center gap-2.5 text-accent-light/60 hover:text-copper transition-colors text-sm">
+                            <i class="fa-solid fa-phone text-copper w-4 text-center"></i>
+                            0249 433 211
+                        </a>
+                        <a href="tel:+40745644001" class="flex items-center gap-2.5 text-accent-light/60 hover:text-copper transition-colors text-sm">
+                            <i class="fa-solid fa-mobile-screen text-copper w-4 text-center"></i>
+                            0745 644 001
+                        </a>
+                        <a href="https://wa.me/40745644001" class="flex items-center gap-2.5 text-accent-light/60 hover:text-copper transition-colors text-sm">
+                            <i class="fa-brands fa-whatsapp text-copper w-4 text-center"></i>
+                            WhatsApp
+                        </a>
+                        <div class="flex items-start gap-2.5 text-accent-light/60 text-sm">
+                            <i class="fa-solid fa-location-dot text-copper w-4 text-center mt-0.5"></i>
+                            Str. Primăverii 18, Slatina, Olt
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Hours & Quick Actions -->
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-5">Program</h4>
+                    <div class="space-y-2 text-sm mb-6">
+                        <div class="flex justify-between text-accent-light/60">
+                            <span>Luni - Vineri</span>
+                            <span>08:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between text-accent-light/60">
+                            <span>Sâmbătă</span>
+                            <span>09:00 - 14:00</span>
+                        </div>
+                        <div class="flex justify-between text-accent-light/40">
+                            <span>Duminică</span>
+                            <span>Închis</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="tel:+40249433211" class="inline-flex items-center gap-2 bg-copper/20 hover:bg-copper/30 text-copper px-4 py-2.5 rounded-lg text-sm font-medium transition-colors">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                            Sună
+                        </a>
+                        <a href="https://wa.me/40745644001" class="inline-flex items-center gap-2 bg-copper/20 hover:bg-copper/30 text-copper px-4 py-2.5 rounded-lg text-sm font-medium transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-accent-light/10 text-center">
+                <p class="text-accent-light/35 text-sm">
+                    &copy; 2024 2 Olt Instal S.R.L. Toate drepturile rezervate.
+                </p>
+            </div>
+        </div>
+
+        <!-- Schema.org LocalBusiness JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Plumber",
+            "name": "2 Olt Instal S.R.L.",
+            "legalName": "2 OLT INSTAL SRL",
+            "description": "Instalații sanitare, de încălzire centrală și aer condiționat în Slatina și județul Olt. Experiență din 2001.",
+            "url": "",
+            "telephone": "+40249433211",
+            "foundingDate": "2001",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Str. Primăverii 18",
+                "addressLocality": "Slatina",
+                "addressRegion": "Olt",
+                "addressCountry": "RO"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 44.429157,
+                "longitude": 24.373393
+            },
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+40249433211",
+                    "contactType": "customer service",
+                    "availableLanguage": "Romanian"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+40745644001",
+                    "contactType": "customer service",
+                    "availableLanguage": "Romanian"
+                }
+            ],
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "09:00",
+                    "closes": "14:00"
+                }
+            ],
+            "priceRange": "$$",
+            "paymentAccepted": "Cash, Credit Card, Debit Card",
+            "areaServed": {
+                "@type": "City",
+                "name": "Slatina"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "ratingCount": "1"
+            }
+        }
+        </script>
+    </footer>
+
+    <!-- ========== STICKY MOBILE CTA BAR ========== -->
+    <div id="mobileCta" class="mobile-cta fixed bottom-0 left-0 right-0 z-40 md:hidden">
+        <div class="bg-terracotta shadow-[0_-4px_20px_rgba(0,0,0,0.2)] px-4 py-3 flex gap-3">
+            <a href="tel:+40249433211" class="flex-1 flex items-center justify-center gap-2 bg-white text-terracotta py-3 rounded-xl font-bold text-sm shadow-sm">
+                <i class="fa-solid fa-phone"></i>
+                Sună Acum
+            </a>
+            <a href="https://wa.me/40745644001" class="flex-1 flex items-center justify-center gap-2 bg-white/15 text-white py-3 rounded-xl font-bold text-sm border border-white/25">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            easing: 'ease-out-cubic',
+            offset: 60,
+        });
+
+        // ---- Mobile Menu ----
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('hamburger-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('hamburger-active');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(function(link) {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close on click outside
+        document.addEventListener('click', function(e) {
+            if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // ---- Sticky Mobile CTA ----
+        var mobileCta = document.getElementById('mobileCta');
+        var heroSection = document.getElementById('acasa');
+
+        function handleMobileCtaVisibility() {
+            if (!heroSection || !mobileCta) return;
+            var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            if (window.scrollY > heroBottom - 200) {
+                mobileCta.classList.add('visible');
+            } else {
+                mobileCta.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', handleMobileCtaVisibility, { passive: true });
+        handleMobileCtaVisibility();
+
+        // ---- Header Shadow on Scroll ----
+        var header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        }, { passive: true });
+
+        // ---- Smooth Scroll for Anchor Links ----
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                var target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    var headerHeight = header.offsetHeight;
+                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocat Nițu Lucian — Avocat Penalist Slatina | Drept Penal Olt</title>
+    <meta name="description" content="Avocat penalist în Slatina, județul Olt. Cabinet individual Nițu Lucian — apărare în drept penal, asistență la audieri, contestații și plângeri penale.">
+    <meta name="keywords" content="avocat penalist Slatina, drept penal Olt, avocat penal Slatina, apărare penală, avocat Nițu Lucian">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://avocat-nitu-lucian.ro/">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        noir: '#121212',
+                        charcoal: '#1E1E1E',
+                        silver: '#B8B8B8',
+                        'silver-light': '#D0D0D0',
+                        blood: '#8B0000',
+                        'blood-hover': '#A00000',
+                    },
+                    fontFamily: {
+                        vollkorn: ['Vollkorn', 'Georgia', 'serif'],
+                        fira: ['Fira Sans', 'Helvetica Neue', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #121212;
+            color: #B8B8B8;
+            font-family: 'Fira Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background-color: #8B0000;
+            color: #fff;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8B0000;
+        }
+
+        /* Silver decorative line */
+        .silver-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #B8B8B8, transparent);
+            margin: 0 auto;
+        }
+
+        .silver-line-left {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, #B8B8B8, transparent);
+        }
+
+        /* Shield icon glow */
+        .shield-glow {
+            text-shadow: 0 0 40px rgba(139, 0, 0, 0.3), 0 0 80px rgba(139, 0, 0, 0.1);
+        }
+
+        /* Card hover */
+        .spec-card {
+            border: 1px solid rgba(184, 184, 184, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .spec-card:hover {
+            border-color: rgba(139, 0, 0, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* CTA pulse */
+        .cta-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .cta-btn:hover {
+            background-color: #A00000;
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.4);
+        }
+
+        /* Nav link underline animation */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #8B0000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Trust point icon */
+        .trust-icon {
+            width: 56px;
+            height: 56px;
+            border: 1px solid rgba(184, 184, 184, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            transition: border-color 0.3s ease;
+        }
+        .trust-icon:hover {
+            border-color: #8B0000;
+        }
+
+        /* Hero background pattern */
+        .hero-pattern {
+            background-image: radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.04) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(184, 184, 184, 0.03) 0%, transparent 40%);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Fade in for nav on scroll */
+        .nav-scrolled {
+            background-color: rgba(18, 18, 18, 0.97) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Separator */
+        .section-sep {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(184, 184, 184, 0.15), transparent);
+        }
+
+        /* Stars */
+        .star-gold {
+            color: #DAA520;
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Avocat Nițu Lucian",
+        "description": "Avocat penalist specializat în drept penal, cu activitate în Slatina, județul Olt.",
+        "url": "https://avocat-nitu-lucian.ro",
+        "telephone": "+40745614808",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Mihai Eminescu 38",
+            "addressLocality": "Slatina",
+            "addressRegion": "Olt",
+            "postalCode": "230088",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.429218,
+            "longitude": 24.358001
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Baroul Olt"
+        },
+        "knowsAbout": ["Drept penal", "Apărare penală", "Asistență la audieri", "Contestații", "Plângeri penale"]
+    }
+    </script>
+</head>
+<body class="font-fira">
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                   -->
+    <!-- ============================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-noir/90 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#acasa" class="flex items-center gap-3 group">
+                <i class="fa-solid fa-shield-halved text-blood text-xl group-hover:text-blood-hover transition-colors duration-300"></i>
+                <span class="font-vollkorn text-silver-light text-lg font-bold tracking-wide">Av. Nițu Lucian</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#acasa" class="nav-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Acasă</a>
+                <a href="#despre" class="nav-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Despre</a>
+                <a href="#specializari" class="nav-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Specializări</a>
+                <a href="#de-ce-noi" class="nav-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">De ce noi</a>
+                <a href="#contact" class="nav-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Contact</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menuToggle" class="md:hidden text-silver text-xl focus:outline-none" aria-label="Meniu navigare">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-charcoal/98 backdrop-blur-md z-50 flex flex-col pt-20 px-8 gap-6 md:hidden">
+            <button id="menuClose" class="absolute top-5 right-6 text-silver text-xl focus:outline-none" aria-label="Închide meniu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a href="#acasa" class="mobile-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Acasă</a>
+            <a href="#despre" class="mobile-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Despre</a>
+            <a href="#specializari" class="mobile-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Specializări</a>
+            <a href="#de-ce-noi" class="mobile-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">De ce noi</a>
+            <a href="#contact" class="mobile-link text-silver text-sm font-light tracking-wider uppercase hover:text-silver-light transition-colors duration-300">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                 -->
+    <!-- ============================================ -->
+    <section id="acasa" class="relative min-h-screen flex items-center justify-center hero-pattern">
+        <!-- Subtle top gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-noir/60 pointer-events-none"></div>
+
+        <div class="relative z-10 text-center px-6 max-w-3xl mx-auto">
+            <!-- Shield Icon -->
+            <div data-aos="fade-down" data-aos-duration="800" class="mb-8">
+                <i class="fa-solid fa-shield-halved text-6xl md:text-7xl text-silver/80 shield-glow"></i>
+            </div>
+
+            <!-- Thin silver line -->
+            <div data-aos="fade-in" data-aos-delay="200" class="silver-line mb-8"></div>
+
+            <!-- Main Heading -->
+            <h1 data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" class="font-vollkorn text-silver-light text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
+                Avocat Penalist — Slatina
+            </h1>
+
+            <!-- Tagline -->
+            <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" class="text-silver text-lg md:text-xl font-light tracking-wide mb-4">
+                Apărare în drept penal
+            </p>
+
+            <!-- Name -->
+            <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" class="text-silver/60 text-sm tracking-widest uppercase mb-2">
+                Cabinet individual
+            </p>
+            <p data-aos="fade-up" data-aos-delay="650" data-aos-duration="800" class="font-vollkorn text-silver-light text-xl md:text-2xl font-semibold mb-10">
+                Nițu Lucian
+            </p>
+
+            <!-- Rating -->
+            <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="800" class="flex items-center justify-center gap-1 mb-10">
+                <i class="fa-solid fa-star star-gold text-sm"></i>
+                <i class="fa-solid fa-star star-gold text-sm"></i>
+                <i class="fa-solid fa-star star-gold text-sm"></i>
+                <i class="fa-solid fa-star star-gold text-sm"></i>
+                <i class="fa-solid fa-star star-gold text-sm"></i>
+                <span class="text-silver/60 text-xs ml-2 tracking-wide">5/5 (3 recenzii)</span>
+            </div>
+
+            <!-- CTA -->
+            <div data-aos="fade-up" data-aos-delay="900" data-aos-duration="800">
+                <a href="tel:+40745614808" class="cta-btn inline-block bg-blood text-white font-fira font-medium text-sm tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-blood-hover transition-all duration-300">
+                    <i class="fa-solid fa-phone mr-2 text-xs"></i>
+                    Solicită o consultație
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#despre" class="text-silver/30 hover:text-silver/60 transition-colors duration-300">
+                <i class="fa-solid fa-chevron-down text-lg"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Separator -->
+    <div class="section-sep"></div>
+
+    <!-- ============================================ -->
+    <!-- DESPRE (ABOUT) SECTION                       -->
+    <!-- ============================================ -->
+    <section id="despre" class="py-24 md:py-32 bg-noir">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-blood text-xs tracking-[0.3em] uppercase font-medium mb-4">Despre cabinet</p>
+                <h2 class="font-vollkorn text-silver-light text-3xl md:text-4xl font-bold mb-6">Apărare penală de încredere</h2>
+                <div class="silver-line"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="max-w-3xl mx-auto text-center space-y-6" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-silver text-base md:text-lg leading-relaxed font-light">
+                    Cabinetul de avocat <strong class="text-silver-light font-medium">Nițu Lucian</strong> oferă servicii juridice specializate exclusiv în domeniul <strong class="text-silver-light font-medium">dreptului penal</strong>, cu sediul în Slatina, județul Olt. Înregistrat la <strong class="text-silver-light font-medium">Baroul Olt</strong>, cabinetul asigură asistență juridică profesională și reprezentare în fața instanțelor de judecată.
+                </p>
+                <p class="text-silver text-base md:text-lg leading-relaxed font-light">
+                    Cu o abordare riguroasă și dedicare totală pentru fiecare caz, avocatul Nițu Lucian oferă clienților săi o apărare fermă și strategică. Fiecare cauză beneficiază de o analiză detaliată, o pregătire meticuloasă și o susținere constantă pe tot parcursul procesului penal.
+                </p>
+                <p class="text-silver text-base md:text-lg leading-relaxed font-light">
+                    Indiferent dacă sunteți suspect, inculpat sau persoană vătămată, dreptul la o apărare competentă este fundamental. Cabinetul nostru vă garantează <strong class="text-silver-light font-medium">confidențialitate</strong>, <strong class="text-silver-light font-medium">profesionalism</strong> și o reprezentare juridică orientată către rezultate concrete.
+                </p>
+            </div>
+
+            <!-- Key facts -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <i class="fa-solid fa-gavel text-blood/70 text-2xl mb-3"></i>
+                    <p class="text-silver-light font-vollkorn text-lg font-semibold">Drept penal</p>
+                    <p class="text-silver/60 text-sm font-light mt-1">Specializare exclusivă</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-building-columns text-blood/70 text-2xl mb-3"></i>
+                    <p class="text-silver-light font-vollkorn text-lg font-semibold">Baroul Olt</p>
+                    <p class="text-silver/60 text-sm font-light mt-1">Membru activ</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-location-dot text-blood/70 text-2xl mb-3"></i>
+                    <p class="text-silver-light font-vollkorn text-lg font-semibold">Slatina</p>
+                    <p class="text-silver/60 text-sm font-light mt-1">Str. Mihai Eminescu 38</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separator -->
+    <div class="section-sep"></div>
+
+    <!-- ============================================ -->
+    <!-- SPECIALIZARI SECTION                         -->
+    <!-- ============================================ -->
+    <section id="specializari" class="py-24 md:py-32 bg-charcoal">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-blood text-xs tracking-[0.3em] uppercase font-medium mb-4">Arii de practică</p>
+                <h2 class="font-vollkorn text-silver-light text-3xl md:text-4xl font-bold mb-6">Specializări</h2>
+                <div class="silver-line"></div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+                <!-- Card 1: Apărare penală -->
+                <div class="spec-card bg-noir/60 rounded-sm p-8 md:p-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-shield-halved text-blood/80 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-vollkorn text-silver-light text-xl font-semibold mb-3">Apărare penală</h3>
+                            <p class="text-silver/70 text-sm leading-relaxed font-light">
+                                Reprezentare și asistență juridică completă pentru suspecți și inculpați în toate fazele procesului penal, de la urmărirea penală până la pronunțarea sentinței.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Asistență la audieri -->
+                <div class="spec-card bg-noir/60 rounded-sm p-8 md:p-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-user-shield text-blood/80 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-vollkorn text-silver-light text-xl font-semibold mb-3">Asistență la audieri</h3>
+                            <p class="text-silver/70 text-sm leading-relaxed font-light">
+                                Prezență și consiliere juridică în cadrul audierilor la organele de urmărire penală sau în fața instanțelor, pentru protejarea drepturilor procesuale ale clientului.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Contestații -->
+                <div class="spec-card bg-noir/60 rounded-sm p-8 md:p-10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-file-signature text-blood/80 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-vollkorn text-silver-light text-xl font-semibold mb-3">Contestații</h3>
+                            <p class="text-silver/70 text-sm leading-relaxed font-light">
+                                Formularea și susținerea contestațiilor împotriva măsurilor preventive, a soluțiilor de clasare sau a altor decizii ale organelor judiciare care vă afectează drepturile.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Plângeri penale -->
+                <div class="spec-card bg-noir/60 rounded-sm p-8 md:p-10" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-scale-balanced text-blood/80 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-vollkorn text-silver-light text-xl font-semibold mb-3">Plângeri penale</h3>
+                            <p class="text-silver/70 text-sm leading-relaxed font-light">
+                                Redactarea și depunerea plângerilor penale pentru persoane vătămate, cu fundamentare juridică solidă și reprezentare pe tot parcursul procedurii de urmărire penală.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Separator -->
+    <div class="section-sep"></div>
+
+    <!-- ============================================ -->
+    <!-- DE CE NOI (TRUST POINTS) SECTION             -->
+    <!-- ============================================ -->
+    <section id="de-ce-noi" class="py-24 md:py-32 bg-noir">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-blood text-xs tracking-[0.3em] uppercase font-medium mb-4">Avantaje</p>
+                <h2 class="font-vollkorn text-silver-light text-3xl md:text-4xl font-bold mb-6">De ce să alegeți un avocat penalist specializat</h2>
+                <div class="silver-line"></div>
+            </div>
+
+            <!-- Trust Points -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+
+                <!-- Trust Point 1 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-brain text-silver/70 text-xl"></i>
+                    </div>
+                    <h3 class="font-vollkorn text-silver-light text-lg font-semibold mb-3">Expertiză dedicată</h3>
+                    <p class="text-silver/70 text-sm leading-relaxed font-light">
+                        Un avocat specializat exclusiv în drept penal cunoaște în profunzime legislația, jurisprudența și procedurile specifice. Această focalizare se traduce într-o apărare mai eficientă și strategii adaptate fiecărui caz.
+                    </p>
+                </div>
+
+                <!-- Trust Point 2 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="250">
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-handshake text-silver/70 text-xl"></i>
+                    </div>
+                    <h3 class="font-vollkorn text-silver-light text-lg font-semibold mb-3">Implicare personală</h3>
+                    <p class="text-silver/70 text-sm leading-relaxed font-light">
+                        Într-un cabinet individual, beneficiați de atenția directă a avocatului titular. Nu veți fi delegat unui colaborator junior — fiecare etapă a cazului dumneavoastră este gestionată personal de avocatul Nițu Lucian.
+                    </p>
+                </div>
+
+                <!-- Trust Point 3 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-lock text-silver/70 text-xl"></i>
+                    </div>
+                    <h3 class="font-vollkorn text-silver-light text-lg font-semibold mb-3">Confidențialitate absolută</h3>
+                    <p class="text-silver/70 text-sm leading-relaxed font-light">
+                        Secretul profesional este sacru. Toate informațiile pe care ni le comunicați rămân strict confidențiale, protejate de legea avocaturii și de deontologia profesiei juridice.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Separator -->
+    <div class="section-sep"></div>
+
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION                              -->
+    <!-- ============================================ -->
+    <section id="contact" class="py-24 md:py-32 bg-charcoal">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-blood text-xs tracking-[0.3em] uppercase font-medium mb-4">Contact</p>
+                <h2 class="font-vollkorn text-silver-light text-3xl md:text-4xl font-bold mb-6">Programați o consultație</h2>
+                <div class="silver-line"></div>
+            </div>
+
+            <!-- Contact Content -->
+            <div class="max-w-2xl mx-auto">
+                <!-- Phone CTA -->
+                <div class="text-center mb-14" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-silver font-light text-base mb-8">
+                        Pentru programări, consultații sau urgențe în materie penală, nu ezitați să ne contactați telefonic. Răspundem prompt și oferim o primă evaluare a situației dumneavoastră.
+                    </p>
+                    <a href="tel:+40745614808" class="cta-btn inline-block bg-blood text-white font-fira font-medium text-base tracking-widest px-12 py-5 rounded-sm hover:bg-blood-hover transition-all duration-300">
+                        <i class="fa-solid fa-phone mr-3 text-sm"></i>
+                        0745 614 808
+                    </a>
+                </div>
+
+                <!-- Contact Details Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="300">
+                    <!-- Address -->
+                    <div class="bg-noir/60 border border-silver/10 rounded-sm p-8 text-center hover:border-blood/30 transition-colors duration-300">
+                        <i class="fa-solid fa-location-dot text-blood/70 text-2xl mb-4"></i>
+                        <h4 class="font-vollkorn text-silver-light text-base font-semibold mb-2">Adresă cabinet</h4>
+                        <p class="text-silver/70 text-sm font-light leading-relaxed">
+                            Strada Mihai Eminescu 38<br>
+                            Slatina, județul Olt
+                        </p>
+                    </div>
+
+                    <!-- Schedule -->
+                    <div class="bg-noir/60 border border-silver/10 rounded-sm p-8 text-center hover:border-blood/30 transition-colors duration-300">
+                        <i class="fa-solid fa-clock text-blood/70 text-2xl mb-4"></i>
+                        <h4 class="font-vollkorn text-silver-light text-base font-semibold mb-2">Program</h4>
+                        <p class="text-silver/70 text-sm font-light leading-relaxed">
+                            Luni — Vineri<br>
+                            09:00 — 18:00
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Baroul Olt note -->
+                <div class="text-center mt-10" data-aos="fade-up" data-aos-delay="400">
+                    <p class="text-silver/40 text-xs tracking-wide">
+                        <i class="fa-solid fa-certificate mr-1"></i>
+                        Cabinet individual înregistrat la Baroul Olt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="bg-noir border-t border-silver/10 py-12">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <!-- Logo & Name -->
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-shield-halved text-blood text-lg"></i>
+                    <span class="font-vollkorn text-silver-light text-base font-bold tracking-wide">Avocat Nițu Lucian</span>
+                </div>
+
+                <!-- Footer links -->
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="#acasa" class="text-silver/50 hover:text-silver transition-colors duration-300">Acasă</a>
+                    <a href="#despre" class="text-silver/50 hover:text-silver transition-colors duration-300">Despre</a>
+                    <a href="#specializari" class="text-silver/50 hover:text-silver transition-colors duration-300">Specializări</a>
+                    <a href="#contact" class="text-silver/50 hover:text-silver transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- Phone -->
+                <a href="tel:+40745614808" class="text-silver/50 hover:text-blood transition-colors duration-300 text-sm">
+                    <i class="fa-solid fa-phone mr-2 text-xs"></i>
+                    0745 614 808
+                </a>
+            </div>
+
+            <!-- Separator -->
+            <div class="section-sep my-8"></div>
+
+            <!-- Bottom row -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-silver/30 text-xs font-light">
+                    &copy; 2026 Cabinet Avocat Nițu Lucian. Toate drepturile rezervate.
+                </p>
+                <p class="text-silver/30 text-xs font-light">
+                    Str. Mihai Eminescu 38, Slatina, Olt &mdash; Baroul Olt
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS                                      -->
+    <!-- ============================================ -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 700,
+            easing: 'ease-out-cubic',
+            offset: 60,
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('open') &&
+                !mobileMenu.contains(e.target) &&
+                !menuToggle.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const position = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({
+                        top: position,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

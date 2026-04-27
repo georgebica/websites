@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Barabas Ruxandra — Medic de Familie in Slatina. Cabinet medical pe Str. Teodoroiu Ecaterina 26-28. Programari la 0741 126 957.">
+    <meta name="robots" content="index, follow">
+    <title>Dr. Barabas Ruxandra — Medic de Familie | Slatina</title>
+
+    <!-- Google Fonts: Outfit + Atkinson Hyperlegible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aqua: '#E0F2F1',
+                        'aqua-deep': '#B2DFDB',
+                        teal: '#00796B',
+                        'teal-dark': '#004D40',
+                        charcoal: '#37474F',
+                        'charcoal-light': '#546E7A',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        atkinson: ['Atkinson Hyperlegible', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Atkinson Hyperlegible', sans-serif;
+            color: #37474F;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Subtle gradient for hero */
+        .hero-gradient {
+            background: linear-gradient(160deg, #E0F2F1 0%, #B2DFDB 40%, #E0F2F1 100%);
+        }
+
+        /* Soft card hover */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 121, 107, 0.12);
+        }
+
+        /* Teal button pulse */
+        .cta-btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 24px rgba(0, 121, 107, 0.3);
+        }
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        .cta-btn:hover::after {
+            transform: translateX(100%);
+        }
+
+        /* Floating stethoscope animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .float-anim {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Heartbeat icon pulse */
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.12); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.08); }
+            60% { transform: scale(1); }
+        }
+        .heartbeat {
+            animation: heartbeat 2.5s ease-in-out infinite;
+        }
+
+        /* Nav shadow on scroll */
+        .nav-scrolled {
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Info list marker */
+        .info-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #00796B;
+            margin-right: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        /* Gentle divider */
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #00796B, #B2DFDB);
+            border-radius: 2px;
+        }
+
+        /* Contact card glow */
+        .contact-card {
+            transition: box-shadow 0.3s ease;
+        }
+        .contact-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 121, 107, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                   -->
+    <!-- ============================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-aqua transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-18">
+                <!-- Logo / Name -->
+                <a href="#acasa" class="flex items-center gap-2 group">
+                    <span class="text-teal text-xl">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </span>
+                    <span class="font-outfit font-semibold text-charcoal text-lg md:text-xl group-hover:text-teal transition-colors">
+                        Dr. Barabas Ruxandra
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#despre" class="font-atkinson text-charcoal-light hover:text-teal transition-colors text-sm tracking-wide">Despre</a>
+                    <a href="#servicii" class="font-atkinson text-charcoal-light hover:text-teal transition-colors text-sm tracking-wide">Servicii</a>
+                    <a href="#informatii" class="font-atkinson text-charcoal-light hover:text-teal transition-colors text-sm tracking-wide">Informații</a>
+                    <a href="#contact" class="font-atkinson text-charcoal-light hover:text-teal transition-colors text-sm tracking-wide">Contact</a>
+                    <a href="tel:0741126957"
+                       class="cta-btn inline-flex items-center gap-2 bg-teal text-white px-5 py-2.5 rounded-full text-sm font-outfit font-medium">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        Sună acum
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-charcoal p-2 rounded-lg hover:bg-aqua transition-colors" aria-label="Meniu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-aqua">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#despre" class="block font-atkinson text-charcoal-light hover:text-teal transition-colors py-2">Despre</a>
+                <a href="#servicii" class="block font-atkinson text-charcoal-light hover:text-teal transition-colors py-2">Servicii</a>
+                <a href="#informatii" class="block font-atkinson text-charcoal-light hover:text-teal transition-colors py-2">Informații</a>
+                <a href="#contact" class="block font-atkinson text-charcoal-light hover:text-teal transition-colors py-2">Contact</a>
+                <a href="tel:0741126957"
+                   class="cta-btn inline-flex items-center gap-2 bg-teal text-white px-5 py-2.5 rounded-full text-sm font-outfit font-medium mt-2">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    Sună acum
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                 -->
+    <!-- ============================================ -->
+    <section id="acasa" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex flex-col items-center text-center py-16 md:py-24">
+
+                <!-- Stethoscope Icon -->
+                <div class="float-anim mb-8" data-aos="fade-down" data-aos-duration="800">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full bg-white/70 flex items-center justify-center shadow-lg shadow-teal/10">
+                        <i class="fa-solid fa-stethoscope text-teal text-4xl md:text-5xl"></i>
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <h1 class="font-outfit font-bold text-charcoal text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-4"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    Dr. Barabas Ruxandra
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="font-outfit font-light text-teal-dark text-xl sm:text-2xl md:text-3xl mb-3"
+                   data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    Medic de Familie &mdash; Slatina
+                </p>
+
+                <!-- Heart icon accent -->
+                <div class="flex items-center gap-3 mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <span class="w-8 h-px bg-teal/40"></span>
+                    <i class="fa-solid fa-heart text-teal/50 text-sm heartbeat"></i>
+                    <span class="w-8 h-px bg-teal/40"></span>
+                </div>
+
+                <!-- Description -->
+                <p class="font-atkinson text-charcoal-light text-base md:text-lg max-w-xl mb-10 leading-relaxed"
+                   data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    Îngrijire medicală de familie completă, cu atenție și dedicare pentru fiecare pacient din comunitatea Slatinei.
+                </p>
+
+                <!-- CTA Button -->
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <a href="tel:0741126957"
+                       class="cta-btn inline-flex items-center gap-3 bg-teal hover:bg-teal-dark text-white px-8 py-4 rounded-full font-outfit font-semibold text-lg shadow-lg shadow-teal/20">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Programează o consultație
+                    </a>
+                </div>
+
+                <!-- Quick Info Pills -->
+                <div class="flex flex-wrap justify-center gap-4 mt-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <span class="inline-flex items-center gap-2 bg-white/80 text-charcoal-light px-4 py-2 rounded-full text-sm font-atkinson shadow-sm">
+                        <i class="fa-solid fa-star text-yellow-500 text-xs"></i>
+                        4.3/5 &middot; 10 recenzii
+                    </span>
+                    <span class="inline-flex items-center gap-2 bg-white/80 text-charcoal-light px-4 py-2 rounded-full text-sm font-atkinson shadow-sm">
+                        <i class="fa-solid fa-location-dot text-teal text-xs"></i>
+                        Slatina, Olt
+                    </span>
+                    <span class="inline-flex items-center gap-2 bg-white/80 text-charcoal-light px-4 py-2 rounded-full text-sm font-atkinson shadow-sm">
+                        <i class="fa-solid fa-user-doctor text-teal text-xs"></i>
+                        Medicină de familie
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- DESPRE CABINET                               -->
+    <!-- ============================================ -->
+    <section id="despre" class="py-20 md:py-28 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="font-outfit font-bold text-charcoal text-3xl md:text-4xl mb-4">Despre cabinet</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="bg-aqua/40 rounded-3xl p-8 md:p-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-start gap-6">
+                    <div class="hidden sm:flex w-16 h-16 rounded-2xl bg-teal/10 items-center justify-center flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-house-medical text-teal text-2xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-atkinson text-charcoal text-base md:text-lg leading-relaxed mb-4">
+                            Cabinetul medical <strong>Dr. Barabas Ruxandra</strong> oferă servicii complete de medicină de familie pentru pacienții din Slatina și împrejurimi. Cu o abordare centrată pe pacient, ne dedicăm menținerii sănătății și îmbunătățirii calității vieții fiecărei persoane care ne trece pragul.
+                        </p>
+                        <p class="font-atkinson text-charcoal text-base md:text-lg leading-relaxed mb-4">
+                            Consultațiile se desfășoară într-un mediu calm și primitor, unde fiecare pacient beneficiază de timpul și atenția necesare pentru o evaluare medicală completă. Cabinetul este situat pe Str. Teodoroiu Ecaterina 26-28, într-o locație ușor accesibilă.
+                        </p>
+                        <p class="font-atkinson text-charcoal text-base md:text-lg leading-relaxed mb-4">
+                            Prin monitorizarea atentă a stării de sănătate, prevenție activă și comunicare transparentă, ne propunem să fim partenerul dumneavoastră de încredere în parcursul medical. Fie că aveți nevoie de o consultație de rutină sau de gestionarea unei afecțiuni cronice, suntem aici pentru dumneavoastră.
+                        </p>
+                        <p class="font-atkinson text-charcoal-light text-sm mt-6 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-teal"></i>
+                            Cabinet medical organizat sub formă de SRL &middot; Medicină de familie
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SERVICII                                     -->
+    <!-- ============================================ -->
+    <section id="servicii" class="py-20 md:py-28 bg-gradient-to-b from-white to-aqua/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="font-outfit font-bold text-charcoal text-3xl md:text-4xl mb-4">Serviciile noastre</h2>
+                <div class="section-divider mx-auto mb-4"></div>
+                <p class="font-atkinson text-charcoal-light text-base md:text-lg max-w-2xl mx-auto">
+                    Oferim o gamă completă de servicii de medicină de familie, adaptate nevoilor fiecărui pacient.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+                <!-- Card 1: Consultatii -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-aqua-deep/30 text-center"
+                     data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 rounded-2xl bg-aqua flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-stethoscope text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-outfit font-semibold text-charcoal text-lg mb-3">Consultații medicină de familie</h3>
+                    <p class="font-atkinson text-charcoal-light text-sm leading-relaxed">
+                        Evaluări medicale complete pentru adulți și copii, diagnostic și tratament pentru afecțiuni acute și cronice.
+                    </p>
+                </div>
+
+                <!-- Card 2: Boli cronice -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-aqua-deep/30 text-center"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-2xl bg-aqua flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-heart-pulse text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-outfit font-semibold text-charcoal text-lg mb-3">Monitorizare boli cronice</h3>
+                    <p class="font-atkinson text-charcoal-light text-sm leading-relaxed">
+                        Urmărirea și gestionarea afecțiunilor cronice precum diabetul, hipertensiunea arterială și bolile cardiovasculare.
+                    </p>
+                </div>
+
+                <!-- Card 3: Preventiva -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-aqua-deep/30 text-center"
+                     data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-2xl bg-aqua flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-shield-heart text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-outfit font-semibold text-charcoal text-lg mb-3">Medicina preventivă</h3>
+                    <p class="font-atkinson text-charcoal-light text-sm leading-relaxed">
+                        Controale periodice de sănătate, screening, vaccinări și consiliere pentru un stil de viață sănătos.
+                    </p>
+                </div>
+
+                <!-- Card 4: Retete -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-aqua-deep/30 text-center"
+                     data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-2xl bg-aqua flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-file-medical text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-outfit font-semibold text-charcoal text-lg mb-3">Rețete și trimiteri</h3>
+                    <p class="font-atkinson text-charcoal-light text-sm leading-relaxed">
+                        Eliberare de rețete compensate, bilete de trimitere către medici specialiști și documente medicale necesare.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- INFORMATII PACIENTI                          -->
+    <!-- ============================================ -->
+    <section id="informatii" class="py-20 md:py-28 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="font-outfit font-bold text-charcoal text-3xl md:text-4xl mb-4">Informații pacienți</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Cum te programezi -->
+                <div class="bg-aqua/30 rounded-2xl p-8" data-aos="fade-right" data-aos-delay="0">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center">
+                            <i class="fa-solid fa-calendar-days text-teal text-lg"></i>
+                        </div>
+                        <h3 class="font-outfit font-semibold text-charcoal text-xl">Cum te programezi</h3>
+                    </div>
+                    <ul class="info-list space-y-3 font-atkinson text-charcoal text-sm md:text-base leading-relaxed">
+                        <li class="flex items-start">
+                            Sunați la numărul <strong>0741 126 957</strong> pentru programare telefonică
+                        </li>
+                        <li class="flex items-start">
+                            Programările se fac în intervalul orelor de lucru ale cabinetului
+                        </li>
+                        <li class="flex items-start">
+                            Consultațiile de urgență se acordă fără programare prealabilă
+                        </li>
+                        <li class="flex items-start">
+                            Vă rugăm să anunțați din timp dacă nu puteți respecta ora programării
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ce trebuie sa aduci -->
+                <div class="bg-aqua/30 rounded-2xl p-8" data-aos="fade-left" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center">
+                            <i class="fa-solid fa-clipboard-list text-teal text-lg"></i>
+                        </div>
+                        <h3 class="font-outfit font-semibold text-charcoal text-xl">Ce să aduci la consultație</h3>
+                    </div>
+                    <ul class="info-list space-y-3 font-atkinson text-charcoal text-sm md:text-base leading-relaxed">
+                        <li class="flex items-start">
+                            Cartea de identitate (CI) sau alt document de identitate valabil
+                        </li>
+                        <li class="flex items-start">
+                            Cardul de sănătate (dacă este disponibil)
+                        </li>
+                        <li class="flex items-start">
+                            Analizele medicale recente și documentele de la alți specialiști
+                        </li>
+                        <li class="flex items-start">
+                            Lista medicamentelor pe care le luați în prezent
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Extra Tip -->
+            <div class="mt-10 bg-teal/5 border border-teal/15 rounded-2xl p-6 flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fa-solid fa-lightbulb text-teal"></i>
+                </div>
+                <div>
+                    <p class="font-outfit font-semibold text-charcoal text-sm mb-1">Sfat util</p>
+                    <p class="font-atkinson text-charcoal-light text-sm leading-relaxed">
+                        Vă recomandăm să veniți cu 10 minute înainte de ora programată pentru a finaliza formalitățile administrative. Dacă aveți simptome noi sau întrebări specifice, notați-le înainte de consultație pentru a nu uita nimic important.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- CONTACT                                      -->
+    <!-- ============================================ -->
+    <section id="contact" class="py-20 md:py-28 bg-gradient-to-b from-aqua/20 to-aqua/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="font-outfit font-bold text-charcoal text-3xl md:text-4xl mb-4">Contact</h2>
+                <div class="section-divider mx-auto mb-4"></div>
+                <p class="font-atkinson text-charcoal-light text-base md:text-lg">
+                    Nu ezitați să ne contactați pentru programări sau informații suplimentare.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                <!-- Phone Card -->
+                <a href="tel:0741126957"
+                   class="contact-card bg-white rounded-2xl p-8 border border-aqua-deep/30 text-center group"
+                   data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 rounded-full bg-aqua flex items-center justify-center mx-auto mb-5 group-hover:bg-teal/10 transition-colors">
+                        <i class="fa-solid fa-phone text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-outfit font-semibold text-charcoal text-lg mb-2">Telefon</h3>
+                    <p class="font-atkinson text-teal font-bold text-xl mb-1">0741 126 957</p>
+                    <p class="font-atkinson text-charcoal-light text-sm">Sună pentru programare</p>
+                </a>
+
+                <!-- Address Card -->
+                <div class="contact-card bg-white rounded-2xl p-8 border border-aqua-deep/30 text-center"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-aqua flex items-center justify-center mx-auto mb-5">
+                        <i class="fa-solid fa-location-dot text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-outfit font-semibold text-charcoal text-lg mb-2">Adresă</h3>
+                    <p class="font-atkinson text-charcoal text-base mb-1">
+                        Str. Teodoroiu Ecaterina 26-28
+                    </p>
+                    <p class="font-atkinson text-charcoal-light text-sm">Slatina 230053, Olt</p>
+                </div>
+            </div>
+
+            <!-- Map-link suggestion -->
+            <div class="text-center mt-10" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://www.google.com/maps/search/?api=1&query=44.42474,24.37672"
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 font-atkinson text-teal hover:text-teal-dark transition-colors text-sm">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    Deschide în Google Maps
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="bg-charcoal text-white/80 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-heart-pulse text-teal text-lg"></i>
+                        <span class="font-outfit font-semibold text-white text-lg">Dr. Barabas Ruxandra</span>
+                    </div>
+                    <p class="font-atkinson text-white/60 text-sm leading-relaxed">
+                        Cabinet de medicină de familie dedicat sănătății și bunăstării pacienților din Slatina.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-outfit font-semibold text-white text-sm uppercase tracking-wider mb-4">Navigare rapidă</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#acasa" class="font-atkinson text-white/60 hover:text-teal transition-colors text-sm">Acasă</a></li>
+                        <li><a href="#despre" class="font-atkinson text-white/60 hover:text-teal transition-colors text-sm">Despre cabinet</a></li>
+                        <li><a href="#servicii" class="font-atkinson text-white/60 hover:text-teal transition-colors text-sm">Servicii</a></li>
+                        <li><a href="#informatii" class="font-atkinson text-white/60 hover:text-teal transition-colors text-sm">Informații pacienți</a></li>
+                        <li><a href="#contact" class="font-atkinson text-white/60 hover:text-teal transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Footer -->
+                <div>
+                    <h4 class="font-outfit font-semibold text-white text-sm uppercase tracking-wider mb-4">Contact</h4>
+                    <div class="space-y-3">
+                        <a href="tel:0741126957" class="flex items-center gap-3 text-white/60 hover:text-teal transition-colors text-sm font-atkinson">
+                            <i class="fa-solid fa-phone text-xs text-teal"></i>
+                            0741 126 957
+                        </a>
+                        <div class="flex items-start gap-3 text-white/60 text-sm font-atkinson">
+                            <i class="fa-solid fa-location-dot text-xs text-teal mt-1"></i>
+                            <span>Str. Teodoroiu Ecaterina 26-28,<br>Slatina 230053, Olt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="font-atkinson text-white/40 text-xs">
+                    &copy; 2026 Dr. Barabas Ruxandra &mdash; Cabinet Medicină de Familie. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center gap-1 text-white/40 text-xs font-atkinson">
+                    <i class="fa-solid fa-heart text-teal/60 text-[10px]"></i>
+                    Sănătatea dumneavoastră contează
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================ -->
+    <!-- PHYSICIAN JSON-LD STRUCTURED DATA            -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Barabas Ruxandra",
+        "description": "Medic de familie in Slatina, judetul Olt. Cabinet medical de medicina de familie.",
+        "medicalSpecialty": "Family Medicine",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Teodoroiu Ecaterina 26-28",
+            "addressLocality": "Slatina",
+            "postalCode": "230053",
+            "addressRegion": "Olt",
+            "addressCountry": "RO"
+        },
+        "telephone": "+40741126957",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.42474,
+            "longitude": 24.37672
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.3",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "10"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ]
+        },
+        "url": "",
+        "priceRange": "$$"
+    }
+    </script>
+
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS                                      -->
+    <!-- ============================================ -->
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 700,
+            easing: 'ease-out-cubic',
+            offset: 60,
+        });
+    </script>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+        (function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', function() {
+                const isOpen = !menu.classList.contains('hidden');
+                if (isOpen) {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    menu.classList.remove('hidden');
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            menu.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        })();
+    </script>
+
+    <!-- Navbar Scroll Effect -->
+    <script>
+        (function() {
+            const navbar = document.getElementById('navbar');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > 20) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+                lastScroll = currentScroll;
+            });
+        })();
+    </script>
+
+    <!-- Smooth Scroll for Anchor Links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    var offset = 80;
+                    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

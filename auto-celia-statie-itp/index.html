@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Celia - Stație I.T.P. | Școală Auto & ITP Slatina | #1 în Slatina</title>
+  <meta name="description" content="Auto Celia - cea mai bună școală auto din Slatina. Categoriile B, C, C+E și stație ITP autorizată. 3.489+ elevi, 10+ ani experiență. Programări: 0723 153 973">
+  <meta name="keywords" content="școală auto Slatina, ITP Slatina, Auto Celia, permis auto Slatina, stație ITP Slatina, categoria B Slatina, categoria C Slatina, inspecție tehnică periodică">
+  <meta name="theme-color" content="#00897B">
+  <link rel="canonical" href="https://www.autocelia-slatina.ro/">
+  <meta property="og:title" content="Auto Celia - Stație I.T.P. | Școală Auto & ITP Slatina | #1 în Slatina">
+  <meta property="og:description" content="Auto Celia îți oferă, în același loc, școală auto pentru categoriile B, C, C+E și stație ITP în Slatina. 3.489+ elevi, 10+ ani de experiență, programări la 0723 153 973.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:url" content="https://www.autocelia-slatina.ro/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: "#00897B",
+            "brand-dark": "#00695C",
+            surface: "#F5F5F5",
+            slatecopy: "#37474F",
+            muted: "#607D8B",
+            trust: "#43A047",
+            gold: "#F9A825",
+            borderline: "#E0E0E0"
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+            body: ["Roboto", "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 20px 60px rgba(55, 71, 79, 0.10)",
+            card: "0 16px 36px rgba(55, 71, 79, 0.08)"
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --brand: #00897B;
+      --brand-dark: #00695C;
+      --surface: #F5F5F5;
+      --text: #37474F;
+      --muted: #607D8B;
+      --gold: #F9A825;
+      --border: #E0E0E0;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      color: var(--text);
+      background: #FFFFFF;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6, .font-display {
+      font-family: "Poppins", sans-serif;
+    }
+
+    ::selection {
+      background: rgba(0, 137, 123, 0.18);
+      color: var(--text);
+    }
+
+    .hero-grid {
+      background-image: linear-gradient(rgba(96, 125, 139, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96, 125, 139, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .section-underline {
+      width: 92px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--brand), rgba(0, 137, 123, 0.14));
+    }
+
+    .card-lift {
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .card-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 48px rgba(55, 71, 79, 0.12);
+      border-color: rgba(0, 137, 123, 0.22);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--brand);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .glow-ring {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 12px 36px rgba(0, 137, 123, 0.24);
+    }
+
+    .map-pattern {
+      background-image: radial-gradient(circle at 2px 2px, rgba(0, 137, 123, 0.15) 2px, transparent 0),
+        linear-gradient(rgba(0, 137, 123, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 137, 123, 0.07) 1px, transparent 1px);
+      background-size: 24px 24px, 24px 24px, 24px 24px;
+    }
+
+    .day-row {
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .day-row.active-day {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color: #FFFFFF;
+      border-color: transparent;
+      box-shadow: 0 14px 32px rgba(0, 137, 123, 0.18);
+    }
+
+    .day-row.active-day .hours-copy,
+    .day-row.active-day .day-helper {
+      color: rgba(255, 255, 255, 0.92);
+    }
+  </style>
+</head>
+<body class="bg-white text-slatecopy antialiased">
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="h-1.5 bg-brand"></div>
+    <nav class="border-b border-slate-200 bg-white/95 backdrop-blur-md shadow-[0_12px_35px_rgba(55,71,79,0.06)]">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#acasa" class="min-w-0 transition-opacity duration-300 hover:opacity-90">
+          <span class="block text-lg font-display font-bold leading-tight text-slatecopy sm:text-xl">Auto Celia</span>
+          <span class="block text-[11px] text-muted sm:text-xs">Școală Auto & Stație I.T.P.</span>
+        </a>
+
+        <div class="hidden items-center gap-6 lg:flex">
+          <a href="#despre" class="nav-link text-sm font-medium text-slatecopy transition-colors duration-300 hover:text-brand">Despre</a>
+          <a href="#servicii" class="nav-link text-sm font-medium text-slatecopy transition-colors duration-300 hover:text-brand">Servicii</a>
+          <a href="#recenzii" class="nav-link text-sm font-medium text-slatecopy transition-colors duration-300 hover:text-brand">Recenzii</a>
+          <a href="#program" class="nav-link text-sm font-medium text-slatecopy transition-colors duration-300 hover:text-brand">Program</a>
+          <a href="#contact" class="nav-link text-sm font-medium text-slatecopy transition-colors duration-300 hover:text-brand">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="tel:+40723153973" class="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-3 py-2 text-[11px] font-medium text-brand transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:bg-brand hover:text-white sm:px-4 sm:text-sm">
+            <i class="fa-solid fa-phone-volume text-xs sm:text-sm" aria-hidden="true"></i>
+            <span>0723 153 973</span>
+          </a>
+          <div id="menu-toggle" role="button" aria-label="Deschide meniul" aria-controls="mobile-menu" aria-expanded="false" tabindex="0" class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-200 text-slatecopy transition-all duration-300 hover:border-brand hover:bg-brand hover:text-white lg:hidden">
+            <i id="menu-icon" class="fa-solid fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+        <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 sm:px-6">
+          <a data-mobile-link href="#despre" class="rounded-2xl px-4 py-3 text-sm font-medium text-slatecopy transition-all duration-300 hover:bg-brand/5 hover:text-brand">Despre</a>
+          <a data-mobile-link href="#servicii" class="rounded-2xl px-4 py-3 text-sm font-medium text-slatecopy transition-all duration-300 hover:bg-brand/5 hover:text-brand">Servicii</a>
+          <a data-mobile-link href="#recenzii" class="rounded-2xl px-4 py-3 text-sm font-medium text-slatecopy transition-all duration-300 hover:bg-brand/5 hover:text-brand">Recenzii</a>
+          <a data-mobile-link href="#program" class="rounded-2xl px-4 py-3 text-sm font-medium text-slatecopy transition-all duration-300 hover:bg-brand/5 hover:text-brand">Program</a>
+          <a data-mobile-link href="#contact" class="rounded-2xl px-4 py-3 text-sm font-medium text-slatecopy transition-all duration-300 hover:bg-brand/5 hover:text-brand">Contact</a>
+          <a href="tel:+40723153973" class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-brand px-4 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span>Programează-te: 0723 153 973</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="acasa" class="relative overflow-hidden pt-32 sm:pt-36 lg:pt-40">
+      <div class="absolute inset-x-0 top-0 h-[540px] bg-gradient-to-br from-brand/8 via-white to-gold/10"></div>
+      <div class="absolute -left-20 top-28 h-64 w-64 rounded-full bg-brand/10 blur-3xl"></div>
+      <div class="absolute right-0 top-32 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-8 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+        <div class="relative z-10" data-aos="fade-up">
+          <span class="glow-ring inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-sm font-medium text-white">
+            <i class="fa-solid fa-shield-halved text-gold" aria-hidden="true"></i>
+            <span>#1 Școală Auto în Slatina</span>
+          </span>
+          <h1 class="mt-6 max-w-3xl text-4xl font-bold leading-tight text-slatecopy sm:text-5xl lg:text-6xl">Auto Celia - Stație I.T.P.</h1>
+          <p class="mt-4 text-lg font-medium text-brand sm:text-xl">Școală Auto & Stație ITP</p>
+          <p class="mt-2 text-2xl font-display font-semibold text-slatecopy sm:text-3xl">Siguranța ta pe drum începe aici.</p>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">
+            La Auto Celia găsești, sub același acoperiș, pregătire serioasă pentru permis și inspecție tehnică periodică realizată atent, cu respect pentru oameni, pentru vehicul și pentru normele legale.
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <div class="inline-flex items-center gap-3 rounded-full border border-gold/30 bg-white px-4 py-2 shadow-card">
+              <div class="flex items-center gap-1 text-gold">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+              </div>
+              <span class="text-sm font-medium text-slatecopy">4.6/5</span>
+              <span class="text-sm text-muted">(65 recenzii)</span>
+            </div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-borderline bg-white px-4 py-2 shadow-card">
+              <i class="fa-solid fa-circle-check text-trust" aria-hidden="true"></i>
+              <span class="text-sm text-slatecopy">Programări recomandate</span>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="tel:+40723153973" class="inline-flex items-center justify-center gap-3 rounded-full bg-brand px-7 py-4 text-sm font-medium text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark hover:shadow-soft">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <span>Programează-te Acum</span>
+            </a>
+            <a href="#servicii" class="inline-flex items-center justify-center gap-3 rounded-full border border-brand px-7 py-4 text-sm font-medium text-brand transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand hover:text-white">
+              <i class="fa-solid fa-road" aria-hidden="true"></i>
+              <span>Descoperă Serviciile</span>
+            </a>
+          </div>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-3">
+            <div class="card-lift rounded-3xl border border-borderline bg-white p-5 shadow-card">
+              <p class="text-2xl font-display font-bold text-slatecopy">10+</p>
+              <p class="mt-1 text-sm font-medium text-slatecopy">ani de activitate</p>
+              <p class="mt-2 text-sm leading-6 text-muted">Din 2016, cu grijă reală pentru șoferi și pentru siguranța tehnică.</p>
+            </div>
+            <div class="card-lift rounded-3xl border border-borderline bg-white p-5 shadow-card">
+              <p class="text-2xl font-display font-bold text-slatecopy">3.489+</p>
+              <p class="mt-1 text-sm font-medium text-slatecopy">elevi examinați</p>
+              <p class="mt-2 text-sm leading-6 text-muted">Experiență locală solidă în pregătirea candidaților pentru permis.</p>
+            </div>
+            <div class="card-lift rounded-3xl border border-borderline bg-white p-5 shadow-card">
+              <p class="text-2xl font-display font-bold text-slatecopy">Acces</p>
+              <p class="mt-1 text-sm font-medium text-slatecopy">complet și prietenos</p>
+              <p class="mt-2 text-sm leading-6 text-muted">Parcare, intrare și toaletă accesibile, plus plată cu cardul.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-4 text-sm text-muted">
+            <span class="inline-flex items-center gap-2"><i class="fa-solid fa-user-group text-brand" aria-hidden="true"></i>Echipă locală de 7 profesioniști</span>
+            <span class="inline-flex items-center gap-2"><i class="fa-solid fa-screwdriver-wrench text-brand" aria-hidden="true"></i>Mecanic disponibil pe loc</span>
+            <span class="inline-flex items-center gap-2"><i class="fa-solid fa-credit-card text-brand" aria-hidden="true"></i>Acceptăm plata cu cardul</span>
+          </div>
+        </div>
+
+        <div class="relative" data-aos="zoom-in" data-aos-delay="120">
+          <div class="absolute -right-8 top-8 h-28 w-28 rounded-full bg-brand/15 blur-3xl"></div>
+          <div class="absolute -left-6 bottom-8 h-24 w-24 rounded-full bg-gold/20 blur-3xl"></div>
+          <div class="relative overflow-hidden rounded-[32px] border border-borderline bg-white p-6 shadow-soft sm:p-8">
+            <div class="absolute inset-0 hero-grid opacity-60"></div>
+            <div class="relative rounded-[28px] bg-gradient-to-br from-brand/10 via-white to-gold/10 p-6">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="text-sm font-medium uppercase tracking-[0.18em] text-brand">Reper local</p>
+                  <p class="mt-2 text-2xl font-display font-bold text-slatecopy">Școală Auto + I.T.P.</p>
+                </div>
+                <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slatecopy shadow-card">
+                  <i class="fa-solid fa-certificate text-gold" aria-hidden="true"></i>
+                  <span>4.6 din 5</span>
+                </span>
+              </div>
+              <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-[28px] bg-slate-900 p-5 text-white shadow-card">
+                  <div class="overflow-hidden rounded-[24px] bg-gradient-to-br from-brand to-brand-dark p-5">
+                    <svg viewBox="0 0 360 280" class="h-auto w-full" aria-hidden="true">
+                      <path d="M180 20L285 56V138C285 196 245 238 180 268C115 238 75 196 75 138V56L180 20Z" fill="#FFFFFF" opacity="0.22"></path>
+                      <path d="M180 46L254 72V130C254 173 225 208 180 238C135 208 106 173 106 130V72L180 46Z" fill="#FFFFFF"></path>
+                      <path d="M180 80C155 106 142 135 142 170H162C162 150 168 130 180 114C192 130 198 150 198 170H218C218 135 205 106 180 80Z" fill="#00897B"></path>
+                      <path d="M180 110L164 220H196L180 110Z" fill="#00897B"></path>
+                      <circle cx="180" cy="92" r="11" fill="#00897B"></circle>
+                    </svg>
+                  </div>
+                  <div class="mt-4 grid gap-3">
+                    <div class="rounded-2xl bg-white/10 p-4">
+                      <p class="text-xs uppercase tracking-[0.14em] text-white/70">Categorii</p>
+                      <p class="mt-2 font-medium text-white">B, C, C+E</p>
+                    </div>
+                    <div class="rounded-2xl bg-white/10 p-4">
+                      <p class="text-xs uppercase tracking-[0.14em] text-white/70">Serviciu tehnic</p>
+                      <p class="mt-2 font-medium text-white">I.T.P. cu mecanic pe loc</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid gap-4">
+                  <div class="card-lift rounded-[24px] border border-borderline bg-white p-5 shadow-card">
+                    <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-calendar-check text-lg" aria-hidden="true"></i></span>
+                    <p class="mt-4 text-lg font-display font-semibold text-slatecopy">Program bine organizat</p>
+                    <p class="mt-2 text-sm leading-6 text-muted">Luni - Vineri: 8:00 - 20:00, Sâmbătă: 8:00 - 14:00.</p>
+                  </div>
+                  <div class="card-lift rounded-[24px] border border-borderline bg-white p-5 shadow-card">
+                    <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-wheelchair text-lg" aria-hidden="true"></i></span>
+                    <p class="mt-4 text-lg font-display font-semibold text-slatecopy">Acces pentru toți</p>
+                    <p class="mt-2 text-sm leading-6 text-muted">Spațiu pregătit cu parcare, intrare și toaletă accesibile.</p>
+                  </div>
+                  <div class="card-lift rounded-[24px] border border-borderline bg-white p-5 shadow-card">
+                    <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-list-check text-lg" aria-hidden="true"></i></span>
+                    <p class="mt-4 text-lg font-display font-semibold text-slatecopy">Exigență care inspiră încredere</p>
+                    <p class="mt-2 text-sm leading-6 text-muted">Lucrăm atent, prietenos și cu standarde clare, pentru rezultate corecte și sigure.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="despre" class="border-t border-slate-200 bg-surface py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="text-sm font-medium uppercase tracking-[0.18em] text-brand">De Ce Noi</p>
+          <h2 class="mt-3 text-3xl font-bold text-slatecopy sm:text-4xl">De Ce Ne Aleg Clienții</h2>
+          <div class="section-underline mt-4"></div>
+          <p class="mt-5 text-base leading-7 text-muted sm:text-lg">
+            Auto Celia este cunoscută în Slatina pentru seriozitate, organizare și o abordare caldă, dar fermă, orientată spre siguranță și rezultate solide.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-7 shadow-card" data-aos="fade-up">
+            <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-shield-halved text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 text-xl font-display font-semibold text-slatecopy">10+ Ani de Experiență</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Din 2016, formăm șoferi responsabili și oferim inspecții ITP de încredere.</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-7 shadow-card" data-aos="fade-up" data-aos-delay="80">
+            <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-graduation-cap text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 text-xl font-display font-semibold text-slatecopy">3.489+ Elevi Examinați</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Cea mai mare experiență în pregătirea candidaților din zona Slatina.</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-7 shadow-card" data-aos="fade-up" data-aos-delay="160">
+            <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-wheelchair text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 text-xl font-display font-semibold text-slatecopy">Acces Complet</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Parcare, intrare și toaletă accesibile persoanelor cu dizabilități.</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-7 shadow-card" data-aos="fade-up" data-aos-delay="240">
+            <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-calendar-check text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 text-xl font-display font-semibold text-slatecopy">Programări Recomandate</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Servicii organizate, fără așteptare. Sunați pentru programare.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="servicii" class="border-t border-slate-200 bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="text-sm font-medium uppercase tracking-[0.18em] text-brand">Servicii</p>
+          <h2 class="mt-3 text-3xl font-bold text-slatecopy sm:text-4xl">Serviciile Noastre</h2>
+          <div class="section-underline mt-4"></div>
+          <p class="mt-5 text-base leading-7 text-muted sm:text-lg">
+            Un singur loc, două servicii esențiale: pregătire auto completă și inspecție tehnică periodică realizată profesionist.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:gap-8">
+          <article class="card-lift rounded-[32px] border border-borderline bg-white p-8 shadow-card" data-aos="fade-right">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-graduation-cap text-2xl" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-slatecopy">Școală Auto</h3>
+                <p class="mt-2 text-base font-medium text-brand">Categoriile B, C, C+E</p>
+              </div>
+            </div>
+            <p class="mt-6 text-base leading-7 text-muted">
+              Pregătire clară, structurată și riguroasă pentru candidați care vor să obțină permisul cu încredere. Punem accent pe explicații pe înțelesul fiecăruia, disciplină și practică aplicată în trafic real.
+            </p>
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-1 text-trust" aria-hidden="true"></i><div><p class="font-medium text-slatecopy">Categoria B - Autoturisme</p><p class="mt-1 text-sm text-muted">Pregătire completă pentru conducere sigură și responsabilă.</p></div></li>
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-1 text-trust" aria-hidden="true"></i><div><p class="font-medium text-slatecopy">Categoria C - Autocamioane</p><p class="mt-1 text-sm text-muted">Instruire atentă pentru candidații care urmăresc calificare profesională.</p></div></li>
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-1 text-trust" aria-hidden="true"></i><div><p class="font-medium text-slatecopy">Categoria C+E - Autocamioane cu remorcă</p><p class="mt-1 text-sm text-muted">Pregătire temeinică pentru control, manevrabilitate și siguranță sporită.</p></div></li>
+            </ul>
+            <div class="mt-6 rounded-3xl bg-brand/5 p-5">
+              <p class="text-sm font-medium text-slatecopy">Instructori profesioniști, pregătire completă teoretică și practică</p>
+            </div>
+          </article>
+
+          <div class="hidden w-px bg-gradient-to-b from-transparent via-borderline to-transparent lg:block"></div>
+
+          <article class="card-lift rounded-[32px] border border-borderline bg-white p-8 shadow-card" data-aos="fade-left">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-list-check text-2xl" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-slatecopy">Stație I.T.P.</h3>
+                <p class="mt-2 text-base font-medium text-brand">Inspecție Tehnică Periodică</p>
+              </div>
+            </div>
+            <p class="mt-6 text-base leading-7 text-muted">
+              Verificări tehnice realizate profesionist, într-un flux bine organizat, pentru ca fiecare vehicul să fie evaluat corect, eficient și cu toată atenția necesară.
+            </p>
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-1 text-trust" aria-hidden="true"></i><div><p class="font-medium text-slatecopy">Verificare completă a vehiculului</p><p class="mt-1 text-sm text-muted">Control atent al componentelor esențiale pentru circulația în siguranță.</p></div></li>
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-1 text-trust" aria-hidden="true"></i><div><p class="font-medium text-slatecopy">Mecanic autorizat pe loc</p><p class="mt-1 text-sm text-muted">Experiență tehnică disponibilă imediat, într-un mediu organizat și profesionist.</p></div></li>
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-1 text-trust" aria-hidden="true"></i><div><p class="font-medium text-slatecopy">Echipamente moderne</p><p class="mt-1 text-sm text-muted">Proceduri clare și verificări realizate eficient, cu atenție la detalii.</p></div></li>
+              <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check mt-1 text-trust" aria-hidden="true"></i><div><p class="font-medium text-slatecopy">Acceptăm plata cu cardul</p><p class="mt-1 text-sm text-muted">Plată simplă și comodă pentru programările la stația I.T.P.</p></div></li>
+            </ul>
+            <div class="mt-6 rounded-3xl bg-brand/5 p-5">
+              <p class="text-sm font-medium text-slatecopy">Programare recomandată pentru un serviciu rapid și eficient</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="recenzii" class="border-t border-slate-200 bg-surface py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="text-sm font-medium uppercase tracking-[0.18em] text-brand">Recenzii</p>
+            <h2 class="mt-3 text-3xl font-bold text-slatecopy sm:text-4xl">Ce Spun Clienții Noștri</h2>
+            <div class="section-underline mt-4"></div>
+            <p class="mt-5 text-base leading-7 text-muted sm:text-lg">
+              Clienții apreciază ritmul bun de lucru, seriozitatea și atmosfera prietenoasă care definesc experiența Auto Celia.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-brand/15 bg-white px-6 py-5 shadow-card" data-aos="fade-up" data-aos-delay="120">
+            <p class="text-sm font-medium uppercase tracking-[0.16em] text-brand">Rezumat Google</p>
+            <p class="mt-2 text-3xl font-display font-bold text-slatecopy">4.6 din 5</p>
+            <p class="mt-1 text-sm text-muted">bazat pe 65 de recenzii Google</p>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-6 shadow-card" data-aos="fade-up">
+            <div class="flex items-center justify-between"><div class="flex gap-1 text-gold"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><i class="fa-solid fa-quote-left text-xl text-brand/30" aria-hidden="true"></i></div>
+            <p class="mt-5 text-base italic leading-7 text-muted">„Rapid și eficient.”</p>
+            <p class="mt-6 font-medium text-slatecopy">Louis-Paul Hayoun</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-6 shadow-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="flex items-center justify-between"><div class="flex gap-1 text-gold"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><i class="fa-solid fa-quote-left text-xl text-brand/30" aria-hidden="true"></i></div>
+            <p class="mt-5 text-base italic leading-7 text-muted">„Profesioniști adevărați. Respectă toate cerințele legale și te tratează cu seriozitate.”</p>
+            <p class="mt-6 font-medium text-slatecopy">Petre Virgil Rada</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-6 shadow-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="flex items-center justify-between"><div class="flex gap-1 text-gold"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><i class="fa-solid fa-quote-left text-xl text-brand/30" aria-hidden="true"></i></div>
+            <p class="mt-5 text-base italic leading-7 text-muted">„Sunt exigenți în sensul bun: foarte amabili și își fac meseria cu seriozitate.”</p>
+            <p class="mt-6 font-medium text-slatecopy">Viorel Monescu</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-6 shadow-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="flex items-center justify-between"><div class="flex gap-1 text-gold"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><i class="fa-solid fa-quote-left text-xl text-brand/30" aria-hidden="true"></i></div>
+            <p class="mt-5 text-base italic leading-7 text-muted">„Atmosferă plăcută, te simți bine primit și bine îndrumat.”</p>
+            <p class="mt-6 font-medium text-slatecopy">Manuel Iorga</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="program" class="border-t border-slate-200 bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-regular fa-clock text-xl" aria-hidden="true"></i></span>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-brand">Program</p>
+              <h2 class="mt-1 text-3xl font-bold text-slatecopy sm:text-4xl">Program de Lucru</h2>
+            </div>
+          </div>
+          <div class="section-underline mt-4"></div>
+          <p class="mt-5 text-base leading-7 text-muted sm:text-lg">
+            Lucrăm într-un interval generos în timpul săptămânii, iar programarea telefonică este recomandată pentru o experiență rapidă și bine organizată.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="rounded-[32px] border border-borderline bg-white p-6 shadow-card sm:p-8" data-aos="fade-right">
+            <div class="space-y-3">
+              <div class="day-row flex items-center justify-between rounded-2xl border border-borderline px-4 py-4 sm:px-5" data-day="luni"><div><p class="font-medium text-slatecopy">Luni</p><p class="day-helper mt-1 text-sm text-muted">Program complet</p></div><div class="flex items-center gap-3"><span class="today-badge hidden rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.12em]">Astăzi</span><span class="hours-copy text-sm font-medium text-muted">8:00 - 20:00</span></div></div>
+              <div class="day-row flex items-center justify-between rounded-2xl border border-borderline px-4 py-4 sm:px-5" data-day="marti"><div><p class="font-medium text-slatecopy">Marți</p><p class="day-helper mt-1 text-sm text-muted">Program complet</p></div><div class="flex items-center gap-3"><span class="today-badge hidden rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.12em]">Astăzi</span><span class="hours-copy text-sm font-medium text-muted">8:00 - 20:00</span></div></div>
+              <div class="day-row flex items-center justify-between rounded-2xl border border-borderline px-4 py-4 sm:px-5" data-day="miercuri"><div><p class="font-medium text-slatecopy">Miercuri</p><p class="day-helper mt-1 text-sm text-muted">Program complet</p></div><div class="flex items-center gap-3"><span class="today-badge hidden rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.12em]">Astăzi</span><span class="hours-copy text-sm font-medium text-muted">8:00 - 20:00</span></div></div>
+              <div class="day-row flex items-center justify-between rounded-2xl border border-borderline px-4 py-4 sm:px-5" data-day="joi"><div><p class="font-medium text-slatecopy">Joi</p><p class="day-helper mt-1 text-sm text-muted">Program complet</p></div><div class="flex items-center gap-3"><span class="today-badge hidden rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.12em]">Astăzi</span><span class="hours-copy text-sm font-medium text-muted">8:00 - 20:00</span></div></div>
+              <div class="day-row flex items-center justify-between rounded-2xl border border-borderline px-4 py-4 sm:px-5" data-day="vineri"><div><p class="font-medium text-slatecopy">Vineri</p><p class="day-helper mt-1 text-sm text-muted">Program complet</p></div><div class="flex items-center gap-3"><span class="today-badge hidden rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.12em]">Astăzi</span><span class="hours-copy text-sm font-medium text-muted">8:00 - 20:00</span></div></div>
+              <div class="day-row flex items-center justify-between rounded-2xl border border-borderline bg-gold/5 px-4 py-4 sm:px-5" data-day="sambata"><div><p class="font-medium text-slatecopy">Sâmbătă</p><p class="day-helper mt-1 text-sm text-muted">Program scurt</p></div><div class="flex items-center gap-3"><span class="today-badge hidden rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.12em]">Astăzi</span><span class="hours-copy text-sm font-medium text-muted">8:00 - 14:00</span></div></div>
+              <div class="day-row flex items-center justify-between rounded-2xl border border-borderline bg-rose-50 px-4 py-4 sm:px-5" data-day="duminica"><div><p class="font-medium text-slatecopy">Duminică</p><p class="day-helper mt-1 text-sm text-muted">Zi de odihnă</p></div><div class="flex items-center gap-3"><span class="today-badge hidden rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-[0.12em]">Astăzi</span><span class="hours-copy text-sm font-semibold text-rose-600">Închis</span></div></div>
+            </div>
+          </div>
+
+          <div class="grid gap-6" data-aos="fade-left">
+            <div class="overflow-hidden rounded-[32px] border border-borderline bg-white shadow-card">
+              <div class="relative map-pattern p-8">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand/8 via-transparent to-gold/10"></div>
+                <div class="relative rounded-[28px] border border-white/60 bg-white/85 p-6 backdrop-blur">
+                  <div class="flex items-center gap-3">
+                    <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand text-white shadow-card"><i class="fa-solid fa-location-dot text-lg" aria-hidden="true"></i></span>
+                    <div>
+                      <p class="text-sm font-medium uppercase tracking-[0.16em] text-brand">Locație</p>
+                      <p class="mt-1 text-lg font-display font-semibold text-slatecopy">Strada Crișan 34, Slatina 230001</p>
+                    </div>
+                  </div>
+                  <p class="mt-5 text-sm leading-7 text-muted">Olt, România. Locație ușor de găsit, accesibilă și potrivită atât pentru școala auto, cât și pentru programările la stația I.T.P.</p>
+                  <div class="mt-6 flex flex-wrap gap-3 text-sm">
+                    <span class="rounded-full bg-white px-4 py-2 text-slatecopy shadow-card">Lat: 44.434206</span>
+                    <span class="rounded-full bg-white px-4 py-2 text-slatecopy shadow-card">Long: 24.377857</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-[32px] border border-borderline bg-brand p-8 text-white shadow-card">
+              <p class="text-sm font-medium uppercase tracking-[0.16em] text-white/80">Programări</p>
+              <p class="mt-3 text-2xl font-display font-bold">Sunați înainte de vizită</p>
+              <p class="mt-4 text-sm leading-7 text-white/85">Pentru școala auto sau stația I.T.P., recomandăm programarea telefonică pentru un flux rapid, clar și eficient.</p>
+              <a href="tel:+40723153973" class="mt-6 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-medium text-brand transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span>0723 153 973</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="accesibilitate" class="border-t border-slate-200 bg-surface py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-wheelchair text-xl" aria-hidden="true"></i></span>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-brand">Accesibilitate</p>
+              <h2 class="mt-1 text-3xl font-bold text-slatecopy sm:text-4xl">Accesibilitate</h2>
+            </div>
+          </div>
+          <div class="section-underline mt-4"></div>
+          <p class="mt-5 text-base leading-7 text-muted sm:text-lg">
+            Auto Celia pune accent pe acces real și confort pentru fiecare vizitator, într-un spațiu în care siguranța și respectul sunt prioritare.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-7 text-center shadow-card" data-aos="fade-up">
+            <span class="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-brand/10 text-brand"><i class="fa-solid fa-square-parking text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 text-xl font-display font-semibold text-slatecopy">Parcare accesibilă</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Acces facil încă de la sosire, pentru o experiență cât mai comodă.</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-7 text-center shadow-card" data-aos="fade-up" data-aos-delay="80">
+            <span class="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-brand/10 text-brand"><i class="fa-solid fa-door-open text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 text-xl font-display font-semibold text-slatecopy">Intrare accesibilă</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Spațiu gândit pentru acces simplu, clar și fără bariere inutile.</p>
+          </article>
+          <article class="card-lift rounded-3xl border border-borderline bg-white p-7 text-center shadow-card" data-aos="fade-up" data-aos-delay="160">
+            <span class="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-brand/10 text-brand"><i class="fa-solid fa-restroom text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 text-xl font-display font-semibold text-slatecopy">Toaletă accesibilă</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">Confortul vizitatorilor contează, iar facilitățile sunt pregătite corespunzător.</p>
+          </article>
+        </div>
+
+        <div class="mt-10 rounded-[32px] border border-brand/15 bg-white p-8 text-center shadow-card" data-aos="fade-up" data-aos-delay="240">
+          <p class="text-2xl font-display font-semibold text-slatecopy">Toți sunt bineveniți la Auto Celia.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="border-t border-slate-200 bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <p class="text-sm font-medium uppercase tracking-[0.18em] text-brand">Contact</p>
+          <h2 class="mt-3 text-3xl font-bold text-slatecopy sm:text-4xl">Contactează-ne</h2>
+          <div class="section-underline mt-4"></div>
+          <p class="mt-5 text-base leading-7 text-muted sm:text-lg">
+            Pentru programări la școala auto sau la stația I.T.P., contactează direct echipa Auto Celia. Răspuns clar, programare rapidă și servicii bine organizate.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div class="overflow-hidden rounded-[36px] bg-gradient-to-br from-brand to-brand-dark p-8 text-white shadow-soft sm:p-10" data-aos="fade-right">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90"><i class="fa-solid fa-shield-halved text-gold" aria-hidden="true"></i><span>#1 Școală Auto în Slatina</span></span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90"><i class="fa-solid fa-circle-check text-white" aria-hidden="true"></i><span>Programări recomandate</span></span>
+            </div>
+            <h3 class="mt-8 text-3xl font-display font-bold sm:text-4xl">Programează-te Telefonic</h3>
+            <p class="mt-4 max-w-2xl text-base leading-7 text-white/85">Sunați-ne pentru programare la școala auto sau stația ITP. Vei primi îndrumare clară, un interval potrivit și atenția unei echipe locale cu experiență.</p>
+            <a href="tel:+40723153973" class="mt-8 inline-flex items-center gap-4 rounded-[28px] bg-white px-6 py-5 text-2xl font-display font-bold text-brand transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 sm:text-3xl">
+              <i class="fa-solid fa-phone-volume text-xl sm:text-2xl" aria-hidden="true"></i>
+              <span>0723 153 973</span>
+            </a>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="tel:+40723153973" class="inline-flex items-center justify-center gap-3 rounded-full bg-slate-900/20 px-6 py-4 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-900/30">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span>Programează-te Acum</span>
+              </a>
+              <a href="#program" class="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-6 py-4 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                <span>Vezi Programul</span>
+              </a>
+            </div>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-3xl bg-white/10 p-5"><p class="text-sm text-white/75">Evaluare</p><p class="mt-2 text-xl font-display font-semibold">4.6 din 5</p></div>
+              <div class="rounded-3xl bg-white/10 p-5"><p class="text-sm text-white/75">Elevi examinați</p><p class="mt-2 text-xl font-display font-semibold">3.489+</p></div>
+              <div class="rounded-3xl bg-white/10 p-5"><p class="text-sm text-white/75">Experiență</p><p class="mt-2 text-xl font-display font-semibold">10+ ani</p></div>
+            </div>
+          </div>
+
+          <div class="grid gap-5" data-aos="fade-left">
+            <article class="card-lift rounded-[32px] border border-borderline bg-white p-7 shadow-card">
+              <div class="flex items-start gap-4">
+                <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-location-dot text-xl" aria-hidden="true"></i></span>
+                <div>
+                  <h3 class="text-xl font-display font-semibold text-slatecopy">Adresă</h3>
+                  <p class="mt-3 text-sm leading-7 text-muted">Strada Crișan 34, Slatina 230001, Olt, România</p>
+                </div>
+              </div>
+            </article>
+            <article class="card-lift rounded-[32px] border border-borderline bg-white p-7 shadow-card">
+              <div class="flex items-start gap-4">
+                <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-building text-xl" aria-hidden="true"></i></span>
+                <div>
+                  <h3 class="text-xl font-display font-semibold text-slatecopy">Date companie</h3>
+                  <p class="mt-3 text-sm leading-7 text-muted">SCUDERIA AUTO CELIA SRL</p>
+                  <p class="text-sm leading-7 text-muted">CUI: 35910769</p>
+                  <p class="text-sm leading-7 text-muted">Înființată la 5 Aprilie 2016</p>
+                  <p class="text-sm leading-7 text-muted">CAEN 8553 - Școli de Conducere Auto</p>
+                </div>
+              </div>
+            </article>
+            <article class="card-lift rounded-[32px] border border-borderline bg-white p-7 shadow-card">
+              <div class="flex items-start gap-4">
+                <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand"><i class="fa-solid fa-credit-card text-xl" aria-hidden="true"></i></span>
+                <div>
+                  <h3 class="text-xl font-display font-semibold text-slatecopy">Detalii utile</h3>
+                  <p class="mt-3 text-sm leading-7 text-muted">Acceptăm plata cu cardul.</p>
+                  <p class="text-sm leading-7 text-muted">Mecanic disponibil pe loc.</p>
+                  <p class="text-sm leading-7 text-muted">Echipă locală formată din 7 profesioniști.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-slate-700 bg-slatecopy py-14 text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/90">
+          <i class="fa-solid fa-shield-halved text-gold" aria-hidden="true"></i>
+          <span>#1 Școală Auto în Slatina</span>
+        </div>
+        <h3 class="mt-5 text-2xl font-display font-bold">Auto Celia - Stație I.T.P.</h3>
+        <p class="mt-3 text-sm leading-7 text-white/75">SCUDERIA AUTO CELIA SRL</p>
+        <p class="mt-2 text-sm leading-7 text-white/75">Strada Crișan 34, Slatina 230001, Olt, România</p>
+        <a href="tel:+40723153973" class="mt-2 inline-flex items-center gap-2 text-sm font-medium text-white transition-colors duration-300 hover:text-gold">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>0723 153 973</span>
+        </a>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-display font-semibold">Date Legale</h4>
+        <ul class="mt-4 space-y-3 text-sm text-white/75">
+          <li>CUI: 35910769</li>
+          <li>Înființată: 2016</li>
+          <li>CAEN 8553 - Școli de Conducere Auto</li>
+          <li>Școală Auto & Stație I.T.P.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-display font-semibold">Linkuri Rapide</h4>
+        <div class="mt-4 flex flex-col gap-3 text-sm">
+          <a href="#despre" class="text-white/75 transition-colors duration-300 hover:text-white">Despre</a>
+          <a href="#servicii" class="text-white/75 transition-colors duration-300 hover:text-white">Servicii</a>
+          <a href="#recenzii" class="text-white/75 transition-colors duration-300 hover:text-white">Recenzii</a>
+          <a href="#program" class="text-white/75 transition-colors duration-300 hover:text-white">Program</a>
+          <a href="#contact" class="text-white/75 transition-colors duration-300 hover:text-white">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-8 text-sm text-white/65 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <p>© 2016 - 2026 SCUDERIA AUTO CELIA SRL. Toate drepturile rezervate.</p>
+        <p>Realizat cu profesionalism pentru siguranța ta.</p>
+      </div>
+    </div>
+  </footer>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "AutoRepair", "DrivingSchool"],
+      "name": "Auto Celia - Stație I.T.P.",
+      "legalName": "SCUDERIA AUTO CELIA SRL",
+      "url": "https://www.autocelia-slatina.ro/",
+      "telephone": "+40723153973",
+      "priceRange": "$$",
+      "slogan": "Siguranța ta pe drum începe aici.",
+      "foundingDate": "2016-04-05",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strada Crișan 34",
+        "addressLocality": "Slatina",
+        "postalCode": "230001",
+        "addressRegion": "Olt",
+        "addressCountry": "RO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.434206,
+        "longitude": 24.377857
+      },
+      "openingHours": ["Mo-Fr 08:00-20:00", "Sa 08:00-14:00"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "65",
+        "bestRating": "5"
+      },
+      "paymentAccepted": "Credit Card",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Parcare accesibilă pentru scaun rulant", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Intrare accesibilă pentru scaun rulant", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Toaletă accesibilă pentru scaun rulant", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Programare recomandată", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Mecanic disponibil pe loc", "value": true }
+      ]
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.AOS) {
+        AOS.init({ duration: 750, once: true, offset: 70, easing: "ease-out-cubic" });
+      }
+
+      var menuToggle = document.getElementById("menu-toggle");
+      var menuIcon = document.getElementById("menu-icon");
+      var mobileMenu = document.getElementById("mobile-menu");
+
+      function setMenuState(isOpen) {
+        mobileMenu.classList.toggle("hidden", !isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuIcon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+      }
+
+      function toggleMenu() {
+        var isClosed = mobileMenu.classList.contains("hidden");
+        setMenuState(isClosed);
+      }
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+          toggleMenu();
+        });
+
+        menuToggle.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleMenu();
+          }
+        });
+
+        document.querySelectorAll("[data-mobile-link]").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenuState(false);
+          });
+        });
+      }
+
+      var weekday = new Intl.DateTimeFormat("ro-RO", { weekday: "long", timeZone: "Europe/Bucharest" }).format(new Date());
+      var normalizedWeekday = weekday.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var currentDayRow = document.querySelector('[data-day="' + normalizedWeekday + '"]');
+
+      if (currentDayRow) {
+        currentDayRow.classList.add("active-day");
+        var dayTitle = currentDayRow.querySelector("p");
+        if (dayTitle) {
+          dayTitle.classList.remove("text-slatecopy");
+          dayTitle.classList.add("text-white");
+        }
+        var todayBadge = currentDayRow.querySelector(".today-badge");
+        if (todayBadge) {
+          todayBadge.classList.remove("hidden");
+        }
+        var hoursCopy = currentDayRow.querySelector(".hours-copy");
+        if (hoursCopy) {
+          hoursCopy.classList.remove("text-muted", "text-rose-600");
+          hoursCopy.classList.add("text-white");
+        }
+      }
+    });
+  </script>
+</body>
+</html>

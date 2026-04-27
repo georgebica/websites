@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto X Drive Craiova &#8212; Transfer Privat &amp; Servicii &#536;ofer Premium</title>
+    <meta name="description" content="Auto X Drive Craiova &#8212; serviciu premium de transfer privat, transport aeroport, curse lungi &#537;i tururi cu &#537;ofer. Rating 5/5 din 33 recenzii. Sun&#259; acum: 0754 392 277.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black:     '#0D0D0D',
+                        platinum:  '#E5E4E2',
+                        burgundy:  '#722F37',
+                        burgundyD: '#5A252C',
+                        gold:      '#D4AF37',
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        lora:   ['Lora', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: #0D0D0D;
+            color: #E5E4E2;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-lora   { font-family: 'Lora', serif; }
+
+        /* Thin platinum line divider */
+        .line-divider {
+            width: 80px;
+            height: 1px;
+            background: #E5E4E2;
+            margin: 0 auto;
+            opacity: 0.4;
+        }
+
+        .line-divider-wide {
+            width: 160px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E5E4E2, transparent);
+            margin: 0 auto;
+            opacity: 0.3;
+        }
+
+        /* Diamond separator */
+        .diamond-sep {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 2.5rem auto;
+        }
+        .diamond-sep::before,
+        .diamond-sep::after {
+            content: '';
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E5E4E2);
+            opacity: 0.3;
+        }
+        .diamond-sep::after {
+            background: linear-gradient(90deg, #E5E4E2, transparent);
+        }
+        .diamond-sep span {
+            width: 6px;
+            height: 6px;
+            background: #722F37;
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        /* Hero overlay gradient */
+        .hero-bg {
+            background: linear-gradient(
+                180deg,
+                rgba(13,13,13,0.0) 0%,
+                rgba(13,13,13,0.6) 40%,
+                rgba(13,13,13,0.95) 100%
+            ),
+            linear-gradient(135deg, #0D0D0D 0%, #1a1a1a 50%, #0D0D0D 100%);
+        }
+
+        /* Burgundy CTA */
+        .btn-burgundy {
+            background: #722F37;
+            color: #E5E4E2;
+            transition: all 0.3s ease;
+        }
+        .btn-burgundy:hover {
+            background: #5A252C;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(114,47,55,0.35);
+        }
+
+        /* Gold stars */
+        .star-gold { color: #D4AF37; }
+
+        /* Service list diamond bullet */
+        .diamond-bullet::before {
+            content: '';
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: #722F37;
+            transform: rotate(45deg);
+            margin-right: 16px;
+            flex-shrink: 0;
+            position: relative;
+            top: -1px;
+        }
+
+        /* Testimonial card */
+        .testimonial-card {
+            border-left: 2px solid rgba(114,47,55,0.5);
+            padding-left: 1.5rem;
+        }
+
+        /* Sticky bottom bar */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(13,13,13,0.97);
+            border-top: 1px solid rgba(229,228,226,0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Section paddings */
+        .section-pad {
+            padding: 5rem 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .section-pad { padding: 7rem 2rem; }
+        }
+
+        /* Subtle border on contact items */
+        .contact-item {
+            border: 1px solid rgba(229,228,226,0.1);
+            transition: border-color 0.3s ease;
+        }
+        .contact-item:hover {
+            border-color: rgba(114,47,55,0.4);
+        }
+
+        /* Accessibility badge */
+        .access-badge {
+            border: 1px solid rgba(229,228,226,0.15);
+        }
+
+        /* Bottom padding so sticky bar does not overlap content */
+        body { padding-bottom: 72px; }
+
+        /* Subtle pattern on hero */
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image:
+                radial-gradient(circle at 25% 25%, #E5E4E2 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, #E5E4E2 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-platinum/10">
+        <div class="max-w-5xl mx-auto flex items-center justify-between px-5 py-4">
+            <a href="#" class="font-cinzel text-lg md:text-xl tracking-widest uppercase text-platinum">
+                Auto <span class="text-burgundy">X</span> Drive
+            </a>
+            <a href="tel:0754392277"
+               class="flex items-center gap-2 text-sm font-lora text-platinum/70 hover:text-platinum transition-colors">
+                <i class="fas fa-phone text-burgundy text-xs"></i>
+                <span class="hidden sm:inline">0754 392 277</span>
+                <span class="sm:hidden">Sun&#259;</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
+        <div class="hero-pattern"></div>
+
+        <div class="relative z-10 text-center px-6 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
+
+            <!-- Small pre-heading -->
+            <p class="font-lora text-sm md:text-base tracking-[0.3em] uppercase text-platinum/50 mb-6">
+                Serviciu Premium de Transfer
+            </p>
+
+            <!-- Main heading -->
+            <h1 class="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-wider uppercase leading-tight text-platinum mb-8">
+                Transfer Privat<br>
+                <span class="text-burgundy">&#238;n Craiova</span>
+            </h1>
+
+            <!-- Thin platinum line -->
+            <div class="line-divider mb-8" data-aos="fade-in" data-aos-delay="400"></div>
+
+            <!-- Sub-text -->
+            <p class="font-lora text-base md:text-lg text-platinum/60 max-w-xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="300">
+                Discre&#539;ie, confort &#537;i punctualitate &#8212; serviciul de &#537;ofer privat care redefine&#537;te c&#259;l&#259;toria &#238;n &#537;i din Craiova.
+            </p>
+
+            <!-- CTA -->
+            <a href="tel:0754392277"
+               class="btn-burgundy inline-flex items-center gap-3 px-10 py-4 font-cinzel text-sm tracking-[0.2em] uppercase rounded"
+               data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-phone text-xs"></i>
+                Rezerv&#259; Acum
+            </a>
+
+            <!-- Rating badge -->
+            <div class="mt-12 flex items-center justify-center gap-3 text-platinum/40 text-sm" data-aos="fade-up" data-aos-delay="700">
+                <div class="flex gap-1 star-gold text-xs">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span>5.0 &#8212; 33 recenzii Google</span>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-platinum/20 animate-bounce">
+            <i class="fas fa-chevron-down text-lg"></i>
+        </div>
+    </header>
+
+    <!-- ===== EXPERIENTA NOASTRA ===== -->
+    <section class="section-pad" id="despre">
+        <div class="max-w-3xl mx-auto text-center">
+
+            <div class="diamond-sep" data-aos="fade-in"><span></span></div>
+
+            <h2 class="font-cinzel text-2xl md:text-3xl tracking-[0.25em] uppercase text-platinum mb-4" data-aos="fade-up">
+                Experien&#539;a Noastr&#259;
+            </h2>
+
+            <div class="line-divider mb-10" data-aos="fade-in" data-aos-delay="200"></div>
+
+            <div class="space-y-6 font-lora text-base md:text-lg text-platinum/65 leading-relaxed" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                    <strong class="text-platinum/90">Auto X Drive</strong> ofer&#259; un serviciu de transfer privat conceput pentru cei care apreciaz&#259; confortul, punctualitatea &#537;i discre&#539;ia. Fiecare curs&#259; este o experien&#539;&#259; atent g&#226;ndit&#259;, de la momentul rezerv&#259;rii p&#226;n&#259; la destina&#539;ia final&#259;.
+                </p>
+                <p>
+                    Flota noastr&#259; este &#238;ntre&#539;inut&#259; impecabil, iar &#537;oferii no&#537;tri sunt profesioni&#537;ti cu experien&#539;&#259;, dedica&#539;i siguran&#539;ei &#537;i satisfac&#539;iei dumneavoastr&#259;. Oferim acces facil inclusiv pentru persoanele cu mobilitate redus&#259; &#8212; intrarea noastr&#259; este adaptat&#259; pentru scaune cu rotile.
+                </p>
+                <p>
+                    Cu un rating perfect de <strong class="text-platinum/90">5.0 din 5</strong> &#537;i peste <strong class="text-platinum/90">33 de recenzii</strong> pozitive, suntem alegerea de &#238;ncredere pentru transferuri &#238;n Craiova &#537;i nu numai.
+                </p>
+            </div>
+
+            <!-- Accessibility badge -->
+            <div class="mt-10 inline-flex items-center gap-3 access-badge rounded-full px-5 py-2.5 text-sm text-platinum/50" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-wheelchair text-burgundy"></i>
+                Acces pentru persoane cu dizabilit&#259;&#539;i
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICII ===== -->
+    <section class="section-pad bg-gradient-to-b from-transparent via-burgundy/[0.03] to-transparent" id="servicii">
+        <div class="max-w-3xl mx-auto text-center">
+
+            <div class="diamond-sep" data-aos="fade-in"><span></span></div>
+
+            <h2 class="font-cinzel text-2xl md:text-3xl tracking-[0.25em] uppercase text-platinum mb-4" data-aos="fade-up">
+                Servicii
+            </h2>
+
+            <div class="line-divider mb-12" data-aos="fade-in" data-aos-delay="200"></div>
+
+            <p class="font-lora text-platinum/50 text-base md:text-lg mb-12 max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="250">
+                Solu&#539;ii complete de transport privat, adaptate nevoilor dumneavoastr&#259;.
+            </p>
+
+            <!-- Services list -->
+            <div class="max-w-md mx-auto space-y-6 text-left" data-aos="fade-up" data-aos-delay="350">
+
+                <div class="diamond-bullet flex items-center font-lora text-base md:text-lg text-platinum/80">
+                    <span><strong class="text-platinum">Transfer Aeroport</strong> &#8212; deplas&#259;ri sigure c&#259;tre &#537;i de la orice aeroport</span>
+                </div>
+
+                <div class="line-divider-wide"></div>
+
+                <div class="diamond-bullet flex items-center font-lora text-base md:text-lg text-platinum/80">
+                    <span><strong class="text-platinum">Transport Corporate</strong> &#8212; solu&#539;ii dedicate pentru mediul de afaceri</span>
+                </div>
+
+                <div class="line-divider-wide"></div>
+
+                <div class="diamond-bullet flex items-center font-lora text-base md:text-lg text-platinum/80">
+                    <span><strong class="text-platinum">Curse Lungi</strong> &#8212; c&#259;l&#259;torii confortabile pe distan&#539;e mari</span>
+                </div>
+
+                <div class="line-divider-wide"></div>
+
+                <div class="diamond-bullet flex items-center font-lora text-base md:text-lg text-platinum/80">
+                    <span><strong class="text-platinum">Tur cu &#536;ofer</strong> &#8212; descoper&#259; regiunea cu un ghid dedicat</span>
+                </div>
+
+                <div class="line-divider-wide"></div>
+
+                <div class="diamond-bullet flex items-center font-lora text-base md:text-lg text-platinum/80">
+                    <span><strong class="text-platinum">Transfer Privat</strong> &#8212; discre&#539;ie &#537;i elegan&#539;&#259;, oriunde ave&#539;i nevoie</span>
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-14" data-aos="fade-up" data-aos-delay="500">
+                <a href="tel:0754392277"
+                   class="btn-burgundy inline-flex items-center gap-3 px-8 py-3.5 font-cinzel text-xs tracking-[0.2em] uppercase rounded">
+                    <i class="fas fa-phone text-xs"></i>
+                    Solicit&#259; o Curs&#259;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RATING PERFECT ===== -->
+    <section class="section-pad" id="recenzii">
+        <div class="max-w-3xl mx-auto text-center">
+
+            <div class="diamond-sep" data-aos="fade-in"><span></span></div>
+
+            <h2 class="font-cinzel text-2xl md:text-3xl tracking-[0.25em] uppercase text-platinum mb-4" data-aos="fade-up">
+                Rating Perfect
+            </h2>
+
+            <div class="line-divider mb-12" data-aos="fade-in" data-aos-delay="200"></div>
+
+            <!-- Large rating number -->
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <p class="font-cinzel text-8xl md:text-9xl font-bold text-platinum tracking-tight leading-none mb-2">
+                    5.0
+                </p>
+                <div class="flex justify-center gap-2 star-gold text-xl mb-3">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="font-lora text-platinum/45 text-sm tracking-wider uppercase">
+                    din 33 recenzii Google
+                </p>
+            </div>
+
+            <!-- Key qualities -->
+            <div class="mt-12 flex flex-wrap justify-center gap-4 max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="400">
+                <span class="px-4 py-2 text-xs font-cinzel tracking-widest uppercase border border-platinum/10 rounded-full text-platinum/50">Profesionalism</span>
+                <span class="px-4 py-2 text-xs font-cinzel tracking-widest uppercase border border-platinum/10 rounded-full text-platinum/50">Amabilitate</span>
+                <span class="px-4 py-2 text-xs font-cinzel tracking-widest uppercase border border-platinum/10 rounded-full text-platinum/50">Pre&#539;uri Bune</span>
+                <span class="px-4 py-2 text-xs font-cinzel tracking-widest uppercase border border-platinum/10 rounded-full text-platinum/50">Seriozitate</span>
+                <span class="px-4 py-2 text-xs font-cinzel tracking-widest uppercase border border-platinum/10 rounded-full text-platinum/50">Servire Prompt&#259;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALE ===== -->
+    <section class="section-pad bg-gradient-to-b from-transparent via-burgundy/[0.03] to-transparent">
+        <div class="max-w-3xl mx-auto">
+
+            <div class="diamond-sep" data-aos="fade-in"><span></span></div>
+
+            <h2 class="font-cinzel text-2xl md:text-3xl tracking-[0.25em] uppercase text-platinum mb-4 text-center" data-aos="fade-up">
+                Ce Spun Clien&#539;ii
+            </h2>
+
+            <div class="line-divider mb-14" data-aos="fade-in" data-aos-delay="200"></div>
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card mb-12" data-aos="fade-up" data-aos-delay="300">
+                <p class="font-lora italic text-base md:text-lg text-platinum/70 leading-relaxed mb-4">
+                    &#8220;Serviciu impecabil! &#536;oferul a fost extrem de amabil &#537;i punctual. Ma&#537;ina curat&#259; &#537;i confortabil&#259;. Cu siguran&#539;&#259; voi apela din nou la Auto X Drive pentru orice transfer.&#8221;
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="flex gap-1 star-gold text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-platinum/35 text-sm font-lora">&#8212; Client verificat</span>
+                </div>
+            </div>
+
+            <div class="line-divider-wide mb-12"></div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card mb-12" data-aos="fade-up" data-aos-delay="400">
+                <p class="font-lora italic text-base md:text-lg text-platinum/70 leading-relaxed mb-4">
+                    &#8220;Pre&#539;uri corecte &#537;i profesionalism des&#259;v&#226;r&#537;it. Am folosit serviciul de transfer aeroport &#537;i totul a fost perfect &#8212; de la comunicare p&#226;n&#259; la momentul sosirii. Recomand cu &#238;ncredere!&#8221;
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="flex gap-1 star-gold text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-platinum/35 text-sm font-lora">&#8212; Client verificat</span>
+                </div>
+            </div>
+
+            <div class="line-divider-wide mb-12"></div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card mb-12" data-aos="fade-up" data-aos-delay="500">
+                <p class="font-lora italic text-base md:text-lg text-platinum/70 leading-relaxed mb-4">
+                    &#8220;Seriozitate &#537;i promptitudine &#8212; exact ceea ce c&#259;utam. Am apelat pentru o curs&#259; lung&#259; &#537;i experien&#539;a a fost una premium, la pre&#539;uri accesibile. Mul&#539;umesc, Auto X Drive!&#8221;
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="flex gap-1 star-gold text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-platinum/35 text-sm font-lora">&#8212; Client verificat</span>
+                </div>
+            </div>
+
+            <div class="line-divider-wide mb-12"></div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="600">
+                <p class="font-lora italic text-base md:text-lg text-platinum/70 leading-relaxed mb-4">
+                    &#8220;Am apelat la ei pentru un transfer corporate &#537;i am r&#259;mas pl&#259;cut impresionat. &#536;ofer profesionist, ma&#537;in&#259; elegant&#259; &#537;i punctualitate exemplar&#259;. Partenerul ideal pentru business.&#8221;
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="flex gap-1 star-gold text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-platinum/35 text-sm font-lora">&#8212; Client verificat</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== PROGRAM ===== -->
+    <section class="section-pad">
+        <div class="max-w-3xl mx-auto text-center">
+
+            <div class="diamond-sep" data-aos="fade-in"><span></span></div>
+
+            <h2 class="font-cinzel text-2xl md:text-3xl tracking-[0.25em] uppercase text-platinum mb-4" data-aos="fade-up">
+                Program
+            </h2>
+
+            <div class="line-divider mb-12" data-aos="fade-in" data-aos-delay="200"></div>
+
+            <div class="max-w-xs mx-auto space-y-4 font-lora text-platinum/65" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex justify-between items-center py-2 border-b border-platinum/10">
+                    <span>Luni &#8211; Vineri</span>
+                    <span class="text-platinum">9:00 &#8211; 18:00</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-platinum/10">
+                    <span>S&#226;mb&#259;t&#259;</span>
+                    <span class="text-platinum">9:00 &#8211; 13:30</span>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <span>Duminic&#259;</span>
+                    <span class="text-platinum/40">&#206;nchis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section-pad bg-gradient-to-b from-transparent via-burgundy/[0.03] to-transparent" id="contact">
+        <div class="max-w-3xl mx-auto text-center">
+
+            <div class="diamond-sep" data-aos="fade-in"><span></span></div>
+
+            <h2 class="font-cinzel text-2xl md:text-3xl tracking-[0.25em] uppercase text-platinum mb-4" data-aos="fade-up">
+                Contact
+            </h2>
+
+            <div class="line-divider mb-12" data-aos="fade-in" data-aos-delay="200"></div>
+
+            <p class="font-lora text-platinum/50 text-base md:text-lg mb-12 max-w-md mx-auto" data-aos="fade-up" data-aos-delay="250">
+                Suntem la dispozi&#539;ia dumneavoastr&#259; pentru orice rezervare sau informa&#539;ie.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="350">
+
+                <!-- Phone -->
+                <a href="tel:0754392277" class="contact-item rounded-lg p-6 text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full border border-burgundy/30">
+                        <i class="fas fa-phone text-burgundy"></i>
+                    </div>
+                    <p class="font-cinzel text-xs tracking-[0.2em] uppercase text-platinum/40 mb-2">Telefon</p>
+                    <p class="font-lora text-platinum group-hover:text-burgundy transition-colors">0754 392 277</p>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/40754392277" target="_blank" rel="noopener noreferrer" class="contact-item rounded-lg p-6 text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full border border-burgundy/30">
+                        <i class="fab fa-whatsapp text-burgundy text-lg"></i>
+                    </div>
+                    <p class="font-cinzel text-xs tracking-[0.2em] uppercase text-platinum/40 mb-2">WhatsApp</p>
+                    <p class="font-lora text-platinum group-hover:text-burgundy transition-colors">0754 392 277</p>
+                </a>
+
+                <!-- Address -->
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=44.339893,23.766685" target="_blank" rel="noopener noreferrer" class="contact-item rounded-lg p-6 text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full border border-burgundy/30">
+                        <i class="fas fa-map-marker-alt text-burgundy"></i>
+                    </div>
+                    <p class="font-cinzel text-xs tracking-[0.2em] uppercase text-platinum/40 mb-2">Adres&#259;</p>
+                    <p class="font-lora text-platinum text-sm group-hover:text-burgundy transition-colors">Calea Severinului 34 H, Craiova</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="border-t border-platinum/10 py-10 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+
+            <!-- Logo -->
+            <p class="font-cinzel text-lg tracking-[0.3em] uppercase text-platinum/70 mb-3">
+                Auto <span class="text-burgundy">X</span> Drive
+            </p>
+            <p class="font-lora text-xs text-platinum/30 mb-6">
+                Serviciu Premium de Transfer &#8212; Craiova
+            </p>
+
+            <div class="line-divider-wide mb-6"></div>
+
+            <p class="font-lora text-xs text-platinum/25">
+                &#169; 2026 Auto X Drive &#8212; Craiova. Toate drepturile rezervate.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== STICKY BOTTOM BAR ===== -->
+    <div class="sticky-bar">
+        <div class="max-w-lg mx-auto flex items-stretch">
+            <!-- Tap-to-call -->
+            <a href="tel:0754392277"
+               class="flex-1 flex items-center justify-center gap-2.5 py-4 font-cinzel text-xs tracking-[0.15em] uppercase text-platinum hover:bg-burgundy/20 transition-colors border-r border-platinum/10">
+                <i class="fas fa-phone text-burgundy text-sm"></i>
+                Sun&#259; Acum
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/40754392277" target="_blank" rel="noopener noreferrer"
+               class="flex-1 flex items-center justify-center gap-2.5 py-4 font-cinzel text-xs tracking-[0.15em] uppercase text-platinum hover:bg-burgundy/20 transition-colors">
+                <i class="fab fa-whatsapp text-burgundy text-sm"></i>
+                WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Auto X Drive - Craiova",
+        "description": "Serviciu premium de transfer privat, transport aeroport, curse lungi \u0219i tururi cu \u0219ofer \u00een Craiova.",
+        "image": "",
+        "url": "",
+        "telephone": "+40754392277",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calea Severinului 34 H",
+            "addressLocality": "Craiova",
+            "addressRegion": "Dolj",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.339893,
+            "longitude": 23.766685
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "13:30"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "33"
+        },
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "City",
+            "name": "Craiova"
+        },
+        "serviceType": [
+            "Transfer privat",
+            "Transfer aeroport",
+            "Transport corporate",
+            "Curse lungi",
+            "Tur cu \u0219ofer"
+        ]
+    }
+    </script>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            offset: 60,
+        });
+    </script>
+
+</body>
+</html>

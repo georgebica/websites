@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vodafone MSC Spa&#539;ii Tehnice Craiova | Construc&#539;ii Telecom &amp; Data | 0730 019 978</title>
+<meta name="description" content="Amenaj&#259;ri &#537;i construc&#539;ii pentru spa&#539;ii tehnice telecom &#537;i data centers în Craiova. Ml MSC (Mobile Switching Centers), anexe tehnice. 0730 019 978.">
+<meta name="keywords" content="constructii spatii tehnice Craiova, amenajari MSC Craiova, data center Craiova, constructii telecom Dolj, spatii server Craiova, Toporasi 49 Craiova, infrastructura telecom Dolj">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Vodafone MSC Spa&#539;ii Tehnice">
+<link rel="canonical" href="">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Vodafone MSC Spa&#539;ii Tehnice">
+<meta property="og:title" content="Vodafone MSC Spa&#539;ii Tehnice Craiova | 0730 019 978">
+<meta property="og:description" content="Construc&#539;ii &#537;i amenaj&#259;ri pentru spa&#539;ii tehnice telecom &#537;i infrastructur&#259; de date în Craiova.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vodafone MSC Spa&#539;ii Tehnice Craiova">
+<meta name="twitter:description" content="Construc&#539;ii pentru infrastructur&#259; tehnic&#259; în Craiova.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['Kanit', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif']
+      },
+      colors: {
+        'slate-tech': {
+          50: '#f1f3f5',
+          100: '#d4dae1',
+          200: '#a7b1bf',
+          300: '#7a8799',
+          400: '#4e5c73',
+          600: '#2b3545',
+          700: '#1b2330',
+          800: '#121923',
+          900: '#0a0e17'
+        },
+        'neon-ok': '#86efac',
+        'signal-ok': '#22c55e',
+        'amber-warn': '#f59e0b',
+        'crit': '#ef4444'
+      }
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background: #0a0e17; color: #d4dae1; }
+  .font-display { font-family: 'Kanit', sans-serif; letter-spacing: -0.01em; }
+  .server-grid {
+    background-image:
+      linear-gradient(rgba(34,197,94,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,197,94,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .led-dot {
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .rack-slot {
+    background: linear-gradient(180deg, #1b2330 0%, #121923 100%);
+    border: 1px solid rgba(34,197,94,0.2);
+  }
+  .terminal-font { font-family: 'Courier New', monospace; }
+  .corner-mark {
+    position: relative;
+  }
+  .corner-mark::before, .corner-mark::after {
+    content: '';
+    position: absolute;
+    width: 16px; height: 16px;
+    border-color: #22c55e;
+    border-style: solid;
+  }
+  .corner-mark::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+  .corner-mark::after { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Top bar status -->
+<div class="bg-slate-tech-900 text-signal-ok text-xs py-2 border-b border-signal-ok/20">
+  <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+    <span class="flex items-center gap-2">
+      <span class="w-2 h-2 bg-signal-ok rounded-full led-dot"></span>
+      OPERATIONAL &middot; 24/7 STANDBY
+    </span>
+    <span class="hidden md:inline terminal-font">LAT 44.3331 &middot; LON 23.7723 &middot; CRAIOVA</span>
+    <span>v.1 &middot; 2026</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="bg-slate-tech-800 border-b border-slate-tech-700 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-12 h-12 bg-slate-tech-900 border border-signal-ok flex items-center justify-center text-signal-ok">
+        <i class="fa-solid fa-server text-lg"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-xl font-semibold text-white">MSC Spa&#539;ii Tehnice</div>
+        <div class="text-[10px] tracking-[0.3em] uppercase text-signal-ok">Craiova &middot; infrastructure build</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm uppercase tracking-wider text-slate-tech-100">
+      <a href="#servicii" class="hover:text-signal-ok">Servicii</a>
+      <a href="#capability" class="hover:text-signal-ok">Capabilit&#259;&#539;i</a>
+      <a href="#proces" class="hover:text-signal-ok">Proces</a>
+      <a href="#locatie" class="hover:text-signal-ok">Loca&#539;ie</a>
+      <a href="#contact" class="hover:text-signal-ok">Contact</a>
+    </nav>
+    <a href="tel:0730019978" class="hidden md:inline-flex items-center gap-2 bg-signal-ok hover:bg-neon-ok text-slate-tech-900 px-5 py-3 font-semibold text-sm uppercase">
+      <i class="fa-solid fa-phone"></i> 0730 019 978
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="server-grid py-20 md:py-28 bg-slate-tech-900">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-2 h-2 bg-signal-ok led-dot"></div>
+        <span class="text-xs tracking-[0.4em] uppercase text-signal-ok terminal-font">&gt; init_system ... OK</span>
+      </div>
+      <h1 class="font-display font-semibold text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-white">
+        Construim<br>
+        camerele în care<br>
+        <span class="text-signal-ok">triese&#537;te</span><br>
+        <span class="text-signal-ok">re&#539;eaua.</span>
+      </h1>
+      <p class="mt-8 text-lg text-slate-tech-100 max-w-lg">
+        Amenaj&#259;ri &#537;i construc&#539;ii pentru spa&#539;ii tehnice telecom &mdash; sali MSC, camere de echipamente, anexe cu climatizare &#537;i alimentare redundant&#259;. Standarde profesionale pentru infrastructur&#259; critic&#259;.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="tel:0730019978" class="bg-signal-ok hover:bg-neon-ok text-slate-tech-900 px-8 py-4 font-semibold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-solid fa-phone-volume"></i> Contact dispecer
+        </a>
+        <a href="https://wa.me/40730019978" class="border border-signal-ok text-signal-ok hover:bg-signal-ok hover:text-slate-tech-900 px-8 py-4 font-semibold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="corner-mark bg-slate-tech-800/60 border border-signal-ok/20 p-8 relative">
+        <div class="flex justify-between items-center border-b border-signal-ok/20 pb-3 mb-4">
+          <span class="terminal-font text-xs text-signal-ok">// STATUS_BOARD</span>
+          <span class="text-xs text-slate-tech-300 uppercase tracking-widest">Real-time</span>
+        </div>
+        <!-- Rack slots -->
+        <div class="space-y-2">
+          <div class="rack-slot p-3 flex items-center justify-between">
+            <span class="text-sm"><i class="fa-solid fa-server text-signal-ok mr-2"></i> Amenaj&#259;ri MSC</span>
+            <span class="text-signal-ok text-xs terminal-font led-dot">&#9679; ACTIV</span>
+          </div>
+          <div class="rack-slot p-3 flex items-center justify-between">
+            <span class="text-sm"><i class="fa-solid fa-fan text-signal-ok mr-2"></i> Climatizare tehnic&#259;</span>
+            <span class="text-signal-ok text-xs terminal-font">&#9679; SUPORT</span>
+          </div>
+          <div class="rack-slot p-3 flex items-center justify-between">
+            <span class="text-sm"><i class="fa-solid fa-bolt text-signal-ok mr-2"></i> Alimentare redundant&#259;</span>
+            <span class="text-signal-ok text-xs terminal-font">&#9679; SUPORT</span>
+          </div>
+          <div class="rack-slot p-3 flex items-center justify-between">
+            <span class="text-sm"><i class="fa-solid fa-shield-virus text-signal-ok mr-2"></i> Acces controlat</span>
+            <span class="text-signal-ok text-xs terminal-font">&#9679; SUPORT</span>
+          </div>
+          <div class="rack-slot p-3 flex items-center justify-between">
+            <span class="text-sm"><i class="fa-solid fa-fire-extinguisher text-signal-ok mr-2"></i> Sistem anti-incendiu</span>
+            <span class="text-amber-warn text-xs terminal-font">&#9679; LA CERERE</span>
+          </div>
+          <div class="rack-slot p-3 flex items-center justify-between">
+            <span class="text-sm"><i class="fa-solid fa-satellite-dish text-signal-ok mr-2"></i> Anten&#259; / tr&#259;sare cabluri</span>
+            <span class="text-signal-ok text-xs terminal-font">&#9679; SUPORT</span>
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-signal-ok/20 text-xs terminal-font text-slate-tech-300">
+          &gt; all subsystems available // rating: 5.0/5.0
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Strip -->
+<div class="bg-signal-ok text-slate-tech-900 py-5">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-6 items-center">
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-circle-check text-2xl"></i>
+      <div>
+        <div class="font-display text-xl font-semibold">Infrastructur&#259; critic&#259;</div>
+        <div class="text-xs tracking-wider">standardul non-negociabil</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-ruler-combined text-2xl"></i>
+      <div>
+        <div class="font-display text-xl font-semibold">Proiectare precis&#259;</div>
+        <div class="text-xs tracking-wider">de la plan pân&#259; la cablu</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-users-gear text-2xl"></i>
+      <div>
+        <div class="font-display text-xl font-semibold">Echip&#259; dedicat&#259;</div>
+        <div class="text-xs tracking-wider">experien&#539;&#259; telecom specific&#259;</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-clock-rotate-left text-2xl"></i>
+      <div>
+        <div class="font-display text-xl font-semibold">Termene respectate</div>
+        <div class="text-xs tracking-wider">go-live la data convenit&#259;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Servicii -->
+<section id="servicii" class="py-20 bg-slate-tech-900">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="mb-12 grid md:grid-cols-12 gap-6" data-aos="fade-up">
+      <div class="md:col-span-5">
+        <div class="text-xs tracking-[0.4em] uppercase text-signal-ok terminal-font">// servicii</div>
+        <h2 class="font-display text-5xl md:text-6xl font-semibold mt-3 text-white leading-tight">Ce construim pentru telecom &amp; IT</h2>
+      </div>
+      <div class="md:col-span-7 text-slate-tech-100 pt-6">
+        Specializare în spa&#539;ii care g&#259;zduiesc echipamente sensibile &mdash; de la lucr&#259;ri minore în camere tehnice pân&#259; la amenaj&#259;ri complete pentru sali de switching mobil &#537;i camere de date.
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-slate-tech-800 border border-slate-tech-600 p-7 hover:border-signal-ok transition" data-aos="fade-up">
+        <div class="flex justify-between items-start mb-4">
+          <i class="fa-solid fa-server text-3xl text-signal-ok"></i>
+          <span class="terminal-font text-xs text-slate-tech-300">SRV_01</span>
+        </div>
+        <h3 class="font-display text-2xl text-white">Sali MSC &amp; switch</h3>
+        <p class="text-sm text-slate-tech-200 mt-2">Amenaj&#259;ri complete pentru s&#259;li Mobile Switching Center &#537;i echipamente de transmisie telecom. Planificare podea tehnic&#259;, tras&#259;ri cabluri, fixare rack-uri.</p>
+      </div>
+      <div class="bg-slate-tech-800 border border-slate-tech-600 p-7 hover:border-signal-ok transition" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex justify-between items-start mb-4">
+          <i class="fa-solid fa-fan text-3xl text-signal-ok"></i>
+          <span class="terminal-font text-xs text-slate-tech-300">SRV_02</span>
+        </div>
+        <h3 class="font-display text-2xl text-white">Climatizare tehnic&#259;</h3>
+        <p class="text-sm text-slate-tech-200 mt-2">Sisteme de climatizare de precizie pentru camere de echipament, cu temperatur&#259; &#537;i umiditate controlate într-o plaj&#259; îngust&#259;.</p>
+      </div>
+      <div class="bg-slate-tech-800 border border-slate-tech-600 p-7 hover:border-signal-ok transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-between items-start mb-4">
+          <i class="fa-solid fa-plug-circle-bolt text-3xl text-signal-ok"></i>
+          <span class="terminal-font text-xs text-slate-tech-300">SRV_03</span>
+        </div>
+        <h3 class="font-display text-2xl text-white">Alimentare redundant&#259;</h3>
+        <p class="text-sm text-slate-tech-200 mt-2">Dou&#259; sau mai multe c&#259;i de alimentare electric&#259;, UPS-uri &#537;i conexiuni pentru generator, cu comutare automat&#259; f&#259;r&#259; întreruperi.</p>
+      </div>
+      <div class="bg-signal-ok text-slate-tech-900 p-7" data-aos="fade-up">
+        <div class="flex justify-between items-start mb-4">
+          <i class="fa-solid fa-shield-virus text-3xl"></i>
+          <span class="terminal-font text-xs opacity-70">SRV_04</span>
+        </div>
+        <h3 class="font-display text-2xl">Control acces &amp; CCTV</h3>
+        <p class="text-sm mt-2 text-slate-tech-800">Sisteme de control al accesului cu cititor card/PIN/amprent&#259;, CCTV IP &#537;i integrare cu sistemul central de monitorizare al clientului.</p>
+      </div>
+      <div class="bg-slate-tech-800 border border-slate-tech-600 p-7 hover:border-signal-ok transition" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex justify-between items-start mb-4">
+          <i class="fa-solid fa-fire-extinguisher text-3xl text-signal-ok"></i>
+          <span class="terminal-font text-xs text-slate-tech-300">SRV_05</span>
+        </div>
+        <h3 class="font-display text-2xl text-white">Detec&#539;ie &amp; stingere</h3>
+        <p class="text-sm text-slate-tech-200 mt-2">Detec&#539;ie prompt&#259; de fum &#537;i sisteme de stingere cu gaz inert (FM-200, Novec) pentru protec&#539;ia echipamentelor f&#259;r&#259; ap&#259;.</p>
+      </div>
+      <div class="bg-slate-tech-800 border border-slate-tech-600 p-7 hover:border-signal-ok transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-between items-start mb-4">
+          <i class="fa-solid fa-tower-cell text-3xl text-signal-ok"></i>
+          <span class="terminal-font text-xs text-slate-tech-300">SRV_06</span>
+        </div>
+        <h3 class="font-display text-2xl text-white">Anexe tehnice exterioare</h3>
+        <p class="text-sm text-slate-tech-200 mt-2">Pilonii de anten&#259;, funda&#539;ii de stâlp, carcase metalice exterioare, prizare la p&#259;mânt &#537;i protec&#539;ii atmosferice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Capabilitati -->
+<section id="capability" class="py-20 bg-slate-tech-800">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <div class="text-xs tracking-[0.4em] uppercase text-signal-ok terminal-font">// capability matrix</div>
+        <h2 class="font-display text-5xl md:text-6xl font-semibold mt-3 text-white leading-tight">Ce putem executa, în practic&#259;</h2>
+        <p class="mt-5 text-slate-tech-100 text-lg">Experien&#539;a în spa&#539;ii tehnice telecom nu se înva&#539;&#259; din manuale. Am v&#259;zut ce se cere &#537;i unde apar compromisurile &mdash; a&#537;a &#537;tim ce anume nu trebuie s&#259; lipseasc&#259; din proiect.</p>
+      </div>
+      <div data-aos="fade-left">
+        <ul class="space-y-3">
+          <li class="bg-slate-tech-900 border border-slate-tech-600 p-4 flex items-center gap-4">
+            <i class="fa-solid fa-check text-signal-ok text-xl"></i>
+            <div>
+              <div class="font-semibold text-white">Podea tehnic&#259; modular&#259;</div>
+              <div class="text-xs text-slate-tech-300">pentru tras&#259;ri cabluri &#537;i circula&#539;ie aer de r&#259;cire</div>
+            </div>
+          </li>
+          <li class="bg-slate-tech-900 border border-slate-tech-600 p-4 flex items-center gap-4">
+            <i class="fa-solid fa-check text-signal-ok text-xl"></i>
+            <div>
+              <div class="font-semibold text-white">Rack-uri cu capacitate bine dimensionat&#259;</div>
+              <div class="text-xs text-slate-tech-300">pentru echipamentul curent &#537;i extinderi viitoare</div>
+            </div>
+          </li>
+          <li class="bg-slate-tech-900 border border-slate-tech-600 p-4 flex items-center gap-4">
+            <i class="fa-solid fa-check text-signal-ok text-xl"></i>
+            <div>
+              <div class="font-semibold text-white">Priz&#259; de p&#259;mânt conform normativ</div>
+              <div class="text-xs text-slate-tech-300">pentru protec&#539;ia echipamentelor IT / telecom</div>
+            </div>
+          </li>
+          <li class="bg-slate-tech-900 border border-slate-tech-600 p-4 flex items-center gap-4">
+            <i class="fa-solid fa-check text-signal-ok text-xl"></i>
+            <div>
+              <div class="font-semibold text-white">Ie&#537;iri de siguran&#539;&#259; &amp; semnalizare</div>
+              <div class="text-xs text-slate-tech-300">conform PSI &#537;i normelor europene în vigoare</div>
+            </div>
+          </li>
+          <li class="bg-slate-tech-900 border border-slate-tech-600 p-4 flex items-center gap-4">
+            <i class="fa-solid fa-check text-signal-ok text-xl"></i>
+            <div>
+              <div class="font-semibold text-white">Documenta&#539;ie as-built predat&#259; la final</div>
+              <div class="text-xs text-slate-tech-300">schi&#539;e, fotografii, certificate, garan&#539;ii</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proces -->
+<section id="proces" class="py-20 bg-slate-tech-900 server-grid">
+  <div class="max-w-7xl mx-auto px-5 relative">
+    <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+      <div class="text-xs tracking-[0.4em] uppercase text-signal-ok terminal-font">// project_flow</div>
+      <h2 class="font-display text-5xl md:text-6xl font-semibold mt-3 text-white">5 faze. Un rezultat stabil.</h2>
+    </div>
+    <div class="grid md:grid-cols-5 gap-4">
+      <div class="corner-mark bg-slate-tech-800 p-6" data-aos="fade-up">
+        <div class="terminal-font text-signal-ok text-sm mb-2">[01]</div>
+        <h3 class="font-display text-2xl text-white">Brief client</h3>
+        <p class="text-xs text-slate-tech-300 mt-2">specifica&#539;iile echipamentelor, volumul de spa&#539;iu, termene țintă</p>
+      </div>
+      <div class="corner-mark bg-slate-tech-800 p-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="terminal-font text-signal-ok text-sm mb-2">[02]</div>
+        <h3 class="font-display text-2xl text-white">Evaluare sit</h3>
+        <p class="text-xs text-slate-tech-300 mt-2">vizit&#259; la loca&#539;ie, verificare structur&#259;, infrastructur&#259; existent&#259;</p>
+      </div>
+      <div class="corner-mark bg-slate-tech-800 p-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="terminal-font text-signal-ok text-sm mb-2">[03]</div>
+        <h3 class="font-display text-2xl text-white">Proiect &amp; deviz</h3>
+        <p class="text-xs text-slate-tech-300 mt-2">planuri tehnice, nomenclatoare materiale, grafic de execu&#539;ie</p>
+      </div>
+      <div class="corner-mark bg-slate-tech-800 p-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="terminal-font text-signal-ok text-sm mb-2">[04]</div>
+        <h3 class="font-display text-2xl text-white">Execu&#539;ie</h3>
+        <p class="text-xs text-slate-tech-300 mt-2">construc&#539;ie &#537;i integrare sisteme, raport&#259;ri la fiecare milestone</p>
+      </div>
+      <div class="corner-mark bg-signal-ok p-6 text-slate-tech-900" data-aos="fade-up" data-aos-delay="400">
+        <div class="terminal-font text-sm mb-2">[05]</div>
+        <h3 class="font-display text-2xl">Recep&#539;ie &amp; go-live</h3>
+        <p class="text-xs mt-2">teste func&#539;ionale, documenta&#539;ie, predare oficial&#259; c&#259;tre operator</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Locatie -->
+<section id="locatie" class="py-20 bg-slate-tech-800">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-10 items-center">
+    <div data-aos="fade-right">
+      <div class="text-xs tracking-[0.4em] uppercase text-signal-ok terminal-font">// base_location</div>
+      <h2 class="font-display text-5xl md:text-6xl font-semibold mt-3 text-white leading-tight">Baza opera&#539;ional&#259; în Craiova</h2>
+      <p class="mt-5 text-slate-tech-100 text-lg">Sediul nostru tehnic este pe Strada Toporași 49, Craiova. De aici coordon&#259;m execu&#539;iile din zona Olteniei &#537;i proiectele din jude&#539;ele învecinate.</p>
+      <div class="mt-6 space-y-2">
+        <div class="flex items-center gap-3 bg-slate-tech-900 border border-slate-tech-600 p-4">
+          <span class="terminal-font text-xs text-signal-ok">ADDR &gt;</span>
+          <span class="text-white">Strada Toporași 49, Craiova, Dolj</span>
+        </div>
+        <div class="flex items-center gap-3 bg-slate-tech-900 border border-slate-tech-600 p-4">
+          <span class="terminal-font text-xs text-signal-ok">TEL  &gt;</span>
+          <span class="text-white">0730 019 978</span>
+        </div>
+        <div class="flex items-center gap-3 bg-slate-tech-900 border border-slate-tech-600 p-4">
+          <span class="terminal-font text-xs text-signal-ok">STATUS &gt;</span>
+          <span class="text-signal-ok">24/7 STANDBY &middot; interven&#539;ii pe proiect</span>
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <div class="border border-signal-ok p-1">
+        <iframe src="https://www.google.com/maps?q=44.333175,23.772335&hl=ro&z=17&output=embed" width="100%" height="500" style="border:0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="py-20 bg-slate-tech-900 server-grid">
+  <div class="max-w-4xl mx-auto px-5 text-center relative">
+    <div class="terminal-font text-signal-ok text-sm mb-4">&gt; start_contact.sh</div>
+    <h2 class="font-display text-5xl md:text-7xl font-semibold text-white leading-[0.95]">Discut&#259;m proiectul<br>la telefon <span class="text-signal-ok">sau prin e-mail</span>.</h2>
+    <p class="mt-6 text-slate-tech-100 text-lg">Descrie-ne pe scurt cerin&#539;a: tipul spa&#539;iului, echipamentul care va fi găzduit, termenele &#537;i loca&#539;ia. Revenim cu o propunere tehnic&#259; ini&#539;ial&#259;.</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="tel:0730019978" class="bg-signal-ok hover:bg-neon-ok text-slate-tech-900 px-10 py-5 font-display text-2xl font-semibold inline-flex items-center gap-3">
+        <i class="fa-solid fa-phone-volume"></i> 0730 019 978
+      </a>
+      <a href="https://wa.me/40730019978" class="border border-signal-ok text-signal-ok hover:bg-signal-ok hover:text-slate-tech-900 px-10 py-5 font-display text-2xl font-semibold inline-flex items-center gap-3">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-tech-800 border-t border-signal-ok/20 py-14">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-slate-tech-900 border border-signal-ok flex items-center justify-center text-signal-ok"><i class="fa-solid fa-server"></i></div>
+        <div>
+          <div class="font-display text-xl font-semibold text-white">MSC Spa&#539;ii Tehnice</div>
+          <div class="text-[10px] tracking-[0.3em] uppercase text-signal-ok">Craiova &middot; infrastructure</div>
+        </div>
+      </div>
+      <p class="mt-5 text-sm text-slate-tech-200 max-w-md">Construim &#537;i amenaj&#259;m spa&#539;ii tehnice pentru operatori telecom &#537;i IT. Construc&#539;ii noi, extinderi &#537;i refurbishment pentru camere critice.</p>
+    </div>
+    <div>
+      <div class="text-white font-display text-lg mb-4">Contact</div>
+      <ul class="text-sm space-y-2 text-slate-tech-200">
+        <li><i class="fa-solid fa-phone w-5 text-signal-ok"></i> 0730 019 978</li>
+        <li><i class="fa-brands fa-whatsapp w-5 text-signal-ok"></i> WhatsApp</li>
+        <li><i class="fa-solid fa-location-dot w-5 text-signal-ok"></i> Str. Toporași 49</li>
+        <li><i class="fa-solid fa-city w-5 text-signal-ok"></i> Craiova, Dolj</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-white font-display text-lg mb-4">Naviga&#539;ie</div>
+      <ul class="text-sm space-y-2 text-slate-tech-200">
+        <li><a href="#servicii" class="hover:text-signal-ok">Servicii</a></li>
+        <li><a href="#capability" class="hover:text-signal-ok">Capabilit&#259;&#539;i</a></li>
+        <li><a href="#proces" class="hover:text-signal-ok">Proces</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 mt-10 pt-6 border-t border-signal-ok/20 text-xs flex flex-wrap justify-between gap-3 text-slate-tech-300">
+    <div>&copy; 2026 Vodafone MSC Spa&#539;ii Tehnice. Toate drepturile rezervate.</div>
+    <div class="terminal-font">// built_for_telecom_reliability</div>
+  </div>
+</footer>
+
+<!-- Mobile sticky -->
+<div class="fixed bottom-0 inset-x-0 bg-slate-tech-900 flex md:hidden z-50 border-t border-signal-ok">
+  <a href="tel:0730019978" class="flex-1 py-4 text-center text-sm font-semibold text-signal-ok border-r border-slate-tech-700">
+    <i class="fa-solid fa-phone mr-2"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40730019978" class="flex-1 py-4 text-center text-sm font-semibold text-white bg-signal-ok">
+    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Vodafone MSC Spa&#539;ii Tehnice",
+  "description": "Construc&#539;ii &#537;i amenaj&#259;ri pentru spa&#539;ii tehnice telecom, s&#259;li MSC &#537;i infrastructur&#259; IT în Craiova",
+  "telephone": "+40730019978",
+  "url": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Toporași 49",
+    "addressLocality": "Craiova",
+    "addressRegion": "Dolj",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.333175,
+    "longitude": 23.772335
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "5"
+  }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 700, once: true, offset: 80});</script>
+</body>
+</html>
