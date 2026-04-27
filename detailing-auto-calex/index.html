@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detailing Auto Calex &middot; Sablare &#537;i detailing &icirc;n Craiova</title>
+<meta name="description" content="Detailing Auto Calex &mdash; sablare, cur&#259;&#539;are cu presiune &#537;i detailing auto &icirc;n Craiova. Caroserii, jenti, piese metalice. Contact prin Google Maps.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&family=Red+Hat+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        concrete: '#4A4F56',
+        concretd: '#2B2F35',
+        sand:    '#C9B386',
+        blast:   '#FF5C1F',
+        blastd:  '#C83E0A',
+        bone:    '#F4F1EA',
+        bonel:   '#FAF8F2',
+        ink:     '#1C1E22',
+        muted:   '#6D7079',
+        line:    '#D6D1C3',
+      },
+      fontFamily: {
+        display: ['"Red Hat Display"', 'system-ui', 'sans-serif'],
+        mono:    ['"Red Hat Mono"', 'ui-monospace', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #F4F1EA; color: #1C1E22; }
+  body { font-family: "Red Hat Display", system-ui, sans-serif; }
+  .display { font-family: "Red Hat Display", system-ui, sans-serif; font-weight: 800; letter-spacing: -.015em; line-height: .98; }
+  .mono { font-family: "Red Hat Mono", ui-monospace, monospace; }
+
+  .grit-bg {
+    background-color: #4A4F56;
+    background-image:
+      radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,.15) 1px, transparent 1px);
+    background-size: 4px 4px, 8px 8px;
+    background-position: 0 0, 2px 2px;
+  }
+  .sand-bg {
+    background-color: #C9B386;
+    background-image: radial-gradient(rgba(0,0,0,.08) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+
+  .btn-blast { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #FF5C1F; color: #fff; font-weight: 700; letter-spacing: .04em; transition: all .25s; }
+  .btn-blast:hover { background: #C83E0A; transform: translateY(-2px); }
+  .btn-ink { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #1C1E22; color: #F4F1EA; font-weight: 700; letter-spacing: .04em; transition: all .25s; }
+  .btn-ink:hover { background: #FF5C1F; }
+
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .35rem .85rem; background: #1C1E22; color: #FF5C1F; font-family: "Red Hat Mono", monospace; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+
+  .step-card { background: #fff; border: 1px solid #D6D1C3; padding: 1.8rem; position: relative; transition: all .35s; }
+  .step-card:hover { border-color: #FF5C1F; transform: translate(-3px, -3px); box-shadow: 6px 6px 0 0 #1C1E22; }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Red Hat Display", sans-serif; font-weight: 800; font-size: 1.7rem; border-bottom: 1px solid #D6D1C3; }
+
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dashed rgba(28,30,34,.2); font-family: "Red Hat Mono", monospace; font-size: .9rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #FF5C1F; font-weight: 700; }
+
+  .q-card { background: #fff; border-left: 4px solid #FF5C1F; padding: 1.5rem; }
+
+  .spark { width: 22px; height: 22px; background: #FF5C1F; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); display: inline-block; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-bone border-b-[3px] border-ink">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 bg-ink text-blast flex items-center justify-center"><span class="spark"></span></span>
+      <div class="leading-tight">
+        <p class="display text-2xl">DETAILING AUTO CALEX</p>
+        <p class="mono text-[10px] text-muted mt-0.5">Sablare &middot; Cur&#259;&#539;are &middot; Craiova</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[11px] font-bold uppercase tracking-wider display">
+      <a href="#despre"   class="hover:text-blast">Despre</a>
+      <a href="#servicii" class="hover:text-blast">Servicii</a>
+      <a href="#proces"   class="hover:text-blast">Proces</a>
+      <a href="#locatie"  class="hover:text-blast">Loca&#539;ie</a>
+      <a href="#contact"  class="hover:text-blast">Contact</a>
+      <a href="https://www.google.com/maps/place/Detailing+Auto+Calex/@44.3521278,23.8143226,17z" target="_blank" rel="noopener" class="btn-blast !py-2.5 !px-4 !text-[11px]"><i class="fa-solid fa-location-dot"></i> Vezi pe Maps</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 bg-ink text-blast flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-bone z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl">DETAILING AUTO CALEX</span>
+    <button id="menu-close" class="w-11 h-11 bg-ink text-blast flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-8">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#locatie"  class="mobile-link">Loca&#539;ie</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <a href="https://www.google.com/maps/place/Detailing+Auto+Calex/@44.3521278,23.8143226,17z" class="mt-auto btn-blast"><i class="fa-solid fa-location-dot"></i> Vezi pe Google Maps</a>
+</div>
+
+<section id="top" class="grit-bg text-bone relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-14 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 relative">
+    <div class="flex items-center gap-3 mb-6" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-wind"></i> Blast cleaning</span>
+      <span class="mono text-[11px] tracking-wider text-bone/60">Craiova &middot; Dolj</span>
+    </div>
+
+    <h1 class="display text-[clamp(3rem,12vw,10rem)]" data-aos="fade-up" data-aos-delay="40">
+      SABL&#258;M,<br>CUR&#258;&#538;&#258;M,<br>
+      <span class="text-blast">REFACEM.</span>
+    </h1>
+
+    <p class="mt-10 max-w-xl text-lg text-bone/75 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+      Detailing Auto Calex este atelierul din Craiova specializat pe sablare &#537;i cur&#259;&#539;are cu presiune. Ma&#537;ini, piese metalice, obiecte de recondi&#539;ionat. Scoatem rugin&#259;, vopsea veche, murd&#259;rie grea &mdash; preg&#259;tim suprafe&#539;ele pentru vopsit sau protec&#539;ie.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3" data-aos="fade-up" data-aos-delay="160">
+      <a href="https://www.google.com/maps/place/Detailing+Auto+Calex/@44.3521278,23.8143226,17z" target="_blank" rel="noopener" class="btn-blast"><i class="fa-solid fa-map-location-dot"></i> Vezi pe Google Maps</a>
+      <a href="#servicii" class="btn-ink !bg-bone !text-ink hover:!bg-blast hover:!text-bone"><i class="fa-solid fa-arrow-down"></i> Vezi serviciile</a>
+    </div>
+
+    <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 border-t border-white/15" data-aos="fade-up" data-aos-delay="220">
+      <div><p class="display text-4xl text-blast">5.0</p><p class="mono text-[10px] uppercase tracking-wider text-bone/60 mt-1">Rating Google</p></div>
+      <div><p class="display text-4xl text-blast">7 zile</p><p class="mono text-[10px] uppercase tracking-wider text-bone/60 mt-1">lucr&#259;m zilnic</p></div>
+      <div><p class="display text-4xl text-blast">CRA</p><p class="mono text-[10px] uppercase tracking-wider text-bone/60 mt-1">zona Craiova</p></div>
+      <div><p class="display text-4xl text-blast">RUST</p><p class="mono text-[10px] uppercase tracking-wider text-bone/60 mt-1">rugin&#259; &amp; vopsea</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-bone">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">01 &middot; Despre atelier</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">SUPRAFE&#538;E<br><span class="text-blast">CA DIN FABRIC&#258;.</span></h2>
+    </div>
+    <div class="lg:col-span-7 space-y-5">
+      <p class="text-lg text-ink/85 leading-relaxed">Sablarea nu e o sp&#259;lare obi&#537;nuit&#259;. Proiect&#259;m nisip sau alte medii abrazive la presiune mare pe suprafe&#539;e metalice, eliminand rugina, vopseaua veche, zgura sau murd&#259;ria. Rezultatul: suprafa&#539;&#259; &bdquo;la metal alb&rdquo;, gata de vopsit, zincat sau tratat.</p>
+      <p class="text-base text-muted leading-relaxed">La Detailing Auto Calex lucr&#259;m pentru persoane fizice &#537;i pentru ateliere care au nevoie de preg&#259;tire suprafe&#539;e &icirc;nainte de vopsit. Caroserii, piese, jenti, &#537;asiuri, por&#539;i, garduri, mobilier metalic. Dac&#259; e metal &#537;i are rugin&#259;, avem solu&#539;ie.</p>
+      <div class="mt-6 grid sm:grid-cols-2 gap-4">
+        <div class="q-card"><p class="display text-lg">Echipament profesional</p><p class="mt-1 text-sm text-muted">Compresoare industriale &#537;i duze specializate pentru fiecare tip de suprafa&#539;&#259;.</p></div>
+        <div class="q-card"><p class="display text-lg">Experien&#539;&#259; pe metal</p><p class="mt-1 text-sm text-muted">Cuno&#537;tin&#539;e despre grosime tabl&#259; &#537;i tip de abraziv potrivit.</p></div>
+        <div class="q-card"><p class="display text-lg">Timpi cinsti&#539;i</p><p class="mt-1 text-sm text-muted">&Icirc;&#539;i spunem c&#226;t dureaz&#259; dinainte &#537;i respect&#259;m termenul.</p></div>
+        <div class="q-card"><p class="display text-lg">Pre&#539;uri corecte</p><p class="mt-1 text-sm text-muted">Evalu&#259;m piesa, &icirc;&#539;i d&#259;m pre&#539;ul. Far&#259; adaosuri pe factur&#259;.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24 sand-bg">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">02 &middot; Servicii</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl text-ink">CE SABL&#258;M.</h2>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="step-card"><i class="fa-solid fa-car-side text-blast text-3xl"></i><h3 class="display text-xl mt-4">Caroserii auto</h3><p class="mt-3 text-sm text-muted leading-relaxed">Preg&#259;tire complet&#259; a caroseriei sau por&#539;iunilor afectate de rugin&#259;, &icirc;nainte de vopsit.</p></article>
+      <article class="step-card"><i class="fa-solid fa-circle-dot text-blast text-3xl"></i><h3 class="display text-xl mt-4">Jenti auto</h3><p class="mt-3 text-sm text-muted leading-relaxed">Jenti de aluminiu sau o&#539;el. Scoatem stratul vechi &#537;i le preg&#259;tim pentru vopsit sau luciu nou.</p></article>
+      <article class="step-card"><i class="fa-solid fa-wrench text-blast text-3xl"></i><h3 class="display text-xl mt-4">Piese &#537;i componente</h3><p class="mt-3 text-sm text-muted leading-relaxed">Piese de motor, punte, &#537;asiu, flan&#537;e, suporturi &mdash; cur&#259;&#539;ate la metal alb.</p></article>
+      <article class="step-card"><i class="fa-solid fa-fence text-blast text-3xl"></i><h3 class="display text-xl mt-4">Garduri &amp; por&#539;i</h3><p class="mt-3 text-sm text-muted leading-relaxed">Elemente metalice exterioare. Preg&#259;tire pentru vopsit, zincat sau protec&#539;ie anticorosiv&#259;.</p></article>
+      <article class="step-card"><i class="fa-solid fa-chair text-blast text-3xl"></i><h3 class="display text-xl mt-4">Mobilier metalic</h3><p class="mt-3 text-sm text-muted leading-relaxed">Mobilier vechi de gr&#259;din&#259;, rame scaune, rame biciclete, obiecte de colec&#539;ie.</p></article>
+      <article class="step-card"><i class="fa-solid fa-industry text-blast text-3xl"></i><h3 class="display text-xl mt-4">Piese industriale</h3><p class="mt-3 text-sm text-muted leading-relaxed">Pentru ateliere &#537;i firme de vopsit: preg&#259;tim serii mici &#537;i mari la cerere.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-bone">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">03 &middot; Cum lucr&#259;m</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">DE LA RUGIN&#258;, LA <span class="text-blast">METAL ALB.</span></h2>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="step-card"><p class="display text-6xl text-blast">01</p><p class="display text-xl mt-2">Evaluare</p><p class="text-sm text-muted mt-2">Ne aduci piesa sau vii cu ma&#537;ina. Ne uit&#259;m &#537;i zicem c&#226;t cost&#259;.</p></div>
+      <div class="step-card"><p class="display text-6xl text-blast">02</p><p class="display text-xl mt-2">Preg&#259;tire</p><p class="text-sm text-muted mt-2">Masc&#259;m zonele sensibile, alegem abrazivul potrivit.</p></div>
+      <div class="step-card"><p class="display text-6xl text-blast">03</p><p class="display text-xl mt-2">Sablare</p><p class="text-sm text-muted mt-2">Lucrarea propriu-zis&#259;. Curat, controlat, f&#259;r&#259; praf la tine.</p></div>
+      <div class="step-card"><p class="display text-6xl text-blast">04</p><p class="display text-xl mt-2">Predare</p><p class="text-sm text-muted mt-2">Piesa e gata pentru vopsit sau tratament. O iei acas&#259;.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24 bg-concretd text-bone">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip !bg-blast !text-ink">04 &middot; Recenzie client</span>
+    <blockquote class="display text-3xl sm:text-5xl mt-8 max-w-3xl mx-auto leading-tight">
+      &bdquo;Super b&#259;ie&#539;i, super profi. <span class="text-blast">Recomand.</span>&rdquo;
+    </blockquote>
+    <p class="mono text-sm mt-6 text-bone/60">&mdash; Profetul Seth &middot; Recenzie Google</p>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip">05 &middot; Unde ne g&#259;se&#537;ti</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">&Icirc;N <span class="text-blast">CRAIOVA</span>,<br>ZONA DE VEST.</h2>
+      <p class="mt-6 text-ink/85 leading-relaxed">Atelierul este &icirc;n Craiova, &icirc;n zona de vest a ora&#537;ului. Ne g&#259;se&#537;ti cel mai u&#537;or prin Google Maps. Piesele mici le po&#539;i aduce personal; pentru ma&#537;ini sau piese mari vorbim de logistic&#259;.</p>
+      <a href="https://www.google.com/maps/place/Detailing+Auto+Calex/@44.3521278,23.8143226,17z" target="_blank" rel="noopener" class="mt-8 btn-blast"><i class="fa-solid fa-map-location-dot"></i> Deschide &icirc;n Google Maps</a>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="border-2 border-ink p-6 sm:p-8 bg-bonel">
+        <p class="chip">Program</p>
+        <ul id="hours" class="mt-6">
+          <li data-day="1" class="hours-row"><span>Luni</span><span>09:00 &mdash; 18:00</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span>09:00 &mdash; 18:00</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span>09:00 &mdash; 18:00</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span>09:00 &mdash; 18:00</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span>09:00 &mdash; 18:00</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span>09:00 &mdash; 14:00</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span>09:00 &mdash; 14:00</span></li>
+        </ul>
+        <p class="mt-5 text-sm text-muted">Deschi&#537;i 7 zile din 7. Duminica program redus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 grit-bg text-bone">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-3xl">
+      <span class="chip">06 &middot; Contact</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">
+        VINO LA ATELIER<br><span class="text-blast">SAU TRIMITE POZ&#258;.</span>
+      </h2>
+      <p class="mt-6 text-bone/75">Pentru o evaluare rapid&#259;, trimite o poz&#259; prin Google Maps sau trece&#539;i direct pe la noi &mdash; facem evaluarea pe loc.</p>
+      <a href="https://www.google.com/maps/place/Detailing+Auto+Calex/@44.3521278,23.8143226,17z" target="_blank" rel="noopener" class="mt-8 btn-blast"><i class="fa-solid fa-location-dot"></i> Contact prin Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-concretd text-bone/65 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-3">
+        <span class="w-10 h-10 bg-blast flex items-center justify-center"><span class="spark !w-4 !h-4"></span></span>
+        <span class="display text-xl text-bone">DETAILING AUTO CALEX</span>
+      </div>
+      <p class="mt-3 text-sm">Sablare, cur&#259;&#539;are cu presiune &#537;i preg&#259;tire suprafe&#539;e metalice &icirc;n Craiova.</p>
+    </div>
+    <div>
+      <p class="display text-lg text-blast">Ce sabl&#259;m</p>
+      <ul class="mt-3 space-y-1.5 text-sm mono">
+        <li>Caroserii auto</li>
+        <li>Jenti auto</li>
+        <li>Piese metalice</li>
+        <li>Garduri &amp; por&#539;i</li>
+        <li>Mobilier metalic</li>
+      </ul>
+    </div>
+    <div>
+      <p class="display text-lg text-blast">Contact</p>
+      <ul class="mt-3 space-y-1.5 text-sm">
+        <li><i class="fa-solid fa-location-dot text-blast mr-2"></i>Craiova, Dolj</li>
+        <li><i class="fa-regular fa-clock text-blast mr-2"></i>Lun-Vin 9-18, S&#226;m-Dum 9-14</li>
+        <li><i class="fa-solid fa-star text-blast mr-2"></i>5.0 pe Google</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 mono text-[10px] uppercase tracking-wider">
+    <span>&copy; 2026 DETAILING AUTO CALEX</span>
+    <span>CRAIOVA &middot; DOLJ &middot; RO</span>
+    <span>SABLARE &middot; CUR&#258;&#538;ARE</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden">
+  <a href="https://www.google.com/maps/place/Detailing+Auto+Calex/@44.3521278,23.8143226,17z" class="py-4 bg-blast text-white text-center font-bold uppercase text-sm tracking-wider w-full flex items-center justify-center gap-2"><i class="fa-solid fa-location-dot"></i> Vezi pe Google Maps</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "Detailing Auto Calex",
+  "description": "Sablare si curatare cu presiune pentru caroserii, jenti, piese si suprafete metalice in Craiova.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Craiova", "addressRegion": "Dolj", "addressCountry": "RO" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.3521278, "longitude": 23.8143226 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "1" }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

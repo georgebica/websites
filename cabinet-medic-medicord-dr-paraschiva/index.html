@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Medic MEDICORD — Dr. Paraschiva | Medicină Internă, Slatina</title>
+    <meta name="description" content="Cabinet medical MEDICORD, Dr. Paraschiva — medicină internă în Slatina. Consultații, ecografie, investigații, monitorizare boli cronice. Rating 4.9/5. Sună: 0771 635 667.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-blue': '#1565C0',
+                        'royal-dark': '#0D47A1',
+                        'royal-light': '#42A5F5',
+                        ice: '#E3F2FD',
+                        slate: '#455A64',
+                        'light-bg': '#F8FBFF',
+                        'card-border': 'rgba(21, 101, 192, 0.08)',
+                    },
+                    fontFamily: {
+                        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #1A1A1A; }
+        .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .blue-gradient { background: linear-gradient(135deg, #1565C0, #42A5F5); }
+        .blue-text {
+            background: linear-gradient(135deg, #1565C0, #42A5F5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-medical {
+            background: white;
+            border: 1px solid rgba(21, 101, 192, 0.08);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+        .card-medical:hover {
+            border-color: rgba(21, 101, 192, 0.2);
+            box-shadow: 0 15px 40px rgba(21, 101, 192, 0.08);
+            transform: translateY(-4px);
+        }
+        .cta-blue {
+            background: linear-gradient(135deg, #1565C0, #0D47A1);
+            border-radius: 14px;
+            transition: all 0.4s ease;
+        }
+        .cta-blue:hover {
+            background: linear-gradient(135deg, #42A5F5, #1565C0);
+            box-shadow: 0 8px 30px rgba(21, 101, 192, 0.35);
+            transform: translateY(-2px);
+        }
+        .trust-badge {
+            background: linear-gradient(135deg, rgba(21, 101, 192, 0.06), rgba(66, 165, 245, 0.06));
+        }
+        .hero-medical {
+            background: radial-gradient(ellipse at 70% 20%, rgba(21, 101, 192, 0.04) 0%, transparent 50%),
+                        radial-gradient(ellipse at 20% 80%, rgba(227, 242, 253, 0.5) 0%, transparent 40%);
+        }
+        @keyframes pulse-blue {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(21, 101, 192, 0.2); }
+            50% { box-shadow: 0 0 0 12px rgba(21, 101, 192, 0); }
+        }
+        .pulse-blue { animation: pulse-blue 2.5s infinite; }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Cabinet Medic MEDICORD, Dr. Paraschiva",
+        "description": "Cabinet de medicină internă în Slatina. Consultații, ecografie, investigații clinice, monitorizare boli cronice.",
+        "telephone": "+40771635667",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Slatina",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.430791,
+            "longitude": 24.369565
+        },
+        "medicalSpecialty": "Internal Medicine",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "08:30",
+                "closes": "19:30"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "reviewCount": "10"
+        },
+        "url": "#"
+    }
+    </script>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 blue-gradient rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-heart-pulse text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-jakarta text-lg font-bold">MEDICORD</span>
+                        <span class="text-royal-blue text-xs block -mt-1 font-medium">Dr. Paraschiva</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#servicii" class="text-sm text-slate hover:text-royal-blue transition-colors font-medium">Servicii</a>
+                    <a href="#despre" class="text-sm text-slate hover:text-royal-blue transition-colors font-medium">Despre</a>
+                    <a href="#recenzii" class="text-sm text-slate hover:text-royal-blue transition-colors font-medium">Recenzii</a>
+                    <a href="#program" class="text-sm text-slate hover:text-royal-blue transition-colors font-medium">Program</a>
+                    <a href="tel:0771635667" class="cta-blue px-6 py-2.5 text-white text-sm font-semibold">
+                        <i class="fa-solid fa-phone mr-2"></i>Programare
+                    </a>
+                </div>
+                <button class="md:hidden text-slate text-2xl" id="menuBtn" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-white border-t border-royal-blue/10" id="mobileMenu">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="#servicii" class="text-slate hover:text-royal-blue font-medium text-sm">Servicii</a>
+                <a href="#despre" class="text-slate hover:text-royal-blue font-medium text-sm">Despre</a>
+                <a href="#recenzii" class="text-slate hover:text-royal-blue font-medium text-sm">Recenzii</a>
+                <a href="#program" class="text-slate hover:text-royal-blue font-medium text-sm">Program</a>
+                <a href="tel:0771635667" class="cta-blue px-6 py-3 text-white text-sm font-semibold text-center">
+                    <i class="fa-solid fa-phone mr-2"></i>Programare
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center hero-medical pt-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-ice px-4 py-2 rounded-full mb-6" data-aos="fade-up">
+                        <div class="flex gap-0.5 text-royal-blue text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-sm font-medium text-slate">4.9/5 — 10 recenzii</span>
+                    </div>
+                    <h1 class="font-jakarta text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+                        Sănătatea ta, <span class="blue-text">grija</span> noastră
+                    </h1>
+                    <p class="text-slate text-lg leading-relaxed mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+                        Cabinet de medicină internă în Slatina, condus de Dr. Paraschiva. Consultații, ecografie, investigații și monitorizarea bolilor cronice — cu profesionalism și empatie.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="tel:0771635667" class="cta-blue px-8 py-4 text-white font-semibold text-center">
+                            <i class="fa-solid fa-phone mr-2"></i>0771 635 667
+                        </a>
+                        <a href="#servicii" class="border-2 border-royal-blue/20 px-8 py-4 text-royal-blue font-semibold text-center rounded-xl hover:bg-royal-blue/5 transition-all">
+                            Servicii medicale
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center gap-2 text-sm text-slate">
+                            <i class="fa-solid fa-calendar-check text-royal-blue"></i>
+                            <span>Programare recomandată</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-slate">
+                            <i class="fa-solid fa-clock text-royal-blue"></i>
+                            <span>L–V: 8:30–19:30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-br from-ice to-white rounded-3xl flex items-center justify-center border border-royal-blue/10">
+                            <i class="fa-solid fa-stethoscope text-royal-blue text-7xl sm:text-8xl opacity-50"></i>
+                        </div>
+                        <div class="absolute -top-3 -right-3 bg-white shadow-lg rounded-2xl px-5 py-3 border border-royal-blue/10 pulse-blue">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-royal-blue"></i>
+                                <span class="font-bold text-sm">4.9 / 5</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-3 -left-3 bg-white shadow-lg rounded-2xl px-5 py-3 border border-royal-blue/10">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-user-doctor text-royal-blue"></i>
+                                <span class="font-semibold text-sm">Medicină internă</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-12 bg-ice border-y border-royal-blue/10">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div data-aos="fade-up">
+                <p class="font-jakarta text-3xl font-bold blue-text">4.9</p>
+                <p class="text-slate text-sm mt-2">Rating Google</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <p class="font-jakarta text-3xl font-bold blue-text">10</p>
+                <p class="text-slate text-sm mt-2">Recenzii pozitive</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="font-jakarta text-3xl font-bold blue-text">L–V</p>
+                <p class="text-slate text-sm mt-2">Program complet</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <p class="font-jakarta text-3xl font-bold blue-text">11h</p>
+                <p class="text-slate text-sm mt-2">Ore pe zi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicii" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-royal-blue font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Servicii medicale</span>
+                <h2 class="font-jakarta text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6" data-aos="fade-up">Servicii de <span class="blue-text">medicină internă</span></h2>
+                <p class="text-slate text-lg" data-aos="fade-up">Investigații și tratamente complete pentru sănătatea dumneavoastră.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-medical p-8" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-ice rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-stethoscope text-royal-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-jakarta text-xl font-bold mb-3">Medicină internă</h3>
+                    <p class="text-slate text-sm leading-relaxed">Evaluare completă a stării de sănătate, diagnostic și plan de tratament personalizat pentru afecțiuni interne.</p>
+                    <div class="mt-6 pt-4 border-t border-royal-blue/10">
+                        <a href="tel:0771635667" class="text-royal-blue font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-medical p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-ice rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-notes-medical text-royal-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-jakarta text-xl font-bold mb-3">Consultații</h3>
+                    <p class="text-slate text-sm leading-relaxed">Consultații medicale detaliate cu anamneză, examen clinic complet și recomandări terapeutice clare.</p>
+                    <div class="mt-6 pt-4 border-t border-royal-blue/10">
+                        <a href="tel:0771635667" class="text-royal-blue font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-medical p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-ice rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-display text-royal-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-jakarta text-xl font-bold mb-3">Ecografie</h3>
+                    <p class="text-slate text-sm leading-relaxed">Ecografie abdominală și alte investigații imagistice pentru evaluare precisă a organelor interne.</p>
+                    <div class="mt-6 pt-4 border-t border-royal-blue/10">
+                        <a href="tel:0771635667" class="text-royal-blue font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-medical p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-ice rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-flask text-royal-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-jakarta text-xl font-bold mb-3">Investigații</h3>
+                    <p class="text-slate text-sm leading-relaxed">Analize de laborator, teste funcționale și investigații complementare pentru un diagnostic complet.</p>
+                    <div class="mt-6 pt-4 border-t border-royal-blue/10">
+                        <a href="tel:0771635667" class="text-royal-blue font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-medical p-8 sm:col-span-2 lg:col-span-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="w-14 h-14 min-w-[56px] bg-ice rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-heart-circle-check text-royal-blue text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-jakarta text-xl font-bold mb-3">Monitorizare boli cronice</h3>
+                            <p class="text-slate text-sm leading-relaxed mb-4">Program de monitorizare continuă pentru pacienții cu diabet, hipertensiune arterială, boli cardiovasculare și alte afecțiuni cronice. Ajustăm tratamentul și urmărim evoluția pe termen lung.</p>
+                            <a href="tel:0771635667" class="text-royal-blue font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="despre" class="py-24 bg-light-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-royal-blue font-semibold text-sm tracking-wider uppercase">Despre cabinet</span>
+                    <h2 class="font-jakarta text-3xl sm:text-4xl font-bold mt-4 mb-6">Medicină cu <span class="blue-text">empatie</span></h2>
+                    <p class="text-slate leading-relaxed mb-6 text-lg">
+                        Cabinetul medical MEDICORD, condus de Dr. Paraschiva, oferă servicii de medicină internă de calitate superioară în Slatina. Cu un rating de 4.9/5 pe Google, suntem recunoscuți pentru profesionalism și grijă deosebită față de pacienți.
+                    </p>
+                    <p class="text-slate leading-relaxed mb-8">
+                        Credem că fiecare pacient merită atenție individuală, timp suficient pentru consultație și explicații clare despre diagnostic și tratament. Programarea prealabilă ne permite să vă dedicăm toată atenția.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-4 border border-royal-blue/10 flex items-center gap-3">
+                            <i class="fa-solid fa-user-doctor text-royal-blue"></i>
+                            <span class="text-sm font-medium">Medic specialist</span>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 border border-royal-blue/10 flex items-center gap-3">
+                            <i class="fa-solid fa-microscope text-royal-blue"></i>
+                            <span class="text-sm font-medium">Echipament modern</span>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 border border-royal-blue/10 flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-royal-blue"></i>
+                            <span class="text-sm font-medium">Program extins</span>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 border border-royal-blue/10 flex items-center gap-3">
+                            <i class="fa-solid fa-heart text-royal-blue"></i>
+                            <span class="text-sm font-medium">Pacient pe primul loc</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-3xl p-10 border border-royal-blue/10 shadow-sm">
+                        <h3 class="font-jakarta text-2xl font-bold mb-8 text-center">De ce <span class="blue-text">MEDICORD</span></h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] bg-ice rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-check text-royal-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Experiență clinică</h4>
+                                    <p class="text-slate text-sm">Dr. Paraschiva aduce ani de experiență în diagnostic și tratament medical.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] bg-ice rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-check text-royal-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Abordare individualizată</h4>
+                                    <p class="text-slate text-sm">Fiecare pacient primește un plan de investigație și tratament personalizat.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] bg-ice rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-check text-royal-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Comunicare clară</h4>
+                                    <p class="text-slate text-sm">Explicăm diagnosticul și opțiunile de tratament în termeni accesibili.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] bg-ice rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-check text-royal-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Urmărire post-consultație</h4>
+                                    <p class="text-slate text-sm">Monitorizăm evoluția pacienților și ajustăm tratamentul când este necesar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="recenzii" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-royal-blue font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Recenzii pacienți</span>
+                <h2 class="font-jakarta text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6" data-aos="fade-up">Ce spun <span class="blue-text">pacienții</span></h2>
+                <p class="text-slate text-lg" data-aos="fade-up">Rating 4.9/5 din 10 recenzii verificate pe Google.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-medical p-8" data-aos="fade-up">
+                    <div class="flex gap-1 text-royal-blue mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate leading-relaxed mb-6 italic">„Medic foarte competent și atent. Mi-a explicat totul clar, m-a ascultat cu răbdare. Recomand cu toată încrederea!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-ice rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-royal-blue text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Pacient verificat</p>
+                            <p class="text-slate/50 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-medical p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 text-royal-blue mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate leading-relaxed mb-6 italic">„Profesionalism de nota 10. Consultația a fost detaliată, mi-a făcut ecografia și mi-a explicat rezultatele pe loc. Mulțumesc, Dr. Paraschiva!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-ice rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-royal-blue text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Pacient verificat</p>
+                            <p class="text-slate/50 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-medical p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 text-royal-blue mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate leading-relaxed mb-6 italic">„Cabinet curat și modern. Doctorul este foarte amabil, m-a primit la timp și mi-a dedicat atenție. Cel mai bun cabinet din Slatina."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-ice rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-royal-blue text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Pacient verificat</p>
+                            <p class="text-slate/50 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 bg-ice rounded-full px-8 py-4">
+                    <div class="flex gap-1 text-royal-blue">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="font-bold">4.9 din 5</span>
+                    <span class="text-slate">— 10 recenzii Google</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Info -->
+    <section class="py-16 bg-ice relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="bg-white rounded-3xl p-10 border border-royal-blue/10 shadow-sm" data-aos="fade-up">
+                <div class="w-16 h-16 bg-ice rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fa-solid fa-calendar-check text-royal-blue text-2xl"></i>
+                </div>
+                <h2 class="font-jakarta text-2xl sm:text-3xl font-bold mb-4">Programare recomandată</h2>
+                <p class="text-slate max-w-2xl mx-auto mb-8">Pentru a vă putea dedica toată atenția necesară, vă recomandăm să vă programați telefonic înainte de vizită. Astfel, reducem timpul de așteptare și asigurăm o consultație fără grabă.</p>
+                <a href="tel:0771635667" class="cta-blue px-10 py-4 text-white font-semibold text-lg inline-block">
+                    <i class="fa-solid fa-phone mr-2"></i>Sună: 0771 635 667
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Contact -->
+    <section id="program" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <span class="text-royal-blue font-semibold text-sm tracking-wider uppercase">Program</span>
+                    <h2 class="font-jakarta text-3xl sm:text-4xl font-bold mt-4 mb-8">Ore de <span class="blue-text">consultație</span></h2>
+                    <div class="bg-white rounded-3xl p-8 border border-royal-blue/10 shadow-sm">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center py-3 border-b border-royal-blue/5">
+                                <span class="font-medium">Luni</span>
+                                <span class="text-royal-blue font-semibold">08:30 – 19:30</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-royal-blue/5">
+                                <span class="font-medium">Marți</span>
+                                <span class="text-royal-blue font-semibold">08:30 – 19:30</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-royal-blue/5">
+                                <span class="font-medium">Miercuri</span>
+                                <span class="text-royal-blue font-semibold">08:30 – 19:30</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-royal-blue/5">
+                                <span class="font-medium">Joi</span>
+                                <span class="text-royal-blue font-semibold">08:30 – 19:30</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-royal-blue/5">
+                                <span class="font-medium">Vineri</span>
+                                <span class="text-royal-blue font-semibold">08:30 – 19:30</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-royal-blue/5">
+                                <span class="font-medium">Sâmbătă</span>
+                                <span class="text-slate/40">Închis</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="font-medium">Duminică</span>
+                                <span class="text-slate/40">Închis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" id="contact">
+                    <span class="text-royal-blue font-semibold text-sm tracking-wider uppercase">Contact</span>
+                    <h2 class="font-jakarta text-3xl sm:text-4xl font-bold mt-4 mb-8">Programează-te <span class="blue-text">acum</span></h2>
+                    <div class="space-y-6">
+                        <div class="card-medical p-6 flex items-center gap-5">
+                            <div class="w-14 h-14 min-w-[56px] bg-ice rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-phone text-royal-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate text-sm">Telefon programări</p>
+                                <a href="tel:0771635667" class="font-jakarta text-lg font-bold text-royal-blue hover:underline">0771 635 667</a>
+                            </div>
+                        </div>
+                        <div class="card-medical p-6 flex items-center gap-5">
+                            <div class="w-14 h-14 min-w-[56px] bg-ice rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot text-royal-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate text-sm">Locație</p>
+                                <p class="font-jakarta text-lg font-bold">Slatina, România</p>
+                            </div>
+                        </div>
+                        <div class="card-medical p-6 flex items-center gap-5">
+                            <div class="w-14 h-14 min-w-[56px] bg-ice rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-map text-royal-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate text-sm">Navigație</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=44.430791,24.369565" target="_blank" rel="noopener noreferrer" class="text-royal-blue font-semibold hover:underline">Deschide în Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-ice rounded-2xl p-6 border border-royal-blue/10">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-info text-royal-blue text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-semibold mb-1">Informații utile</h4>
+                                <p class="text-slate text-sm leading-relaxed">Vă rugăm să vă prezentați cu 10 minute înainte de ora programată și să aveți la dumneavoastră cardul de sănătate, buletinul și biletul de trimitere (dacă este cazul).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 blue-gradient relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-jakarta text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" data-aos="fade-up">Sănătatea ta este prioritatea noastră</h2>
+            <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Nu amâna consultația. Programează-te telefonic și beneficiezi de o evaluare medicală completă cu Dr. Paraschiva.</p>
+            <a href="tel:0771635667" class="bg-white text-royal-blue font-bold px-10 py-4 rounded-xl inline-block hover:shadow-lg hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-phone mr-2"></i>Sună: 0771 635 667
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-slate text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 blue-gradient rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-heart-pulse text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="font-jakarta text-lg font-bold">MEDICORD</span>
+                            <span class="text-royal-light text-xs block -mt-1">Dr. Paraschiva</span>
+                        </div>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed">Cabinet de medicină internă în Slatina. Consultații, ecografie, investigații și monitorizare boli cronice.</p>
+                </div>
+                <div>
+                    <h4 class="font-jakarta text-lg font-bold mb-4 text-royal-light">Servicii</h4>
+                    <ul class="space-y-2">
+                        <li class="text-white/50 text-sm">Medicină internă</li>
+                        <li class="text-white/50 text-sm">Consultații</li>
+                        <li class="text-white/50 text-sm">Ecografie</li>
+                        <li class="text-white/50 text-sm">Investigații</li>
+                        <li class="text-white/50 text-sm">Monitorizare boli cronice</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-jakarta text-lg font-bold mb-4 text-royal-light">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/50 text-sm">
+                            <i class="fa-solid fa-phone text-royal-light"></i>0771 635 667
+                        </li>
+                        <li class="flex items-center gap-3 text-white/50 text-sm">
+                            <i class="fa-solid fa-location-dot text-royal-light"></i>Slatina, România
+                        </li>
+                        <li class="flex items-center gap-3 text-white/50 text-sm">
+                            <i class="fa-solid fa-clock text-royal-light"></i>L–V: 08:30 – 19:30
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/30 text-sm">&copy; 2026 Cabinet Medic MEDICORD, Dr. Paraschiva. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>

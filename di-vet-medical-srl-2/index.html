@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Di-Vet Medical &middot; Clinic&#259; veterinar&#259; 24/7 &icirc;n Bucure&#537;ti</title>
+<meta name="description" content="Di-Vet Medical SRL &mdash; clinic&#259; veterinar&#259; de urgen&#539;&#259; non-stop &icirc;n Bucure&#537;ti, Sector 1. Medicin&#259; general&#259;, stomatologie, chirurgie, oftalmologie. Telefon 0727 606 262.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        forest:  '#2D4A3A',
+        forestd: '#1A2E22',
+        cream:   '#FBF6EE',
+        creaml:  '#FEFBF4',
+        coral:   '#E87858',
+        corald:  '#B95438',
+        paw:     '#8BAD88',
+        ink:     '#1A2118',
+        muted:   '#6E7068',
+        line:    '#E3DDCF',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['"Crimson Pro"', 'Georgia', 'serif'],
+        sans:    ['Poppins', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FBF6EE; color: #1A2118; }
+  body { font-family: Poppins, system-ui, sans-serif; }
+  .display { font-family: "Crimson Pro", Georgia, serif; letter-spacing: -.01em; line-height: 1.02; font-weight: 500; }
+  .italic { font-family: "Crimson Pro", Georgia, serif; font-style: italic; }
+
+  .btn-forest {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #2D4A3A;
+    color: #FBF6EE;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-forest:hover { background: #1A2E22; transform: translateY(-2px); }
+
+  .btn-coral {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #E87858;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-coral:hover { background: #B95438; transform: translateY(-2px); }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .4rem 1rem;
+    background: rgba(45,74,58,.1);
+    color: #2D4A3A;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+  .chip-coral { background: rgba(232,120,88,.15); color: #B95438; }
+
+  .card {
+    background: #fff;
+    border: 1px solid #E3DDCF;
+    border-radius: 24px;
+    padding: 1.8rem;
+    transition: all .35s;
+  }
+  .card:hover { border-color: #2D4A3A; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(26,33,24,.25); }
+
+  .paw-bg {
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(139,173,136,.1) 8%, transparent 8%),
+      radial-gradient(circle at 75% 60%, rgba(232,120,88,.08) 12%, transparent 12%);
+    background-size: 120px 120px;
+  }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Crimson Pro", serif; font-size: 1.8rem; border-bottom: 1px solid #E3DDCF; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .65rem 0;
+    font-size: .9rem;
+  }
+
+  .testi {
+    background: #FEFBF4;
+    border: 1px solid #E3DDCF;
+    border-radius: 24px;
+    padding: 1.8rem;
+    position: relative;
+  }
+
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+  .pulse { animation: pulse 2s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-forest text-cream flex items-center justify-center"><i class="fa-solid fa-paw"></i></span>
+      <div class="leading-tight">
+        <p class="display text-xl font-semibold">Di-Vet Medical</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Clinic&#259; veterinar&#259; &middot; 24/7</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#despre"   class="hover:text-coral">Despre</a>
+      <a href="#servicii" class="hover:text-coral">Servicii</a>
+      <a href="#recenzii" class="hover:text-coral">Recenzii</a>
+      <a href="#contact"  class="hover:text-coral">Contact</a>
+      <a href="tel:0727606262" class="btn-coral !py-2.5 !px-4 !text-xs">
+        <span class="w-2 h-2 rounded-full bg-white pulse"></span> 0727 606 262
+      </a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-forest text-cream flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl font-semibold">Di-Vet Medical</span>
+    <button id="menu-close" class="w-11 h-11 rounded-full bg-forest text-cream flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0727606262" class="btn-coral">Sun&#259;</a>
+    <a href="https://wa.me/40727606262" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="relative overflow-hidden paw-bg">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex gap-3">
+        <span class="chip-coral chip"><span class="w-2 h-2 rounded-full bg-coral pulse"></span> Urgen&#539;&#259; non-stop</span>
+        <span class="chip">Est. 2003</span>
+      </div>
+
+      <h1 class="display mt-8 text-5xl sm:text-7xl lg:text-[7.5rem]">
+        C&#226;nd animalul t&#259;u<br>
+        are <span class="italic text-coral">nevoie de ajutor,</span><br>
+        r&#259;spundem oric&#226;nd.
+      </h1>
+
+      <p class="mt-10 max-w-xl text-lg text-muted leading-relaxed">
+        Di-Vet Medical este clinica veterinar&#259; din Bucure&#537;ti care lucreaz&#259; non-stop, 7 zile din 7. Urgen&#539;e, chirurgie, stomatologie veterinar&#259;, oftalmologie &#537;i &icirc;ngrijire critic&#259; pentru animale de companie.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0727606262" class="btn-coral"><i class="fa-solid fa-phone"></i> Urgen&#539;&#259; 0727 606 262</a>
+        <a href="https://wa.me/40727606262" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+      <div class="bg-forest text-cream rounded-3xl p-8 relative overflow-hidden">
+        <i class="fa-solid fa-paw absolute -bottom-8 -right-8 text-[10rem] text-paw/20"></i>
+        <div class="relative">
+          <span class="chip !bg-coral/20 !text-coral"><i class="fa-regular fa-clock"></i> 24/7/365</span>
+          <h3 class="display text-3xl mt-5 font-semibold">Deschis tot timpul<br>pentru urgen&#539;e.</h3>
+          <p class="mt-3 text-sm text-cream/75">Indiferent de or&#259;, de zi de s&#259;rb&#259;toare sau de noapte, te a&#537;tept&#259;m cu echipa la dispozi&#539;ie.</p>
+
+          <div class="mt-8 pt-6 border-t border-cream/15 grid grid-cols-3 gap-2 text-center">
+            <div>
+              <p class="display text-3xl text-coral font-semibold">23</p>
+              <p class="text-[10px] uppercase tracking-widest text-cream/60 mt-1">ani</p>
+            </div>
+            <div>
+              <p class="display text-3xl text-coral font-semibold">12</p>
+              <p class="text-[10px] uppercase tracking-widest text-cream/60 mt-1">angaja&#539;i</p>
+            </div>
+            <div>
+              <p class="display text-3xl text-coral font-semibold">233+</p>
+              <p class="text-[10px] uppercase tracking-widest text-cream/60 mt-1">recenzii</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-creaml">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Despre Di-Vet</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">
+      O clinic&#259; care combin&#259;<br>
+      <span class="italic text-coral">medicina cu empatia.</span>
+    </h2>
+
+    <p class="mt-10 text-lg text-ink/80 leading-relaxed">
+      Di-Vet Medical SRL a fost fondat&#259; &icirc;n 2003 &#537;i a crescut &icirc;ntr-una din cele mai cunoscute clinici veterinare de urgen&#539;&#259; din Bucure&#537;ti. Avem echip&#259; specializat&#259; &icirc;n chirurgie ortopedic&#259;, stomatologie veterinar&#259; (inclusiv cazuri de implantologie), oftalmologie &#537;i terapie intensiv&#259;.
+    </p>
+    <p class="mt-5 text-base text-muted leading-relaxed">
+      Suntem una din pu&#539;inele clinici din Rom&#226;nia cu contribu&#539;ii publicate &icirc;n literatura veterinar&#259; peer-reviewed (PubMed), pe teme de implant ortodontic la pisici &#537;i c&#226;ini &#537;i protocoale de anestezie &icirc;n chirurgia cataractei.
+    </p>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">Servicii veterinare</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">
+        Pentru orice <span class="italic text-coral">urgen&#539;&#259; sau &icirc;ngrijire.</span>
+      </h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="card" data-aos="fade-up">
+        <i class="fa-solid fa-heart-pulse text-coral text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Urgen&#539;e &amp; Critical Care</h3>
+        <p class="mt-3 text-sm text-muted">Interven&#539;ii rapide &icirc;n urgen&#539;e, &icirc;ngrijire critic&#259;, monitorizare intensiv&#259;.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="60">
+        <i class="fa-solid fa-user-doctor text-coral text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Consulta&#539;ii generale</h3>
+        <p class="mt-3 text-sm text-muted">Examen clinic, vaccin&#259;ri, deparazit&#259;ri, certificate, sf&#259;tuire nutri&#539;ional&#259;.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="120">
+        <i class="fa-solid fa-tooth text-coral text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Stomatologie veterinar&#259;</h3>
+        <p class="mt-3 text-sm text-muted">Detartraj, extrac&#539;ii, tratament endodontic, ortodon&#539;ie cu implant.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="180">
+        <i class="fa-solid fa-scissors text-coral text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Chirurgie complex&#259;</h3>
+        <p class="mt-3 text-sm text-muted">Chirurgie general&#259;, ortopedic&#259;, de &#539;esuturi moi, cu protocoale moderne de anestezie.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-eye text-coral text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Oftalmologie veterinar&#259;</h3>
+        <p class="mt-3 text-sm text-muted">Chirurgia cataractei prin facoemulsificare, afec&#539;iuni oculare complexe.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-syringe text-coral text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Anestezie &#537;i durerea</h3>
+        <p class="mt-3 text-sm text-muted">Protocoale avansate pentru anestezie &#537;i controlul durerii, chiar &#537;i &icirc;n cazuri dificile.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24 bg-creaml">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">Recenzii verificate</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">
+      Ce spun proprietarii<br><span class="italic text-coral">despre echipa noastr&#259;.</span>
+    </h2>
+
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="testi" data-aos="fade-up">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed italic">&bdquo;Ace&#537;ti oameni chiar &#539;in la animale &mdash; serviciu de top, personal minunat care face mai mult dec&#226;t e nevoie. Mul&#539;umim!&rdquo;</p>
+        <p class="display text-sm mt-5 text-coral font-semibold">&mdash; John Russell</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="60">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed italic">&bdquo;A&#537; dori s&#259; mul&#539;umesc &icirc;nc&#259; o dat&#259; Andreei Alexandru &#537;i colegilor ei, cei mai buni medici veterinari. Recomand acest loc oricui &mdash; animalele sunt &icirc;n cele mai bune m&#226;ini.&rdquo;</p>
+        <p class="display text-sm mt-5 text-coral font-semibold">&mdash; Around the World</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="120">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed italic">&bdquo;Cei mai buni doctori &#537;i asistente &#537;i cele mai bune servicii pe care le-am v&#259;zut. Sunt foarte buni cu animalele &#537;i au m&#226;ini foarte bl&#226;nde. Pur &#537;i simplu uimitori.&rdquo;</p>
+        <p class="display text-sm mt-5 text-coral font-semibold">&mdash; Abood Hz</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="180">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed italic">&bdquo;Oameni grozavi. Sunt foarte grijulii &#537;i respect&#259; at&#226;t animalele c&#226;t &#537;i st&#259;p&#226;nii lor. Recomand cu c&#259;ldur&#259;!&rdquo;</p>
+        <p class="display text-sm mt-5 text-coral font-semibold">&mdash; Monica Nicolae</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="240">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed italic">&bdquo;Personal foarte grijuliu &#537;i pre&#539;uri grozave comparativ cu alte cabinete veterinare care ofer&#259; acelea&#537;i lucruri. Recomand total!&rdquo;</p>
+        <p class="display text-sm mt-5 text-coral font-semibold">&mdash; Denise Lobont</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed italic">&bdquo;Super prieteno&#537;i. Pre&#539;ul e corect.&rdquo;</p>
+        <p class="display text-sm mt-5 text-coral font-semibold">&mdash; Alexander Hochleitner</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-7">
+      <span class="chip-coral chip"><span class="w-2 h-2 rounded-full bg-coral pulse"></span> Urgen&#539;&#259; non-stop</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">
+        Sun&#259; acum,<br><span class="italic text-coral">venim &icirc;n ajutor.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Pentru cazuri urgente, suna&#539;i direct. R&#259;spundem la telefon 24/7, 365 de zile pe an. V&#259; a&#537;tept&#259;m la Strada Tudor Vianu nr. 3, Sector 1.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0727606262" class="btn-coral"><i class="fa-solid fa-phone"></i> 0727 606 262</a>
+        <a href="https://wa.me/40727606262" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-forest text-cream rounded-3xl p-7">
+        <p class="chip !bg-coral/20 !text-coral">Clinica</p>
+        <p class="display text-2xl mt-3 font-semibold">Strada Tudor Vianu 3</p>
+        <p class="text-sm text-cream/70">Sector 1, Bucure&#537;ti 011635</p>
+
+        <div class="mt-6 h-px bg-cream/15"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-coral w-5"></i> 0727 606 262</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-coral w-5"></i> 021 230 70 / 021 230 03</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-coral w-5"></i> wa.me/40727606262</div>
+          <div class="flex items-center gap-3"><i class="fa-regular fa-clock text-coral w-5"></i> Non-stop, 24/7</div>
+        </div>
+
+        <ul id="hours" class="mt-6 pt-4 border-t border-cream/15 text-xs">
+          <li data-day="1" class="hours-row"><span>Luni</span><span class="text-coral font-semibold">Deschis 24 ore</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span class="text-coral font-semibold">Deschis 24 ore</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span class="text-coral font-semibold">Deschis 24 ore</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span class="text-coral font-semibold">Deschis 24 ore</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span class="text-coral font-semibold">Deschis 24 ore</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span class="text-coral font-semibold">Deschis 24 ore</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-coral font-semibold">Deschis 24 ore</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-forest text-cream/65 py-10 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 DI-VET MEDICAL SRL</span>
+    <span>CUI 15202806 &middot; J40/1991/2003</span>
+    <span>Bucure&#537;ti &middot; Sector 1</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0727606262" class="py-4 bg-coral text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40727606262" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Di-Vet Medical SRL",
+  "description": "Clinica veterinara de urgenta non-stop in Bucuresti, Sector 1. Chirurgie, stomatologie veterinara, oftalmologie si critical care.",
+  "telephone": "+40727606262",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Tudor Vianu 3",
+    "addressLocality": "Bucuresti",
+    "addressRegion": "Sector 1",
+    "postalCode": "011635",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.4574284, "longitude": 26.0970986 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00", "closes": "23:59"
+  }],
+  "foundingDate": "2003-02-12",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.8", "reviewCount": "233" }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

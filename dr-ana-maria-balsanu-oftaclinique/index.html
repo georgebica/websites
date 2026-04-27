@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ana-Maria B&#259;l&#537;anu &middot; Oftaclinique, cabinet de oftalmologie &icirc;n Slatina</title>
+<meta name="description" content="Oftaclinique Slatina &mdash; cabinet de oftalmologie cu Dr. Ana-Maria B&#259;l&#537;anu, medic primar. Strada Dinu Lipatti 11. Programare la 0759 659 003.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Yeseva+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        iris:    '#2B4792',
+        irisd:   '#162755',
+        irisl:   '#E5EAF7',
+        gold:    '#C59D55',
+        goldd:   '#8E6E31',
+        cream:   '#FBFAF5',
+        ink:     '#0E1322',
+        muted:   '#6A6F82',
+        line:    '#E0E2EB',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['"Yeseva One"', 'Georgia', 'serif'],
+        sans:    ['Montserrat', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FBFAF5; color: #0E1322; }
+  body { font-family: Montserrat, system-ui, sans-serif; }
+  .display { font-family: "Yeseva One", Georgia, serif; letter-spacing: -.01em; line-height: 1.04; }
+
+  .btn-iris {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #2B4792;
+    color: #FBFAF5;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: .03em;
+    transition: all .25s;
+  }
+  .btn-iris:hover { background: #162755; transform: translateY(-2px); }
+
+  .btn-gold {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #C59D55;
+    color: #0E1322;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: .03em;
+    transition: all .25s;
+  }
+  .btn-gold:hover { background: #8E6E31; color: #FBFAF5; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .35rem 1rem;
+    background: #E5EAF7;
+    color: #162755;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .eye-ring {
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FBFAF5 18%, #2B4792 20%, #2B4792 58%, #162755 62%, #0E1322 66%, #0E1322 100%);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .eye-ring::before {
+    content: "";
+    position: absolute;
+    width: 15%; height: 15%;
+    border-radius: 50%;
+    background: #FBFAF5;
+    top: 18%;
+    left: 40%;
+  }
+  .eye-ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(197,157,85,.4);
+    transform: scale(1.08);
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #E0E2EB;
+    padding: 1.8rem;
+    border-radius: 2px;
+    transition: all .35s;
+  }
+  .card:hover { border-color: #2B4792; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(14,19,34,.25); }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Yeseva One", serif; font-size: 1.6rem; border-bottom: 1px solid #E0E2EB; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 1px dashed rgba(14,19,34,.18);
+    font-size: .9rem;
+  }
+  .hours-row:last-child { border: 0; }
+
+  .hair-gold { height: 1px; background: #C59D55; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-iris text-cream flex items-center justify-center"><i class="fa-solid fa-eye"></i></span>
+      <div class="leading-tight">
+        <p class="display text-lg">Oftaclinique</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Dr. Ana-Maria B&#259;l&#537;anu &middot; Slatina</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-[11px] font-semibold uppercase tracking-widest text-ink/80">
+      <a href="#doctor"   class="hover:text-iris">Doctor</a>
+      <a href="#servicii" class="hover:text-iris">Servicii</a>
+      <a href="#recenzii" class="hover:text-iris">Recenzii</a>
+      <a href="#contact"  class="hover:text-iris">Contact</a>
+      <a href="tel:0759659003" class="btn-iris !py-2.5 !px-4 !text-[10px]">0759 659 003</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-iris text-cream flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl">Oftaclinique</span>
+    <button id="menu-close" class="w-11 h-11 rounded-full bg-iris text-cream flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#doctor"   class="mobile-link">Doctor</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0759659003" class="btn-iris">Sun&#259;</a>
+    <a href="https://wa.me/40759659003" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-eye"></i> Cabinet oftalmologic</span>
+      <h1 class="display mt-8 text-4xl sm:text-6xl lg:text-7xl text-irisd">
+        Vederea ta,<br>
+        &icirc;n <span class="text-iris">grija unui specialist.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Oftaclinique este cabinetul de oftalmologie al Dr. Ana-Maria B&#259;l&#537;anu, medic primar, din Slatina. Consulta&#539;ii complete, aparatur&#259; modern&#259; &#537;i recomand&#259;ri clare pentru afec&#539;iunile oculare.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0759659003" class="btn-iris"><i class="fa-solid fa-phone"></i> 0759 659 003</a>
+        <a href="https://wa.me/40759659003" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+
+      <div class="mt-12 flex items-center gap-6">
+        <div class="w-12 hair-gold"></div>
+        <p class="text-[11px] uppercase tracking-[.22em] text-gold">Medic primar &middot; Oftalmologie &middot; Slatina</p>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="120">
+      <div class="eye-ring"></div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" class="py-16 sm:py-24 bg-irisl border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">Despre doctor</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl text-irisd">
+        Dr. Ana-Maria<br><span class="text-iris">B&#259;l&#537;anu.</span>
+      </h2>
+      <p class="mt-6 text-muted leading-relaxed">Medic primar de oftalmologie, absolvent&#259; a UMF, cu participare anual&#259; la cursuri de perfec&#539;ionare pe diverse capitole ale specialit&#259;&#539;ii.</p>
+    </div>
+
+    <div class="lg:col-span-7 space-y-4">
+      <div class="flex items-start gap-4 bg-cream border border-line p-5 rounded">
+        <i class="fa-solid fa-user-doctor text-iris text-2xl mt-1"></i>
+        <div>
+          <p class="display text-xl text-irisd">Medic Primar Oftalmolog</p>
+          <p class="mt-1 text-sm text-muted">Rang profesional superior, cu ani de practic&#259; independen&#539;&#259;.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 bg-cream border border-line p-5 rounded">
+        <i class="fa-solid fa-graduation-cap text-iris text-2xl mt-1"></i>
+        <div>
+          <p class="display text-xl text-irisd">UMF &mdash; Forma&#539;ie academic&#259;</p>
+          <p class="mt-1 text-sm text-muted">Absolvent&#259; a Universit&#259;&#539;ii de Medicin&#259; &#537;i Farmacie.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 bg-cream border border-line p-5 rounded">
+        <i class="fa-solid fa-book text-iris text-2xl mt-1"></i>
+        <div>
+          <p class="display text-xl text-irisd">Educa&#539;ie continu&#259;</p>
+          <p class="mt-1 text-sm text-muted">Cursuri anuale de perfec&#539;ionare &icirc;n diverse capitole din oftalmologie.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 bg-cream border border-line p-5 rounded">
+        <i class="fa-solid fa-microscope text-iris text-2xl mt-1"></i>
+        <div>
+          <p class="display text-xl text-irisd">Aparatur&#259; modern&#259;</p>
+          <p class="mt-1 text-sm text-muted">Investiga&#539;ii f&#259;cute cu aparatur&#259; de ultim&#259; genera&#539;ie, inclusiv tomografie computerizat&#259;.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">Servicii oftalmologice</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl text-irisd">
+      Ce g&#259;se&#537;ti <span class="text-iris">&icirc;n cabinet.</span>
+    </h2>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="card" data-aos="fade-up">
+        <i class="fa-solid fa-eye text-iris text-2xl"></i>
+        <h3 class="display text-xl mt-4 text-irisd">Consulta&#539;ie oftalmologic&#259;</h3>
+        <p class="mt-3 text-sm text-muted">Examen complet al ochiului, acuitate vizual&#259;, refrac&#539;ie, prescriere lentile.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="60">
+        <i class="fa-solid fa-magnifying-glass text-iris text-2xl"></i>
+        <h3 class="display text-xl mt-4 text-irisd">Acuitate vizual&#259;</h3>
+        <p class="mt-3 text-sm text-muted">Testarea acuit&#259;&#539;ii vizuale la distan&#539;&#259; &#537;i aproape, ajustarea corec&#539;iei optice.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="120">
+        <i class="fa-solid fa-circle-notch text-iris text-2xl"></i>
+        <h3 class="display text-xl mt-4 text-irisd">C&#226;mp vizual</h3>
+        <p class="mt-3 text-sm text-muted">Evaluarea c&#226;mpului vizual periferic, urm&#259;rire pentru glaucom sau boli neurologice.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="180">
+        <i class="fa-solid fa-camera text-iris text-2xl"></i>
+        <h3 class="display text-xl mt-4 text-irisd">Tomografie computerizat&#259;</h3>
+        <p class="mt-3 text-sm text-muted">Investiga&#539;ii CT oculare pentru diagnosticul precis al afec&#539;iunilor retinei.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-droplet text-iris text-2xl"></i>
+        <h3 class="display text-xl mt-4 text-irisd">Monitorizare glaucom</h3>
+        <p class="mt-3 text-sm text-muted">M&#259;surare presiune intraocular&#259;, monitorizare pentru pacien&#539;ii cu glaucom.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-prescription text-iris text-2xl"></i>
+        <h3 class="display text-xl mt-4 text-irisd">Tratamente specializate</h3>
+        <p class="mt-3 text-sm text-muted">Tratamente medicamentoase pentru afec&#539;iuni oculare diverse, recomand&#259;ri chirurgicale.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24 bg-iris text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip !bg-gold !text-irisd">Recenzii</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">
+      Ce spun <span class="text-gold">pacien&#539;ii no&#537;tri.</span>
+    </h2>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-5">
+      <article class="bg-irisd border border-gold/30 p-7 rounded" data-aos="fade-up">
+        <div class="flex text-gold text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-cream/90 leading-relaxed">&bdquo;Aparatur&#259; de ultim&#259; genera&#539;ie, echip&#259; profesional&#259;.&rdquo;</p>
+        <p class="display text-base mt-5 text-gold">&mdash; Radu Olteanu</p>
+      </article>
+
+      <article class="bg-irisd border border-gold/30 p-7 rounded" data-aos="fade-up" data-aos-delay="60">
+        <div class="flex text-gold text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-cream/90 leading-relaxed">&bdquo;Profesionalism &#537;i seriozitate cu cea mai modern&#259; aparatur&#259; &#537;i un doctor excep&#539;ional. V&#259; mul&#539;umesc foarte mult!&rdquo;</p>
+        <p class="display text-base mt-5 text-gold">&mdash; Ana-Maria Moldovan</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-7">
+      <span class="chip">Contact</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl text-irisd">
+        Programare<br><span class="text-iris">pe baz&#259; de telefon.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Strada Dinu Lipatti 11, Slatina. Cabinetul este accesibil pentru persoane cu mobilitate redus&#259; &#537;i accept&#259; pl&#259;&#539;i cu cardul sau NFC.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0759659003" class="btn-iris"><i class="fa-solid fa-phone"></i> 0759 659 003</a>
+        <a href="https://wa.me/40759659003" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-irisl border border-line p-7 rounded">
+        <p class="chip">Adresa</p>
+        <p class="display text-2xl mt-3 text-irisd">Strada Dinu Lipatti 11</p>
+        <p class="text-sm text-muted">230001 Slatina, jud. Olt</p>
+
+        <div class="mt-6 hair-gold"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-iris w-5"></i> 0759 659 003</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-iris w-5"></i> wa.me/40759659003</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-iris w-5"></i> Acces complet</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-credit-card text-iris w-5"></i> Card &middot; NFC</div>
+        </div>
+
+        <ul id="hours" class="mt-6 pt-4 border-t border-line text-xs">
+          <li data-day="1" class="hours-row"><span>Luni</span><span>10:00 &mdash; 18:30</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span>10:00 &mdash; 18:30</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span>10:00 &mdash; 18:30</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span>10:00 &mdash; 18:30</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span>10:00 &mdash; 18:30</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-muted">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink text-cream/65 py-10 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 OFTACLINIQUE SOLUTIONS SRL</span>
+    <span>CUI 41606099</span>
+    <span>Slatina &middot; Olt</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0759659003" class="py-4 bg-iris text-cream text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40759659003" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Dr. Ana-Maria Balsanu Oftaclinique",
+  "description": "Cabinet de oftalmologie in Slatina, cu Dr. Ana-Maria Balsanu, medic primar. Consultatii si investigatii cu aparatura moderna.",
+  "telephone": "+40759659003",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Dinu Lipatti 11",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230001",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.43026, "longitude": 24.3584 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "10:00", "closes": "18:30"
+  }],
+  "foundingDate": "2019-09-05",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "8" },
+  "medicalSpecialty": "Ophthalmology"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

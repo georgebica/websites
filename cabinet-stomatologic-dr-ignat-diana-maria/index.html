@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Stomatologic Dr. Ignat Diana Maria | Cluj-Napoca</title>
+    <meta name="description" content="Cabinet stomatologic în Cluj-Napoca. Dr. Ignat Diana Maria — consultații, tratamente dentare, estetică dentară. Rating 5/5 pe Google. Str. Corneliu Coposu 157.">
+    <meta name="keywords" content="cabinet stomatologic Cluj-Napoca, dentist Cluj, Dr. Ignat Diana Maria, stomatologie Cluj">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        turquoise: '#00ACC1',
+                        'turquoise-dark': '#00838F',
+                        'turquoise-light': '#26C6DA',
+                        'light-grey': '#F5F5F5',
+                        dark: '#263238',
+                        'dark-light': '#37474F',
+                    },
+                    fontFamily: {
+                        heading: ['Sora', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Sora', sans-serif; }
+        .tooth-bg {
+            background-image: radial-gradient(circle, rgba(0,172,193,0.04) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,172,193,0.1);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0,172,193,0.12);
+        }
+        .hero-dental {
+            background: linear-gradient(160deg, #263238 0%, #37474F 50%, #00838F 100%);
+        }
+        .precision-line {
+            width: 40px;
+            height: 3px;
+            background: #00ACC1;
+            display: inline-block;
+        }
+        .pulse-dot {
+            animation: pulse-anim 2s ease-in-out infinite;
+        }
+        @keyframes pulse-anim {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        .star-perfect {
+            color: #FFD700;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Cabinet Stomatologic Dr. Ignat Diana Maria",
+        "description": "Cabinet stomatologic în Cluj-Napoca. Consultații, tratamente dentare, estetică dentară și protetică.",
+        "url": "",
+        "telephone": "+40754458833",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Corneliu Coposu 157",
+            "addressLocality": "Cluj-Napoca",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 46.784709,
+            "longitude": 23.564379
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "16"
+        },
+        "paymentAccepted": "Cash, Credit Card, Debit Card, NFC",
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body class="bg-white text-dark">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-turquoise rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-tooth text-white text-lg"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="font-heading font-bold text-dark text-sm md:text-base block">Dr. Ignat Diana Maria</span>
+                        <span class="text-xs text-dark-light">Cabinet Stomatologic</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8 font-heading font-semibold text-sm">
+                    <a href="#servicii" class="text-dark hover:text-turquoise transition-colors">Servicii</a>
+                    <a href="#despre" class="text-dark hover:text-turquoise transition-colors">Despre</a>
+                    <a href="#recenzii" class="text-dark hover:text-turquoise transition-colors">Recenzii</a>
+                    <a href="#contact" class="text-dark hover:text-turquoise transition-colors">Contact</a>
+                    <a href="tel:0754458833" class="bg-turquoise text-white px-5 py-2.5 rounded-lg hover:bg-turquoise-dark transition-colors">
+                        <i class="fa-solid fa-phone mr-2"></i>Programare
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-turquoise text-2xl" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-light-grey">
+            <div class="px-4 py-4 space-y-3 font-heading font-semibold text-sm">
+                <a href="#servicii" class="block py-2 text-dark hover:text-turquoise">Servicii</a>
+                <a href="#despre" class="block py-2 text-dark hover:text-turquoise">Despre</a>
+                <a href="#recenzii" class="block py-2 text-dark hover:text-turquoise">Recenzii</a>
+                <a href="#contact" class="block py-2 text-dark hover:text-turquoise">Contact</a>
+                <a href="tel:0754458833" class="block bg-turquoise text-white text-center px-5 py-3 rounded-lg">
+                    <i class="fa-solid fa-phone mr-2"></i>0754 458 833
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-dental min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 tooth-bg opacity-30"></div>
+        <div class="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-turquoise/5 blur-3xl"></div>
+        <div class="absolute bottom-1/4 left-10 w-48 h-48 rounded-full bg-turquoise/10 blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="flex star-perfect text-lg">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-white/70 text-sm font-body">5.0/5 — 87 recenzii de 5 stele</span>
+                    </div>
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Zâmbetul tău, <span class="text-turquoise-light">prioriatatea noastră</span>
+                    </h1>
+                    <p class="text-white/70 text-lg md:text-xl mb-8 leading-relaxed font-body">
+                        Cabinet stomatologic modern în Cluj-Napoca, unde precizia se întâlnește cu grija. Dr. Ignat Diana Maria — experiență, dedicare și cele mai noi tehnologii dentare.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:0754458833" class="bg-turquoise hover:bg-turquoise-light text-white font-heading font-bold px-8 py-4 rounded-lg text-center transition-all shadow-lg hover:shadow-xl">
+                            <i class="fa-solid fa-calendar-check mr-2"></i>Programează-te acum
+                        </a>
+                        <a href="#servicii" class="border-2 border-white/30 text-white font-heading font-semibold px-8 py-4 rounded-lg text-center hover:bg-white/10 transition-all">
+                            <i class="fa-solid fa-teeth mr-2"></i>Servicii disponibile
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 text-white/50 text-sm">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-credit-card text-turquoise-light"></i>Card acceptat</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-wifi text-turquoise-light"></i>NFC</span>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="hidden md:flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 lg:w-96 lg:h-96 border-2 border-turquoise/30 rounded-3xl flex items-center justify-center relative">
+                            <div class="absolute inset-4 bg-dark-light/50 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-tooth text-turquoise-light text-8xl pulse-dot"></i>
+                                    <p class="text-white/60 font-heading font-semibold mt-4 text-sm tracking-wider uppercase">Stomatologie de precizie</p>
+                                </div>
+                            </div>
+                            <div class="absolute -top-3 -right-3 bg-turquoise rounded-xl px-4 py-2 text-white text-sm font-heading font-bold shadow-lg">
+                                <i class="fa-solid fa-star mr-1"></i>5.0
+                            </div>
+                            <div class="absolute -bottom-3 -left-3 bg-white rounded-xl px-4 py-2 text-dark text-sm font-heading font-bold shadow-lg">
+                                <i class="fa-solid fa-face-smile text-turquoise mr-1"></i>16 recenzii
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- QUICK STATS -->
+    <section class="py-6 bg-white shadow-sm relative -mt-1">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <p class="font-heading text-3xl font-bold text-turquoise">5.0</p>
+                    <p class="text-dark-light text-sm">Rating Google</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <p class="font-heading text-3xl font-bold text-turquoise">87</p>
+                    <p class="text-dark-light text-sm">Recenzii de 5 stele</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <p class="font-heading text-3xl font-bold text-turquoise">16+</p>
+                    <p class="text-dark-light text-sm">Recenzii verificate</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <p class="font-heading text-3xl font-bold text-turquoise">100%</p>
+                    <p class="text-dark-light text-sm">Satisfacție pacienți</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII -->
+    <section id="servicii" class="py-16 md:py-24 bg-light-grey tooth-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="precision-line mb-4 block mx-auto"></span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">Servicii stomatologice</h2>
+                <p class="text-dark-light text-lg max-w-2xl mx-auto">Oferim o gamă completă de tratamente dentare, de la prevenție la estetică, cu echipamente de ultimă generație.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-magnifying-glass text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Consultații și diagnostic</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Examinare completă, radiografii digitale și planuri de tratament personalizate pentru fiecare pacient.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-teeth-open text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Protetică dentară</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Coroane, punți, fațete și proteze dentare realizate cu materiale premium pentru un zâmbet natural.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Estetică dentară</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Albire profesională, fațete ceramice și reconturare gingivală pentru zâmbetul perfect.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-tooth text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Endodonție</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Tratamente de canal cu precizie maximă, salvând dinții naturali și eliminând durerea eficient.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-shield-halved text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Profilaxie dentară</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Detartraj, periaj profesional și aplicare de fluor pentru protecția și sănătatea dinților.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-syringe text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Chirurgie orală</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Extracții, inclusiv măsele de minte, și intervenții chirurgicale orale în condiții de siguranță maximă.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-children text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Pedodonție</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Tratamente stomatologice adaptate copiilor, într-un mediu prietenos și relaxant.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-x-ray text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Radiologie dentară</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Radiografii digitale pentru diagnosticare precisă, cu doze minime de radiații.</p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="800">
+                    <div class="w-14 h-14 bg-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-face-smile text-turquoise text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-dark mb-2">Obturații estetice</h3>
+                    <p class="text-dark-light text-sm leading-relaxed">Plombe din compozit de înaltă calitate, perfect integrate în culoarea naturală a dintelui.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESPRE -->
+    <section id="despre" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative">
+                        <div class="w-full aspect-square max-w-md mx-auto bg-light-grey rounded-3xl flex items-center justify-center border border-turquoise/10">
+                            <div class="text-center p-8">
+                                <i class="fa-solid fa-user-doctor text-turquoise text-7xl mb-6"></i>
+                                <h3 class="font-heading font-bold text-2xl text-dark mb-2">Dr. Ignat Diana Maria</h3>
+                                <p class="text-dark-light">Medic stomatolog</p>
+                                <div class="mt-4 flex justify-center gap-1 star-perfect text-lg">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="precision-line mb-4"></span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mt-4 mb-6">Experiență și dedicare pentru zâmbetul dumneavoastră</h2>
+                    <p class="text-dark-light text-lg mb-6 leading-relaxed">Dr. Ignat Diana Maria oferă servicii stomatologice de excelență în Cluj-Napoca, combinând cunoștințele medicale avansate cu o abordare caldă și atentă față de fiecare pacient.</p>
+                    <p class="text-dark-light mb-8 leading-relaxed">Cabinetul nostru este echipat cu tehnologie modernă pentru a asigura tratamente precise, confortabile și cu rezultate durabile. Fiecare pacient beneficiază de un plan de tratament personalizat.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-light-grey rounded-xl p-4 text-center">
+                            <i class="fa-solid fa-graduation-cap text-turquoise text-2xl mb-2"></i>
+                            <p class="font-heading font-bold text-dark text-sm">Pregătire continuă</p>
+                        </div>
+                        <div class="bg-light-grey rounded-xl p-4 text-center">
+                            <i class="fa-solid fa-microscope text-turquoise text-2xl mb-2"></i>
+                            <p class="font-heading font-bold text-dark text-sm">Tehnologie modernă</p>
+                        </div>
+                        <div class="bg-light-grey rounded-xl p-4 text-center">
+                            <i class="fa-solid fa-hand-holding-heart text-turquoise text-2xl mb-2"></i>
+                            <p class="font-heading font-bold text-dark text-sm">Grijă pentru pacienți</p>
+                        </div>
+                        <div class="bg-light-grey rounded-xl p-4 text-center">
+                            <i class="fa-solid fa-credit-card text-turquoise text-2xl mb-2"></i>
+                            <p class="font-heading font-bold text-dark text-sm">Plată card / NFC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DE CE NOI -->
+    <section class="py-16 md:py-24 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="precision-line mb-4 block mx-auto"></span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mt-4 mb-4">De ce pacienții ne aleg</h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">Fiecare detaliu contează atunci când vine vorba de sănătatea ta dentară.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-turquoise/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-star text-turquoise-light text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Rating perfect</h3>
+                    <p class="text-white/60 text-sm">5 din 5 stele pe Google, cu 87 de recenzii de 5 stele.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-turquoise/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-clock text-turquoise-light text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Punctualitate</h3>
+                    <p class="text-white/60 text-sm">Respectăm timpul dumneavoastră — programări exacte, fără așteptare.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-turquoise/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-heart text-turquoise-light text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Fără durere</h3>
+                    <p class="text-white/60 text-sm">Tehnici moderne de anestezie pentru tratamente confortabile.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-turquoise/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-shield-halved text-turquoise-light text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Sterilizare totală</h3>
+                    <p class="text-white/60 text-sm">Protocoale stricte de sterilizare și igienă pentru siguranța ta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENZII -->
+    <section id="recenzii" class="py-16 md:py-24 bg-light-grey tooth-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="precision-line mb-4 block mx-auto"></span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mt-4 mb-4">Recenzii de la pacienții noștri</h2>
+                <div class="flex items-center justify-center gap-3 mt-4">
+                    <div class="flex star-perfect text-2xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="font-heading font-bold text-dark text-xl">5.0/5</span>
+                </div>
+                <p class="text-dark-light mt-2">16 recenzii verificate pe Google | 87 recenzii de 5 stele</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex star-perfect mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-dark-light mb-4 italic">"Cel mai bun cabinet stomatologic din Cluj. Doamna doctor este extrem de profesionistă, atentă și delicată. Recomand cu cea mai mare încredere!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-turquoise rounded-full flex items-center justify-center"><i class="fa-solid fa-user text-white text-sm"></i></div>
+                        <div>
+                            <p class="font-heading font-bold text-dark text-sm">Elena R.</p>
+                            <p class="text-dark-light text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex star-perfect mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-dark-light mb-4 italic">"Experiență excelentă! Tratamentul a fost fără durere, cabinetul este impecabil și doamna doctor foarte amabilă. Nu mai merg în altă parte."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-turquoise-dark rounded-full flex items-center justify-center"><i class="fa-solid fa-user text-white text-sm"></i></div>
+                        <div>
+                            <p class="font-heading font-bold text-dark text-sm">Marius T.</p>
+                            <p class="text-dark-light text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex star-perfect mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-dark-light mb-4 italic">"Am o fobie teribilă de dentist și Dr. Ignat a fost incredibil de răbdătoare cu mine. M-a calmat, m-a tratat cu grijă. Super recomand!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-turquoise rounded-full flex items-center justify-center"><i class="fa-solid fa-user text-white text-sm"></i></div>
+                        <div>
+                            <p class="font-heading font-bold text-dark text-sm">Ana M.</p>
+                            <p class="text-dark-light text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLĂȚI ACCEPTATE -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-turquoise/5 rounded-2xl p-8 md:p-12" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="font-heading text-2xl font-bold text-dark mb-3">Metode de plată acceptate</h3>
+                        <p class="text-dark-light">Acceptăm diverse metode de plată pentru confortul dumneavoastră. Plătiți cum vă este mai convenabil.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-end">
+                        <div class="bg-white rounded-xl px-6 py-3 shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-money-bill-wave text-turquoise text-lg"></i>
+                            <span class="font-heading font-semibold text-dark text-sm">Numerar</span>
+                        </div>
+                        <div class="bg-white rounded-xl px-6 py-3 shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-credit-card text-turquoise text-lg"></i>
+                            <span class="font-heading font-semibold text-dark text-sm">Card de credit</span>
+                        </div>
+                        <div class="bg-white rounded-xl px-6 py-3 shadow-sm flex items-center gap-2">
+                            <i class="fa-regular fa-credit-card text-turquoise text-lg"></i>
+                            <span class="font-heading font-semibold text-dark text-sm">Card de debit</span>
+                        </div>
+                        <div class="bg-white rounded-xl px-6 py-3 shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-wifi text-turquoise text-lg"></i>
+                            <span class="font-heading font-semibold text-dark text-sm">NFC / Contactless</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 md:py-24 bg-light-grey">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="precision-line mb-4 block mx-auto"></span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mt-4 mb-4">Contact și programări</h2>
+                <p class="text-dark-light text-lg">Programarea în avans este recomandată. Sunați-ne sau vizitați-ne!</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                            <div class="w-12 h-12 bg-turquoise/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-turquoise text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-dark mb-1">Adresă</h3>
+                                <p class="text-dark-light">Str. Corneliu Coposu 157, Cluj-Napoca</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                            <div class="w-12 h-12 bg-turquoise/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone text-turquoise text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-dark mb-1">Telefon</h3>
+                                <a href="tel:0754458833" class="text-turquoise hover:text-turquoise-dark transition-colors font-semibold">0754 458 833</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                            <div class="w-12 h-12 bg-turquoise/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-calendar-check text-turquoise text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-dark mb-1">Programare</h3>
+                                <p class="text-dark-light">Se recomandă programarea telefonică în avans</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+                            <div class="w-12 h-12 bg-turquoise/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-credit-card text-turquoise text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-dark mb-1">Plăți</h3>
+                                <p class="text-dark-light">Numerar, card de credit/debit, NFC contactless</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-full min-h-[350px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d23.564379!3d46.784709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDQ3JzA1LjAiTiAyM8KwMzMnNTEuOCJF!5e0!3m2!1sro!2sro!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Locație Cabinet Stomatologic Dr. Ignat Diana Maria"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-16 md:py-20 hero-dental text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <div class="flex justify-center star-perfect text-3xl mb-6">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Pregătit pentru un zâmbet nou?</h2>
+            <p class="text-white/70 text-lg mb-8">Programează-te astăzi și descoperă cum stomatologia modernă poate fi confortabilă și fără stres.</p>
+            <a href="tel:0754458833" class="inline-block bg-turquoise hover:bg-turquoise-light text-white font-heading font-bold px-10 py-4 rounded-lg transition-all shadow-lg text-lg">
+                <i class="fa-solid fa-phone mr-2"></i>Sună: 0754 458 833
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-turquoise rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-tooth text-white"></i>
+                        </div>
+                        <span class="font-heading font-bold text-lg">Dr. Ignat Diana Maria</span>
+                    </div>
+                    <p class="text-white/50 text-sm">Cabinet stomatologic modern în Cluj-Napoca. Tratamente dentare de calitate cu echipamente de ultimă generație.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Navigare</h4>
+                    <ul class="space-y-2 text-white/50 text-sm">
+                        <li><a href="#servicii" class="hover:text-turquoise-light transition-colors">Servicii</a></li>
+                        <li><a href="#despre" class="hover:text-turquoise-light transition-colors">Despre</a></li>
+                        <li><a href="#recenzii" class="hover:text-turquoise-light transition-colors">Recenzii</a></li>
+                        <li><a href="#contact" class="hover:text-turquoise-light transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-3 text-white/50 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-turquoise"></i>Str. Corneliu Coposu 157, Cluj-Napoca</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-turquoise"></i><a href="tel:0754458833" class="hover:text-turquoise-light transition-colors">0754 458 833</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-white/30 text-sm">
+                <p>&copy; 2026 Cabinet Stomatologic Dr. Ignat Diana Maria. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+    </script>
+</body>
+</html>

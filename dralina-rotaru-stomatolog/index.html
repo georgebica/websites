@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Alina Rotaru &middot; Stomatologie general&#259; &icirc;n Slatina</title>
+<meta name="description" content="Cabinet Stomatologic Dr. Alina Rotaru &mdash; Slatina, Strada Trandafirilor 9. Stomatologie general&#259;, detartraj, endodon&#539;ie. 18+ ani de experien&#539;&#259;. Telefon 0763 959 312.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { aqua: '#2E8A86', aquad: '#1C5C5A', aqual: '#E0F0EE', gold: '#C49A5B', cream: '#FBF8F0', ink: '#172A33', muted: '#6D7C86', line: '#D8E4E2', wa: '#25D366' },
+  fontFamily: { serif: ['"Cormorant Garamond"', 'Georgia', 'serif'], sans: ['Nunito', 'system-ui', 'sans-serif'] }
+}}}
+</script>
+<style>
+  html, body { background: #FBF8F0; color: #172A33; }
+  body { font-family: Nunito, system-ui, sans-serif; }
+  .serif { font-family: "Cormorant Garamond", Georgia, serif; letter-spacing: -.01em; line-height: 1.06; }
+  .btn-aqua { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #2E8A86; color: #fff; font-weight: 700; border-radius: 999px; transition: all .25s; }
+  .btn-aqua:hover { background: #1C5C5A; transform: translateY(-2px); }
+  .btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: transparent; color: #172A33; border: 1.5px solid #172A33; font-weight: 700; border-radius: 999px; transition: all .25s; }
+  .btn-outline:hover { background: #172A33; color: #FBF8F0; }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; font-weight: 700; border-radius: 999px; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); }
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .4rem 1rem; background: #E0F0EE; color: #1C5C5A; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; }
+  .card { background: #fff; border: 1px solid #D8E4E2; border-radius: 24px; padding: 1.8rem; transition: all .35s; }
+  .card:hover { border-color: #2E8A86; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(23,42,51,.2); }
+  .mobile-link { display: block; padding: 1rem 0; font-family: "Cormorant Garamond", serif; font-size: 1.9rem; border-bottom: 1px solid #D8E4E2; }
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dotted rgba(23,42,51,.2); font-size: .95rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #2E8A86; font-weight: 700; }
+  .tooth-illu { width: 260px; height: 260px; background: linear-gradient(135deg, #E0F0EE, #FBF8F0); border: 2px solid #2E8A86; border-radius: 48% 52% 48% 52% / 40% 40% 60% 60%; display: flex; align-items: center; justify-content: center; position: relative; }
+  .tooth-illu::before { content: ""; position: absolute; inset: 12px; border: 1px dashed rgba(196,154,91,.5); border-radius: 48% 52% 48% 52% / 40% 40% 60% 60%; }
+  .tooth-illu i { font-size: 5rem; color: #2E8A86; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-aqua text-white flex items-center justify-center"><i class="fa-solid fa-tooth"></i></span>
+      <div class="leading-tight"><p class="serif text-xl font-semibold">Dr. Alina Rotaru</p><p class="text-[10px] tracking-widest uppercase text-muted mt-0.5">Stomatolog &middot; Slatina</p></div>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#doctor" class="hover:text-aqua">Doctor</a>
+      <a href="#servicii" class="hover:text-aqua">Servicii</a>
+      <a href="#proces" class="hover:text-aqua">Proces</a>
+      <a href="#locatie" class="hover:text-aqua">Loca&#539;ie</a>
+      <a href="tel:0763959312" class="btn-aqua !py-2.5 !px-4 !text-xs">0763 959 312</a>
+    </nav>
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-aqua text-white flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between"><span class="serif text-xl font-semibold">Dr. Alina Rotaru</span><button id="menu-close" class="w-11 h-11 rounded-full bg-aqua text-white flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="mt-6"><a href="#doctor" class="mobile-link">Doctor</a><a href="#servicii" class="mobile-link">Servicii</a><a href="#proces" class="mobile-link">Proces</a><a href="#locatie" class="mobile-link">Loca&#539;ie</a><a href="#contact" class="mobile-link">Contact</a></nav>
+  <div class="mt-auto grid grid-cols-2 gap-3"><a href="tel:0763959312" class="btn-aqua">Sun&#259;</a><a href="https://wa.me/40763959312" class="btn-wap">WhatsApp</a></div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-award"></i> 18+ ani de practic&#259; stomatologic&#259;</span>
+      <h1 class="serif mt-8 text-5xl sm:text-7xl lg:text-[5.5rem] font-semibold">Stomatologie cu<br><span style="font-style:italic" class="text-aqua">aten&#539;ie pentru fiecare pacient.</span></h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">Cabinetul Dr. Alina Rotaru este o practic&#259; stomatologic&#259; privat&#259; &icirc;n Slatina, activ&#259; din 2008. &Icirc;ngrijiri generale, igienizare profesional&#259;, tratamente de canal &#537;i consulta&#539;ii &mdash; pentru pacien&#539;i care vor timp &#537;i r&#259;bdare.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0763959312" class="btn-aqua"><i class="fa-solid fa-phone"></i> 0763 959 312</a>
+        <a href="https://wa.me/40763959312" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="120">
+      <div class="tooth-illu"><i class="fa-solid fa-tooth"></i></div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" class="py-16 sm:py-24 bg-aqual">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">Despre doctor</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Dr. Alina<br><span style="font-style:italic" class="text-aqua">Manuela Rotaru.</span></h2>
+      <p class="mt-6 text-ink/80">Medic stomatolog cu peste 18 ani de experien&#539;&#259;, absolvent&#259; UMF Craiova. Practic&#259; privat&#259; &icirc;n Slatina din 2008.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+      <div class="card"><i class="fa-solid fa-graduation-cap text-aqua text-xl"></i><p class="serif text-lg mt-3 font-semibold">UMF Craiova</p><p class="text-sm text-muted">Universitatea de Medicin&#259; &#537;i Farmacie din Craiova.</p></div>
+      <div class="card"><i class="fa-solid fa-briefcase-medical text-aqua text-xl"></i><p class="serif text-lg mt-3 font-semibold">Din 2008</p><p class="text-sm text-muted">Practic&#259; continu&#259; &icirc;n cabinet privat &icirc;n Slatina.</p></div>
+      <div class="card"><i class="fa-solid fa-language text-aqua text-xl"></i><p class="serif text-lg mt-3 font-semibold">RO &amp; EN</p><p class="text-sm text-muted">Consulta&#539;ii disponibile &icirc;n ambele limbi.</p></div>
+      <div class="card"><i class="fa-solid fa-credit-card text-aqua text-xl"></i><p class="serif text-lg mt-3 font-semibold">Card acceptat</p><p class="text-sm text-muted">Plat&#259; cu card debit sau numerar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl"><span class="chip">Servicii stomatologice</span><h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Ce putem face <span style="font-style:italic" class="text-aqua">&icirc;n cabinet.</span></h2></div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><i class="fa-solid fa-magnifying-glass text-aqua text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Consulta&#539;ie preventiv&#259;</h3><p class="mt-2 text-sm text-muted">Examen de rutin&#259;, evaluare stare oral&#259;, recomand&#259;ri personalizate.</p></article>
+      <article class="card"><i class="fa-solid fa-spray-can-sparkles text-aqua text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Detartraj &amp; periaj</h3><p class="mt-2 text-sm text-muted">Detartraj ultrasonic, periaj profesional, instruc&#539;iuni de igien&#259; zilnic&#259;.</p></article>
+      <article class="card"><i class="fa-solid fa-tooth text-aqua text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Stomatologie general&#259;</h3><p class="mt-2 text-sm text-muted">Obtura&#539;ii, restaur&#259;ri, tratament carii cu compozit fizionomic.</p></article>
+      <article class="card"><i class="fa-solid fa-prescription text-aqua text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Tratament de canal</h3><p class="mt-2 text-sm text-muted">Endodon&#539;ie modern&#259;, salvarea din&#539;ilor afecta&#539;i.</p></article>
+      <article class="card"><i class="fa-solid fa-user-doctor text-aqua text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Consulta&#539;ii specialitate</h3><p class="mt-2 text-sm text-muted">Evalu&#259;ri pentru cazuri complexe, consiliere tratament.</p></article>
+      <article class="card"><i class="fa-solid fa-shield-heart text-aqua text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Profilaxie</h3><p class="mt-2 text-sm text-muted">Fluoriz&#259;ri, sigil&#259;ri, control periodic.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="chip !bg-aqua/20 !text-aqual">Cum proced&#259;m</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Pa&#537;i clari, <span style="font-style:italic" class="text-gold">f&#259;r&#259; surprize.</span></h2>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="border border-cream/15 rounded-2xl p-6"><p class="serif text-4xl text-gold font-semibold">01</p><p class="serif text-xl mt-3 font-semibold">Programare</p><p class="text-sm text-cream/75 mt-2">Telefon sau WhatsApp. Intervale clare.</p></div>
+      <div class="border border-cream/15 rounded-2xl p-6"><p class="serif text-4xl text-gold font-semibold">02</p><p class="serif text-xl mt-3 font-semibold">Examen complet</p><p class="text-sm text-cream/75 mt-2">Evalu&#259;m starea dentar&#259; &#537;i gingival&#259;.</p></div>
+      <div class="border border-cream/15 rounded-2xl p-6"><p class="serif text-4xl text-gold font-semibold">03</p><p class="serif text-xl mt-3 font-semibold">Plan scris</p><p class="text-sm text-cream/75 mt-2">Tratamente, pre&#539;uri &#537;i etape. &Icirc;l discut&#259;m &icirc;mpreun&#259;.</p></div>
+      <div class="border border-cream/15 rounded-2xl p-6"><p class="serif text-4xl text-gold font-semibold">04</p><p class="serif text-xl mt-3 font-semibold">Tratament</p><p class="text-sm text-cream/75 mt-2">Interven&#539;ii pe etape, timp alocat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip">Loca&#539;ie</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Strada Trandafirilor 9,<br><span style="font-style:italic" class="text-aqua">Slatina.</span></h2>
+      <p class="mt-6 text-ink/85 leading-relaxed">Cabinetul se afl&#259; &icirc;n blocul 9, scara C, ap. 2, parter. Central, u&#537;or de g&#259;sit, cu parcare &icirc;n zon&#259;.</p>
+      <div class="mt-8 space-y-3 text-sm">
+        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-aqua w-5"></i> Bl. 9, Str. Trandafirilor 9, Sc. C, Ap. 2</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-city text-aqua w-5"></i> 230001 Slatina, jud. Olt</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-aqua w-5"></i> 0763 959 312 &middot; 0745 795 350</div>
+        <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-aqua w-5"></i> wa.me/40763959312</div>
+      </div>
+      <a href="https://www.google.com/maps/place/Dr.Alina+Rotaru+-Stomatolog/@44.4316785,24.3678669,17z" target="_blank" rel="noopener" class="mt-8 btn-outline inline-flex"><i class="fa-solid fa-map-location-dot"></i> Vezi pe hart&#259;</a>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="card">
+        <p class="chip">Program</p>
+        <ul id="hours" class="mt-5">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span>14:00 &mdash; 20:00</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span>08:00 &mdash; 14:00</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span>14:00 &mdash; 20:00</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span>08:00 &mdash; 14:00</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span>08:00 &mdash; 14:00</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+        <p class="mt-5 text-sm text-muted">Programul alterneaz&#259; &icirc;ntre diminea&#539;&#259; &#537;i dup&#259;-amiaz&#259;. Recomandat s&#259; suna&#539;i &icirc;n avans.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-aqual">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Contact</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Programare <span style="font-style:italic" class="text-aqua">&icirc;n c&#226;teva minute.</span></h2>
+    <p class="mt-6 text-muted">Telefon direct sau WhatsApp &mdash; r&#259;spundem personal &#537;i v&#259; oferim primul interval disponibil.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:0763959312" class="btn-aqua"><i class="fa-solid fa-phone"></i> 0763 959 312</a>
+      <a href="https://wa.me/40763959312" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink text-cream/65 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div><div class="flex items-center gap-3"><span class="w-10 h-10 rounded-full bg-aqua text-white flex items-center justify-center"><i class="fa-solid fa-tooth"></i></span><span class="serif text-lg text-cream font-semibold">Dr. Alina Rotaru</span></div><p class="mt-3 text-sm">Cabinet stomatologic privat &icirc;n Slatina. Din 2008.</p></div>
+    <div><p class="serif text-lg text-gold">Servicii</p><ul class="mt-3 space-y-1.5 text-sm"><li>Consulta&#539;ie preventiv&#259;</li><li>Detartraj &amp; periaj</li><li>Tratament carii</li><li>Tratament canal</li><li>Profilaxie</li></ul></div>
+    <div><p class="serif text-lg text-gold">Contact</p><ul class="mt-3 space-y-1.5 text-sm"><li><i class="fa-solid fa-phone text-gold mr-2"></i>0763 959 312</li><li><i class="fa-solid fa-phone text-gold mr-2"></i>0745 795 350</li><li><i class="fa-brands fa-whatsapp text-gold mr-2"></i>wa.me/40763959312</li><li><i class="fa-solid fa-location-dot text-gold mr-2"></i>Trandafirilor 9, Slatina</li></ul></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-widest serif">
+    <span>&copy; 2026 CMI Dr. Rotaru Alina Manuela</span><span>Slatina &middot; Olt</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0763959312" class="py-4 bg-aqua text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40763959312" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"CMI Dr. Rotaru Alina Manuela","telephone":"+40763959312","address":{"@type":"PostalAddress","streetAddress":"Bloc 9, Strada Trandafirilor 9, Sc C, Ap 2","addressLocality":"Slatina","addressRegion":"Olt","postalCode":"230001","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":44.4316785,"longitude":24.3678669}}</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+  const menu = document.getElementById('menu'), openBtn = document.getElementById('menu-open'), closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try { const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' })); const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]'); if (row) row.classList.add('today'); } catch (e) {}
+</script>
+</body></html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comrem Service &middot; Service auto &#537;i constatare daune &middot; Slatina</title>
+<meta name="description" content="Comrem Service SRL &#8212; service auto, reparatii mecanice &#537;i punct constatare daune pentru asigur&#259;ri &#238;n Slatina. Specializa&#539;i Dacia &#537;i Daewoo. 25 ani experien&#539;&#259;. Tel 0790 833 323.">
+<meta name="keywords" content="service auto Slatina, constatare daune Slatina, Comrem, reparatii auto Olt, service Dacia Slatina">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#394350">
+<meta property="og:title" content="Comrem Service &middot; Slatina">
+<meta property="og:description" content="Service auto &#537;i punct de constatare daune cu 25 ani experien&#539;&#259; &#238;n Olt.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        slate4: {50:'#eef0f3',100:'#d2d7de',200:'#a6b1bd',300:'#7a8a9d',400:'#576679',500:'#394350',600:'#2c343e',700:'#1f252d',800:'#12161b',900:'#060809'},
+        amber2: {50:'#fef4e1',100:'#fcde9e',200:'#f9c35a',300:'#eca51e',400:'#c28514',500:'#98670d',600:'#6d4a09',700:'#492e05',800:'#241502',900:'#120a01'},
+        offwhite: '#f6f3ee',
+        onyx: '#0c0e12'
+      },
+      fontFamily: {
+        display: ['Barlow Condensed','Impact','sans-serif'],
+        sans: ['Source Sans 3','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --slate4:#394350; --amber2:#eca51e; --offwhite:#f6f3ee; --onyx:#0c0e12; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Source Sans 3',system-ui,sans-serif; color:var(--onyx); background:var(--offwhite); }
+  h1,h2,h3,h4 { font-family:'Barlow Condensed',Impact,sans-serif; letter-spacing:.01em; font-weight:600; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 85% 15%, rgba(236,165,30,.22), transparent 45%),
+      radial-gradient(circle at 12% 85%, rgba(57,67,80,.25), transparent 55%),
+      linear-gradient(168deg,#f6f3ee 0%,#eef0f3 60%,#d2d7de 100%);
+  }
+  .diag-bg { background-image:repeating-linear-gradient(135deg,transparent,transparent 28px,rgba(57,67,80,.035) 28px,rgba(57,67,80,.035) 29px); }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.45rem 1rem; font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700; }
+  .chip-slate { background:rgba(57,67,80,.12); color:#1f252d; border:1px solid rgba(57,67,80,.3); }
+  .chip-amber { background:rgba(236,165,30,.15); color:#6d4a09; border:1px solid rgba(236,165,30,.4); }
+  .btn-primary { background:var(--slate4); color:var(--offwhite); padding:1rem 1.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; font-size:.82rem; font-family:'Barlow Condensed',sans-serif; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-primary:hover { background:#1f252d; transform:translateY(-2px); box-shadow:0 16px 30px -14px rgba(57,67,80,.7); }
+  .btn-amber { background:var(--amber2); color:var(--onyx); padding:1rem 1.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:.82rem; font-family:'Barlow Condensed',sans-serif; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-amber:hover { background:#c28514; transform:translateY(-2px); }
+  .btn-outline { background:transparent; color:var(--slate4); padding:1rem 1.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; font-size:.82rem; font-family:'Barlow Condensed',sans-serif; display:inline-flex; align-items:center; gap:.55rem; border:2px solid var(--slate4); transition:all .25s; }
+  .btn-outline:hover { background:var(--slate4); color:var(--offwhite); }
+  .btn-wa { background:#25d366; color:#fff; padding:1rem 1.5rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; font-size:.82rem; font-family:'Barlow Condensed',sans-serif; display:inline-flex; align-items:center; gap:.5rem; transition:all .25s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#fff; border:1px solid rgba(57,67,80,.15); padding:1.75rem; transition:all .25s; position:relative; }
+  .card::after { content:''; position:absolute; top:-1px; right:-1px; width:20%; height:2px; background:var(--amber2); transition:width .3s; }
+  .card:hover::after { width:100%; }
+  .card:hover { transform:translateY(-3px); border-color:var(--slate4); box-shadow:0 18px 36px -20px rgba(12,14,18,.3); }
+  .service-ico { width:52px; height:52px; background:var(--slate4); color:var(--amber2); display:flex; align-items:center; justify-content:center; font-size:1.25rem; }
+  .section-label { display:inline-block; font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:var(--amber2); font-weight:700; font-family:'Barlow Condensed',sans-serif; }
+  .headline { font-size:clamp(2.3rem,5vw,4rem); line-height:1.02; color:var(--onyx); font-family:'Barlow Condensed',Impact,sans-serif; font-weight:600; letter-spacing:.01em; }
+  .headline em { color:var(--slate4); font-style:normal; font-weight:700; }
+  .stat-num { font-family:'Barlow Condensed',Impact,sans-serif; font-size:3rem; color:var(--slate4); line-height:1; font-weight:700; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid rgba(57,67,80,.15); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:42px; height:42px; background:rgba(236,165,30,.15); color:var(--amber2); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:var(--onyx); font-weight:600; font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; font-family:'Barlow Condensed',sans-serif; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--amber2); transform:scaleX(0); transition:transform .2s; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .hours-table { width:100%; }
+  .hours-table tr { border-bottom:1px solid rgba(57,67,80,.12); }
+  .hours-table tr:last-child { border-bottom:none; }
+  .hours-table th { text-align:left; padding:.75rem 0; color:var(--onyx); font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+  .hours-table td { text-align:right; padding:.75rem 0; font-weight:600; color:var(--slate4); font-family:'Barlow Condensed',sans-serif; letter-spacing:.04em; }
+  .hours-table .closed { color:var(--amber2); }
+  .map-wrap { overflow:hidden; border:2px solid var(--slate4); }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--slate4); border-top:2px solid var(--amber2); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; font-weight:700; font-size:.85rem; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; letter-spacing:.08em; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+  .legal-table { width:100%; border-collapse:collapse; }
+  .legal-table th, .legal-table td { padding:.85rem 1rem; text-align:left; border-bottom:1px solid rgba(57,67,80,.12); font-size:.95rem; }
+  .legal-table th { color:var(--slate4); font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:.05em; text-transform:uppercase; background:rgba(57,67,80,.04); width:40%; }
+  .legal-table td { color:var(--onyx); font-weight:600; }
+</style>
+</head>
+<body class="bg-offwhite text-onyx">
+
+<!-- TOP BAR -->
+<div class="bg-slate4-700 text-offwhite/85 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span style="font-family:'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;"><i class="fas fa-wrench mr-1"></i> Service auto</span>
+      <span class="hidden sm:inline" style="font-family:'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;"><i class="fas fa-file-medical mr-1"></i> Constatare daune</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:0790833323" class="hover:text-amber2-300"><i class="fas fa-phone mr-1"></i> 0790 833 323</a>
+      <a href="tel:0349417720" class="hidden sm:inline hover:text-amber2-300"><i class="fas fa-phone-volume mr-1"></i> 0349 417 720</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="bg-offwhite/95 backdrop-blur sticky top-0 z-50 border-b-2 border-slate4-500">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-12 h-12 bg-slate4-500 text-amber2-300 flex items-center justify-center">
+        <i class="fas fa-car-on text-xl"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-2xl text-slate4-700">Comrem Service</div>
+        <div class="text-[10px] tracking-[.3em] uppercase text-amber2-600 font-bold">Slatina &middot; din 2000</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#daune" class="nav-link">Daune</a>
+      <a href="#firma" class="nav-link">Firm&#259;</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+    </nav>
+    <a href="tel:0790833323" class="btn-primary hidden md:inline-flex"><i class="fas fa-phone"></i> Sun&#259;</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-surface diag-bg">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="chip chip-slate"><i class="fas fa-award"></i> Din 24 august 2000</span>
+        <span class="chip chip-amber"><i class="fas fa-file-shield"></i> Punct constatare daune</span>
+      </div>
+      <h1 class="headline mb-6">
+        Service auto &#537;i<br>punct de <em>constatare daune</em><br>&#238;n Slatina de 25 de ani.
+      </h1>
+      <p class="text-lg text-onyx/75 leading-relaxed max-w-2xl mb-8">Comrem Service SRL ofer&#259; servicii complete de mecanic&#259; auto &#537;i ac&#539;ioneaz&#259; ca punct de constatare daune pentru asigur&#259;ri. Suntem specializati pe Dacia &#537;i Daewoo, dar servim &#537;i alte marci. Cu rating 4.4/5 din 19 recenzii clien&#539;i, pe str. Cirea&#537;ov.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0790833323" class="btn-primary"><i class="fas fa-phone"></i> 0790 833 323</a>
+        <a href="tel:0349417720" class="btn-amber"><i class="fas fa-phone-volume"></i> 0349 417 720</a>
+        <a href="https://wa.me/40790833323" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+      <div class="grid grid-cols-4 gap-4 max-w-xl border-t-2 border-slate4-300 pt-6">
+        <div>
+          <div class="stat-num">25</div>
+          <div class="text-[10px] uppercase tracking-widest text-amber2-600 mt-1 font-bold" style="font-family:'Barlow Condensed',sans-serif;letter-spacing:.15em;">Ani experien&#539;&#259;</div>
+        </div>
+        <div>
+          <div class="stat-num">4.4</div>
+          <div class="text-[10px] uppercase tracking-widest text-amber2-600 mt-1 font-bold" style="font-family:'Barlow Condensed',sans-serif;letter-spacing:.15em;">Rating Google</div>
+        </div>
+        <div>
+          <div class="stat-num">19</div>
+          <div class="text-[10px] uppercase tracking-widest text-amber2-600 mt-1 font-bold" style="font-family:'Barlow Condensed',sans-serif;letter-spacing:.15em;">Recenzii</div>
+        </div>
+        <div>
+          <div class="stat-num">733K</div>
+          <div class="text-[10px] uppercase tracking-widest text-amber2-600 mt-1 font-bold" style="font-family:'Barlow Condensed',sans-serif;letter-spacing:.15em;">CA 2024 (RON)</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="bg-white p-8 border-l-4 border-amber2-400 shadow-xl">
+        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate4-100">
+          <div class="w-12 h-12 bg-slate4-500 text-amber2-300 flex items-center justify-center"><i class="fas fa-calendar"></i></div>
+          <div>
+            <h3 class="font-display text-2xl text-slate4-700">Programa&#539;i o vizit&#259;</h3>
+            <p class="text-xs text-onyx/60">Accept&#259;m p&#226;n&#259; joi diminea&#539;a pentru s&#259;pt&#259;m&#226;na urm&#259;toare</p>
+          </div>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Mobil</div>
+              <a href="tel:0790833323" class="font-display text-2xl text-slate4-700">0790 833 323</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone-volume"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Fix Service</div>
+              <a href="tel:0349417720" class="font-display text-lg text-slate4-700">0349 417 720</a>
+              <div class="text-xs text-onyx/60">alt: 0744 360 432</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-fax"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Fax</div>
+              <div class="font-semibold text-slate4-700">0349 417 719</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Adres&#259;</div>
+              <div class="font-semibold">Strada Cirea&#537;ov 5</div>
+              <div class="text-xs text-onyx/60">230070 Slatina, Olt</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="py-20 lg:py-28 bg-offwhite">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre Comrem</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Service auto &#537;i <em class="text-slate4-600">punct de constatare daune</em></h2>
+      <p class="text-lg text-onyx/75 leading-relaxed mb-4">Comrem Service SRL func&#539;ioneaz&#259; &#238;n Slatina din august 2000. &#206;n cele dou&#259; decenii &#537;i jum&#259;tate de activitate, am construit o reputa&#539;ie de service de &#238;ncredere pentru proprietarii de ma&#537;ini din Olt, inclusiv prin rolul de punct oficial de constatare daune pentru companiile de asigur&#259;ri.</p>
+      <p class="text-lg text-onyx/75 leading-relaxed">Acoperim pe fluxul normal: consulta&#539;ie-diagnosticare, reparatie, vopsitorie, predare. Pentru daune &#238;n asigurare, facem evaluarea &#537;i putem prelua &#537;i repara &#238;n acela&#537;i loc, dac&#259; dori&#539;i.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-handshake"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Seriozitate</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Clien&#539;ii descriu echipa ca fiind profesional&#259;, atent&#259; la detalii &#537;i amabil&#259;. Preluam ma&#537;ina cu grij&#259; &#537;i o tratam cu respect.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-chart-line"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Cre&#537;tere constant&#259;</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Cifra de afaceri a crescut cu 65% &#238;n 2024 fa&#539;&#259; de 2023, cu profit net ferm. Un service &#238;n cre&#537;tere, cu clien&#539;i &#238;n cre&#537;tere.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-wheelchair"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Acces pentru toti</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Intrarea este accesibil&#259; pentru persoane cu mobilitate redus&#259;, ca s&#259; pute&#539;i veni chiar dumneavoastr&#259; s&#259; discut&#259;m despre ma&#537;in&#259;.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-file-shield"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Lucru cu asigur&#259;rile</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Ca punct oficial de constatare daune, facem direct paperwork-ul cu asigur&#259;torul. V&#259; scutim de umblat &#238;ntre birouri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 lg:py-28 bg-slate4-50/80">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Serviciile atelierului</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4">Reparatii <em class="text-slate4-600">mecanice</em> &#537;i <em class="text-slate4-600">caroserie</em></h2>
+      <p class="text-lg text-onyx/75 max-w-2xl mx-auto">Servicii complete de service auto + constatare daune pentru asigur&#259;ri, sub acela&#537;i acoperi&#537;.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-car-battery"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Diagnoz&#259; computerizat&#259;</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Verific&#259;m electronica auto cu testere profesionale &#537;i identific&#259;m codurile de eroare &#238;nainte de orice interven&#539;ie.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-oil-can"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Schimb ulei &#537;i revizii</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Revizii complete la intervale recomandate: ulei motor, filtre (ulei, aer, polen, combustibil), fluide &#537;i verificari.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-gears"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Motor &#537;i cutie</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Reparatii motor &#537;i cutie de viteze: curele de distributie, set ambreiaj, chiul&#259;, garnituri, rectificari.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-stop-circle"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Fr&#226;ne</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">&#206;nlocuire pl&#259;cute, discuri fr&#226;n&#259;, cilindri, ABS, plus verificare complet&#259; a sistemului de fr&#226;nare.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-bolt"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Instala&#539;ie electric&#259;</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Repara&#539;ii alternator, demaror, fascicul, senzori, faruri, lumini habitaclu &#537;i componente electronice.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-compass"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Direc&#539;ie &#537;i suspensie</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Reparatii la sistemul de direc&#539;ie &#537;i suspensie, geometrie ro&#539;i, bie&#539;e, articula&#539;ii &#537;i telescoape.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-gas-pump"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Sistem de alimentare</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Interven&#539;ii la sistemul de injec&#539;ie, pompe combustibil, rampa comun&#259;, &#238;nl&#259;turare blocaje.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-paint-roller"></i></div>
+        <h3 class="font-display text-xl text-slate4-700 mb-2">Tinichigerie &#537;i vopsitorie</h3>
+        <p class="text-sm text-onyx/75 leading-relaxed">Reparatii caroserie (&#238;n&#259;l&#539;ime max 2.7m), sudare, vopsitorie auto cu tranzi&#539;ii de culoare.</p>
+      </div>
+      <div class="card" style="background:linear-gradient(135deg,#394350,#576679);color:#f6f3ee;border:none;">
+        <div class="service-ico mb-4" style="background:#eca51e;color:#12161b;"><i class="fas fa-file-medical"></i></div>
+        <h3 class="font-display text-xl text-amber2-300 mb-2">Constatare daune auto</h3>
+        <p class="text-sm text-offwhite/85 leading-relaxed">Ca punct oficial, evalu&#259;m dauna &#537;i preg&#259;tim documentele pentru asigurator. Rapid, f&#259;r&#259; interpu&#537;i.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAUNE -->
+<section id="daune" class="py-20 lg:py-28 bg-slate4-700 text-offwhite">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label" style="color:#f9c35a;">Constatare daune</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Punct de constatare <em class="text-amber2-300">oficial</em></h2>
+      <p class="text-lg text-offwhite/80 leading-relaxed mb-4">Dac&#259; a&#539;i avut un accident, veni&#539;i la Comrem pentru evaluarea daunei. Suntem punct oficial de constatare pentru mai multe companii de asigur&#259;ri. Evalu&#259;m dauna, facem actele &#537;i, dac&#259; dori&#539;i, prelu&#259;m &#537;i repara&#539;ia.</p>
+      <p class="text-lg text-offwhite/80 leading-relaxed">Primul pas e simplu: suna&#539;i &#537;i fixati o or&#259; convenabil&#259; pentru constatare. Aduce&#539;i ma&#537;ina &#537;i documenta&#539;ia de la asigurator.</p>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-slate4-800 p-6 border-l-4 border-amber2-400">
+          <div class="w-12 h-12 bg-amber2-400 text-onyx flex items-center justify-center mb-3"><i class="fas fa-1 text-xl font-bold"></i></div>
+          <h3 class="font-display text-lg text-offwhite mb-2">Programa&#539;i evaluarea</h3>
+          <p class="text-sm text-offwhite/75">Suna&#539;i s&#259; fix&#259;m o or&#259;. Prelu&#259;m &#537;i dosarul vostru de asigurare.</p>
+        </div>
+        <div class="bg-slate4-800 p-6 border-l-4 border-amber2-400">
+          <div class="w-12 h-12 bg-amber2-400 text-onyx flex items-center justify-center mb-3"><i class="fas fa-2 text-xl font-bold"></i></div>
+          <h3 class="font-display text-lg text-offwhite mb-2">Evalu&#259;m dauna</h3>
+          <p class="text-sm text-offwhite/75">Verific&#259;m ma&#537;ina, document&#259;m cu fotografii &#537;i redact&#259;m raportul.</p>
+        </div>
+        <div class="bg-slate4-800 p-6 border-l-4 border-amber2-400">
+          <div class="w-12 h-12 bg-amber2-400 text-onyx flex items-center justify-center mb-3"><i class="fas fa-3 text-xl font-bold"></i></div>
+          <h3 class="font-display text-lg text-offwhite mb-2">Acte la asigurator</h3>
+          <p class="text-sm text-offwhite/75">Transmit&#259;m raportul la asigurator. A&#537;tept&#259;m acceptul pentru reparatie.</p>
+        </div>
+        <div class="bg-slate4-800 p-6 border-l-4 border-amber2-400">
+          <div class="w-12 h-12 bg-amber2-400 text-onyx flex items-center justify-center mb-3"><i class="fas fa-4 text-xl font-bold"></i></div>
+          <h3 class="font-display text-lg text-offwhite mb-2">Reparatie la alegere</h3>
+          <p class="text-sm text-offwhite/75">Pute&#539;i repara la noi sau &#238;n alt&#259; parte. Noi nu pres&#259;m deciziile.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRMA -->
+<section id="firma" class="py-20 lg:py-28 bg-offwhite">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Date oficiale</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Firm&#259; <em class="text-slate4-600">&#238;nregistrat&#259;</em> din anul 2000</h2>
+      <p class="text-lg text-onyx/75 leading-relaxed mb-4">COMREM SERVICE SRL este &#238;nregistrat la Oficiul Registrului Comer&#539;ului Olt din 24 august 2000. Toate datele oficiale pot fi verificate pe ONRC sau listafirme.ro.</p>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="bg-white border border-slate4-100 shadow-sm">
+        <table class="legal-table">
+          <tbody>
+            <tr><th>Denumire oficial&#259;</th><td>COMREM SERVICE SRL</td></tr>
+            <tr><th>CUI</th><td>13322342</td></tr>
+            <tr><th>Num&#259;r registru</th><td>J28/158/2000</td></tr>
+            <tr><th>Data &#238;nfiin&#539;&#259;rii</th><td>24 august 2000</td></tr>
+            <tr><th>Cod CAEN principal</th><td>4520 &middot; Repara&#539;ii auto</td></tr>
+            <tr><th>Categorie</th><td>Microintreprindere</td></tr>
+            <tr><th>CA 2024</th><td>733.168 RON</td></tr>
+            <tr><th>Profit net 2024</th><td>139.093 RON</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="py-20 lg:py-28 bg-slate4-50/80">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Program</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Orele de <em class="text-slate4-600">deschidere</em></h2>
+      <p class="text-lg text-onyx/75 leading-relaxed mb-6">Lucr&#259;m luni-vineri. Pentru constatari urgente (accident recent, daun&#259; care blocheaz&#259; ma&#537;ina), suna&#539;i &#238;nainte &#537;i g&#259;sim solu&#539;ii.</p>
+      <div class="flex gap-3">
+        <a href="tel:0790833323" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+        <a href="https://wa.me/40790833323" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="bg-white p-8 border border-slate4-100">
+        <table class="hours-table">
+          <tr><th>Luni</th><td>09:00 &ndash; 16:30</td></tr>
+          <tr><th>Mar&#539;i</th><td>09:00 &ndash; 16:30</td></tr>
+          <tr><th>Miercuri</th><td>09:00 &ndash; 16:30</td></tr>
+          <tr><th>Joi</th><td>09:00 &ndash; 16:30</td></tr>
+          <tr><th>Vineri</th><td>09:00 &ndash; 16:30</td></tr>
+          <tr><th>S&#226;mb&#259;t&#259;</th><td class="closed">&#206;nchis</td></tr>
+          <tr><th>Duminic&#259;</th><td class="closed">&#206;nchis</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIE -->
+<section id="locatie" class="py-20 lg:py-28 bg-offwhite">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label">Unde ne g&#259;si&#539;i</div>
+      <h2 class="text-4xl lg:text-5xl mt-4">Pe <em class="text-slate4-600">Strada Cirea&#537;ov</em>, &#238;n Slatina</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-white p-8 border-l-4 border-slate4-500" data-aos="fade-right">
+        <h3 class="font-display text-2xl text-slate4-700 mb-5">Atelier Comrem</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-location-dot"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Adres&#259;</div>
+              <div class="font-semibold">Strada Cirea&#537;ov 5</div>
+              <div class="text-sm text-onyx/65">230070 Slatina, Olt</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Telefon</div>
+              <a href="tel:0790833323" class="font-display text-2xl text-slate4-700">0790 833 323</a>
+              <div class="text-xs text-onyx/60">alt: 0744 360 432</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone-volume"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Fix</div>
+              <div class="font-semibold text-slate4-700 font-display text-lg">0349 417 720</div>
+              <div class="text-xs text-onyx/60">Fax: 0349 417 719</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-map"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-amber2-600 font-bold" style="font-family:'Barlow Condensed',sans-serif;">Cod Plus</div>
+              <div class="font-semibold">C9JM+XX Slatina</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=44.4323812,24.3848826&hl=ro&z=17&output=embed" width="100%" height="520" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Comrem Service Slatina"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section class="py-20 lg:py-28 bg-amber2-400 text-onyx relative overflow-hidden diag-bg">
+  <div class="relative max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#492e05;">Contact</div>
+    <h2 class="text-4xl lg:text-5xl mt-4 mb-5">Ma&#537;ina ta are nevoie de un service <em style="color:#394350;">de &#238;ncredere</em></h2>
+    <p class="text-onyx/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Sun&#259; pentru programare sau pentru constatare daun&#259;. Avem experien&#539;a, autorizarile &#537;i r&#259;bdarea s&#259; rezolv&#259;m problema.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0790833323" class="btn-primary"><i class="fas fa-phone"></i> 0790 833 323</a>
+      <a href="tel:0349417720" class="btn-outline" style="border-color:#0c0e12;color:#0c0e12;"><i class="fas fa-phone-volume"></i> 0349 417 720</a>
+      <a href="https://wa.me/40790833323" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-onyx text-offwhite/75 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 bg-slate4-500 text-amber2-300 flex items-center justify-center"><i class="fas fa-car-on"></i></div>
+        <div>
+          <div class="font-display text-xl text-offwhite">Comrem Service</div>
+          <div class="text-[10px] tracking-[.3em] uppercase text-amber2-300 font-bold">Slatina &middot; din 2000</div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">Service auto cu 25 ani experien&#539;&#259; &#238;n Slatina &#537;i punct oficial de constatare daune pentru asigur&#259;ri.</p>
+    </div>
+    <div>
+      <h4 class="font-display text-offwhite text-lg mb-4">Naviga&#539;ie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#despre" class="hover:text-amber2-300">Despre</a></li>
+        <li><a href="#servicii" class="hover:text-amber2-300">Servicii</a></li>
+        <li><a href="#daune" class="hover:text-amber2-300">Constatare daune</a></li>
+        <li><a href="#firma" class="hover:text-amber2-300">Firm&#259;</a></li>
+        <li><a href="#locatie" class="hover:text-amber2-300">Loca&#539;ie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-offwhite text-lg mb-4">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fas fa-phone text-amber2-300 mr-2"></i> <a href="tel:0790833323" class="hover:text-amber2-300">0790 833 323</a></li>
+        <li><i class="fas fa-phone-volume text-amber2-300 mr-2"></i> <a href="tel:0349417720" class="hover:text-amber2-300">0349 417 720</a></li>
+        <li><i class="fas fa-fax text-amber2-300 mr-2"></i> 0349 417 719</li>
+        <li><i class="fas fa-map-marker-alt text-amber2-300 mr-2"></i> Str. Cirea&#537;ov 5, Slatina</li>
+        <li><i class="fas fa-id-card text-amber2-300 mr-2"></i> CUI 13322342 &middot; J28/158/2000</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-xs text-offwhite/50">
+    <div>&copy; 2026 COMREM SERVICE SRL. Toate drepturile rezervate.</div>
+    <div>CAEN 4520 &middot; Service auto &middot; Slatina, Olt</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:0790833323" class="btn-amber"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40790833323" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Comrem Service",
+  "legalName": "COMREM SERVICE SRL",
+  "foundingDate": "2000-08-24",
+  "taxID": "13322342",
+  "telephone": ["+40790833323","+40349417720","+40744360432"],
+  "faxNumber": "+40349417719",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Cirea&#537;ov 5",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230070",
+    "addressCountry": "RO"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":44.4323812,"longitude":24.3848826},
+  "areaServed": "Slatina, Olt",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"16:30"}
+  ],
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"19","bestRating":"5","worstRating":"1"}
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+</body>
+</html>

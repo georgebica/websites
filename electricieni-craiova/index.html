@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electricieni Craiova | Interven&#539;ii Electrice 24/7, 7 Zile din 7</title>
+<meta name="description" content="Electricieni Craiova &#8212; servicii electrice non-stop &#238;n Craiova &#537;i Dolj. Interven&#539;ie rapid&#259; la orice or&#259;. Sun&#259; 0741 039 100.">
+<meta name="theme-color" content="#B91C1C">
+<link rel="canonical" href="/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{emerg:'#B91C1C','emerg-deep':'#7F1D1D','emerg-light':'#FCA5A5','volt':'#FACC15','volt-dark':'#CA8A04',night:'#0A0A0A','night-2':'#171717',bone:'#FAFAF9'},fontFamily:{heading:['"Archivo Black"','sans-serif'],body:['Inter','sans-serif']}}}}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:#0A0A0A;color:#FAFAF9}
+.warn-stripes{background-image:repeating-linear-gradient(-45deg,#FACC15 0 14px,#0A0A0A 14px 28px)}
+.pulse-dot{position:relative}
+.pulse-dot::before{content:'';position:absolute;inset:-4px;border-radius:999px;background:#B91C1C;opacity:0.6;animation:p 1.5s ease-out infinite}
+.pulse-dot::after{content:'';position:absolute;inset:0;border-radius:999px;background:#DC2626}
+@keyframes p{0%{transform:scale(1);opacity:0.8}100%{transform:scale(2.5);opacity:0}}
+.live-time{font-variant-numeric:tabular-nums}
+.ticker{animation:tick 35s linear infinite}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.grid-bg{background-image:radial-gradient(rgba(250,204,21,0.08) 1px,transparent 1px);background-size:30px 30px}
+.ring-coverage{border:2px dashed rgba(250,204,21,0.35)}
+.service-row{transition:all 200ms}
+.service-row:hover{background:rgba(250,204,21,0.06);padding-left:2.5rem}
+.callout-tile{background:linear-gradient(135deg,#7F1D1D,#B91C1C);position:relative;overflow:hidden}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:#0A0A0A}
+::-webkit-scrollbar-thumb{background:#FACC15;border-radius:999px}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Electrician",
+  "name":"Electricieni Craiova",
+  "url":"/",
+  "telephone":"+40741039100",
+  "address":{"@type":"PostalAddress","streetAddress":"Bloc I5, Strada Colonel Scarlat Demetriade 5","addressLocality":"Craiova","postalCode":"200166","addressRegion":"Dolj","addressCountry":"RO"},
+  "geo":{"@type":"GeoCoordinates","latitude":44.3308932,"longitude":23.7942567},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"7","bestRating":"5"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}]
+}
+</script>
+</head>
+<body class="bg-night font-body text-bone pb-20 md:pb-0">
+
+<div class="warn-stripes h-2"></div>
+
+<nav id="site-nav" class="sticky top-0 z-50 bg-night/95 backdrop-blur border-b border-bone/10">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <a href="#acasa" class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center bg-volt text-night rounded">
+        <i class="fa-solid fa-bolt text-lg"></i>
+      </div>
+      <div>
+        <div class="font-heading text-sm tracking-tight text-bone">ELECTRICIENI</div>
+        <div class="font-heading text-xs tracking-[0.2em] text-volt">CRAIOVA &middot; 24/7</div>
+      </div>
+    </a>
+    <div class="hidden items-center gap-8 md:flex">
+      <a href="#servicii" class="text-xs font-bold uppercase tracking-[0.2em] text-bone/80 hover:text-volt transition">Servicii</a>
+      <a href="#interventii" class="text-xs font-bold uppercase tracking-[0.2em] text-bone/80 hover:text-volt transition">Interven&#539;ii</a>
+      <a href="#zona" class="text-xs font-bold uppercase tracking-[0.2em] text-bone/80 hover:text-volt transition">Zon&#259;</a>
+      <a href="#contact" class="text-xs font-bold uppercase tracking-[0.2em] text-bone/80 hover:text-volt transition">Contact</a>
+    </div>
+    <a href="tel:0741039100" class="hidden sm:inline-flex items-center gap-3 bg-emerg px-5 py-2.5 font-heading text-sm text-bone tracking-wide hover:bg-emerg-deep transition">
+      <span class="pulse-dot inline-block h-2 w-2 rounded-full"></span>
+      <span>URGEN&#538;E 24/7</span>
+    </a>
+    <button id="menu-toggle" class="md:hidden h-10 w-10 border border-bone/20 text-bone flex items-center justify-center" aria-label="Meniu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 z-[60] hidden bg-night px-6 py-6">
+  <div class="flex items-center justify-between">
+    <div class="font-heading text-lg">ELECTRICIENI <span class="text-volt">CRAIOVA</span></div>
+    <button id="menu-close" class="h-10 w-10 border border-bone/20 text-bone flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mt-14 flex flex-col gap-7">
+    <a href="#servicii" class="mobile-link font-heading text-4xl">SERVICII</a>
+    <a href="#interventii" class="mobile-link font-heading text-4xl">INTERVEN&#538;II</a>
+    <a href="#zona" class="mobile-link font-heading text-4xl">ZON&#258;</a>
+    <a href="#contact" class="mobile-link font-heading text-4xl">CONTACT</a>
+    <a href="tel:0741039100" class="mt-6 bg-emerg px-6 py-4 text-center font-heading text-bone">0741 039 100</a>
+  </div>
+</div>
+
+<main>
+
+<section id="acasa" class="relative overflow-hidden">
+  <div class="absolute inset-0 grid-bg opacity-50"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(250,204,21,0.15),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(185,28,28,0.2),transparent_45%)]"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-24 lg:pt-28 lg:pb-32">
+    <div class="flex items-center gap-3 mb-8" data-aos="fade-right">
+      <div class="flex items-center gap-2 bg-emerg/15 border border-emerg/40 px-4 py-2">
+        <span class="pulse-dot inline-block h-2 w-2 rounded-full"></span>
+        <span class="font-heading text-xs tracking-[0.18em] text-bone">DISPONIBILI ACUM &middot; <span id="live-clock" class="live-time text-volt">&mdash;&mdash;:&mdash;&mdash;</span></span>
+      </div>
+      <div class="hidden sm:block font-heading text-xs tracking-[0.18em] text-bone/50">LOCATION / CRAIOVA &middot; DOLJ</div>
+    </div>
+
+    <h1 class="font-heading text-[3rem] leading-[0.88] tracking-tight text-bone sm:text-7xl lg:text-[8rem]" data-aos="fade-up">
+      S&#258; SE FAC&#258;<br>LUMIN&#258;.<br><span class="text-volt">NON-STOP.</span>
+    </h1>
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-[1.5fr_1fr] items-end">
+      <div data-aos="fade-up" data-aos-delay="100">
+        <p class="max-w-2xl text-lg leading-relaxed text-bone/75">
+          Electricieni autoriza&#539;i &#238;n Craiova &#537;i toat&#259; Dolj. Venim la tine la orice or&#259;, pentru orice defec&#539;iune. Bran&#537;amente, tablouri, &#238;mp&#259;m&#226;nt&#259;ri, scurtcircuite, iluminat, prize &#238;n perete. Lucrare curat&#259;, cu garan&#539;ie pe h&#226;rtie.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="tel:0741039100" class="group inline-flex items-center gap-4 bg-volt text-night px-10 py-5 font-heading tracking-wider hover:bg-yellow-300 transition">
+            <i class="fa-solid fa-phone-volume text-2xl"></i>
+            <span class="text-2xl sm:text-3xl">0741 039 100</span>
+          </a>
+          <div class="inline-flex flex-col">
+            <span class="font-heading text-xs tracking-[0.2em] text-bone/50">R&#258;SPUNS IMEDIAT</span>
+            <span class="text-sm text-bone/70">Sun&#259; pentru orice interven&#539;ie</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-0 border border-bone/15" data-aos="fade-left">
+        <div class="border-r border-bone/15 px-5 py-6 text-center">
+          <div class="font-heading text-5xl text-volt">24/7</div>
+          <div class="mt-2 text-[0.65rem] uppercase tracking-[0.14em] text-bone/55">Non-stop</div>
+        </div>
+        <div class="border-r border-bone/15 px-5 py-6 text-center">
+          <div class="font-heading text-5xl text-volt">4.4</div>
+          <div class="mt-2 text-[0.65rem] uppercase tracking-[0.14em] text-bone/55">Din 5 Google</div>
+        </div>
+        <div class="px-5 py-6 text-center">
+          <div class="font-heading text-5xl text-volt">1h</div>
+          <div class="mt-2 text-[0.65rem] uppercase tracking-[0.14em] text-bone/55">Timp sosire</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="warn-stripes h-3"></div>
+<div class="relative bg-night py-6 overflow-hidden border-b border-bone/10">
+  <div class="ticker flex gap-10 whitespace-nowrap font-heading text-lg text-bone/55">
+    <span>&#9889; SCURTCIRCUIT</span><span>&#9889; PRIZA ARS&#258;</span><span>&#9889; TABLOU DEFECT</span><span>&#9889; BRAN&#536;AMENT NOU</span><span>&#9889; &#206;MP&#258;M&#194;NTARE</span><span>&#9889; ILUMINAT INTERIOR</span><span>&#9889; ILUMINAT EXTERIOR</span><span>&#9889; URGEN&#538;E DE NOAPTE</span>
+    <span>&#9889; SCURTCIRCUIT</span><span>&#9889; PRIZA ARS&#258;</span><span>&#9889; TABLOU DEFECT</span><span>&#9889; BRAN&#536;AMENT NOU</span><span>&#9889; &#206;MP&#258;M&#194;NTARE</span><span>&#9889; ILUMINAT INTERIOR</span><span>&#9889; ILUMINAT EXTERIOR</span><span>&#9889; URGEN&#538;E DE NOAPTE</span>
+  </div>
+</div>
+
+<section id="interventii" class="bg-night py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-16" data-aos="fade-up">
+      <div class="font-heading text-xs tracking-[0.25em] text-volt">// 01 PENTRU CINE VENIM</div>
+      <h2 class="mt-4 font-heading text-5xl leading-[0.92] sm:text-7xl">4 MOMENTE C&#194;ND<br>SUN&#258; LA NOI.</h2>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="callout-tile p-10" data-aos="fade-up">
+        <div class="flex items-start justify-between">
+          <div class="font-heading text-xs tracking-[0.2em] text-volt">URGEN&#538;&#258; / 01</div>
+          <i class="fa-solid fa-house-fire text-bone/30 text-4xl"></i>
+        </div>
+        <h3 class="mt-6 font-heading text-4xl leading-tight">S-A &#238;ntunecat</h3>
+        <p class="mt-4 text-bone/85 leading-relaxed">Scurtcircuit, siguran&#539;&#259; s&#259;rit&#259;, apartamentul f&#259;r&#259; curent, cortul f&#259;r&#259; lumin&#259;. Venim repede, g&#259;sim problema, o reparam.</p>
+        <div class="mt-6 flex items-center gap-2 font-heading text-xs tracking-[0.18em] text-volt">
+          <i class="fa-solid fa-clock"></i> VENIM &#206;N 30-60 MIN
+        </div>
+      </div>
+      <div class="callout-tile p-10 md:mt-10" data-aos="fade-up" data-aos-delay="80">
+        <div class="flex items-start justify-between">
+          <div class="font-heading text-xs tracking-[0.2em] text-volt">URGEN&#538;&#258; / 02</div>
+          <i class="fa-solid fa-plug-circle-exclamation text-bone/30 text-4xl"></i>
+        </div>
+        <h3 class="mt-6 font-heading text-4xl leading-tight">PRIZA FUMEG&#258;</h3>
+        <p class="mt-4 text-bone/85 leading-relaxed">Miros de ars, prize c&#259;lduroase, cabluri vechi. Nu mai a&#537;tepta luni diminea&#539;a. Verific&#259;m &#238;n noaptea asta.</p>
+        <div class="mt-6 flex items-center gap-2 font-heading text-xs tracking-[0.18em] text-volt">
+          <i class="fa-solid fa-clock"></i> OPERATIVI 24/7
+        </div>
+      </div>
+      <div class="callout-tile p-10" data-aos="fade-up" data-aos-delay="160">
+        <div class="flex items-start justify-between">
+          <div class="font-heading text-xs tracking-[0.2em] text-volt">LUCRARE / 03</div>
+          <i class="fa-solid fa-house-laptop text-bone/30 text-4xl"></i>
+        </div>
+        <h3 class="mt-6 font-heading text-4xl leading-tight">CAS&#258; NOU&#258;</h3>
+        <p class="mt-4 text-bone/85 leading-relaxed">Instala&#539;ie electric&#259; complet&#259; pentru o cas&#259; sau apartament. Proiect, cabluri &#238;n perete, tablou, finisaj, bran&#537;ament la electrician.</p>
+        <div class="mt-6 flex items-center gap-2 font-heading text-xs tracking-[0.18em] text-volt">
+          <i class="fa-solid fa-clock"></i> 3-10 ZILE / CONTRACT
+        </div>
+      </div>
+      <div class="callout-tile p-10 md:mt-10" data-aos="fade-up" data-aos-delay="240">
+        <div class="flex items-start justify-between">
+          <div class="font-heading text-xs tracking-[0.2em] text-volt">LUCRARE / 04</div>
+          <i class="fa-solid fa-tools text-bone/30 text-4xl"></i>
+        </div>
+        <h3 class="mt-6 font-heading text-4xl leading-tight">AMENAJEZI</h3>
+        <p class="mt-4 text-bone/85 leading-relaxed">Mut&#259;m prize, facem spot-uri &#238;n tavan, &#238;nlocuim tablou, punem instala&#539;ie nou&#259; la baie sau buc&#259;t&#259;rie.</p>
+        <div class="mt-6 flex items-center gap-2 font-heading text-xs tracking-[0.18em] text-volt">
+          <i class="fa-solid fa-clock"></i> 1-3 ZILE / LUCRARE
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="relative bg-night-2 py-24">
+  <div class="absolute inset-0 grid-bg opacity-30"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-14" data-aos="fade-up">
+      <div class="font-heading text-xs tracking-[0.25em] text-volt">// 02 LIST&#258; COMPLET&#258;</div>
+      <h2 class="mt-4 font-heading text-5xl leading-[0.92] sm:text-7xl">SERVICII ELECTRICE.</h2>
+    </div>
+
+    <div class="grid gap-0 border border-bone/10">
+      <div class="service-row flex items-center justify-between border-b border-bone/10 px-8 py-6" data-aos="fade-up">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">01</span>
+          <span class="font-heading text-xl">Interven&#539;ii de urgen&#539;&#259;</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+      <div class="service-row flex items-center justify-between border-b border-bone/10 px-8 py-6" data-aos="fade-up" data-aos-delay="40">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">02</span>
+          <span class="font-heading text-xl">Scurtcircuite &#537;i siguran&#539;e</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+      <div class="service-row flex items-center justify-between border-b border-bone/10 px-8 py-6" data-aos="fade-up" data-aos-delay="80">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">03</span>
+          <span class="font-heading text-xl">Bran&#537;amente noi</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+      <div class="service-row flex items-center justify-between border-b border-bone/10 px-8 py-6" data-aos="fade-up" data-aos-delay="120">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">04</span>
+          <span class="font-heading text-xl">Tablouri electrice</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+      <div class="service-row flex items-center justify-between border-b border-bone/10 px-8 py-6" data-aos="fade-up" data-aos-delay="160">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">05</span>
+          <span class="font-heading text-xl">&#206;mp&#259;m&#226;nt&#259;ri &#537;i paratr&#259;sn&#259;tori</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+      <div class="service-row flex items-center justify-between border-b border-bone/10 px-8 py-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">06</span>
+          <span class="font-heading text-xl">Prize, &#238;ntrerup&#259;toare, iluminat</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+      <div class="service-row flex items-center justify-between border-b border-bone/10 px-8 py-6" data-aos="fade-up" data-aos-delay="240">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">07</span>
+          <span class="font-heading text-xl">Instala&#539;ii electrice complete</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+      <div class="service-row flex items-center justify-between px-8 py-6" data-aos="fade-up" data-aos-delay="280">
+        <div class="flex items-center gap-6">
+          <span class="font-heading text-xs tracking-[0.2em] text-volt">08</span>
+          <span class="font-heading text-xl">Verific&#259;ri PRAM &#537;i m&#259;sur&#259;tori</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-bone/40"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="zona" class="relative bg-night py-24 overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(250,204,21,0.1),transparent_60%)]"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-14 lg:grid-cols-[1fr_1fr] items-center">
+      <div data-aos="fade-right">
+        <div class="font-heading text-xs tracking-[0.25em] text-volt">// 03 UNDE VENIM</div>
+        <h2 class="mt-4 font-heading text-5xl leading-[0.92] sm:text-6xl">TOT CRAIOVA.<br><span class="text-volt">DOLJ &#206;NTREG.</span></h2>
+        <p class="mt-6 max-w-lg text-bone/75 leading-relaxed">Lucr&#259;m &#238;n tot Craiova &#537;i &#238;n jude&#539;ul Dolj. Centrala noastr&#259; este &#238;n centru, dar echipe sunt distribuite astfel &#238;nc&#226;t putem ajunge rapid oriunde &#238;n zona metropolitan&#259;.</p>
+        <div class="mt-10 grid grid-cols-2 gap-3">
+          <div class="border border-bone/15 px-5 py-4"><div class="font-heading text-xs tracking-wider text-volt">&lt; 30 MIN</div><div class="mt-1 text-bone/80">Craiova &middot; centru, zonele Rovine, Craiovi&#539;a, Brazda</div></div>
+          <div class="border border-bone/15 px-5 py-4"><div class="font-heading text-xs tracking-wider text-volt">&lt; 60 MIN</div><div class="mt-1 text-bone/80">Toat&#259; Craiova &middot; Popoveni, I&#537;alni&#539;a, Cernele</div></div>
+          <div class="border border-bone/15 px-5 py-4"><div class="font-heading text-xs tracking-wider text-volt">&lt; 90 MIN</div><div class="mt-1 text-bone/80">Zona metropolitan&#259; Craiova</div></div>
+          <div class="border border-bone/15 px-5 py-4"><div class="font-heading text-xs tracking-wider text-volt">2-3 ORE</div><div class="mt-1 text-bone/80">Celelalte localit&#259;&#539;i din Dolj</div></div>
+        </div>
+      </div>
+      <div class="relative flex items-center justify-center" data-aos="zoom-in">
+        <div class="relative h-[22rem] w-[22rem] sm:h-[26rem] sm:w-[26rem]">
+          <div class="ring-coverage absolute inset-0 rounded-full"></div>
+          <div class="ring-coverage absolute inset-8 rounded-full opacity-70"></div>
+          <div class="ring-coverage absolute inset-16 rounded-full opacity-50"></div>
+          <div class="ring-coverage absolute inset-24 rounded-full opacity-30"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="flex h-20 w-20 items-center justify-center rounded-full bg-volt text-night pulse-dot">
+              <i class="fa-solid fa-bolt text-2xl"></i>
+            </div>
+          </div>
+          <div class="absolute top-6 left-1/2 -translate-x-1/2 text-xs font-heading tracking-wider text-volt">&bull; DOLJ</div>
+          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs font-heading tracking-wider text-volt">&bull; CRAIOVA</div>
+          <div class="absolute top-1/2 -left-2 -translate-y-1/2 text-xs font-heading tracking-wider text-volt rotate-90">&bull; ROVINE</div>
+          <div class="absolute top-1/2 -right-2 -translate-y-1/2 text-xs font-heading tracking-wider text-volt -rotate-90">&bull; BRAZDA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-night-2 py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-14 grid gap-6 lg:grid-cols-[2fr_1fr] items-end" data-aos="fade-up">
+      <div>
+        <div class="font-heading text-xs tracking-[0.25em] text-volt">// 04 &#206;NTREB&#258;RI</div>
+        <h2 class="mt-4 font-heading text-5xl leading-[0.92] sm:text-6xl">CE &#206;NTREAB&#258; CLIEN&#538;II.</h2>
+      </div>
+      <div class="text-bone/70">Dac&#259; ai o situa&#539;ie mai neobi&#537;nuit&#259; &#537;i nu afli r&#259;spunsul aici, sun&#259; direct. &#206;&#539;i r&#259;spundem oric&#226;nd.</div>
+    </div>
+
+    <div class="grid gap-0 border border-bone/10">
+      <details class="group border-b border-bone/10 p-7" data-aos="fade-up">
+        <summary class="flex cursor-pointer items-center justify-between gap-4">
+          <span class="font-heading text-xl flex items-center gap-5"><span class="text-volt text-sm">Q01</span>C&#194;T COST&#258; DEPLASAREA NOAPTEA?</span>
+          <i class="fa-solid fa-plus text-volt transition group-open:rotate-45"></i>
+        </summary>
+        <p class="mt-4 pl-11 text-bone/75">&#206;n Craiova, deplasarea este gratuit&#259; &#238;n intervalul zi. &#206;n afara programului (22:00-07:00), se aplic&#259; un tarif de noapte pentru deplasare, discutat la telefon &#238;nainte s&#259; venim.</p>
+      </details>
+      <details class="group border-b border-bone/10 p-7" data-aos="fade-up" data-aos-delay="60">
+        <summary class="flex cursor-pointer items-center justify-between gap-4">
+          <span class="font-heading text-xl flex items-center gap-5"><span class="text-volt text-sm">Q02</span>SUNTE&#538;I AUTORIZA&#538;I ANRE?</span>
+          <i class="fa-solid fa-plus text-volt transition group-open:rotate-45"></i>
+        </summary>
+        <p class="mt-4 pl-11 text-bone/75">Da. Electricienii no&#537;tri sunt autoriza&#539;i ANRE pentru lucr&#259;rile care necesit&#259; acest certificat. Pentru lucr&#259;ri cu CEZ/Enel lucr&#259;m conform procedurilor oficiale.</p>
+      </details>
+      <details class="group border-b border-bone/10 p-7" data-aos="fade-up" data-aos-delay="120">
+        <summary class="flex cursor-pointer items-center justify-between gap-4">
+          <span class="font-heading text-xl flex items-center gap-5"><span class="text-volt text-sm">Q03</span>OFERI&#538;I GARAN&#538;IE?</span>
+          <i class="fa-solid fa-plus text-volt transition group-open:rotate-45"></i>
+        </summary>
+        <p class="mt-4 pl-11 text-bone/75">Da. Manoper&#259; garantat&#259; minim 12 luni, materiale garantate conform produc&#259;torului. Document&#259;m totul la finalul lucr&#259;rii.</p>
+      </details>
+      <details class="group border-b border-bone/10 p-7" data-aos="fade-up" data-aos-delay="180">
+        <summary class="flex cursor-pointer items-center justify-between gap-4">
+          <span class="font-heading text-xl flex items-center gap-5"><span class="text-volt text-sm">Q04</span>FACE&#538;I &#536;I PROIECTE PENTRU AUTORIZA&#538;IE?</span>
+          <i class="fa-solid fa-plus text-volt transition group-open:rotate-45"></i>
+        </summary>
+        <p class="mt-4 pl-11 text-bone/75">Colabor&#259;m cu proiectan&#539;i verifica&#539;i pentru proiecte electrice &#238;n documenta&#539;ia de autoriza&#539;ie. Te punem &#238;n leg&#259;tur&#259; la telefon.</p>
+      </details>
+      <details class="group p-7" data-aos="fade-up" data-aos-delay="240">
+        <summary class="flex cursor-pointer items-center justify-between gap-4">
+          <span class="font-heading text-xl flex items-center gap-5"><span class="text-volt text-sm">Q05</span>ACCEPTA&#538;I CARD?</span>
+          <i class="fa-solid fa-plus text-volt transition group-open:rotate-45"></i>
+        </summary>
+        <p class="mt-4 pl-11 text-bone/75">Da, accept&#259;m card, numerar sau transfer bancar. Pentru lucr&#259;ri mari emitem factur&#259; oficial&#259;.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="relative bg-volt py-24 text-night">
+  <div class="warn-stripes h-3 absolute inset-x-0 top-0"></div>
+  <div class="warn-stripes h-3 absolute inset-x-0 bottom-0"></div>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] items-center" data-aos="fade-up">
+      <div>
+        <div class="font-heading text-xs tracking-[0.25em] text-emerg">// 05 CONTACT</div>
+        <h2 class="mt-4 font-heading text-5xl leading-[0.88] sm:text-7xl lg:text-[7rem]">0741<br>039 100</h2>
+        <p class="mt-6 max-w-lg text-night/85">Sun&#259; oric&#226;nd. Zi, noapte, weekend, s&#259;rb&#259;toare. R&#259;spunde un electrician real, nu un robot care te pune s&#259; a&#537;tep&#539;i 10 minute.</p>
+        <a href="tel:0741039100" class="mt-8 inline-flex items-center gap-4 bg-night text-volt px-10 py-5 font-heading text-2xl hover:bg-emerg hover:text-bone transition">
+          <i class="fa-solid fa-phone-volume"></i> SUN&#258; ACUM
+        </a>
+      </div>
+      <div class="space-y-5">
+        <div class="border-2 border-night px-6 py-5">
+          <div class="text-xs font-heading tracking-[0.2em] text-night/60">SEDIU</div>
+          <div class="mt-2 font-heading text-lg">Bloc I5, Str. Colonel Scarlat Demetriade 5, Craiova 200166</div>
+        </div>
+        <div class="border-2 border-night px-6 py-5">
+          <div class="text-xs font-heading tracking-[0.2em] text-night/60">PROGRAM</div>
+          <div class="mt-2 font-heading text-lg">24/7 &middot; Toate zilele s&#259;pt&#259;m&#226;nii</div>
+        </div>
+        <div class="border-2 border-night px-6 py-5">
+          <div class="text-xs font-heading tracking-[0.2em] text-night/60">RATING</div>
+          <div class="mt-2 font-heading text-lg">4.4/5 &middot; 7 recenzii Google verificate</div>
+        </div>
+        <a href="https://www.google.com/maps?q=44.3308932,23.7942567" target="_blank" rel="noopener noreferrer" class="block border-2 border-night bg-night text-volt px-6 py-5 text-center font-heading hover:bg-emerg hover:text-bone transition">
+          <i class="fa-solid fa-map-location-dot"></i> DESCHIDE &#206;N GOOGLE MAPS
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-night py-14 text-bone/60 border-t border-bone/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center bg-volt text-night rounded"><i class="fa-solid fa-bolt"></i></div>
+          <div>
+            <div class="font-heading text-sm">ELECTRICIENI CRAIOVA</div>
+            <div class="font-heading text-xs text-volt">24/7 URGEN&#538;E</div>
+          </div>
+        </div>
+        <p class="mt-5 max-w-md text-sm leading-relaxed">Electricieni autoriza&#539;i pentru interven&#539;ii urgente &#537;i lucr&#259;ri complete &#238;n Craiova &#537;i jude&#539;ul Dolj. 24 de ore din 24, 7 zile din 7.</p>
+      </div>
+      <div>
+        <div class="font-heading text-xs tracking-[0.2em] text-volt mb-4">CONTACT</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="tel:0741039100" class="text-bone hover:text-volt">0741 039 100</a></li>
+          <li>Bloc I5, Str. Colonel Scarlat Demetriade 5</li>
+          <li>Craiova 200166, Dolj</li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-heading text-xs tracking-[0.2em] text-volt mb-4">PROGRAM</div>
+        <ul class="space-y-2 text-sm">
+          <li>24 ore / 7 zile</li>
+          <li>Non-stop</li>
+          <li>Inclusiv s&#259;rb&#259;tori</li>
+          <li class="pt-3 text-bone/40">&copy; <span id="year">2026</span> Electricieni Craiova</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden">
+  <div class="warn-stripes h-2"></div>
+  <a href="tel:0741039100" class="flex items-center justify-center gap-3 bg-emerg py-4 font-heading text-xl text-bone">
+    <span class="pulse-dot inline-block h-2 w-2 rounded-full"></span>
+    URGEN&#538;&#258; 24/7 &middot; 0741 039 100
+  </a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+const menu=document.getElementById('mobile-menu');
+const toggle=document.getElementById('menu-toggle');
+const close=document.getElementById('menu-close');
+const links=document.querySelectorAll('.mobile-link');
+const cm=()=>{menu.classList.add('hidden');document.body.classList.remove('overflow-hidden')};
+const om=()=>{menu.classList.remove('hidden');document.body.classList.add('overflow-hidden')};
+toggle.addEventListener('click',om);close.addEventListener('click',cm);
+links.forEach(l=>l.addEventListener('click',cm));
+menu.addEventListener('click',e=>{if(e.target===menu)cm()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')cm()});
+function updateClock(){const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Bucharest'}));const h=String(d.getHours()).padStart(2,'0');const m=String(d.getMinutes()).padStart(2,'0');const c=document.getElementById('live-clock');if(c)c.textContent=h+':'+m}
+updateClock();setInterval(updateClock,30000);
+document.getElementById('year').textContent=String(new Date().getFullYear());
+AOS.init({duration:800,once:true,offset:100});
+</script>
+</body>
+</html>

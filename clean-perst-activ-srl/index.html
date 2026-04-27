@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Perst Activ SRL | Servicii de Curățenie București</title>
+    <meta name="description" content="Servicii profesionale de curățenie în București, Sector 3. Curățenie birouri, locuințe, spații comerciale. Disponibili 24/7. Str. Nicolae Teclu 1.">
+    <meta name="keywords" content="curățenie București, firma curățenie Sector 3, Clean Perst Activ, servicii curățenie">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'clean-blue': '#2196F3',
+                        'clean-blue-dark': '#1976D2',
+                        'clean-blue-light': '#64B5F6',
+                        'light-cyan': '#E0F7FA',
+                        'clean-grey': '#616161',
+                        'clean-grey-light': '#9E9E9E',
+                    },
+                    fontFamily: {
+                        heading: ['Rubik', 'sans-serif'],
+                        body: ['Work Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Rubik', sans-serif; }
+        .bubble-bg {
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(33,150,243,0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(33,150,243,0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(33,150,243,0.03) 0%, transparent 70%);
+        }
+        .hero-clean {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 40%, #0D47A1 100%);
+        }
+        .sparkle-card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid rgba(33,150,243,0.1);
+            transition: all 0.3s ease;
+        }
+        .sparkle-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(33,150,243,0.15);
+            border-color: rgba(33,150,243,0.3);
+        }
+        .bubble-float {
+            animation: bubbleFloat 6s ease-in-out infinite;
+        }
+        @keyframes bubbleFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            33% { transform: translateY(-15px) scale(1.05); }
+            66% { transform: translateY(-5px) scale(0.95); }
+        }
+        .sparkle-icon {
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.15); }
+        }
+        .wave-divider {
+            position: relative;
+            overflow: hidden;
+        }
+        .wave-divider::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #2196F3, transparent);
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CleaningService",
+        "name": "Clean Perst Activ SRL",
+        "description": "Servicii profesionale de curățenie în București, Sector 3. Curățenie birouri, locuințe, spații comerciale.",
+        "url": "",
+        "telephone": "+40214050776",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Nicolae Teclu 1",
+            "addressLocality": "București",
+            "addressRegion": "Sector 3",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.404563,
+            "longitude": 26.202767
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        }
+    }
+    </script>
+</head>
+<body class="bg-white text-clean-grey">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-clean-blue rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-sparkles text-white text-lg"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="font-heading font-bold text-clean-blue text-sm md:text-base block">Clean Perst Activ</span>
+                        <span class="text-xs text-clean-grey-light">Servicii de curățenie</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8 font-heading font-medium text-sm">
+                    <a href="#servicii" class="text-clean-grey hover:text-clean-blue transition-colors">Servicii</a>
+                    <a href="#avantaje" class="text-clean-grey hover:text-clean-blue transition-colors">Avantaje</a>
+                    <a href="#proces" class="text-clean-grey hover:text-clean-blue transition-colors">Cum lucrăm</a>
+                    <a href="#contact" class="text-clean-grey hover:text-clean-blue transition-colors">Contact</a>
+                    <a href="tel:0214050776" class="bg-clean-blue text-white px-5 py-2.5 rounded-xl hover:bg-clean-blue-dark transition-colors font-semibold">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-clean-blue text-2xl" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-light-cyan">
+            <div class="px-4 py-4 space-y-3 font-heading font-medium text-sm">
+                <a href="#servicii" class="block py-2 text-clean-grey hover:text-clean-blue">Servicii</a>
+                <a href="#avantaje" class="block py-2 text-clean-grey hover:text-clean-blue">Avantaje</a>
+                <a href="#proces" class="block py-2 text-clean-grey hover:text-clean-blue">Cum lucrăm</a>
+                <a href="#contact" class="block py-2 text-clean-grey hover:text-clean-blue">Contact</a>
+                <a href="tel:0214050776" class="block bg-clean-blue text-white text-center px-5 py-3 rounded-xl font-semibold">
+                    <i class="fa-solid fa-phone mr-2"></i>021 405 0776
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-clean min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bubble-bg opacity-50"></div>
+        <div class="absolute top-20 right-20 w-32 h-32 border-2 border-white/10 rounded-full bubble-float"></div>
+        <div class="absolute bottom-32 left-10 w-20 h-20 border-2 border-white/10 rounded-full bubble-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-8 h-8 bg-white/10 rounded-full bubble-float" style="animation-delay: 1s;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 bg-white/15 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Disponibili 24/7</span>
+                    </div>
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Curățenie <span class="text-light-cyan">impecabilă</span> pentru spațiul tău
+                    </h1>
+                    <p class="text-white/70 text-lg md:text-xl mb-8 leading-relaxed font-body">
+                        Servicii profesionale de curățenie în București, Sector 3. Locuințe, birouri, spații comerciale — facem totul să strălucească, la orice oră din zi sau noapte.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:0214050776" class="bg-white hover:bg-light-cyan text-clean-blue font-heading font-bold px-8 py-4 rounded-xl text-center transition-all shadow-lg hover:shadow-xl">
+                            <i class="fa-solid fa-phone mr-2"></i>Sună: 021 405 0776
+                        </a>
+                        <a href="#servicii" class="border-2 border-white/30 text-white font-heading font-semibold px-8 py-4 rounded-xl text-center hover:bg-white/10 transition-all">
+                            <i class="fa-solid fa-broom mr-2"></i>Vezi serviciile
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="hidden md:flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 lg:w-96 lg:h-96 bg-white/10 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+                            <div class="text-center">
+                                <i class="fa-solid fa-sparkles text-white text-8xl sparkle-icon"></i>
+                                <p class="text-white/60 font-heading font-semibold mt-6 tracking-wider uppercase text-sm">Strălucire garantată</p>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-droplet text-clean-blue text-2xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-light-cyan rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-spray-can-sparkles text-clean-blue text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INFO BAR -->
+    <section class="py-6 bg-light-cyan">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fa-solid fa-clock text-clean-blue text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-clean-grey-light text-xs">Program</p>
+                        <p class="font-heading font-bold text-clean-grey">Non-stop — 24/7</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-location-dot text-clean-blue text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-clean-grey-light text-xs">Adresă</p>
+                        <p class="font-heading font-bold text-clean-grey">Str. Nicolae Teclu 1, Sector 3</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-phone text-clean-blue text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-clean-grey-light text-xs">Telefon</p>
+                        <a href="tel:0214050776" class="font-heading font-bold text-clean-blue hover:text-clean-blue-dark transition-colors">021 405 0776</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII -->
+    <section id="servicii" class="py-16 md:py-24 bg-white bubble-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-clean-blue/10 text-clean-blue px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    <i class="fa-solid fa-sparkles mr-1"></i>Servicii
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-clean-grey mb-4">Servicii de curățenie profesională</h2>
+                <p class="text-clean-grey-light text-lg max-w-2xl mx-auto">Soluții complete de curățenie pentru orice tip de spațiu, cu echipamente și produse profesionale.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-house text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățenie locuințe</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Curățenie generală și de întreținere pentru apartamente și case. Pardoseli, mobilier, băi și bucătării.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-building text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățenie birouri</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Mentenanță zilnică sau periodică pentru spații de birouri, săli de ședințe și zone comune.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-store text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Spații comerciale</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Curățenie profesională pentru magazine, restaurante, hoteluri și alte spații comerciale.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-couch text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățare tapițerie</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Curățare profesională a canapelelor, fotoliilor, scaunelor și altor piese de mobilier tapițat.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-broom text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățenie generală</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Curățenie completă de la A la Z, ideal după renovări, mutări sau pentru curățenia de sezon.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-window-maximize text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățare geamuri</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Spălare profesională a geamurilor interioare și exterioare, inclusiv pentru clădiri de birouri.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-industry text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățenie industrială</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Servicii specializate de curățenie pentru hale, depozite și spații industriale.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-spray-can-sparkles text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Dezinfecție</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Dezinfecție profesională a spațiilor, cu produse certificate, pentru un mediu sănătos și sigur.</p>
+                </div>
+                <div class="sparkle-card p-6" data-aos="fade-up" data-aos-delay="800">
+                    <div class="w-14 h-14 bg-clean-blue/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-rug text-clean-blue text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățare covoare</h3>
+                    <p class="text-clean-grey-light text-sm leading-relaxed">Curățare profesională a covoarelor și mochetelor cu echipamente de extracție și injecție.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVANTAJE -->
+    <section id="avantaje" class="py-16 md:py-24 bg-clean-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">De ce să ne alegi pe noi</h2>
+                <p class="text-white/70 text-lg max-w-2xl mx-auto">Experiență, profesionalism și disponibilitate non-stop pentru spații impecabile.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-clock text-clean-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Disponibili 24/7</h3>
+                    <p class="text-white/60 text-sm">Non-stop, oricând ai nevoie, inclusiv în weekend și sărbători.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-users text-clean-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Echipă profesionistă</h3>
+                    <p class="text-white/60 text-sm">Personal instruit și cu experiență în curățenie profesională.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-pump-soap text-clean-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Produse premium</h3>
+                    <p class="text-white/60 text-sm">Utilizăm doar produse profesionale, eficiente și sigure pentru sănătate.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-hand-sparkles text-clean-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-2">Rezultate garantate</h3>
+                    <p class="text-white/60 text-sm">Calitate vizibilă la fiecare intervenție, cu atenție la detalii.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUM LUCRĂM -->
+    <section id="proces" class="py-16 md:py-24 bg-light-cyan bubble-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-clean-blue/10 text-clean-blue px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    <i class="fa-solid fa-list-ol mr-1"></i>Procesul nostru
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-clean-grey mb-4">Cum lucrăm</h2>
+                <p class="text-clean-grey-light text-lg max-w-2xl mx-auto">Un proces simplu și eficient, de la apel până la spațiul tău impecabil.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-20 h-20 bg-clean-blue rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative">
+                        <span class="font-heading text-3xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Suni sau scrii</h3>
+                    <p class="text-clean-grey-light text-sm">Contactează-ne telefonic la 021 405 0776, la orice oră.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-clean-blue rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="font-heading text-3xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Evaluăm</h3>
+                    <p class="text-clean-grey-light text-sm">Discutăm nevoile tale și stabilim detaliile intervenției.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-clean-blue rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="font-heading text-3xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Curățăm</h3>
+                    <p class="text-clean-grey-light text-sm">Echipa noastră vine și realizează curățenia profesională.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-clean-blue rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="font-heading text-3xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-clean-grey mb-2">Strălucește!</h3>
+                    <p class="text-clean-grey-light text-sm">Te bucuri de un spațiu curat, proaspăt și impecabil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZONE DESERVITE -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <span class="inline-block bg-clean-blue/10 text-clean-blue px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        <i class="fa-solid fa-map mr-1"></i>Zone deservite
+                    </span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-clean-grey mb-6">Acoperim Bucureștiul</h2>
+                    <p class="text-clean-grey-light text-lg mb-6 leading-relaxed">Cu sediul în Sector 3, oferim servicii de curățenie profesională în tot Bucureștiul și împrejurimi.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-light-cyan rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-clean-blue"></i>
+                            <span class="font-heading font-semibold text-sm text-clean-grey">Sector 1</span>
+                        </div>
+                        <div class="bg-light-cyan rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-clean-blue"></i>
+                            <span class="font-heading font-semibold text-sm text-clean-grey">Sector 2</span>
+                        </div>
+                        <div class="bg-clean-blue/10 rounded-xl p-4 flex items-center gap-3 border border-clean-blue/30">
+                            <i class="fa-solid fa-star text-clean-blue"></i>
+                            <span class="font-heading font-bold text-sm text-clean-blue">Sector 3 (sediu)</span>
+                        </div>
+                        <div class="bg-light-cyan rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-clean-blue"></i>
+                            <span class="font-heading font-semibold text-sm text-clean-grey">Sector 4</span>
+                        </div>
+                        <div class="bg-light-cyan rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-clean-blue"></i>
+                            <span class="font-heading font-semibold text-sm text-clean-grey">Sector 5</span>
+                        </div>
+                        <div class="bg-light-cyan rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-clean-blue"></i>
+                            <span class="font-heading font-semibold text-sm text-clean-grey">Sector 6</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-clean-blue rounded-3xl p-8 md:p-10 text-white text-center">
+                        <i class="fa-solid fa-phone-volume text-5xl text-white/80 mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold mb-4">Curățenie la un singur apel distanță</h3>
+                        <p class="text-white/70 mb-6">Suntem disponibili non-stop, 7 zile pe săptămână. Sună acum pentru o ofertă personalizată!</p>
+                        <a href="tel:0214050776" class="inline-block bg-white hover:bg-light-cyan text-clean-blue font-heading font-bold px-8 py-4 rounded-xl transition-all shadow-lg">
+                            <i class="fa-solid fa-phone mr-2"></i>021 405 0776
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 md:py-24 bg-light-cyan">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-clean-blue/10 text-clean-blue px-4 py-2 rounded-full text-sm font-semibold mb-4">Contact</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-clean-grey mb-4">Contactează-ne</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <div class="space-y-6">
+                        <div class="sparkle-card p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-clean-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-clean-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-clean-grey mb-1">Adresă</h3>
+                                <p class="text-clean-grey-light">Str. Nicolae Teclu 1, Sector 3, București</p>
+                            </div>
+                        </div>
+                        <div class="sparkle-card p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-clean-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone text-clean-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-clean-grey mb-1">Telefon</h3>
+                                <a href="tel:0214050776" class="text-clean-blue hover:text-clean-blue-dark transition-colors font-semibold">021 405 0776</a>
+                            </div>
+                        </div>
+                        <div class="sparkle-card p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-clean-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-clock text-clean-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-clean-grey mb-1">Program</h3>
+                                <p class="text-clean-grey-light">Non-stop — 24 ore / 7 zile pe săptămână</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-full min-h-[350px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d26.202767!3d44.404563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI0JzE2LjQiTiAyNsKwMTInMTAuMCJF!5e0!3m2!1sro!2sro!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Locație Clean Perst Activ SRL"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-16 md:py-20 hero-clean text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <i class="fa-solid fa-sparkles text-5xl text-white/80 mb-6"></i>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Spațiul tău merită să strălucească</h2>
+            <p class="text-white/70 text-lg mb-8">Contactează-ne acum pentru servicii de curățenie profesională, disponibile non-stop în București.</p>
+            <a href="tel:0214050776" class="inline-block bg-white hover:bg-light-cyan text-clean-blue font-heading font-bold px-10 py-4 rounded-xl transition-all shadow-lg text-lg">
+                <i class="fa-solid fa-phone mr-2"></i>Sună: 021 405 0776
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-clean-blue rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-sparkles text-white"></i>
+                        </div>
+                        <span class="font-heading font-bold text-lg">Clean Perst Activ</span>
+                    </div>
+                    <p class="text-white/40 text-sm">Servicii profesionale de curățenie în București. Disponibili non-stop pentru spații impecabile.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Navigare</h4>
+                    <ul class="space-y-2 text-white/40 text-sm">
+                        <li><a href="#servicii" class="hover:text-clean-blue-light transition-colors">Servicii</a></li>
+                        <li><a href="#avantaje" class="hover:text-clean-blue-light transition-colors">Avantaje</a></li>
+                        <li><a href="#proces" class="hover:text-clean-blue-light transition-colors">Cum lucrăm</a></li>
+                        <li><a href="#contact" class="hover:text-clean-blue-light transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-3 text-white/40 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-clean-blue"></i>Str. Nicolae Teclu 1, Sector 3, București</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-clean-blue"></i><a href="tel:0214050776" class="hover:text-clean-blue-light transition-colors">021 405 0776</a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-clean-blue"></i>Non-stop — 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-white/30 text-sm">
+                <p>&copy; 2026 Clean Perst Activ SRL. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+    </script>
+</body>
+</html>

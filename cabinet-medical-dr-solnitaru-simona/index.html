@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Solnitaru Simona | Medic de Familie — Slatina</title>
+  <meta name="description" content="Cabinet Medical Dr. Solnitaru Simona — medic de familie &#238;n Slatina. Consulta&#539;ii, preven&#539;ie, monitorizare. Programare recomandat&#259;. Tel: 0722 513 547.">
+  <meta property="og:title" content="Dr. Solnitaru Simona | Medic de Familie Slatina">
+  <meta property="og:locale" content="ro_RO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sky: { soft: '#E3F2FD', mid: '#90CAF9', deep: '#1976D2', navy: '#0D47A1' },
+            peach: { light: '#FFF3E0', warm: '#FFB74D', deep: '#E65100' },
+            cloud: '#FAFBFD',
+            'cloud-dark': '#F0F2F5',
+            ink: '#1A2332',
+            mist: '#7B8A9E',
+          },
+          fontFamily: {
+            heading: ['"Bricolage Grotesque"', 'sans-serif'],
+            body: ['"Libre Franklin"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Libre Franklin', sans-serif; }
+    .pulse-dot { width: 8px; height: 8px; background: #1976D2; border-radius: 50%; animation: pulse-ring 2s infinite; }
+    @keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(25,118,210,0.4); } 70% { box-shadow: 0 0 0 10px rgba(25,118,210,0); } }
+    .cross-bg { background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 0v40M0 18h40' stroke='%231976D2' stroke-opacity='0.03' stroke-width='1'/%3E%3C/svg%3E"); }
+    .nav-scroll { background: rgba(250,251,253,0.97); backdrop-filter: blur(10px); box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+    .card-pop { transition: transform 0.3s, box-shadow 0.3s; }
+    .card-pop:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(25,118,210,0.08); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Solnitaru Simona",
+    "telephone": "+40722513547",
+    "medicalSpecialty": "Family Medicine",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Strada Basarabilor",
+      "addressLocality": "Slatina",
+      "addressRegion": "Olt",
+      "addressCountry": "RO"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 44.425767, "longitude": 24.361894 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Friday"], "opens": "14:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Thursday"], "opens": "07:00", "closes": "13:00" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-cloud text-ink font-body">
+
+  <!-- NAV -->
+  <nav id="nav" class="fixed top-0 w-full z-50 transition-all duration-300 bg-cloud/80">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-sky-deep rounded-lg flex items-center justify-center">
+          <i class="fa-solid fa-heart-pulse text-white text-sm"></i>
+        </div>
+        <span class="font-heading font-semibold text-sm">Dr. Solnitaru Simona</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm text-mist">
+        <a href="#despre" class="hover:text-sky-deep transition">Despre</a>
+        <a href="#servicii" class="hover:text-sky-deep transition">Servicii</a>
+        <a href="#program" class="hover:text-sky-deep transition">Program</a>
+        <a href="#contact" class="hover:text-sky-deep transition">Contact</a>
+      </div>
+      <a href="tel:+40722513547" class="hidden md:inline-flex items-center gap-2 bg-sky-deep text-white text-sm px-5 py-2.5 rounded-full hover:bg-sky-navy transition font-medium">
+        <div class="pulse-dot"></div> Programare
+      </a>
+      <button id="menuBtn" class="md:hidden text-mist text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-cloud border-t border-ink/5 px-6 py-4 space-y-3">
+      <a href="#despre" class="block text-mist text-sm">Despre</a>
+      <a href="#servicii" class="block text-mist text-sm">Servicii</a>
+      <a href="#program" class="block text-mist text-sm">Program</a>
+      <a href="#contact" class="block text-mist text-sm">Contact</a>
+      <a href="tel:+40722513547" class="block bg-sky-deep text-white text-center py-3 rounded-full font-medium mt-2">Sun&#259; pentru programare</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center cross-bg pt-20">
+    <div class="max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+      <div data-aos="fade-right">
+        <div class="inline-flex items-center gap-2 bg-sky-soft rounded-full px-4 py-1.5 text-sky-deep text-sm font-medium mb-6">
+          <i class="fa-solid fa-stethoscope text-xs"></i> Medicin&#259; de familie
+        </div>
+        <h1 class="font-heading font-bold text-4xl md:text-5xl leading-tight mb-4">
+          Dr. Solnitaru<br><span class="text-sky-deep">Simona</span>
+        </h1>
+        <p class="text-mist text-lg mb-3">Cabinet Medical — Slatina, Olt</p>
+        <p class="text-mist/70 mb-8 max-w-md">&#206;ngrijire medical&#259; primar&#259; cu aten&#539;ie, r&#259;bdare &#537;i profesionalism. Fiecare pacient merit&#259; timp &#537;i claritate.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:+40722513547" class="bg-sky-deep text-white font-medium px-8 py-4 rounded-full text-center hover:bg-sky-navy transition">
+            <i class="fa-solid fa-phone mr-2"></i> 0722 513 547
+          </a>
+          <a href="#program" class="border-2 border-sky-deep/20 text-sky-deep font-medium px-8 py-4 rounded-full text-center hover:border-sky-deep/50 transition">
+            <i class="fa-solid fa-clock mr-2"></i> Program
+          </a>
+        </div>
+      </div>
+      <div data-aos="fade-left" class="hidden md:block">
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+          <div class="flex items-center gap-4 mb-6 pb-6 border-b border-ink/5">
+            <div class="w-16 h-16 bg-sky-soft rounded-2xl flex items-center justify-center">
+              <i class="fa-solid fa-user-doctor text-sky-deep text-2xl"></i>
+            </div>
+            <div>
+              <p class="font-heading font-bold">Dr. Solnitaru Simona</p>
+              <p class="text-mist text-sm">Medic de familie</p>
+            </div>
+          </div>
+          <div class="space-y-4 text-sm">
+            <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-sky-deep w-5"></i><span class="text-mist">Strada Basarabilor, Slatina</span></div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-sky-deep w-5"></i><span class="text-sky-deep font-medium">0722 513 547</span></div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-calendar-check text-peach-deep w-5"></i><span class="text-mist">Programare recomandat&#259;</span></div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-building text-sky-deep w-5"></i><span class="text-mist">CUI: 35925328</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section id="despre" class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
+      <div class="w-12 h-12 bg-sky-soft rounded-2xl flex items-center justify-center mx-auto mb-6">
+        <i class="fa-solid fa-heart text-sky-deep text-xl"></i>
+      </div>
+      <h2 class="font-heading font-bold text-3xl mb-8">Despre cabinet</h2>
+      <p class="text-mist leading-relaxed mb-6">
+        Cabinetul medical Dr. Solnitaru Simona func&#539;ioneaz&#259; pe Strada Basarabilor &#238;n Slatina, oferind servicii de medicin&#259; de familie pentru comunitatea local&#259; din 2016. Dr. Solnitaru Simona-Florentina pune accent pe o rela&#539;ie de &#238;ncredere cu fiecare pacient.
+      </p>
+      <p class="text-mist leading-relaxed mb-6">
+        Fiecare consulta&#539;ie include timpul necesar pentru &#238;n&#539;elegerea problemei, explica&#539;ii clare &#537;i un plan de tratament adaptat. Credem c&#259; medicina de familie &#238;nseamn&#259; &#238;n primul r&#226;nd ascultare &#537;i aten&#539;ie.
+      </p>
+      <p class="text-mist leading-relaxed">
+        Programarea este recomandat&#259; pentru a evita timpii de a&#537;teptare &#537;i a v&#259; asigura consulta&#539;ia &#238;n condi&#539;ii optime.
+      </p>
+    </div>
+  </section>
+
+  <!-- INFO BAR -->
+  <section class="py-6 bg-sky-deep text-white">
+    <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-center gap-8 md:gap-14 text-sm" data-aos="fade-up">
+      <div class="flex items-center gap-2"><i class="fa-solid fa-user-doctor text-sky-mid"></i> Medic de familie</div>
+      <div class="flex items-center gap-2"><i class="fa-solid fa-calendar-check text-sky-mid"></i> Programare recomandat&#259;</div>
+      <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-sky-mid"></i> Program alternativ</div>
+      <div class="flex items-center gap-2"><i class="fa-solid fa-building text-sky-mid"></i> Din 2016</div>
+    </div>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="py-24 bg-cloud cross-bg">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="w-10 h-10 bg-sky-soft rounded-xl flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-stethoscope text-sky-deep"></i>
+        </div>
+        <h2 class="font-heading font-bold text-3xl">Servicii medicale</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div data-aos="fade-up" data-aos-delay="0" class="bg-white rounded-2xl p-7 card-pop">
+          <div class="w-11 h-11 bg-sky-soft rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-notes-medical text-sky-deep text-lg"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg mb-2">Consulta&#539;ii</h3>
+          <p class="text-mist text-sm leading-relaxed">Consulta&#539;ii de medicin&#259; de familie — evaluare complet&#259;, diagnostic &#537;i plan de tratament personalizat.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="80" class="bg-white rounded-2xl p-7 card-pop">
+          <div class="w-11 h-11 bg-peach-light rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-shield-heart text-peach-deep text-lg"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg mb-2">Preven&#539;ie</h3>
+          <p class="text-mist text-sm leading-relaxed">Screening-uri preventive, vaccin&#259;ri, educa&#539;ie pentru s&#259;n&#259;tate &#537;i monitorizare periodic&#259;.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="160" class="bg-white rounded-2xl p-7 card-pop">
+          <div class="w-11 h-11 bg-sky-soft rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-chart-line text-sky-deep text-lg"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg mb-2">Boli cronice</h3>
+          <p class="text-mist text-sm leading-relaxed">Monitorizare &#537;i management al bolilor cronice: diabet, hipertensiune, afec&#539;iuni cardiace.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="240" class="bg-white rounded-2xl p-7 card-pop">
+          <div class="w-11 h-11 bg-peach-light rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-prescription text-peach-deep text-lg"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg mb-2">Re&#539;ete &#537;i trimiteri</h3>
+          <p class="text-mist text-sm leading-relaxed">Eliberare re&#539;ete compensate, trimiteri c&#259;tre speciali&#537;ti, certificate medicale.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="320" class="bg-white rounded-2xl p-7 card-pop">
+          <div class="w-11 h-11 bg-sky-soft rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-baby text-sky-deep text-lg"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg mb-2">Pediatrie</h3>
+          <p class="text-mist text-sm leading-relaxed">Consulta&#539;ii pentru copii, scheme de vaccinare, monitorizare cre&#537;tere &#537;i dezvoltare.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" class="bg-white rounded-2xl p-7 card-pop">
+          <div class="w-11 h-11 bg-peach-light rounded-xl flex items-center justify-center mb-4">
+            <i class="fa-solid fa-file-medical text-peach-deep text-lg"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg mb-2">Documente medicale</h3>
+          <p class="text-mist text-sm leading-relaxed">Adeverin&#539;e, certificate, fi&#537;e medicale pentru &#537;coal&#259;, angajare sau permis de conducere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+      <div class="text-center mb-12">
+        <h2 class="font-heading font-bold text-3xl mb-3">Program de consulta&#539;ii</h2>
+        <p class="text-mist">Program alternativ — diminea&#539;a &#537;i dup&#259;-amiaza</p>
+      </div>
+      <div class="bg-cloud rounded-2xl overflow-hidden shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-sky-deep text-white">
+              <th class="text-left px-6 py-4 font-heading font-semibold">Zi</th>
+              <th class="text-right px-6 py-4 font-heading font-semibold">Program</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-ink/5">
+              <td class="px-6 py-4 font-medium">Luni</td>
+              <td class="px-6 py-4 text-right"><span class="bg-peach-light text-peach-deep text-xs px-3 py-1 rounded-full font-medium">14:00 — 20:00</span></td>
+            </tr>
+            <tr class="border-b border-ink/5 bg-sky-soft/30">
+              <td class="px-6 py-4 font-medium">Mar&#539;i</td>
+              <td class="px-6 py-4 text-right"><span class="bg-sky-soft text-sky-deep text-xs px-3 py-1 rounded-full font-medium">07:00 — 13:00</span></td>
+            </tr>
+            <tr class="border-b border-ink/5">
+              <td class="px-6 py-4 font-medium">Miercuri</td>
+              <td class="px-6 py-4 text-right"><span class="bg-peach-light text-peach-deep text-xs px-3 py-1 rounded-full font-medium">14:00 — 20:00</span></td>
+            </tr>
+            <tr class="border-b border-ink/5 bg-sky-soft/30">
+              <td class="px-6 py-4 font-medium">Joi</td>
+              <td class="px-6 py-4 text-right"><span class="bg-sky-soft text-sky-deep text-xs px-3 py-1 rounded-full font-medium">07:00 — 13:00</span></td>
+            </tr>
+            <tr class="border-b border-ink/5">
+              <td class="px-6 py-4 font-medium">Vineri</td>
+              <td class="px-6 py-4 text-right"><span class="bg-peach-light text-peach-deep text-xs px-3 py-1 rounded-full font-medium">14:00 — 20:00</span></td>
+            </tr>
+            <tr class="border-b border-ink/5">
+              <td class="px-6 py-4 font-medium text-mist">S&#226;mb&#259;t&#259;</td>
+              <td class="px-6 py-4 text-right text-mist/50">&#206;nchis</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-mist">Duminic&#259;</td>
+              <td class="px-6 py-4 text-right text-mist/50">&#206;nchis</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="flex items-center justify-center gap-6 mt-6 text-xs text-mist">
+        <div class="flex items-center gap-2"><span class="w-3 h-3 bg-sky-soft rounded-full"></span> Diminea&#539;a</div>
+        <div class="flex items-center gap-2"><span class="w-3 h-3 bg-peach-light rounded-full"></span> Dup&#259;-amiaza</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO PACIENT -->
+  <section class="py-20 bg-cloud-dark">
+    <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl p-8">
+          <i class="fa-solid fa-clipboard-list text-sky-deep text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-lg mb-4">Ce s&#259; aduce&#539;i la consulta&#539;ie</h3>
+          <ul class="space-y-3 text-sm text-mist">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-sky-deep mt-1 text-xs"></i> Cartea de identitate</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-sky-deep mt-1 text-xs"></i> Cardul de s&#259;n&#259;tate</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-sky-deep mt-1 text-xs"></i> Analize recente (dac&#259; ave&#539;i)</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-sky-deep mt-1 text-xs"></i> Lista medicamentelor curente</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-sky-deep mt-1 text-xs"></i> Bilet de trimitere (dac&#259; e cazul)</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-8">
+          <i class="fa-solid fa-calendar-plus text-peach-deep text-2xl mb-4"></i>
+          <h3 class="font-heading font-bold text-lg mb-4">Cum v&#259; programa&#539;i</h3>
+          <ul class="space-y-3 text-sm text-mist">
+            <li class="flex items-start gap-2"><span class="w-5 h-5 bg-sky-deep text-white rounded-full flex items-center justify-center text-xs shrink-0 font-bold">1</span> Suna&#539;i la 0722 513 547</li>
+            <li class="flex items-start gap-2"><span class="w-5 h-5 bg-sky-deep text-white rounded-full flex items-center justify-center text-xs shrink-0 font-bold">2</span> Alege&#539;i ziua &#537;i ora potrivit&#259;</li>
+            <li class="flex items-start gap-2"><span class="w-5 h-5 bg-sky-deep text-white rounded-full flex items-center justify-center text-xs shrink-0 font-bold">3</span> Preg&#259;ti&#539;i documentele necesare</li>
+            <li class="flex items-start gap-2"><span class="w-5 h-5 bg-sky-deep text-white rounded-full flex items-center justify-center text-xs shrink-0 font-bold">4</span> Prezenta&#539;i-v&#259; cu 5 min &#238;nainte</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-r from-sky-deep to-sky-navy text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center" data-aos="zoom-in">
+      <i class="fa-solid fa-heart-pulse text-sky-mid text-3xl mb-4"></i>
+      <h2 class="font-heading font-bold text-3xl mb-4">S&#259;n&#259;tatea &#238;ncepe cu un telefon</h2>
+      <p class="text-white/60 mb-8">Suna&#539;i acum pentru programare. V&#259; a&#537;tept&#259;m.</p>
+      <a href="tel:+40722513547" class="inline-flex items-center gap-3 bg-white text-sky-deep font-heading font-bold text-lg px-10 py-4 rounded-full hover:bg-cloud transition">
+        <i class="fa-solid fa-phone"></i> 0722 513 547
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-6" data-aos="fade-up">
+        <a href="tel:+40722513547" class="bg-cloud rounded-2xl p-8 text-center card-pop">
+          <div class="w-16 h-16 bg-sky-soft rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-phone text-sky-deep text-2xl"></i>
+          </div>
+          <p class="font-heading font-bold text-lg mb-1">Telefon</p>
+          <p class="text-sky-deep font-medium text-lg">0722 513 547</p>
+          <p class="text-mist text-xs mt-2">Apela&#539;i pentru programare</p>
+        </a>
+        <div class="bg-cloud rounded-2xl p-8 text-center">
+          <div class="w-16 h-16 bg-peach-light rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-location-dot text-peach-deep text-2xl"></i>
+          </div>
+          <p class="font-heading font-bold text-lg mb-1">Adres&#259;</p>
+          <p class="text-mist">Strada Basarabilor, Slatina</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=44.425767,24.361894" target="_blank" class="text-sky-deep text-sm hover:underline mt-3 inline-block">
+            <i class="fa-solid fa-external-link mr-1"></i> Deschide &#238;n Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink py-12">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 bg-sky-deep rounded-lg flex items-center justify-center">
+          <i class="fa-solid fa-heart-pulse text-white text-xs"></i>
+        </div>
+        <span class="font-heading font-semibold text-white text-sm">Dr. Solnitaru Simona</span>
+      </div>
+      <div class="text-white/40 text-sm text-center">
+        Str. Basarabilor, Slatina &middot;
+        <a href="tel:+40722513547" class="text-sky-mid hover:underline">0722 513 547</a>
+      </div>
+      <span class="text-white/20 text-xs">&copy; 2016—2026 Cabinet Medical Dr. Solnitaru Simona SRL</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY -->
+  <div class="fixed bottom-0 left-0 right-0 md:hidden bg-cloud/95 backdrop-blur border-t border-ink/10 p-3 z-50">
+    <a href="tel:+40722513547" class="flex items-center justify-center gap-2 bg-sky-deep text-white font-medium py-3 rounded-full w-full">
+      <div class="pulse-dot"></div> Programare — 0722 513 547
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 80 });
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav-scroll', window.scrollY > 40), { passive: true });
+    const mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+    mb.addEventListener('click', () => { mm.classList.toggle('hidden'); mb.innerHTML = mm.classList.contains('hidden') ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>'; });
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); mb.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+  </script>
+</body>
+</html>

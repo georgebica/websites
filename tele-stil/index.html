@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tele Stil Slatina - Arhitectur&#259; &#537;i Proiectare | 0744 770 831</title>
+<meta name="description" content="Tele Stil - birou de arhitectur&#259; &#537;i proiectare &#238;n Slatina. Proiecte reziden&#539;iale, consultan&#539;&#259; structural&#259; &#537;i design interior. Sun&#259; 0744 770 831.">
+<meta name="keywords" content="arhitect Slatina, birou arhitectura Slatina, proiecte case Slatina, proiectare Slatina, design interior Slatina, consultanta constructii Olt">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Tele Stil SRL">
+<link rel="canonical" href="">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Tele Stil">
+<meta property="og:title" content="Tele Stil - Arhitectur&#259; &#537;i Proiectare &#238;n Slatina">
+<meta property="og:description" content="Birou de arhitectur&#259; din Slatina cu peste trei decenii de proiectare.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tele Stil - Birou de Arhitectur&#259; Slatina">
+<meta name="twitter:description" content="Proiecte de arhitectur&#259;, rezisten&#539;&#259; &#537;i design interior.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Architect",
+  "name": "Tele Stil",
+  "telephone": "+40744770831",
+  "image": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bulevardul Alexandru Ioan Cuza 48",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230002",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.426977,
+    "longitude": 24.3798
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:30",
+      "closes": "17:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "11"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        paper: {
+          50: '#fafaf8',
+          100: '#f0efe8',
+          200: '#d9d7c9'
+        },
+        stone: {
+          400: '#908c81',
+          600: '#4a4842',
+          800: '#23221e',
+          900: '#111110'
+        },
+        sage: {
+          300: '#b8c3a7',
+          500: '#6d7e5a',
+          700: '#4a5a38'
+        }
+      },
+      fontFamily: {
+        display: ['Syne', 'sans-serif'],
+        sans: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  body { font-family: 'Inter', sans-serif; background: #fafaf8; color: #23221e; }
+  .display { font-family: 'Syne', sans-serif; letter-spacing: -0.02em; }
+  .grid-lines { background-image: linear-gradient(to right, rgba(35,34,30,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(35,34,30,0.05) 1px, transparent 1px); background-size: 48px 48px; }
+  .link-arrow { position: relative; transition: all .3s ease; }
+  .link-arrow:hover { padding-left: 10px; }
+  .vline { position: relative; }
+  .vline::before { content: ''; position: absolute; top: 0; bottom: 0; left: -28px; width: 1px; background: #6d7e5a; }
+  .bracket-top { position: relative; }
+  .bracket-top::before { content: ''; position: absolute; top: -8px; left: 0; width: 48px; height: 8px; border-top: 1px solid #23221e; border-left: 1px solid #23221e; }
+  .num-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.3em; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- Header minimal -->
+<header class="fixed top-0 left-0 right-0 bg-paper-50/90 backdrop-blur-sm z-50 border-b border-paper-200">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+    <a href="#" class="display text-2xl text-stone-900">
+      tele<span class="text-sage-500">&#47;</span>stil
+    </a>
+    <nav class="hidden lg:flex items-center gap-10 text-sm text-stone-600">
+      <a href="#studio" class="hover:text-stone-900">Studio</a>
+      <a href="#servicii" class="hover:text-stone-900">Servicii</a>
+      <a href="#abordare" class="hover:text-stone-900">Abordare</a>
+      <a href="#contact" class="hover:text-stone-900">Contact</a>
+    </nav>
+    <a href="tel:0744770831" class="text-sm hidden md:inline-block border-b border-stone-900 pb-1 hover:text-sage-700">
+      0744 770 831
+    </a>
+  </div>
+</header>
+
+<!-- HERO - vast whitespace, editorial -->
+<section class="pt-32 md:pt-40 pb-20 md:pb-32 relative grid-lines">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+    <p class="num-label text-sage-700 mb-8" data-aos="fade-down">EST. 1994 &#183; SLATINA</p>
+
+    <h1 class="display text-6xl md:text-8xl lg:text-[10rem] leading-[0.9] text-stone-900 font-semibold mb-12" data-aos="fade-up">
+      Arhitectur&#259;<br>
+      <span class="italic font-normal text-sage-700">m&#259;surat&#259;</span>,<br>
+      detaliu dup&#259;<br>
+      detaliu.
+    </h1>
+
+    <div class="grid md:grid-cols-12 gap-8 mt-20">
+      <div class="md:col-span-4 vline" data-aos="fade-up" data-aos-delay="100">
+        <p class="num-label text-stone-400 mb-3">01 / STUDIO</p>
+        <p class="text-stone-600 leading-relaxed">
+          Birou de proiectare cu peste trei decenii de experien&#539;&#259; &#238;n arhitectur&#259; reziden&#539;ial&#259;,
+          comercial&#259; &#537;i institu&#539;ional&#259; din Slatina &#537;i jude&#539;ul Olt.
+        </p>
+      </div>
+      <div class="md:col-span-4 vline" data-aos="fade-up" data-aos-delay="200">
+        <p class="num-label text-stone-400 mb-3">02 / ABORDARE</p>
+        <p class="text-stone-600 leading-relaxed">
+          Lucr&#259;m pe m&#259;sur&#259;: &#238;n&#539;elegem &#238;nt&#226;i terenul, clientul &#537;i contextul,
+          apoi desen&#259;m proiectul care respect&#259; fiecare dintre aceste trei puncte.
+        </p>
+      </div>
+      <div class="md:col-span-4 vline" data-aos="fade-up" data-aos-delay="300">
+        <p class="num-label text-stone-400 mb-3">03 / SCAR&#258;</p>
+        <p class="text-stone-600 leading-relaxed">
+          De la case unifamiliale p&#226;n&#259; la ansambluri mixte. Consultan&#539;&#259; de structur&#259;,
+          design interior &#537;i documenta&#539;ie tehnic&#259; complet&#259;.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-wrap gap-5" data-aos="fade-up">
+      <a href="tel:0744770831" class="group inline-flex items-center gap-3 bg-stone-900 text-paper-50 px-8 py-4 hover:bg-sage-700 transition">
+        <i class="fa-solid fa-phone text-sm"></i>
+        <span>Programa&#539;i o consultare</span>
+        <i class="fa-solid fa-arrow-right text-sm group-hover:translate-x-1 transition"></i>
+      </a>
+      <a href="https://wa.me/40744770831" target="_blank" class="inline-flex items-center gap-3 border border-stone-900 text-stone-900 px-8 py-4 hover:bg-stone-900 hover:text-paper-50 transition">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Studio / About side-by-side -->
+<section id="studio" class="py-20 md:py-32 bg-stone-900 text-paper-50 relative">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <p class="num-label text-sage-300 mb-4">&#167; STUDIO</p>
+      <h2 class="display text-4xl md:text-6xl leading-tight">
+        Trei decenii<br>
+        de planuri<br>
+        <span class="italic font-normal text-sage-300">desenate cu m&#226;na</span>.
+      </h2>
+    </div>
+    <div class="lg:col-span-7 lg:col-start-7 space-y-6 text-paper-100/90 leading-relaxed text-lg" data-aos="fade-left">
+      <p>
+        Tele Stil a fost &#238;nfiin&#539;at &#238;n 1994, &#238;ntr-o perioad&#259; &#238;n care ora&#537;ul Slatina se redefinea.
+        Echipa noastr&#259; a desenat de atunci proiecte de locuin&#539;e, imobile de birouri &#537;i interven&#539;ii pe cl&#259;diri de patrimoniu.
+      </p>
+      <p>
+        Oferim servicii complete de arhitectur&#259;, rezisten&#539;&#259; &#537;i design interior, cu responsabilitate asupra fiec&#259;rui
+        detaliu tehnic. De la primul studiu de fezabilitate p&#226;n&#259; la recep&#539;ia final&#259;.
+      </p>
+      <p class="text-sage-300 italic border-l border-sage-500 pl-6 text-xl display">
+        "O cas&#259; se na&#537;te o singur&#259; dat&#259;. Merit&#259; fiecare ora de g&#226;ndire."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Servicii - numbered editorial list -->
+<section id="servicii" class="py-20 md:py-32 bg-paper-50">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+    <div class="flex items-end justify-between mb-20 flex-wrap gap-6" data-aos="fade-up">
+      <div>
+        <p class="num-label text-sage-700 mb-4">&#167; SERVICII</p>
+        <h2 class="display text-4xl md:text-7xl leading-[0.95] text-stone-900">
+          Ce livr&#259;m,<br><span class="italic font-normal">cap la cap</span>.
+        </h2>
+      </div>
+      <p class="max-w-sm text-stone-600">Gam&#259; integrat&#259; de servicii pentru proiectele dumneavoastr&#259;. Lucr&#259;m &#238;n echip&#259; sau ca proiectant principal.</p>
+    </div>
+
+    <div class="space-y-0">
+
+      <article class="grid lg:grid-cols-12 gap-6 py-10 border-t border-stone-400/30 hover:bg-paper-100 transition px-4" data-aos="fade-up">
+        <div class="lg:col-span-1 num-label text-sage-700 pt-2">01</div>
+        <div class="lg:col-span-3">
+          <h3 class="display text-3xl text-stone-900">Proiect de arhitectur&#259;</h3>
+        </div>
+        <div class="lg:col-span-6 text-stone-600 leading-relaxed">
+          Proiecte tehnice complete pentru autorizare &#537;i execu&#539;ie. Case, locuin&#539;e colective,
+          cl&#259;diri mixte &#537;i reabilit&#259;ri. Desene tehnice, memorii &#537;i documenta&#539;ie &#238;n conformitate cu legisla&#539;ia actual&#259;.
+        </div>
+        <div class="lg:col-span-2 flex justify-end items-start">
+          <i class="fa-solid fa-pencil-ruler text-3xl text-stone-400"></i>
+        </div>
+      </article>
+
+      <article class="grid lg:grid-cols-12 gap-6 py-10 border-t border-stone-400/30 hover:bg-paper-100 transition px-4" data-aos="fade-up">
+        <div class="lg:col-span-1 num-label text-sage-700 pt-2">02</div>
+        <div class="lg:col-span-3">
+          <h3 class="display text-3xl text-stone-900">Rezisten&#539;&#259; &amp; structur&#259;</h3>
+        </div>
+        <div class="lg:col-span-6 text-stone-600 leading-relaxed">
+          Proiect de rezisten&#539;&#259; pentru fundatii, suprastructur&#259;, &#537;arpant&#259; &#537;i calcule seismice.
+          Consolid&#259;ri &#537;i expertize tehnice pentru construc&#539;ii existente.
+        </div>
+        <div class="lg:col-span-2 flex justify-end items-start">
+          <i class="fa-solid fa-cubes text-3xl text-stone-400"></i>
+        </div>
+      </article>
+
+      <article class="grid lg:grid-cols-12 gap-6 py-10 border-t border-stone-400/30 hover:bg-paper-100 transition px-4" data-aos="fade-up">
+        <div class="lg:col-span-1 num-label text-sage-700 pt-2">03</div>
+        <div class="lg:col-span-3">
+          <h3 class="display text-3xl text-stone-900">Design interior</h3>
+        </div>
+        <div class="lg:col-span-6 text-stone-600 leading-relaxed">
+          Amenaj&#259;ri interioare pentru spa&#539;ii reziden&#539;iale &#537;i comerciale.
+          Studii de finisaje, mobilier la comand&#259;, iluminat &#537;i coordonare cu furnizorii locali.
+        </div>
+        <div class="lg:col-span-2 flex justify-end items-start">
+          <i class="fa-solid fa-couch text-3xl text-stone-400"></i>
+        </div>
+      </article>
+
+      <article class="grid lg:grid-cols-12 gap-6 py-10 border-t border-stone-400/30 hover:bg-paper-100 transition px-4" data-aos="fade-up">
+        <div class="lg:col-span-1 num-label text-sage-700 pt-2">04</div>
+        <div class="lg:col-span-3">
+          <h3 class="display text-3xl text-stone-900">Consultan&#539;&#259; construc&#539;ii</h3>
+        </div>
+        <div class="lg:col-span-6 text-stone-600 leading-relaxed">
+          &#206;ndrumare tehnic&#259; pe &#537;antier, verificare execu&#539;ie, dirigen&#539;ie de &#537;antier,
+          avize &#537;i colaborare cu echipele de execu&#539;ie.
+        </div>
+        <div class="lg:col-span-2 flex justify-end items-start">
+          <i class="fa-solid fa-hard-hat text-3xl text-stone-400"></i>
+        </div>
+      </article>
+
+      <article class="grid lg:grid-cols-12 gap-6 py-10 border-t border-b border-stone-400/30 hover:bg-paper-100 transition px-4" data-aos="fade-up">
+        <div class="lg:col-span-1 num-label text-sage-700 pt-2">05</div>
+        <div class="lg:col-span-3">
+          <h3 class="display text-3xl text-stone-900">Studii de fezabilitate</h3>
+        </div>
+        <div class="lg:col-span-6 text-stone-600 leading-relaxed">
+          Studii preliminare pentru proprietari &#537;i investitori: analize de sit, volumetrii preliminare,
+          estim&#259;ri de cost &#537;i calendare realiste.
+        </div>
+        <div class="lg:col-span-2 flex justify-end items-start">
+          <i class="fa-solid fa-magnifying-glass-chart text-3xl text-stone-400"></i>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Metodologie: 5 pasi -->
+<section id="abordare" class="py-20 md:py-32 bg-paper-100 relative">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+    <div class="max-w-3xl mb-20" data-aos="fade-up">
+      <p class="num-label text-sage-700 mb-4">&#167; ABORDARE</p>
+      <h2 class="display text-4xl md:text-7xl leading-[0.95] text-stone-900">
+        Cum ajungem<br><span class="italic font-normal">de la idee</span><br>la recep&#539;ie.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-5 gap-8">
+      <div data-aos="fade-up">
+        <div class="text-xs num-label text-sage-700 mb-4">FAZA 01</div>
+        <div class="h-px bg-stone-900 w-12 mb-4"></div>
+        <h3 class="display text-xl text-stone-900 mb-2">&#206;nt&#226;lnire</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">Discu&#539;ie ini&#539;ial&#259; despre nevoie, teren, buget &#537;i termene.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="80">
+        <div class="text-xs num-label text-sage-700 mb-4">FAZA 02</div>
+        <div class="h-px bg-stone-900 w-12 mb-4"></div>
+        <h3 class="display text-xl text-stone-900 mb-2">Studiu</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">Analiz&#259; de amplasament, regulamente urbane, schi&#539;e preliminare.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="160">
+        <div class="text-xs num-label text-sage-700 mb-4">FAZA 03</div>
+        <div class="h-px bg-stone-900 w-12 mb-4"></div>
+        <h3 class="display text-xl text-stone-900 mb-2">Anteproiect</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">Desenele de baz&#259;, volumetrii, propuneri &#537;i variante.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="240">
+        <div class="text-xs num-label text-sage-700 mb-4">FAZA 04</div>
+        <div class="h-px bg-stone-900 w-12 mb-4"></div>
+        <h3 class="display text-xl text-stone-900 mb-2">Proiect tehnic</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">Documenta&#539;ie complet&#259; pentru autoriza&#539;ia de construire.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="320">
+        <div class="text-xs num-label text-sage-700 mb-4">FAZA 05</div>
+        <div class="h-px bg-stone-900 w-12 mb-4"></div>
+        <h3 class="display text-xl text-stone-900 mb-2">Execu&#539;ie</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">Supervizare tehnic&#259; pe &#537;antier &#537;i recep&#539;ia lucr&#259;rilor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="py-20 md:py-28 bg-paper-50">
+  <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-3 gap-12" data-aos="fade-up">
+      <div class="bracket-top pt-4">
+        <h3 class="display text-2xl text-stone-900 mb-4">Responsabilitate</h3>
+        <p class="text-stone-600 leading-relaxed">Semn&#259;m proiectele. Ne asum&#259;m fiecare calcul, fiecare detaliu &#537;i toate avizele depuse &#238;n numele dumneavoastr&#259;.</p>
+      </div>
+      <div class="bracket-top pt-4">
+        <h3 class="display text-2xl text-stone-900 mb-4">Claritate</h3>
+        <p class="text-stone-600 leading-relaxed">Pre&#539;ul, termenele &#537;i etapele sunt explicite din prima zi. F&#259;r&#259; termeni juridici inaccesibili.</p>
+      </div>
+      <div class="bracket-top pt-4">
+        <h3 class="display text-2xl text-stone-900 mb-4">Relevan&#539;&#259;</h3>
+        <p class="text-stone-600 leading-relaxed">Nu copi&#259;m proiecte. Fiecare cas&#259; r&#259;spunde unui teren concret &#537;i unei familii concrete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact + Map -->
+<section id="contact" class="bg-stone-900 text-paper-50">
+  <div class="grid lg:grid-cols-2">
+    <div class="p-10 md:p-20">
+      <p class="num-label text-sage-300 mb-4">&#167; CONTACT</p>
+      <h2 class="display text-4xl md:text-6xl leading-tight mb-12">
+        Spune&#539;i-ne<br>
+        <span class="italic font-normal text-sage-300">despre teren</span>.
+      </h2>
+
+      <div class="space-y-8">
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 border border-sage-300 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-phone text-sage-300"></i></div>
+          <div>
+            <p class="num-label text-sage-300">Telefon</p>
+            <a href="tel:0744770831" class="display text-2xl hover:text-sage-300">0744 770 831</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 border border-sage-300 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-brands fa-whatsapp text-sage-300"></i></div>
+          <div>
+            <p class="num-label text-sage-300">WhatsApp</p>
+            <a href="https://wa.me/40744770831" class="display text-2xl hover:text-sage-300">Deschide&#539;i o conversa&#539;ie</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 border border-sage-300 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-location-dot text-sage-300"></i></div>
+          <div>
+            <p class="num-label text-sage-300">Sediu</p>
+            <p class="text-lg">Bd. Alexandru Ioan Cuza 48</p>
+            <p class="text-paper-200">Slatina, Olt</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5">
+          <div class="w-10 h-10 border border-sage-300 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-regular fa-clock text-sage-300"></i></div>
+          <div>
+            <p class="num-label text-sage-300">Program</p>
+            <p class="text-lg">Luni - Vineri</p>
+            <p class="text-paper-200">08:30 - 17:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="min-h-[500px]">
+      <iframe src="https://www.google.com/maps?q=44.426977,24.3798&hl=ro&z=17&output=embed" width="100%" height="100%" style="border:0; min-height:500px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-paper-100 py-14 border-t border-stone-400/30">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-6">
+    <div>
+      <p class="display text-2xl text-stone-900">tele<span class="text-sage-500">&#47;</span>stil</p>
+      <p class="text-sm text-stone-600 mt-2 max-w-md">Birou de arhitectur&#259; &#537;i proiectare din Slatina. De la 1994.</p>
+    </div>
+    <div class="text-sm text-stone-600 space-y-1">
+      <p>Bd. Alexandru Ioan Cuza 48, Slatina</p>
+      <p><a href="tel:0744770831" class="hover:text-sage-700">0744 770 831</a></p>
+      <p>Luni - Vineri, 08:30 - 17:00</p>
+    </div>
+    <p class="text-xs text-stone-400">&copy; 2026 Tele Stil</p>
+  </div>
+</footer>
+
+<!-- Sticky mobile -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-stone-900 text-paper-50 grid grid-cols-2 z-50">
+  <a href="tel:0744770831" class="py-4 text-center text-sm border-r border-stone-800">
+    <i class="fa-solid fa-phone mr-2 text-sage-300"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40744770831" class="py-4 text-center text-sm">
+    <i class="fa-brands fa-whatsapp mr-2 text-sage-300"></i> WhatsApp
+  </a>
+</div>
+<div class="md:hidden h-16"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 900, once: true, offset: 80 });</script>
+</body>
+</html>

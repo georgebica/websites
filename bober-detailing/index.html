@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bober Detailing — Auto Detailing Profesional | Craiova</title>
+    <meta name="description" content="Bober Detailing Craiova — servicii profesionale de detailing auto: interior, exterior, polish, ceară, protecție ceramică. Rating 5/5. Sună: 0761 475 199.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyan: '#00BCD4',
+                        'cyan-dark': '#00838F',
+                        'cyan-light': '#B2EBF2',
+                        'dark-grey': '#212121',
+                        'mid-grey': '#424242',
+                        lime: '#CDDC39',
+                        'lime-dark': '#AFB42B',
+                        'surface': '#1A1A1A',
+                        'card-dark': '#2A2A2A',
+                    },
+                    fontFamily: {
+                        urbanist: ['Urbanist', 'sans-serif'],
+                        dm: ['DM Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background-color: #212121; color: #ffffff; }
+        .font-urbanist { font-family: 'Urbanist', sans-serif; }
+        .cyan-gradient { background: linear-gradient(135deg, #00BCD4, #00E5FF); }
+        .cyan-text {
+            background: linear-gradient(135deg, #00BCD4, #00E5FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-detail {
+            background: #2A2A2A;
+            border: 1px solid rgba(0, 188, 212, 0.15);
+            border-radius: 16px;
+            transition: all 0.4s ease;
+        }
+        .card-detail:hover {
+            border-color: rgba(0, 188, 212, 0.5);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 188, 212, 0.1);
+        }
+        .cta-cyan {
+            background: linear-gradient(135deg, #00BCD4, #00838F);
+            border-radius: 12px;
+            transition: all 0.4s ease;
+        }
+        .cta-cyan:hover {
+            background: linear-gradient(135deg, #00E5FF, #00BCD4);
+            box-shadow: 0 8px 30px rgba(0, 188, 212, 0.4);
+            transform: translateY(-2px);
+        }
+        .sparkle {
+            position: relative;
+            overflow: hidden;
+        }
+        .sparkle::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 188, 212, 0.1) 0%, transparent 60%);
+            animation: sparkle-rotate 10s linear infinite;
+        }
+        @keyframes sparkle-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 188, 212, 0.15), transparent);
+            animation: shine 3s infinite;
+        }
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(0, 188, 212, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 188, 212, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Bober Detailing",
+        "description": "Servicii profesionale de auto detailing în Craiova: detailing interior, exterior, polish, ceară, protecție ceramică.",
+        "telephone": "+40761475199",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Craiova",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.328654,
+            "longitude": 23.844248
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "09:30",
+                "closes": "19:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "ratingCount": "7"
+        },
+        "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Women-owned", "value": "true" },
+            { "@type": "PropertyValue", "name": "LGBTQ+ friendly", "value": "true" },
+            { "@type": "PropertyValue", "name": "Wheelchair accessible toilet", "value": "true" }
+        ],
+        "url": "#"
+    }
+    </script>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-dark-grey/90 backdrop-blur-md border-b border-cyan/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 cyan-gradient rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-car text-dark-grey text-lg"></i>
+                    </div>
+                    <span class="font-urbanist text-xl font-bold">Bober <span class="cyan-text">Detailing</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#servicii" class="text-sm text-white/60 hover:text-cyan transition-colors font-medium">Servicii</a>
+                    <a href="#despre" class="text-sm text-white/60 hover:text-cyan transition-colors font-medium">Despre</a>
+                    <a href="#recenzii" class="text-sm text-white/60 hover:text-cyan transition-colors font-medium">Recenzii</a>
+                    <a href="#program" class="text-sm text-white/60 hover:text-cyan transition-colors font-medium">Program</a>
+                    <a href="tel:0761475199" class="cta-cyan px-6 py-2.5 text-dark-grey text-sm font-bold">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                    </a>
+                </div>
+                <button class="md:hidden text-white text-2xl" id="menuBtn" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-dark-grey/95 border-t border-cyan/10" id="mobileMenu">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="#servicii" class="text-white/60 hover:text-cyan font-medium text-sm">Servicii</a>
+                <a href="#despre" class="text-white/60 hover:text-cyan font-medium text-sm">Despre</a>
+                <a href="#recenzii" class="text-white/60 hover:text-cyan font-medium text-sm">Recenzii</a>
+                <a href="#program" class="text-white/60 hover:text-cyan font-medium text-sm">Program</a>
+                <a href="tel:0761475199" class="cta-cyan px-6 py-3 text-dark-grey text-sm font-bold text-center">
+                    <i class="fa-solid fa-phone mr-2"></i>Sună acum
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center hero-grid pt-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-dark-grey via-transparent to-dark-grey"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-cyan/10 border border-cyan/20 px-4 py-2 rounded-full mb-6" data-aos="fade-up">
+                        <i class="fa-solid fa-star text-cyan text-xs"></i>
+                        <span class="text-sm font-medium text-cyan">Rating perfect 5/5</span>
+                    </div>
+                    <h1 class="font-urbanist text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+                        Mașina ta merită <span class="cyan-text">strălucirea</span> perfectă
+                    </h1>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+                        Servicii profesionale de auto detailing în Craiova. Interior, exterior, polish, protecție ceramică — tratăm fiecare mașină ca și cum ar fi a noastră.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="tel:0761475199" class="cta-cyan px-8 py-4 text-dark-grey font-bold text-center">
+                            <i class="fa-solid fa-phone mr-2"></i>0761 475 199
+                        </a>
+                        <a href="#servicii" class="border border-cyan/30 px-8 py-4 text-cyan font-medium text-center rounded-xl hover:bg-cyan/10 transition-all">
+                            Descoperă serviciile
+                        </a>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-4 mt-8" data-aos="fade-up" data-aos-delay="400">
+                        <span class="text-xs text-white/40 bg-white/5 px-3 py-1.5 rounded-full"><i class="fa-solid fa-venus text-cyan mr-1"></i>Women-owned</span>
+                        <span class="text-xs text-white/40 bg-white/5 px-3 py-1.5 rounded-full"><i class="fa-solid fa-rainbow text-cyan mr-1"></i>LGBTQ+ friendly</span>
+                        <span class="text-xs text-white/40 bg-white/5 px-3 py-1.5 rounded-full"><i class="fa-solid fa-wheelchair text-cyan mr-1"></i>Accesibil</span>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left">
+                    <div class="relative w-72 h-72 sm:w-96 sm:h-96">
+                        <div class="absolute inset-0 rounded-3xl border border-cyan/20 bg-card-dark sparkle flex items-center justify-center">
+                            <i class="fa-solid fa-car-side text-cyan text-7xl sm:text-8xl relative z-10"></i>
+                        </div>
+                        <div class="absolute -top-3 -right-3 bg-lime text-dark-grey px-4 py-2 rounded-xl font-bold text-sm">
+                            <i class="fa-solid fa-star mr-1"></i>5/5
+                        </div>
+                        <div class="absolute -bottom-3 -left-3 bg-card-dark border border-cyan/20 px-4 py-2 rounded-xl text-sm">
+                            <i class="fa-solid fa-clock text-cyan mr-2"></i>Zilnic 9:30–19:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-12 border-y border-cyan/10 bg-surface">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div data-aos="fade-up">
+                <p class="font-urbanist text-3xl font-bold cyan-text">5.0</p>
+                <p class="text-white/40 text-sm mt-2">Rating Google</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <p class="font-urbanist text-3xl font-bold cyan-text">7 zile</p>
+                <p class="text-white/40 text-sm mt-2">Deschis zilnic</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="font-urbanist text-3xl font-bold cyan-text">100%</p>
+                <p class="text-white/40 text-sm mt-2">Satisfacție clienți</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <p class="font-urbanist text-3xl font-bold cyan-text">Pro</p>
+                <p class="text-white/40 text-sm mt-2">Echipamente premium</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicii" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Servicii</span>
+                <h2 class="font-urbanist text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6" data-aos="fade-up">Servicii de <span class="cyan-text">detailing</span></h2>
+                <p class="text-white/50 text-lg" data-aos="fade-up">De la curățare profundă la protecție ceramică — pachetul complet pentru mașina ta.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-detail p-8 shine-effect" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center mb-6 relative z-10">
+                        <i class="fa-solid fa-couch text-cyan text-2xl"></i>
+                    </div>
+                    <h3 class="font-urbanist text-xl font-bold mb-3 relative z-10">Detailing interior</h3>
+                    <p class="text-white/50 text-sm leading-relaxed relative z-10">Curățare profundă a tapițeriei, bordul, plafon, portiere. Eliminăm petele, mirosurile și bacteriile.</p>
+                    <div class="mt-6 pt-4 border-t border-cyan/10 relative z-10">
+                        <a href="tel:0761475199" class="text-cyan font-semibold text-sm">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-detail p-8 shine-effect" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center mb-6 relative z-10">
+                        <i class="fa-solid fa-spray-can text-cyan text-2xl"></i>
+                    </div>
+                    <h3 class="font-urbanist text-xl font-bold mb-3 relative z-10">Detailing exterior</h3>
+                    <p class="text-white/50 text-sm leading-relaxed relative z-10">Spălare hand-wash, decontaminare, curățare jante, anvelope și plastic exterior. Strălucire garantată.</p>
+                    <div class="mt-6 pt-4 border-t border-cyan/10 relative z-10">
+                        <a href="tel:0761475199" class="text-cyan font-semibold text-sm">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-detail p-8 shine-effect" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center mb-6 relative z-10">
+                        <i class="fa-solid fa-gem text-cyan text-2xl"></i>
+                    </div>
+                    <h3 class="font-urbanist text-xl font-bold mb-3 relative z-10">Polish & ceară</h3>
+                    <p class="text-white/50 text-sm leading-relaxed relative z-10">Corecție vopsea, eliminare zgârieturi, aplicare ceară de protecție. Lac ca nou, strălucire de showroom.</p>
+                    <div class="mt-6 pt-4 border-t border-cyan/10 relative z-10">
+                        <a href="tel:0761475199" class="text-cyan font-semibold text-sm">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-detail p-8 shine-effect" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-lime/10 rounded-xl flex items-center justify-center mb-6 relative z-10">
+                        <i class="fa-solid fa-shield-halved text-lime text-2xl"></i>
+                    </div>
+                    <h3 class="font-urbanist text-xl font-bold mb-3 relative z-10">Protecție ceramică</h3>
+                    <p class="text-white/50 text-sm leading-relaxed relative z-10">Strat ceramic de ultimă generație. Protecție pe termen lung împotriva zgârieturilor, razelor UV și chimicalelor.</p>
+                    <div class="mt-6 pt-4 border-t border-cyan/10 relative z-10">
+                        <a href="tel:0761475199" class="text-cyan font-semibold text-sm">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="despre" class="py-24 bg-surface relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-cyan font-semibold text-sm tracking-wider uppercase">Despre noi</span>
+                    <h2 class="font-urbanist text-3xl sm:text-4xl font-bold mt-4 mb-6">Pasiune pentru <span class="cyan-text">perfecțiune</span></h2>
+                    <p class="text-white/60 leading-relaxed mb-6 text-lg">
+                        Bober Detailing este un business deținut de femei din Craiova, dedicat excelenței în auto detailing. Fiecare mașină primește atenția și grija pe care o merită.
+                    </p>
+                    <p class="text-white/60 leading-relaxed mb-8">
+                        Suntem un spațiu incluziv și prietenos, accesibil tuturor. Folosim produse premium, echipamente profesionale și tehnici învățate de la cei mai buni din industrie.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-card-dark border border-cyan/10 rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-droplet text-cyan"></i>
+                            <span class="text-sm">Produse premium</span>
+                        </div>
+                        <div class="bg-card-dark border border-cyan/10 rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-tools text-cyan"></i>
+                            <span class="text-sm">Echipamente pro</span>
+                        </div>
+                        <div class="bg-card-dark border border-cyan/10 rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-venus text-cyan"></i>
+                            <span class="text-sm">Women-owned</span>
+                        </div>
+                        <div class="bg-card-dark border border-cyan/10 rounded-xl p-4 flex items-center gap-3">
+                            <i class="fa-solid fa-heart text-cyan"></i>
+                            <span class="text-sm">Incluziv & prietenos</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-card-dark border border-cyan/10 rounded-2xl p-10">
+                        <h3 class="font-urbanist text-2xl font-bold mb-8 text-center">Procesul nostru</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] cyan-gradient rounded-lg flex items-center justify-center text-dark-grey font-bold text-sm">01</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Inspecție & evaluare</h4>
+                                    <p class="text-white/50 text-sm">Evaluăm starea mașinii și recomandăm cel mai potrivit pachet.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] cyan-gradient rounded-lg flex items-center justify-center text-dark-grey font-bold text-sm">02</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Pregătire & decontaminare</h4>
+                                    <p class="text-white/50 text-sm">Curățare inițială, decontaminare chimică și pregătire suprafețe.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] cyan-gradient rounded-lg flex items-center justify-center text-dark-grey font-bold text-sm">03</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Detailing & corecție</h4>
+                                    <p class="text-white/50 text-sm">Aplicarea serviciului ales: polish, ceară, ceramică sau detailing complet.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 min-w-[40px] bg-lime rounded-lg flex items-center justify-center text-dark-grey font-bold text-sm">04</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Inspecție finală</h4>
+                                    <p class="text-white/50 text-sm">Verificare cu lumini speciale și predarea mașinii impecabile.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="recenzii" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Recenzii</span>
+                <h2 class="font-urbanist text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6" data-aos="fade-up">Ce spun <span class="cyan-text">clienții</span></h2>
+                <p class="text-white/50 text-lg" data-aos="fade-up">Rating perfect 5/5 pe Google — fiecare client contează.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-detail p-8" data-aos="fade-up">
+                    <div class="flex gap-1 text-lime mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-white/70 leading-relaxed mb-6 italic">„Super băieți, profi, recomand! Mașina arată ca nouă, atât interiorul cât și exteriorul. Cu siguranță voi reveni."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-cyan text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Client verificat</p>
+                            <p class="text-white/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-detail p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 text-lime mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-white/70 leading-relaxed mb-6 italic">„Serviciu excelent și profesionalism de nota 10. Am fost foarte mulțumit de rezultatul protecției ceramice. Mașina strălucește impecabil."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-cyan text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Client verificat</p>
+                            <p class="text-white/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-detail p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 text-lime mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-white/70 leading-relaxed mb-6 italic">„Foarte atenți la detalii, exact cum îi spune și numele. Am apreciat că au curățat mașina cu grijă, fără să rateze niciun colț."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-user text-cyan text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Client verificat</p>
+                            <p class="text-white/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 bg-cyan/10 border border-cyan/20 rounded-full px-6 py-3">
+                    <div class="flex gap-1 text-lime">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="font-semibold">5.0 din 5</span>
+                    <span class="text-white/40">— 7 recenzii Google</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Contact -->
+    <section id="program" class="py-24 bg-surface relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <span class="text-cyan font-semibold text-sm tracking-wider uppercase">Program</span>
+                    <h2 class="font-urbanist text-3xl sm:text-4xl font-bold mt-4 mb-8">Program de <span class="cyan-text">lucru</span></h2>
+                    <div class="bg-card-dark border border-cyan/10 rounded-2xl p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fa-solid fa-calendar-check text-cyan text-xl"></i>
+                            <h3 class="font-urbanist text-xl font-bold">Deschiși zilnic</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center py-3 border-b border-white/5">
+                                <span class="text-white/60">Luni – Duminică</span>
+                                <span class="text-cyan font-semibold">09:30 – 19:00</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 bg-cyan/5 border border-cyan/10 rounded-xl p-4">
+                            <p class="text-white/60 text-sm"><i class="fa-solid fa-info-circle text-cyan mr-2"></i>Programare recomandată pentru a evita timpul de așteptare.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="bg-card-dark border border-cyan/10 px-4 py-2 rounded-xl text-sm text-white/60">
+                            <i class="fa-solid fa-venus text-cyan mr-2"></i>Women-owned
+                        </span>
+                        <span class="bg-card-dark border border-cyan/10 px-4 py-2 rounded-xl text-sm text-white/60">
+                            <i class="fa-solid fa-rainbow text-cyan mr-2"></i>LGBTQ+ friendly
+                        </span>
+                        <span class="bg-card-dark border border-cyan/10 px-4 py-2 rounded-xl text-sm text-white/60">
+                            <i class="fa-solid fa-wheelchair text-cyan mr-2"></i>Toaletă accesibilă
+                        </span>
+                    </div>
+                </div>
+                <div data-aos="fade-left" id="contact">
+                    <span class="text-cyan font-semibold text-sm tracking-wider uppercase">Contact</span>
+                    <h2 class="font-urbanist text-3xl sm:text-4xl font-bold mt-4 mb-8">Programează-te <span class="cyan-text">acum</span></h2>
+                    <div class="bg-card-dark border border-cyan/10 rounded-2xl p-8 text-center">
+                        <div class="w-20 h-20 cyan-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-phone text-dark-grey text-3xl"></i>
+                        </div>
+                        <h3 class="font-urbanist text-2xl font-bold mb-4">Sună pentru programare</h3>
+                        <p class="text-white/50 mb-8 max-w-sm mx-auto">Sună-ne pentru o programare rapidă. Suntem deschiși zilnic, 9:30–19:00.</p>
+                        <a href="tel:0761475199" class="cta-cyan px-10 py-4 text-dark-grey font-bold text-lg inline-block">
+                            <i class="fa-solid fa-phone mr-2"></i>0761 475 199
+                        </a>
+                        <div class="mt-6">
+                            <a href="https://www.google.com/maps/search/?api=1&query=44.328654,23.844248" target="_blank" rel="noopener noreferrer" class="text-cyan hover:underline text-sm">
+                                <i class="fa-solid fa-map-location-dot mr-1"></i>Deschide în Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 cyan-gradient relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-urbanist text-3xl sm:text-4xl lg:text-5xl font-bold text-dark-grey mb-6" data-aos="fade-up">Mașina ta merită mai mult</h2>
+            <p class="text-dark-grey/70 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Programează-te acum și oferă-i mașinii tale tratamentul premium pe care îl merită. Suntem deschiși zilnic!</p>
+            <a href="tel:0761475199" class="bg-dark-grey text-cyan font-bold px-10 py-4 rounded-xl inline-block hover:shadow-lg hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-phone mr-2"></i>Sună: 0761 475 199
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-surface border-t border-cyan/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 cyan-gradient rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-car text-dark-grey text-lg"></i>
+                        </div>
+                        <span class="font-urbanist text-xl font-bold">Bober Detailing</span>
+                    </div>
+                    <p class="text-white/40 text-sm leading-relaxed">Servicii profesionale de auto detailing în Craiova. Women-owned, incluziv, dedicat excelenței.</p>
+                </div>
+                <div>
+                    <h4 class="font-urbanist text-lg font-bold mb-4 text-cyan">Servicii</h4>
+                    <ul class="space-y-2">
+                        <li class="text-white/40 text-sm">Detailing interior</li>
+                        <li class="text-white/40 text-sm">Detailing exterior</li>
+                        <li class="text-white/40 text-sm">Polish & ceară</li>
+                        <li class="text-white/40 text-sm">Protecție ceramică</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-urbanist text-lg font-bold mb-4 text-cyan">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/40 text-sm">
+                            <i class="fa-solid fa-phone text-cyan"></i>0761 475 199
+                        </li>
+                        <li class="flex items-center gap-3 text-white/40 text-sm">
+                            <i class="fa-solid fa-location-dot text-cyan"></i>Craiova, România
+                        </li>
+                        <li class="flex items-center gap-3 text-white/40 text-sm">
+                            <i class="fa-solid fa-clock text-cyan"></i>Zilnic: 09:30 – 19:00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 text-center">
+                <p class="text-white/30 text-sm">&copy; 2026 Bober Detailing. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>
