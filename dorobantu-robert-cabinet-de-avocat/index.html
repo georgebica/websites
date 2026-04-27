@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabinet Avocat Robert Dorobantu &middot; Slatina</title>
+<meta name="description" content="Cabinet de avocat Dorobantu Robert &icirc;n Slatina, Strada Prim&#259;verii 13A. Consultan&#539;&#259; juridic&#259;, reprezentare &#537;i asisten&#539;&#259;. Telefon 0349 805 849.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { charcoal: '#24272E', burgundy: '#7A1F2E', burgd: '#571520', ivory: '#F6F1E6', ivoryl: '#FBF8F0', gold: '#A78842', ink: '#1C1E23', muted: '#6A6C73', line: '#E0D9C8', wa: '#25D366' },
+  fontFamily: { serif: ['"PT Serif"', 'Georgia', 'serif'], sans: ['"PT Sans"', 'system-ui', 'sans-serif'] }
+}}}
+</script>
+<style>
+  html, body { background: #F6F1E6; color: #1C1E23; }
+  body { font-family: "PT Sans", system-ui, sans-serif; }
+  .serif { font-family: "PT Serif", Georgia, serif; letter-spacing: -.005em; line-height: 1.12; }
+  .btn-burg { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #7A1F2E; color: #F6F1E6; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; font-weight: 700; transition: all .25s; }
+  .btn-burg:hover { background: #571520; }
+  .btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: transparent; color: #24272E; border: 1px solid #24272E; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; font-weight: 700; transition: all .25s; }
+  .btn-outline:hover { background: #24272E; color: #F6F1E6; }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; font-weight: 700; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); }
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .3rem .9rem; border: 1px solid #A78842; color: #A78842; font-size: .68rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+  .hair { height: 1px; background: #24272E; }
+  .hair-gold { height: 1px; background: #A78842; }
+  .card { background: #FBF8F0; border: 1px solid #E0D9C8; padding: 1.8rem; transition: all .35s; }
+  .card:hover { border-color: #7A1F2E; box-shadow: 0 24px 40px -30px rgba(28,30,35,.25); transform: translateY(-3px); }
+  .mobile-link { display: block; padding: 1rem 0; font-family: "PT Serif", serif; font-size: 1.6rem; border-bottom: 1px solid #E0D9C8; }
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dotted rgba(28,30,35,.2); font-size: .95rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #7A1F2E; font-weight: 700; }
+  .case-row { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #E0D9C8; align-items: start; }
+  .case-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-ivoryl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 border border-charcoal flex items-center justify-center"><span class="serif text-xl font-bold">R.D.</span></span>
+      <div class="leading-tight"><p class="serif text-lg font-bold">Robert Dorobantu</p><p class="text-[10px] tracking-[.22em] uppercase text-muted mt-1">Cabinet de avocat &middot; Slatina</p></div>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-[11px] font-bold text-charcoal/80 uppercase tracking-[.18em]">
+      <a href="#despre" class="hover:text-burgundy">Despre</a>
+      <a href="#domenii" class="hover:text-burgundy">Domenii</a>
+      <a href="#proces" class="hover:text-burgundy">Cum lucr&#259;m</a>
+      <a href="#locatie" class="hover:text-burgundy">Loca&#539;ie</a>
+      <a href="tel:0349805849" class="btn-burg !py-2.5 !px-4 !text-[10px]">0349 805 849</a>
+    </nav>
+    <button id="menu-open" class="md:hidden w-11 h-11 border border-charcoal flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8"><div class="hair"></div></div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-ivory z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between"><span class="serif text-lg font-bold">Robert Dorobantu</span><button id="menu-close" class="w-11 h-11 border border-charcoal flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="mt-6">
+    <a href="#despre" class="mobile-link">Despre</a>
+    <a href="#domenii" class="mobile-link">Domenii</a>
+    <a href="#proces" class="mobile-link">Cum lucr&#259;m</a>
+    <a href="#locatie" class="mobile-link">Loca&#539;ie</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-0">
+    <a href="tel:0349805849" class="btn-burg">Sun&#259;</a>
+    <a href="https://wa.me/40349805849" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">&mdash; Baroul Olt &middot; Slatina &mdash;</span>
+    <h1 class="serif mt-10 text-4xl sm:text-6xl lg:text-7xl font-bold" data-aos="fade-up">Consultan&#539;&#259; juridic&#259;<br>cu <span style="font-style:italic" class="text-burgundy">r&#259;bdare &#537;i claritate.</span></h1>
+    <p class="mt-10 max-w-2xl mx-auto text-lg text-ink/80 leading-relaxed" data-aos="fade-up" data-aos-delay="100">Cabinetul de avocat Robert Dorobantu asist&#259; persoane fizice &#537;i firme &icirc;n procese civile, comerciale, familie &#537;i dreptul muncii. &Icirc;n Slatina, pe Strada Prim&#259;verii 13A.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-0 justify-center" data-aos="fade-up" data-aos-delay="160">
+      <a href="tel:0349805849" class="btn-burg"><i class="fa-solid fa-phone"></i> 0349 805 849</a>
+      <a href="https://wa.me/40349805849" class="btn-wap"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+    <div class="mt-14 max-w-sm mx-auto flex items-center gap-4"><div class="flex-1 hair-gold"></div><span class="text-[10px] tracking-[.28em] uppercase text-gold">Avocat &middot; Baroul Olt</span><div class="flex-1 hair-gold"></div></div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-ivoryl border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">I. Cabinetul</span>
+      <h2 class="serif mt-5 text-3xl sm:text-4xl font-bold">Un avocat care<br><span style="font-style:italic" class="text-burgundy">&icirc;&#539;i explic&#259; pe &icirc;n&#539;eles.</span></h2>
+    </div>
+    <div class="lg:col-span-7 space-y-5 text-ink/85 leading-relaxed">
+      <p class="text-lg">Cabinetul Dorobantu Robert lucreaz&#259; pentru clien&#539;i care nu vin la avocat &icirc;n fiecare lun&#259;. &#536;tim c&#259; limbajul juridic este intimidant. Ascult&#259;m &icirc;nt&#226;i, explic&#259;m apoi &#537;i ac&#539;ion&#259;m dup&#259; ce clientul a &icirc;n&#539;eles op&#539;iunile.</p>
+      <p class="text-muted">Deschis luni-s&#226;mb&#259;t&#259;, cu consulta&#539;ii programate. Lucr&#259;m &icirc;n Slatina &#537;i tot jude&#539;ul Olt, cu reprezentare &icirc;n instan&#539;ele competente.</p>
+      <div class="mt-6 grid sm:grid-cols-2 gap-0 border border-line">
+        <div class="case-row p-5 !border-b-0 sm:!border-r sm:border-line"><span class="serif italic text-gold">I.</span><div><p class="font-bold">Consulta&#539;ie clar&#259;</p><p class="text-sm text-muted mt-1">Explic&#259;m &#537;ansele, costurile &#537;i timpul.</p></div></div>
+        <div class="case-row p-5 !border-b-0"><span class="serif italic text-gold">II.</span><div><p class="font-bold">Deontologie</p><p class="text-sm text-muted mt-1">Secret profesional &#537;i confiden&#539;ialitate.</p></div></div>
+        <div class="case-row p-5 sm:!border-r sm:border-line border-t border-line"><span class="serif italic text-gold">III.</span><div><p class="font-bold">Onorarii clare</p><p class="text-sm text-muted mt-1">Stabilim scris costurile dinainte.</p></div></div>
+        <div class="case-row p-5 border-t border-line"><span class="serif italic text-gold">IV.</span><div><p class="font-bold">Reprezentare</p><p class="text-sm text-muted mt-1">Olt, Dolj, Bucure&#537;ti &#537;i &icirc;mprejurimi.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="domenii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl"><span class="chip">II. Domenii</span><h2 class="serif mt-5 text-3xl sm:text-4xl font-bold">Domenii de <span style="font-style:italic" class="text-burgundy">practic&#259;.</span></h2></div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><p class="serif italic text-gold text-sm">&mdash; i.</p><h3 class="serif text-xl font-bold mt-2">Drept civil</h3><p class="mt-3 text-sm text-muted">Contracte, succesiuni, obliga&#539;ii, revendic&#259;ri.</p></article>
+      <article class="card"><p class="serif italic text-gold text-sm">&mdash; ii.</p><h3 class="serif text-xl font-bold mt-2">Dreptul familiei</h3><p class="mt-3 text-sm text-muted">Divor&#539;, custodie, pensie alimentar&#259;, partaj.</p></article>
+      <article class="card"><p class="serif italic text-gold text-sm">&mdash; iii.</p><h3 class="serif text-xl font-bold mt-2">Dreptul muncii</h3><p class="mt-3 text-sm text-muted">Contest&#259;ri concedieri, drepturi salariale, litigii.</p></article>
+      <article class="card"><p class="serif italic text-gold text-sm">&mdash; iv.</p><h3 class="serif text-xl font-bold mt-2">Drept comercial</h3><p class="mt-3 text-sm text-muted">Recuperare crean&#539;e, contracte B2B, asisten&#539;&#259; firme.</p></article>
+      <article class="card"><p class="serif italic text-gold text-sm">&mdash; v.</p><h3 class="serif text-xl font-bold mt-2">Drept imobiliar</h3><p class="mt-3 text-sm text-muted">V&#226;nz&#259;ri-cump&#259;r&#259;ri, litigii, cadastru.</p></article>
+      <article class="card"><p class="serif italic text-gold text-sm">&mdash; vi.</p><h3 class="serif text-xl font-bold mt-2">Execut&#259;ri silite</h3><p class="mt-3 text-sm text-muted">Contesta&#539;ii, proceduri speciale, recuperare.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-charcoal text-ivory">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5"><span class="chip !border-gold !text-gold">III. Proces</span><h2 class="serif mt-5 text-3xl sm:text-4xl font-bold">Patru etape de <span style="font-style:italic" class="text-gold">colaborare.</span></h2></div>
+    <div class="lg:col-span-7">
+      <div class="case-row !border-b border-gold/30 !pb-6"><span class="serif italic text-gold text-2xl w-10">01</span><div><p class="serif text-xl font-bold">Primul contact</p><p class="mt-1 text-sm text-ivory/75">Sun&#259; sau vino la cabinet. Spune-ne situa&#539;ia.</p></div></div>
+      <div class="case-row !border-b border-gold/30 !pb-6 !pt-6"><span class="serif italic text-gold text-2xl w-10">02</span><div><p class="serif text-xl font-bold">Consulta&#539;ie</p><p class="mt-1 text-sm text-ivory/75">Analiz&#259;m documentele, explic&#259;m op&#539;iunile.</p></div></div>
+      <div class="case-row !border-b border-gold/30 !pb-6 !pt-6"><span class="serif italic text-gold text-2xl w-10">03</span><div><p class="serif text-xl font-bold">Acord &#537;i plan</p><p class="mt-1 text-sm text-ivory/75">Strategie, onorariu, termene. Contract scris.</p></div></div>
+      <div class="case-row !border-b-0 !pt-6"><span class="serif italic text-gold text-2xl w-10">04</span><div><p class="serif text-xl font-bold">Reprezentare</p><p class="mt-1 text-sm text-ivory/75">Instan&#539;&#259;, negocieri, redact&#259;ri. Comunicare la fiecare pas.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip">IV. Loca&#539;ie</span>
+      <h2 class="serif mt-5 text-3xl sm:text-4xl font-bold">Strada Prim&#259;verii 13A, <span style="font-style:italic" class="text-burgundy">Slatina.</span></h2>
+      <p class="mt-6 text-ink/80 leading-relaxed">&Icirc;n centrul Slatinei, u&#537;or accesibil. La dou&#259; str&#259;zi de Parchet &#537;i Judec&#259;torie.</p>
+      <div class="mt-8 space-y-3 text-sm">
+        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-burgundy w-5"></i> Str. Prim&#259;verii 13A, 230002 Slatina</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-burgundy w-5"></i> 0349 805 849</div>
+        <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-burgundy w-5"></i> wa.me/40349805849</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-scale-balanced text-burgundy w-5"></i> Baroul Olt</div>
+      </div>
+      <a href="https://www.google.com/maps/place/Dorobantu+Robert,+Cabinet+De+Avocat/@44.4289619,24.3776182,17z" target="_blank" rel="noopener" class="mt-8 btn-outline inline-flex"><i class="fa-solid fa-map-location-dot"></i> Vezi pe hart&#259;</a>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="card">
+        <p class="chip">Program cabinet</p>
+        <ul id="hours" class="mt-6">
+          <li data-day="1" class="hours-row"><span>Luni</span><span>08:00 &mdash; 18:00</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span>08:00 &mdash; 18:00</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span>08:00 &mdash; 18:00</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span>08:00 &mdash; 18:00</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span>08:00 &mdash; 18:00</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span>09:00 &mdash; 14:00</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+        <p class="mt-5 text-sm text-muted">Programarea recomandat&#259;. S&#226;mb&#259;ta doar cu programare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-ivoryl border-y border-line">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">V. Contact</span>
+    <h2 class="serif mt-5 text-3xl sm:text-4xl font-bold">Prima <span style="font-style:italic" class="text-burgundy">consulta&#539;ie.</span></h2>
+    <p class="mt-6 text-muted">Un apel scurt clarific&#259; dac&#259; suntem potrivi&#539;i pentru dosarul dumneavoastr&#259;.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-0 justify-center">
+      <a href="tel:0349805849" class="btn-burg"><i class="fa-solid fa-phone"></i> 0349 805 849</a>
+      <a href="https://wa.me/40349805849" class="btn-wap"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-ivory/65 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div><div class="flex items-center gap-3"><span class="w-10 h-10 border border-gold flex items-center justify-center serif text-sm font-bold text-gold">R.D.</span><span class="serif text-lg text-ivory">Robert Dorobantu</span></div><p class="mt-3 text-sm">Cabinet de avocat &icirc;n Slatina. Consulta&#539;ii &#537;i reprezentare.</p></div>
+    <div><p class="serif text-sm text-gold tracking-[.2em] uppercase">Domenii</p><ul class="mt-3 space-y-1.5 text-sm"><li>Drept civil</li><li>Dreptul familiei</li><li>Dreptul muncii</li><li>Drept comercial</li></ul></div>
+    <div><p class="serif text-sm text-gold tracking-[.2em] uppercase">Contact</p><ul class="mt-3 space-y-1.5 text-sm"><li><i class="fa-solid fa-phone text-gold mr-2"></i>0349 805 849</li><li><i class="fa-brands fa-whatsapp text-gold mr-2"></i>wa.me/40349805849</li><li><i class="fa-solid fa-location-dot text-gold mr-2"></i>Prim&#259;verii 13A</li></ul></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-ivory/10 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-[.2em] serif">
+    <span>&copy; 2026 Cabinet Avocat Robert Dorobantu</span><span>Baroul Olt &middot; Slatina</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0349805849" class="py-4 bg-burgundy text-ivory text-center font-bold uppercase text-xs tracking-[.2em]">Sun&#259;</a>
+  <a href="https://wa.me/40349805849" class="py-4 bg-wa text-white text-center font-bold uppercase text-xs tracking-[.2em]">WhatsApp</a>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Attorney","name":"Cabinet Avocat Robert Dorobantu","telephone":"+40349805849","address":{"@type":"PostalAddress","streetAddress":"Strada Primaverii 13A","addressLocality":"Slatina","addressRegion":"Olt","postalCode":"230002","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":44.4289619,"longitude":24.3776182}}</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+  const menu = document.getElementById('menu'), openBtn = document.getElementById('menu-open'), closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try { const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' })); const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]'); if (row) row.classList.add('today'); } catch (e) {}
+</script>
+</body></html>

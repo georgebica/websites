@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon Prestige &middot; Salon de frumuse&#539;e &middot; Cluj-Napoca</title>
+<meta name="description" content="Salon Prestige &#8212; salon de frumuse&#539;e premium &#238;n Cluj-Napoca. P&#259;r, unghii, machiaj &#537;i tratamente faciale. Strada Trifoiului 16. 4.8/5 din 135 recenzii. Tel 0747 362 933.">
+<meta name="keywords" content="salon Prestige Cluj, salon frumusete Cluj-Napoca, coafura Cluj, manichiura Cluj, machiaj Cluj">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1f3d2e">
+<meta property="og:title" content="Salon Prestige &middot; Cluj-Napoca">
+<meta property="og:description" content="Salon de frumuse&#539;e premium &#238;n Cluj. Program zilnic, inclusiv weekend.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        forest2: {50:'#eef4ef',100:'#cee0d2',200:'#9fc1a6',300:'#6fa279',400:'#46834d',500:'#1f3d2e',600:'#193125',7:'#13251c',800:'#0d1812',900:'#060c09',700:'#13251c'},
+        champagne: {50:'#fbf3e3',100:'#f3dca5',200:'#e9c465',300:'#daa92e',400:'#b58a23',500:'#8c6a1a',600:'#674e13',700:'#42330b',800:'#211905',900:'#100c02'},
+        ivory2: '#faf6ee',
+        coal: '#0e1410'
+      },
+      fontFamily: {
+        display: ['Cormorant Garamond','Georgia','serif'],
+        sans: ['Montserrat','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --forest2:#1f3d2e; --champagne:#8c6a1a; --ivory2:#faf6ee; --coal:#0e1410; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Montserrat',system-ui,sans-serif; color:var(--coal); background:var(--ivory2); }
+  h1,h2,h3,h4 { font-family:'Cormorant Garamond',Georgia,serif; letter-spacing:-.005em; font-weight:500; }
+  .serif-italic { font-family:'Cormorant Garamond',serif; font-style:italic; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 85% 15%, rgba(218,169,46,.18), transparent 45%),
+      radial-gradient(circle at 12% 85%, rgba(31,61,46,.22), transparent 55%),
+      linear-gradient(170deg,#faf6ee 0%,#fbf3e3 60%,#cee0d2 100%);
+  }
+  .ornament-bg { background-image:radial-gradient(circle, rgba(31,61,46,.04) 1px, transparent 1px); background-size:24px 24px; }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.45rem 1rem; font-size:.7rem; letter-spacing:.32em; text-transform:uppercase; font-weight:500; }
+  .chip-fr { background:rgba(31,61,46,.1); color:#13251c; border:1px solid rgba(31,61,46,.3); }
+  .chip-ch { background:rgba(140,106,26,.12); color:#42330b; border:1px solid rgba(218,169,46,.4); }
+  .btn-primary { background:var(--forest2); color:var(--ivory2); padding:1rem 2rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; font-size:.78rem; display:inline-flex; align-items:center; gap:.55rem; transition:all .3s; }
+  .btn-primary:hover { background:#13251c; transform:translateY(-2px); }
+  .btn-champagne { background:var(--champagne); color:var(--ivory2); padding:1rem 2rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; font-size:.78rem; display:inline-flex; align-items:center; gap:.55rem; transition:all .3s; }
+  .btn-champagne:hover { background:#42330b; transform:translateY(-2px); }
+  .btn-outline { background:transparent; color:var(--forest2); padding:1rem 2rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; font-size:.78rem; display:inline-flex; align-items:center; gap:.55rem; border:1px solid var(--forest2); transition:all .3s; }
+  .btn-outline:hover { background:var(--forest2); color:var(--ivory2); }
+  .btn-wa { background:#25d366; color:#fff; padding:1rem 1.6rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; font-size:.78rem; display:inline-flex; align-items:center; gap:.5rem; transition:all .3s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#fff; border:1px solid rgba(31,61,46,.15); padding:2rem; transition:all .3s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--champagne); box-shadow:0 22px 40px -24px rgba(14,20,16,.22); }
+  .service-ico { width:54px; height:54px; border:1px solid var(--forest2); color:var(--forest2); display:flex; align-items:center; justify-content:center; font-size:1.25rem; }
+  .section-label { display:inline-block; font-size:.7rem; letter-spacing:.42em; text-transform:uppercase; color:var(--champagne); font-weight:600; }
+  .headline { font-size:clamp(2.4rem,5.5vw,4.5rem); line-height:1.04; color:var(--coal); font-family:'Cormorant Garamond',serif; font-weight:500; letter-spacing:-.005em; }
+  .headline em { font-style:italic; color:var(--forest2); font-weight:400; }
+  .stat-num { font-family:'Cormorant Garamond',serif; font-size:3.2rem; color:var(--forest2); line-height:1; font-weight:500; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px dashed rgba(31,61,46,.2); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:42px; height:42px; background:rgba(140,106,26,.12); color:var(--champagne); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:var(--coal); font-weight:500; font-size:.78rem; letter-spacing:.28em; text-transform:uppercase; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--champagne); transform:scaleX(0); transition:transform .3s; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .ornament { display:flex; align-items:center; gap:.85rem; justify-content:center; margin:1rem auto; max-width:280px; }
+  .ornament span { flex:1; height:1px; background:var(--champagne); opacity:.55; }
+  .ornament i { color:var(--champagne); font-size:.85rem; }
+  .hours-table { width:100%; }
+  .hours-table tr { border-bottom:1px dashed rgba(31,61,46,.2); }
+  .hours-table tr:last-child { border-bottom:none; }
+  .hours-table th { text-align:left; padding:.85rem 0; color:var(--coal); font-family:'Cormorant Garamond',serif; font-weight:500; font-size:1.15rem; }
+  .hours-table td { text-align:right; padding:.85rem 0; font-weight:500; color:var(--forest2); letter-spacing:.06em; }
+  .hours-table .closed { color:var(--champagne); font-style:italic; font-family:'Cormorant Garamond',serif; }
+  .map-wrap { overflow:hidden; border:1px solid rgba(31,61,46,.25); }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:#fff; border-top:1px solid rgba(31,61,46,.2); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; font-weight:500; font-size:.82rem; text-transform:uppercase; letter-spacing:.12em; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+</style>
+</head>
+<body class="bg-ivory2 text-coal">
+
+<div class="bg-coal text-ivory2/85 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span style="letter-spacing:.18em;text-transform:uppercase;"><i class="fas fa-star text-champagne-300 mr-1"></i> 4.8 / 135 recenzii</span>
+      <span class="hidden sm:inline" style="letter-spacing:.18em;text-transform:uppercase;"><i class="far fa-clock text-champagne-300 mr-1"></i> Lu-Vi 10-20 &middot; S&#226;-Du 8-14</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:0747362933" class="hover:text-champagne-200"><i class="fas fa-phone mr-1"></i> 0747 362 933</a>
+    </div>
+  </div>
+</div>
+
+<header class="bg-ivory2/95 backdrop-blur sticky top-0 z-50 border-b border-forest2-100">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-11 h-11 border border-champagne-500 text-champagne-500 flex items-center justify-center"><i class="fas fa-crown"></i></div>
+      <div class="leading-tight">
+        <div class="font-display text-2xl text-forest2-700">Salon Prestige</div>
+        <div class="text-[10px] tracking-[.42em] uppercase text-champagne-600">Cluj-Napoca</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="tel:0747362933" class="btn-primary hidden md:inline-flex"><i class="fas fa-calendar"></i> Programare</a>
+  </div>
+</header>
+
+<section id="top" class="hero-surface ornament-bg">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="chip chip-fr"><i class="fas fa-crown"></i> Premium &#238;n Cluj</span>
+        <span class="chip chip-ch"><i class="far fa-clock"></i> Deschis &#537;i &#238;n weekend</span>
+      </div>
+      <h1 class="headline mb-6">
+        Frumuse&#539;ea ta,<br>tratat&#259; cu <em>prestigiul</em><br>pe care &#238;l merit&#259;.
+      </h1>
+      <div class="ornament" style="margin-left:0;max-width:200px;"><i class="fas fa-crown"></i><span></span></div>
+      <p class="text-lg text-coal/75 leading-relaxed max-w-2xl mb-8 mt-6">Salon Prestige este un salon de frumuse&#539;e premium din Cluj-Napoca, pe Strada Trifoiului 16. Cu 4.8/5 pe Google din 135 de recenzii, oferim servicii complete de p&#259;r, unghii, machiaj &#537;i &#238;ngrijire facial&#259;, &#238;n s&#259;pt&#259;m&#226;n&#259; &#537;i &#238;n weekend.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0747362933" class="btn-primary"><i class="fas fa-phone"></i> 0747 362 933</a>
+        <a href="https://wa.me/40747362933" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#servicii" class="btn-outline">Vezi serviciile</a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 max-w-lg border-t border-forest2-200 pt-6">
+        <div>
+          <div class="stat-num">4.8</div>
+          <div class="text-[10px] uppercase tracking-[.28em] text-champagne-600 mt-1 font-semibold">Rating Google</div>
+        </div>
+        <div>
+          <div class="stat-num">135</div>
+          <div class="text-[10px] uppercase tracking-[.28em] text-champagne-600 mt-1 font-semibold">Recenzii</div>
+        </div>
+        <div>
+          <div class="stat-num">7/7</div>
+          <div class="text-[10px] uppercase tracking-[.28em] text-champagne-600 mt-1 font-semibold">Inclusiv weekend</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="bg-white p-8 border-l-4 border-champagne-400 shadow-xl">
+        <div class="ornament"><span></span><i class="fas fa-crown"></i><span></span></div>
+        <h3 class="font-display text-3xl text-forest2-700 text-center mb-1">Programare</h3>
+        <p class="text-center text-xs text-champagne-600 mb-6" style="letter-spacing:.32em;text-transform:uppercase;">Recomand&#259;m programare</p>
+        <ul class="space-y-1 text-sm">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-champagne-600">Telefon</div>
+              <a href="tel:0747362933" class="font-display text-2xl text-forest2-700">0747 362 933</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-champagne-600">Adres&#259;</div>
+              <div class="font-medium">Strada Trifoiului 16</div>
+              <div class="text-xs text-coal/60">400000 Cluj-Napoca</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="far fa-clock"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-champagne-600">Program</div>
+              <div class="font-medium">Lu-Vi 10-20 &middot; S&#226;-Du 8-14</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-credit-card"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-champagne-600">Plat&#259;</div>
+              <div class="font-medium">Card, contactless &middot; cash</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-20 lg:py-28 bg-ivory2">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre Prestige</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Un salon de <em class="serif-italic text-forest2-600">tradi&#539;ie</em>, &#238;n centrul Clujului.</h2>
+      <p class="text-lg text-coal/75 leading-relaxed mb-4">Salon Prestige este unul dintre saloanele de frumuse&#539;e cu cele mai multe recenzii pozitive din Cluj-Napoca. 135 de recenzii cu o not&#259; medie de 4.8/5 reprezint&#259; rezultatul unei rela&#539;ii de &#238;ncredere construite an de an cu clientele care revin.</p>
+      <p class="text-lg text-coal/75 leading-relaxed">Lucr&#259;m luni p&#226;n&#259; vineri p&#226;n&#259; seara la 20:00, iar &#238;n weekend p&#226;n&#259; la pr&#226;nz &#8212; &#537;tim c&#259; programul standard nu se &#238;ntotdeauna potrive&#537;te cu via&#539;a real&#259;.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-medal"></i></div>
+        <h3 class="font-display text-2xl text-forest2-700 mb-2">135 recenzii pozitive</h3>
+        <p class="text-sm text-coal/75 leading-relaxed">Una dintre cele mai apreciate locatii pentru frumuse&#539;e din Cluj. 4.8/5 stele &#238;n mod consistent.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-calendar-week"></i></div>
+        <h3 class="font-display text-2xl text-forest2-700 mb-2">7 zile pe s&#259;pt&#259;m&#226;n&#259;</h3>
+        <p class="text-sm text-coal/75 leading-relaxed">Deschis inclusiv s&#226;mb&#259;ta &#537;i duminica, p&#226;n&#259; la pr&#226;nz, pentru pregatiri &#238;nainte de evenimente.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-credit-card"></i></div>
+        <h3 class="font-display text-2xl text-forest2-700 mb-2">Plat&#259; modern&#259;</h3>
+        <p class="text-sm text-coal/75 leading-relaxed">Accept&#259;m carduri, contactless NFC &#537;i cash. F&#259;r&#259; b&#259;t&#259;i de cap la final.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-restroom"></i></div>
+        <h3 class="font-display text-2xl text-forest2-700 mb-2">Confort &#238;n salon</h3>
+        <p class="text-sm text-coal/75 leading-relaxed">Toalet&#259; pentru cliente, atmosfer&#259; calm&#259; &#537;i programari coordonate s&#259; nu suprapunem clientele.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-20 lg:py-28 bg-forest2-50/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Servicii Prestige</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4">Servicii <em class="serif-italic text-forest2-600">complete</em></h2>
+      <div class="ornament"><span></span><i class="fas fa-crown"></i><span></span></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-scissors"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Tuns &#537;i coafat</h3><p class="text-sm text-coal/75 leading-relaxed">Tuns clasic, modern, layered, bob &#537;i coafuri pentru evenimente.</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-palette"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">V&#259;psit &#537;i suvi&#539;e</h3><p class="text-sm text-coal/75 leading-relaxed">Vopsire integral&#259;, balayage, foli&#539;e, suvi&#539;e &#537;i corec&#539;ii de culoare.</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-spray-can"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Tratamente p&#259;r</h3><p class="text-sm text-coal/75 leading-relaxed">M&#259;&#537;ti, keratin&#259;, &#238;ndreptare keratin&#259;, regenerare profund&#259;.</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-hand-sparkles"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Manichiur&#259; gel</h3><p class="text-sm text-coal/75 leading-relaxed">Manichiur&#259; gel polish, construc&#539;ie, design personalizat &#537;i nail art.</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-shoe-prints"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Pedichiur&#259;</h3><p class="text-sm text-coal/75 leading-relaxed">Pedichiur&#259; spa, gel, &#238;ndep&#259;rtare batatturi &#537;i tratamente regeneratoare.</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-wand-magic-sparkles"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Machiaj profesional</h3><p class="text-sm text-coal/75 leading-relaxed">Machiaj de zi, sear&#259;, eveniment, mireas&#259;. Probe &#238;n avans.</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-face-smile"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Tratamente faciale</h3><p class="text-sm text-coal/75 leading-relaxed">Cur&#259;&#539;are facial&#259;, hidratare, peeling, tratamente anti-age.</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-eye"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Spr&#226;ncene &amp; g&#259;ne</h3><p class="text-sm text-coal/75 leading-relaxed">Design spr&#226;ncene, henna, laminare, extensii g&#259;ne (clasic &#537;i volum).</p></div>
+      <div class="card"><div class="service-ico mb-4"><i class="fas fa-ring"></i></div><h3 class="font-display text-2xl text-forest2-700 mb-2">Pachete bridal</h3><p class="text-sm text-coal/75 leading-relaxed">Pachete complete pentru mireas&#259;: prob&#259;, ziua evenimentului, machiaj, p&#259;r &#537;i unghii.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-20 lg:py-28 bg-ivory2">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Program</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Program <em class="serif-italic text-forest2-600">extins</em>, inclusiv weekend</h2>
+      <p class="text-lg text-coal/75 leading-relaxed">Lucr&#259;m luni p&#226;n&#259; vineri de la ora 10:00 p&#226;n&#259; la 20:00. S&#226;mb&#259;ta &#537;i duminica deschidem mai devreme, de la ora 8:00, pentru pregatiri &#238;nainte de evenimente speciale.</p>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="bg-white border border-forest2-100 p-8">
+        <table class="hours-table">
+          <tr><th>Luni</th><td>10:00 &ndash; 20:00</td></tr>
+          <tr><th>Mar&#539;i</th><td>10:00 &ndash; 20:00</td></tr>
+          <tr><th>Miercuri</th><td>10:00 &ndash; 20:00</td></tr>
+          <tr><th>Joi</th><td>10:00 &ndash; 20:00</td></tr>
+          <tr><th>Vineri</th><td>10:00 &ndash; 20:00</td></tr>
+          <tr><th>S&#226;mb&#259;t&#259;</th><td>08:00 &ndash; 14:00</td></tr>
+          <tr><th>Duminic&#259;</th><td>08:00 &ndash; 14:00</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-20 lg:py-28 bg-forest2-50/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label">Loca&#539;ie</div>
+      <h2 class="text-4xl lg:text-5xl mt-4">Pe <em class="serif-italic text-forest2-600">Strada Trifoiului</em>, Cluj</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-white p-8 border-l-4 border-champagne-400" data-aos="fade-right">
+        <h3 class="font-display text-3xl text-forest2-700 mb-5">Salon Prestige</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;"><span class="info-ico"><i class="fas fa-location-dot"></i></span><div><div class="text-[10px] uppercase tracking-[.28em] text-champagne-600">Adres&#259;</div><div class="font-medium">Strada Trifoiului 16</div><div class="text-sm text-coal/65">400000 Cluj-Napoca</div></div></li>
+          <li class="info-row"><span class="info-ico"><i class="fas fa-phone"></i></span><div><div class="text-[10px] uppercase tracking-[.28em] text-champagne-600">Telefon</div><a href="tel:0747362933" class="font-display text-2xl text-forest2-700">0747 362 933</a></div></li>
+          <li class="info-row" style="border-bottom:none;"><span class="info-ico"><i class="fas fa-map"></i></span><div><div class="text-[10px] uppercase tracking-[.28em] text-champagne-600">Cod Plus</div><div class="font-medium">QJ34+QP Cluj-Napoca</div></div></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=46.754378,23.606751&hl=ro&z=17&output=embed" width="100%" height="500" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Salon Prestige Cluj"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-20 lg:py-28 bg-forest2-700 text-ivory2">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#daa92e;">Programare</div>
+    <h2 class="text-4xl lg:text-5xl mt-4 mb-5">Frumuse&#539;ea &#238;ncepe cu <em class="serif-italic" style="color:#daa92e;">un apel</em></h2>
+    <div class="ornament"><span style="background:#daa92e;"></span><i class="fas fa-crown" style="color:#daa92e;"></i><span style="background:#daa92e;"></span></div>
+    <p class="text-ivory2/80 text-lg max-w-2xl mx-auto mb-10 mt-4 leading-relaxed">Sun&#259; pentru programare la unul dintre serviciile noastre. R&#259;spundem zilnic, inclusiv &#238;n weekend.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0747362933" class="btn-champagne"><i class="fas fa-phone"></i> 0747 362 933</a>
+      <a href="https://wa.me/40747362933" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-coal text-ivory2/70 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4"><div class="w-11 h-11 border border-champagne-300 text-champagne-300 flex items-center justify-center"><i class="fas fa-crown"></i></div><div><div class="font-display text-2xl text-ivory2">Salon Prestige</div><div class="text-[10px] tracking-[.42em] uppercase text-champagne-300">Cluj-Napoca</div></div></div>
+      <p class="text-sm leading-relaxed">Salon de frumuse&#539;e premium &#238;n Cluj. P&#259;r, unghii, machiaj, tratamente faciale.</p>
+    </div>
+    <div><h4 class="font-display text-ivory2 text-xl mb-4">Naviga&#539;ie</h4><ul class="space-y-2 text-sm"><li><a href="#despre" class="hover:text-champagne-300">Despre</a></li><li><a href="#servicii" class="hover:text-champagne-300">Servicii</a></li><li><a href="#program" class="hover:text-champagne-300">Program</a></li><li><a href="#locatie" class="hover:text-champagne-300">Loca&#539;ie</a></li></ul></div>
+    <div><h4 class="font-display text-ivory2 text-xl mb-4">Contact</h4><ul class="space-y-3 text-sm"><li><i class="fas fa-phone text-champagne-300 mr-2"></i> <a href="tel:0747362933" class="hover:text-champagne-300">0747 362 933</a></li><li><i class="fas fa-map-marker-alt text-champagne-300 mr-2"></i> Str. Trifoiului 16, Cluj-Napoca</li><li><i class="fas fa-star text-champagne-300 mr-2"></i> 4.8 / 135 recenzii</li></ul></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-ivory2/10 flex flex-wrap justify-between gap-3 text-xs text-ivory2/50"><div>&copy; 2026 Salon Prestige Cluj. Toate drepturile rezervate.</div><div>P&#259;r &middot; Unghii &middot; Machiaj &middot; Cluj-Napoca</div></div>
+</footer>
+
+<div class="sticky-bar">
+  <a href="tel:0747362933" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40747362933" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Salon Prestige","telephone":"+40747362933","address":{"@type":"PostalAddress","streetAddress":"Strada Trifoiului 16","addressLocality":"Cluj-Napoca","postalCode":"400000","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":46.754378,"longitude":23.606751},"areaServed":"Cluj-Napoca","priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"14:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"135","bestRating":"5","worstRating":"1"}}</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({once:true,duration:800});</script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor 4ped &middot; Cabinet veterinar &icirc;n Craiova</title>
+<meta name="description" content="Doctor 4ped &mdash; cabinet veterinar &icirc;n Craiova, Aleea Arhitect Duiliu Marcu 12. Consulta&#539;ii &#537;i tratamente pentru animale de companie. Programare la 0772 071 908.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        sage:    '#A6BD9E',
+        saged:   '#6B8360',
+        coral:   '#F58A7A',
+        corald:  '#D75D4A',
+        cream:   '#FCF8F1',
+        creaml:  '#FFFDF7',
+        navy:    '#263A4D',
+        ink:     '#1C2633',
+        muted:   '#6B7076',
+        line:    '#ECE5D6',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['Domine', 'Georgia', 'serif'],
+        sans:    ['Nunito', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FCF8F1; color: #1C2633; }
+  body { font-family: Nunito, system-ui, sans-serif; }
+  .display { font-family: Domine, Georgia, serif; letter-spacing: -.01em; line-height: 1.04; }
+
+  .btn-coral {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #F58A7A;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all .25s;
+  }
+  .btn-coral:hover { background: #D75D4A; transform: translateY(-2px); }
+
+  .btn-navy {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #263A4D;
+    color: #FCF8F1;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all .25s;
+  }
+  .btn-navy:hover { background: #F58A7A; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .35rem 1rem;
+    background: #A6BD9E;
+    color: #263A4D;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+  .chip-coral { background: #FEEDE7; color: #D75D4A; }
+
+  .card {
+    background: #fff;
+    border: 1px solid #ECE5D6;
+    border-radius: 28px;
+    padding: 1.8rem;
+    transition: all .35s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: #F58A7A; box-shadow: 0 30px 50px -32px rgba(28,38,51,.25); }
+
+  .testi {
+    background: #FFFDF7;
+    border: 1px solid #ECE5D6;
+    border-radius: 28px;
+    padding: 1.8rem;
+    position: relative;
+  }
+
+  .paw-dot {
+    width: 58px; height: 58px;
+    background: #A6BD9E;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #263A4D;
+    font-size: 1.4rem;
+  }
+
+  .hero-illu {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #263A4D;
+    border-radius: 50%;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    max-width: 340px;
+  }
+  .hero-illu::before, .hero-illu::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  .hero-illu::before { inset: 20px; border: 1px dashed #A6BD9E; }
+  .hero-illu::after { inset: 45px; border: 1px dashed rgba(245,138,122,.5); }
+  .hero-illu i { font-size: 5.5rem; color: #F58A7A; z-index: 1; }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Domine, serif; font-size: 1.8rem; font-weight: 700; border-bottom: 1px solid #ECE5D6; }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .7rem 0;
+    border-bottom: 1px dashed rgba(28,38,51,.15);
+    font-size: .9rem;
+  }
+  .hours-row:last-child { border: 0; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-coral text-white flex items-center justify-center"><i class="fa-solid fa-paw"></i></span>
+      <div class="leading-tight">
+        <p class="display text-xl font-bold">Doctor 4ped</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Medic veterinar &middot; Craiova</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-ink/80">
+      <a href="#despre"   class="hover:text-coral">Despre</a>
+      <a href="#servicii" class="hover:text-coral">Servicii</a>
+      <a href="#recenzii" class="hover:text-coral">Recenzii</a>
+      <a href="#program"  class="hover:text-coral">Program</a>
+      <a href="tel:0772071908" class="btn-coral !py-2.5 !px-4 !text-xs">0772 071 908</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-coral text-white flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl font-bold">Doctor 4ped</span>
+    <button id="menu-close" class="w-11 h-11 rounded-full bg-coral text-white flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#program"  class="mobile-link">Program</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0772071908" class="btn-coral">Sun&#259;</a>
+    <a href="https://wa.me/40772071908" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-paw"></i> Cel mai pre&#539;uit veterinar din zona Craiovei</span>
+      <h1 class="display mt-8 text-5xl sm:text-6xl lg:text-7xl">
+        Pentru animalul t&#259;u,<br>
+        <span class="text-coral">un doctor cu r&#259;bdare.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Doctor 4ped este cabinetul veterinar din Craiova unde vii cu animalul t&#259;u &#537;i pleci cu &icirc;ncredere. Explica&#539;ii clare, aten&#539;ie la detalii, compasiune sincer&#259;. Cu specializare &icirc;n Anglia, dar pre&#539;uri locale.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0772071908" class="btn-coral"><i class="fa-solid fa-phone"></i> 0772 071 908</a>
+        <a href="https://wa.me/40772071908" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+
+      <div class="mt-10 flex flex-wrap gap-6">
+        <div>
+          <p class="display text-3xl text-coral font-bold">5.0</p>
+          <p class="text-[10px] uppercase tracking-widest text-muted mt-1">Google rating</p>
+        </div>
+        <div>
+          <p class="display text-3xl text-coral font-bold">53+</p>
+          <p class="text-[10px] uppercase tracking-widest text-muted mt-1">recenzii 5<i class="fa-solid fa-star ml-1 text-xs"></i></p>
+        </div>
+        <div>
+          <p class="display text-3xl text-coral font-bold">UK</p>
+          <p class="text-[10px] uppercase tracking-widest text-muted mt-1">specializare interna&#539;ional&#259;</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="120">
+      <div class="hero-illu"><i class="fa-solid fa-paw"></i></div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-sage/30 border-y border-line">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Despre cabinet</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">
+      Un cabinet mic,<br><span class="text-coral">cu un singur obiectiv.</span>
+    </h2>
+
+    <p class="mt-10 text-lg text-ink/80 leading-relaxed">
+      S&#259; te ajut&#259;m s&#259; &icirc;n&#539;elegi ce se &icirc;nt&#226;mpl&#259; cu animalul t&#259;u &#537;i s&#259; lu&#259;m &icirc;mpreun&#259; cele mai bune decizii pentru el. C&#226;nd descoperim c&#259; Fifi nu m&#259;n&#226;nc&#259;, c&#226;nd Rex se mi&#537;c&#259; altfel sau c&#226;nd pisicul prinde un virus, vrem s&#259; fim primul telefon &#537;i ultimul pe care &icirc;l faci.
+    </p>
+    <p class="mt-5 text-base text-muted leading-relaxed">
+      Doctor 4ped SRL este un cabinet t&#226;n&#259;r, fondat &icirc;n 2021, dar condus de un medic veterinar cu experien&#539;&#259; &#537;i specializare interna&#539;ional&#259;. Premii &bdquo;Firma de Aur&rdquo; 2023, 2024 &#537;i 2025.
+    </p>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">Servicii</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">
+      Ce facem <span class="text-coral">&icirc;n cabinet.</span>
+    </h2>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="card" data-aos="fade-up">
+        <span class="paw-dot"><i class="fa-solid fa-stethoscope"></i></span>
+        <h3 class="display text-2xl mt-5 font-bold">Consulta&#539;ii generale</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Examen clinic, diagnostic, plan de tratament, urm&#259;rire a recuper&#259;rii.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="60">
+        <span class="paw-dot"><i class="fa-solid fa-syringe"></i></span>
+        <h3 class="display text-2xl mt-5 font-bold">Vaccin&#259;ri</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Vaccin&#259;ri pentru c&#226;ini &#537;i pisici, inclusiv pentru &#537;oareci, microcip, pa&#537;aport.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="120">
+        <span class="paw-dot"><i class="fa-solid fa-shield-virus"></i></span>
+        <h3 class="display text-2xl mt-5 font-bold">Deparazit&#259;ri</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Programe de deparazitare intern&#259; &#537;i extern&#259;, adaptate fiec&#259;rui animal.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="180">
+        <span class="paw-dot"><i class="fa-solid fa-prescription-bottle-medical"></i></span>
+        <h3 class="display text-2xl mt-5 font-bold">Tratament boli interne</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Diagnostic &#537;i tratament pentru boli digestive, respiratorii, dermatologice.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="240">
+        <span class="paw-dot"><i class="fa-solid fa-bone"></i></span>
+        <h3 class="display text-2xl mt-5 font-bold">Monitorizare recuperare</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Control post-tratament, ajustarea medica&#539;iei &#537;i r&#259;spuns la &icirc;ntreb&#259;rile st&#259;p&#226;nilor.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="300">
+        <span class="paw-dot"><i class="fa-solid fa-heart"></i></span>
+        <h3 class="display text-2xl mt-5 font-bold">Consiliere proprietari</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Explica&#539;ii am&#259;nun&#539;ite, sfaturi pentru hran&#259;, comportament, &icirc;ngrijire zilnic&#259;.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24 bg-creaml border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip">Recenzii verificate</span>
+    <h2 class="display mt-4 text-4xl sm:text-5xl">
+      Ce spun <span class="text-coral">st&#259;p&#226;nii animalelor.</span>
+    </h2>
+
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-2 gap-5">
+
+      <article class="testi" data-aos="fade-up">
+        <div class="flex text-coral"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-ink/85 leading-relaxed">&bdquo;Un doctor t&#226;n&#259;r cu experien&#539;&#259; vast&#259; &icirc;n domeniu, foarte r&#259;bd&#259;tor &#537;i meticulos.&rdquo;</p>
+        <p class="display text-base mt-5 font-bold text-coral">&mdash; Constantin Cotoc</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="60">
+        <div class="flex text-coral"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-ink/85 leading-relaxed">&bdquo;Am avut o experien&#539;&#259; deosebit&#259; cu acest medic veterinar. Pisica mea Fifi a &icirc;nceput s&#259; refuze m&#226;ncarea &#537;i apa. Doctorul a intervenit prompt, a administrat antibioticele necesare &#537;i a monitorizat-o cu grij&#259;.&rdquo;</p>
+        <p class="display text-base mt-5 font-bold text-coral">&mdash; Daniel Dr&#226;ncianu</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="120">
+        <div class="flex text-coral"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-ink/85 leading-relaxed">&bdquo;O persoan&#259; extraordinar&#259;, un doctor dedicat. Pre&#539;uri mai mult dec&#226;t decente. Duce&#539;i-v&#259; cu animalele cu &icirc;ncredere total&#259;.&rdquo;</p>
+        <p class="display text-base mt-5 font-bold text-coral">&mdash; Vilcu Daniela</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="180">
+        <div class="flex text-coral"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-ink/85 leading-relaxed">&bdquo;Super experien&#539;&#259;! N-am &icirc;nt&#226;lnit un doctor nic&#259;ieri a&#537;a de prietenos, care s&#259; explice &icirc;n am&#259;nunt ce are animalul t&#259;u &#537;i ce trebuie s&#259; faci. Are specializare &icirc;n Anglia &#537;i costuri rezonabile. Recomand din toat&#259; inima!&rdquo;</p>
+        <p class="display text-base mt-5 font-bold text-coral">&mdash; Adrian Ristea</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">Program de lucru</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl">
+        Mar&#539;i p&#226;n&#259; s&#226;mb&#259;t&#259;,<br><span class="text-coral">cu programare.</span>
+      </h2>
+      <p class="mt-6 text-muted">Pentru urgen&#539;e, suna&#539;i oric&#226;nd &#537;i vom &icirc;ncerca s&#259; v&#259; primim. Restul cazurilor sunt pe baza programarii.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0772071908" class="btn-coral"><i class="fa-solid fa-phone"></i> 0772 071 908</a>
+        <a href="https://wa.me/40772071908" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="card !p-7">
+        <ul id="hours">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span class="text-muted italic">&Icirc;nchis</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span>09:30 &mdash; 18:30</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span>09:30 &mdash; 18:30</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span>09:30 &mdash; 18:30</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span>09:30 &mdash; 18:30</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span>10:00 &mdash; 15:00</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-navy text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-7">
+      <span class="chip-coral chip"><i class="fa-solid fa-phone-volume"></i> Contact</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">
+        Adu-&#539;i pisica, c&#259;&#539;elul,<br><span class="text-coral">iepura&#537;ul.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-cream/80">Aleea Arhitect Duiliu Marcu 12, bloc 9, corp 4, scara 1, parter. L&#226;ng&#259; tine, u&#537;or de g&#259;sit.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0772071908" class="btn-coral"><i class="fa-solid fa-phone"></i> 0772 071 908</a>
+        <a href="https://wa.me/40772071908" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-cream text-ink rounded-3xl p-7">
+        <p class="chip chip-coral">Adresa</p>
+        <p class="display text-2xl mt-3 font-bold">Aleea Arh. Duiliu Marcu 12</p>
+        <p class="text-sm text-muted">Bl. 9, Corp 4, Sc. 1, parter<br>200252 Craiova, jud. Dolj</p>
+
+        <div class="mt-6 h-px bg-line"></div>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-coral w-5"></i> 0772 071 908</div>
+          <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-coral w-5"></i> wa.me/40772071908</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-file-contract text-coral w-5"></i> CUI 44719092</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-award text-coral w-5"></i> Firma de aur 2023&ndash;2025</div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/Doctor+4ped/@44.337476,23.7812054,17z" class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-coral font-semibold">
+          <i class="fa-solid fa-location-dot"></i> Vezi pe hart&#259;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink text-cream/65 py-10 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 Doctor 4ped SRL</span>
+    <span>CUI 44719092 &middot; J16/2019/2021</span>
+    <span>Craiova &middot; Dolj</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0772071908" class="py-4 bg-coral text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40772071908" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Doctor 4ped SRL",
+  "telephone": "+40772071908",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Aleea Arhitect Duiliu Marcu 12, Bl 9, Corp 4, Sc 1",
+    "addressLocality": "Craiova",
+    "addressRegion": "Dolj",
+    "postalCode": "200252",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.337476, "longitude": 23.7812054 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "15:00" }
+  ],
+  "foundingDate": "2021-08-10",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "53" }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+</script>
+
+</body>
+</html>

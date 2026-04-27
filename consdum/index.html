@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consdum &middot; Contabilitate &#537;i consultan&#539;&#259; &middot; Slatina</title>
+<meta name="description" content="Consdum &#8212; contabilitate, audit, consultan&#539;&#259; fiscal&#259; &#537;i juridic&#259; &#238;n Slatina. Lucr&#259;m cu microintreprinderi &#537;i PFA-uri din Olt. Str. M&#259;n&#259;stirii 8. Telefon 0761 030 319.">
+<meta name="keywords" content="contabilitate Slatina, consultanta fiscala Slatina, Consdum, audit firme Olt, expert contabil Slatina">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f2540">
+<meta property="og:title" content="Consdum &middot; Contabilitate &#537;i consultan&#539;&#259; Slatina">
+<meta property="og:description" content="Servicii profesionale pentru firme mici &#537;i mijlocii din Olt.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        deep: {50:'#e8edf3',100:'#c3cfdf',200:'#8ea5c1',300:'#5a7ba3',400:'#345985',500:'#0f2540',600:'#0c1e33',700:'#091627',800:'#060f1a',900:'#03070d'},
+        mustard: {50:'#fdf5df',100:'#f6e29e',200:'#edc95a',300:'#dfac27',400:'#bd8e1a',500:'#956f14',600:'#73570f',700:'#513d0a',800:'#2f2305',900:'#181100'},
+        paper: '#f9f7f2',
+        ink: '#0b1218'
+      },
+      fontFamily: {
+        display: ['Bricolage Grotesque','system-ui','sans-serif'],
+        sans: ['Inter','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --deep:#0f2540; --mustard:#956f14; --paper:#f9f7f2; --ink:#0b1218; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--paper); }
+  h1,h2,h3,h4 { font-family:'Bricolage Grotesque',system-ui,sans-serif; letter-spacing:-.02em; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 85% 15%, rgba(237,201,90,.22), transparent 45%),
+      radial-gradient(circle at 12% 85%, rgba(15,37,64,.22), transparent 50%),
+      linear-gradient(168deg,#f9f7f2 0%,#e8edf3 60%,#c3cfdf 100%);
+  }
+  .dot-bg { background-image:radial-gradient(circle, rgba(15,37,64,.06) 1px, transparent 1px); background-size:20px 20px; }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.45rem 1rem; border-radius:8px; font-size:.75rem; letter-spacing:.04em; font-weight:600; }
+  .chip-deep { background:rgba(15,37,64,.1); color:#091627; }
+  .chip-mustard { background:rgba(149,111,20,.15); color:#513d0a; }
+  .btn-primary { background:var(--deep); color:var(--paper); padding:.95rem 1.75rem; border-radius:8px; font-weight:600; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-primary:hover { background:#091627; transform:translateY(-2px); box-shadow:0 16px 30px -16px rgba(15,37,64,.7); }
+  .btn-mustard { background:var(--mustard); color:#fff; padding:.95rem 1.75rem; border-radius:8px; font-weight:600; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-mustard:hover { background:#73570f; transform:translateY(-2px); }
+  .btn-outline { background:transparent; color:var(--deep); padding:.95rem 1.75rem; border-radius:8px; font-weight:600; display:inline-flex; align-items:center; gap:.55rem; border:1.5px solid var(--deep); transition:all .25s; }
+  .btn-outline:hover { background:var(--deep); color:var(--paper); }
+  .btn-wa { background:#25d366; color:#fff; padding:.95rem 1.5rem; border-radius:8px; font-weight:600; display:inline-flex; align-items:center; gap:.5rem; transition:all .25s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#fff; border:1px solid rgba(15,37,64,.12); border-radius:14px; padding:1.85rem; transition:all .25s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--mustard); box-shadow:0 24px 44px -24px rgba(11,18,24,.25); }
+  .service-ico { width:52px; height:52px; border-radius:12px; background:linear-gradient(135deg,#0f2540,#345985); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+  .section-label { display:inline-block; font-size:.75rem; letter-spacing:.22em; text-transform:uppercase; color:var(--mustard); font-weight:700; }
+  .headline { font-size:clamp(2.1rem,4.8vw,3.75rem); line-height:1.05; color:var(--ink); font-family:'Bricolage Grotesque',sans-serif; font-weight:600; letter-spacing:-.025em; }
+  .headline em { font-style:normal; color:var(--deep); }
+  .stat-num { font-family:'Bricolage Grotesque',sans-serif; font-size:2.85rem; color:var(--deep); line-height:1; font-weight:700; letter-spacing:-.02em; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px dashed rgba(15,37,64,.2); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:42px; height:42px; border-radius:12px; background:rgba(149,111,20,.15); color:var(--mustard); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:var(--ink); font-weight:500; font-size:.9rem; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--mustard); transform:scaleX(0); transition:transform .25s; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .hours-table { width:100%; }
+  .hours-table tr { border-bottom:1px dashed rgba(15,37,64,.12); }
+  .hours-table tr:last-child { border-bottom:none; }
+  .hours-table th { text-align:left; padding:.75rem 0; color:#091627; font-family:'Bricolage Grotesque',sans-serif; font-weight:500; }
+  .hours-table td { text-align:right; padding:.75rem 0; color:var(--ink); font-weight:600; }
+  .hours-table .closed { color:var(--mustard); font-style:italic; font-family:'Bricolage Grotesque',sans-serif; }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:#fff; border-top:1px solid rgba(15,37,64,.15); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; box-shadow:0 -10px 30px -16px rgba(0,0,0,.25); }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; border-radius:8px; font-weight:600; font-size:.95rem; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+  .map-wrap { border-radius:14px; overflow:hidden; border:1px solid rgba(15,37,64,.2); }
+</style>
+</head>
+<body class="bg-paper text-ink">
+
+<!-- TOP BAR -->
+<div class="bg-deep-600 text-paper/90 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span><i class="fas fa-calculator mr-1"></i> Contabilitate &middot; Consultan&#539;&#259;</span>
+      <span class="hidden sm:inline"><i class="far fa-clock mr-1"></i> Lun&#259;-S&#226;mb&#259;t&#259; 9-21</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:0761030319" class="hover:text-mustard-300"><i class="fas fa-phone mr-1"></i> 0761 030 319</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="bg-paper/95 backdrop-blur sticky top-0 z-50 border-b border-deep-100">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-xl bg-deep-500 text-mustard-300 flex items-center justify-center">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-xl text-deep-700 font-bold">Consdum</div>
+        <div class="text-[10px] tracking-[.28em] uppercase text-mustard-600 font-semibold">Consultan&#539;&#259; &middot; Slatina</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#proces" class="nav-link">Proces</a>
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+    </nav>
+    <a href="tel:0761030319" class="btn-primary hidden md:inline-flex text-sm"><i class="fas fa-phone"></i> Consultan&#539;&#259;</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-surface dot-bg">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-6">
+        <span class="chip chip-deep"><i class="fas fa-calculator"></i> Contabilitate &#537;i audit</span>
+        <span class="chip chip-mustard"><i class="fas fa-balance-scale"></i> Consultan&#539;&#259; juridic&#259;</span>
+      </div>
+      <h1 class="headline mb-6">
+        Contabilitate, fiscalitate<br>&#537;i consultan&#539;&#259; <em>juridic&#259;</em><br>pentru firme mici.
+      </h1>
+      <p class="text-lg text-ink/75 leading-relaxed max-w-2xl mb-8">Consdum este un cabinet multidisciplinar din Slatina care ofer&#259; servicii de contabilitate, audit &#537;i consultan&#539;&#259; fiscal&#259; &#238;mpreun&#259; cu asisten&#539;&#259; juridic&#259; pentru PFA-uri, microintreprinderi &#537;i firme mici din jude&#539;ul Olt. Lucr&#259;m direct cu antreprenorii, f&#259;r&#259; filtre inutile.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0761030319" class="btn-primary"><i class="fas fa-phone"></i> 0761 030 319</a>
+        <a href="https://wa.me/40761030319" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#servicii" class="btn-outline">Vezi serviciile</a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 max-w-lg">
+        <div>
+          <div class="stat-num">Top 20</div>
+          <div class="text-xs uppercase tracking-widest text-mustard-600 mt-1 font-semibold">Slatina 2026</div>
+        </div>
+        <div>
+          <div class="stat-num">12h</div>
+          <div class="text-xs uppercase tracking-widest text-mustard-600 mt-1 font-semibold">Ore pe zi</div>
+        </div>
+        <div>
+          <div class="stat-num">6/7</div>
+          <div class="text-xs uppercase tracking-widest text-mustard-600 mt-1 font-semibold">Zile/s&#259;pt</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="bg-white p-8 rounded-2xl border border-deep-100 shadow-xl">
+        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-deep-100">
+          <div class="w-12 h-12 rounded-xl bg-mustard-500 text-white flex items-center justify-center"><i class="fas fa-file-invoice"></i></div>
+          <div>
+            <h3 class="font-display text-2xl text-deep-700 font-bold">Solicitare consultan&#539;&#259;</h3>
+            <p class="text-xs text-ink/60">Discu&#539;ie preliminar&#259; gratuit&#259;</p>
+          </div>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-mustard-600 font-semibold">Telefon</div>
+              <a href="tel:0761030319" class="font-display text-2xl text-deep-700 font-bold">0761 030 319</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-mustard-600 font-semibold">Birou</div>
+              <div class="font-medium">Str. M&#259;n&#259;stirii 8, bl. 3, sc. C, et. 3, ap. 15</div>
+              <div class="text-xs text-ink/60">230038 Slatina, Olt</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="far fa-clock"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-mustard-600 font-semibold">Program</div>
+              <div class="font-medium">Lu &ndash; Sb &middot; 09:00 &ndash; 21:00</div>
+              <div class="text-xs text-ink/60">Duminic&#259; &#238;nchis</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-handshake"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-mustard-600 font-semibold">Abonamente</div>
+              <div class="font-medium text-sm">Lunare, pe volum contabil</div>
+            </div>
+          </li>
+        </ul>
+        <a href="tel:0761030319" class="btn-primary w-full justify-center mt-6"><i class="fas fa-phone"></i> Sun&#259; pentru ofert&#259;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre Consdum</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6 font-semibold">Un <em class="text-deep-600">partener</em> pentru afacerile mici din Olt.</h2>
+      <p class="text-lg text-ink/75 leading-relaxed mb-4">Consdum este un cabinet multidisciplinar care combin&#259; serviciile de contabilitate &#537;i cele juridice sub acela&#537;i acoperi&#537;. Ne adres&#259;m firmelor mici &#537;i PFA-urilor din Slatina &#537;i jude&#539;ul Olt, care prefer&#259; un singur partener pentru multiplele nevoi birocratice ale unei afaceri.</p>
+      <p class="text-lg text-ink/75 leading-relaxed">Cabinetul este listat &#238;ntre Top 20 firme de contabilitate din Slatina 2026 &#238;n directoarele locale. Lucr&#259;m transparent, cu devize clare &#537;i abonamente lunare calibrate pe volumul real al afacerii.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-layer-group"></i></div>
+        <h3 class="font-display text-xl text-deep-700 font-bold mb-2">Multidisciplinar</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Contabilitate, fiscalitate, audit &#537;i consultan&#539;&#259; juridic&#259; &#238;ntr-un singur cabinet. Un singur contact pentru nevoile firmei.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-seedling"></i></div>
+        <h3 class="font-display text-xl text-deep-700 font-bold mb-2">Focus pe IMM-uri</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Cu 20+ ani de experien&#539;&#259; &#238;n servicii pentru PFA &#537;i microintreprinderi. Nu v&#259; adresam ca &#537;i cum ati fi corporate.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-coins"></i></div>
+        <h3 class="font-display text-xl text-deep-700 font-bold mb-2">Pre&#539;uri corecte</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Abonamente &#238;ntre 250 &#537;i 500 lei/lun&#259; pentru firme mici, calibrat pe num&#259;r de documente &#537;i salaria&#539;i.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-clock"></i></div>
+        <h3 class="font-display text-xl text-deep-700 font-bold mb-2">Program extins</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Luni-s&#226;mbat&#259; p&#226;n&#259; la 21:00, ca s&#259; ave&#539;i timp s&#259; v&#259; pune&#539;i &#238;ntreb&#259;rile &#238;n afara programului propriu de lucru.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 lg:py-28 bg-deep-50/80">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Servicii</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4 font-semibold">Contabilitate &#537;i <em class="text-deep-600">consultan&#539;&#259; juridic&#259;</em></h2>
+      <p class="text-lg text-ink/75 max-w-2xl mx-auto">Dou&#259; arii complementare &#8212; financiar&#259; &#537;i juridic&#259; &#8212; pentru o afacere bine administrat&#259;.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-book"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Contabilitate lunar&#259;</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Eviden&#539;a contabil&#259; curent&#259;, &#238;nregistrari documente, declara&#539;ii fiscale &#537;i rapoarte manageriale.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Registru jurnal &#537;i cartea mare</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Declara&#539;ii 100, 101, 300, 394</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-magnifying-glass-chart"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Audit &#537;i revizie</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Revizii fiscale, audit financiar &#537;i verificari punctuale de conformitate &#238;nainte de controale.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Audit financiar</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Preg&#259;tire control ANAF</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-file-invoice-dollar"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Consultan&#539;&#259; fiscal&#259;</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Op&#539;iuni de impozitare, planificare fiscal&#259; legal&#259; &#537;i r&#259;spunsuri la &#238;ntreb&#259;ri complexe ale clien&#539;ilor.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Microintreprindere vs profit</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Deductibilit&#259;&#539;i &#537;i scutiri</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-users"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Salarii &#537;i HR</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Procesare salarii, fluturasi, declara&#539;ii Revisal &#537;i documenta&#539;ie angajari-concedieri.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Calcul salarii lunare</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Raportare Revisal</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-briefcase"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Drept comercial</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Contracte comerciale, redactare &#537;i avizare documente, litigii comerciale &#537;i recuperare crean&#539;e.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Contracte client-furnizor</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Recuperare crean&#539;e</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-user-tie"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Dreptul muncii</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Asisten&#539;&#259; juridic&#259; pentru angaja&#539;i &#537;i angajatori: contracte, concedieri, contesta&#539;ii.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Redactare contracte individuale</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Proceduri disciplinare</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-gavel"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Dreptul familiei</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Divor&#539;, partaj bunuri comune, custodie minori &#537;i pensie de &#238;ntre&#539;inere.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Divor&#539; amiabil sau contencios</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Partaj &#537;i custodie</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-hammer"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Execut&#259;ri silite</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">Asisten&#539;&#259; &#238;n procedurile de executare silit&#259;, at&#226;t pentru creditori c&#226;t &#537;i pentru debitori.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Contesta&#539;ii la executare</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Lucrul cu executorul</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-lightbulb"></i></div>
+        <h3 class="font-display text-xl font-bold text-deep-700 mb-2">Consultan&#539;&#259; business</h3>
+        <p class="text-sm text-ink/75 leading-relaxed mb-3">&#206;ndrum&#259;ri strategice pentru deschidere firm&#259;, restructurare, fuziuni sau dizolvare controlat&#259;.</p>
+        <ul class="text-xs text-ink/60 space-y-1">
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>&#206;nfiin&#539;are SRL sau PFA</li>
+          <li><i class="fas fa-check text-mustard-500 mr-2"></i>Restructurari operationale</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCES -->
+<section id="proces" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Cum lucr&#259;m</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 font-semibold">De la <em class="text-deep-600">primul apel</em> la <em class="text-deep-600">abonament activ</em></h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-xl border border-deep-100" data-aos="fade-up">
+        <div class="w-14 h-14 rounded-xl bg-deep-500 text-mustard-300 flex items-center justify-center font-display text-2xl font-bold mb-4">1</div>
+        <h3 class="font-display text-lg font-bold text-deep-700 mb-2">Apel</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Suna&#539;i sau scrie&#539;i pe WhatsApp. Spune&#539;i ce tip de firm&#259; ave&#539;i &#537;i ce a&#539;i vrea.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-deep-100" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-xl bg-deep-500 text-mustard-300 flex items-center justify-center font-display text-2xl font-bold mb-4">2</div>
+        <h3 class="font-display text-lg font-bold text-deep-700 mb-2">&#206;nt&#226;lnire la birou</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Veni&#539;i la birou cu documentele existente. Discut&#259;m volumul, preferin&#539;ele &#537;i obiectivele.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-deep-100" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-14 h-14 rounded-xl bg-deep-500 text-mustard-300 flex items-center justify-center font-display text-2xl font-bold mb-4">3</div>
+        <h3 class="font-display text-lg font-bold text-deep-700 mb-2">Ofert&#259; personalizat&#259;</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Primi&#539;i oferta scris&#259;, cu abonament lunar clar &#537;i serviciile incluse. F&#259;r&#259; suplimente ascunse.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-deep-100" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-14 h-14 rounded-xl bg-deep-500 text-mustard-300 flex items-center justify-center font-display text-2xl font-bold mb-4">4</div>
+        <h3 class="font-display text-lg font-bold text-deep-700 mb-2">Colaborare</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Semn&#259;m contractul, prelu&#259;m documenta&#539;ia &#537;i intra&#539;i &#238;n ritmul normal de raportari &#537;i declara&#539;ii.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program" class="py-20 lg:py-28 bg-deep-50/80">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Program</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6 font-semibold">Orele de <em class="text-deep-600">consultan&#539;&#259;</em></h2>
+      <p class="text-lg text-ink/75 leading-relaxed mb-6">Lucr&#259;m un program extins, luni-s&#226;mb&#259;t&#259; p&#226;n&#259; la 21:00, ca s&#259; putem primi clien&#539;i dup&#259; programul lor de lucru. Duminic&#259; r&#259;m&#226;ne zi liber&#259;.</p>
+      <div class="flex gap-3">
+        <a href="tel:0761030319" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+        <a href="https://wa.me/40761030319" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="bg-white rounded-2xl border border-deep-100 p-8">
+        <table class="hours-table">
+          <tr><th>Luni</th><td>09:00 &ndash; 21:00</td></tr>
+          <tr><th>Mar&#539;i</th><td>09:00 &ndash; 21:00</td></tr>
+          <tr><th>Miercuri</th><td>09:00 &ndash; 21:00</td></tr>
+          <tr><th>Joi</th><td>09:00 &ndash; 21:00</td></tr>
+          <tr><th>Vineri</th><td>09:00 &ndash; 21:00</td></tr>
+          <tr><th>S&#226;mb&#259;t&#259;</th><td>09:00 &ndash; 21:00</td></tr>
+          <tr><th>Duminic&#259;</th><td class="closed">&#206;nchis</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIE -->
+<section id="locatie" class="py-20 lg:py-28 bg-paper">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label">Unde ne g&#259;si&#539;i</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 font-semibold">Birou &#238;n <em class="text-deep-600">Slatina</em>, zona M&#259;n&#259;stirii</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-white p-8 rounded-2xl border border-deep-100" data-aos="fade-right">
+        <h3 class="font-display text-2xl text-deep-700 font-bold mb-5">Cabinet Consdum</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-location-dot"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-mustard-600 font-semibold">Adres&#259;</div>
+              <div class="font-medium">Str. M&#259;n&#259;stirii 8, bl. 3, sc. C, et. 3, ap. 15</div>
+              <div class="text-sm text-ink/65">230038 Slatina, Olt</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-mustard-600 font-semibold">Telefon</div>
+              <a href="tel:0761030319" class="font-display text-2xl text-deep-700 font-bold">0761 030 319</a>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-map"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-mustard-600 font-semibold">Cod Plus</div>
+              <div class="font-medium">C9FC+V6 Slatina</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=44.424666,24.370517&hl=ro&z=17&output=embed" width="100%" height="500" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Harta Consdum Slatina"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section class="py-20 lg:py-28 bg-deep-700 text-paper">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#edc95a;">Contact</div>
+    <h2 class="text-4xl lg:text-5xl mt-4 mb-5 font-semibold">Firma ta merit&#259; <em style="color:#edc95a;">un contabil de &#238;ncredere</em></h2>
+    <p class="text-paper/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Vino la birou cu actele, s&#259; discut&#259;m concret despre situatia firmei dumneavoastr&#259;. Primul apel &#537;i prima &#238;nt&#226;lnire sunt gratuite.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0761030319" class="btn-mustard"><i class="fas fa-phone"></i> 0761 030 319</a>
+      <a href="https://wa.me/40761030319" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-paper/75 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 rounded-xl bg-mustard-500 text-ink flex items-center justify-center"><i class="fas fa-chart-line"></i></div>
+        <div>
+          <div class="font-display text-xl text-paper font-bold">Consdum</div>
+          <div class="text-[10px] tracking-[.28em] uppercase text-mustard-300 font-semibold">Consultan&#539;&#259; &middot; Slatina</div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">Contabilitate, fiscalitate &#537;i consultan&#539;&#259; juridic&#259; pentru firme mici din Slatina &#537;i Olt. Listat &#238;n Top 20 Slatina.</p>
+    </div>
+    <div>
+      <h4 class="font-display text-paper text-lg mb-4 font-bold">Naviga&#539;ie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#despre" class="hover:text-mustard-300">Despre</a></li>
+        <li><a href="#servicii" class="hover:text-mustard-300">Servicii</a></li>
+        <li><a href="#proces" class="hover:text-mustard-300">Cum lucr&#259;m</a></li>
+        <li><a href="#program" class="hover:text-mustard-300">Program</a></li>
+        <li><a href="#locatie" class="hover:text-mustard-300">Loca&#539;ie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-paper text-lg mb-4 font-bold">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fas fa-phone text-mustard-300 mr-2"></i> <a href="tel:0761030319" class="hover:text-mustard-300">0761 030 319</a></li>
+        <li><i class="fas fa-map-marker-alt text-mustard-300 mr-2"></i> Str. M&#259;n&#259;stirii 8, Slatina</li>
+        <li><i class="far fa-clock text-mustard-300 mr-2"></i> Lu &ndash; Sb &middot; 09:00 &ndash; 21:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-xs text-paper/50">
+    <div>&copy; 2026 Consdum. Toate drepturile rezervate.</div>
+    <div>Contabilitate &middot; Fiscal &middot; Juridic &middot; Slatina, Olt</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:0761030319" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40761030319" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Consdum",
+  "telephone": "+40761030319",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. M&#259;n&#259;stirii 8, bl. 3, sc. C, et. 3, ap. 15",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230038",
+    "addressCountry": "RO"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":44.424666,"longitude":24.370517},
+  "areaServed": "Slatina, Olt",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"21:00"}
+  ]
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+</body>
+</html>

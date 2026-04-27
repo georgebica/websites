@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabine Pază Ulinox — Producător Cabine Modulare | Craiova</title>
+    <meta name="description" content="Ulinox Craiova — producător de cabine de pază, containere modulare și structuri metalice. Calitate industrială, proiecte la comandă.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        steel: '#607D8B',
+                        'steel-light': '#90A4AE',
+                        dark: '#263238',
+                        'dark-deeper': '#1a2329',
+                        orange: '#F57C00',
+                        'orange-light': '#FFB74D',
+                        'orange-dark': '#E65100',
+                    },
+                    fontFamily: {
+                        heading: ['Chakra Petch', 'sans-serif'],
+                        body: ['IBM Plex Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'IBM Plex Sans', sans-serif; }
+        .font-heading { font-family: 'Chakra Petch', sans-serif; }
+
+        /* Industrial bolt pattern */
+        .bolt-pattern {
+            background-image: radial-gradient(circle, #607D8B 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+        }
+
+        /* Metal texture overlay */
+        .metal-texture {
+            background: linear-gradient(135deg, rgba(96,125,139,0.05) 25%, transparent 25%),
+                        linear-gradient(225deg, rgba(96,125,139,0.05) 25%, transparent 25%),
+                        linear-gradient(315deg, rgba(96,125,139,0.05) 25%, transparent 25%),
+                        linear-gradient(45deg, rgba(96,125,139,0.05) 25%, transparent 25%);
+            background-size: 20px 20px;
+        }
+
+        /* Rivet/bolt decorators */
+        .bolt::before, .bolt::after {
+            content: '';
+            width: 10px; height: 10px;
+            background: radial-gradient(circle, #90A4AE 30%, #607D8B 70%);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .bolt::before { top: 10px; left: 10px; }
+        .bolt::after { top: 10px; right: 10px; }
+
+        .bolt-bottom::before, .bolt-bottom::after {
+            content: '';
+            width: 10px; height: 10px;
+            background: radial-gradient(circle, #90A4AE 30%, #607D8B 70%);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .bolt-bottom::before { bottom: 10px; left: 10px; }
+        .bolt-bottom::after { bottom: 10px; right: 10px; }
+
+        /* Diagonal stripes (hazard) */
+        .hazard-stripe {
+            background: repeating-linear-gradient(
+                -45deg,
+                #F57C00,
+                #F57C00 10px,
+                #E65100 10px,
+                #E65100 20px
+            );
+        }
+
+        .service-card {
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: #F57C00;
+        }
+
+        .modular-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 4px;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #263238; }
+        ::-webkit-scrollbar-thumb { background: #F57C00; border-radius: 4px; }
+
+        .counter { font-variant-numeric: tabular-nums; }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Manufacturer",
+        "name": "Cabine Pază Ulinox Craiova",
+        "description": "Producător de cabine de pază, containere modulare și structuri metalice la comandă.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calea București 119, Pielești",
+            "addressLocality": "Craiova",
+            "addressCountry": "RO"
+        },
+        "telephone": "+40744512636",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.313785,
+            "longitude": 23.909385
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "url": "https://ulinox-craiova.ro"
+    }
+    </script>
+</head>
+<body class="bg-dark text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-dark/95 backdrop-blur-md border-b border-steel/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange flex items-center justify-center">
+                        <i class="fas fa-industry text-white"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-lg tracking-wider block leading-tight">ULINOX</span>
+                        <span class="text-xs text-steel-light tracking-widest">CRAIOVA</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#acasa" class="font-heading text-sm text-gray-300 hover:text-orange transition-colors">ACASĂ</a>
+                    <a href="#produse" class="font-heading text-sm text-gray-300 hover:text-orange transition-colors">PRODUSE</a>
+                    <a href="#despre" class="font-heading text-sm text-gray-300 hover:text-orange transition-colors">DESPRE</a>
+                    <a href="#avantaje" class="font-heading text-sm text-gray-300 hover:text-orange transition-colors">AVANTAJE</a>
+                    <a href="#contact" class="font-heading text-sm px-5 py-2 bg-orange text-white hover:bg-orange-dark transition-all">CONTACT</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-orange text-2xl" aria-label="Meniu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-steel/20">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#acasa" class="block font-heading text-sm text-gray-300 hover:text-orange py-2">ACASĂ</a>
+                <a href="#produse" class="block font-heading text-sm text-gray-300 hover:text-orange py-2">PRODUSE</a>
+                <a href="#despre" class="block font-heading text-sm text-gray-300 hover:text-orange py-2">DESPRE</a>
+                <a href="#avantaje" class="block font-heading text-sm text-gray-300 hover:text-orange py-2">AVANTAJE</a>
+                <a href="#contact" class="block font-heading text-sm text-orange py-2">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="acasa" class="relative min-h-screen flex items-center metal-texture overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 hazard-stripe"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0 w-full">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-1 bg-orange"></div>
+                        <span class="font-heading text-sm text-orange tracking-widest uppercase">Producător cabine modulare</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6">
+                        Construcții<br>
+                        <span class="text-orange">modulare</span><br>
+                        de încredere.
+                    </h1>
+                    <p class="text-steel-light text-lg max-w-md mb-8 leading-relaxed">
+                        Fabricăm cabine de pază, containere modulare și structuri metalice de înaltă calitate. Proiecte la comandă, livrare rapidă.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="tel:0744512636" class="inline-flex items-center gap-2 bg-orange hover:bg-orange-dark text-white font-heading text-sm px-8 py-4 transition-all">
+                            <i class="fas fa-phone"></i> SUNĂ ACUM
+                        </a>
+                        <a href="#produse" class="inline-flex items-center gap-2 border-2 border-steel text-steel-light hover:border-orange hover:text-orange font-heading text-sm px-8 py-4 transition-all">
+                            VEZI PRODUSE <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- Hours -->
+                    <div class="mt-10 flex items-center gap-3 text-steel-light">
+                        <i class="fas fa-clock text-orange"></i>
+                        <span class="text-sm">Program: Luni — Vineri, 9:00 — 17:00</span>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative">
+                        <!-- Modular cabin visual -->
+                        <div class="w-64 h-52 border-4 border-steel bg-dark-deeper relative bolt bolt-bottom p-6">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-orange"></div>
+                            <div class="grid grid-cols-2 gap-3 mt-4">
+                                <div class="h-16 border-2 border-steel/40 bg-steel/5 flex items-center justify-center">
+                                    <i class="fas fa-door-open text-steel/40 text-xl"></i>
+                                </div>
+                                <div class="h-16 border-2 border-steel/40 bg-steel/5 flex items-center justify-center">
+                                    <i class="fas fa-window-maximize text-steel/40 text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="mt-3 h-8 border-2 border-steel/40 bg-steel/5 flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-orange/60 text-sm mr-2"></i>
+                                <span class="font-heading text-xs text-steel/60">CABINĂ PAZĂ</span>
+                            </div>
+                        </div>
+                        <!-- Bottom support -->
+                        <div class="flex justify-between mt-1">
+                            <div class="w-8 h-3 bg-steel/40"></div>
+                            <div class="w-8 h-3 bg-steel/40"></div>
+                        </div>
+                        <!-- Floating labels -->
+                        <div class="absolute -top-4 -right-4 bg-orange text-white font-heading text-xs px-3 py-1">MODULAR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-1 hazard-stripe"></div>
+    </section>
+
+    <!-- STATS -->
+    <section class="bg-dark-deeper border-y border-steel/15 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up">
+                    <div class="counter font-heading text-4xl font-bold text-orange mb-2">500+</div>
+                    <p class="text-steel text-sm font-heading">CABINE LIVRATE</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="counter font-heading text-4xl font-bold text-orange mb-2">15+</div>
+                    <p class="text-steel text-sm font-heading">ANI EXPERIENȚĂ</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="counter font-heading text-4xl font-bold text-orange mb-2">100%</div>
+                    <p class="text-steel text-sm font-heading">MADE IN RO</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="counter font-heading text-4xl font-bold text-orange mb-2">48h</div>
+                    <p class="text-steel text-sm font-heading">OFERTĂ RAPIDĂ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS / SERVICES -->
+    <section id="produse" class="py-20 md:py-28 bg-white text-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-8 h-1 bg-orange"></div>
+                    <span class="font-heading text-sm text-orange tracking-widest">PRODUSELE NOASTRE</span>
+                    <div class="w-8 h-1 bg-orange"></div>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold">Soluții Modulare Complete</h2>
+                <p class="text-steel mt-4 max-w-2xl mx-auto">De la cabine de pază standard la proiecte industriale complexe, oferim soluții adaptate nevoilor dumneavoastră.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="service-card relative bg-gray-50 border-2 border-gray-200 p-8" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-orange/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Cabine Pază</h3>
+                    <p class="text-steel text-sm leading-relaxed mb-4">Cabine de pază din oțel, termoizolate, echipate complet. Ideale pentru puncte de control și acces.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Termoizolate</span>
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Personalizabile</span>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="service-card relative bg-gray-50 border-2 border-gray-200 p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-orange/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-box text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Containere Modulare</h3>
+                    <p class="text-steel text-sm leading-relaxed mb-4">Containere modulare pentru birouri, depozite sau spații comerciale. Montaj rapid, durabilitate maximă.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Birouri</span>
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Depozite</span>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="service-card relative bg-gray-50 border-2 border-gray-200 p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-orange/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Structuri Metalice</h3>
+                    <p class="text-steel text-sm leading-relaxed mb-4">Structuri metalice pentru hale, copertine, platforme și alte aplicații industriale sau comerciale.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Hale</span>
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Copertine</span>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="service-card relative bg-gray-50 border-2 border-gray-200 p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-orange/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-pencil-ruler text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Proiecte la Comandă</h3>
+                    <p class="text-steel text-sm leading-relaxed mb-4">Soluții personalizate conform specificațiilor dumneavoastră. Proiectare, fabricare și montaj complet.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Custom</span>
+                        <span class="text-xs bg-orange/10 text-orange px-2 py-1 font-heading">Turnkey</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="despre" class="py-20 md:py-28 bg-dark metal-texture">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-1 bg-orange"></div>
+                        <span class="font-heading text-sm text-orange tracking-widest">DESPRE ULINOX</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">Producător cu<br><span class="text-orange">tradiție industrială</span></h2>
+                    <p class="text-steel-light leading-relaxed mb-6">
+                        Ulinox Craiova este un producător specializat în fabricarea cabinelor de pază, containerelor modulare și structurilor metalice. Cu sediul în Pielești, lângă Craiova, suntem un partener de încredere pentru companiile care au nevoie de soluții modulare de calitate.
+                    </p>
+                    <p class="text-steel-light leading-relaxed mb-8">
+                        Folosim materiale de primă calitate — oțel galvanizat, panouri sandwich termoizolate și finisaje premium — pentru a garanta durabilitatea și funcționalitatea fiecărui produs livrat.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-orange mt-1"></i>
+                            <span class="text-sm text-gray-300">Oțel galvanizat premium</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-orange mt-1"></i>
+                            <span class="text-sm text-gray-300">Izolație termică</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-orange mt-1"></i>
+                            <span class="text-sm text-gray-300">Instalații electrice</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-orange mt-1"></i>
+                            <span class="text-sm text-gray-300">Transport inclus</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="relative border-4 border-steel/30 bg-dark-deeper p-8">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-orange"></div>
+                        <!-- Industrial visual -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-4 border border-steel/20 bg-steel/5">
+                                <i class="fas fa-hammer text-orange text-2xl"></i>
+                                <div>
+                                    <h4 class="font-heading font-bold text-sm">Fabricație Proprie</h4>
+                                    <p class="text-steel text-xs">Atelier complet echipat</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 border border-steel/20 bg-steel/5">
+                                <i class="fas fa-truck text-orange text-2xl"></i>
+                                <div>
+                                    <h4 class="font-heading font-bold text-sm">Livrare Națională</h4>
+                                    <p class="text-steel text-xs">Transport în toată România</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 border border-steel/20 bg-steel/5">
+                                <i class="fas fa-tools text-orange text-2xl"></i>
+                                <div>
+                                    <h4 class="font-heading font-bold text-sm">Montaj Profesional</h4>
+                                    <p class="text-steel text-xs">Echipă proprie de montaj</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 border border-steel/20 bg-steel/5">
+                                <i class="fas fa-certificate text-orange text-2xl"></i>
+                                <div>
+                                    <h4 class="font-heading font-bold text-sm">Garanție Extinsă</h4>
+                                    <p class="text-steel text-xs">Calitate garantată</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section id="avantaje" class="py-20 md:py-28 bg-white text-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-heading text-sm text-orange tracking-widest">AVANTAJE</span>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mt-4">De Ce Să Alegeți Ulinox</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8" data-aos="fade-up">
+                    <div class="w-20 h-20 mx-auto bg-orange text-white flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Rapiditate</h3>
+                    <p class="text-steel text-sm leading-relaxed">Termene scurte de fabricație și livrare. De la comandă la montaj în cel mai scurt timp posibil.</p>
+                </div>
+                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 mx-auto bg-orange text-white flex items-center justify-center mb-6">
+                        <i class="fas fa-medal text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Calitate Superioară</h3>
+                    <p class="text-steel text-sm leading-relaxed">Materiale premium și finisaje de excepție. Fiecare produs trece prin control riguros de calitate.</p>
+                </div>
+                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 mx-auto bg-orange text-white flex items-center justify-center mb-6">
+                        <i class="fas fa-money-bill-wave text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3">Preț Corect</h3>
+                    <p class="text-steel text-sm leading-relaxed">Prețuri competitive direct de la producător. Fără intermediari, fără costuri ascunse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-20 md:py-28 bg-dark-deeper">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-heading text-sm text-orange tracking-widest">PROCESUL NOSTRU</span>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mt-4">Cum Lucrăm</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-16 h-16 bg-orange text-white flex items-center justify-center font-heading text-2xl font-bold">1</div>
+                        <div class="hidden lg:block absolute top-1/2 left-full w-full h-[2px] bg-steel/30"></div>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Consultare</h3>
+                    <p class="text-steel text-sm">Discutăm specificațiile și cerințele proiectului dumneavoastră.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-16 h-16 bg-orange text-white flex items-center justify-center font-heading text-2xl font-bold">2</div>
+                        <div class="hidden lg:block absolute top-1/2 left-full w-full h-[2px] bg-steel/30"></div>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Proiectare</h3>
+                    <p class="text-steel text-sm">Realizăm proiectul tehnic și oferim o estimare de preț detaliată.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-16 h-16 bg-orange text-white flex items-center justify-center font-heading text-2xl font-bold">3</div>
+                        <div class="hidden lg:block absolute top-1/2 left-full w-full h-[2px] bg-steel/30"></div>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Fabricare</h3>
+                    <p class="text-steel text-sm">Producem cabina sau structura în atelierul nostru din Craiova.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-16 h-16 bg-orange text-white flex items-center justify-center font-heading text-2xl font-bold">4</div>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg mb-3">Livrare & Montaj</h3>
+                    <p class="text-steel text-sm">Transportăm și instalăm produsul la locația indicată.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 md:py-28 bg-white text-dark">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-heading text-sm text-orange tracking-widest">ÎNTREBĂRI FRECVENTE</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mt-4">Ce Vreți Să Știți</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="border-2 border-gray-200 p-6" data-aos="fade-up">
+                    <h3 class="font-heading font-bold text-lg mb-2">Care este termenul de livrare?</h3>
+                    <p class="text-steel text-sm leading-relaxed">Termenul standard de fabricație este de 7-14 zile lucrătoare, în funcție de complexitatea proiectului. Pentru proiecte urgente, oferim opțiuni de livrare accelerată.</p>
+                </div>
+                <div class="border-2 border-gray-200 p-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-heading font-bold text-lg mb-2">Oferiți montaj la locație?</h3>
+                    <p class="text-steel text-sm leading-relaxed">Da, echipa noastră se deplasează pentru montajul produselor în toată România. Costul transportului și montajului este inclus în ofertă.</p>
+                </div>
+                <div class="border-2 border-gray-200 p-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-heading font-bold text-lg mb-2">Ce garanție oferiti?</h3>
+                    <p class="text-steel text-sm leading-relaxed">Toate produsele noastre beneficiază de garanție. Durata garanției variază în funcție de tipul produsului și poate fi discutată la momentul comenzii.</p>
+                </div>
+                <div class="border-2 border-gray-200 p-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-heading font-bold text-lg mb-2">Pot personaliza dimensiunile?</h3>
+                    <p class="text-steel text-sm leading-relaxed">Absolut! Fabricăm la dimensiunile specificate de client. De la cabine de pază compacte la containere modulare de dimensiuni mari.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-24 bg-orange relative overflow-hidden">
+        <div class="absolute inset-0 bolt-pattern opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Aveți nevoie de o<br>cabină modulară?</h2>
+            <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto">Sunați-ne pentru o ofertă personalizată. Răspundem în maximum 48 de ore.</p>
+            <a href="tel:0744512636" class="inline-flex items-center gap-3 bg-dark text-white font-heading px-10 py-4 hover:bg-dark-deeper transition-all text-lg">
+                <i class="fas fa-phone"></i> 0744 512 636
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-28 bg-dark metal-texture">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-heading text-sm text-orange tracking-widest">CONTACT</span>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mt-4">Luați Legătura</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border-2 border-steel/20 bg-dark-deeper p-8 text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto bg-orange/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-map-marker-alt text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-3">Adresă</h3>
+                    <p class="text-steel-light">Calea București 119<br>Pielești, Craiova</p>
+                </div>
+                <div class="border-2 border-steel/20 bg-dark-deeper p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-orange/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-phone text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-3">Telefon</h3>
+                    <a href="tel:0744512636" class="text-orange hover:text-orange-light transition-colors text-lg">0744 512 636</a>
+                </div>
+                <div class="border-2 border-steel/20 bg-dark-deeper p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-orange/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold mb-3">Program</h3>
+                    <p class="text-steel-light">Luni — Vineri<br>9:00 — 17:00</p>
+                </div>
+            </div>
+            <div class="mt-12" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d23.909385!3d44.313785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDE4JzQ5LjYiTiAyM8KwNTQnMzMuOCJF!5e0!3m2!1sro!2sro!4v1" width="100%" height="350" style="border:0; filter: grayscale(0.6) contrast(1.1);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-deeper border-t border-steel/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-orange flex items-center justify-center">
+                        <i class="fas fa-industry text-white text-sm"></i>
+                    </div>
+                    <span class="font-heading font-bold tracking-wider">ULINOX <span class="text-orange">CRAIOVA</span></span>
+                </div>
+                <p class="text-steel text-sm">&copy; 2026 Cabine Pază Ulinox Craiova. Toate drepturile rezervate.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-steel/30 flex items-center justify-center text-steel hover:bg-orange hover:text-white hover:border-orange transition-all" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 border border-steel/30 flex items-center justify-center text-steel hover:bg-orange hover:text-white hover:border-orange transition-all" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-1 hazard-stripe mt-8"></div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

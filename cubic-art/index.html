@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUBIC ART — Studio de Arhitectură | Slatina</title>
+    <meta name="description" content="CUBIC ART — studio de arhitectură în Slatina. Proiectare, design interior, autorizații de construcție și urbanism. Viziune geometrică modernă.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1A1A2E',
+                        violet: '#7C4DFF',
+                        'violet-dark': '#5C2FE0',
+                        'violet-light': '#B388FF',
+                        lgrey: '#F0F0F5',
+                    },
+                    fontFamily: {
+                        mono: ['Space Mono', 'monospace'],
+                        sans: ['Figtree', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Figtree', sans-serif; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+
+        /* 3D Cube */
+        .cube-container {
+            perspective: 800px;
+            width: 120px;
+            height: 120px;
+        }
+        .cube {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube 12s infinite linear;
+        }
+        .cube-face {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #7C4DFF;
+            opacity: 0.7;
+        }
+        .cube-face.front  { transform: translateZ(60px); background: rgba(124,77,255,0.08); }
+        .cube-face.back   { transform: rotateY(180deg) translateZ(60px); background: rgba(124,77,255,0.05); }
+        .cube-face.right  { transform: rotateY(90deg) translateZ(60px); background: rgba(124,77,255,0.1); }
+        .cube-face.left   { transform: rotateY(-90deg) translateZ(60px); background: rgba(124,77,255,0.06); }
+        .cube-face.top    { transform: rotateX(90deg) translateZ(60px); background: rgba(124,77,255,0.12); }
+        .cube-face.bottom { transform: rotateX(-90deg) translateZ(60px); background: rgba(124,77,255,0.04); }
+
+        @keyframes rotateCube {
+            0%   { transform: rotateX(-20deg) rotateY(0deg); }
+            100% { transform: rotateX(-20deg) rotateY(360deg); }
+        }
+
+        /* Grid pattern background */
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(124,77,255,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124,77,255,0.07) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .grid-bg-dark {
+            background-image:
+                linear-gradient(rgba(124,77,255,0.12) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124,77,255,0.12) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Geometric corner accents */
+        .geo-corner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 30px; height: 30px;
+            border-top: 3px solid #7C4DFF;
+            border-left: 3px solid #7C4DFF;
+        }
+        .geo-corner::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 30px; height: 30px;
+            border-bottom: 3px solid #7C4DFF;
+            border-right: 3px solid #7C4DFF;
+        }
+
+        /* Diamond shape */
+        .diamond {
+            width: 16px; height: 16px;
+            background: #7C4DFF;
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+
+        .service-card {
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(124,77,255,0.2);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1A1A2E; }
+        ::-webkit-scrollbar-thumb { background: #7C4DFF; border-radius: 4px; }
+
+        /* Geometric floating shapes */
+        .geo-float {
+            position: absolute;
+            border: 2px solid rgba(124,77,255,0.2);
+            animation: geoFloat 6s ease-in-out infinite;
+        }
+        @keyframes geoFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .stat-number {
+            background: linear-gradient(135deg, #7C4DFF, #B388FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Architect",
+        "name": "CUBIC ART",
+        "description": "Studio de arhitectură specializat în proiectare, design interior, autorizații de construcție și urbanism.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bdul Nicolae Titulescu 15",
+            "addressLocality": "Slatina",
+            "addressCountry": "RO"
+        },
+        "telephone": "+40765247804",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.431878,
+            "longitude": 24.355614
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.2",
+            "bestRating": "5",
+            "reviewCount": "10"
+        },
+        "url": "https://cubicart.ro"
+    }
+    </script>
+</head>
+<body class="bg-charcoal text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-charcoal/95 backdrop-blur-md border-b border-violet/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-8 h-8 border-2 border-violet rotate-45 flex items-center justify-center">
+                        <div class="w-3 h-3 bg-violet rotate-0"></div>
+                    </div>
+                    <span class="font-mono font-bold text-lg tracking-wider">CUBIC<span class="text-violet">ART</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#acasa" class="font-mono text-sm text-gray-300 hover:text-violet transition-colors">ACASĂ</a>
+                    <a href="#servicii" class="font-mono text-sm text-gray-300 hover:text-violet transition-colors">SERVICII</a>
+                    <a href="#despre" class="font-mono text-sm text-gray-300 hover:text-violet transition-colors">DESPRE</a>
+                    <a href="#proces" class="font-mono text-sm text-gray-300 hover:text-violet transition-colors">PROCES</a>
+                    <a href="#contact" class="font-mono text-sm px-5 py-2 border border-violet text-violet hover:bg-violet hover:text-white transition-all">CONTACT</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-violet text-2xl" aria-label="Meniu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-charcoal border-t border-violet/20">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#acasa" class="block font-mono text-sm text-gray-300 hover:text-violet py-2">ACASĂ</a>
+                <a href="#servicii" class="block font-mono text-sm text-gray-300 hover:text-violet py-2">SERVICII</a>
+                <a href="#despre" class="block font-mono text-sm text-gray-300 hover:text-violet py-2">DESPRE</a>
+                <a href="#proces" class="block font-mono text-sm text-gray-300 hover:text-violet py-2">PROCES</a>
+                <a href="#contact" class="block font-mono text-sm text-violet py-2">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="acasa" class="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden">
+        <!-- Floating geometric shapes -->
+        <div class="geo-float w-20 h-20 top-1/4 left-10 hidden lg:block" style="animation-delay: 0s;"></div>
+        <div class="geo-float w-12 h-12 top-1/3 right-20 rotate-45 hidden lg:block" style="animation-delay: 2s;"></div>
+        <div class="geo-float w-16 h-16 bottom-1/4 left-1/4 rotate-12 hidden lg:block" style="animation-delay: 4s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-[2px] bg-violet"></div>
+                        <span class="font-mono text-sm text-violet tracking-widest">STUDIO DE ARHITECTURĂ</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-mono font-bold leading-tight mb-6">
+                        Gândim<br>
+                        <span class="text-violet">geometric.</span><br>
+                        Construim<br>
+                        <span class="text-violet">vizionar.</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg max-w-md mb-8 leading-relaxed">
+                        Transformăm fiecare proiect într-o expresie arhitecturală unică, unde geometria întâlnește funcționalitatea.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#servicii" class="inline-flex items-center gap-2 bg-violet hover:bg-violet-dark text-white font-mono text-sm px-8 py-4 transition-all">
+                            DESCOPERĂ <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="tel:0765247804" class="inline-flex items-center gap-2 border border-violet/40 text-violet hover:border-violet font-mono text-sm px-8 py-4 transition-all">
+                            <i class="fas fa-phone"></i> SUNĂ-NE
+                        </a>
+                    </div>
+                    <!-- Rating -->
+                    <div class="mt-10 flex items-center gap-4">
+                        <div class="flex text-violet">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="font-mono text-sm text-gray-400">4.2 / 5 — 10 recenzii</span>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="300">
+                    <div class="relative">
+                        <div class="cube-container mx-auto" style="width:200px;height:200px;">
+                            <div class="cube" style="width:200px;height:200px;">
+                                <div class="cube-face front" style="width:200px;height:200px;transform:translateZ(100px);"></div>
+                                <div class="cube-face back" style="width:200px;height:200px;transform:rotateY(180deg) translateZ(100px);"></div>
+                                <div class="cube-face right" style="width:200px;height:200px;transform:rotateY(90deg) translateZ(100px);"></div>
+                                <div class="cube-face left" style="width:200px;height:200px;transform:rotateY(-90deg) translateZ(100px);"></div>
+                                <div class="cube-face top" style="width:200px;height:200px;transform:rotateX(90deg) translateZ(100px);"></div>
+                                <div class="cube-face bottom" style="width:200px;height:200px;transform:rotateX(-90deg) translateZ(100px);"></div>
+                            </div>
+                        </div>
+                        <!-- Corner brackets -->
+                        <div class="absolute -top-8 -left-8 w-16 h-16 border-t-2 border-l-2 border-violet/40"></div>
+                        <div class="absolute -bottom-8 -right-8 w-16 h-16 border-b-2 border-r-2 border-violet/40"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span class="font-mono text-xs text-violet/60 tracking-widest">SCROLL</span>
+            <div class="w-[1px] h-8 bg-violet/40"></div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="bg-charcoal border-y border-violet/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up">
+                    <div class="stat-number font-mono text-4xl font-bold mb-2">150+</div>
+                    <p class="text-gray-500 text-sm font-mono">PROIECTE</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number font-mono text-4xl font-bold mb-2">12</div>
+                    <p class="text-gray-500 text-sm font-mono">ANI EXPERIENȚĂ</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number font-mono text-4xl font-bold mb-2">4.2</div>
+                    <p class="text-gray-500 text-sm font-mono">RATING MEDIU</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number font-mono text-4xl font-bold mb-2">98%</div>
+                    <p class="text-gray-500 text-sm font-mono">CLIENȚI MULȚUMIȚI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicii" class="py-20 md:py-28 bg-lgrey text-charcoal grid-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="diamond"></div>
+                    <span class="font-mono text-sm text-violet tracking-widest">CE FACEM</span>
+                    <div class="diamond"></div>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-mono font-bold text-charcoal">Serviciile Noastre</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Fiecare proiect este o oportunitate de a crea spații care inspiră și funcționează impecabil.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card relative bg-white p-8 geo-corner" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-violet/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-drafting-compass text-violet text-2xl"></i>
+                    </div>
+                    <h3 class="font-mono font-bold text-xl mb-3">Proiectare</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Proiecte arhitecturale complete — de la concept la documentația tehnică, respectând cele mai înalte standarde de calitate.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-violet to-transparent"></div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card relative bg-white p-8 geo-corner" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-violet/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-violet text-2xl"></i>
+                    </div>
+                    <h3 class="font-mono font-bold text-xl mb-3">Design</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Design interior și exterior cu atenție la detalii. Creăm atmosfere unice care reflectă personalitatea fiecărui client.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-violet to-transparent"></div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card relative bg-white p-8 geo-corner" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-violet/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-file-signature text-violet text-2xl"></i>
+                    </div>
+                    <h3 class="font-mono font-bold text-xl mb-3">Autorizări</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Obținerea autorizațiilor de construcție și a tuturor avizelor necesare. Vă ghidăm prin întregul proces birocratic.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-violet to-transparent"></div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card relative bg-white p-8 geo-corner" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-violet/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-city text-violet text-2xl"></i>
+                    </div>
+                    <h3 class="font-mono font-bold text-xl mb-3">Urbanism</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Planuri urbanistice zonale și de detaliu, certificate de urbanism, studii de fezabilitate urbanistică.</p>
+                    <div class="mt-6 w-full h-[2px] bg-gradient-to-r from-violet to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="despre" class="py-20 md:py-28 bg-charcoal grid-bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative p-8 border border-violet/20">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="aspect-square bg-violet/10 border border-violet/30 flex items-center justify-center">
+                                <i class="fas fa-cube text-violet text-2xl"></i>
+                            </div>
+                            <div class="aspect-square bg-violet/5 border border-violet/20 flex items-center justify-center">
+                                <i class="fas fa-vector-square text-violet/60 text-2xl"></i>
+                            </div>
+                            <div class="aspect-square bg-violet/15 border border-violet/30 flex items-center justify-center">
+                                <i class="fas fa-cubes text-violet text-2xl"></i>
+                            </div>
+                            <div class="aspect-square bg-violet/5 border border-violet/20 flex items-center justify-center">
+                                <i class="fas fa-shapes text-violet/60 text-2xl"></i>
+                            </div>
+                            <div class="aspect-square bg-violet/20 border border-violet/40 flex items-center justify-center col-span-1">
+                                <span class="font-mono text-violet font-bold text-xl">CA</span>
+                            </div>
+                            <div class="aspect-square bg-violet/5 border border-violet/20 flex items-center justify-center">
+                                <i class="fas fa-ruler-combined text-violet/60 text-2xl"></i>
+                            </div>
+                            <div class="aspect-square bg-violet/15 border border-violet/30 flex items-center justify-center">
+                                <i class="fas fa-building text-violet text-2xl"></i>
+                            </div>
+                            <div class="aspect-square bg-violet/5 border border-violet/20 flex items-center justify-center">
+                                <i class="fas fa-compass-drafting text-violet/60 text-2xl"></i>
+                            </div>
+                            <div class="aspect-square bg-violet/10 border border-violet/30 flex items-center justify-center">
+                                <i class="fas fa-pencil-ruler text-violet text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-[2px] bg-violet"></div>
+                        <span class="font-mono text-sm text-violet tracking-widest">DESPRE NOI</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-mono font-bold mb-6">Arhitectură cu<br><span class="text-violet">caracter geometric</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        CUBIC ART este un studio de arhitectură din Slatina, fondat pe principiul că fiecare spațiu trebuie să fie o combinație perfectă între formă și funcție. Cu o abordare geometrică distinctivă, transformăm viziunile clienților în realități construite.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Echipa noastră combină experiența tehnică cu creativitatea artistică, livrând proiecte care depășesc așteptările. De la case individuale la complexuri rezidențiale, fiecare proiect primește aceeași atenție la detalii.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-violet rotate-45"></div>
+                            <span class="text-sm text-gray-300">Proiecte rezidențiale</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-violet rotate-45"></div>
+                            <span class="text-sm text-gray-300">Spații comerciale</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-violet rotate-45"></div>
+                            <span class="text-sm text-gray-300">Renovări complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="proces" class="py-20 md:py-28 bg-lgrey text-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="diamond"></div>
+                    <span class="font-mono text-sm text-violet tracking-widest">PROCESUL NOSTRU</span>
+                    <div class="diamond"></div>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-mono font-bold">De la Idee la Realitate</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-20 h-20 mx-auto bg-charcoal text-violet flex items-center justify-center font-mono text-2xl font-bold mb-6 rotate-45">
+                        <span class="-rotate-45">01</span>
+                    </div>
+                    <h3 class="font-mono font-bold text-lg mb-3">Consultare</h3>
+                    <p class="text-gray-500 text-sm">Discutăm cerințele, bugetul și viziunea dumneavoastră pentru a defini direcția proiectului.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 mx-auto bg-charcoal text-violet flex items-center justify-center font-mono text-2xl font-bold mb-6 rotate-45">
+                        <span class="-rotate-45">02</span>
+                    </div>
+                    <h3 class="font-mono font-bold text-lg mb-3">Concept</h3>
+                    <p class="text-gray-500 text-sm">Elaborăm schițe conceptuale și vizualizări 3D pentru a vă prezenta posibilitățile spațiului.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 mx-auto bg-charcoal text-violet flex items-center justify-center font-mono text-2xl font-bold mb-6 rotate-45">
+                        <span class="-rotate-45">03</span>
+                    </div>
+                    <h3 class="font-mono font-bold text-lg mb-3">Proiectare</h3>
+                    <p class="text-gray-500 text-sm">Realizăm documentația tehnică completă, inclusiv planuri, secțiuni și detalii constructive.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 mx-auto bg-charcoal text-violet flex items-center justify-center font-mono text-2xl font-bold mb-6 rotate-45">
+                        <span class="-rotate-45">04</span>
+                    </div>
+                    <h3 class="font-mono font-bold text-lg mb-3">Execuție</h3>
+                    <p class="text-gray-500 text-sm">Supervizăm implementarea proiectului, asigurând conformitatea cu planurile aprobate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="py-20 md:py-28 bg-charcoal grid-bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-mono text-sm text-violet tracking-widest">DE CE NOI</span>
+                <h2 class="text-3xl md:text-5xl font-mono font-bold mt-4">Avantajele CUBIC ART</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-violet/20 p-8 hover:border-violet/50 transition-colors" data-aos="fade-up">
+                    <i class="fas fa-lightbulb text-violet text-3xl mb-6"></i>
+                    <h3 class="font-mono font-bold text-xl mb-3">Viziune Creativă</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Abordare inovatoare și soluții arhitecturale care combină estetica modernă cu funcționalitatea practică.</p>
+                </div>
+                <div class="border border-violet/20 p-8 hover:border-violet/50 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-handshake text-violet text-3xl mb-6"></i>
+                    <h3 class="font-mono font-bold text-xl mb-3">Colaborare Directă</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Comunicare transparentă și implicarea clientului în fiecare etapă a procesului de proiectare.</p>
+                </div>
+                <div class="border border-violet/20 p-8 hover:border-violet/50 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-clock text-violet text-3xl mb-6"></i>
+                    <h3 class="font-mono font-bold text-xl mb-3">Livrare la Timp</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Respectăm termenele asumate și oferim actualizări regulate privind stadiul fiecărui proiect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 md:py-28 bg-lgrey text-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-mono text-sm text-violet tracking-widest">TESTIMONIALE</span>
+                <h2 class="text-3xl md:text-5xl font-mono font-bold mt-4">Ce Spun Clienții</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 relative" data-aos="fade-up">
+                    <i class="fas fa-quote-left text-violet/20 text-4xl absolute top-4 left-4"></i>
+                    <div class="flex text-violet mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">„Echipa CUBIC ART a transformat complet viziunea noastră într-un proiect arhitectural excepțional. Profesionalism desăvârșit!"</p>
+                    <p class="font-mono text-sm font-bold">— Andrei M.</p>
+                </div>
+                <div class="bg-white p-8 relative" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-quote-left text-violet/20 text-4xl absolute top-4 left-4"></i>
+                    <div class="flex text-violet mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">„Atenția la detalii și creativitatea lor m-au impresionat. Recomand cu încredere pentru orice proiect de arhitectură."</p>
+                    <p class="font-mono text-sm font-bold">— Elena P.</p>
+                </div>
+                <div class="bg-white p-8 relative" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-quote-left text-violet/20 text-4xl absolute top-4 left-4"></i>
+                    <div class="flex text-violet mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">„De la autorizații la finalizarea proiectului, totul a decurs impecabil. Suntem foarte mulțumiți de rezultat."</p>
+                    <p class="font-mono text-sm font-bold">— Mihai D.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-28 bg-violet relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-mono font-bold mb-6">Aveți un proiect<br>în minte?</h2>
+            <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto">Contactați-ne pentru o consultare gratuită și haideți să dăm formă ideilor dumneavoastră.</p>
+            <a href="tel:0765247804" class="inline-flex items-center gap-3 bg-charcoal text-white font-mono px-10 py-4 hover:bg-charcoal/80 transition-all text-lg">
+                <i class="fas fa-phone"></i> 0765 247 804
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-28 bg-charcoal grid-bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="font-mono text-sm text-violet tracking-widest">CONTACT</span>
+                <h2 class="text-3xl md:text-5xl font-mono font-bold mt-4">Unde Ne Găsiți</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-violet/20 p-8 text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto bg-violet/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-map-marker-alt text-violet text-2xl"></i>
+                    </div>
+                    <h3 class="font-mono font-bold mb-3">Adresă</h3>
+                    <p class="text-gray-400">Bdul Nicolae Titulescu 15<br>Slatina, România</p>
+                </div>
+                <div class="border border-violet/20 p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-violet/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-phone text-violet text-2xl"></i>
+                    </div>
+                    <h3 class="font-mono font-bold mb-3">Telefon</h3>
+                    <a href="tel:0765247804" class="text-violet hover:text-violet-light transition-colors">0765 247 804</a>
+                </div>
+                <div class="border border-violet/20 p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-violet/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-violet text-2xl"></i>
+                    </div>
+                    <h3 class="font-mono font-bold mb-3">Rating</h3>
+                    <p class="text-gray-400">4.2 din 5<br>10 recenzii verificate</p>
+                </div>
+            </div>
+            <!-- Map -->
+            <div class="mt-12" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d24.355614!3d44.431878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI1JzU0LjgiTiAyNMKwMjEnMjAuMiJF!5e0!3m2!1sro!2sro!4v1" width="100%" height="350" style="border:0; filter: grayscale(0.8) contrast(1.1);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-charcoal border-t border-violet/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 border-2 border-violet rotate-45 flex items-center justify-center">
+                        <div class="w-2 h-2 bg-violet"></div>
+                    </div>
+                    <span class="font-mono font-bold tracking-wider">CUBIC<span class="text-violet">ART</span></span>
+                </div>
+                <p class="text-gray-500 text-sm font-mono">&copy; 2026 CUBIC ART. Toate drepturile rezervate.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-violet/30 flex items-center justify-center text-violet hover:bg-violet hover:text-white transition-all" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 border border-violet/30 flex items-center justify-center text-violet hover:bg-violet hover:text-white transition-all" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 border border-violet/30 flex items-center justify-center text-violet hover:bg-violet hover:text-white transition-all" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg', 'shadow-violet/5');
+            } else {
+                nav.classList.remove('shadow-lg', 'shadow-violet/5');
+            }
+        });
+    </script>
+</body>
+</html>

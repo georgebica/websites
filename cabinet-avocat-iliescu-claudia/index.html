@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Avocat Iliescu Claudia — Consultanță și Reprezentare Juridică</title>
+    <meta name="description" content="Cabinet Avocat Iliescu Claudia — consultanță juridică, reprezentare în instanță, asistență juridică și redactare acte. Profesionalism și discreție.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: '#37474F',
+                        'slate-dark': '#263238',
+                        'slate-light': '#546E7A',
+                        cream: '#FFF8E1',
+                        'cream-dark': '#FFF3C4',
+                        teal: '#00897B',
+                        'teal-dark': '#00695C',
+                        'teal-light': '#4DB6AC',
+                    },
+                    fontFamily: {
+                        serif: ['Spectral', 'serif'],
+                        sans: ['Karla', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Karla', sans-serif; background: #FFF8E1; }
+        .font-serif { font-family: 'Spectral', serif; }
+
+        /* Ultra-minimal aesthetic */
+        .thin-line {
+            width: 60px;
+            height: 1px;
+            background: #00897B;
+        }
+
+        .service-card {
+            transition: transform 0.4s, background-color 0.4s;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            background-color: #37474F;
+            color: #FFF8E1;
+        }
+        .service-card:hover .card-icon { color: #4DB6AC; }
+        .service-card:hover .card-text { color: #FFF8E1; opacity: 0.8; }
+        .service-card:hover .card-title { color: #FFF8E1; }
+        .service-card:hover .card-line { background: #00897B; }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FFF8E1; }
+        ::-webkit-scrollbar-thumb { background: #00897B; border-radius: 3px; }
+
+        /* Elegant minimal divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(55,71,79,0.15);
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Cabinet Avocat Iliescu Claudia",
+        "description": "Cabinet de avocat oferind consultanță juridică, reprezentare în instanță, asistență juridică și redactare acte.",
+        "telephone": "+40744472069",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.427675,
+            "longitude": 24.372353
+        },
+        "url": "https://avocat-iliescu-claudia.ro"
+    }
+    </script>
+</head>
+<body class="bg-cream text-slate">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-cream/95 backdrop-blur-md border-b border-slate/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="font-serif font-semibold text-lg text-slate">
+                    Av. <span class="text-teal">Iliescu Claudia</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#acasa" class="text-sm text-slate/60 hover:text-teal transition-colors">Acasă</a>
+                    <a href="#servicii" class="text-sm text-slate/60 hover:text-teal transition-colors">Servicii</a>
+                    <a href="#filozofie" class="text-sm text-slate/60 hover:text-teal transition-colors">Filozofie</a>
+                    <a href="#contact" class="text-sm text-slate/60 hover:text-teal transition-colors">Contact</a>
+                    <a href="tel:0744472069" class="text-sm px-5 py-2 border border-teal text-teal hover:bg-teal hover:text-cream transition-all">Sună</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-teal text-xl" aria-label="Meniu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-cream border-t border-slate/10">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#acasa" class="block text-sm text-slate/60 hover:text-teal py-2">Acasă</a>
+                <a href="#servicii" class="block text-sm text-slate/60 hover:text-teal py-2">Servicii</a>
+                <a href="#filozofie" class="block text-sm text-slate/60 hover:text-teal py-2">Filozofie</a>
+                <a href="#contact" class="block text-sm text-teal py-2 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="acasa" class="relative min-h-screen flex items-center justify-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+            <div data-aos="fade-up">
+                <div class="thin-line mx-auto mb-8"></div>
+                <p class="text-sm text-teal tracking-widest uppercase mb-6 font-medium">Cabinet de Avocat</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold leading-tight mb-6 text-slate-dark">
+                    Iliescu<br>Claudia
+                </h1>
+                <p class="text-slate-light text-lg max-w-lg mx-auto mb-10 leading-relaxed">
+                    Consiliere juridică discretă și eficientă. Fiecare caz merită atenție individuală și o abordare strategică personalizată.
+                </p>
+                <a href="tel:0744472069" class="inline-flex items-center gap-3 bg-teal hover:bg-teal-dark text-cream px-8 py-4 transition-all text-sm tracking-wider">
+                    <i class="fas fa-phone"></i> 0744 472 069
+                </a>
+                <div class="thin-line mx-auto mt-12"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO QUOTE -->
+    <section class="py-16 md:py-20 bg-slate text-cream">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <i class="fas fa-quote-left text-teal-light text-3xl mb-6 block"></i>
+            <p class="font-serif text-xl md:text-2xl italic leading-relaxed text-cream/90">
+                „Dreptul nu este doar o profesie — este o responsabilitate față de cei care ne acordă încrederea."
+            </p>
+            <p class="mt-6 text-teal-light text-sm tracking-wider">— Av. Iliescu Claudia</p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicii" class="py-20 md:py-28 bg-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="thin-line mx-auto mb-6"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-slate-dark">Servicii Juridice</h2>
+                <p class="text-slate-light mt-4 max-w-lg mx-auto">O abordare minimală, concentrată pe esență și eficiență.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-10 border border-slate/10 text-center" data-aos="fade-up">
+                    <i class="card-icon fas fa-comments text-teal text-3xl mb-6"></i>
+                    <h3 class="card-title font-serif font-semibold text-xl mb-4 text-slate-dark">Consultanță</h3>
+                    <p class="card-text text-slate-light text-sm leading-relaxed">Analiză juridică aprofundată a situației dumneavoastră. Oferim opinii legale clare și strategii adaptate fiecărui caz.</p>
+                    <div class="card-line thin-line mx-auto mt-6 bg-slate/10"></div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-10 border border-slate/10 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="card-icon fas fa-landmark text-teal text-3xl mb-6"></i>
+                    <h3 class="card-title font-serif font-semibold text-xl mb-4 text-slate-dark">Reprezentare</h3>
+                    <p class="card-text text-slate-light text-sm leading-relaxed">Reprezentare profesională în fața instanțelor de judecată și a altor organe jurisdicționale. Apărare fermă și dedicată.</p>
+                    <div class="card-line thin-line mx-auto mt-6 bg-slate/10"></div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-10 border border-slate/10 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="card-icon fas fa-user-shield text-teal text-3xl mb-6"></i>
+                    <h3 class="card-title font-serif font-semibold text-xl mb-4 text-slate-dark">Asistență Juridică</h3>
+                    <p class="card-text text-slate-light text-sm leading-relaxed">Asistență juridică în cadrul procedurilor judiciare și extrajudiciare. Vă ghidăm pas cu pas prin procesul legal.</p>
+                    <div class="card-line thin-line mx-auto mt-6 bg-slate/10"></div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-10 border border-slate/10 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="card-icon fas fa-file-alt text-teal text-3xl mb-6"></i>
+                    <h3 class="card-title font-serif font-semibold text-xl mb-4 text-slate-dark">Redactare Acte</h3>
+                    <p class="card-text text-slate-light text-sm leading-relaxed">Redactarea contractelor, cererilor, acțiunilor și a oricăror acte juridice necesare în procesul dumneavoastră.</p>
+                    <div class="card-line thin-line mx-auto mt-6 bg-slate/10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section id="filozofie" class="py-20 md:py-28 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <div class="thin-line mx-auto mb-8"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-slate-dark mb-8">Principiile Noastre</h2>
+            </div>
+
+            <div class="space-y-12">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-12 h-12 mx-auto bg-cream flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-eye text-teal text-lg"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold text-lg mb-3">Transparență</h3>
+                    <p class="text-slate-light text-sm leading-relaxed max-w-md mx-auto">Comunicare deschisă și onestă la fiecare pas. Veți ști întotdeauna exact unde vă aflați în procesul juridic.</p>
+                </div>
+
+                <div class="divider"><span class="text-teal/30"><i class="fas fa-circle text-[4px]"></i></span></div>
+
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-12 h-12 mx-auto bg-cream flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-lock text-teal text-lg"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold text-lg mb-3">Discreție</h3>
+                    <p class="text-slate-light text-sm leading-relaxed max-w-md mx-auto">Confidențialitatea totală a informațiilor pe care ni le încredințați este o prioritate absolută.</p>
+                </div>
+
+                <div class="divider"><span class="text-teal/30"><i class="fas fa-circle text-[4px]"></i></span></div>
+
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-12 h-12 mx-auto bg-cream flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-bullseye text-teal text-lg"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold text-lg mb-3">Eficiență</h3>
+                    <p class="text-slate-light text-sm leading-relaxed max-w-md mx-auto">Abordare directă, fără complicații inutile. Ne concentrăm pe soluții practice și rezultate concrete.</p>
+                </div>
+
+                <div class="divider"><span class="text-teal/30"><i class="fas fa-circle text-[4px]"></i></span></div>
+
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-12 h-12 mx-auto bg-cream flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-heart text-teal text-lg"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold text-lg mb-3">Empatie</h3>
+                    <p class="text-slate-light text-sm leading-relaxed max-w-md mx-auto">Înțelegem dificultățile prin care treceți și tratăm fiecare caz cu sensibilitatea pe care o merită.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="py-20 md:py-28 bg-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="thin-line mx-auto mb-6"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-slate-dark">Cum Lucrăm</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="font-serif text-4xl text-teal/30 font-bold mb-4">01</div>
+                    <h3 class="font-serif font-semibold text-lg mb-3">Ascultăm</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Vă ascultăm cu atenție pentru a înțelege complet situația și nevoile dumneavoastră juridice.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="font-serif text-4xl text-teal/30 font-bold mb-4">02</div>
+                    <h3 class="font-serif font-semibold text-lg mb-3">Analizăm</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Studiem documentele, legislația aplicabilă și jurisprudența relevantă pentru cazul dumneavoastră.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="font-serif text-4xl text-teal/30 font-bold mb-4">03</div>
+                    <h3 class="font-serif font-semibold text-lg mb-3">Acționăm</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Implementăm strategia juridică optimă pentru obținerea celor mai bune rezultate posibile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AREAS -->
+    <section class="py-20 md:py-28 bg-slate text-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="thin-line mx-auto mb-6"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold">Domenii de Practică</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="border border-cream/10 p-6 text-center hover:border-teal/40 transition-colors" data-aos="fade-up">
+                    <i class="fas fa-handshake text-teal-light mb-4 text-xl"></i>
+                    <h3 class="font-serif font-semibold mb-2">Drept Civil</h3>
+                    <p class="text-cream/60 text-xs">Contracte, obligații, proprietate</p>
+                </div>
+                <div class="border border-cream/10 p-6 text-center hover:border-teal/40 transition-colors" data-aos="fade-up" data-aos-delay="50">
+                    <i class="fas fa-gavel text-teal-light mb-4 text-xl"></i>
+                    <h3 class="font-serif font-semibold mb-2">Drept Penal</h3>
+                    <p class="text-cream/60 text-xs">Apărare, asistență, consiliere</p>
+                </div>
+                <div class="border border-cream/10 p-6 text-center hover:border-teal/40 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-users text-teal-light mb-4 text-xl"></i>
+                    <h3 class="font-serif font-semibold mb-2">Dreptul Familiei</h3>
+                    <p class="text-cream/60 text-xs">Divorț, custodie, partaj</p>
+                </div>
+                <div class="border border-cream/10 p-6 text-center hover:border-teal/40 transition-colors" data-aos="fade-up" data-aos-delay="150">
+                    <i class="fas fa-briefcase text-teal-light mb-4 text-xl"></i>
+                    <h3 class="font-serif font-semibold mb-2">Dreptul Muncii</h3>
+                    <p class="text-cream/60 text-xs">Contracte, litigii, concediere</p>
+                </div>
+                <div class="border border-cream/10 p-6 text-center hover:border-teal/40 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-home text-teal-light mb-4 text-xl"></i>
+                    <h3 class="font-serif font-semibold mb-2">Drept Imobiliar</h3>
+                    <p class="text-cream/60 text-xs">Vânzări, succesiuni, carte funciară</p>
+                </div>
+                <div class="border border-cream/10 p-6 text-center hover:border-teal/40 transition-colors" data-aos="fade-up" data-aos-delay="250">
+                    <i class="fas fa-file-contract text-teal-light mb-4 text-xl"></i>
+                    <h3 class="font-serif font-semibold mb-2">Contencios</h3>
+                    <p class="text-cream/60 text-xs">Acte administrative, contestații</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-24 bg-teal text-cream">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <div class="thin-line mx-auto mb-8 bg-cream/40"></div>
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">Aveți nevoie de<br>consiliere juridică?</h2>
+            <p class="text-cream/70 text-lg mb-10 max-w-md mx-auto">Sunați pentru o discuție confidențială despre situația dumneavoastră.</p>
+            <a href="tel:0744472069" class="inline-flex items-center gap-3 bg-slate-dark text-cream px-10 py-4 hover:bg-slate transition-all text-lg">
+                <i class="fas fa-phone"></i> 0744 472 069
+            </a>
+            <div class="thin-line mx-auto mt-12 bg-cream/40"></div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 md:py-28 bg-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="thin-line mx-auto mb-6"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-slate-dark">Impresii Clienți</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 border border-slate/10 text-center" data-aos="fade-up">
+                    <i class="fas fa-quote-left text-teal/15 text-4xl mb-4"></i>
+                    <p class="text-slate-light text-sm leading-relaxed mb-6 italic font-serif text-lg">„Am apreciat foarte mult profesionalismul și discreția doamnei avocat Iliescu. M-a consiliat cu răbdare și competență."</p>
+                    <div class="thin-line mx-auto mb-4"></div>
+                    <p class="font-serif font-semibold text-sm text-slate-dark">— Gheorghe M.</p>
+                </div>
+                <div class="bg-white p-10 border border-slate/10 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-quote-left text-teal/15 text-4xl mb-4"></i>
+                    <p class="text-slate-light text-sm leading-relaxed mb-6 italic font-serif text-lg">„Rezolvare rapidă și eficientă. Am găsit în doamna avocat Iliescu un profesionist de înaltă clasă, dedicat și atent la detalii."</p>
+                    <div class="thin-line mx-auto mb-4"></div>
+                    <p class="font-serif font-semibold text-sm text-slate-dark">— Ioana P.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="thin-line mx-auto mb-6"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-slate-dark">Întrebări Frecvente</h2>
+            </div>
+            <div class="space-y-6">
+                <div class="border-b border-slate/10 pb-6" data-aos="fade-up">
+                    <h3 class="font-serif font-semibold text-lg mb-3 text-slate-dark">Cum pot programa o consultație?</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Puteți programa o consultație sunând la numărul de telefon afișat. Vom stabili împreună o dată și o oră convenabilă pentru ambele părți.</p>
+                </div>
+                <div class="border-b border-slate/10 pb-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-serif font-semibold text-lg mb-3 text-slate-dark">Cât durează o consultație juridică?</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Durata unei consultații variază în funcție de complexitatea cazului. În general, o primă consultație durează între 30 și 60 de minute.</p>
+                </div>
+                <div class="border-b border-slate/10 pb-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-serif font-semibold text-lg mb-3 text-slate-dark">Ce documente trebuie să aduc?</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Vă recomandăm să aduceți toate documentele relevante pentru situația dumneavoastră: contracte, corespondență, hotărâri judecătorești anterioare.</p>
+                </div>
+                <div class="border-b border-slate/10 pb-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-serif font-semibold text-lg mb-3 text-slate-dark">Oferiți servicii de urgență?</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Da, în situații urgente suntem disponibili pentru a oferi asistență juridică imediată. Contactați-ne telefonic pentru situații care necesită intervenție rapidă.</p>
+                </div>
+                <div class="pb-6" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="font-serif font-semibold text-lg mb-3 text-slate-dark">Informațiile mele sunt confidențiale?</h3>
+                    <p class="text-slate-light text-sm leading-relaxed">Absolut. Secretul profesional este o obligație fundamentală a avocatului. Toate informațiile pe care ni le încredințați sunt tratate cu maximă confidențialitate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="py-16 md:py-20 bg-slate text-cream">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up">
+                    <div class="font-serif text-3xl font-semibold text-teal-light mb-2">100%</div>
+                    <p class="text-cream/50 text-xs uppercase tracking-wider">Confidențialitate</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="font-serif text-3xl font-semibold text-teal-light mb-2">Rapid</div>
+                    <p class="text-cream/50 text-xs uppercase tracking-wider">Timp de răspuns</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="font-serif text-3xl font-semibold text-teal-light mb-2">Personal</div>
+                    <p class="text-cream/50 text-xs uppercase tracking-wider">Abordare individuală</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="font-serif text-3xl font-semibold text-teal-light mb-2">Clar</div>
+                    <p class="text-cream/50 text-xs uppercase tracking-wider">Comunicare directă</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMITMENT -->
+    <section class="py-20 md:py-28 bg-teal text-cream">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <div class="thin-line mx-auto mb-8 bg-cream/40"></div>
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6">Angajamentul Nostru</h2>
+            <p class="text-cream/80 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+                Ne dedicăm fiecărui client cu aceeași seriozitate și profesionalism, indiferent de complexitatea cazului.
+            </p>
+            <div class="grid sm:grid-cols-3 gap-8">
+                <div>
+                    <div class="w-12 h-12 mx-auto bg-cream/10 flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-handshake text-cream text-lg"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold mb-2">Onestitate</h3>
+                    <p class="text-cream/60 text-xs">Evaluare sinceră a șanselor de reușită</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 mx-auto bg-cream/10 flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-clock text-cream text-lg"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold mb-2">Punctualitate</h3>
+                    <p class="text-cream/60 text-xs">Respectarea termenelor asumate</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 mx-auto bg-cream/10 flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-phone-alt text-cream text-lg"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold mb-2">Accesibilitate</h3>
+                    <p class="text-cream/60 text-xs">Comunicare deschisă și constantă</p>
+                </div>
+            </div>
+            <div class="thin-line mx-auto mt-10 bg-cream/40"></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-28 bg-cream">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up">
+                <div class="thin-line mx-auto mb-8"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-slate-dark mb-12">Contact</h2>
+
+                <div class="bg-white p-12 border border-slate/10">
+                    <div class="w-20 h-20 mx-auto bg-cream flex items-center justify-center rounded-full mb-8">
+                        <i class="fas fa-balance-scale text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif font-semibold text-2xl text-slate-dark mb-2">Av. Iliescu Claudia</h3>
+                    <p class="text-teal text-sm mb-8">Avocat</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-center gap-3">
+                            <i class="fas fa-phone text-teal w-5"></i>
+                            <a href="tel:0744472069" class="text-slate hover:text-teal transition-colors text-lg">0744 472 069</a>
+                        </div>
+                    </div>
+
+                    <div class="thin-line mx-auto mt-10 mb-10"></div>
+
+                    <p class="text-slate-light text-sm leading-relaxed max-w-md mx-auto">
+                        Contactați-ne telefonic pentru a stabili o întâlnire și a discuta detaliile cazului dumneavoastră în deplină confidențialitate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-dark text-cream py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center gap-6 text-center">
+                <span class="font-serif font-semibold text-lg">Av. Iliescu <span class="text-teal-light">Claudia</span></span>
+                <div class="thin-line bg-cream/20"></div>
+                <p class="text-cream/40 text-sm">&copy; 2026 Cabinet Avocat Iliescu Claudia. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 60 });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

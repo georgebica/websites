@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept Detailing Auto &middot; Detailing profesional &middot; Craiova</title>
+<meta name="description" content="Concept Detailing Auto &#8212; detailing complet pentru ma&#537;ina ta &#238;n Craiova. Polish, ceramic coating, detailing interior &#537;i motor. Bulevardul Dacia. Deschis 6/7. Tel 0784 053 050.">
+<meta name="keywords" content="detailing auto Craiova, ceramic coating Craiova, detailing motor Craiova, Concept Detailing, polish auto Craiova">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b0f17">
+<meta property="og:title" content="Concept Detailing Auto &middot; Craiova">
+<meta property="og:description" content="Detailing complet pentru ma&#537;ina ta: polish, ceramic coating, interior &#537;i motor.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        carbon: {50:'#e5e8ed',100:'#b4bbc6',200:'#848e9e',300:'#535f73',400:'#343f52',500:'#1c2432',600:'#141a25',700:'#0b0f17',800:'#06090e',900:'#020406'},
+        neon: {50:'#defcff',100:'#88f4ff',200:'#36edff',300:'#07dcf2',400:'#05b2c2',500:'#038797',600:'#02636e',700:'#014149',800:'#002126',900:'#000a0c'},
+        crimson: {50:'#fde3e3',100:'#f9a8a8',200:'#f56c6c',300:'#ec2e2e',400:'#c71818',500:'#8f1111',600:'#680d0d',700:'#430808',800:'#240404',900:'#0e0101'},
+        chalk: '#f2f5f8',
+        asphalt: '#050709'
+      },
+      fontFamily: {
+        display: ['Racing Sans One','Impact','sans-serif'],
+        sans: ['Rubik','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --carbon:#1c2432; --neon:#07dcf2; --crimson:#c71818; --chalk:#f2f5f8; --asphalt:#050709; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Rubik',system-ui,sans-serif; color:var(--chalk); background:var(--asphalt); }
+  h1,h2,h3,h4 { font-family:'Racing Sans One',Impact,sans-serif; letter-spacing:.02em; text-transform:uppercase; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 85% 18%, rgba(7,220,242,.15), transparent 45%),
+      radial-gradient(circle at 15% 85%, rgba(199,24,24,.22), transparent 55%),
+      linear-gradient(168deg,#050709 0%,#0b0f17 50%,#141a25 100%);
+  }
+  .speed-lines { background-image:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(7,220,242,.04) 60px,rgba(7,220,242,.04) 61px); }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem 1rem; border-radius:999px; font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; font-weight:600; }
+  .chip-neon { background:rgba(7,220,242,.1); color:var(--neon); border:1px solid rgba(7,220,242,.4); }
+  .chip-crimson { background:rgba(199,24,24,.15); color:#f56c6c; border:1px solid rgba(199,24,24,.4); }
+  .btn-primary { background:var(--crimson); color:#fff; padding:1rem 1.85rem; border-radius:2px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem; display:inline-flex; align-items:center; gap:.55rem; transition:all .2s; position:relative; overflow:hidden; }
+  .btn-primary::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent); transform:translateX(-100%); transition:transform .5s; }
+  .btn-primary:hover { background:#8f1111; transform:translateY(-2px); box-shadow:0 16px 30px -14px rgba(199,24,24,.7); }
+  .btn-primary:hover::after { transform:translateX(100%); }
+  .btn-neon { background:var(--neon); color:var(--asphalt); padding:1rem 1.85rem; border-radius:2px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem; display:inline-flex; align-items:center; gap:.55rem; transition:all .2s; }
+  .btn-neon:hover { background:#05b2c2; transform:translateY(-2px); box-shadow:0 16px 30px -14px rgba(7,220,242,.7); }
+  .btn-outline { background:transparent; color:var(--chalk); padding:1rem 1.85rem; border-radius:2px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem; display:inline-flex; align-items:center; gap:.55rem; border:2px solid var(--chalk); transition:all .2s; }
+  .btn-outline:hover { background:var(--chalk); color:var(--asphalt); }
+  .btn-wa { background:#25d366; color:#fff; padding:1rem 1.5rem; border-radius:2px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem; display:inline-flex; align-items:center; gap:.5rem; transition:all .2s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#0b0f17; border:1px solid rgba(7,220,242,.2); padding:1.85rem; transition:all .25s; position:relative; overflow:hidden; }
+  .card::before { content:''; position:absolute; top:0; left:0; width:40%; height:2px; background:linear-gradient(90deg,var(--neon),transparent); }
+  .card:hover { transform:translateY(-4px); border-color:var(--neon); box-shadow:0 0 30px -5px rgba(7,220,242,.3); }
+  .service-ico { width:56px; height:56px; background:linear-gradient(135deg,var(--crimson),#8f1111); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.35rem; }
+  .section-label { display:inline-block; font-size:.72rem; letter-spacing:.4em; text-transform:uppercase; color:var(--neon); font-weight:600; }
+  .headline { font-size:clamp(2.3rem,5.2vw,4.5rem); line-height:1; font-family:'Racing Sans One',Impact,sans-serif; font-weight:400; letter-spacing:.01em; color:var(--chalk); }
+  .headline em { color:var(--neon); font-style:normal; }
+  .stat-num { font-family:'Racing Sans One',Impact,sans-serif; font-size:3.2rem; color:var(--neon); line-height:1; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid rgba(242,245,248,.1); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:44px; height:44px; background:rgba(7,220,242,.12); color:var(--neon); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:var(--chalk); font-weight:500; font-size:.8rem; letter-spacing:.24em; text-transform:uppercase; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:0; right:0; bottom:-5px; height:2px; background:var(--neon); transform:scaleX(0); transition:transform .2s; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .hours-table { width:100%; }
+  .hours-table tr { border-bottom:1px solid rgba(242,245,248,.08); }
+  .hours-table tr:last-child { border-bottom:none; }
+  .hours-table th { text-align:left; padding:.9rem 0; color:var(--chalk); font-family:'Racing Sans One',Impact,sans-serif; font-weight:400; font-size:1rem; letter-spacing:.05em; text-transform:uppercase; }
+  .hours-table td { text-align:right; padding:.9rem 0; color:var(--neon); font-weight:700; font-family:'Racing Sans One',Impact,sans-serif; font-size:1.05rem; }
+  .hours-table .closed { color:#f56c6c; }
+  .map-wrap { overflow:hidden; border:2px solid var(--neon); box-shadow:0 0 40px -10px rgba(7,220,242,.4); }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--carbon); border-top:2px solid var(--crimson); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; font-weight:700; font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+  .review-card { background:#0b0f17; border:1px solid rgba(7,220,242,.2); padding:1.75rem; position:relative; }
+  .review-card::before { content:''; position:absolute; top:-1px; left:0; width:60%; height:3px; background:var(--neon); }
+  .stars { color:#fbbf24; letter-spacing:.15em; font-size:1.05rem; }
+</style>
+</head>
+<body class="bg-asphalt text-chalk">
+
+<!-- TOP BAR -->
+<div class="bg-carbon-700 text-chalk/85 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span><i class="fas fa-car-side text-neon-300 mr-1"></i> Detailing Premium</span>
+      <span class="hidden sm:inline"><i class="far fa-clock text-neon-300 mr-1"></i> Luni-S&#226;mbat&#259; 09:00-20:00</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <span class="hidden sm:inline"><i class="fas fa-star text-yellow-400 mr-1"></i> 4.3 &middot; 6 recenzii</span>
+      <a href="tel:0784053050" class="hover:text-neon-300"><i class="fas fa-phone mr-1"></i> 0784 053 050</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="bg-asphalt/95 backdrop-blur sticky top-0 z-50 border-b-2 border-crimson-500">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-12 h-12 bg-crimson-500 text-chalk flex items-center justify-center">
+        <i class="fas fa-spray-can-sparkles text-xl"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-2xl text-chalk">Concept Detailing</div>
+        <div class="text-[10px] tracking-[.4em] uppercase text-neon-400 font-semibold">Auto &middot; Craiova</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#recenzii" class="nav-link">Recenzii</a>
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+    </nav>
+    <a href="tel:0784053050" class="btn-primary hidden md:inline-flex"><i class="fas fa-phone"></i> Programeaz&#259;</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-surface speed-lines">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="chip chip-neon"><i class="fas fa-gem"></i> Detailing premium</span>
+        <span class="chip chip-crimson"><i class="fas fa-star"></i> 4.3/5 pe Google</span>
+      </div>
+      <h1 class="headline mb-6">
+        Fiecare ma&#537;in&#259;<br>cere <em>aten&#539;ie</em><br>la detalii.
+      </h1>
+      <p class="text-lg text-chalk/75 leading-relaxed max-w-2xl mb-8">Concept Detailing Auto este un atelier de detailing din Craiova specializat &#238;n restaurarea cosmetica a ma&#537;inilor: polish vopsea, ceramic coating, detailing interior profund &#537;i cur&#259;&#539;area motorului. Lucr&#259;m pe Bulevardul Dacia, p&#226;n&#259; seara t&#226;rziu, 6 zile pe s&#259;pt&#259;m&#226;n&#259;.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0784053050" class="btn-primary"><i class="fas fa-phone"></i> 0784 053 050</a>
+        <a href="https://wa.me/40784053050" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#servicii" class="btn-outline">Vezi pachetele</a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 max-w-lg border-t border-neon-500/25 pt-6">
+        <div>
+          <div class="stat-num">4.3</div>
+          <div class="text-[10px] uppercase tracking-[.22em] text-crimson-300 mt-1 font-semibold">Rating Google</div>
+        </div>
+        <div>
+          <div class="stat-num">11h</div>
+          <div class="text-[10px] uppercase tracking-[.22em] text-crimson-300 mt-1 font-semibold">Program zilnic</div>
+        </div>
+        <div>
+          <div class="stat-num">6/7</div>
+          <div class="text-[10px] uppercase tracking-[.22em] text-crimson-300 mt-1 font-semibold">Zile deschis</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="bg-carbon-600 p-8 border-l-4 border-neon-400 shadow-2xl">
+        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-chalk/10">
+          <div class="w-12 h-12 bg-neon-400 text-asphalt flex items-center justify-center"><i class="fas fa-calendar-check"></i></div>
+          <div>
+            <h3 class="font-display text-2xl text-chalk">Intr&#259; la detailing</h3>
+            <p class="text-xs text-chalk/60">Estimare gratuit&#259; dup&#259; verificarea ma&#537;inii</p>
+          </div>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-neon-300 font-semibold">Telefon</div>
+              <a href="tel:0784053050" class="font-display text-3xl text-chalk">0784 053 050</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-neon-300 font-semibold">Atelier</div>
+              <div class="font-medium text-chalk">Bulevardul Dacia</div>
+              <div class="text-xs text-chalk/60">Craiova, Dolj</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="far fa-clock"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-neon-300 font-semibold">Program</div>
+              <div class="font-medium text-chalk">Lu &ndash; Sb &middot; 09:00 &ndash; 20:00</div>
+              <div class="text-xs text-chalk/60">Duminic&#259; &#238;nchis</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-bolt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-neon-300 font-semibold">Specialit&#259;&#539;i</div>
+              <div class="font-medium text-chalk text-sm">Polish &middot; Ceramic &middot; Interior &middot; Motor</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="py-20 lg:py-28 bg-carbon-700">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre atelier</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Detailing, <em class="text-neon-400">nu simplu sp&#259;lat</em>.</h2>
+      <p class="text-lg text-chalk/75 leading-relaxed mb-4">Concept Detailing Auto este un atelier specializat &#238;n detailing cosmetic. Nu suntem sp&#259;l&#259;torie de ma&#537;ini &#8212; suntem locul unde ma&#537;ina ta cap&#259;t&#259; arat&#259; de showroom, prin munc&#259; manual&#259; cu produse profesionale.</p>
+      <p class="text-lg text-chalk/75 leading-relaxed">Pozi&#539;ionat pe Bulevardul Dacia, cu program extins de 6 zile pe s&#259;pt&#259;m&#226;n&#259;, lucr&#259;m at&#226;t cu clien&#539;i individuali (proprietari care &#238;&#537;i respect&#259; ma&#537;ina), c&#226;t &#537;i cu dealeri care au nevoie de prelucrare cosmetic&#259; &#238;nainte de v&#226;nzare.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-hand-sparkles"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Munc&#259; manual&#259;</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">F&#259;r&#259; automate, f&#259;r&#259; rotiri largi. Fiecare centimetru p&#259;trat este prelucrat individual, cu produse &#537;i tehnici potrivite suprafe&#539;ei.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-flask"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Produse de top</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Lucr&#259;m cu brand-uri recunoscute &#238;n industria detailing-ului. Produsele ies la l iquid, nu cu nume de fantezie.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-clock-rotate-left"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Timp alocat corect</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Detailing-ul nu se face &#238;n 30 de minute. Dou&#259; reparabilitati de z&#226;rm&#259;rie &#238;n acela&#537;i service nu &#238;nseamn&#259; detailing; &#238;nseamn&#259; spalari.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-shield"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Protec&#539;ie durabil&#259;</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Ceramic coating-urile aplicate de noi rezist&#259; luni sau ani, nu c&#226;teva s&#259;pt&#259;m&#226;ni. Aplicam doar &#238;n mediu controlat, dup&#259; preg&#259;tire corect&#259;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 lg:py-28 bg-asphalt speed-lines">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Pachete detailing</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4">Servicii <em class="text-neon-400">complete</em> pentru ma&#537;ina ta</h2>
+      <p class="text-lg text-chalk/75 max-w-2xl mx-auto">Lucr&#259;m individual pe fiecare zon&#259; a ma&#537;inii sau combinat, &#238;n pachete complete.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-spray-can-sparkles"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Polish vopsea</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Scoatem zgarieturi superficiale, holograme, oxid&#259;ri &#537;i defecte de strat clar. Finisaj oglind&#259; &#238;n 2-3 pa&#537;i.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-shield-halved"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Ceramic coating</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Protec&#539;ie ceramic&#259; 1-3 ani, cu tratament complet de preg&#259;tire: sp&#259;lare decontaminat&#259;, clay bar, polish, aplicare.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-couch"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Detailing interior</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Aspirare profund&#259;, sp&#259;lare scaune cu extrac&#539;ie, piele regenerat&#259;, plastic interior cur&#259;&#539;at &#537;i hidratat.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-wrench"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Sp&#259;lare motor</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Cur&#259;&#539;am spa&#539;iul motor &#238;n siguran&#539;&#259;, cu protec&#539;ie electronic&#259; &#537;i produse degresante profesionale.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-circle-notch"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Jante &#537;i pl&#259;cu&#539;e</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Cur&#259;&#539;are profund&#259; jante fa&#539;&#259; &#537;i spate, pl&#259;cu&#539;e fr&#226;n&#259;, anvelope tratate cu dressing anti-UV.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-sun"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Refacere faruri</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">&#206;ndep&#259;rtam stratul galbut &#537;i oxidat de pe faruri, cu finisaj transparent &#537;i acoperire protectoare.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-raindrops"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Decontaminare vopsea</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Clay bar &#537;i iron remover pentru scoaterea contaminan&#539;ilor din vopsea &#8212; praf de fr&#226;n&#259;, seva de copac, particule industriale.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-car-tilt"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Preg&#259;tire v&#226;nzare</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Pachet complet pentru ma&#537;ini scoase la v&#226;nzare: detailing complet + foto-ready, ca s&#259; ob&#539;ii pretul dorit.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-gem"></i></div>
+        <h3 class="font-display text-xl text-neon-400 mb-2">Detailing complet</h3>
+        <p class="text-sm text-chalk/75 leading-relaxed">Tot &#238;n unul: exterior cu polish &#537;i ceramic, interior cu extrac&#539;ie, jante, motor &#537;i faruri. Dureaza 2-3 zile.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 text-center" data-aos="fade-up">
+      <a href="tel:0784053050" class="btn-neon"><i class="fas fa-car"></i> Solicit&#259; estimare gratuit&#259;</a>
+    </div>
+  </div>
+</section>
+
+<!-- RECENZII -->
+<section id="recenzii" class="py-20 lg:py-28 bg-carbon-600">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">P&#259;reri clien&#539;i</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4">Feedback de la <em class="text-neon-400">clien&#539;i Google</em></h2>
+      <div class="flex items-center justify-center gap-3 mt-4">
+        <span class="stars text-2xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="font-display text-3xl text-chalk">4.3</span>
+        <span class="text-chalk/70">din 6 recenzii</span>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+      <div class="review-card">
+        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="text-chalk/85 text-lg leading-relaxed mb-4">&bdquo;Super b&#259;ie&#539;i, recomand.&rdquo;</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-chalk/10">
+          <div class="w-10 h-10 rounded-full bg-crimson-500 text-chalk flex items-center justify-center font-semibold">P</div>
+          <div>
+            <div class="font-semibold text-chalk">Profetul Seth</div>
+            <div class="text-xs text-chalk/60">Recenzie Google Maps</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="text-chalk/85 text-lg leading-relaxed mb-4">5 stele l&#259;sat f&#259;r&#259; comentariu &#8212; una din cele 3 recenzii maxime primite.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-chalk/10">
+          <div class="w-10 h-10 rounded-full bg-neon-500 text-asphalt flex items-center justify-center font-semibold">F</div>
+          <div>
+            <div class="font-semibold text-chalk">Florin Dumitrascu</div>
+            <div class="text-xs text-chalk/60">Recenzie Google Maps</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="text-chalk/85 text-lg leading-relaxed mb-4">Rating 5 stele f&#259;r&#259; comentariu &#8212; satisfac&#539;ie total&#259; cu munca echipei.</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-chalk/10">
+          <div class="w-10 h-10 rounded-full bg-crimson-500 text-chalk flex items-center justify-center font-semibold">A</div>
+          <div>
+            <div class="font-semibold text-chalk">Alexandru Boboc</div>
+            <div class="text-xs text-chalk/60">Recenzie Google Maps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program" class="py-20 lg:py-28 bg-asphalt">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Program</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6">Orele la care <em class="text-neon-400">&#537;tii</em> c&#259; suntem aici</h2>
+      <p class="text-lg text-chalk/75 leading-relaxed mb-6">Program extins de 11 ore &#238;n fiecare zi de lucru, inclusiv s&#226;mbata. Ca s&#259; putem primi clien&#539;i dup&#259; serviciu &#537;i s&#259; termin&#259;m &#238;n acea&#537;i zi lucr&#259;rile mai rapide.</p>
+      <div class="flex gap-3">
+        <a href="tel:0784053050" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+        <a href="https://wa.me/40784053050" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-left">
+      <div class="bg-carbon-700 p-8 border-l-4 border-crimson-500">
+        <table class="hours-table">
+          <tr><th>Luni</th><td>09:00 &ndash; 20:00</td></tr>
+          <tr><th>Mar&#539;i</th><td>09:00 &ndash; 20:00</td></tr>
+          <tr><th>Miercuri</th><td>09:00 &ndash; 20:00</td></tr>
+          <tr><th>Joi</th><td>09:00 &ndash; 20:00</td></tr>
+          <tr><th>Vineri</th><td>09:00 &ndash; 20:00</td></tr>
+          <tr><th>S&#226;mb&#259;t&#259;</th><td>09:00 &ndash; 20:00</td></tr>
+          <tr><th>Duminic&#259;</th><td class="closed">&#206;nchis</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIE -->
+<section id="locatie" class="py-20 lg:py-28 bg-carbon-700">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label">Unde ne g&#259;se&#537;ti</div>
+      <h2 class="text-4xl lg:text-5xl mt-4">Pe <em class="text-neon-400">Bulevardul Dacia</em>, Craiova</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-carbon-800 p-8 border-l-4 border-neon-400" data-aos="fade-right">
+        <h3 class="font-display text-2xl text-chalk mb-5">Atelier Craiova</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-location-dot"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-neon-300 font-semibold">Adres&#259;</div>
+              <div class="font-medium text-chalk">Bulevardul Dacia</div>
+              <div class="text-sm text-chalk/65">Craiova, Dolj</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-neon-300 font-semibold">Telefon</div>
+              <a href="tel:0784053050" class="font-display text-2xl text-chalk">0784 053 050</a>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-map"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.28em] text-neon-300 font-semibold">Cod Plus</div>
+              <div class="font-medium text-chalk">8RM4+39 Craiova</div>
+            </div>
+          </li>
+        </ul>
+        <a href="https://www.google.com/maps/place/Concept+Detailing+Auto" target="_blank" rel="noopener" class="btn-neon w-full justify-center mt-6"><i class="fas fa-directions"></i> Direc&#539;ii Google</a>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=44.3326818,23.8058966&hl=ro&z=17&output=embed" width="100%" height="500" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Concept Detailing Auto Craiova"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section class="py-20 lg:py-28 bg-crimson-500 text-chalk relative overflow-hidden speed-lines">
+  <div class="relative max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#fde3e3;">Contact</div>
+    <h2 class="text-4xl lg:text-5xl mt-4 mb-5">Programeaz&#259; ma&#537;ina la detailing <em class="text-neon-300">acum</em></h2>
+    <p class="text-chalk/85 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Sun&#259; pentru o programare &#537;i discut&#259;m ce pachet ti se potrive&#537;te. Estimare transparent&#259;, termene clare, rezultate vizibile.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0784053050" class="btn-neon"><i class="fas fa-phone"></i> 0784 053 050</a>
+      <a href="https://wa.me/40784053050" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-asphalt text-chalk/70 py-14 border-t border-chalk/10">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 bg-crimson-500 text-chalk flex items-center justify-center"><i class="fas fa-spray-can-sparkles"></i></div>
+        <div>
+          <div class="font-display text-xl text-chalk">Concept Detailing</div>
+          <div class="text-[10px] tracking-[.4em] uppercase text-neon-400 font-semibold">Auto &middot; Craiova</div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">Atelier de detailing profesional pe Bulevardul Dacia, Craiova. Polish, ceramic, interior &#537;i motor.</p>
+    </div>
+    <div>
+      <h4 class="font-display text-chalk text-lg mb-4">Naviga&#539;ie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#despre" class="hover:text-neon-400">Despre</a></li>
+        <li><a href="#servicii" class="hover:text-neon-400">Servicii</a></li>
+        <li><a href="#recenzii" class="hover:text-neon-400">Recenzii</a></li>
+        <li><a href="#program" class="hover:text-neon-400">Program</a></li>
+        <li><a href="#locatie" class="hover:text-neon-400">Loca&#539;ie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-chalk text-lg mb-4">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fas fa-phone text-neon-400 mr-2"></i> <a href="tel:0784053050" class="hover:text-neon-400">0784 053 050</a></li>
+        <li><i class="fas fa-map-marker-alt text-neon-400 mr-2"></i> Bulevardul Dacia, Craiova</li>
+        <li><i class="far fa-clock text-neon-400 mr-2"></i> Lu &ndash; Sb &middot; 09:00 &ndash; 20:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-chalk/10 flex flex-wrap justify-between gap-3 text-xs text-chalk/50">
+    <div>&copy; 2026 Concept Detailing Auto. Toate drepturile rezervate.</div>
+    <div>Detailing profesional &middot; Bulevardul Dacia &middot; Craiova</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:0784053050" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40784053050" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Concept Detailing Auto",
+  "telephone": "+40784053050",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bulevardul Dacia",
+    "addressLocality": "Craiova",
+    "addressRegion": "Dolj",
+    "addressCountry": "RO"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":44.3326818,"longitude":23.8058966},
+  "areaServed": "Craiova, Dolj",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"20:00"}
+  ],
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.3","reviewCount":"6","bestRating":"5","worstRating":"1"}
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+</body>
+</html>

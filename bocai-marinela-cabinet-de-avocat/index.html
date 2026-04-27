@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocai Marinela — Cabinet de Avocat | Slatina</title>
+    <meta name="description" content="Cabinet de avocat Bocai Marinela din Slatina. Consultanță juridică, reprezentare în instanță, drept civil și penal. Sună: 0743 331 327.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: '#6D1A36',
+                        'burgundy-light': '#8E2448',
+                        cream: '#FFF8F0',
+                        'dark-text': '#1A1A1A',
+                        'muted-gold': '#B8973F',
+                        'warm-bg': '#FEF5E7',
+                        'soft-brown': '#8B7355',
+                    },
+                    fontFamily: {
+                        lora: ['Lora', 'serif'],
+                        nunito: ['Nunito', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Nunito', sans-serif; background-color: #FFF8F0; color: #1A1A1A; }
+        .font-lora { font-family: 'Lora', serif; }
+        .burgundy-gradient { background: linear-gradient(135deg, #6D1A36, #8E2448); }
+        .burgundy-text {
+            background: linear-gradient(135deg, #6D1A36, #8E2448);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gold-accent {
+            color: #B8973F;
+        }
+        .card-warm {
+            background: white;
+            border: 1px solid rgba(109, 26, 54, 0.08);
+            border-radius: 16px;
+            transition: all 0.4s ease;
+        }
+        .card-warm:hover {
+            border-color: rgba(109, 26, 54, 0.2);
+            box-shadow: 0 15px 40px rgba(109, 26, 54, 0.08);
+            transform: translateY(-4px);
+        }
+        .cta-burgundy {
+            background: linear-gradient(135deg, #6D1A36, #8E2448);
+            border-radius: 12px;
+            transition: all 0.4s ease;
+        }
+        .cta-burgundy:hover {
+            background: linear-gradient(135deg, #8E2448, #A02D55);
+            box-shadow: 0 8px 30px rgba(109, 26, 54, 0.3);
+            transform: translateY(-2px);
+        }
+        .line-burgundy {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #6D1A36, #B8973F);
+            border-radius: 2px;
+        }
+        .warm-pattern {
+            background: radial-gradient(ellipse at 80% 0%, rgba(184, 151, 63, 0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse at 20% 100%, rgba(109, 26, 54, 0.04) 0%, transparent 50%);
+        }
+        .legal-icon-bg {
+            background: linear-gradient(135deg, rgba(109, 26, 54, 0.08), rgba(184, 151, 63, 0.08));
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Bocai Marinela, Cabinet de Avocat",
+        "description": "Cabinet de avocat în Slatina. Consultanță juridică, reprezentare în instanță, drept civil și penal.",
+        "telephone": "+40743331327",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Eminescu Mihai 59",
+            "addressLocality": "Slatina",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.4299,
+            "longitude": 24.3593
+        },
+        "url": "#"
+    }
+    </script>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-cream/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 burgundy-gradient rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-scale-balanced text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-lora text-lg font-bold text-dark-text">Av. Bocai <span class="burgundy-text">Marinela</span></span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#servicii" class="text-sm text-dark-text/60 hover:text-burgundy transition-colors font-medium">Servicii</a>
+                    <a href="#despre" class="text-sm text-dark-text/60 hover:text-burgundy transition-colors font-medium">Despre</a>
+                    <a href="#expertiza" class="text-sm text-dark-text/60 hover:text-burgundy transition-colors font-medium">Expertiză</a>
+                    <a href="#contact" class="text-sm text-dark-text/60 hover:text-burgundy transition-colors font-medium">Contact</a>
+                    <a href="tel:0743331327" class="cta-burgundy px-6 py-2.5 text-white text-sm font-semibold">
+                        <i class="fa-solid fa-phone mr-2"></i>Consultanță
+                    </a>
+                </div>
+                <button class="md:hidden text-dark-text text-2xl" id="menuBtn" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-cream border-t border-burgundy/10" id="mobileMenu">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="#servicii" class="text-dark-text/60 hover:text-burgundy font-medium text-sm">Servicii</a>
+                <a href="#despre" class="text-dark-text/60 hover:text-burgundy font-medium text-sm">Despre</a>
+                <a href="#expertiza" class="text-dark-text/60 hover:text-burgundy font-medium text-sm">Expertiză</a>
+                <a href="#contact" class="text-dark-text/60 hover:text-burgundy font-medium text-sm">Contact</a>
+                <a href="tel:0743331327" class="cta-burgundy px-6 py-3 text-white text-sm font-semibold text-center">
+                    <i class="fa-solid fa-phone mr-2"></i>Consultanță
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center warm-pattern pt-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="line-burgundy mb-8" data-aos="fade-right"></div>
+                    <p class="text-burgundy tracking-wider uppercase text-sm mb-4 font-semibold" data-aos="fade-up">Cabinet de Avocat — Slatina</p>
+                    <h1 class="font-lora text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+                        Justiția este mai aproape decât <span class="burgundy-text italic">crezi</span>
+                    </h1>
+                    <p class="text-dark-text/60 text-lg leading-relaxed mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+                        Cabinet de avocat cu abordare umană și profesionistă. Vă oferim sprijin juridic de încredere în drept civil, penal și consultanță complexă.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="tel:0743331327" class="cta-burgundy px-8 py-4 text-white font-semibold text-center">
+                            <i class="fa-solid fa-phone mr-2"></i>0743 331 327
+                        </a>
+                        <a href="#servicii" class="border-2 border-burgundy/20 px-8 py-4 text-burgundy font-semibold text-center rounded-xl hover:bg-burgundy/5 transition-all">
+                            Servicii juridice
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-72 h-72 sm:w-80 sm:h-80 bg-gradient-to-br from-burgundy/10 to-warm-bg rounded-3xl flex items-center justify-center border border-burgundy/10">
+                            <i class="fa-solid fa-scale-balanced text-burgundy text-7xl sm:text-8xl opacity-60"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white shadow-lg rounded-2xl px-6 py-4 border border-burgundy/10">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-gavel text-muted-gold text-xl"></i>
+                                <div>
+                                    <p class="font-lora font-bold text-sm">Str. Eminescu Mihai 59</p>
+                                    <p class="text-dark-text/40 text-xs">Slatina, România</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -left-4 bg-white shadow-lg rounded-2xl px-4 py-3 border border-burgundy/10">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-burgundy"></i>
+                                <span class="font-semibold text-sm">Dreptul tău, protejat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicii" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-burgundy font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Servicii juridice</span>
+                <div class="line-burgundy mx-auto mt-4 mb-6" data-aos="fade-up"></div>
+                <h2 class="font-lora text-3xl sm:text-4xl lg:text-5xl mb-6" data-aos="fade-up">Arii de <span class="burgundy-text italic">practică</span></h2>
+                <p class="text-dark-text/60 text-lg" data-aos="fade-up">Oferim asistență juridică completă, cu dedicare și profesionalism, pentru fiecare caz în parte.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-warm p-8 text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 legal-icon-bg rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-comments text-burgundy text-2xl"></i>
+                    </div>
+                    <h3 class="font-lora text-xl font-bold mb-3">Consultanță juridică</h3>
+                    <p class="text-dark-text/60 text-sm leading-relaxed">Analiză detaliată a situației dumneavoastră juridice. Sfaturi personalizate și soluții practice pentru fiecare caz.</p>
+                    <div class="mt-6 pt-4 border-t border-burgundy/10">
+                        <a href="tel:0743331327" class="text-burgundy font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-warm p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 legal-icon-bg rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-gavel text-burgundy text-2xl"></i>
+                    </div>
+                    <h3 class="font-lora text-xl font-bold mb-3">Reprezentare în instanță</h3>
+                    <p class="text-dark-text/60 text-sm leading-relaxed">Reprezentare profesionistă în fața instanțelor de judecată. Pregătire minuțioasă pentru fiecare ședință.</p>
+                    <div class="mt-6 pt-4 border-t border-burgundy/10">
+                        <a href="tel:0743331327" class="text-burgundy font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-warm p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 legal-icon-bg rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-file-contract text-burgundy text-2xl"></i>
+                    </div>
+                    <h3 class="font-lora text-xl font-bold mb-3">Drept civil</h3>
+                    <p class="text-dark-text/60 text-sm leading-relaxed">Contracte, succesiuni, proprietate, litigii civile. Soluții echilibrate pentru dispute și acorduri amiabile.</p>
+                    <div class="mt-6 pt-4 border-t border-burgundy/10">
+                        <a href="tel:0743331327" class="text-burgundy font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card-warm p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 legal-icon-bg rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-shield-halved text-burgundy text-2xl"></i>
+                    </div>
+                    <h3 class="font-lora text-xl font-bold mb-3">Drept penal</h3>
+                    <p class="text-dark-text/60 text-sm leading-relaxed">Apărare în cauze penale, asistență la audieri, contestări mandate. Protecția drepturilor dumneavoastră.</p>
+                    <div class="mt-6 pt-4 border-t border-burgundy/10">
+                        <a href="tel:0743331327" class="text-burgundy font-semibold text-sm hover:underline">Programare <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="despre" class="py-24 warm-pattern relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-burgundy font-semibold text-sm tracking-wider uppercase">Despre cabinet</span>
+                    <div class="line-burgundy mt-4 mb-6"></div>
+                    <h2 class="font-lora text-3xl sm:text-4xl mb-6">O abordare <span class="burgundy-text italic">umană</span> a dreptului</h2>
+                    <p class="text-dark-text/60 leading-relaxed mb-6 text-lg">
+                        Cabinetul de avocat Bocai Marinela din Slatina oferă servicii juridice cu o abordare caldă și profesionistă. Credem că fiecare persoană merită acces la consiliere juridică de calitate.
+                    </p>
+                    <p class="text-dark-text/60 leading-relaxed mb-8">
+                        Situată pe Strada Eminescu Mihai nr. 59, cabinetul nostru este un spațiu în care clienții se simt ascultați și înțeleși. Analizăm cu atenție fiecare caz și identificăm soluțiile optime.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-handshake text-burgundy"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Încredere reciprocă</p>
+                                <p class="text-dark-text/50 text-sm">Construim relații bazate pe onestitate și transparență.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-user-shield text-burgundy"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Confidențialitate</p>
+                                <p class="text-dark-text/50 text-sm">Informațiile dumneavoastră sunt protejate cu maximă discreție.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-clock text-burgundy"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Disponibilitate</p>
+                                <p class="text-dark-text/50 text-sm">Suntem alături de clienții noștri când au cea mai mare nevoie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-3xl p-10 shadow-sm border border-burgundy/5">
+                        <i class="fa-solid fa-quote-left text-burgundy/15 text-5xl mb-6"></i>
+                        <h3 class="font-lora text-2xl font-bold mb-6 text-burgundy">Principiile noastre</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 min-w-[32px] bg-muted-gold/20 rounded-full flex items-center justify-center">
+                                    <span class="text-muted-gold font-bold text-sm">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Ascultare activă</h4>
+                                    <p class="text-dark-text/50 text-sm">Înțelegem complet situația înainte de a propune soluții.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 min-w-[32px] bg-muted-gold/20 rounded-full flex items-center justify-center">
+                                    <span class="text-muted-gold font-bold text-sm">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Analiză riguroasă</h4>
+                                    <p class="text-dark-text/50 text-sm">Studiem legislația și jurisprudența relevantă pentru fiecare caz.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 min-w-[32px] bg-muted-gold/20 rounded-full flex items-center justify-center">
+                                    <span class="text-muted-gold font-bold text-sm">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Strategie eficientă</h4>
+                                    <p class="text-dark-text/50 text-sm">Dezvoltăm strategii personalizate pentru rezultate optime.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 min-w-[32px] bg-muted-gold/20 rounded-full flex items-center justify-center">
+                                    <span class="text-muted-gold font-bold text-sm">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Comunicare clară</h4>
+                                    <p class="text-dark-text/50 text-sm">Explicăm totul în termeni accesibili, fără jargon juridic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertiza" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-burgundy font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Expertiză</span>
+                <div class="line-burgundy mx-auto mt-4 mb-6" data-aos="fade-up"></div>
+                <h2 class="font-lora text-3xl sm:text-4xl lg:text-5xl mb-6" data-aos="fade-up">De ce să ne <span class="burgundy-text italic">alegeți</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-20 h-20 legal-icon-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-book-open text-burgundy text-2xl"></i>
+                    </div>
+                    <h3 class="font-lora text-xl font-bold mb-3">Experiență dovedită</h3>
+                    <p class="text-dark-text/60 text-sm leading-relaxed">Experiență solidă în diverse ramuri ale dreptului, cu cazuri soluționate cu succes.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 legal-icon-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-people-arrows text-burgundy text-2xl"></i>
+                    </div>
+                    <h3 class="font-lora text-xl font-bold mb-3">Atenție la client</h3>
+                    <p class="text-dark-text/60 text-sm leading-relaxed">Fiecare client beneficiază de atenție individuală și soluții adaptate situației sale specifice.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 legal-icon-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa-solid fa-landmark text-burgundy text-2xl"></i>
+                    </div>
+                    <h3 class="font-lora text-xl font-bold mb-3">Cunoștințe actualizate</h3>
+                    <p class="text-dark-text/60 text-sm leading-relaxed">Urmărim constant modificările legislative pentru a oferi sfaturi în concordanță cu legislația în vigoare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 warm-pattern relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-burgundy font-semibold text-sm tracking-wider uppercase" data-aos="fade-up">Întrebări frecvente</span>
+                <h2 class="font-lora text-3xl sm:text-4xl mt-4 mb-6" data-aos="fade-up">Răspunsuri la <span class="burgundy-text italic">întrebările</span> dvs.</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl p-6 border border-burgundy/5" data-aos="fade-up">
+                    <h3 class="font-lora text-lg font-bold mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-burgundy"></i>Cum pot programa o consultație?
+                    </h3>
+                    <p class="text-dark-text/60 leading-relaxed">Puteți programa o consultație sunând la numărul 0743 331 327 sau prezentându-vă direct la cabinet pe Str. Eminescu Mihai 59, Slatina.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-burgundy/5" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-lora text-lg font-bold mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-burgundy"></i>Ce documente trebuie să aduc la prima consultație?
+                    </h3>
+                    <p class="text-dark-text/60 leading-relaxed">Vă recomandăm să aduceți toate documentele relevante pentru cazul dumneavoastră: contracte, hotărâri judecătorești, corespondență, acte de identitate.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-burgundy/5" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-lora text-lg font-bold mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-burgundy"></i>Cât durează soluționarea unui caz?
+                    </h3>
+                    <p class="text-dark-text/60 leading-relaxed">Durata variază în funcție de complexitatea cazului și de tipul procedurii. La prima consultație, vă oferim o estimare realistă a duratei și etapelor implicate.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-burgundy/5" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-lora text-lg font-bold mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-burgundy"></i>Informațiile mele sunt confidențiale?
+                    </h3>
+                    <p class="text-dark-text/60 leading-relaxed">Absolut. Secretul profesional al avocatului este garantat prin lege. Toate informațiile pe care ni le comunicați sunt strict confidențiale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <span class="text-burgundy font-semibold text-sm tracking-wider uppercase">Contact</span>
+                    <div class="line-burgundy mt-4 mb-6"></div>
+                    <h2 class="font-lora text-3xl sm:text-4xl mb-8">Luați <span class="burgundy-text italic">legătura</span> cu noi</h2>
+                    <div class="space-y-6">
+                        <div class="card-warm p-6 flex items-center gap-5">
+                            <div class="w-14 h-14 min-w-[56px] legal-icon-bg rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-phone text-burgundy text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-dark-text/40 text-sm">Telefon</p>
+                                <a href="tel:0743331327" class="font-lora text-lg font-bold text-burgundy hover:underline">0743 331 327</a>
+                            </div>
+                        </div>
+                        <div class="card-warm p-6 flex items-center gap-5">
+                            <div class="w-14 h-14 min-w-[56px] legal-icon-bg rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot text-burgundy text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-dark-text/40 text-sm">Adresă</p>
+                                <p class="font-lora text-lg font-bold">Str. Eminescu Mihai 59, Slatina</p>
+                            </div>
+                        </div>
+                        <div class="card-warm p-6 flex items-center gap-5">
+                            <div class="w-14 h-14 min-w-[56px] legal-icon-bg rounded-2xl flex items-center justify-center">
+                                <i class="fa-solid fa-map text-burgundy text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-dark-text/40 text-sm">Localizare</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=44.4299,24.3593" target="_blank" rel="noopener noreferrer" class="text-burgundy font-semibold hover:underline">Deschide în Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-burgundy to-burgundy-light rounded-3xl p-10 text-white h-full flex flex-col justify-center">
+                        <div class="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
+                            <i class="fa-solid fa-scale-balanced text-white text-3xl"></i>
+                        </div>
+                        <h3 class="font-lora text-2xl font-bold text-center mb-4">Aveți nevoie de asistență juridică?</h3>
+                        <p class="text-white/70 text-center leading-relaxed mb-8 max-w-sm mx-auto">
+                            Nu amânați — primul pas este o simplă discuție telefonică. Sunați-ne și vom găsi împreună cea mai bună soluție.
+                        </p>
+                        <a href="tel:0743331327" class="bg-white text-burgundy font-bold px-8 py-4 rounded-xl text-center block hover:shadow-lg hover:-translate-y-1 transition-all">
+                            <i class="fa-solid fa-phone mr-2"></i>Sună: 0743 331 327
+                        </a>
+                        <p class="text-white/40 text-center text-sm mt-6">
+                            <i class="fa-solid fa-shield-halved mr-1"></i>Confidențialitate garantată
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-dark-text text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 burgundy-gradient rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-scale-balanced text-white text-lg"></i>
+                        </div>
+                        <span class="font-lora text-lg font-bold">Av. Bocai Marinela</span>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed">Cabinet de avocat în Slatina. Servicii juridice profesioniste cu o abordare umană și dedicată.</p>
+                </div>
+                <div>
+                    <h4 class="font-lora text-lg font-bold mb-4" style="color: #B8973F;">Servicii</h4>
+                    <ul class="space-y-2">
+                        <li class="text-white/50 text-sm">Consultanță juridică</li>
+                        <li class="text-white/50 text-sm">Reprezentare în instanță</li>
+                        <li class="text-white/50 text-sm">Drept civil</li>
+                        <li class="text-white/50 text-sm">Drept penal</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-lora text-lg font-bold mb-4" style="color: #B8973F;">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-white/50 text-sm">
+                            <i class="fa-solid fa-phone text-burgundy-light"></i>0743 331 327
+                        </li>
+                        <li class="flex items-center gap-3 text-white/50 text-sm">
+                            <i class="fa-solid fa-location-dot text-burgundy-light"></i>Str. Eminescu Mihai 59, Slatina
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/30 text-sm">&copy; 2026 Bocai Marinela, Cabinet de Avocat. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>

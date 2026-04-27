@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Roxana Petrescu &middot; Cabinet stomatologic &icirc;n Slatina</title>
+<meta name="description" content="Cabinet Stomatologic Dr. Roxana Petrescu &mdash; Slatina, Bulevardul Nicolae Titulescu 2. Consulta&#539;ii &#537;i tratamente stomatologice. Programare la 0743 693 149.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&family=Literata:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { peach: '#F4C8A8', peachl: '#FBECDC', sage: '#8FAE8A', saged: '#5F7A5C', navy: '#0F2238', cream: '#FFF9EF', creaml: '#FFFEF7', ink: '#20242E', muted: '#737881', line: '#EADBC8', wa: '#25D366' },
+  fontFamily: { serif: ['Literata', 'Georgia', 'serif'], sans: ['"Albert Sans"', 'system-ui', 'sans-serif'] }
+}}}
+</script>
+
+<style>
+  html, body { background: #FFF9EF; color: #20242E; }
+  body { font-family: "Albert Sans", system-ui, sans-serif; }
+  .serif { font-family: Literata, Georgia, serif; letter-spacing: -.005em; line-height: 1.08; }
+
+  .btn-navy { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #0F2238; color: #FFF9EF; font-weight: 600; border-radius: 999px; transition: all .25s; }
+  .btn-navy:hover { background: #1E3A5A; transform: translateY(-2px); }
+  .btn-peach { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #F4C8A8; color: #20242E; font-weight: 600; border-radius: 999px; transition: all .25s; }
+  .btn-peach:hover { background: #E8B187; transform: translateY(-2px); }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; font-weight: 600; border-radius: 999px; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); }
+
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .4rem 1rem; background: #FBECDC; color: #9A5F38; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; }
+
+  .card { background: #fff; border: 1px solid #EADBC8; border-radius: 24px; padding: 1.8rem; transition: all .35s; }
+  .card:hover { border-color: #F4C8A8; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(15,34,56,.2); }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Literata, serif; font-size: 1.7rem; border-bottom: 1px solid #EADBC8; }
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dashed rgba(15,34,56,.2); font-size: .95rem; }
+  .hours-row:last-child { border: 0; }
+
+  .flower {
+    width: 240px; height: 240px; position: relative;
+  }
+  .flower .petal {
+    position: absolute; top: 50%; left: 50%;
+    width: 110px; height: 110px;
+    background: #F4C8A8;
+    border-radius: 50% 0;
+    transform-origin: 0 0;
+  }
+  .flower .petal:nth-child(1) { transform: translate(0, 0) rotate(0deg); }
+  .flower .petal:nth-child(2) { transform: translate(0, 0) rotate(45deg); background: #E8B187; }
+  .flower .petal:nth-child(3) { transform: translate(0, 0) rotate(90deg); background: #8FAE8A; }
+  .flower .petal:nth-child(4) { transform: translate(0, 0) rotate(135deg); background: #A9C0A4; }
+  .flower .petal:nth-child(5) { transform: translate(0, 0) rotate(180deg); background: #F4C8A8; }
+  .flower .petal:nth-child(6) { transform: translate(0, 0) rotate(225deg); background: #E8B187; }
+  .flower .petal:nth-child(7) { transform: translate(0, 0) rotate(270deg); background: #8FAE8A; }
+  .flower .petal:nth-child(8) { transform: translate(0, 0) rotate(315deg); background: #A9C0A4; }
+  .flower .core {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 60px; height: 60px; background: #FFF9EF; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #0F2238; font-size: 1.5rem; z-index: 2;
+  }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-navy text-peach flex items-center justify-center"><i class="fa-solid fa-tooth"></i></span>
+      <div class="leading-tight"><p class="serif text-lg">Dr. Roxana Petrescu</p><p class="text-[10px] tracking-widest uppercase text-muted mt-0.5">Cabinet stomatologic &middot; Slatina</p></div>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#despre" class="hover:text-peach">Despre</a>
+      <a href="#servicii" class="hover:text-peach">Servicii</a>
+      <a href="#proces" class="hover:text-peach">Vizita ta</a>
+      <a href="#locatie" class="hover:text-peach">Loca&#539;ie</a>
+      <a href="tel:0743693149" class="btn-navy !py-2.5 !px-4 !text-xs">0743 693 149</a>
+    </nav>
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-navy text-peach flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between"><span class="serif text-lg">Dr. Roxana Petrescu</span><button id="menu-close" class="w-11 h-11 rounded-full bg-navy text-peach flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="mt-6"><a href="#despre" class="mobile-link">Despre</a><a href="#servicii" class="mobile-link">Servicii</a><a href="#proces" class="mobile-link">Vizita ta</a><a href="#locatie" class="mobile-link">Loca&#539;ie</a><a href="#contact" class="mobile-link">Contact</a></nav>
+  <div class="mt-auto grid grid-cols-2 gap-3"><a href="tel:0743693149" class="btn-navy">Sun&#259;</a><a href="https://wa.me/40743693149" class="btn-wap">WhatsApp</a></div>
+</div>
+
+<section id="top" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-heart"></i> Cabinet privat &middot; Slatina</span>
+      <h1 class="serif mt-8 text-5xl sm:text-6xl lg:text-7xl">
+        Stomatologie<br>
+        <span class="italic text-saged">f&#259;r&#259; grab&#259;.</span><br>
+        Cu tine &icirc;n centru.
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">
+        Cabinetul Dr. Roxana Petrescu este locul din Slatina unde pacien&#539;ii g&#259;sesc stomatologie &icirc;ngrijit&#259;, explicat&#259; pas cu pas, f&#259;r&#259; grab&#259; &#537;i cu aten&#539;ie la detalii. Pe Bulevardul Nicolae Titulescu, &icirc;n centrul ora&#537;ului.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0743693149" class="btn-navy"><i class="fa-solid fa-phone"></i> Programare 0743 693 149</a>
+        <a href="https://wa.me/40743693149" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="120">
+      <div class="flower">
+        <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+        <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+        <span class="core"><i class="fa-solid fa-tooth"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-peachl">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Despre cabinet</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl">Un cabinet privat cu <span class="italic text-saged">grij&#259; pentru detalii.</span></h2>
+    <p class="mt-8 text-lg text-ink/85 leading-relaxed">Cabinetul Stomatologic Dr. Roxana Petrescu ofer&#259; servicii stomatologice &icirc;ntr-o atmosfer&#259; cald&#259; &#537;i profesional&#259;. Fiecare pacient prime&#537;te timpul cuvenit, iar tratamentele sunt explicate dinainte &mdash; ce se face, de ce &#537;i c&#226;t va dura.</p>
+    <p class="mt-5 text-base text-muted leading-relaxed">Cabinetul este listat pe MedAtlas, platform&#259; dedicat&#259; profesioni&#537;tilor din domeniul medical din Rom&#226;nia, &#537;i opereaz&#259; &icirc;n condi&#539;iile stricte cerute de legisla&#539;ia stomatologic&#259;.</p>
+    <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-sm">
+      <div class="card !p-4"><i class="fa-solid fa-calendar-check text-peach"></i><p class="serif text-base mt-2">Programare</p><p class="text-xs text-muted">Recomandat&#259; &icirc;n avans</p></div>
+      <div class="card !p-4"><i class="fa-solid fa-restroom text-peach"></i><p class="serif text-base mt-2">Amenaj&#259;ri</p><p class="text-xs text-muted">Grup sanitar disponibil</p></div>
+      <div class="card !p-4"><i class="fa-solid fa-city text-peach"></i><p class="serif text-base mt-2">Centrul Slatinei</p><p class="text-xs text-muted">Nicolae Titulescu 2</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="chip">Servicii</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl">Tratamentele <span class="italic text-saged">pe care le facem.</span></h2>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><i class="fa-solid fa-magnifying-glass text-peach text-2xl"></i><h3 class="serif text-xl mt-4">Consulta&#539;ie &#537;i plan</h3><p class="mt-2 text-sm text-muted">Examen complet, radiografii, plan scris cu pa&#537;i clari &#537;i pre&#539;uri.</p></article>
+      <article class="card"><i class="fa-solid fa-spray-can-sparkles text-peach text-2xl"></i><h3 class="serif text-xl mt-4">Igienizare profesional&#259;</h3><p class="mt-2 text-sm text-muted">Detartraj ultrasonic, periaj, air-flow. Ghid de &icirc;ngrijire acas&#259;.</p></article>
+      <article class="card"><i class="fa-solid fa-tooth text-peach text-2xl"></i><h3 class="serif text-xl mt-4">Obtura&#539;ii estetice</h3><p class="mt-2 text-sm text-muted">Plomb&#259;ri cu compozit fizionomic &icirc;n culoarea dintelui.</p></article>
+      <article class="card"><i class="fa-solid fa-prescription text-peach text-2xl"></i><h3 class="serif text-xl mt-4">Endodon&#539;ie</h3><p class="mt-2 text-sm text-muted">Tratament de canal cu tehnici moderne, rezultate durabile.</p></article>
+      <article class="card"><i class="fa-solid fa-teeth text-peach text-2xl"></i><h3 class="serif text-xl mt-4">Protetic&#259;</h3><p class="mt-2 text-sm text-muted">Coroane, pun&#539;i, proteze par&#539;iale sau totale. Solu&#539;ii individualizate.</p></article>
+      <article class="card"><i class="fa-solid fa-hand-holding-medical text-peach text-2xl"></i><h3 class="serif text-xl mt-4">Extrac&#539;ii</h3><p class="mt-2 text-sm text-muted">Extrac&#539;ii simple &#537;i consiliere pentru recuperare.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-saged text-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip !bg-peach !text-navy">Vizita ta</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl">C&#226;nd vii <span class="italic text-peach">la noi.</span></h2>
+      <p class="mt-6 text-cream/80">Patru pa&#537;i, explica&#539;i din timp, a&#537;a &icirc;nc&#226;t s&#259; nu fii niciodat&#259; surprins&#259;.</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+      <div class="border border-cream/20 rounded-2xl p-5"><p class="serif text-3xl text-peach">01</p><p class="serif text-lg mt-2">Programare</p><p class="text-sm text-cream/75 mt-1">Telefon sau WhatsApp. Ora e ora ta.</p></div>
+      <div class="border border-cream/20 rounded-2xl p-5"><p class="serif text-3xl text-peach">02</p><p class="serif text-lg mt-2">Consulta&#539;ie</p><p class="text-sm text-cream/75 mt-1">Examin&#259;m, explic&#259;m &#537;i &icirc;&#539;i scriem planul.</p></div>
+      <div class="border border-cream/20 rounded-2xl p-5"><p class="serif text-3xl text-peach">03</p><p class="serif text-lg mt-2">Tratament</p><p class="text-sm text-cream/75 mt-1">Interven&#539;iile, pe etape, f&#259;r&#259; grab&#259;.</p></div>
+      <div class="border border-cream/20 rounded-2xl p-5"><p class="serif text-3xl text-peach">04</p><p class="serif text-lg mt-2">Men&#539;inere</p><p class="text-sm text-cream/75 mt-1">Control periodic &#537;i sfaturi pentru acas&#259;.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip">Loca&#539;ie</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl">Bulevardul <span class="italic text-saged">Nicolae Titulescu 2.</span></h2>
+      <p class="mt-6 text-ink/80">&Icirc;n centrul Slatinei, pe bulevardul principal. U&#537;or de g&#259;sit, cu parcare &icirc;n apropiere.</p>
+      <div class="mt-8 space-y-3 text-sm">
+        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-peach w-5"></i> Bd. Nicolae Titulescu 2, Slatina 230001</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-peach w-5"></i> 0743 693 149</div>
+        <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-peach w-5"></i> wa.me/40743693149</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-calendar-check text-peach w-5"></i> Programare recomandat&#259;</div>
+      </div>
+      <a href="https://www.google.com/maps/place/Dr+Roxana+Petrescu/@44.4311773,24.3565004,17z" target="_blank" rel="noopener" class="mt-8 btn-peach inline-flex"><i class="fa-solid fa-map-location-dot"></i> Vezi pe hart&#259;</a>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="card">
+        <p class="chip">Program</p>
+        <ul id="hours" class="mt-5 text-sm">
+          <li data-day="1" class="hours-row"><span>Luni</span><span class="text-muted">La programare</span></li>
+          <li data-day="2" class="hours-row"><span>Mar&#539;i</span><span class="text-muted">La programare</span></li>
+          <li data-day="3" class="hours-row"><span>Miercuri</span><span class="text-muted">La programare</span></li>
+          <li data-day="4" class="hours-row"><span>Joi</span><span class="text-muted">La programare</span></li>
+          <li data-day="5" class="hours-row"><span>Vineri</span><span class="text-muted">La programare</span></li>
+          <li data-day="6" class="hours-row"><span>S&#226;mb&#259;t&#259;</span><span class="text-muted italic">Redus&#259;</span></li>
+          <li data-day="0" class="hours-row"><span>Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+        <p class="mt-5 text-xs text-muted">Cabinetul lucreaz&#259; exclusiv pe baz&#259; de programare. Suna&#539;i pentru disponibilitate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-peachl">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Contact</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl">Programeaz&#259;-te pentru <span class="italic text-saged">prima vizit&#259;.</span></h2>
+    <p class="mt-6 text-muted">Un apel scurt, o or&#259; stabilit&#259;, un plan clar pentru s&#259;n&#259;tatea din&#539;ilor t&#259;i.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:0743693149" class="btn-navy"><i class="fa-solid fa-phone"></i> 0743 693 149</a>
+      <a href="https://wa.me/40743693149" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navy text-cream/65 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div><div class="flex items-center gap-3"><span class="w-10 h-10 rounded-full bg-peach text-navy flex items-center justify-center"><i class="fa-solid fa-tooth"></i></span><span class="serif text-lg text-cream">Dr. Roxana Petrescu</span></div><p class="mt-3 text-sm">Cabinet stomatologic privat &icirc;n Slatina.</p></div>
+    <div><p class="serif text-sm text-peach tracking-widest">SERVICII</p><ul class="mt-3 space-y-1.5 text-sm"><li>Consulta&#539;ie &amp; plan</li><li>Igienizare</li><li>Obtura&#539;ii</li><li>Endodon&#539;ie</li><li>Protetic&#259;</li></ul></div>
+    <div><p class="serif text-sm text-peach tracking-widest">CONTACT</p><ul class="mt-3 space-y-1.5 text-sm"><li><i class="fa-solid fa-phone text-peach mr-2"></i>0743 693 149</li><li><i class="fa-brands fa-whatsapp text-peach mr-2"></i>wa.me/40743693149</li><li><i class="fa-solid fa-location-dot text-peach mr-2"></i>Titulescu 2, Slatina</li></ul></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-widest serif">
+    <span>&copy; 2026 Cabinet Dr. Roxana Petrescu</span><span>Slatina &middot; Olt</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0743693149" class="py-4 bg-navy text-cream text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40743693149" class="py-4 bg-wa text-white text-center font-semibold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Cabinet Stomatologic Dr. Roxana Petrescu","telephone":"+40743693149","address":{"@type":"PostalAddress","streetAddress":"Bulevardul Nicolae Titulescu 2","addressLocality":"Slatina","addressRegion":"Olt","postalCode":"230001","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":44.4311773,"longitude":24.3565004}}</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+  const menu = document.getElementById('menu'), openBtn = document.getElementById('menu-open'), closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try { const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' })); const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]'); if (row) row.classList.add('today'); } catch (e) {}
+</script>
+</body></html>

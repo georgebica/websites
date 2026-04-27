@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Autosport Craiova | Chip Tuning ECU &amp; Auto Electronics | 0725 523 625</title>
+<meta name="description" content="Nova Autosport &mdash; atelier chip tuning &#537;i auto electronics în Craiova. ECU custom Stage 1-3, diagnostic avansat, power testing. Din 2015. 0725 523 625.">
+<meta name="keywords" content="chip tuning Craiova, ECU tuning Dolj, Nova Autosport, auto electronics Craiova, Stage 1 tuning Craiova, DPF EGR Craiova, performanta auto Craiova">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Nova Autosport SRL">
+<link rel="canonical" href="">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Nova Autosport Craiova">
+<meta property="og:title" content="Nova Autosport Craiova | Chip tuning &amp; ECU">
+<meta property="og:description" content="Atelier specializat în chip tuning &#537;i auto electronics în Craiova. Software custom, diagnostic, dyno.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nova Autosport Craiova">
+<meta name="twitter:description" content="Chip tuning &amp; ECU custom &middot; Craiova.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['Rajdhani', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif']
+      },
+      colors: {
+        'carbon-nova': {
+          50: '#f0f2f4',
+          100: '#cdd1d8',
+          500: '#434a57',
+          700: '#1e2229',
+          800: '#12151a',
+          900: '#07090c'
+        },
+        'neon-cyan': {
+          300: '#5de3ee',
+          400: '#22d3e0',
+          500: '#0bb5c2',
+          600: '#0a7e89'
+        },
+        'red-alert': '#ef4444',
+        'chrome-nova': '#c8ccd4',
+        'white-nova': '#f6f7f9'
+      }
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background: #07090c; color: #f0f2f4; }
+  .font-display { font-family: 'Rajdhani', sans-serif; letter-spacing: 0.02em; text-transform: uppercase; }
+  .carbon-bg {
+    background-color: #07090c;
+    background-image:
+      linear-gradient(45deg, #12151a 25%, transparent 25%, transparent 75%, #12151a 75%),
+      linear-gradient(45deg, #12151a 25%, transparent 25%, transparent 75%, #12151a 75%);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+  }
+  .grid-dark {
+    background-image:
+      linear-gradient(rgba(34,211,224,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,224,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .gauge {
+    position: relative;
+    width: 140px; height: 140px;
+    border: 3px solid #12151a;
+    border-top-color: #22d3e0;
+    border-right-color: #22d3e0;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+  }
+  .gauge-inner {
+    position: absolute;
+    inset: 15px;
+    border-radius: 50%;
+    background: #12151a;
+    border: 1px solid rgba(34,211,224,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+  }
+  .neon-box {
+    box-shadow: 0 0 20px rgba(34,211,224,0.3), inset 0 0 20px rgba(34,211,224,0.05);
+  }
+  .stage-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: linear-gradient(135deg, #0bb5c2 0%, #22d3e0 100%);
+    color: #07090c;
+    font-family: 'Rajdhani';
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .dyno-line {
+    background: linear-gradient(90deg, transparent 0%, #22d3e0 50%, transparent 100%);
+    height: 2px;
+  }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Top -->
+<div class="bg-carbon-nova-900 text-neon-cyan-400 text-center text-xs py-2 tracking-[0.4em] uppercase font-semibold border-b border-neon-cyan-400/20">
+  <i class="fa-solid fa-microchip mr-2"></i> Chip tuning &middot; auto electronics &middot; Craiova
+</div>
+
+<!-- Nav -->
+<header class="bg-carbon-nova-800 border-b-2 border-neon-cyan-400 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-12 h-12 bg-carbon-nova-900 border-2 border-neon-cyan-400 flex items-center justify-center text-neon-cyan-400 relative neon-box">
+        <i class="fa-solid fa-bolt text-xl"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-2xl font-bold text-white-nova">Nova Autosport</div>
+        <div class="text-[10px] tracking-[0.4em] uppercase text-neon-cyan-400">Chip tuning &middot; Craiova</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider font-semibold text-white-nova/80">
+      <a href="#atelier" class="hover:text-neon-cyan-400">Atelier</a>
+      <a href="#stages" class="hover:text-neon-cyan-400">Stages</a>
+      <a href="#servicii" class="hover:text-neon-cyan-400">Servicii</a>
+      <a href="#proces" class="hover:text-neon-cyan-400">Proces</a>
+      <a href="#contact" class="hover:text-neon-cyan-400">Contact</a>
+    </nav>
+    <a href="tel:0725523625" class="hidden md:inline-flex items-center gap-2 bg-neon-cyan-500 hover:bg-neon-cyan-400 text-carbon-nova-900 px-5 py-3 text-sm font-bold uppercase tracking-widest">
+      <i class="fa-solid fa-phone"></i> 0725 523 625
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="py-20 md:py-28 grid-dark relative overflow-hidden">
+  <div class="absolute top-20 -right-40 w-[500px] h-[500px] bg-neon-cyan-500/10 rounded-full blur-3xl"></div>
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-10 items-center relative">
+    <div class="lg:col-span-7" data-aos="fade-right">
+      <div class="stage-badge mb-6">11 ani &middot; expertiz&#259; real&#259;</div>
+      <h1 class="font-display font-bold text-6xl md:text-8xl lg:text-9xl leading-[0.88]">
+        Software<br>
+        custom. <span class="text-neon-cyan-400">Putere</span><br>
+        m&#259;surat&#259;. <span class="text-red-alert">F&#259;r&#259; compromis.</span>
+      </h1>
+      <p class="mt-8 text-lg text-white-nova/85 max-w-xl">
+        Nova Autosport este un atelier specializat pe chip tuning &#537;i auto electronics în Craiova. Dezvolt&#259;m software ECU <strong class="text-neon-cyan-400">manual, custom</strong> pentru fiecare vehicul &mdash; nu file-uri de pe internet.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="tel:0725523625" class="bg-neon-cyan-500 hover:bg-neon-cyan-400 text-carbon-nova-900 px-8 py-4 font-display text-xl font-bold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-solid fa-phone-volume"></i> 0725 523 625
+        </a>
+        <a href="https://wa.me/40725523625" class="border-2 border-neon-cyan-400 text-neon-cyan-400 hover:bg-neon-cyan-400 hover:text-carbon-nova-900 px-8 py-4 font-display text-xl font-bold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <div class="mt-10 flex flex-wrap gap-6 text-sm">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-star text-neon-cyan-400"></i> <strong class="text-white-nova">4.3/5</strong> <span class="text-white-nova/60">(37 recenzii)</span></span>
+        <span class="w-px h-5 bg-neon-cyan-400/30"></span>
+        <span class="flex items-center gap-2 text-white-nova/70"><i class="fa-solid fa-chart-line text-neon-cyan-400"></i> Dyno testing inclus</span>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5" data-aos="fade-left">
+      <div class="bg-carbon-nova-800 border-2 border-neon-cyan-400/40 p-8 relative neon-box">
+        <div class="absolute -top-4 left-6 stage-badge">// ECU STATUS</div>
+        <div class="mt-4 flex items-center justify-center mb-6">
+          <div class="gauge">
+            <div class="gauge-inner">
+              <div class="text-center">
+                <div class="font-display text-3xl font-bold text-neon-cyan-400">+40%</div>
+                <div class="text-[10px] tracking-widest text-white-nova/60">HP BOOST</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center border-b border-neon-cyan-400/20 pb-2">
+            <span class="text-xs uppercase tracking-widest text-white-nova/60">Stage 1 típic</span>
+            <span class="font-display text-xl font-bold text-neon-cyan-400">+15-30 HP</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-neon-cyan-400/20 pb-2">
+            <span class="text-xs uppercase tracking-widest text-white-nova/60">Stage 2</span>
+            <span class="font-display text-xl font-bold text-neon-cyan-400">+30-50 HP</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-neon-cyan-400/20 pb-2">
+            <span class="text-xs uppercase tracking-widest text-white-nova/60">Torque boost</span>
+            <span class="font-display text-xl font-bold text-neon-cyan-400">+10-25%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-xs uppercase tracking-widest text-white-nova/60">Timp de lucru</span>
+            <span class="font-display text-xl font-bold text-red-alert">4-8H</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Atelier -->
+<section id="atelier" class="py-20 bg-carbon-nova-800">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <div class="stage-badge mb-5">/ Despre atelier</div>
+      <h2 class="font-display font-bold text-5xl md:text-6xl text-white-nova leading-[0.95]">Manual. <span class="text-neon-cyan-400">Custom</span>. Nu file-uri <span class="text-red-alert">de internet</span>.</h2>
+      <p class="mt-5 text-white-nova/85 text-lg">Nova Autosport func&#539;ion&#259; din 2015 ca atelier independent de chip tuning. Abordarea noastr&#259; e diferit&#259; de a majorit&#259;&#539;ii: nu cump&#259;r&#259;m file-uri gata f&#259;cute &#537;i le punem pe ma&#537;ina ta.</p>
+      <p class="mt-4 text-white-nova/85 text-lg">Fiecare proiect începe cu diagnostic complet, log-uri dinamice pe drum, &#537;i apoi dezvoltare manual&#259; de software ECU personalizat pe baza datelor tale. O ma&#537;in&#259; primeste de regul&#259; 4-8 ore de lucru personal la calculator.</p>
+      <div class="mt-8 grid grid-cols-3 gap-3">
+        <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-4 text-center">
+          <div class="font-display text-4xl font-bold text-neon-cyan-400">11+</div>
+          <div class="text-[10px] uppercase tracking-widest text-white-nova/60 mt-1">ani</div>
+        </div>
+        <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-4 text-center">
+          <div class="font-display text-4xl font-bold text-neon-cyan-400">8h</div>
+          <div class="text-[10px] uppercase tracking-widest text-white-nova/60 mt-1">per mașin&#259;</div>
+        </div>
+        <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-4 text-center">
+          <div class="font-display text-4xl font-bold text-neon-cyan-400">CUSTOM</div>
+          <div class="text-[10px] uppercase tracking-widest text-white-nova/60 mt-1">ECU map</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="bg-carbon-nova-900 border-2 border-neon-cyan-400 p-7 neon-box">
+        <div class="text-xs uppercase tracking-[0.4em] text-neon-cyan-400 mb-4">// WORKFLOW</div>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-3 border-b border-neon-cyan-400/10 pb-2">
+            <i class="fa-solid fa-circle-dot text-neon-cyan-400 mt-1"></i>
+            <span class="text-white-nova/85"><strong class="text-white-nova">Diagnostic complet:</strong> citire ECU, memorie erori, verificare senzori</span>
+          </li>
+          <li class="flex items-start gap-3 border-b border-neon-cyan-400/10 pb-2">
+            <i class="fa-solid fa-circle-dot text-neon-cyan-400 mt-1"></i>
+            <span class="text-white-nova/85"><strong class="text-white-nova">Dynamic logging:</strong> datele reale ale motorului pe drum</span>
+          </li>
+          <li class="flex items-start gap-3 border-b border-neon-cyan-400/10 pb-2">
+            <i class="fa-solid fa-circle-dot text-neon-cyan-400 mt-1"></i>
+            <span class="text-white-nova/85"><strong class="text-white-nova">Software custom:</strong> ECU map dezvoltat manual pe baza log-urilor</span>
+          </li>
+          <li class="flex items-start gap-3 border-b border-neon-cyan-400/10 pb-2">
+            <i class="fa-solid fa-circle-dot text-neon-cyan-400 mt-1"></i>
+            <span class="text-white-nova/85"><strong class="text-white-nova">Flashing ECU:</strong> instalare prin OBD sau boot mode</span>
+          </li>
+          <li class="flex items-start gap-3 border-b border-neon-cyan-400/10 pb-2">
+            <i class="fa-solid fa-circle-dot text-neon-cyan-400 mt-1"></i>
+            <span class="text-white-nova/85"><strong class="text-white-nova">Testing:</strong> verificare performan&#539;&#259;, log-uri post-tune</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-dot text-neon-cyan-400 mt-1"></i>
+            <span class="text-white-nova/85"><strong class="text-white-nova">Fine-tune:</strong> reglaj fin pe baza feedback-ului real</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stages -->
+<section id="stages" class="py-20 carbon-bg">
+  <div class="max-w-7xl mx-auto px-5 relative">
+    <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+      <div class="stage-badge mb-4">NIVELE DE TUNING</div>
+      <h2 class="font-display font-bold text-5xl md:text-6xl text-white-nova leading-[0.9]">Trei <span class="text-neon-cyan-400">stages</span>. <span class="text-red-alert">Trei niveluri</span>. Alegi tu.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-carbon-nova-800 border-2 border-neon-cyan-400/40 p-8 relative hover:border-neon-cyan-400 transition" data-aos="fade-up">
+        <div class="absolute top-0 right-0 bg-neon-cyan-500 text-carbon-nova-900 px-3 py-1 font-display font-bold text-xs tracking-widest">STAGE 1</div>
+        <div class="mt-8">
+          <div class="font-display font-bold text-5xl text-neon-cyan-400">01</div>
+          <h3 class="font-display text-3xl text-white-nova mt-3">Software-only</h3>
+          <p class="text-sm text-white-nova/80 mt-3">Optimizare software ECU f&#259;r&#259; modific&#259;ri hardware. Folose&#537;te rezerva de siguran&#539;&#259; din ma&#537;ina de serie.</p>
+          <div class="dyno-line my-5"></div>
+          <ul class="text-sm space-y-1 text-white-nova/80">
+            <li>&raquo; +15-30 HP tipic</li>
+            <li>&raquo; +10-25% torque</li>
+            <li>&raquo; F&#259;r&#259; modific&#259;ri hardware</li>
+            <li>&raquo; 4-6 ore de lucru</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-neon-cyan-500 text-carbon-nova-900 p-8 -mt-4 shadow-2xl shadow-neon-cyan-500/30" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute top-0 right-0 bg-carbon-nova-900 text-neon-cyan-400 px-3 py-1 font-display font-bold text-xs tracking-widest">STAGE 2</div>
+        <div class="mt-8 relative">
+          <div class="font-display font-bold text-5xl">02</div>
+          <h3 class="font-display text-3xl mt-3">SW + HW</h3>
+          <p class="text-sm mt-3 opacity-90">Software + modific&#259;ri hardware (intake, exhaust, intercooler). Cre&#537;tere semnificativ&#259; de putere.</p>
+          <div class="dyno-line my-5" style="background: linear-gradient(90deg, transparent 0%, #07090c 50%, transparent 100%);"></div>
+          <ul class="text-sm space-y-1 opacity-95">
+            <li>&raquo; +30-50 HP</li>
+            <li>&raquo; Modific&#259;ri hardware selective</li>
+            <li>&raquo; Cre&#537;tere semnificativ&#259;</li>
+            <li>&raquo; 6-8 ore de lucru</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-carbon-nova-800 border-2 border-red-alert/40 p-8 relative hover:border-red-alert transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute top-0 right-0 bg-red-alert text-white-nova px-3 py-1 font-display font-bold text-xs tracking-widest">STAGE 3</div>
+        <div class="mt-8">
+          <div class="font-display font-bold text-5xl text-red-alert">03</div>
+          <h3 class="font-display text-3xl text-white-nova mt-3">Maximum</h3>
+          <p class="text-sm text-white-nova/80 mt-3">Tuning avansat cu modific&#259;ri complete hardware. Pentru cazuri dedicate, unde pofta de performan&#539;&#259; e prioritar&#259;.</p>
+          <div class="dyno-line my-5" style="background: linear-gradient(90deg, transparent 0%, #ef4444 50%, transparent 100%);"></div>
+          <ul class="text-sm space-y-1 text-white-nova/80">
+            <li>&raquo; +50% sau mai mult</li>
+            <li>&raquo; Hardware upgrade complet</li>
+            <li>&raquo; ECU personalizat avansat</li>
+            <li>&raquo; 8-16+ ore de lucru</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 bg-carbon-nova-800 border border-red-alert/30 p-5 text-sm text-white-nova/85 flex items-start gap-3" data-aos="fade-up">
+      <i class="fa-solid fa-triangle-exclamation text-red-alert text-xl mt-1"></i>
+      <div>
+        <strong class="text-red-alert">Nota tehnic&#259;:</strong> valorile reale depind de modelul ma&#537;inii, anul de fabrica&#539;ie, starea motorului &#537;i hardware-ul existent. Estim&#259;m concret pentru ma&#537;ina ta dup&#259; diagnostic.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicii -->
+<section id="servicii" class="py-20 bg-carbon-nova-800">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="stage-badge mb-4">GAMA COMPLET&#258;</div>
+      <h2 class="font-display font-bold text-5xl md:text-6xl text-white-nova leading-[0.9]">Ce <span class="text-neon-cyan-400">execut&#259;m</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-6 hover:border-neon-cyan-400 transition" data-aos="fade-up">
+        <i class="fa-solid fa-microchip text-3xl text-neon-cyan-400"></i>
+        <h3 class="font-display text-xl text-white-nova mt-3">ECU Tuning</h3>
+        <p class="text-sm text-white-nova/75 mt-2">Software personalizat pentru performan&#539;&#259;, eficien&#539;&#259; sau fiabilitate.</p>
+      </div>
+      <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-6 hover:border-neon-cyan-400 transition" data-aos="fade-up" data-aos-delay="50">
+        <i class="fa-solid fa-gauge-high text-3xl text-neon-cyan-400"></i>
+        <h3 class="font-display text-xl text-white-nova mt-3">Dyno Testing</h3>
+        <p class="text-sm text-white-nova/75 mt-2">M&#259;sur&#259;m real HP &#537;i torque înainte &#537;i dup&#259; tunare.</p>
+      </div>
+      <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-6 hover:border-neon-cyan-400 transition" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-bolt text-3xl text-neon-cyan-400"></i>
+        <h3 class="font-display text-xl text-white-nova mt-3">Auto Electronics</h3>
+        <p class="text-sm text-white-nova/75 mt-2">Diagnostic &#537;i repara&#539;ii la sistemele electronice complexe.</p>
+      </div>
+      <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-6 hover:border-neon-cyan-400 transition" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-filter text-3xl text-neon-cyan-400"></i>
+        <h3 class="font-display text-xl text-white-nova mt-3">DPF Management</h3>
+        <p class="text-sm text-white-nova/75 mt-2">Solu&#539;ii pentru filtru de particule, p&#259;strare sau adapt&#259;ri tehnice.</p>
+      </div>
+      <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-6 hover:border-neon-cyan-400 transition" data-aos="fade-up">
+        <i class="fa-solid fa-wind text-3xl text-neon-cyan-400"></i>
+        <h3 class="font-display text-xl text-white-nova mt-3">EGR Adjustments</h3>
+        <p class="text-sm text-white-nova/75 mt-2">Adapt&#259;ri personalizate pe EGR conform nevoilor reale.</p>
+      </div>
+      <div class="bg-red-alert text-white-nova p-6" data-aos="fade-up" data-aos-delay="50">
+        <i class="fa-solid fa-diagnoses text-3xl"></i>
+        <h3 class="font-display text-xl mt-3">Diagnostic avansat</h3>
+        <p class="text-sm mt-2 opacity-95">Log-uri OBD &#537;i CAN-BUS, analiza detaliat&#259; a erorilor.</p>
+      </div>
+      <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-6 hover:border-neon-cyan-400 transition" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-car-side text-3xl text-neon-cyan-400"></i>
+        <h3 class="font-display text-xl text-white-nova mt-3">Performance mapping</h3>
+        <p class="text-sm text-white-nova/75 mt-2">Hart&#259; ECU calibrat&#259; dup&#259; stilul t&#259;u de condus.</p>
+      </div>
+      <div class="bg-carbon-nova-900 border border-neon-cyan-400/30 p-6 hover:border-neon-cyan-400 transition" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-leaf text-3xl text-neon-cyan-400"></i>
+        <h3 class="font-display text-xl text-white-nova mt-3">Eco tuning</h3>
+        <p class="text-sm text-white-nova/75 mt-2">Tunare pentru consum redus &#537;i eficien&#539;&#259;, nu doar putere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proces -->
+<section id="proces" class="py-20 grid-dark">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="stage-badge mb-4">WORKFLOW</div>
+      <h2 class="font-display font-bold text-5xl md:text-6xl text-white-nova leading-[0.9]">De la <span class="text-neon-cyan-400">stock</span> la <span class="text-red-alert">tuned</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-6 gap-4">
+      <div class="bg-carbon-nova-800 border border-neon-cyan-400/30 p-5 md:col-span-1" data-aos="fade-up">
+        <div class="font-display text-4xl font-bold text-neon-cyan-400">01</div>
+        <h3 class="font-display text-lg text-white-nova mt-2">Scan</h3>
+        <p class="text-xs text-white-nova/70 mt-2">Citim ECU-ul stock &#537;i salv&#259;m backup.</p>
+      </div>
+      <div class="bg-carbon-nova-800 border border-neon-cyan-400/30 p-5 md:col-span-1" data-aos="fade-up" data-aos-delay="50">
+        <div class="font-display text-4xl font-bold text-neon-cyan-400">02</div>
+        <h3 class="font-display text-lg text-white-nova mt-2">Drive log</h3>
+        <p class="text-xs text-white-nova/70 mt-2">Test pe drum cu log dinamic al senzorilor.</p>
+      </div>
+      <div class="bg-carbon-nova-800 border border-neon-cyan-400/30 p-5 md:col-span-1" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-display text-4xl font-bold text-neon-cyan-400">03</div>
+        <h3 class="font-display text-lg text-white-nova mt-2">Dev map</h3>
+        <p class="text-xs text-white-nova/70 mt-2">Software custom bazat pe datele tale reale.</p>
+      </div>
+      <div class="bg-carbon-nova-800 border border-neon-cyan-400/30 p-5 md:col-span-1" data-aos="fade-up" data-aos-delay="150">
+        <div class="font-display text-4xl font-bold text-neon-cyan-400">04</div>
+        <h3 class="font-display text-lg text-white-nova mt-2">Flash</h3>
+        <p class="text-xs text-white-nova/70 mt-2">Instalare software în ECU prin OBD sau boot.</p>
+      </div>
+      <div class="bg-carbon-nova-800 border border-neon-cyan-400/30 p-5 md:col-span-1" data-aos="fade-up" data-aos-delay="200">
+        <div class="font-display text-4xl font-bold text-neon-cyan-400">05</div>
+        <h3 class="font-display text-lg text-white-nova mt-2">Verify</h3>
+        <p class="text-xs text-white-nova/70 mt-2">Log post-tune, confirmare performan&#539;&#259;.</p>
+      </div>
+      <div class="bg-neon-cyan-500 text-carbon-nova-900 p-5 md:col-span-1" data-aos="fade-up" data-aos-delay="250">
+        <div class="font-display text-4xl font-bold">06</div>
+        <h3 class="font-display text-lg mt-2">Fine-tune</h3>
+        <p class="text-xs mt-2">Ajust&#259;ri finale pe baza testelor pe drum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 bg-carbon-nova-800">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <div class="stage-badge mb-4">CONTACT</div>
+      <h2 class="font-display font-bold text-5xl md:text-6xl text-white-nova leading-[0.9]">DJ643F, <span class="text-neon-cyan-400">Craiova</span></h2>
+      <p class="mt-5 text-white-nova/85 text-lg">Atelierul nostru se afl&#259; pe drumul jude&#539;ean 643F. Program L-V, 10:00-16:30, Sâmbat&#259; 10:30-15:30. Recomand&#259;m programare telefonic&#259; pentru a aloca timp adecvat fiec&#259;rui proiect.</p>
+
+      <div class="mt-8 bg-carbon-nova-900 border border-neon-cyan-400/30 p-5">
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between py-1 border-b border-neon-cyan-400/20">
+            <span class="text-white-nova/80">Luni &mdash; Vineri</span>
+            <span class="font-display text-neon-cyan-400 font-bold">10:00 &mdash; 16:30</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-neon-cyan-400/20">
+            <span class="text-white-nova/80">Sâmb&#259;t&#259;</span>
+            <span class="font-display text-neon-cyan-400 font-bold">10:30 &mdash; 15:30</span>
+          </div>
+          <div class="flex justify-between py-1">
+            <span class="text-white-nova/80">Duminic&#259;</span>
+            <span class="text-white-nova/40">Închis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="tel:0725523625" class="bg-neon-cyan-500 hover:bg-neon-cyan-400 text-carbon-nova-900 px-7 py-3 font-display text-lg font-bold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-solid fa-phone-volume"></i> 0725 523 625
+        </a>
+        <a href="https://wa.me/40725523625" class="border-2 border-neon-cyan-400 text-neon-cyan-400 hover:bg-neon-cyan-400 hover:text-carbon-nova-900 px-7 py-3 font-display text-lg font-bold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="border-2 border-neon-cyan-400 neon-box">
+        <iframe src="https://www.google.com/maps?q=44.349359,23.88179&hl=ro&z=15&output=embed" width="100%" height="500" style="border:0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-carbon-nova-900 text-white-nova/80 py-14 border-t-2 border-neon-cyan-400">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-carbon-nova-800 border-2 border-neon-cyan-400 flex items-center justify-center text-neon-cyan-400"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <div class="font-display text-xl font-bold text-white-nova">Nova Autosport</div>
+          <div class="text-[10px] tracking-[0.4em] uppercase text-neon-cyan-400">Chip tuning &middot; Craiova</div>
+        </div>
+      </div>
+      <p class="mt-5 text-sm max-w-md">Atelier independent de chip tuning &#537;i auto electronics din Craiova. Software ECU custom, dyno testing, diagnostic avansat. Activ din 2015.</p>
+    </div>
+    <div>
+      <div class="font-display text-lg text-white-nova mb-4 uppercase">Contact</div>
+      <ul class="text-sm space-y-2">
+        <li><i class="fa-solid fa-phone w-5 text-neon-cyan-400"></i> 0725 523 625</li>
+        <li><i class="fa-brands fa-whatsapp w-5 text-neon-cyan-400"></i> WhatsApp</li>
+        <li><i class="fa-solid fa-location-dot w-5 text-neon-cyan-400"></i> DJ643F, Craiova</li>
+        <li><i class="fa-solid fa-city w-5 text-neon-cyan-400"></i> Dolj, 200647</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-display text-lg text-white-nova mb-4 uppercase">Servicii</div>
+      <ul class="text-sm space-y-2">
+        <li>Chip tuning Stage 1-3</li>
+        <li>ECU custom mapping</li>
+        <li>Dyno testing</li>
+        <li>Diagnostic avansat</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 mt-10 pt-6 border-t border-white-nova/10 text-xs flex flex-wrap justify-between gap-3">
+    <div>&copy; 2026 Nova Autosport SRL. Toate drepturile rezervate.</div>
+    <div>Chip tuning &middot; Craiova, Dolj</div>
+  </div>
+</footer>
+
+<!-- Mobile sticky -->
+<div class="fixed bottom-0 inset-x-0 bg-carbon-nova-900 flex md:hidden z-50 border-t-2 border-neon-cyan-400">
+  <a href="tel:0725523625" class="flex-1 py-4 text-center text-sm font-bold uppercase text-neon-cyan-400 border-r border-carbon-nova-700">
+    <i class="fa-solid fa-phone mr-2"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40725523625" class="flex-1 py-4 text-center text-sm font-bold uppercase text-white-nova bg-neon-cyan-500 text-carbon-nova-900">
+    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Nova Autosport &middot; Chip Tuning Craiova",
+  "description": "Atelier specializat pe chip tuning ECU &#537;i auto electronics în Craiova",
+  "telephone": "+40725523625",
+  "url": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "DJ643F",
+    "addressLocality": "Craiova",
+    "postalCode": "200647",
+    "addressRegion": "Dolj",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.349359,
+    "longitude": 23.88179
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"16:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:30","closes":"15:30"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "37"
+  }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 700, once: true, offset: 80});</script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construc&#539;ii case &#537;i amenaj&#259;ri interioare-exterioare &middot; Bucure&#537;ti</title>
+<meta name="description" content="Construim case la cheie &#537;i execut&#259;m amenaj&#259;ri interioare &#537;i exterioare &#238;n Bucure&#537;ti &#537;i Ilfov. Echip&#259; proprie, materiale verificate, termene respectate. Telefon 0725 662 099.">
+<meta name="keywords" content="constructii case Bucuresti, amenajari interioare, fatade case, firma constructii Sector 1, case la cheie">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7a382a">
+<meta property="og:title" content="Construc&#539;ii case &#537;i amenaj&#259;ri &middot; Bucure&#537;ti">
+<meta property="og:description" content="Case la cheie, amenaj&#259;ri interioare &#537;i fa&#539;ade. Execut&#259;m &#238;n Bucure&#537;ti &#537;i &#238;mprejurimi.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        rust: {50:'#fbf0ec',100:'#f4d5c9',200:'#e9ab94',300:'#dc815e',400:'#c6593a',500:'#a33d26',500:'#a33d26',600:'#7a382a',700:'#562919',800:'#371a10',900:'#1d0d08'},
+        stone: {50:'#f6f3ee',100:'#ebe4d7',200:'#d4c6ae',300:'#bba685',400:'#9a8666',500:'#7b6a4f',600:'#5e513c',700:'#423829',800:'#281f17',900:'#12100c'},
+        sand: '#f4efe6',
+        ink: '#16110d'
+      },
+      fontFamily: {
+        display: ['Merriweather','Georgia','serif'],
+        sans: ['Archivo','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --rust:#7a382a; --stone:#7b6a4f; --sand:#f4efe6; --ink:#16110d; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Archivo',system-ui,sans-serif; color:var(--ink); background:var(--sand); }
+  h1,h2,h3,h4 { font-family:'Merriweather',Georgia,serif; letter-spacing:-.01em; }
+  .serif-italic { font-family:'Merriweather',serif; font-style:italic; }
+  .hero-surface {
+    background:
+      radial-gradient(circle at 85% 20%, rgba(220,129,94,.22), transparent 45%),
+      radial-gradient(circle at 15% 85%, rgba(122,56,42,.2), transparent 50%),
+      linear-gradient(172deg,#f4efe6 0%,#ebe4d7 60%,#d4c6ae 100%);
+  }
+  .brick-bg { background-image:linear-gradient(0deg,transparent 95%,rgba(122,56,42,.04) 95%),linear-gradient(90deg,transparent 97%,rgba(122,56,42,.04) 97%); background-size:48px 24px; }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .95rem; font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600; }
+  .chip-rust { background:rgba(122,56,42,.1); color:#562919; border:1px solid rgba(122,56,42,.25); }
+  .chip-stone { background:rgba(123,106,79,.12); color:#423829; border:1px solid rgba(123,106,79,.25); }
+  .btn-primary { background:var(--rust); color:#fff; padding:1rem 1.75rem; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-primary:hover { background:#562919; transform:translateY(-2px); box-shadow:0 18px 30px -16px rgba(122,56,42,.7); }
+  .btn-stone { background:var(--stone); color:var(--sand); padding:1rem 1.75rem; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-stone:hover { background:#423829; transform:translateY(-2px); }
+  .btn-outline { background:transparent; color:var(--rust); padding:1rem 1.75rem; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:.55rem; border:2px solid var(--rust); transition:all .25s; }
+  .btn-outline:hover { background:var(--rust); color:#fff; }
+  .btn-wa { background:#25d366; color:#fff; padding:1rem 1.5rem; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:.55rem; transition:all .25s; }
+  .btn-wa:hover { background:#1faa52; transform:translateY(-2px); }
+  .card { background:#fff; border:1px solid rgba(122,56,42,.15); padding:1.85rem; transition:all .25s; position:relative; overflow:hidden; }
+  .card::before { content:''; position:absolute; top:0; right:-40%; width:40%; height:100%; background:linear-gradient(180deg,transparent,rgba(122,56,42,.04),transparent); transition:right .4s; }
+  .card:hover::before { right:0; }
+  .card:hover { transform:translateY(-4px); border-color:var(--rust); box-shadow:0 22px 44px -24px rgba(22,17,13,.28); }
+  .service-ico { width:56px; height:56px; background:var(--rust); color:var(--sand); display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+  .section-label { display:inline-block; font-size:.72rem; letter-spacing:.32em; text-transform:uppercase; color:var(--rust); font-weight:700; }
+  .headline { font-size:clamp(2.1rem,4.6vw,3.5rem); line-height:1.12; color:var(--ink); font-family:'Merriweather',serif; font-weight:700; }
+  .headline em { font-style:italic; color:var(--rust); font-weight:400; }
+  .stat-num { font-family:'Merriweather',serif; font-size:2.7rem; color:var(--rust); line-height:1; font-weight:700; }
+  .info-row { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding:1rem 0; border-bottom:1px dashed rgba(122,56,42,.2); }
+  .info-row:last-child { border-bottom:none; }
+  .info-ico { width:40px; height:40px; background:rgba(122,56,42,.12); color:var(--rust); display:flex; align-items:center; justify-content:center; }
+  .nav-link { color:var(--ink); font-weight:500; font-size:.85rem; letter-spacing:.08em; position:relative; }
+  .nav-link::after { content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--rust); transform:scaleX(0); transition:transform .25s; transform-origin:left; }
+  .nav-link:hover::after { transform:scaleX(1); }
+  .step-num { font-family:'Merriweather',serif; font-size:3rem; color:var(--rust); font-weight:700; line-height:1; opacity:.85; }
+  .sticky-bar { position:fixed; left:0; right:0; bottom:0; z-index:60; background:#fff; border-top:2px solid var(--rust); display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.65rem; }
+  .sticky-bar a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.85rem; font-weight:600; font-size:.95rem; }
+  @media (min-width:1024px) { .sticky-bar { display:none; } }
+  .map-wrap { overflow:hidden; border:2px solid var(--rust); }
+</style>
+</head>
+<body class="bg-sand text-ink">
+
+<!-- TOP BAR -->
+<div class="bg-rust-700 text-sand/90 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-4">
+      <span><i class="fas fa-helmet-safety mr-1"></i> Construc&#539;ii &middot; Amenaj&#259;ri</span>
+      <span class="hidden sm:inline"><i class="fas fa-map-marker-alt mr-1"></i> Bucure&#537;ti &#537;i Ilfov</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:0725662099" class="hover:text-rust-200"><i class="fas fa-phone mr-1"></i> 0725 662 099</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="bg-sand/95 backdrop-blur sticky top-0 z-50 border-b border-rust-100">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-11 h-11 bg-rust-600 text-sand flex items-center justify-center">
+        <i class="fas fa-hammer"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-lg text-rust-700 font-bold">Construc&#539;ii &amp; Amenaj&#259;ri</div>
+        <div class="text-[10px] tracking-[.32em] uppercase text-stone-600 font-semibold">Bucure&#537;ti &middot; Sector 1</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#despre" class="nav-link">Despre</a>
+      <a href="#servicii" class="nav-link">Servicii</a>
+      <a href="#proces" class="nav-link">Proces</a>
+      <a href="#locatie" class="nav-link">Loca&#539;ie</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="tel:0725662099" class="btn-primary hidden md:inline-flex text-sm"><i class="fas fa-phone"></i> Discut&#259;m</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-surface brick-bg">
+  <div class="max-w-7xl mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="flex flex-wrap gap-2 mb-6">
+        <span class="chip chip-rust"><i class="fas fa-home"></i> Case la cheie</span>
+        <span class="chip chip-stone"><i class="fas fa-paint-roller"></i> Amenaj&#259;ri interioare</span>
+      </div>
+      <h1 class="headline mb-6">
+        Ridic&#259;m case<br>&#537;i <em>ref&#259;cem spa&#539;ii</em><br>cu echipe proprii.
+      </h1>
+      <p class="text-lg text-ink/75 leading-relaxed max-w-2xl mb-8">Facem construc&#539;ii case la cheie, amenaj&#259;ri interioare pentru apartamente &#537;i vile, lucr&#259;ri de fa&#539;ad&#259; &#537;i extinderi. Lucr&#259;m direct cu clientul, f&#259;r&#259; lan&#539;uri de subcontractori. Un singur interlocutor, o singur&#259; echip&#259;, responsabilitate clar&#259;.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="tel:0725662099" class="btn-primary"><i class="fas fa-phone"></i> 0725 662 099</a>
+        <a href="https://wa.me/40725662099" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#servicii" class="btn-outline">Vezi serviciile</a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 max-w-lg border-t-2 border-rust-200 pt-6">
+        <div>
+          <div class="stat-num">1:1</div>
+          <div class="text-[10px] uppercase tracking-widest text-stone-600 mt-1 font-semibold">Un interlocutor</div>
+        </div>
+        <div>
+          <div class="stat-num">10+</div>
+          <div class="text-[10px] uppercase tracking-widest text-stone-600 mt-1 font-semibold">Servicii &#238;n ofert&#259;</div>
+        </div>
+        <div>
+          <div class="stat-num">B&amp;IF</div>
+          <div class="text-[10px] uppercase tracking-widest text-stone-600 mt-1 font-semibold">Bucure&#537;ti &#537;i Ilfov</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="150">
+      <div class="bg-white p-8 border-2 border-rust-500 shadow-xl">
+        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-rust-100">
+          <div class="w-12 h-12 bg-rust-600 text-sand flex items-center justify-center"><i class="fas fa-clipboard-list"></i></div>
+          <div>
+            <h3 class="font-display text-2xl text-rust-700 font-bold">Estimare proiect</h3>
+            <p class="text-xs text-stone-600 serif-italic">Deviz gratuit &#238;n 48 de ore</p>
+          </div>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Telefon direct</div>
+              <a href="tel:0725662099" class="font-display text-2xl text-rust-700 font-bold">0725 662 099</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Birou</div>
+              <div class="font-semibold">Strada Anina, Sector 1</div>
+              <div class="text-xs text-stone-600">Bucure&#537;ti</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-truck-front"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Zon&#259; de lucru</div>
+              <div class="font-semibold">Bucure&#537;ti &#537;i Ilfov</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-file-contract"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Contract</div>
+              <div class="font-semibold text-sm">Etapizat, cu garantii &#537;i pl&#259;&#539;i e&#537;alonate</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre" class="py-20 lg:py-28 bg-sand">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5" data-aos="fade-right">
+      <div class="section-label">Despre noi</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-6 font-bold">Construim <em class="serif-italic text-rust-600">cu m&#226;ini proprii</em>, nu subcontract&#259;m.</h2>
+      <p class="text-lg text-ink/75 leading-relaxed mb-4">Suntem o echip&#259; de constructori din Sector 1, Bucure&#537;ti, cu experien&#539;&#259; &#238;n lucr&#259;ri reziden&#539;iale, amenaj&#259;ri interioare &#537;i exterioare. Prelu&#259;m proiecte de la zero, cum sunt constructia unei case, sau lucr&#259;ri punctuale cum sunt o renovare de baie sau o fa&#539;ad&#259;.</p>
+      <p class="text-lg text-ink/75 leading-relaxed">Lucr&#259;m cu echipele noastre proprii de zidari, tencuitori, gletuitori, zugravi &#537;i instalatori. Singurele operatiuni pentru care adu&#537;em speciali&#537;ti externi sunt cele de ni&#537;&#259; (ex. termosistem certificat, turnare pardoseli epoxidice).</p>
+    </div>
+    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-handshake"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Un singur interlocutor</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Pe proiect ave&#539;i o singur&#259; persoan&#259; cu care vorbi&#539;i. F&#259;r&#259; lan&#539;uri de subcontractori care se paseaz&#259; responsabilitatea.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-file-signature"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Contract etapizat</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Contract scris cu termene, sume &#537;i e&#537;alonare clar&#259;. Ave&#539;i siguran&#539;a c&#259; lucrarea merge exact cum a&#539;i agreat.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-boxes-stacked"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Materiale verificate</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Lucr&#259;m cu furnizori verifica&#539;i. Putem cump&#259;ra materialele &#238;mpreun&#259; sau pute&#539;i achizitia dvs. dup&#259; lista noastr&#259; de specifica&#539;ii.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-shield-halved"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Garantie scris&#259;</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Oferim garantie scris&#259; pe manoper&#259; pentru minimum 24 luni. Pentru lucr&#259;ri structurale, garantie legal&#259; conform legisla&#539;iei.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii" class="py-20 lg:py-28 bg-rust-50/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Ce construim</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 mb-4 font-bold">Servicii de <em class="serif-italic text-rust-600">construc&#539;ii &#537;i amenaj&#259;ri</em></h2>
+      <p class="text-lg text-ink/75 max-w-2xl mx-auto">De la funda&#539;ie p&#226;n&#259; la ultima tu&#537;&#259; de zugrav&#259;, sau doar pentru un proiect punctual.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="fade-up">
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-home"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Case la cheie</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Funda&#539;ie, structur&#259;, &#238;nchideri, instala&#539;ii &#537;i finisaje. Tot traseul p&#226;n&#259; la predare, cu un singur contract.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-layer-group"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Extinderi &#537;i mansardari</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Ad&#259;ug&#259;m metri p&#259;tra&#539;i caselor existente prin extinderi parter sau mansardare, cu avize &#537;i autoriza&#539;ii incluse.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-brush"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Amenaj&#259;ri interioare</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Renovari apartamente &#537;i vile: gresie, faian&#539;&#259;, parchet, pereti de rigips, zugraveli decorative, tavane suspendate.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-bath"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Renov&#259;ri b&#259;i</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">De la demolare la predare: hidroizola&#539;ii, ac&#539;iona&#259;ri instala&#539;ii, gresie, faian&#539;&#259;, obiecte sanitare &#537;i accesorii.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-utensils"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Buc&#259;t&#259;rii</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Amenaj&#259;m spa&#539;iul &#238;nainte de montaj mobil&#259;: instala&#539;ii, finisaje, splashback, electrice &#537;i pardoseli.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-building"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Fa&#539;ade &#537;i termosistem</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Montare termosistem cu polistiren sau vat&#259; mineral&#259;, finisaje decorative, tencuieli structurate, brauri &#537;i ancadramente.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-fence"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Curti &#537;i garduri</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Pavaje, alei, garduri din beton, lemn sau metal, terase cu pergole, foi&#537;oare &#537;i dale decorative.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-tools"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Instala&#539;ii</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Instala&#539;ii sanitare, electrice &#537;i termice &#8212; proiectare, execu&#539;ie &#537;i punere &#238;n func&#539;iune cu autoriza&#539;ii valide.</p>
+      </div>
+      <div class="card">
+        <div class="service-ico mb-4"><i class="fas fa-house-chimney-crack"></i></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Demol&#259;ri controlate</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Demolare ziduri, structuri u&#537;oare, anexe &#537;i preg&#259;tirea terenului pentru construc&#539;ii noi, cu evacuare moloz.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 text-center" data-aos="fade-up">
+      <a href="tel:0725662099" class="btn-primary"><i class="fas fa-phone"></i> Solicit deviz gratuit</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCES -->
+<section id="proces" class="py-20 lg:py-28 bg-sand">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="section-label">Cum lucr&#259;m</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 font-bold">De la <em class="serif-italic text-rust-600">idee</em> la <em class="serif-italic text-rust-600">cas&#259;</em></h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div data-aos="fade-up">
+        <div class="step-num mb-3">01</div>
+        <div class="w-16 h-1 bg-rust-500 mb-4"></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Vizit&#259; &#537;i discu&#539;ie</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Venim la dumneavoastr&#259;, m&#259;sur&#259;m, asculta&#539;i ce vre&#539;i &#537;i spunem ce e fezabil &#537;i ce nu.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <div class="step-num mb-3">02</div>
+        <div class="w-16 h-1 bg-rust-500 mb-4"></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Deviz scris</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Primi&#539;i deviz detaliat, cu manoper&#259;, materiale, termene &#537;i e&#537;alonare de pl&#259;&#539;i. F&#259;r&#259; costuri suplimentare.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <div class="step-num mb-3">03</div>
+        <div class="w-16 h-1 bg-rust-500 mb-4"></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Contract &#537;i execu&#539;ie</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Semn&#259;m contract, intr&#259;m pe &#537;antier. Primi&#539;i rapoarte vizuale s&#259;pt&#259;m&#226;nale &#537;i acces permanent.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <div class="step-num mb-3">04</div>
+        <div class="w-16 h-1 bg-rust-500 mb-4"></div>
+        <h3 class="font-display text-xl text-rust-700 mb-2 font-bold">Predare &#537;i garantii</h3>
+        <p class="text-sm text-ink/75 leading-relaxed">Verificare &#238;mpreun&#259;, remedieri eventuale, semn&#259;tur&#259; proces verbal &#537;i garantii scrise pe manoper&#259;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIE -->
+<section id="locatie" class="py-20 lg:py-28 bg-rust-50/60">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-label">Unde ne g&#259;si&#539;i</div>
+      <h2 class="text-4xl lg:text-5xl mt-4 font-bold">Birou &#238;n <em class="serif-italic text-rust-600">Sector 1</em>, lucr&#259;m &#238;n Bucure&#537;ti &#537;i Ilfov</h2>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 bg-white p-8 border-2 border-rust-500" data-aos="fade-right">
+        <h3 class="font-display text-2xl text-rust-700 font-bold mb-5">Biroul nostru</h3>
+        <ul class="space-y-1">
+          <li class="info-row" style="padding-top:0;">
+            <span class="info-ico"><i class="fas fa-location-dot"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Adres&#259;</div>
+              <div class="font-semibold">Strada Anina</div>
+              <div class="text-sm text-stone-600">Sector 1, Bucure&#537;ti</div>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-phone"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Telefon</div>
+              <a href="tel:0725662099" class="font-display text-2xl text-rust-700 font-bold">0725 662 099</a>
+            </div>
+          </li>
+          <li class="info-row">
+            <span class="info-ico"><i class="fas fa-map"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Cod Plus</div>
+              <div class="font-semibold">F3PX+5W Bucure&#537;ti</div>
+            </div>
+          </li>
+          <li class="info-row" style="border-bottom:none;">
+            <span class="info-ico"><i class="fas fa-globe"></i></span>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.22em] text-rust-600 font-bold">Zon&#259; de execu&#539;ie</div>
+              <div class="font-semibold">Bucure&#537;ti &#537;i tot jude&#539;ul Ilfov</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7 map-wrap" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps?q=44.485472,26.099783&hl=ro&z=16&output=embed" width="100%" height="520" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Harta Construc&#539;ii case amenaj&#259;ri Bucure&#537;ti"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section id="contact" class="py-20 lg:py-28 bg-rust-700 text-sand relative overflow-hidden brick-bg">
+  <div class="relative max-w-4xl mx-auto px-4 text-center">
+    <div class="section-label" style="color:#e9ab94;">Contact</div>
+    <h2 class="text-4xl lg:text-5xl mt-4 mb-5 text-white font-bold">Proiectul t&#259;u merit&#259; <em class="serif-italic" style="color:#e9ab94;">o echip&#259; seriosa</em></h2>
+    <p class="text-sand/85 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Sun&#259; pentru o vizit&#259; gratuit&#259; &#537;i deviz scris &#238;n 48 de ore. Spune-ne ce ai &#238;n minte &#537;i stabilim cum putem transforma &#238;n realitate.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="tel:0725662099" class="btn-primary" style="background:#fff;color:#7a382a;"><i class="fas fa-phone"></i> 0725 662 099</a>
+      <a href="https://wa.me/40725662099" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="#servicii" class="btn-outline" style="color:#fff;border-color:#fff;"><i class="fas fa-list"></i> Vezi serviciile</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-sand/70 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 bg-rust-500 text-sand flex items-center justify-center"><i class="fas fa-hammer"></i></div>
+        <div>
+          <div class="font-display text-lg text-sand font-bold">Construc&#539;ii &amp; Amenaj&#259;ri</div>
+          <div class="text-[10px] tracking-[.32em] uppercase text-rust-300 font-semibold">Bucure&#537;ti &middot; Sector 1</div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">Constructie de case la cheie, amenaj&#259;ri interioare &#537;i exterioare, fa&#539;ade &#537;i extinderi &#238;n Bucure&#537;ti &#537;i Ilfov.</p>
+    </div>
+    <div>
+      <h4 class="font-display text-sand text-lg mb-4 font-bold">Naviga&#539;ie</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#despre" class="hover:text-rust-300">Despre</a></li>
+        <li><a href="#servicii" class="hover:text-rust-300">Servicii</a></li>
+        <li><a href="#proces" class="hover:text-rust-300">Cum lucr&#259;m</a></li>
+        <li><a href="#locatie" class="hover:text-rust-300">Loca&#539;ie</a></li>
+        <li><a href="#contact" class="hover:text-rust-300">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display text-sand text-lg mb-4 font-bold">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fas fa-phone text-rust-300 mr-2"></i> <a href="tel:0725662099" class="hover:text-rust-300">0725 662 099</a></li>
+        <li><i class="fas fa-map-marker-alt text-rust-300 mr-2"></i> Strada Anina, Sector 1, Bucure&#537;ti</li>
+        <li><i class="fas fa-globe text-rust-300 mr-2"></i> Bucure&#537;ti &#537;i Ilfov</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-xs text-sand/50">
+    <div>&copy; 2026 Construc&#539;ii case &amp; amenaj&#259;ri. Toate drepturile rezervate.</div>
+    <div>Bucure&#537;ti, Sector 1 &middot; Zon&#259; de execu&#539;ie: Bucure&#537;ti &amp; Ilfov</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:0725662099" class="btn-primary"><i class="fas fa-phone"></i> Sun&#259;</a>
+  <a href="https://wa.me/40725662099" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Construc&#539;ii case &#537;i amenaj&#259;ri interioare-exterioare",
+  "telephone": "+40725662099",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Anina",
+    "addressLocality": "Bucure&#537;ti",
+    "addressRegion": "Sector 1",
+    "addressCountry": "RO"
+  },
+  "geo": {"@type":"GeoCoordinates","latitude":44.485472,"longitude":26.099783},
+  "areaServed": "Bucure&#537;ti, Ilfov",
+  "priceRange": "$$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+</body>
+</html>

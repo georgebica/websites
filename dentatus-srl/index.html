@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dentatus SRL &middot; Cabinet stomatologic &icirc;n centrul Slatinei</title>
+<meta name="description" content="Dentatus SRL &mdash; cabinet stomatologic din Slatina, activ din 2000 pe Strada Lipscani 14. Consulta&#539;ii, tratamente generale &#537;i programe incluzive. Programare la 0723 285 453.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        pearl:  '#F6F3EC',
+        ivory:  '#FBF9F2',
+        ink:    '#161617',
+        inkl:   '#2A2A2B',
+        gold:   '#B4894A',
+        goldl:  '#D6B87C',
+        muted:  '#6D6A5F',
+        line:   '#D9D3C4',
+        wa:     '#25D366',
+      },
+      fontFamily: {
+        display: ['"Bodoni Moda"', 'Georgia', 'serif'],
+        sans:    ['Mulish', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #F6F3EC; color: #161617; }
+  body { font-family: Mulish, system-ui, sans-serif; }
+  .display { font-family: "Bodoni Moda", Georgia, serif; font-variation-settings: "opsz" 96; letter-spacing: -.02em; }
+  .italic { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; }
+
+  .seal {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    border: 1px solid #B4894A;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+  .seal::before, .seal::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #B4894A;
+  }
+  .seal::before { inset: 6px; border-color: rgba(180,137,74,.5); }
+  .seal::after  { inset: 12px; border-color: rgba(180,137,74,.3); }
+  .seal-text {
+    position: relative;
+    z-index: 1;
+    font-family: "Bodoni Moda", serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: #B4894A;
+    line-height: 1.4;
+  }
+  .seal-text em { font-style: italic; font-size: 22px; display: block; letter-spacing: -.03em; color: #161617; line-height: 1; margin: 4px 0; }
+
+  .label-gold {
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    color: #B4894A;
+    font-size: .95rem;
+  }
+
+  .hair { height: 1px; background: #161617; }
+  .hair-gold { height: 1px; background: #B4894A; }
+
+  .btn-ink {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #161617;
+    color: #F6F3EC;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: background .25s;
+  }
+  .btn-ink:hover { background: #B4894A; }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: transparent;
+    color: #161617;
+    border: 1px solid #161617;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: all .25s;
+  }
+  .btn-outline:hover { background: #161617; color: #F6F3EC; }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    transition: filter .25s;
+  }
+  .btn-wap:hover { filter: brightness(.93); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .3rem .85rem;
+    border: 1px solid #B4894A;
+    color: #B4894A;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+
+  .card-svc {
+    background: #FBF9F2;
+    border: 1px solid #D9D3C4;
+    padding: 2rem;
+    position: relative;
+    transition: all .35s;
+  }
+  .card-svc:hover { border-color: #B4894A; transform: translateY(-4px); box-shadow: 0 30px 60px -40px rgba(22,22,23,.3); }
+  .card-svc .num {
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    color: #B4894A;
+    font-size: 1rem;
+  }
+
+  .mobile-link { display:block; padding: 1rem 0; font-family: "Bodoni Moda", serif; font-size: 1.7rem; border-bottom: 1px solid #D9D3C4; }
+
+  .feature-row {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem 0;
+    border-bottom: 1px solid #D9D3C4;
+  }
+  .feature-row:last-child { border: 0; }
+
+  .hours-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: .7rem 0;
+    border-bottom: 1px dotted rgba(22,22,23,.25);
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #B4894A; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full border border-ink flex items-center justify-center">
+        <span class="display text-lg leading-none">D</span>
+      </span>
+      <div class="leading-tight">
+        <p class="display text-xl leading-none font-semibold">Dentatus</p>
+        <p class="text-[10px] tracking-[.22em] uppercase text-muted mt-1">Est. 2000 &middot; Slatina</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-[12px] font-semibold text-ink/80 uppercase tracking-wider">
+      <a href="#despre"   class="hover:text-gold">Despre</a>
+      <a href="#servicii" class="hover:text-gold">Servicii</a>
+      <a href="#valori"   class="hover:text-gold">Valori</a>
+      <a href="#program"  class="hover:text-gold">Program</a>
+      <a href="tel:0723285453" class="btn-ink !py-2.5 !px-4 !text-[11px]">0723 285 453</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 border border-ink flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars text-ink"></i>
+    </button>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8"><div class="hair-gold"></div></div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-pearl z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-2xl">Dentatus</span>
+    <button id="menu-close" class="w-11 h-11 border border-ink flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#valori"   class="mobile-link">Valori</a>
+    <a href="#program"  class="mobile-link">Program</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-0">
+    <a href="tel:0723285453" class="btn-ink">Sun&#259;</a>
+    <a href="https://wa.me/40723285453" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="pt-10 sm:pt-16 lg:pt-24 pb-16 sm:pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+    <div class="flex items-center justify-between text-[10px] uppercase tracking-[.22em] text-muted">
+      <span>Strada Lipscani 14 &middot; Slatina</span>
+      <span class="hidden sm:inline">CAEN 8623 &middot; J28/162/2000</span>
+    </div>
+    <div class="mt-5 hair"></div>
+
+    <div class="mt-16 grid lg:grid-cols-12 gap-12 items-start">
+
+      <div class="lg:col-span-8" data-aos="fade-up">
+        <span class="chip"><i class="fa-solid fa-star text-gold"></i> Cabinet women-owned</span>
+        <h1 class="display mt-8 text-5xl sm:text-7xl lg:text-[8rem] leading-[.92] font-medium">
+          Un sur&#226;s<br>
+          <span class="italic text-gold">&icirc;ngrijit</span><br>
+          de 25 de ani.
+        </h1>
+
+        <p class="mt-10 max-w-xl text-lg text-inkl/80 leading-relaxed">
+          Dentatus este cabinetul stomatologic care st&#259; &icirc;n centrul istoric al Slatinei, pe Strada Lipscani, &icirc;nc&#259; din anul 2000. Mic, discret, deschis tuturor &mdash; un loc unde pacien&#539;ii vin ani la r&#226;nd &#537;i pleac&#259; f&#259;r&#259; grab&#259;.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-0">
+          <a href="tel:0723285453" class="btn-ink flex-1 sm:flex-initial"><i class="fa-solid fa-phone"></i> 0723 285 453</a>
+          <a href="https://wa.me/40723285453" class="btn-wap flex-1 sm:flex-initial"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-4 flex flex-col items-center lg:items-end gap-8" data-aos="fade-up" data-aos-delay="120">
+        <div class="seal">
+          <div class="seal-text">
+            Din<em>2000</em>&mdash; 2026 &mdash;
+          </div>
+        </div>
+        <div class="text-right space-y-4 text-sm">
+          <div>
+            <p class="label-gold">&mdash; Adresa</p>
+            <p class="display text-xl mt-1">Strada Lipscani 14</p>
+            <p class="text-muted text-xs">Centrul istoric, Slatina</p>
+          </div>
+          <div>
+            <p class="label-gold">&mdash; Programare</p>
+            <a href="tel:0723285453" class="display text-xl mt-1 block">0723 285 453</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 grid sm:grid-cols-4 gap-8">
+      <div>
+        <p class="display italic text-4xl text-gold">25+</p>
+        <p class="mt-2 text-[11px] uppercase tracking-widest text-muted">ani de practic&#259; stomatologic&#259;</p>
+      </div>
+      <div>
+        <p class="display italic text-4xl text-gold">5.0</p>
+        <p class="mt-2 text-[11px] uppercase tracking-widest text-muted">pe google maps</p>
+      </div>
+      <div>
+        <p class="display italic text-4xl text-gold">100%</p>
+        <p class="mt-2 text-[11px] uppercase tracking-widest text-muted">cabinet accesibil</p>
+      </div>
+      <div>
+        <p class="display italic text-4xl text-gold">Lipscani</p>
+        <p class="mt-2 text-[11px] uppercase tracking-widest text-muted">str&#259;zi istorice ale Slatinei</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="bg-ivory py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+    <div class="lg:col-span-5">
+      <span class="chip">01 &middot; Despre cabinet</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl leading-[1.02] font-medium">
+        Un cabinet vechi<br>
+        <span class="italic text-gold">cu reguli noi.</span>
+      </h2>
+      <p class="mt-6 text-inkl/80 leading-relaxed">25 de ani &icirc;nseamn&#259; c&#259; am v&#259;zut patru genera&#539;ii de pacien&#539;i trec&#226;nd pragul cabinetului. Am v&#259;zut cum se schimb&#259; stomatologia, cum apar aparate noi &#537;i tehnici moderne, cum oamenii au &icirc;nceput s&#259; vin&#259; cu alte a&#537;tept&#259;ri.</p>
+      <p class="mt-5 text-inkl/80 leading-relaxed">&#536;i c&#226;nd anul 2000 pare deja departe, un lucru a r&#259;mas la fel: aten&#539;ia pentru fiecare pacient &icirc;n parte &#537;i r&#259;bdarea de a-l asculta &icirc;nainte s&#259; lu&#259;m freza &icirc;n m&#226;n&#259;.</p>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="hair"></div>
+      <div class="feature-row">
+        <i class="fa-solid fa-venus text-gold text-xl mt-1"></i>
+        <div>
+          <p class="display text-xl font-semibold">Cabinet women-owned</p>
+          <p class="mt-1 text-sm text-muted">Practic&#259; de&#539;inut&#259; &#537;i condus&#259; de femeie, din momentul &icirc;nfiin&#539;&#259;rii.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <i class="fa-solid fa-wheelchair text-gold text-xl mt-1"></i>
+        <div>
+          <p class="display text-xl font-semibold">Accesibil complet</p>
+          <p class="mt-1 text-sm text-muted">Intrare cu ramp&#259; &#537;i grup sanitar adaptat pentru persoane cu mobilitate redus&#259;.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <i class="fa-solid fa-heart text-gold text-xl mt-1"></i>
+        <div>
+          <p class="display text-xl font-semibold">Spa&#539;iu sigur pentru toat&#259; lumea</p>
+          <p class="mt-1 text-sm text-muted">LGBTQ+ friendly &#537;i transgender safe space. Grupul sanitar este gender-neutral.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <i class="fa-solid fa-car text-gold text-xl mt-1"></i>
+        <div>
+          <p class="display text-xl font-semibold">Parcare gratuit&#259;</p>
+          <p class="mt-1 text-sm text-muted">Parcare la sediu, parcare pe strada &#537;i lot gratuit &icirc;n apropiere.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <i class="fa-solid fa-mobile-screen-button text-gold text-xl mt-1"></i>
+        <div>
+          <p class="display text-xl font-semibold">Card &#537;i NFC</p>
+          <p class="mt-1 text-sm text-muted">Pl&#259;&#539;i cu card debit sau NFC pe telefon (Apple Pay, Google Pay).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+    <div class="max-w-3xl">
+      <span class="chip">02 &middot; Servicii stomatologice</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl leading-[.98] font-medium">
+        Ce facem<br>
+        <span class="italic text-gold">&icirc;n fotoliul nostru.</span>
+      </h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-0">
+
+      <article class="card-svc" data-aos="fade-up">
+        <span class="num">&mdash; i.</span>
+        <i class="fa-solid fa-magnifying-glass mt-4 block text-gold text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Consulta&#539;ie &#537;i diagnostic</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Examen stomatologic complet, radiografie intern&#259; (dac&#259; e necesar) &#537;i plan de tratament scris. Al&#259;tur&#259;m un deviz clar cu pa&#537;ii urm&#259;tori.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="60">
+        <span class="num">&mdash; ii.</span>
+        <i class="fa-solid fa-tooth mt-4 block text-gold text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Obtura&#539;ii &#537;i carii</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Tratament pentru carii superficiale sau profunde, restaur&#259;ri cu compozit fizionomic, pentru un rezultat estetic &#537;i func&#539;ional.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="120">
+        <span class="num">&mdash; iii.</span>
+        <i class="fa-solid fa-spray-can-sparkles mt-4 block text-gold text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Detartraj &#537;i igien&#259;</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Detartraj ultrasonic, periaj profesional, tratamente de men&#539;inere. Ghid pentru igiena zilnic&#259;, adaptat fiec&#259;rui pacient.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="180">
+        <span class="num">&mdash; iv.</span>
+        <i class="fa-solid fa-prescription mt-4 block text-gold text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Endodon&#539;ie</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Tratament de canal, devitalizare, obturare de canal, reinterven&#539;ii pe din&#539;i trata&#539;i anterior care prezint&#259; probleme.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="240">
+        <span class="num">&mdash; v.</span>
+        <i class="fa-solid fa-teeth mt-4 block text-gold text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Protetic&#259;</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Lucr&#259;ri protetice fixe &#537;i mobile, coroane, pun&#539;i, proteze par&#539;iale &#537;i totale. Colaborare cu laborator de tehnic&#259; dentar&#259; local.</p>
+      </article>
+
+      <article class="card-svc" data-aos="fade-up" data-aos-delay="300">
+        <span class="num">&mdash; vi.</span>
+        <i class="fa-solid fa-hand-holding-medical mt-4 block text-gold text-2xl"></i>
+        <h3 class="display text-2xl mt-4 font-semibold">Extrac&#539;ii simple</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Extrac&#539;ii simple, extrac&#539;ii de molar de minte (cazuri necomplicate), gestionare corect&#259; a durerii &#537;i recuperare.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="valori" class="py-16 sm:py-24 bg-ink text-pearl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-5">
+      <span class="chip !border-gold !text-gold">03 &middot; Valorile noastre</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl leading-[1.02] font-medium">
+        Un cabinet implicat<br>
+        <span class="italic text-goldl">&icirc;n comunitate.</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7 space-y-4">
+      <div class="border-t border-gold/25 pt-5">
+        <p class="display text-xl font-semibold">&bull; Accept&#259;m dona&#539;ii pentru cazuri sociale</p>
+        <p class="mt-1 text-pearl/70 text-sm">Ajut&#259;m familiile care nu &icirc;&#537;i pot permite tratamente complete printr-un fond intern de sprijin.</p>
+      </div>
+      <div class="border-t border-gold/25 pt-5">
+        <p class="display text-xl font-semibold">&bull; Angaj&#259;m persoane &icirc;n situa&#539;ii dificile</p>
+        <p class="mt-1 text-pearl/70 text-sm">Am oferit locuri de munc&#259; persoanelor care au trecut prin str&#259;mut&#259;ri sau situa&#539;ii sociale dificile.</p>
+      </div>
+      <div class="border-t border-gold/25 pt-5">
+        <p class="display text-xl font-semibold">&bull; Oferim servicii gratuite c&#226;nd putem</p>
+        <p class="mt-1 text-pearl/70 text-sm">Pentru cazuri de urgen&#539;&#259; sau pentru pacien&#539;i f&#259;r&#259; resurse, oferim tratamente gratuite sau la pre&#539; redus.</p>
+      </div>
+      <div class="border-t border-b border-gold/25 py-5">
+        <p class="display text-xl font-semibold">&bull; Avem nevoie de voluntari</p>
+        <p class="mt-1 text-pearl/70 text-sm">Dac&#259; vre&#539;i s&#259; ne ajuta&#539;i cu proiectele comunitare, contacta&#539;i-ne la telefonul cabinetului.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip">04 &middot; Program de lucru</span>
+      <h2 class="display mt-4 text-4xl sm:text-5xl leading-[1.02] font-medium">
+        Programare<br>
+        <span class="italic text-gold">obligatorie.</span>
+      </h2>
+      <p class="mt-6 text-muted">Lucr&#259;m doar cu programare, &icirc;n intervale dedicate fiec&#259;rui pacient. A&#537;a reu&#537;im s&#259; acord&#259;m aten&#539;ie &#537;i r&#259;bdare fiec&#259;ruia.</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-0">
+        <a href="tel:0723285453" class="btn-ink"><i class="fa-solid fa-phone"></i> Programeaz&#259;-te</a>
+        <a href="https://wa.me/40723285453" class="btn-wap"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="bg-ivory border border-line p-6 sm:p-8">
+        <ul id="hours">
+          <li data-day="1" class="hours-row"><span class="display font-semibold">Luni</span><span>14:00 &mdash; 20:00</span></li>
+          <li data-day="2" class="hours-row"><span class="display font-semibold">Mar&#539;i</span><span>14:00 &mdash; 20:00</span></li>
+          <li data-day="3" class="hours-row"><span class="display font-semibold">Miercuri</span><span class="text-muted italic">&Icirc;nchis</span></li>
+          <li data-day="4" class="hours-row"><span class="display font-semibold">Joi</span><span>14:00 &mdash; 20:00</span></li>
+          <li data-day="5" class="hours-row"><span class="display font-semibold">Vineri</span><span>13:00 &mdash; 19:00</span></li>
+          <li data-day="6" class="hours-row"><span class="display font-semibold">S&#226;mb&#259;t&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+          <li data-day="0" class="hours-row"><span class="display font-semibold">Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="hair-gold"></div>
+    <div class="grid lg:grid-cols-12 gap-10 pt-14">
+
+      <div class="lg:col-span-7">
+        <span class="chip">05 &middot; Contact</span>
+        <h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl leading-[1.02] font-medium">
+          Trece&#539;i pragul<br>
+          <span class="italic text-gold">str&#259;zii Lipscani.</span>
+        </h2>
+        <p class="mt-6 max-w-lg text-muted">Cabinetul este &icirc;n centrul istoric al Slatinei, u&#537;or de g&#259;sit. Suna&#539;i &icirc;nainte s&#259; ave&#539;i deja o or&#259; alocat&#259;, ca s&#259; nu a&#537;tepta&#539;i.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-0">
+          <a href="tel:0723285453" class="btn-outline"><i class="fa-solid fa-phone"></i> 0723 285 453</a>
+          <a href="https://wa.me/40723285453" class="btn-wap"><i class="fa-brands fa-whatsapp"></i> Mesaj WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="border border-ink p-7">
+          <p class="label-gold">&mdash; Coordonate</p>
+          <p class="display text-2xl mt-1 font-semibold">Strada Lipscani 14</p>
+          <p class="text-muted text-sm">230079 Slatina, jud. Olt</p>
+
+          <div class="mt-6 hair"></div>
+
+          <div class="mt-6 space-y-3 text-sm">
+            <div class="flex items-center gap-3"><i class="fa-solid fa-phone w-5 text-gold"></i> 0723 285 453</div>
+            <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp w-5 text-gold"></i> wa.me/40723285453</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-file-contract w-5 text-gold"></i> CUI 13322024</div>
+            <div class="flex items-center gap-3"><i class="fa-regular fa-calendar-check w-5 text-gold"></i> Est. 2000</div>
+          </div>
+
+          <a href="https://www.google.com/maps/place/DENTATUS+SRL/@44.429636,24.3577591,17z" class="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[.2em] text-gold underline">
+            <i class="fa-solid fa-location-dot"></i> Vezi pe hart&#259;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink text-pearl/70 py-10 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-[.2em]">
+    <span>&copy; 2026 Dentatus SRL</span>
+    <span>Slatina &middot; Olt &middot; Rom&#226;nia</span>
+    <span>Est. 2000 &middot; J28/162/2000</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2">
+  <a href="tel:0723285453" class="btn-ink">Sun&#259;</a>
+  <a href="https://wa.me/40723285453" class="btn-wap">WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Dentatus SRL",
+  "description": "Cabinet stomatologic in centrul istoric al Slatinei, pe Strada Lipscani. Activ din 2000.",
+  "telephone": "+40723285453",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Lipscani 14",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.429636, "longitude": 24.357759 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday"], "opens": "14:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "13:00", "closes": "19:00" }
+  ],
+  "foundingDate": "2000-08-31",
+  "priceRange": "$$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

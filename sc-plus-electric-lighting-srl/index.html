@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plus Electric &amp; Lighting Craiova | Instala&#539;ii Electrice &amp; Iluminat Stradal | 0722 363 356</title>
+<meta name="description" content="Plus Electric &amp; Lighting &mdash; electrician autorizat Craiova. Instala&#539;ii electrice, iluminat stradal, fotovoltaice, parastr&#259;snete. Emil Racovi&#539;&#259; 1E. 0722 363 356.">
+<meta name="keywords" content="electrician Craiova, instalatii electrice Craiova, iluminat stradal Dolj, fotovoltaice Craiova, Plus Electric Lighting, panouri solare Craiova, paratrasnet Craiova, bransamente electrice Dolj">
+<meta name="robots" content="index,follow">
+<meta name="author" content="SC Plus Electric &amp; Lighting SRL">
+<link rel="canonical" href="">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Plus Electric &amp; Lighting Craiova">
+<meta property="og:title" content="Plus Electric &amp; Lighting Craiova | 0722 363 356">
+<meta property="og:description" content="Electrician autorizat pentru instala&#539;ii rezidentiale &#537;i comerciale, iluminat stradal &#537;i fotovoltaice.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plus Electric &amp; Lighting Craiova">
+<meta name="twitter:description" content="Instala&#539;ii electrice, iluminat, fotovoltaice &middot; Dolj.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['Chivo', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif']
+      },
+      colors: {
+        'midnight-el': {
+          50: '#ecefff',
+          100: '#c5cdff',
+          300: '#6878cc',
+          500: '#2e3d80',
+          700: '#1a2454',
+          800: '#0f1639',
+          900: '#050821'
+        },
+        'volt-yellow': {
+          300: '#fdea70',
+          400: '#fbd82f',
+          500: '#e8c400',
+          600: '#b89c00'
+        },
+        'orange-warn': '#ff7b54',
+        'cyan-power': '#67e8f9',
+        'soft-bone': '#f5f7fa'
+      }
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #050821; }
+  .font-display { font-family: 'Chivo', sans-serif; letter-spacing: -0.015em; }
+  .bolt-glow {
+    filter: drop-shadow(0 0 20px rgba(251,216,47,0.4));
+  }
+  .grid-power {
+    background-image:
+      linear-gradient(rgba(251,216,47,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(251,216,47,0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .volt-badge {
+    background: #fbd82f;
+    color: #050821;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-family: 'Chivo';
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .circuit-line {
+    background-image: repeating-linear-gradient(90deg,
+      #fbd82f 0 12px, transparent 12px 18px);
+    height: 2px;
+  }
+  .power-box {
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  }
+  html { scroll-behavior: smooth; }
+
+  /* Gallery floating animations */
+  @keyframes floaty-main {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(0.4deg); }
+  }
+  @keyframes floaty-side-a {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-12px) rotate(-2deg); }
+  }
+  @keyframes floaty-side-b {
+    0%, 100% { transform: translateY(0) rotate(1deg); }
+    50% { transform: translateY(10px) rotate(2deg); }
+  }
+  @keyframes spark-rise {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.65; }
+    90% { opacity: 0.5; }
+    100% { transform: translate(30px, -120vh) rotate(280deg); opacity: 0; }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 20px 50px -18px rgba(251,216,47,0.45), 0 0 0 0 rgba(251,216,47,0.0); }
+    50% { box-shadow: 0 28px 70px -10px rgba(251,216,47,0.65), 0 0 0 6px rgba(251,216,47,0.08); }
+  }
+  .floaty-main { animation: floaty-main 5.5s ease-in-out infinite; }
+  .floaty-side-a { animation: floaty-side-a 6.5s ease-in-out infinite; }
+  .floaty-side-b { animation: floaty-side-b 7.2s ease-in-out infinite; }
+  .glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
+  .gallery-fade { transition: opacity 350ms ease, transform 450ms ease; }
+  .gallery-fade.is-changing { opacity: 0; transform: scale(0.97); }
+
+  .spark {
+    position: absolute;
+    color: rgba(251,216,47,0.6);
+    pointer-events: none;
+    animation: spark-rise 14s linear infinite;
+    font-size: 14px;
+    will-change: transform, opacity;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .floaty-main, .floaty-side-a, .floaty-side-b, .glow-pulse, .spark { animation: none !important; }
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Top -->
+<div class="bg-midnight-el-900 text-volt-yellow-400 text-center text-xs py-2 tracking-[0.3em] uppercase">
+  <i class="fa-solid fa-bolt mr-2"></i> Electrician autorizat &middot; Craiova &middot; Dolj
+</div>
+
+<!-- Nav -->
+<header class="bg-soft-bone border-b-2 border-midnight-el-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-12 h-12 bg-volt-yellow-400 flex items-center justify-center text-midnight-el-900 power-box">
+        <i class="fa-solid fa-bolt text-lg"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-xl font-black text-midnight-el-900">Plus Electric &amp; Lighting</div>
+        <div class="text-[10px] tracking-[0.4em] uppercase text-midnight-el-500">Craiova &middot; instala&#539;ii &amp; iluminat</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-midnight-el-800">
+      <a href="#firma" class="hover:text-volt-yellow-600">Firma</a>
+      <a href="#servicii" class="hover:text-volt-yellow-600">Servicii</a>
+      <a href="#acoperire" class="hover:text-volt-yellow-600">Acoperire</a>
+      <a href="#proiecte" class="hover:text-volt-yellow-600">Proiecte</a>
+      <a href="#galerie" class="hover:text-volt-yellow-600">Galerie</a>
+      <a href="#contact" class="hover:text-volt-yellow-600">Contact</a>
+    </nav>
+    <a href="tel:0722363356" class="hidden md:inline-flex items-center gap-2 bg-midnight-el-800 hover:bg-midnight-el-900 text-volt-yellow-400 px-5 py-2.5 text-sm font-bold">
+      <i class="fa-solid fa-phone"></i> 0722 363 356
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="py-20 md:py-28 bg-midnight-el-900 text-soft-bone grid-power relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-10 items-center relative">
+    <div class="lg:col-span-7" data-aos="fade-right">
+      <div class="volt-badge mb-6">11 ani &middot; autorizare ANRE</div>
+      <h1 class="font-display font-black text-6xl md:text-8xl leading-[0.9]">
+        Curent curat.<br>
+        Instala&#539;ii <span class="text-volt-yellow-400">sigure</span>.<br>
+        Lumin&#259; care<br>
+        <span class="text-volt-yellow-400">st&#259; pe pozi&#539;ie</span>.
+      </h1>
+      <p class="mt-8 text-lg text-soft-bone/85 max-w-xl">
+        Plus Electric &amp; Lighting este o firm&#259; din Craiova, autorizat&#259; pentru instala&#539;ii electrice de curenți tari &#537;i slabi, iluminat stradal, iluminat decorativ &#537;i sisteme fotovoltaice. Lucr&#259;m pentru persoane fizice &#537;i firme &mdash; de la consult&#259;ri pân&#259; la execu&#539;ii la cheie.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="tel:0722363356" class="bg-volt-yellow-400 hover:bg-volt-yellow-300 text-midnight-el-900 px-8 py-4 font-bold inline-flex items-center gap-3 uppercase tracking-wider">
+          <i class="fa-solid fa-phone-volume"></i> 0722 363 356
+        </a>
+        <a href="https://wa.me/40722363356" class="border-2 border-volt-yellow-400 text-volt-yellow-400 hover:bg-volt-yellow-400 hover:text-midnight-el-900 px-8 py-4 font-bold inline-flex items-center gap-3 uppercase tracking-wider">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5" data-aos="fade-left">
+      <div class="relative">
+        <div class="bg-midnight-el-800 border-2 border-volt-yellow-400/40 p-8 power-box">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-3 h-3 bg-volt-yellow-400 rounded-full animate-pulse"></div>
+            <span class="font-display text-sm uppercase tracking-widest text-volt-yellow-400">Status &middot; ACTIV</span>
+          </div>
+          <div class="font-display text-4xl font-black mb-6">Capabilit&#259;&#539;i operative</div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center border-b border-volt-yellow-400/20 pb-2">
+              <span class="text-sm uppercase tracking-widest">Echipa</span>
+              <span class="font-display text-2xl font-black text-volt-yellow-400">30+</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-volt-yellow-400/20 pb-2">
+              <span class="text-sm uppercase tracking-widest">Loca&#539;ii lucrate</span>
+              <span class="font-display text-2xl font-black text-volt-yellow-400">Dolj + 5 jud.</span>
+            </div>
+            <div class="flex justify-between items-center border-b border-volt-yellow-400/20 pb-2">
+              <span class="text-sm uppercase tracking-widest">Autorizare</span>
+              <span class="font-display text-2xl font-black text-volt-yellow-400">ANRE</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-sm uppercase tracking-widest">Program</span>
+              <span class="font-display text-2xl font-black text-volt-yellow-400">L-V 9-17</span>
+            </div>
+          </div>
+          <div class="circuit-line mt-6"></div>
+        </div>
+        <div class="absolute -top-5 -right-5 bg-orange-warn text-soft-bone px-4 py-2 font-display font-black text-sm uppercase tracking-wide rotate-6 shadow-lg">
+          <i class="fa-solid fa-bolt-lightning mr-1"></i> Urgen&#539;e
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Firma -->
+<section id="firma" class="py-20 bg-soft-bone">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <div class="volt-badge mb-4" style="background: #050821; color: #fbd82f;">DESPRE FIRM&#258;</div>
+      <h2 class="font-display font-black text-5xl md:text-6xl text-midnight-el-900 leading-[0.95]">Un electrician care <span class="text-volt-yellow-600">respect&#259; NORMEle</span></h2>
+      <p class="mt-5 text-midnight-el-800 text-lg">SC Plus Electric &amp; Lighting func&#539;ioneaz&#259; din 2014 pe strada Emil Racoviț&#259; 1E, Craiova. Ne-am specializat în instala&#539;ii electrice &#537;i iluminat, cu proiecte atât în Dolj, cât &#537;i în jude&#539;ele învecinate (B&#259;ile&#537;ti, Bechet, Calafat, Dăbuleni, Filia&#537;i, Segarcea).</p>
+      <p class="mt-4 text-midnight-el-800 text-lg">Lucr&#259;m autorizat ANRE, cu electricieni califica&#539;i &#537;i documenta&#539;ie conform&#259;. Instalaia pe care o execu&#539;iunez trece inspectia tehnic&#259; &#537;i se poate pune în func&#539;iune de distribuitor f&#259;r&#259; probleme.</p>
+      <div class="mt-8 grid grid-cols-3 gap-3">
+        <div class="text-center">
+          <div class="font-display text-5xl font-black text-volt-yellow-600">2014</div>
+          <div class="text-xs uppercase tracking-widest text-midnight-el-500 mt-1">an înfiin&#539;are</div>
+        </div>
+        <div class="text-center">
+          <div class="font-display text-5xl font-black text-volt-yellow-600">30</div>
+          <div class="text-xs uppercase tracking-widest text-midnight-el-500 mt-1">angaja&#539;i</div>
+        </div>
+        <div class="text-center">
+          <div class="font-display text-5xl font-black text-volt-yellow-600">+140%</div>
+          <div class="text-xs uppercase tracking-widest text-midnight-el-500 mt-1">cre&#537;tere 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="bg-midnight-el-900 text-soft-bone p-8 rounded-lg border-t-4 border-volt-yellow-400">
+        <div class="text-xs uppercase tracking-[0.4em] text-volt-yellow-400 mb-4">// certific&#259;ri</div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-certificate text-volt-yellow-400 text-xl mt-1"></i>
+            <div>
+              <h3 class="font-display font-bold text-lg">Autorizare ANRE</h3>
+              <p class="text-sm text-soft-bone/75">Pentru instala&#539;ii electrice de joas&#259; &#537;i medie tensiune</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-certificate text-volt-yellow-400 text-xl mt-1"></i>
+            <div>
+              <h3 class="font-display font-bold text-lg">Electricieni califica&#539;i</h3>
+              <p class="text-sm text-soft-bone/75">Forma&#539;i tehnic &#537;i cu experien&#539;&#259; practic&#259; pe teren</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-certificate text-volt-yellow-400 text-xl mt-1"></i>
+            <div>
+              <h3 class="font-display font-bold text-lg">Asigurare profesional&#259;</h3>
+              <p class="text-sm text-soft-bone/75">Pentru proiecte de execu&#539;ie, cu garan&#539;ie pentru lucrare</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-certificate text-volt-yellow-400 text-xl mt-1"></i>
+            <div>
+              <h3 class="font-display font-bold text-lg">Documenta&#539;ie conform&#259;</h3>
+              <p class="text-sm text-soft-bone/75">Scheme, m&#259;sur&#259;tori, rapoarte tehnice, predare-primire</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicii -->
+<section id="servicii" class="py-20 bg-midnight-el-900 text-soft-bone grid-power">
+  <div class="max-w-7xl mx-auto px-5 relative">
+    <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+      <div class="volt-badge mb-4">SERVICII COMPLETE</div>
+      <h2 class="font-display font-black text-5xl md:text-6xl">Ce putem executa<br>pentru tine</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-midnight-el-800 border border-volt-yellow-400/40 p-6 power-box hover:border-volt-yellow-400 transition" data-aos="fade-up">
+        <div class="font-display text-4xl font-black text-volt-yellow-400">01</div>
+        <i class="fa-solid fa-house-laptop text-2xl text-volt-yellow-300 mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Instala&#539;ii reziden&#539;iale</h3>
+        <p class="text-sm text-soft-bone/75 mt-2">Execu&#539;ie complet&#259; a instala&#539;iei electrice pentru case, apartamente, vile.</p>
+      </div>
+      <div class="bg-volt-yellow-400 text-midnight-el-900 p-6 power-box" data-aos="fade-up" data-aos-delay="50">
+        <div class="font-display text-4xl font-black">02</div>
+        <i class="fa-solid fa-building text-2xl mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Instala&#539;ii comerciale</h3>
+        <p class="text-sm mt-2 opacity-95">Hale, birouri, spa&#539;ii comerciale. Tablouri electrice dimensionate pentru consum industrial.</p>
+      </div>
+      <div class="bg-midnight-el-800 border border-volt-yellow-400/40 p-6 power-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-display text-4xl font-black text-volt-yellow-400">03</div>
+        <i class="fa-solid fa-street-view text-2xl text-volt-yellow-300 mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Iluminat stradal</h3>
+        <p class="text-sm text-soft-bone/75 mt-2">Re&#539;ele de iluminat public &#537;i stradal pentru primării, parcuri industriale, incinte.</p>
+      </div>
+      <div class="bg-midnight-el-800 border border-volt-yellow-400/40 p-6 power-box" data-aos="fade-up" data-aos-delay="150">
+        <div class="font-display text-4xl font-black text-volt-yellow-400">04</div>
+        <i class="fa-solid fa-solar-panel text-2xl text-volt-yellow-300 mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Fotovoltaice</h3>
+        <p class="text-sm text-soft-bone/75 mt-2">Sisteme fotovoltaice pentru autoconsum sau injec&#539;ie în re&#539;ea, on-grid &#537;i off-grid.</p>
+      </div>
+      <div class="bg-midnight-el-800 border border-volt-yellow-400/40 p-6 power-box" data-aos="fade-up">
+        <div class="font-display text-4xl font-black text-volt-yellow-400">05</div>
+        <i class="fa-solid fa-bolt-lightning text-2xl text-volt-yellow-300 mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Parastr&#259;snete</h3>
+        <p class="text-sm text-soft-bone/75 mt-2">Sisteme de protec&#539;ie împotriva fulgerelor pentru cl&#259;diri reziden&#539;iale &#537;i industriale.</p>
+      </div>
+      <div class="bg-midnight-el-800 border border-volt-yellow-400/40 p-6 power-box" data-aos="fade-up" data-aos-delay="50">
+        <div class="font-display text-4xl font-black text-volt-yellow-400">06</div>
+        <i class="fa-solid fa-water text-2xl text-volt-yellow-300 mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Împ&#259;mânt&#259;ri</h3>
+        <p class="text-sm text-soft-bone/75 mt-2">Priz&#259; de p&#259;mânt, echipotentializare, m&#259;sur&#259;tori rezisten&#539;&#259; de dispersie.</p>
+      </div>
+      <div class="bg-midnight-el-800 border border-volt-yellow-400/40 p-6 power-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="font-display text-4xl font-black text-volt-yellow-400">07</div>
+        <i class="fa-solid fa-pen-ruler text-2xl text-volt-yellow-300 mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Proiectare</h3>
+        <p class="text-sm text-soft-bone/75 mt-2">Proiecte pentru instala&#539;iile electrice, scheme tablouri, planificare tras&#259;ri cabluri.</p>
+      </div>
+      <div class="bg-orange-warn text-soft-bone p-6 power-box" data-aos="fade-up" data-aos-delay="150">
+        <div class="font-display text-4xl font-black">08</div>
+        <i class="fa-solid fa-plug-circle-check text-2xl mt-3"></i>
+        <h3 class="font-display text-xl font-bold mt-3">Bran&#537;amente</h3>
+        <p class="text-sm mt-2 opacity-95">Bran&#537;amente electrice &#537;i gaze, cu documenta&#539;ia complet&#259; pentru distribuitor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Acoperire -->
+<section id="acoperire" class="py-20 bg-soft-bone">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="volt-badge mb-4" style="background: #050821; color: #fbd82f;">ACOPERIRE GEOGRAFIC&#258;</div>
+      <h2 class="font-display font-black text-5xl md:text-6xl text-midnight-el-900">Unde <span class="text-volt-yellow-600">ajungem</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 mb-10">
+      <div class="bg-midnight-el-900 text-soft-bone p-7 rounded-lg" data-aos="fade-up">
+        <i class="fa-solid fa-bullseye text-volt-yellow-400 text-3xl"></i>
+        <h3 class="font-display text-2xl font-bold mt-3">Baza opera&#539;ional&#259;</h3>
+        <div class="font-display text-3xl text-volt-yellow-400 mt-1">Craiova</div>
+        <p class="text-sm text-soft-bone/75 mt-2">Str. Emil Racoviț&#259; 1E. De aici coordon&#259;m toate echipele &#537;i proiectele.</p>
+      </div>
+      <div class="bg-volt-yellow-400 text-midnight-el-900 p-7 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-compass text-3xl"></i>
+        <h3 class="font-display text-2xl font-bold mt-3">Zona prioritar&#259;</h3>
+        <div class="font-display text-3xl mt-1">Jude&#539;ul Dolj</div>
+        <p class="text-sm mt-2 opacity-90">Interven&#539;ii zilnice în tot jude&#539;ul &mdash; de la reziden&#539;ial, la municipal, la industrial.</p>
+      </div>
+      <div class="bg-midnight-el-900 text-soft-bone p-7 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-map text-volt-yellow-400 text-3xl"></i>
+        <h3 class="font-display text-2xl font-bold mt-3">Jude&#539;e învecinate</h3>
+        <div class="font-display text-3xl text-volt-yellow-400 mt-1">Oltenia</div>
+        <p class="text-sm text-soft-bone/75 mt-2">Gorj, Olt, Mehedin&#539;i, Vâlcea &mdash; pe proiecte punctuale, la cerere.</p>
+      </div>
+    </div>
+
+    <div class="bg-midnight-el-50 border border-midnight-el-100 p-6 rounded">
+      <div class="text-xs uppercase tracking-widest text-volt-yellow-600 font-bold mb-3">Localit&#259;&#539;i uzuale în jude&#539;ul Dolj</div>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-3 text-sm">
+        <div class="text-midnight-el-800">Craiova</div>
+        <div class="text-midnight-el-800">B&#259;ile&#537;ti</div>
+        <div class="text-midnight-el-800">Bechet</div>
+        <div class="text-midnight-el-800">Calafat</div>
+        <div class="text-midnight-el-800">Dăbuleni</div>
+        <div class="text-midnight-el-800">Filia&#537;i</div>
+        <div class="text-midnight-el-800">Segarcea</div>
+        <div class="text-midnight-el-800">Sadova</div>
+        <div class="text-midnight-el-800">Podari</div>
+        <div class="text-midnight-el-800">I&#537;alnița</div>
+        <div class="text-midnight-el-800">Melinești</div>
+        <div class="text-midnight-el-800">...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proiecte -->
+<section id="proiecte" class="py-20 bg-midnight-el-50">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="volt-badge mb-4">TIPURI DE PROIECTE</div>
+      <h2 class="font-display font-black text-5xl md:text-6xl text-midnight-el-900">Ce am <span class="text-volt-yellow-600">construit</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="bg-soft-bone border-l-4 border-volt-yellow-400 p-7" data-aos="fade-up">
+        <div class="flex items-start justify-between">
+          <h3 class="font-display text-2xl font-bold text-midnight-el-900">Ansambluri reziden&#539;iale</h3>
+          <i class="fa-solid fa-house-chimney text-volt-yellow-600 text-2xl"></i>
+        </div>
+        <p class="text-sm text-midnight-el-700 mt-3">Instala&#539;ii electrice complete pentru blocuri, ansambluri de case, comuniti noi. Instala&#539;ii interioare + bran&#537;ament + iluminat exterior.</p>
+      </div>
+      <div class="bg-soft-bone border-l-4 border-volt-yellow-400 p-7" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-start justify-between">
+          <h3 class="font-display text-2xl font-bold text-midnight-el-900">Hale &amp; spa&#539;ii industriale</h3>
+          <i class="fa-solid fa-industry text-volt-yellow-600 text-2xl"></i>
+        </div>
+        <p class="text-sm text-midnight-el-700 mt-3">Tablouri electrice dimensionate pentru echipamente industriale, iluminat hale, împ&#259;mânt&#259;ri specifice.</p>
+      </div>
+      <div class="bg-soft-bone border-l-4 border-volt-yellow-400 p-7" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-start justify-between">
+          <h3 class="font-display text-2xl font-bold text-midnight-el-900">Iluminat public în localit&#259;&#539;i</h3>
+          <i class="fa-solid fa-lightbulb text-volt-yellow-600 text-2xl"></i>
+        </div>
+        <p class="text-sm text-midnight-el-700 mt-3">Proiecte pentru primării din jude&#539; &mdash; modernizarea iluminatului stradal, tehnologie LED, re&#539;ele de pe stâlpi.</p>
+      </div>
+      <div class="bg-soft-bone border-l-4 border-volt-yellow-400 p-7" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-start justify-between">
+          <h3 class="font-display text-2xl font-bold text-midnight-el-900">Sisteme fotovoltaice</h3>
+          <i class="fa-solid fa-solar-panel text-volt-yellow-600 text-2xl"></i>
+        </div>
+        <p class="text-sm text-midnight-el-700 mt-3">Instala&#539;ii cu panouri pe acoperi&#537; sau pe sol. Conectate la re&#539;ea pentru autoconsum sau pentru vânzare energie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Galerie / Lucrari executate -->
+<section id="galerie" class="py-20 md:py-24 bg-midnight-el-900 text-soft-bone grid-power relative overflow-hidden">
+  <!-- Floating sparks (decorative) -->
+  <i class="fa-solid fa-bolt spark" style="left:6%; top:90%; animation-delay:0s;"></i>
+  <i class="fa-solid fa-bolt spark" style="left:18%; top:95%; animation-delay:3s; font-size:10px;"></i>
+  <i class="fa-solid fa-bolt spark" style="left:34%; top:90%; animation-delay:6s;"></i>
+  <i class="fa-solid fa-bolt spark" style="left:52%; top:95%; animation-delay:1.5s; font-size:11px;"></i>
+  <i class="fa-solid fa-bolt spark" style="left:68%; top:90%; animation-delay:8s;"></i>
+  <i class="fa-solid fa-bolt spark" style="left:82%; top:95%; animation-delay:4s; font-size:12px;"></i>
+  <i class="fa-solid fa-bolt spark" style="left:94%; top:90%; animation-delay:10s;"></i>
+
+  <div class="max-w-7xl mx-auto px-5 relative">
+    <div class="text-center max-w-2xl mx-auto mb-10 md:mb-14" data-aos="fade-up">
+      <div class="volt-badge mb-4">PORTOFOLIU FOTO</div>
+      <h2 class="font-display font-black text-5xl md:text-6xl">Lucr&#259;ri <span class="text-volt-yellow-400">executate</span></h2>
+      <p class="mt-4 text-soft-bone/75 text-base md:text-lg">Imagini de pe teren — fotovoltaice, tablouri electrice, iluminat &#537;i lucr&#259;ri pe re&#539;ea.</p>
+    </div>
+
+    <!-- Carousel -->
+    <div class="gallery-carousel relative" data-aos="zoom-in" data-aos-delay="100">
+      <div class="gallery-stage relative h-[280px] sm:h-[360px] md:h-[460px] lg:h-[540px] select-none">
+
+        <!-- Prev preview -->
+        <button type="button" aria-label="Imagine anterioar&#259;" class="gallery-side-prev absolute top-1/2 left-0 -translate-y-1/2 w-[20%] sm:w-[22%] md:w-[24%] h-[60%] sm:h-[70%] z-10 cursor-pointer group">
+          <div class="floaty-side-a h-full w-full">
+            <img class="gallery-prev-img w-full h-full object-cover power-box opacity-50 group-hover:opacity-90 transition border-2 border-volt-yellow-400/40 group-hover:border-volt-yellow-400" src="images/2ead5479-e0f6-4f25-8c60-072ae791c1e1.jpg" alt="Lucrare anterioar&#259;">
+          </div>
+        </button>
+
+        <!-- Main -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] sm:w-[55%] md:w-[50%] h-[95%] z-20">
+          <div class="floaty-main h-full relative">
+            <div class="glow-pulse h-full">
+              <img class="gallery-main-img gallery-fade w-full h-full object-cover power-box border-4 border-volt-yellow-400" src="images/194c0b18-d6d9-4556-ac87-82b726f7a4b6.jpg" alt="Sistem fotovoltaic montat pe acoperi&#537;">
+            </div>
+            <div class="absolute -top-3 -left-3 bg-volt-yellow-400 text-midnight-el-900 px-3 py-1.5 font-display font-black text-[10px] sm:text-xs uppercase tracking-widest power-box">
+              <i class="fa-solid fa-camera mr-1"></i><span class="gallery-counter">1 / 44</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next preview -->
+        <button type="button" aria-label="Imagine urm&#259;toare" class="gallery-side-next absolute top-1/2 right-0 -translate-y-1/2 w-[20%] sm:w-[22%] md:w-[24%] h-[60%] sm:h-[70%] z-10 cursor-pointer group">
+          <div class="floaty-side-b h-full w-full">
+            <img class="gallery-next-img w-full h-full object-cover power-box opacity-50 group-hover:opacity-90 transition border-2 border-volt-yellow-400/40 group-hover:border-volt-yellow-400" src="images/28888d74-29fa-41d3-bc3e-27edc2574957.jpg" alt="Lucrare urm&#259;toare">
+          </div>
+        </button>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center justify-center gap-4 sm:gap-6 mt-10 md:mt-12">
+        <button type="button" aria-label="Inapoi" class="gallery-btn-prev w-12 h-12 sm:w-14 sm:h-14 bg-volt-yellow-400 hover:bg-soft-bone text-midnight-el-900 power-box flex items-center justify-center transition-transform hover:-translate-x-1 active:scale-95">
+          <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <div class="gallery-counter-big font-display font-black text-2xl sm:text-3xl text-volt-yellow-400 min-w-[100px] text-center tabular-nums">1 / 44</div>
+        <button type="button" aria-label="Inainte" class="gallery-btn-next w-12 h-12 sm:w-14 sm:h-14 bg-volt-yellow-400 hover:bg-soft-bone text-midnight-el-900 power-box flex items-center justify-center transition-transform hover:translate-x-1 active:scale-95">
+          <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 bg-soft-bone">
+  <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <div class="volt-badge mb-4" style="background: #050821; color: #fbd82f;">CONTACT &amp; SEDIU</div>
+      <h2 class="font-display font-black text-5xl md:text-6xl text-midnight-el-900 leading-[0.95]">Str. Emil Racoviț&#259; 1E, <span class="text-volt-yellow-600">Craiova</span></h2>
+      <p class="mt-5 text-midnight-el-800 text-lg">Sediu &#537;i birou operativ în Craiova. Pentru consulta&#539;ii tehnice &#537;i ofertare, programaz&#259;-ne prin telefon sau prin WhatsApp.</p>
+
+      <div class="mt-8 bg-midnight-el-900 text-soft-bone p-6 rounded">
+        <div class="text-xs uppercase tracking-widest text-volt-yellow-400 mb-3">Program birou</div>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between py-1 border-b border-volt-yellow-400/20">
+            <span>Luni &mdash; Vineri</span>
+            <span class="font-display text-volt-yellow-400 font-bold">09:00 &mdash; 17:00</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-volt-yellow-400/20">
+            <span>Sâmb&#259;t&#259;</span>
+            <span class="text-soft-bone/50">Închis</span>
+          </div>
+          <div class="flex justify-between py-1">
+            <span>Duminic&#259;</span>
+            <span class="text-soft-bone/50">Închis</span>
+          </div>
+          <div class="flex justify-between pt-2 border-t border-volt-yellow-400/40">
+            <span class="text-orange-warn font-semibold">Urgen&#539;e</span>
+            <span class="font-display text-orange-warn font-bold">la cerere</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="tel:0722363356" class="bg-volt-yellow-400 hover:bg-volt-yellow-300 text-midnight-el-900 px-7 py-3 font-bold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-solid fa-phone-volume"></i> 0722 363 356
+        </a>
+        <a href="https://wa.me/40722363356" class="bg-midnight-el-800 text-soft-bone hover:bg-midnight-el-900 px-7 py-3 font-bold uppercase tracking-wider inline-flex items-center gap-3">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="border-4 border-volt-yellow-400 rounded">
+        <iframe src="https://www.google.com/maps?q=44.291829,23.797828&hl=ro&z=17&output=embed" width="100%" height="500" style="border:0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-midnight-el-900 text-soft-bone/80 py-14 border-t-4 border-volt-yellow-400">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-volt-yellow-400 flex items-center justify-center text-midnight-el-900 power-box"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <div class="font-display text-xl font-black text-soft-bone">Plus Electric &amp; Lighting</div>
+          <div class="text-[10px] tracking-[0.4em] uppercase text-volt-yellow-400">Craiova &middot; ANRE autorizat</div>
+        </div>
+      </div>
+      <p class="mt-5 text-sm max-w-md">Firm&#259; autorizat&#259; ANRE pentru instala&#539;ii electrice &#537;i iluminat, cu sediul în Craiova. Proiecte reziden&#539;iale, comerciale, iluminat stradal &#537;i sisteme fotovoltaice.</p>
+    </div>
+    <div>
+      <div class="font-display text-lg text-soft-bone mb-4">Contact</div>
+      <ul class="text-sm space-y-2">
+        <li><i class="fa-solid fa-phone w-5 text-volt-yellow-400"></i> 0722 363 356</li>
+        <li><i class="fa-brands fa-whatsapp w-5 text-volt-yellow-400"></i> WhatsApp</li>
+        <li><i class="fa-solid fa-location-dot w-5 text-volt-yellow-400"></i> Emil Racoviț&#259; 1E</li>
+        <li><i class="fa-solid fa-city w-5 text-volt-yellow-400"></i> Craiova, Dolj, 200541</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-display text-lg text-soft-bone mb-4">Servicii</div>
+      <ul class="text-sm space-y-2">
+        <li>Instala&#539;ii reziden&#539;iale &#537;i comerciale</li>
+        <li>Iluminat stradal</li>
+        <li>Fotovoltaice</li>
+        <li>Parastr&#259;snete &amp; împ&#259;mânt&#259;ri</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 mt-10 pt-6 border-t border-soft-bone/10 text-xs flex flex-wrap justify-between gap-3">
+    <div>&copy; 2026 SC Plus Electric &amp; Lighting SRL. Toate drepturile rezervate.</div>
+    <div>Electrician autorizat &middot; Craiova</div>
+  </div>
+</footer>
+
+<!-- Mobile sticky -->
+<div class="fixed bottom-0 inset-x-0 bg-midnight-el-900 flex md:hidden z-50 border-t-4 border-volt-yellow-400">
+  <a href="tel:0722363356" class="flex-1 py-4 text-center text-sm font-bold uppercase text-soft-bone border-r border-midnight-el-700">
+    <i class="fa-solid fa-phone mr-2 text-volt-yellow-400"></i> Sun&#259;
+  </a>
+  <a href="https://wa.me/40722363356" class="flex-1 py-4 text-center text-sm font-bold uppercase text-soft-bone">
+    <i class="fa-brands fa-whatsapp mr-2 text-volt-yellow-400"></i> WhatsApp
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "SC Plus Electric &amp; Lighting SRL",
+  "description": "Electrician autorizat pentru instala&#539;ii electrice, iluminat stradal &#537;i fotovoltaice în Craiova",
+  "telephone": "+40722363356",
+  "url": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Emil Racoviț&#259; 1E",
+    "addressLocality": "Craiova",
+    "postalCode": "200541",
+    "addressRegion": "Dolj",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.291829,
+    "longitude": 23.797828
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.6",
+    "reviewCount": "8"
+  }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 700, once: true, offset: 80});</script>
+
+<script>
+(function () {
+  var galleryImages = [
+    'images/194c0b18-d6d9-4556-ac87-82b726f7a4b6.jpg',
+    'images/196c4be7-09db-415a-9fe1-fe28d8e676f7.jpg',
+    'images/1f2732a3-0781-4081-a276-85ef26a18959.jpg',
+    'images/28888d74-29fa-41d3-bc3e-27edc2574957.jpg',
+    'images/2ead5479-e0f6-4f25-8c60-072ae791c1e1.jpg',
+    'images/3e3f7e63-7d07-4aea-ba97-e3543f54e094.jpg',
+    'images/3f2b0650-0160-477d-8a25-921b09ba6b53.jpg',
+    'images/4265b113-f251-4586-bd5c-d88271f1e376.jpg',
+    'images/458521b9-10b0-4022-a705-faea6c25a3f8.jpg',
+    'images/4af5de8e-a8c3-407d-87e8-e4e0ed478068.jpg',
+    'images/4cd110bd-cdf7-4a2c-8ad9-be83883b1994.jpg',
+    'images/4d1145f0-5609-4af6-a064-95700c3b3104.jpg',
+    'images/4efc268c-cf1b-4a1f-8845-66e86a04a857.jpg',
+    'images/4f67061c-6d68-4c2c-bd7c-2a55af5287a1.jpg',
+    'images/59b0e0a5-f23e-424f-a7ae-f2a2b172cf17.jpg',
+    'images/6292de12-ed68-4b09-ac47-4a2e8cb34d8c.jpg',
+    'images/70a1cde7-5c2b-4432-b0b7-16c82de54ce8.jpg',
+    'images/76b3f2de-ace0-40e0-a052-cae98ee0c692.jpg',
+    'images/7ae9bfc9-dc35-4063-b04c-eef5e4abc37b.jpg',
+    'images/7b948d93-7b4e-47ad-a030-c86f2ee05e46.jpg',
+    'images/7cef6b3a-82a2-476a-ada7-09edbfac60e5.jpg',
+    'images/7e804934-3523-4722-b853-11c6c8c9e91d.jpg',
+    'images/8c5bc816-88de-4ba1-80a2-0d530d692064.jpg',
+    'images/8f043172-2406-46ee-be4e-26826c140f0d.jpg',
+    'images/92a809ae-09fc-4f92-baed-e1759a2f4d8f.jpg',
+    'images/958c73ad-af05-40f6-a6eb-1207365820a4.jpg',
+    'images/9831fbf3-1aa2-4f1f-a190-be65dc0ce277.jpg',
+    'images/994bfcfd-7d76-4e55-a9c4-8bfc53305d5d.jpg',
+    'images/a1ac9f36-8216-4a2a-aab8-0edb52845773.jpg',
+    'images/a2689e9e-c222-467a-9f88-125ebec5f094.jpg',
+    'images/a99ab44a-3417-4c8c-b64e-5d43a9460df4.jpg',
+    'images/b4ed512d-da4d-47f5-a446-71e17cb2e8d7.jpg',
+    'images/bc37775c-babd-4c86-a704-276c50d0196e.jpg',
+    'images/c3303bd4-eee0-4463-ba28-7bb628a40a90.jpg',
+    'images/ddb94cd5-678e-4031-8053-5da39a5ed0f5.jpg',
+    'images/e1c6d4c7-81a1-4deb-9c60-7079176ef19c.jpg',
+    'images/e8fb469f-66de-4b20-924d-94d7deaad736.jpg',
+    'images/e98ad81b-3e51-4b8c-9f3f-88c0973c390d.jpg',
+    'images/eab12d85-d3d0-4978-8abb-08afd757b4d4.jpg',
+    'images/f2549da5-f3c1-4c6d-a215-2e6f1cc01447.jpg',
+    'images/f36c61f0-4799-442e-957a-9d783592d8d5.jpg',
+    'images/f51f98e9-ab1c-4658-80b6-ba1b8a9143b5.jpg',
+    'images/f838dea6-56b2-4839-a430-8cb883811b3d.jpg',
+    'images/fcd85e24-1376-4366-a4af-a9786255fcb6.jpg'
+  ];
+
+  var idx = 0;
+  var total = galleryImages.length;
+  var mainImg = document.querySelector('.gallery-main-img');
+  var prevImg = document.querySelector('.gallery-prev-img');
+  var nextImg = document.querySelector('.gallery-next-img');
+  var counter = document.querySelector('.gallery-counter');
+  var counterBig = document.querySelector('.gallery-counter-big');
+
+  if (!mainImg) return;
+
+  function render() {
+    var prevI = (idx - 1 + total) % total;
+    var nextI = (idx + 1) % total;
+    mainImg.classList.add('is-changing');
+    setTimeout(function () {
+      mainImg.src = galleryImages[idx];
+      mainImg.classList.remove('is-changing');
+    }, 200);
+    prevImg.src = galleryImages[prevI];
+    nextImg.src = galleryImages[nextI];
+    var label = (idx + 1) + ' / ' + total;
+    if (counter) counter.textContent = label;
+    if (counterBig) counterBig.textContent = label;
+  }
+
+  function go(i) { idx = ((i % total) + total) % total; render(); }
+  function next() { go(idx + 1); }
+  function prev() { go(idx - 1); }
+
+  document.querySelector('.gallery-btn-prev').addEventListener('click', prev);
+  document.querySelector('.gallery-btn-next').addEventListener('click', next);
+  document.querySelector('.gallery-side-prev').addEventListener('click', prev);
+  document.querySelector('.gallery-side-next').addEventListener('click', next);
+
+  // Keyboard arrows when carousel is in view
+  document.addEventListener('keydown', function (e) {
+    var stage = document.querySelector('.gallery-stage');
+    if (!stage) return;
+    var r = stage.getBoundingClientRect();
+    var inView = r.top < window.innerHeight && r.bottom > 0;
+    if (!inView) return;
+    if (e.key === 'ArrowLeft') prev();
+    else if (e.key === 'ArrowRight') next();
+  });
+
+  // Touch swipe on mobile
+  var stage = document.querySelector('.gallery-stage');
+  var touchStartX = 0;
+  stage.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  stage.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].screenX - touchStartX;
+    if (dx < -40) next();
+    else if (dx > 40) prev();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

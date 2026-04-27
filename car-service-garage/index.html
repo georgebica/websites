@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service Garage | Service Auto Slatina</title>
+    <meta name="description" content="Service auto profesional în Slatina. Reparații, întreținere, diagnosticare. Str. Cireașov 10. Rating 4.5/5 pe Google. Programări: 0747 872 216.">
+    <meta name="keywords" content="service auto Slatina, reparații auto Slatina, Car Service Garage, mecanic auto Slatina">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gunmetal: '#37474F',
+                        'gunmetal-dark': '#263238',
+                        'gunmetal-light': '#546E7A',
+                        yellow: '#FDD835',
+                        'yellow-dark': '#F9A825',
+                        'yellow-light': '#FFEE58',
+                        dark: '#1A1A1A',
+                        'dark-mid': '#2D2D2D',
+                    },
+                    fontFamily: {
+                        heading: ['Teko', 'sans-serif'],
+                        body: ['Barlow', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Barlow', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Teko', sans-serif; letter-spacing: 0.02em; }
+        .industrial-grid {
+            background-image:
+                linear-gradient(rgba(253,216,53,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(253,216,53,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .hero-industrial {
+            background: linear-gradient(135deg, #1A1A1A 0%, #263238 50%, #37474F 100%);
+        }
+        .hazard-stripe {
+            background: repeating-linear-gradient(
+                45deg,
+                #FDD835,
+                #FDD835 10px,
+                #1A1A1A 10px,
+                #1A1A1A 20px
+            );
+            height: 6px;
+        }
+        .steel-card {
+            background: linear-gradient(145deg, #37474F, #263238);
+            border: 1px solid rgba(253,216,53,0.15);
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        .steel-card:hover {
+            border-color: rgba(253,216,53,0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        .bolt-icon::before {
+            content: '\f0e7';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+        }
+        .gear-spin {
+            animation: gearSpin 8s linear infinite;
+        }
+        @keyframes gearSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .wrench-bounce {
+            animation: wrenchBounce 2s ease-in-out infinite;
+        }
+        @keyframes wrenchBounce {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Car Service Garage",
+        "description": "Service auto profesional în Slatina. Reparații, întreținere, diagnosticare auto.",
+        "url": "",
+        "telephone": "+40747872216",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Str. Cireașov 10",
+            "addressLocality": "Slatina",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.440689,
+            "longitude": 24.379344
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "bestRating": "5",
+            "reviewCount": "17"
+        },
+        "accessibility": "Wheelchair accessible",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicii auto"
+        }
+    }
+    </script>
+</head>
+<body class="bg-dark text-white">
+
+    <!-- HAZARD STRIPE TOP -->
+    <div class="hazard-stripe fixed top-0 left-0 w-full z-[60]"></div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-[6px] left-0 w-full bg-dark/95 backdrop-blur-md shadow-lg z-50 border-b border-yellow/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-yellow rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-wrench text-dark text-lg"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="font-heading font-bold text-yellow text-xl md:text-2xl block uppercase">Car Service Garage</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8 font-body font-semibold text-sm uppercase tracking-wider">
+                    <a href="#servicii" class="text-white/70 hover:text-yellow transition-colors">Servicii</a>
+                    <a href="#avantaje" class="text-white/70 hover:text-yellow transition-colors">Avantaje</a>
+                    <a href="#recenzii" class="text-white/70 hover:text-yellow transition-colors">Recenzii</a>
+                    <a href="#contact" class="bg-yellow text-dark px-5 py-2.5 rounded-lg hover:bg-yellow-dark transition-colors font-bold">
+                        <i class="fa-solid fa-phone mr-2"></i>Programare
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-yellow text-2xl" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-mid border-t border-yellow/10">
+            <div class="px-4 py-4 space-y-3 font-body font-semibold text-sm uppercase tracking-wider">
+                <a href="#servicii" class="block py-2 text-white/70 hover:text-yellow">Servicii</a>
+                <a href="#avantaje" class="block py-2 text-white/70 hover:text-yellow">Avantaje</a>
+                <a href="#recenzii" class="block py-2 text-white/70 hover:text-yellow">Recenzii</a>
+                <a href="tel:0747872216" class="block bg-yellow text-dark text-center px-5 py-3 rounded-lg font-bold">
+                    <i class="fa-solid fa-phone mr-2"></i>0747 872 216
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-industrial min-h-screen flex items-center pt-24 relative overflow-hidden">
+        <div class="absolute inset-0 industrial-grid"></div>
+        <div class="absolute top-1/3 right-5 opacity-5">
+            <i class="fa-solid fa-gear text-[15rem] text-yellow gear-spin"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 bg-yellow/10 border border-yellow/30 text-yellow px-4 py-2 rounded text-sm font-bold uppercase tracking-wider mb-6">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.5/5 — 17 recenzii Google</span>
+                    </div>
+                    <h1 class="font-heading text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-none mb-6 uppercase">
+                        Service auto <span class="text-yellow">profesional</span>
+                    </h1>
+                    <p class="text-white/60 text-lg md:text-xl mb-8 leading-relaxed font-body">
+                        Reparații, întreținere și diagnosticare auto în Slatina. Mecanici cu experiență, echipamente moderne și prețuri corecte. Mașina ta e pe mâini bune.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:0747872216" class="bg-yellow hover:bg-yellow-dark text-dark font-body font-bold px-8 py-4 rounded-lg text-center transition-all shadow-lg hover:shadow-xl uppercase tracking-wider">
+                            <i class="fa-solid fa-phone mr-2"></i>Sună: 0747 872 216
+                        </a>
+                        <a href="#servicii" class="border-2 border-yellow/40 text-yellow font-body font-bold px-8 py-4 rounded-lg text-center hover:bg-yellow/10 transition-all uppercase tracking-wider">
+                            <i class="fa-solid fa-wrench mr-2"></i>Servicii
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="hidden md:flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 lg:w-96 lg:h-96 border-2 border-yellow/20 rounded-2xl flex items-center justify-center bg-gunmetal-dark/50 backdrop-blur-sm">
+                            <div class="text-center">
+                                <i class="fa-solid fa-wrench text-yellow text-8xl wrench-bounce"></i>
+                                <p class="text-white/40 font-heading text-2xl mt-6 uppercase tracking-widest">Service & Garage</p>
+                            </div>
+                        </div>
+                        <div class="absolute -top-3 -right-3 bg-yellow rounded-lg px-4 py-2 text-dark font-bold text-sm">
+                            <i class="fa-solid fa-wheelchair-move mr-1"></i>Accesibil
+                        </div>
+                        <div class="absolute -bottom-3 -left-3 bg-gunmetal rounded-lg px-4 py-2 text-yellow font-bold text-sm border border-yellow/30">
+                            <i class="fa-solid fa-calendar-check mr-1"></i>Cu programare
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HAZARD DIVIDER -->
+    <div class="hazard-stripe"></div>
+
+    <!-- INFO BAR -->
+    <section class="py-6 bg-gunmetal-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fa-solid fa-clock text-yellow text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-white/40 text-xs uppercase tracking-wider">Program</p>
+                        <p class="font-body font-bold text-white text-sm">L-V: 9:00–18:00</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-location-dot text-yellow text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-white/40 text-xs uppercase tracking-wider">Adresă</p>
+                        <p class="font-body font-bold text-white text-sm">Str. Cireașov 10</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-phone text-yellow text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-white/40 text-xs uppercase tracking-wider">Telefon</p>
+                        <a href="tel:0747872216" class="font-body font-bold text-yellow text-sm hover:text-yellow-light transition-colors">0747 872 216</a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-wheelchair-move text-yellow text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-white/40 text-xs uppercase tracking-wider">Acces</p>
+                        <p class="font-body font-bold text-white text-sm">Accesibil scaun rulant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII -->
+    <section id="servicii" class="py-16 md:py-24 bg-dark industrial-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-white uppercase">Servicii <span class="text-yellow">auto</span></h2>
+                <div class="hazard-stripe w-24 mx-auto mt-4 mb-4"></div>
+                <p class="text-white/50 text-lg max-w-2xl mx-auto">De la schimbul de ulei la reparații complexe — facem totul ca mașina ta să meargă perfect.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-car-battery text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Diagnosticare</h3>
+                    <p class="text-white/60 text-sm">Diagnosticare computerizată completă cu echipamente profesionale de ultimă generație.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-oil-can text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Schimb ulei & filtre</h3>
+                    <p class="text-white/60 text-sm">Schimb de ulei motor, ulei cutie, filtre de aer, ulei, combustibil și habitaclu.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-gears text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Mecanică generală</h3>
+                    <p class="text-white/60 text-sm">Reparații motor, cutie de viteze, suspensie, direcție și sisteme de transmisie.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-brake-warning text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Sistem de frânare</h3>
+                    <p class="text-white/60 text-sm">Verificare, reparare și înlocuire plăcuțe, discuri și sistem hidraulic de frânare.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-bolt text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Instalație electrică</h3>
+                    <p class="text-white/60 text-sm">Diagnosticare și reparare instalație electrică, alternator, electromotor și sisteme de iluminare.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-fan text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Climatizare</h3>
+                    <p class="text-white/60 text-sm">Verificare, încărcare și reparare sistem de aer condiționat auto. Igienizare instalație.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-tire text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Anvelope</h3>
+                    <p class="text-white/60 text-sm">Montare, echilibrare, aliniere geometrie roți și depozitare anvelope sezoniere.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-gauge-high text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Revizii periodice</h3>
+                    <p class="text-white/60 text-sm">Revizii complete conform specificațiilor producătorului, cu piese originale sau echivalente.</p>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="800">
+                    <div class="w-14 h-14 bg-yellow/10 rounded-lg flex items-center justify-center mb-4 border border-yellow/20">
+                        <i class="fa-solid fa-car-side text-yellow text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase mb-2">Pregătire ITP</h3>
+                    <p class="text-white/60 text-sm">Verificare completă și pregătire mașină pentru inspecția tehnică periodică.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVANTAJE -->
+    <section id="avantaje" class="py-16 md:py-24 bg-gunmetal-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-white uppercase">De ce <span class="text-yellow">noi</span></h2>
+                <div class="hazard-stripe w-24 mx-auto mt-4 mb-4"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-20 h-20 bg-yellow rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-user-gear text-dark text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase">Mecanici experți</h3>
+                    <p class="text-white/50 text-sm mt-2">Mecanici cu experiență și specializare pe multiple mărci de mașini.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-yellow rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-handshake text-dark text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase">Prețuri corecte</h3>
+                    <p class="text-white/50 text-sm mt-2">Tarife transparente, fără costuri ascunse. Știi exact cât plătești.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-yellow rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-clock text-dark text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase">Rapiditate</h3>
+                    <p class="text-white/50 text-sm mt-2">Reparații eficiente — îți primești mașina cât mai repede posibil.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-yellow rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fa-solid fa-shield-halved text-dark text-3xl"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-yellow uppercase">Garanție</h3>
+                    <p class="text-white/50 text-sm mt-2">Garanție pe lucrări și piese montate, pentru liniștea ta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENZII -->
+    <section id="recenzii" class="py-16 md:py-24 bg-dark industrial-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-white uppercase">Recenzii <span class="text-yellow">clienți</span></h2>
+                <div class="hazard-stripe w-24 mx-auto mt-4 mb-4"></div>
+                <div class="flex items-center justify-center gap-3 mt-4">
+                    <div class="flex text-yellow text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="font-heading text-2xl font-bold text-white">4.5/5</span>
+                    <span class="text-white/40 text-sm">(17 recenzii)</span>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex text-yellow mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-white/60 mb-4 italic">"Service serios și profesionist. Mi-au reparat mașina rapid și la un preț corect. Mecanicii știu ce fac. Recomand!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-yellow rounded-lg flex items-center justify-center"><i class="fa-solid fa-user text-dark text-sm"></i></div>
+                        <div>
+                            <p class="font-body font-bold text-white text-sm">Mihai A.</p>
+                            <p class="text-white/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-yellow mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-white/60 mb-4 italic">"Am fost pentru diagnoză și schimb de plăcuțe de frână. Treabă curată, prețuri ok, m-au și consiliat ce mai trebuie verificat."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-yellow rounded-lg flex items-center justify-center"><i class="fa-solid fa-user text-dark text-sm"></i></div>
+                        <div>
+                            <p class="font-body font-bold text-white text-sm">Cristian D.</p>
+                            <p class="text-white/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="steel-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-yellow mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-white/60 mb-4 italic">"Service de încredere, merg aici de câțiva ani. Foarte mulțumit de calitatea lucrărilor și de atitudinea echipei."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-yellow rounded-lg flex items-center justify-center"><i class="fa-solid fa-user text-dark text-sm"></i></div>
+                        <div>
+                            <p class="font-body font-bold text-white text-sm">Laurențiu P.</p>
+                            <p class="text-white/40 text-xs">Recenzie Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="py-16 md:py-24 bg-gunmetal-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-white uppercase mb-6">Program <span class="text-yellow">de lucru</span></h2>
+                    <p class="text-white/50 mb-8">Programarea în avans este recomandată pentru a vă putea servi în cele mai bune condiții.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between bg-dark rounded-lg p-4 border border-yellow/10">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar-day text-yellow"></i>
+                                <span class="font-body font-semibold text-white">Luni – Vineri</span>
+                            </div>
+                            <span class="font-heading text-2xl font-bold text-yellow">9:00 – 18:00</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-dark rounded-lg p-4 border border-yellow/10">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar-xmark text-red-500"></i>
+                                <span class="font-body font-semibold text-white">Sâmbătă – Duminică</span>
+                            </div>
+                            <span class="font-heading text-2xl font-bold text-red-500">Închis</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-yellow rounded-2xl p-8 md:p-10 text-dark text-center">
+                        <i class="fa-solid fa-phone-volume text-5xl text-dark mb-6"></i>
+                        <h3 class="font-heading text-3xl font-bold uppercase mb-4">Programează-te acum</h3>
+                        <p class="text-dark/70 mb-6 font-body">Sună-ne pentru o programare rapidă. Mecanic pe loc, echipamente profesionale.</p>
+                        <a href="tel:0747872216" class="inline-block bg-dark hover:bg-gunmetal text-yellow font-body font-bold px-8 py-4 rounded-lg transition-all shadow-lg uppercase tracking-wider">
+                            <i class="fa-solid fa-phone mr-2"></i>0747 872 216
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 md:py-24 bg-dark industrial-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-white uppercase">Contact & <span class="text-yellow">locație</span></h2>
+                <div class="hazard-stripe w-24 mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <div class="space-y-6">
+                        <div class="steel-card p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-yellow/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-yellow/20">
+                                <i class="fa-solid fa-location-dot text-yellow text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-yellow uppercase">Adresă</h3>
+                                <p class="text-white/60">Str. Cireașov 10, Slatina, Olt</p>
+                            </div>
+                        </div>
+                        <div class="steel-card p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-yellow/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-yellow/20">
+                                <i class="fa-solid fa-phone text-yellow text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-yellow uppercase">Telefon</h3>
+                                <a href="tel:0747872216" class="text-yellow hover:text-yellow-light transition-colors font-semibold">0747 872 216</a>
+                            </div>
+                        </div>
+                        <div class="steel-card p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-yellow/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-yellow/20">
+                                <i class="fa-solid fa-clock text-yellow text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-yellow uppercase">Program</h3>
+                                <p class="text-white/60">Luni – Vineri: 9:00 – 18:00</p>
+                            </div>
+                        </div>
+                        <div class="steel-card p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-yellow/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-yellow/20">
+                                <i class="fa-solid fa-wheelchair-move text-yellow text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-yellow uppercase">Accesibilitate</h3>
+                                <p class="text-white/60">Acces pentru persoane cu dizabilități locomotorii</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-full min-h-[400px] border border-yellow/10">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000!2d24.379344!3d44.440689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI2JzI2LjUiTiAyNMKwMjInNDUuNiJF!5e0!3m2!1sro!2sro!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Locație Car Service Garage"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <div class="hazard-stripe"></div>
+    <section class="py-16 md:py-20 hero-industrial text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <i class="fa-solid fa-wrench text-yellow text-5xl mb-6"></i>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase mb-4">Mașina ta merită <span class="text-yellow">cel mai bun service</span></h2>
+            <p class="text-white/50 text-lg mb-8">Programează-te astăzi și vino la cel mai de încredere service auto din Slatina.</p>
+            <a href="tel:0747872216" class="inline-block bg-yellow hover:bg-yellow-dark text-dark font-body font-bold px-10 py-4 rounded-lg transition-all shadow-lg text-lg uppercase tracking-wider">
+                <i class="fa-solid fa-phone mr-2"></i>Sună: 0747 872 216
+            </a>
+        </div>
+    </section>
+    <div class="hazard-stripe"></div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-yellow rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-wrench text-dark"></i>
+                        </div>
+                        <span class="font-heading font-bold text-2xl text-yellow uppercase">Car Service Garage</span>
+                    </div>
+                    <p class="text-white/40 text-sm">Service auto profesional în Slatina. Reparații, întreținere și diagnosticare auto cu mecanici experimentați.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-xl text-yellow uppercase mb-4">Navigare</h4>
+                    <ul class="space-y-2 text-white/40 text-sm">
+                        <li><a href="#servicii" class="hover:text-yellow transition-colors">Servicii</a></li>
+                        <li><a href="#avantaje" class="hover:text-yellow transition-colors">Avantaje</a></li>
+                        <li><a href="#recenzii" class="hover:text-yellow transition-colors">Recenzii</a></li>
+                        <li><a href="#contact" class="hover:text-yellow transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-xl text-yellow uppercase mb-4">Contact</h4>
+                    <ul class="space-y-3 text-white/40 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-yellow"></i>Str. Cireașov 10, Slatina</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-yellow"></i><a href="tel:0747872216" class="hover:text-yellow transition-colors">0747 872 216</a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-yellow"></i>L-V: 9:00–18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-white/30 text-sm">
+                <p>&copy; 2026 Car Service Garage. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detailing Auto Profesional &middot; Studio de detailing &icirc;n Sector 4, Bucure&#537;ti</title>
+<meta name="description" content="Detailing Auto Profesional &mdash; studio de detailing auto &icirc;n Bucure&#537;ti, Sector 4, pe &#536;oseaua Giurgiului 171. Interior &#537;i exterior, cear&#259;, tratamente. Telefon 0756 903 404.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy:    '#142039',
+        navyd:   '#0A1325',
+        gold:    '#BC9A52',
+        goldd:   '#967832',
+        pearl:   '#F8F5EE',
+        pearl2:  '#FBFAF5',
+        ink:     '#1A1A1F',
+        muted:   '#6D6F75',
+        line:    '#E4E1D6',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['Cinzel', 'Georgia', 'serif'],
+        sans:    ['Inter', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #F8F5EE; color: #1A1A1F; }
+  body { font-family: Inter, system-ui, sans-serif; }
+  .display { font-family: Cinzel, Georgia, serif; letter-spacing: .015em; line-height: 1.08; }
+
+  .hair-gold { height: 1px; background: #BC9A52; }
+  .hair { height: 1px; background: #E4E1D6; }
+
+  .btn-navy { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #142039; color: #F8F5EE; font-family: Cinzel, serif; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; transition: all .25s; }
+  .btn-navy:hover { background: #BC9A52; color: #142039; }
+  .btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: transparent; color: #142039; border: 1px solid #142039; font-family: Cinzel, serif; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; transition: all .25s; }
+  .btn-outline:hover { background: #142039; color: #F8F5EE; }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; font-family: Cinzel, serif; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); }
+
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .3rem .95rem; background: transparent; color: #BC9A52; border: 1px solid #BC9A52; font-family: Cinzel, serif; font-size: .68rem; letter-spacing: .28em; text-transform: uppercase; }
+
+  .card { background: #FBFAF5; border: 1px solid #E4E1D6; padding: 2rem; transition: all .35s; }
+  .card:hover { border-color: #BC9A52; transform: translateY(-3px); box-shadow: 0 24px 48px -30px rgba(20,32,57,.3); }
+
+  .service-num { font-family: Cinzel, serif; color: #BC9A52; font-size: .95rem; letter-spacing: .15em; }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Cinzel, serif; font-size: 1.2rem; letter-spacing: .14em; text-transform: uppercase; border-bottom: 1px solid #E4E1D6; }
+
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dotted rgba(20,32,57,.2); font-size: .95rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #BC9A52; font-weight: 700; }
+
+  .marque { font-family: Cinzel, serif; letter-spacing: .3em; font-size: .7rem; text-transform: uppercase; color: #BC9A52; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-pearl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 border border-navy flex items-center justify-center"><span class="display text-lg">D</span></span>
+      <div class="leading-tight">
+        <p class="display text-sm tracking-[.2em]">DETAILING AUTO</p>
+        <p class="marque mt-1">Profesional &middot; Bucure&#537;ti S4</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-[11px] font-medium tracking-[.15em] uppercase text-navy/80">
+      <a href="#despre"   class="hover:text-gold">Despre</a>
+      <a href="#servicii" class="hover:text-gold">Servicii</a>
+      <a href="#proces"   class="hover:text-gold">Proces</a>
+      <a href="#locatie"  class="hover:text-gold">Loca&#539;ie</a>
+      <a href="#contact"  class="hover:text-gold">Contact</a>
+      <a href="tel:0756903404" class="btn-navy !py-2.5 !px-4 !text-[10px]">0756 903 404</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 border border-navy flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8"><div class="hair-gold"></div></div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-pearl z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-sm tracking-[.2em]">DETAILING AUTO PROFESIONAL</span>
+    <button id="menu-close" class="w-11 h-11 border border-navy flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-6">
+    <a href="#despre"   class="mobile-link">Despre</a>
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#proces"   class="mobile-link">Proces</a>
+    <a href="#locatie"  class="mobile-link">Loca&#539;ie</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-3">
+    <a href="tel:0756903404" class="btn-navy">Sun&#259;</a>
+    <a href="https://wa.me/40756903404" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="py-16 sm:py-24 lg:py-32">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip" data-aos="fade-up">&mdash; &Icirc;N SECTOR 4 BUCURE&#536;TI &mdash;</span>
+    <h1 class="display mt-10 text-4xl sm:text-6xl lg:text-[5.5rem] font-medium" data-aos="fade-up" data-aos-delay="60">
+      Ma&#537;ina ta<br>
+      <span class="italic text-gold">merit&#259; aten&#539;ie</span><br>
+      la detaliu.
+    </h1>
+    <p class="mt-12 text-lg text-ink/80 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="120">
+      Detailing Auto Profesional este studio-ul din &#536;oseaua Giurgiului 171 unde ma&#537;ina ta prime&#537;te timpul &#537;i &icirc;ngrijirea pe care le merit&#259;. Exterior, interior, tratamente cosmetice. Lucrat pe &icirc;ndelete, cu produse profesionale.
+    </p>
+
+    <div class="mt-14 flex flex-col sm:flex-row gap-3 justify-center" data-aos="fade-up" data-aos-delay="180">
+      <a href="tel:0756903404" class="btn-navy"><i class="fa-solid fa-phone"></i> 0756 903 404</a>
+      <a href="https://wa.me/40756903404" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+    </div>
+
+    <div class="mt-20 flex items-center justify-center gap-6 max-w-xl mx-auto">
+      <div class="flex-1 hair-gold"></div>
+      <span class="marque">Studio &middot; Bucure&#537;ti</span>
+      <div class="flex-1 hair-gold"></div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-pearl2 border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <span class="chip">I. DESPRE NOI</span>
+      <h2 class="display mt-5 text-3xl sm:text-4xl lg:text-5xl font-medium">
+        Nu sp&#259;l&#259;m ma&#537;ini.<br>
+        Le <span class="italic text-gold">recondi&#539;ion&#259;m.</span>
+      </h2>
+    </div>
+
+    <div class="lg:col-span-7 space-y-5">
+      <p class="text-lg text-ink/85 leading-relaxed">Diferen&#539;a dintre o sp&#259;l&#259;torie &#537;i un studio de detailing e timpul petrecut pe fiecare col&#539;. La Detailing Auto Profesional, o ma&#537;in&#259; r&#259;m&#226;ne cu noi suficient &icirc;nc&#226;t s&#259; ias&#259; nu doar curat&#259; &mdash; ci recondi&#539;ionat&#259;.</p>
+      <p class="text-base text-muted leading-relaxed">Aspir&#259;m &#537;i cur&#259;&#539;&#259;m fiecare cusut&#259;r&#259; de tapi&#539;erie, degres&#259;m plasticele cu produse sigure, polish&#259;m vopseaua c&#226;nd e nevoie. Pentru cei care &icirc;&#537;i trateaz&#259; ma&#537;ina ca pe un obiect de valoare.</p>
+
+      <div class="mt-8 grid sm:grid-cols-2 gap-4">
+        <div class="border-l border-gold pl-4">
+          <p class="display text-sm text-gold">I.</p>
+          <p class="font-semibold mt-1">Timp alocat</p>
+          <p class="text-sm text-muted mt-1">O ma&#537;in&#259; pe zi, nu 10 ma&#537;ini pe or&#259;.</p>
+        </div>
+        <div class="border-l border-gold pl-4">
+          <p class="display text-sm text-gold">II.</p>
+          <p class="font-semibold mt-1">Produse profesionale</p>
+          <p class="text-sm text-muted mt-1">Chimie sigur&#259; pentru vopsea, plastic &#537;i tapi&#539;erie.</p>
+        </div>
+        <div class="border-l border-gold pl-4">
+          <p class="display text-sm text-gold">III.</p>
+          <p class="font-semibold mt-1">Aten&#539;ie la detaliu</p>
+          <p class="text-sm text-muted mt-1">Col&#539;urile, cus&#259;turile, marginile. Acolo unde al&#539;ii nu ajung.</p>
+        </div>
+        <div class="border-l border-gold pl-4">
+          <p class="display text-sm text-gold">IV.</p>
+          <p class="font-semibold mt-1">Acces complet</p>
+          <p class="text-sm text-muted mt-1">Intrare accesibil&#259; &#537;i toalet&#259; disponibil&#259;.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="chip">II. SERVICII</span>
+      <h2 class="display mt-5 text-3xl sm:text-4xl lg:text-5xl font-medium">Pachete de detailing.</h2>
+      <p class="mt-5 text-muted">De la &icirc;ntre&#539;inere s&#259;pt&#259;m&#226;nal&#259; la restaurare complet&#259;, ai un pachet pentru ma&#537;ina ta.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><p class="service-num">I.</p><h3 class="display text-xl mt-2">Sp&#259;lare exterior</h3><p class="mt-3 text-sm text-muted">Sp&#259;lare cu spum&#259;, cl&#259;tire, jenti, cauciucuri &#537;i &#537;tergere cu microfibr&#259;.</p></article>
+      <article class="card"><p class="service-num">II.</p><h3 class="display text-xl mt-2">Interior detailing</h3><p class="mt-3 text-sm text-muted">Aspirare, cur&#259;&#539;are tapi&#539;erie, plastice, plafon, covora&#537;e &#537;i mochete.</p></article>
+      <article class="card"><p class="service-num">III.</p><h3 class="display text-xl mt-2">Pachet complet</h3><p class="mt-3 text-sm text-muted">Exterior + interior + geamuri + tratament plastice &#537;i cear&#259;.</p></article>
+      <article class="card"><p class="service-num">IV.</p><h3 class="display text-xl mt-2">Polish &#537;i cear&#259;</h3><p class="mt-3 text-sm text-muted">Restaurarea luciului vopselei &#537;i protec&#539;ie pentru mai multe luni.</p></article>
+      <article class="card"><p class="service-num">V.</p><h3 class="display text-xl mt-2">Motor degresat</h3><p class="mt-3 text-sm text-muted">Cur&#259;&#539;are atent&#259; a compartimentului motor cu produse sigure.</p></article>
+      <article class="card"><p class="service-num">VI.</p><h3 class="display text-xl mt-2">Eliminare mirosuri</h3><p class="mt-3 text-sm text-muted">Tratamente pentru fum, mucegai sau mirosuri persistente. Ozonare.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="py-16 sm:py-24 bg-navy text-pearl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="chip !border-gold !text-gold">III. PROCES</span>
+      <h2 class="display mt-5 text-3xl sm:text-4xl lg:text-5xl font-medium">Patru pa&#537;i simpli.</h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="border border-pearl/20 p-6"><p class="display text-4xl text-gold">01</p><p class="display text-sm mt-3 tracking-[.15em]">PROGRAMARE</p><p class="text-sm mt-2 text-pearl/70">Telefon sau WhatsApp. Ora este ora ta.</p></div>
+      <div class="border border-pearl/20 p-6"><p class="display text-4xl text-gold">02</p><p class="display text-sm mt-3 tracking-[.15em]">EVALUARE</p><p class="text-sm mt-2 text-pearl/70">Privim ma&#537;ina &#537;i confirm&#259;m pachetul.</p></div>
+      <div class="border border-pearl/20 p-6"><p class="display text-4xl text-gold">03</p><p class="display text-sm mt-3 tracking-[.15em]">LUCRAREA</p><p class="text-sm mt-2 text-pearl/70">Recondi&#539;ionarea propriu-zis&#259;.</p></div>
+      <div class="border border-pearl/20 p-6"><p class="display text-4xl text-gold">04</p><p class="display text-sm mt-3 tracking-[.15em]">PREDARE</p><p class="text-sm mt-2 text-pearl/70">Verific&#259;m &icirc;mpreun&#259; rezultatul.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip">IV. LOCA&#538;IE</span>
+      <h2 class="display mt-5 text-3xl sm:text-4xl lg:text-5xl font-medium">&#536;oseaua Giurgiului 171.</h2>
+      <p class="mt-6 text-ink/80 leading-relaxed">Studio-ul nostru este &icirc;n Sector 4, pe &#536;oseaua Giurgiului. Acces u&#537;or cu ma&#537;ina, parcare pe loc, acces accesibil pentru persoanele cu mobilitate redus&#259;.</p>
+
+      <div class="mt-8 space-y-3 text-sm">
+        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-gold w-5"></i> &#536;os. Giurgiului 171, Sector 4 Bucure&#537;ti</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-gold w-5"></i> 0756 903 404</div>
+        <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-gold w-5"></i> wa.me/40756903404</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-gold w-5"></i> Intrare accesibil&#259; &middot; Toalet&#259;</div>
+      </div>
+
+      <a href="https://www.google.com/maps/place/Detailing+Auto+Profesional/@44.3796493,26.0920436,17z" target="_blank" rel="noopener" class="mt-8 btn-outline inline-flex"><i class="fa-solid fa-map-location-dot"></i> Vezi pe Maps</a>
+    </div>
+
+    <div class="lg:col-span-6">
+      <div class="bg-pearl2 border border-line p-6 sm:p-8">
+        <p class="chip">PROGRAM</p>
+        <ul id="hours" class="mt-6">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span>La programare</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span>La programare</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span>La programare</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span>La programare</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span>La programare</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span>La programare</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+        <p class="mt-5 text-sm text-muted">Program flexibil pe baz&#259; de programare. Suna&#539;i pentru disponibilitate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-pearl2 border-y border-line">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">V. CONTACT</span>
+    <h2 class="display mt-5 text-3xl sm:text-4xl lg:text-5xl font-medium">
+      Programeaz&#259; ma&#537;ina<br><span class="italic text-gold">la studio.</span>
+    </h2>
+    <p class="mt-6 text-muted">Un apel scurt, o or&#259; stabilit&#259;. &#538;i descriem pachetul &#537;i pre&#539;ul &icirc;nainte s&#259; aduci ma&#537;ina.</p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:0756903404" class="btn-navy"><i class="fa-solid fa-phone"></i> 0756 903 404</a>
+      <a href="https://wa.me/40756903404" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navyd text-pearl/70 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-3">
+        <span class="w-10 h-10 border border-gold flex items-center justify-center"><span class="display text-lg text-gold">D</span></span>
+        <span class="display text-sm tracking-[.2em]">DETAILING AUTO</span>
+      </div>
+      <p class="mt-3 text-sm">Studio de detailing auto &icirc;n Bucure&#537;ti, Sector 4. &Icirc;ngrijire pentru fiecare col&#539;.</p>
+    </div>
+    <div>
+      <p class="display text-sm text-gold tracking-[.2em]">SERVICII</p>
+      <ul class="mt-3 space-y-1.5 text-sm">
+        <li>Sp&#259;lare exterior</li>
+        <li>Interior detailing</li>
+        <li>Polish &amp; cear&#259;</li>
+        <li>Eliminare mirosuri</li>
+      </ul>
+    </div>
+    <div>
+      <p class="display text-sm text-gold tracking-[.2em]">CONTACT</p>
+      <ul class="mt-3 space-y-1.5 text-sm">
+        <li><i class="fa-solid fa-phone text-gold mr-2"></i>0756 903 404</li>
+        <li><i class="fa-brands fa-whatsapp text-gold mr-2"></i>wa.me/40756903404</li>
+        <li><i class="fa-solid fa-location-dot text-gold mr-2"></i>&#536;os. Giurgiului 171</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-pearl/10 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-[.2em] display">
+    <span>&copy; 2026 DETAILING AUTO PROFESIONAL</span>
+    <span>BUCURE&#536;TI &middot; SECTOR 4</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0756903404" class="py-4 bg-navy text-pearl text-center display text-xs tracking-[.2em]">SUN&#258;</a>
+  <a href="https://wa.me/40756903404" class="py-4 bg-wa text-white text-center display text-xs tracking-[.2em]">WHATSAPP</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "Detailing Auto Profesional",
+  "telephone": "+40756903404",
+  "address": { "@type": "PostalAddress", "streetAddress": "Soseaua Giurgiului 171", "addressLocality": "Bucuresti", "addressRegion": "Sector 4", "addressCountry": "RO" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.3796493, "longitude": 26.0920436 }
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>

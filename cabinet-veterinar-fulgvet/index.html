@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabinet veterinar FulgVet &middot; Spital animale de companie &icirc;n Bucure&#537;ti</title>
+<meta name="description" content="Cabinet veterinar FulgVet &mdash; spital pentru animale de companie &icirc;n Bucure&#537;ti, Sector 2, Strada Poiana cu Aluni 2. Deschis 7 zile/7. Telefon 0770 627 786.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { plum: '#6B2E5A', plumd: '#451D3A', blush: '#F4C7D8', blushl: '#FBE8EE', cream: '#FFFAF4', ink: '#2A1A26', muted: '#6B5F6A', line: '#ECD9E2', wa: '#25D366' },
+  fontFamily: { serif: ['Bitter', 'Georgia', 'serif'], sans: ['Lexend', 'system-ui', 'sans-serif'] }
+}}}
+</script>
+<style>
+  html, body { background: #FFFAF4; color: #2A1A26; }
+  body { font-family: Lexend, system-ui, sans-serif; font-weight: 300; }
+  .serif { font-family: Bitter, Georgia, serif; letter-spacing: -.01em; line-height: 1.05; }
+  .btn-plum { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #6B2E5A; color: #FFFAF4; font-weight: 500; border-radius: 999px; transition: all .25s; }
+  .btn-plum:hover { background: #451D3A; transform: translateY(-2px); }
+  .btn-blush { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #F4C7D8; color: #2A1A26; font-weight: 500; border-radius: 999px; transition: all .25s; }
+  .btn-blush:hover { background: #E9A6BC; }
+  .btn-wap { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: 1rem 1.8rem; background: #25D366; color: #fff; font-weight: 500; border-radius: 999px; transition: all .25s; }
+  .btn-wap:hover { filter: brightness(.95); }
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .4rem 1rem; background: #FBE8EE; color: #6B2E5A; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; }
+  .card { background: #fff; border: 1px solid #ECD9E2; border-radius: 24px; padding: 1.8rem; transition: all .35s; }
+  .card:hover { border-color: #6B2E5A; transform: translateY(-4px); box-shadow: 0 30px 50px -32px rgba(42,26,38,.2); }
+  .mobile-link { display: block; padding: 1rem 0; font-family: Bitter, serif; font-size: 1.7rem; border-bottom: 1px solid #ECD9E2; }
+  .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px dashed rgba(42,26,38,.18); font-size: .95rem; }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #6B2E5A; font-weight: 700; }
+  .paw-grid { background-image: radial-gradient(circle at 20% 30%, rgba(107,46,90,.06) 2%, transparent 2.5%), radial-gradient(circle at 75% 65%, rgba(244,199,216,.35) 2%, transparent 2.5%); background-size: 80px 80px; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-plum text-blush flex items-center justify-center"><i class="fa-solid fa-paw"></i></span>
+      <div class="leading-tight"><p class="serif text-xl font-semibold">FulgVet</p><p class="text-[10px] tracking-widest uppercase text-muted mt-0.5">Cabinet veterinar &middot; Sector 2 Bucure&#537;ti</p></div>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+      <a href="#despre" class="hover:text-plum">Despre</a>
+      <a href="#servicii" class="hover:text-plum">Servicii</a>
+      <a href="#recenzii" class="hover:text-plum">Recenzii</a>
+      <a href="#locatie" class="hover:text-plum">Loca&#539;ie</a>
+      <a href="tel:0770627786" class="btn-plum !py-2.5 !px-4 !text-xs">0770 627 786</a>
+    </nav>
+    <button id="menu-open" class="md:hidden w-11 h-11 rounded-full bg-plum text-blush flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between"><span class="serif text-xl font-semibold">FulgVet</span><button id="menu-close" class="w-11 h-11 rounded-full bg-plum text-blush flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="mt-6"><a href="#despre" class="mobile-link">Despre</a><a href="#servicii" class="mobile-link">Servicii</a><a href="#recenzii" class="mobile-link">Recenzii</a><a href="#locatie" class="mobile-link">Loca&#539;ie</a><a href="#contact" class="mobile-link">Contact</a></nav>
+  <div class="mt-auto grid grid-cols-2 gap-3"><a href="tel:0770627786" class="btn-plum">Sun&#259;</a><a href="https://wa.me/40770627786" class="btn-wap">WhatsApp</a></div>
+</div>
+
+<section id="top" class="paw-grid py-14 sm:py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <span class="chip"><i class="fa-solid fa-paw"></i> Animal hospital &middot; Bucure&#537;ti S2</span>
+      <h1 class="serif mt-8 text-5xl sm:text-6xl lg:text-7xl font-semibold">
+        Blan&#259;, labe, inim&#259; mic&#259;.<br>
+        <span style="font-style:italic" class="text-plum">Le &icirc;ngrijim pe toate trei.</span>
+      </h1>
+      <p class="mt-8 max-w-xl text-lg text-muted leading-relaxed">Cabinetul veterinar FulgVet din Sector 2 Bucure&#537;ti este locul unde animalele tale de companie sunt tratate ca membri ai familiei. Consulta&#539;ii generale, vaccin&#259;ri, chirurgie, interna&#539;ii &#537;i urgen&#539;e, &#537;apte zile din &#537;apte.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0770627786" class="btn-plum"><i class="fa-solid fa-phone"></i> 0770 627 786</a>
+        <a href="https://wa.me/40770627786" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+      <div class="mt-10 flex flex-wrap items-center gap-6 text-sm">
+        <div><p class="serif text-3xl text-plum font-semibold">4.8</p><p class="text-[10px] uppercase tracking-widest text-muted">Google rating</p></div>
+        <span class="w-px h-10 bg-line"></span>
+        <div><p class="serif text-3xl text-plum font-semibold">121+</p><p class="text-[10px] uppercase tracking-widest text-muted">recenzii</p></div>
+        <span class="w-px h-10 bg-line"></span>
+        <div><p class="serif text-3xl text-plum font-semibold">7/7</p><p class="text-[10px] uppercase tracking-widest text-muted">zile deschis</p></div>
+      </div>
+    </div>
+    <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
+      <div class="card !bg-blushl !border-plum/30 !p-8 text-center">
+        <div class="w-32 h-32 mx-auto bg-plum text-blush rounded-full flex items-center justify-center"><i class="fa-solid fa-dog text-5xl"></i></div>
+        <p class="serif text-2xl mt-6 font-semibold text-plum">Pentru prietenul t&#259;u</p>
+        <p class="text-sm text-muted mt-2">C&#226;ini, pisici, animale exotice &mdash; oricine are grij&#259; de blana de acas&#259; &#537;tie s&#259;-l aduc&#259; la noi.</p>
+
+        <div class="mt-6 pt-5 border-t border-line grid grid-cols-3 gap-2 text-center">
+          <div><i class="fa-solid fa-heart text-plum"></i><p class="text-[10px] text-muted mt-1">Accept&#259;m<br>dona&#539;ii</p></div>
+          <div><i class="fa-solid fa-hand-holding-heart text-plum"></i><p class="text-[10px] text-muted mt-1">Angaj&#259;m<br>displaced</p></div>
+          <div><i class="fa-solid fa-users text-plum"></i><p class="text-[10px] text-muted mt-1">Voluntari<br>bineveni&#539;i</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="despre" class="py-16 sm:py-24 bg-blushl">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Despre cabinet</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Un cabinet care trateaz&#259;<br><span style="font-style:italic" class="text-plum">&#537;i animalul, &#537;i st&#259;p&#226;nul.</span></h2>
+    <p class="mt-8 text-lg text-ink/85 leading-relaxed">FulgVet este cabinetul veterinar din Strada Poiana cu Aluni 2, Sector 2, Bucure&#537;ti. Lucr&#259;m cu c&#226;ini, pisici, rozatoare &#537;i animale exotice. Programarea este recomandat&#259; &mdash; pentru urgen&#539;e &icirc;ncerc&#259;m mereu s&#259; facem loc, &#537;i &icirc;n weekend.</p>
+    <p class="mt-6 text-base text-muted leading-relaxed">Mai mult dec&#226;t un cabinet, suntem o echip&#259; implicat&#259; &icirc;n comunitate: accept&#259;m dona&#539;ii pentru cazuri sociale, angaj&#259;m persoane &icirc;n situa&#539;ii dificile &#537;i &icirc;i primim cu drag pe voluntarii care vor s&#259; &icirc;nve&#539;e meserie.</p>
+  </div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl"><span class="chip">Servicii veterinare</span><h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Ce facem <span style="font-style:italic" class="text-plum">&icirc;n cabinet.</span></h2></div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="card"><i class="fa-solid fa-stethoscope text-plum text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Consulta&#539;ii generale</h3><p class="mt-2 text-sm text-muted">Examen clinic complet, diagnostic &#537;i plan de tratament.</p></article>
+      <article class="card"><i class="fa-solid fa-syringe text-plum text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Vaccin&#259;ri</h3><p class="mt-2 text-sm text-muted">Schema complet&#259; pentru c&#226;ini, pisici, inclusiv pa&#537;aport european.</p></article>
+      <article class="card"><i class="fa-solid fa-shield-virus text-plum text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Deparazit&#259;ri</h3><p class="mt-2 text-sm text-muted">Intern&#259; &#537;i extern&#259;, cu programe personalizate pentru fiecare animal.</p></article>
+      <article class="card"><i class="fa-solid fa-scissors text-plum text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Chirurgie</h3><p class="mt-2 text-sm text-muted">Steriliz&#259;ri, chirurgie general&#259; &#537;i de &#539;esuturi moi cu anestezie modern&#259;.</p></article>
+      <article class="card"><i class="fa-solid fa-heart-pulse text-plum text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Urgen&#539;e</h3><p class="mt-2 text-sm text-muted">C&#226;nd se &icirc;nt&#226;mpl&#259; ceva urgent, suna&#539;i &mdash; facem tot posibilul s&#259; v&#259; primim.</p></article>
+      <article class="card"><i class="fa-solid fa-vials text-plum text-2xl"></i><h3 class="serif text-xl font-semibold mt-3">Analize &amp; ecografii</h3><p class="mt-2 text-sm text-muted">Analize de laborator pe loc, ecografii &#537;i radiografii pentru diagnostic precis.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24 bg-plum text-blushl">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <span class="chip !bg-blush !text-plum">Recenzii verificate</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">121+ recenzii,<br><span style="font-style:italic" class="text-blush">4.8 pe Google.</span></h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-5">
+      <article class="card !bg-plumd !border-blush/20"><div class="flex text-blush"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mt-4 text-blushl/90 italic text-sm">&bdquo;Oameni care &icirc;&#539;i pas&#259; cu adev&#259;rat &mdash; servicii de top, personal minunat care face mai mult dec&#226;t este necesar. Mul&#539;umim!&rdquo;</p><p class="serif text-sm mt-5 text-blush">&mdash; John Russell</p></article>
+      <article class="card !bg-plumd !border-blush/20"><div class="flex text-blush"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mt-4 text-blushl/90 italic text-sm">&bdquo;Cei mai buni doctori &#537;i asistente, cele mai bune servicii. Sunt foarte buni cu animalele &#537;i au m&#226;ini foarte bl&#226;nde. Pur &#537;i simplu uimitori.&rdquo;</p><p class="serif text-sm mt-5 text-blush">&mdash; Abood Hz</p></article>
+      <article class="card !bg-plumd !border-blush/20"><div class="flex text-blush"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mt-4 text-blushl/90 italic text-sm">&bdquo;Oameni minuna&#539;i. Sunt foarte grijulii &#537;i respectuo&#537;i at&#226;t cu animalele, c&#226;t &#537;i cu st&#259;p&#226;nii lor. Recomand cu c&#259;ldur&#259;!&rdquo;</p><p class="serif text-sm mt-5 text-blush">&mdash; Monica Nicolae</p></article>
+      <article class="card !bg-plumd !border-blush/20"><div class="flex text-blush"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="mt-4 text-blushl/90 italic text-sm">&bdquo;Super prieteno&#537;i. Pre&#539;ul e corect.&rdquo;</p><p class="serif text-sm mt-5 text-blush">&mdash; Alexander Hochleitner</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="locatie" class="py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-6">
+      <span class="chip">Loca&#539;ie &amp; program</span>
+      <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Strada Poiana cu Aluni 2,<br><span style="font-style:italic" class="text-plum">Sector 2 Bucure&#537;ti.</span></h2>
+      <p class="mt-6 text-ink/85 leading-relaxed">Cabinetul este deschis 7 zile din 7, inclusiv duminica. Luni-vineri p&#226;n&#259; seara t&#226;rziu.</p>
+      <div class="mt-8 space-y-3 text-sm">
+        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-plum w-5"></i> Strada Poiana cu Aluni 2, Sector 2, Bucure&#537;ti 022874</div>
+        <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-plum w-5"></i> 0770 627 786</div>
+        <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-plum w-5"></i> wa.me/40770627786</div>
+      </div>
+      <a href="https://www.google.com/maps/place/Cabinet+veterinar+FulgVet/@44.4636696,26.1414808,17z" target="_blank" rel="noopener" class="mt-8 btn-plum inline-flex"><i class="fa-solid fa-map-location-dot"></i> Vezi pe hart&#259;</a>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="card">
+        <p class="chip">Program</p>
+        <ul id="hours" class="mt-5">
+          <li data-day="1" class="hours-row"><span class="font-semibold">Luni</span><span>09:00 &mdash; 21:00</span></li>
+          <li data-day="2" class="hours-row"><span class="font-semibold">Mar&#539;i</span><span>09:00 &mdash; 21:00</span></li>
+          <li data-day="3" class="hours-row"><span class="font-semibold">Miercuri</span><span>09:00 &mdash; 21:00</span></li>
+          <li data-day="4" class="hours-row"><span class="font-semibold">Joi</span><span>09:00 &mdash; 21:00</span></li>
+          <li data-day="5" class="hours-row"><span class="font-semibold">Vineri</span><span>09:00 &mdash; 21:00</span></li>
+          <li data-day="6" class="hours-row"><span class="font-semibold">S&#226;mb&#259;t&#259;</span><span>09:00 &mdash; 19:00</span></li>
+          <li data-day="0" class="hours-row"><span class="font-semibold">Duminic&#259;</span><span>09:00 &mdash; 16:00</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24 bg-blushl">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="chip">Contact</span>
+    <h2 class="serif mt-4 text-4xl sm:text-5xl font-semibold">Adu prietenul t&#259;u <span style="font-style:italic" class="text-plum">la noi.</span></h2>
+    <p class="mt-6 text-muted">Programare telefonic&#259; sau direct la cabinet. R&#259;spundem &#537;apte zile din &#537;apte.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:0770627786" class="btn-plum"><i class="fa-solid fa-phone"></i> 0770 627 786</a>
+      <a href="https://wa.me/40770627786" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-plumd text-blushl/70 py-12 pb-24 md:pb-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-3 gap-8">
+    <div><div class="flex items-center gap-3"><span class="w-10 h-10 rounded-full bg-blush text-plum flex items-center justify-center"><i class="fa-solid fa-paw"></i></span><span class="serif text-lg text-blushl font-semibold">FulgVet</span></div><p class="mt-3 text-sm">Cabinet veterinar &icirc;n Bucure&#537;ti, Sector 2. Pentru animalele de companie.</p></div>
+    <div><p class="serif text-sm text-blush">Servicii</p><ul class="mt-3 space-y-1.5 text-sm"><li>Consulta&#539;ii generale</li><li>Vaccin&#259;ri</li><li>Deparazit&#259;ri</li><li>Chirurgie</li><li>Analize</li></ul></div>
+    <div><p class="serif text-sm text-blush">Contact</p><ul class="mt-3 space-y-1.5 text-sm"><li><i class="fa-solid fa-phone text-blush mr-2"></i>0770 627 786</li><li><i class="fa-brands fa-whatsapp text-blush mr-2"></i>wa.me/40770627786</li><li><i class="fa-solid fa-location-dot text-blush mr-2"></i>Poiana cu Aluni 2</li><li><i class="fa-regular fa-clock text-blush mr-2"></i>7/7</li></ul></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-blush/15 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-widest">
+    <span>&copy; 2026 Cabinet veterinar FulgVet</span><span>Bucure&#537;ti &middot; Sector 2</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0770627786" class="py-4 bg-plum text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i> Sun&#259;</a>
+  <a href="https://wa.me/40770627786" class="py-4 bg-wa text-white text-center font-bold uppercase text-sm tracking-wider"><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp</a>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VeterinaryCare","name":"Cabinet veterinar FulgVet","telephone":"+40770627786","address":{"@type":"PostalAddress","streetAddress":"Strada Poiana cu Aluni 2","addressLocality":"Bucuresti","addressRegion":"Sector 2","postalCode":"022874","addressCountry":"RO"},"geo":{"@type":"GeoCoordinates","latitude":44.4636696,"longitude":26.1414808},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"121"}}</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+  const menu = document.getElementById('menu'), openBtn = document.getElementById('menu-open'), closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try { const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' })); const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]'); if (row) row.classList.add('today'); } catch (e) {}
+</script>
+</body></html>

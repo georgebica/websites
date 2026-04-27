@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amicul Veterinar Steaua — Cabinet & Farmacie Veterinară Slatina</title>
+    <meta name="description" content="Cabinet veterinar și farmacie veterinară în Slatina. Consultații, medicamente, deparazitare, vaccinări. Deschis 7 zile pe săptămână. Acceptăm card.">
+    <meta name="keywords" content="farmacie veterinara Slatina, cabinet veterinar Slatina, Amicul Veterinar Steaua, medicamente animale, vaccinari, deparazitare">
+    <link rel="canonical" href="https://amicul-veterinar-steaua.ro">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: '#009688',
+                        'teal-light': '#26A69A',
+                        'teal-dark': '#00796B',
+                        warm: '#FFC107',
+                        'warm-light': '#FFD54F',
+                        'warm-dark': '#FFA000',
+                        mint: '#E0F2F1',
+                        'mint-dark': '#B2DFDB',
+                        dark: '#37474F',
+                        'dark-light': '#546E7A',
+                    },
+                    fontFamily: {
+                        heading: ['Comfortaa', 'cursive'],
+                        body: ['Nunito', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Cabinet Farmacie Veterinară Amicul Veterinar Steaua",
+        "description": "Cabinet veterinar și farmacie veterinară în Slatina. Consultații veterinare, medicamente, deparazitare și vaccinări.",
+        "url": "https://amicul-veterinar-steaua.ro",
+        "telephone": "+40771768681",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Strada Ecaterina Teodoroiu, Nr. 17",
+            "addressLocality": "Slatina",
+            "addressRegion": "Olt",
+            "postalCode": "230088",
+            "addressCountry": "RO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.422026,
+            "longitude": 24.384413
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "08:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "16:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "08:00",
+                "closes": "14:00"
+            }
+        ],
+        "paymentAccepted": "Cash, Credit Card",
+        "priceRange": "$$",
+        "image": "",
+        "sameAs": []
+    }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Nunito', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Comfortaa', cursive; }
+
+        .teal-gradient {
+            background: linear-gradient(135deg, #009688 0%, #26A69A 100%);
+        }
+        .warm-gradient {
+            background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
+        }
+        .dark-gradient {
+            background: linear-gradient(135deg, #37474F 0%, #546E7A 100%);
+        }
+        .hero-bg {
+            background-color: #E0F2F1;
+            background-image:
+                radial-gradient(circle at 15% 85%, rgba(0,150,136,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 85% 15%, rgba(255,193,7,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(0,150,136,0.03) 0%, transparent 60%);
+        }
+        .paw-trail {
+            position: relative;
+        }
+        .paw-trail::before {
+            content: '\f1b0';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: -15px;
+            right: -10px;
+            color: rgba(0,150,136,0.1);
+            font-size: 2rem;
+            transform: rotate(-20deg);
+        }
+        .service-pill {
+            transition: all 0.3s ease;
+        }
+        .service-pill:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,150,136,0.12);
+        }
+        .pharmacy-cross {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pharmacy-cross::before {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 42px;
+            background: #009688;
+            border-radius: 4px;
+        }
+        .pharmacy-cross::after {
+            content: '';
+            position: absolute;
+            width: 42px;
+            height: 18px;
+            background: #009688;
+            border-radius: 4px;
+        }
+        .float-bounce {
+            animation: bounce-gentle 3s ease-in-out infinite;
+        }
+        .float-bounce:nth-child(2) { animation-delay: 1s; }
+        .float-bounce:nth-child(3) { animation-delay: 2s; }
+        @keyframes bounce-gentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        .wiggle-hover:hover {
+            animation: wiggle 0.5s ease-in-out;
+        }
+        .dual-badge {
+            background: linear-gradient(90deg, #009688 50%, #FFC107 50%);
+        }
+        .nav-pill {
+            transition: all 0.3s ease;
+        }
+        .nav-pill:hover {
+            background: rgba(0,150,136,0.1);
+        }
+        .schedule-stripe:nth-child(odd) {
+            background-color: rgba(0,150,136,0.03);
+        }
+        .wave-section {
+            position: relative;
+        }
+        .wave-section::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,15 C240,30 480,0 720,15 C960,30 1200,0 1440,15 L1440,30 L0,30 Z' fill='%23E0F2F1'/%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+        .icon-blob {
+            width: 72px;
+            height: 72px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-radius 0.5s ease;
+        }
+        .icon-blob:hover {
+            border-radius: 50%;
+        }
+        .card-rounded {
+            border-radius: 24px;
+        }
+        @keyframes pulse-teal {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0,150,136,0.3); }
+            50% { box-shadow: 0 0 0 12px rgba(0,150,136,0); }
+        }
+        .pulse-teal { animation: pulse-teal 2s infinite; }
+    </style>
+</head>
+<body class="bg-white text-dark">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-2xl teal-gradient flex items-center justify-center">
+                        <i class="fa-solid fa-paw text-white text-lg md:text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading text-teal text-sm md:text-base font-bold leading-tight block">Amicul Veterinar</span>
+                        <span class="text-dark/50 text-xs block">Steaua &bull; Slatina</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center space-x-2">
+                    <a href="#acasa" class="nav-pill text-dark/70 hover:text-teal px-4 py-2 rounded-full text-sm font-semibold">Acasă</a>
+                    <a href="#servicii" class="nav-pill text-dark/70 hover:text-teal px-4 py-2 rounded-full text-sm font-semibold">Servicii</a>
+                    <a href="#farmacie" class="nav-pill text-dark/70 hover:text-teal px-4 py-2 rounded-full text-sm font-semibold">Farmacie</a>
+                    <a href="#program" class="nav-pill text-dark/70 hover:text-teal px-4 py-2 rounded-full text-sm font-semibold">Program</a>
+                    <a href="#despre" class="nav-pill text-dark/70 hover:text-teal px-4 py-2 rounded-full text-sm font-semibold">Despre</a>
+                    <a href="#contact" class="nav-pill text-dark/70 hover:text-teal px-4 py-2 rounded-full text-sm font-semibold">Contact</a>
+                    <a href="tel:0771768681" class="teal-gradient text-white px-5 py-2.5 rounded-full text-sm font-bold hover:shadow-lg hover:shadow-teal/30 transition-all ml-2">
+                        <i class="fa-solid fa-phone mr-2"></i>Sună Acum
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-dark text-2xl" id="mobile-menu-btn" aria-label="Meniu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t border-teal/10" id="mobile-menu">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#acasa" class="block text-dark/70 hover:text-teal hover:bg-mint px-4 py-3 rounded-xl text-sm font-semibold transition-colors">Acasă</a>
+                <a href="#servicii" class="block text-dark/70 hover:text-teal hover:bg-mint px-4 py-3 rounded-xl text-sm font-semibold transition-colors">Servicii</a>
+                <a href="#farmacie" class="block text-dark/70 hover:text-teal hover:bg-mint px-4 py-3 rounded-xl text-sm font-semibold transition-colors">Farmacie</a>
+                <a href="#program" class="block text-dark/70 hover:text-teal hover:bg-mint px-4 py-3 rounded-xl text-sm font-semibold transition-colors">Program</a>
+                <a href="#despre" class="block text-dark/70 hover:text-teal hover:bg-mint px-4 py-3 rounded-xl text-sm font-semibold transition-colors">Despre</a>
+                <a href="#contact" class="block text-dark/70 hover:text-teal hover:bg-mint px-4 py-3 rounded-xl text-sm font-semibold transition-colors">Contact</a>
+                <a href="tel:0771768681" class="block teal-gradient text-white text-center px-5 py-3 rounded-xl text-sm font-bold mt-2">
+                    <i class="fa-solid fa-phone mr-2"></i>0771 768 681
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="acasa" class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-28 right-8 text-teal/10 text-5xl float-bounce hidden md:block">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="absolute bottom-32 left-12 text-warm/15 text-4xl float-bounce hidden md:block">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="absolute top-1/3 left-1/4 text-teal/5 text-7xl hidden lg:block" style="transform: rotate(30deg);">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <!-- Dual Service Badge -->
+                    <div class="inline-flex items-center space-x-2 mb-6">
+                        <span class="bg-teal/10 text-teal text-xs font-bold px-3 py-1.5 rounded-full border border-teal/20">
+                            <i class="fa-solid fa-stethoscope mr-1"></i>Cabinet Veterinar
+                        </span>
+                        <span class="text-dark/30">+</span>
+                        <span class="bg-warm/10 text-warm-dark text-xs font-bold px-3 py-1.5 rounded-full border border-warm/20">
+                            <i class="fa-solid fa-prescription-bottle-medical mr-1"></i>Farmacie Veterinară
+                        </span>
+                    </div>
+
+                    <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-dark leading-tight mb-6">
+                        Totul pentru
+                        <span class="text-teal"> sănătatea</span><br>
+                        prietenului tău
+                        <span class="text-warm"> blănos</span>
+                        <i class="fa-solid fa-paw text-teal/20 text-3xl ml-2 inline-block wiggle-hover"></i>
+                    </h1>
+
+                    <p class="text-dark/60 text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+                        Amicul Veterinar Steaua din Slatina reunește sub același acoperiș <strong class="text-teal">cabinet veterinar</strong> și <strong class="text-warm-dark">farmacie veterinară</strong>. Consultații, medicamente și îngrijire — totul într-un singur loc.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="tel:0771768681" class="teal-gradient text-white px-8 py-4 rounded-2xl text-center font-bold text-lg hover:shadow-xl hover:shadow-teal/30 transition-all pulse-teal">
+                            <i class="fa-solid fa-phone mr-2"></i>0771 768 681
+                        </a>
+                        <a href="#servicii" class="border-2 border-teal/30 text-teal px-8 py-4 rounded-2xl text-center font-bold hover:bg-teal/5 transition-all">
+                            <i class="fa-solid fa-list-check mr-2"></i>Servicii
+                        </a>
+                    </div>
+
+                    <!-- Quick Tags -->
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white/80 text-dark/60 text-sm px-4 py-2 rounded-full border border-teal/10 shadow-sm">
+                            <i class="fa-solid fa-clock text-teal mr-2"></i>Deschis 7 zile
+                        </span>
+                        <span class="bg-white/80 text-dark/60 text-sm px-4 py-2 rounded-full border border-teal/10 shadow-sm">
+                            <i class="fa-solid fa-credit-card text-warm mr-2"></i>Plată cu cardul
+                        </span>
+                        <span class="bg-white/80 text-dark/60 text-sm px-4 py-2 rounded-full border border-teal/10 shadow-sm">
+                            <i class="fa-solid fa-bolt text-teal mr-2"></i>Vizită rapidă
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hero Right - Visual Element -->
+                <div class="hidden lg:flex justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative">
+                        <!-- Main Circle -->
+                        <div class="w-80 h-80 rounded-[40%_60%_60%_40%/40%_40%_60%_60%] bg-gradient-to-br from-teal/10 to-mint border-2 border-teal/20 flex items-center justify-center relative">
+                            <div class="w-56 h-56 rounded-full teal-gradient flex items-center justify-center shadow-2xl shadow-teal/20">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-paw text-white text-6xl mb-2 block"></i>
+                                    <div class="w-10 h-1 bg-white/40 mx-auto rounded-full mb-2"></div>
+                                    <i class="fa-solid fa-plus text-white/60 text-xl"></i>
+                                </div>
+                            </div>
+                            <!-- Orbiting elements -->
+                            <div class="absolute -top-2 right-10 w-14 h-14 rounded-2xl bg-white shadow-lg border border-teal/20 flex items-center justify-center float-bounce">
+                                <i class="fa-solid fa-dog text-teal text-xl"></i>
+                            </div>
+                            <div class="absolute -bottom-2 left-10 w-14 h-14 rounded-2xl bg-white shadow-lg border border-warm/20 flex items-center justify-center float-bounce">
+                                <i class="fa-solid fa-cat text-warm-dark text-xl"></i>
+                            </div>
+                            <div class="absolute top-1/2 -left-6 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white shadow-lg border border-teal/20 flex items-center justify-center float-bounce">
+                                <i class="fa-solid fa-prescription-bottle-medical text-teal text-xl"></i>
+                            </div>
+                            <div class="absolute top-1/4 -right-4 w-12 h-12 rounded-xl warm-gradient flex items-center justify-center shadow-lg">
+                                <i class="fa-solid fa-heart text-white text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Wave -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C320,80 640,0 960,40 C1120,60 1320,50 1440,40 L1440,80 L0,80 Z" fill="#FFFFFF"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Feature Strip -->
+    <section class="bg-white py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="800">
+                <div class="flex items-center space-x-3 p-3 rounded-2xl hover:bg-mint transition-colors">
+                    <div class="w-12 h-12 rounded-xl teal-gradient flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-stethoscope text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-heading font-bold text-dark text-sm">Cabinet</p>
+                        <p class="text-dark/50 text-xs">Consultații complete</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 rounded-2xl hover:bg-mint transition-colors">
+                    <div class="w-12 h-12 rounded-xl warm-gradient flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-pills text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-heading font-bold text-dark text-sm">Farmacie</p>
+                        <p class="text-dark/50 text-xs">Medicamente veterinare</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 rounded-2xl hover:bg-mint transition-colors">
+                    <div class="w-12 h-12 rounded-xl teal-gradient flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-calendar-check text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-heading font-bold text-dark text-sm">7 Zile</p>
+                        <p class="text-dark/50 text-xs">Inclusiv duminica</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 p-3 rounded-2xl hover:bg-mint transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-dark flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-credit-card text-warm"></i>
+                    </div>
+                    <div>
+                        <p class="font-heading font-bold text-dark text-sm">Card</p>
+                        <p class="text-dark/50 text-xs">Plată cu cardul</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicii" class="bg-mint py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center bg-teal/10 text-teal text-sm font-bold px-4 py-2 rounded-full mb-4">
+                    <i class="fa-solid fa-stethoscope mr-2"></i>Cabinet Veterinar
+                </div>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-4">
+                    Servicii Veterinare
+                </h2>
+                <p class="text-dark/50 text-lg max-w-2xl mx-auto">
+                    Îngrijire medicală completă pentru câini, pisici și alte animale de companie, într-un mediu prietenos și calm.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Consultații -->
+                <div class="service-pill bg-white card-rounded p-8 shadow-sm border border-teal/10" data-aos="fade-up" data-aos-delay="0">
+                    <div class="icon-blob bg-teal/10 mb-6">
+                        <i class="fa-solid fa-stethoscope text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-dark mb-3">Consultații Veterinare</h3>
+                    <p class="text-dark/55 leading-relaxed">
+                        Examinare clinică completă, diagnostic precis și plan de tratament personalizat pentru fiecare pacient. Abordare blândă și profesională.
+                    </p>
+                    <div class="mt-4 flex items-center text-teal text-sm font-semibold">
+                        <i class="fa-solid fa-bolt mr-2"></i>Vizită rapidă disponibilă
+                    </div>
+                </div>
+
+                <!-- Vaccinări -->
+                <div class="service-pill bg-white card-rounded p-8 shadow-sm border border-teal/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-blob bg-warm/10 mb-6">
+                        <i class="fa-solid fa-syringe text-warm-dark text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-dark mb-3">Vaccinări</h3>
+                    <p class="text-dark/55 leading-relaxed">
+                        Scheme complete de vaccinare pentru câini și pisici, conform protocoalelor în vigoare. Protecția optimă împotriva bolilor infecțioase.
+                    </p>
+                    <div class="mt-4 flex items-center text-warm-dark text-sm font-semibold">
+                        <i class="fa-solid fa-shield-heart mr-2"></i>Prevenție eficientă
+                    </div>
+                </div>
+
+                <!-- Deparazitare -->
+                <div class="service-pill bg-white card-rounded p-8 shadow-sm border border-teal/10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-blob bg-teal/10 mb-6">
+                        <i class="fa-solid fa-shield-virus text-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-dark mb-3">Deparazitare</h3>
+                    <p class="text-dark/55 leading-relaxed">
+                        Tratamente antiparazitare interne și externe — deparazitare completă cu produse de calitate superioară din farmacia noastră.
+                    </p>
+                    <div class="mt-4 flex items-center text-teal text-sm font-semibold">
+                        <i class="fa-solid fa-prescription-bottle-medical mr-2"></i>Produse din farmacie
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pharmacy Section -->
+    <section id="farmacie" class="bg-white py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute top-10 right-10 text-teal/5 text-[180px] hidden lg:block">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center bg-warm/10 text-warm-dark text-sm font-bold px-4 py-2 rounded-full mb-4">
+                        <i class="fa-solid fa-prescription-bottle-medical mr-2"></i>Farmacie Veterinară
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-6">
+                        Farmacie Veterinară <span class="text-teal">Completă</span>
+                    </h2>
+                    <p class="text-dark/60 text-lg leading-relaxed mb-8">
+                        Alături de cabinetul veterinar, Amicul Veterinar Steaua dispune de o farmacie veterinară bine aprovizionată. Aici găsiți toate medicamentele și produsele necesare pentru sănătatea animalului dumneavoastră, prescrise și eliberate de specialiști.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl warm-gradient flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-pills text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-dark mb-1">Medicamente Veterinare</h4>
+                                <p class="text-dark/50 text-sm">Gamă completă de medicamente cu prescripție și fără prescripție pentru toate speciile.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl teal-gradient flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-shield-virus text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-dark mb-1">Antiparazitare</h4>
+                                <p class="text-dark/50 text-sm">Pipete, comprimate și spray-uri antiparazitare de la producători de încredere.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl warm-gradient flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-bone text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-dark mb-1">Suplimente & Vitamine</h4>
+                                <p class="text-dark/50 text-sm">Suplimente nutritive, vitamine și produse de îngrijire recomandate de medic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pharmacy Visual -->
+                <div class="flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="bg-mint card-rounded p-10 border-2 border-teal/10 max-w-md">
+                            <div class="text-center mb-8">
+                                <div class="w-20 h-20 rounded-full teal-gradient flex items-center justify-center mx-auto mb-4 shadow-lg shadow-teal/20">
+                                    <i class="fa-solid fa-prescription-bottle-medical text-white text-3xl"></i>
+                                </div>
+                                <h3 class="font-heading text-xl font-bold text-dark">Farmacie Veterinară</h3>
+                                <p class="text-dark/50 text-sm mt-1">Amicul Veterinar Steaua</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-sm">
+                                    <i class="fa-solid fa-check-circle text-teal"></i>
+                                    <span class="text-dark/70 text-sm">Medicamente cu prescripție</span>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-sm">
+                                    <i class="fa-solid fa-check-circle text-teal"></i>
+                                    <span class="text-dark/70 text-sm">Produse antiparazitare</span>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-sm">
+                                    <i class="fa-solid fa-check-circle text-teal"></i>
+                                    <span class="text-dark/70 text-sm">Suplimente alimentare</span>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-sm">
+                                    <i class="fa-solid fa-check-circle text-teal"></i>
+                                    <span class="text-dark/70 text-sm">Produse de igienă</span>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-sm">
+                                    <i class="fa-solid fa-check-circle text-teal"></i>
+                                    <span class="text-dark/70 text-sm">Consiliere farmaceutică</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 bg-warm/10 rounded-xl p-4 border border-warm/20 text-center">
+                                <i class="fa-solid fa-credit-card text-warm-dark mr-2"></i>
+                                <span class="text-dark/70 text-sm font-semibold">Acceptăm plata cu cardul</span>
+                            </div>
+                        </div>
+                        <!-- Decorative -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 rounded-2xl bg-warm/10 -z-10 hidden md:block"></div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-teal/10 -z-10 hidden md:block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual Advantage -->
+    <section class="teal-gradient py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 bottom-0 opacity-10">
+            <div class="absolute top-10 left-10 text-white text-6xl"><i class="fa-solid fa-paw"></i></div>
+            <div class="absolute bottom-10 right-10 text-white text-5xl"><i class="fa-solid fa-plus"></i></div>
+            <div class="absolute top-1/2 left-1/3 text-white text-4xl"><i class="fa-solid fa-heart"></i></div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+                Avantajul Nostru: Totul într-un Singur Loc
+            </h2>
+            <p class="text-white/80 text-lg mb-10 max-w-3xl mx-auto leading-relaxed">
+                Nu mai trebuie să alergi de la cabinet la farmacie. La Amicul Veterinar Steaua, animalul tău primește consultația și pleacă cu tratamentul — rapid, simplu, eficient.
+            </p>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-1 text-white text-xl font-bold"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-white mb-2">Consultație</h3>
+                    <p class="text-white/70 text-sm">Examinare și diagnostic profesional</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-2 text-white text-xl font-bold"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-white mb-2">Prescripție</h3>
+                    <p class="text-white/70 text-sm">Tratament personalizat de medic</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                    <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-3 text-white text-xl font-bold"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-white mb-2">Farmacie</h3>
+                    <p class="text-white/70 text-sm">Medicamente ridicate pe loc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="program" class="bg-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center bg-teal/10 text-teal text-sm font-bold px-4 py-2 rounded-full mb-4">
+                        <i class="fa-regular fa-clock mr-2"></i>Program
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-6">
+                        Programul Nostru
+                    </h2>
+                    <p class="text-dark/60 text-lg mb-8 leading-relaxed">
+                        Suntem deschiși <strong class="text-teal">7 zile pe săptămână</strong>, cu program extins în timpul săptămânii. Vă așteptăm inclusiv sâmbăta și duminica!
+                    </p>
+
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-xl teal-gradient flex items-center justify-center">
+                            <i class="fa-solid fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-dark/40 text-sm">Programări telefonice</p>
+                            <a href="tel:0771768681" class="text-teal text-xl font-bold hover:text-teal-dark transition-colors">0771 768 681</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-xl warm-gradient flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-dark/40 text-sm">Adresă</p>
+                            <p class="text-dark font-bold">Str. Ecaterina Teodoroiu, Nr. 17, Slatina</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-dark flex items-center justify-center">
+                            <i class="fa-solid fa-credit-card text-warm"></i>
+                        </div>
+                        <div>
+                            <p class="text-dark/40 text-sm">Plată</p>
+                            <p class="text-dark font-bold">Cash & Card acceptate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="bg-mint card-rounded overflow-hidden border border-teal/10 shadow-lg">
+                        <div class="teal-gradient px-6 py-5">
+                            <h3 class="font-heading text-white text-lg font-bold text-center">
+                                <i class="fa-regular fa-calendar mr-2"></i>Orar Cabinet & Farmacie
+                            </h3>
+                        </div>
+                        <div class="p-6 space-y-0">
+                            <div class="schedule-stripe flex justify-between items-center py-4 px-4 rounded-xl">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 rounded-full bg-teal"></div>
+                                    <span class="text-dark font-semibold">Luni</span>
+                                </div>
+                                <span class="text-teal font-bold">08:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-stripe flex justify-between items-center py-4 px-4 rounded-xl">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 rounded-full bg-teal"></div>
+                                    <span class="text-dark font-semibold">Marți</span>
+                                </div>
+                                <span class="text-teal font-bold">08:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-stripe flex justify-between items-center py-4 px-4 rounded-xl">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 rounded-full bg-teal"></div>
+                                    <span class="text-dark font-semibold">Miercuri</span>
+                                </div>
+                                <span class="text-teal font-bold">08:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-stripe flex justify-between items-center py-4 px-4 rounded-xl">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 rounded-full bg-teal"></div>
+                                    <span class="text-dark font-semibold">Joi</span>
+                                </div>
+                                <span class="text-teal font-bold">08:00 – 20:00</span>
+                            </div>
+                            <div class="schedule-stripe flex justify-between items-center py-4 px-4 rounded-xl">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 rounded-full bg-teal"></div>
+                                    <span class="text-dark font-semibold">Vineri</span>
+                                </div>
+                                <span class="text-teal font-bold">08:00 – 20:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-4 px-4 rounded-xl bg-warm/5 border border-warm/10">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 rounded-full bg-warm"></div>
+                                    <span class="text-dark font-semibold">Sâmbătă</span>
+                                </div>
+                                <span class="text-warm-dark font-bold">08:00 – 16:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-4 px-4 rounded-xl bg-teal/5 border border-teal/10">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 rounded-full bg-teal"></div>
+                                    <span class="text-dark font-bold">Duminică</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-teal/10 text-teal text-xs px-2 py-1 rounded-full font-bold">DESCHIS</span>
+                                    <span class="text-teal font-bold">08:00 – 14:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="despre" class="bg-mint py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Visual -->
+                <div class="flex justify-center" data-aos="fade-right">
+                    <div class="relative max-w-md w-full">
+                        <div class="bg-white card-rounded p-10 shadow-lg border border-teal/10">
+                            <div class="flex items-center justify-center space-x-4 mb-8">
+                                <div class="w-16 h-16 rounded-2xl teal-gradient flex items-center justify-center">
+                                    <i class="fa-solid fa-paw text-white text-2xl"></i>
+                                </div>
+                                <div class="text-4xl text-dark/20 font-heading">+</div>
+                                <div class="w-16 h-16 rounded-2xl warm-gradient flex items-center justify-center">
+                                    <i class="fa-solid fa-prescription-bottle-medical text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-heading text-xl font-bold text-dark text-center mb-2">Amicul Veterinar Steaua</h3>
+                            <p class="text-dark/50 text-center text-sm mb-6">Cabinet & Farmacie Veterinară</p>
+                            <div class="w-16 h-1 bg-teal/30 mx-auto rounded-full mb-6"></div>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3 p-3 bg-mint rounded-xl">
+                                    <i class="fa-solid fa-heart text-teal"></i>
+                                    <span class="text-dark/70 text-sm">Abordare prietenoasă și blândă</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-3 bg-mint rounded-xl">
+                                    <i class="fa-solid fa-hand-holding-heart text-warm-dark"></i>
+                                    <span class="text-dark/70 text-sm">Grijă pentru fiecare pacient</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-3 bg-mint rounded-xl">
+                                    <i class="fa-solid fa-star text-teal"></i>
+                                    <span class="text-dark/70 text-sm">Servicii de calitate la prețuri corecte</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-3 bg-mint rounded-xl">
+                                    <i class="fa-solid fa-clock text-warm-dark"></i>
+                                    <span class="text-dark/70 text-sm">Program extins, 7 zile pe săptămână</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <div data-aos="fade-left">
+                    <div class="inline-flex items-center bg-teal/10 text-teal text-sm font-bold px-4 py-2 rounded-full mb-4">
+                        <i class="fa-solid fa-info-circle mr-2"></i>Despre Noi
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-6">
+                        Prietenul de Nădejde al Animalelor din <span class="text-teal">Slatina</span>
+                    </h2>
+                    <p class="text-dark/60 text-lg leading-relaxed mb-6">
+                        Amicul Veterinar Steaua este mai mult decât un cabinet sau o farmacie — este un partener de încredere în grija pentru sănătatea animalelor dumneavoastră. Situat pe Strada Ecaterina Teodoroiu din Slatina, oferim servicii veterinare complete alături de o farmacie bine aprovizionată.
+                    </p>
+                    <p class="text-dark/60 leading-relaxed mb-8">
+                        Filosofia noastră este simplă: fiecare animal merită îngrijire de calitate, într-un mediu cald și prietenos. De aceea, am creat un spațiu unde proprietarii și animalele lor se simt în siguranță, iar serviciile sunt accesibile și rapide.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-5 border border-teal/10 shadow-sm">
+                            <i class="fa-solid fa-bolt text-teal text-2xl mb-3 block"></i>
+                            <h4 class="font-heading font-bold text-dark text-sm mb-1">Rapiditate</h4>
+                            <p class="text-dark/50 text-xs">Consultații fără așteptare îndelungată</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-warm/10 shadow-sm">
+                            <i class="fa-solid fa-hand-holding-medical text-warm-dark text-2xl mb-3 block"></i>
+                            <h4 class="font-heading font-bold text-dark text-sm mb-1">Accesibilitate</h4>
+                            <p class="text-dark/50 text-xs">Prețuri corecte, plata cu card</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-teal/10 shadow-sm">
+                            <i class="fa-solid fa-user-nurse text-teal text-2xl mb-3 block"></i>
+                            <h4 class="font-heading font-bold text-dark text-sm mb-1">Profesionalism</h4>
+                            <p class="text-dark/50 text-xs">Personal calificat și dedicat</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-warm/10 shadow-sm">
+                            <i class="fa-solid fa-face-smile text-warm-dark text-2xl mb-3 block"></i>
+                            <h4 class="font-heading font-bold text-dark text-sm mb-1">Prietenie</h4>
+                            <p class="text-dark/50 text-xs">Atmosferă caldă și relaxantă</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Care Tips -->
+    <section class="bg-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="inline-flex items-center bg-warm/10 text-warm-dark text-sm font-bold px-4 py-2 rounded-full mb-4">
+                    <i class="fa-solid fa-lightbulb mr-2"></i>Sfaturi Utile
+                </div>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">
+                    Sfaturi pentru Proprietari
+                </h2>
+                <p class="text-dark/50 text-lg max-w-2xl mx-auto">
+                    Câteva recomandări de bază pentru sănătatea animalului dumneavoastră.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-mint rounded-2xl p-6 border border-teal/10 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl teal-gradient flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-syringe text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-dark mb-2 text-sm">Vaccinare la Timp</h3>
+                    <p class="text-dark/50 text-sm leading-relaxed">Respectați calendarul de vaccinare pentru prevenirea bolilor infecțioase grave.</p>
+                </div>
+                <div class="bg-mint rounded-2xl p-6 border border-teal/10 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl warm-gradient flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-shield-virus text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-dark mb-2 text-sm">Deparazitare Regulată</h3>
+                    <p class="text-dark/50 text-sm leading-relaxed">Deparazitarea internă și externă trebuie făcută la intervale regulate, conform indicațiilor medicului.</p>
+                </div>
+                <div class="bg-mint rounded-2xl p-6 border border-teal/10 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl teal-gradient flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-utensils text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-dark mb-2 text-sm">Alimentație Corectă</h3>
+                    <p class="text-dark/50 text-sm leading-relaxed">O dietă echilibrată este esențială. Cereți sfatul medicului pentru hrană potrivită vârstei și rasei.</p>
+                </div>
+                <div class="bg-mint rounded-2xl p-6 border border-teal/10 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl warm-gradient flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-calendar-check text-white"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-dark mb-2 text-sm">Control Periodic</h3>
+                    <p class="text-dark/50 text-sm leading-relaxed">Vizitele regulate la veterinar ajută la depistarea timpurie a problemelor de sănătate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="warm-gradient py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 bottom-0 opacity-10">
+            <div class="absolute top-8 right-16 text-white text-7xl"><i class="fa-solid fa-paw"></i></div>
+            <div class="absolute bottom-8 left-16 text-white text-5xl"><i class="fa-solid fa-heart"></i></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="zoom-in">
+            <div class="mb-6">
+                <i class="fa-solid fa-paw text-dark/15 text-5xl"></i>
+            </div>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">
+                Prietenul tău blănos te așteaptă cu sănătate!
+            </h2>
+            <p class="text-dark/60 text-lg mb-8 max-w-2xl mx-auto">
+                Cabinet veterinar și farmacie într-un singur loc. Sună acum sau treci pe la noi — suntem deschiși 7 zile pe săptămână!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:0771768681" class="teal-gradient text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-xl hover:shadow-teal/30 transition-all">
+                    <i class="fa-solid fa-phone mr-2"></i>0771 768 681
+                </a>
+                <a href="#program" class="bg-white text-teal px-8 py-4 rounded-2xl font-bold hover:shadow-lg transition-all">
+                    <i class="fa-regular fa-clock mr-2"></i>Vezi Programul
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="dark-gradient py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 text-white/5 text-[180px] hidden lg:block">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="inline-flex items-center bg-teal/20 text-teal-light text-sm font-bold px-4 py-2 rounded-full mb-4">
+                    <i class="fa-solid fa-map-pin mr-2"></i>Contact
+                </div>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">
+                    Cum Ajungeți la Noi
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white/5 backdrop-blur-sm card-rounded p-8 border border-teal/10 text-center hover:border-teal/30 transition-colors">
+                    <div class="w-16 h-16 rounded-2xl teal-gradient flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-phone text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-white mb-2">Telefon</h3>
+                    <a href="tel:0771768681" class="text-teal-light text-xl font-bold hover:text-warm transition-colors">0771 768 681</a>
+                    <p class="text-white/40 text-sm mt-2">Sună pentru programare</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm card-rounded p-8 border border-teal/10 text-center hover:border-teal/30 transition-colors">
+                    <div class="w-16 h-16 rounded-2xl warm-gradient flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-location-dot text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-white mb-2">Adresă</h3>
+                    <p class="text-teal-light font-semibold">Str. Ecaterina Teodoroiu, Nr. 17</p>
+                    <p class="text-white/40 text-sm mt-2">Slatina, Olt</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm card-rounded p-8 border border-teal/10 text-center hover:border-teal/30 transition-colors">
+                    <div class="w-16 h-16 rounded-2xl teal-gradient flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-clock text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-white mb-2">Program</h3>
+                    <p class="text-white/60 text-sm">L-V: <span class="text-teal-light font-semibold">08:00 – 20:00</span></p>
+                    <p class="text-white/60 text-sm">Sâmbătă: <span class="text-warm font-semibold">08:00 – 16:00</span></p>
+                    <p class="text-white/60 text-sm">Duminică: <span class="text-teal-light font-semibold">08:00 – 14:00</span></p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="card-rounded overflow-hidden border-2 border-teal/20 shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2840!2d24.384413!3d44.422026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI1JzE5LjMiTiAyNMKwMjMnMDMuOSJF!5e0!3m2!1sro!2sro!4v1"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Locația Amicul Veterinar Steaua pe Google Maps"
+                    class="w-full">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 border-t border-teal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl teal-gradient flex items-center justify-center">
+                            <i class="fa-solid fa-paw text-white"></i>
+                        </div>
+                        <div>
+                            <span class="font-heading text-teal-light font-bold text-sm">Amicul Veterinar</span>
+                            <span class="text-white/40 text-xs block">Steaua &bull; Slatina</span>
+                        </div>
+                    </div>
+                    <p class="text-white/40 text-sm leading-relaxed">
+                        Cabinet veterinar și farmacie veterinară în Slatina. Îngrijire completă pentru animalele dumneavoastră de companie.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-teal-light mb-4 text-sm">Servicii</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-white/40 text-sm"><i class="fa-solid fa-chevron-right text-teal text-xs mr-2"></i>Consultații Veterinare</span></li>
+                        <li><span class="text-white/40 text-sm"><i class="fa-solid fa-chevron-right text-teal text-xs mr-2"></i>Farmacie Veterinară</span></li>
+                        <li><span class="text-white/40 text-sm"><i class="fa-solid fa-chevron-right text-warm text-xs mr-2"></i>Medicamente</span></li>
+                        <li><span class="text-white/40 text-sm"><i class="fa-solid fa-chevron-right text-teal text-xs mr-2"></i>Deparazitare</span></li>
+                        <li><span class="text-white/40 text-sm"><i class="fa-solid fa-chevron-right text-warm text-xs mr-2"></i>Vaccinări</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-teal-light mb-4 text-sm">Contact Rapid</h4>
+                    <div class="space-y-3">
+                        <a href="tel:0771768681" class="flex items-center space-x-3 text-white/40 hover:text-teal-light transition-colors text-sm">
+                            <i class="fa-solid fa-phone text-teal"></i>
+                            <span>0771 768 681</span>
+                        </a>
+                        <div class="flex items-center space-x-3 text-white/40 text-sm">
+                            <i class="fa-solid fa-location-dot text-teal"></i>
+                            <span>Str. Ecaterina Teodoroiu, Nr. 17</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-white/40 text-sm">
+                            <i class="fa-solid fa-clock text-teal"></i>
+                            <span>L-V: 8-20 | S: 8-16 | D: 8-14</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-white/40 text-sm">
+                            <i class="fa-solid fa-credit-card text-warm"></i>
+                            <span>Plată cu cardul acceptată</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px bg-teal/10 mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-white/25 text-sm">
+                    &copy; 2026 Amicul Veterinar Steaua. Toate drepturile rezervate.
+                </p>
+                <div class="flex items-center space-x-2 text-white/25 text-sm">
+                    <i class="fa-solid fa-paw text-teal/20 text-xs"></i>
+                    <span>Slatina, Olt, România</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA Button (Mobile) -->
+    <div class="fixed bottom-6 right-6 z-50 lg:hidden">
+        <a href="tel:0771768681" class="w-14 h-14 rounded-2xl teal-gradient flex items-center justify-center shadow-xl shadow-teal/40 pulse-teal" aria-label="Sună acum">
+            <i class="fa-solid fa-phone text-white text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-xl bg-dark text-teal-light border border-teal/20 flex items-center justify-center shadow-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-dark-light" aria-label="Înapoi sus">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-4');
+                backToTop.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-4');
+                backToTop.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

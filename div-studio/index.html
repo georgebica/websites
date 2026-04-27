@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIV Studio &middot; Frizerie &#537;i coafor &icirc;n Slatina</title>
+<meta name="description" content="DIV Studio &mdash; frizerie &#537;i coafor &icirc;n centrul Slatinei, pe Strada Ecaterina Teodoroiu 11. Programare la 0786 332 327. Deschis luni-vineri 9-19, s&#226;mb&#259;t&#259; 9-16.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream:   '#FFF9EE',
+        ink:     '#1B1A18',
+        inkd:    '#0C0B09',
+        olive:   '#657F3C',
+        olived:  '#435025',
+        coral:   '#FF5B4A',
+        corald:  '#C93A2C',
+        sand:    '#F5EBD5',
+        muted:   '#716C60',
+        line:    '#E3DAC4',
+        wa:      '#25D366',
+      },
+      fontFamily: {
+        display: ['Anton', 'Impact', 'sans-serif'],
+        sans:    ['Lato', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  html, body { background: #FFF9EE; color: #1B1A18; }
+  body { font-family: Lato, system-ui, sans-serif; }
+  .display { font-family: Anton, Impact, sans-serif; letter-spacing: -.005em; line-height: .92; }
+
+  .stripes {
+    background-image: repeating-linear-gradient(45deg, transparent 0 22px, rgba(27,26,24,.04) 22px 24px);
+  }
+  .coral-stripes {
+    background-image: repeating-linear-gradient(-45deg, #FF5B4A 0 24px, #FFF9EE 24px 48px);
+  }
+
+  .btn-olive {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #657F3C;
+    color: #FFF9EE;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .82rem;
+    transition: all .25s;
+  }
+  .btn-olive:hover { background: #435025; transform: translateY(-2px); }
+
+  .btn-coral {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #FF5B4A;
+    color: #FFF9EE;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .82rem;
+    transition: all .25s;
+  }
+  .btn-coral:hover { background: #C93A2C; transform: translateY(-2px); }
+
+  .btn-wap {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+    padding: 1rem 1.8rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .82rem;
+    transition: all .25s;
+  }
+  .btn-wap:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .4rem .9rem;
+    background: #1B1A18;
+    color: #FFF9EE;
+    font-family: Anton, sans-serif;
+    font-size: .82rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .chip-coral { background: #FF5B4A; }
+
+  .card {
+    background: #fff;
+    border: 2px solid #1B1A18;
+    padding: 1.8rem;
+    transition: transform .25s;
+  }
+  .card:hover { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 0 #1B1A18; }
+
+  .testi {
+    background: #FFF9EE;
+    border: 2px solid #1B1A18;
+    padding: 1.5rem;
+    position: relative;
+  }
+
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: .75rem 0;
+    border-bottom: 1px dashed rgba(27,26,24,.25);
+    font-size: .95rem;
+  }
+  .hours-row:last-child { border: 0; }
+  .hours-row.today { color: #FF5B4A; font-weight: 900; }
+
+  .mobile-link { display: block; padding: 1rem 0; font-family: Anton, sans-serif; font-size: 2rem; border-bottom: 2px solid #1B1A18; letter-spacing: .02em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<header class="relative z-40 bg-cream border-b-2 border-ink">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="w-11 h-11 bg-ink text-coral flex items-center justify-center display text-2xl">D</span>
+      <div class="leading-tight">
+        <p class="display text-2xl">DIV STUDIO</p>
+        <p class="text-[10px] tracking-widest uppercase text-muted mt-1">Frizerie &middot; Coafor &middot; Slatina</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-[12px] font-bold uppercase tracking-wider">
+      <a href="#servicii"  class="hover:text-coral">Servicii</a>
+      <a href="#preturi"   class="hover:text-coral">Pre&#539;uri</a>
+      <a href="#recenzii"  class="hover:text-coral">Recenzii</a>
+      <a href="#program"   class="hover:text-coral">Program</a>
+      <a href="tel:0786332327" class="btn-olive !py-2.5 !px-4 !text-[11px]">0786 332 327</a>
+    </nav>
+
+    <button id="menu-open" class="md:hidden w-11 h-11 bg-ink text-coral flex items-center justify-center" aria-label="Meniu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div id="menu" class="fixed inset-0 bg-cream z-50 hidden flex-col p-6">
+  <div class="flex items-center justify-between">
+    <span class="display text-3xl">DIV STUDIO</span>
+    <button id="menu-close" class="w-11 h-11 bg-ink text-coral flex items-center justify-center" aria-label="&Icirc;nchide"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mt-8">
+    <a href="#servicii" class="mobile-link">Servicii</a>
+    <a href="#preturi"  class="mobile-link">Pre&#539;uri</a>
+    <a href="#recenzii" class="mobile-link">Recenzii</a>
+    <a href="#program"  class="mobile-link">Program</a>
+    <a href="#contact"  class="mobile-link">Contact</a>
+  </nav>
+  <div class="mt-auto grid grid-cols-2 gap-2">
+    <a href="tel:0786332327" class="btn-olive">Sun&#259;</a>
+    <a href="https://wa.me/40786332327" class="btn-wap">WhatsApp</a>
+  </div>
+</div>
+
+<section id="top" class="relative overflow-hidden stripes">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 relative">
+    <div data-aos="fade-up">
+      <span class="chip chip-coral">Slatina &middot; Str. Ecaterina Teodoroiu 11</span>
+    </div>
+
+    <h1 class="display mt-8 text-[clamp(3.5rem,14vw,12rem)]" data-aos="fade-up" data-aos-delay="40">
+      TUNS<br>
+      <span class="text-coral">REPEDE.</span><br>
+      <span class="text-olive">F&#258;CUT BINE.</span>
+    </h1>
+
+    <p class="mt-10 max-w-xl text-lg text-ink/80 leading-relaxed" data-aos="fade-up" data-aos-delay="120">
+      DIV Studio este frizeria din centrul Slatinei unde nu te nim&#259;ne&#537;ti niciodat&#259; cu &bdquo;era ocupat&rdquo;. Programare, execu&#539;ie la obiect, pre&#539;uri pe care le &#537;ti dinainte. Bun&#259; &#537;i pentru copii.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3" data-aos="fade-up" data-aos-delay="180">
+      <a href="tel:0786332327" class="btn-olive"><i class="fa-solid fa-phone"></i> 0786 332 327</a>
+      <a href="https://wa.me/40786332327" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+    </div>
+
+    <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="240">
+      <div class="border-2 border-ink p-4 bg-cream">
+        <p class="display text-5xl text-coral">5.0</p>
+        <p class="text-[11px] uppercase tracking-widest text-muted mt-1">pe Google</p>
+      </div>
+      <div class="border-2 border-ink p-4 bg-cream">
+        <p class="display text-5xl text-coral">25 lei</p>
+        <p class="text-[11px] uppercase tracking-widest text-muted mt-1">tuns de la</p>
+      </div>
+      <div class="border-2 border-ink p-4 bg-cream">
+        <p class="display text-5xl text-coral">6 zile</p>
+        <p class="text-[11px] uppercase tracking-widest text-muted mt-1">luni&ndash;s&#226;mb&#259;t&#259;</p>
+      </div>
+      <div class="border-2 border-ink p-4 bg-cream">
+        <p class="display text-5xl text-coral">KIDS</p>
+        <p class="text-[11px] uppercase tracking-widest text-muted mt-1">ok pentru copii</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="coral-stripes h-6"></div>
+</section>
+
+<section id="servicii" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <span class="chip">Servicii</span>
+    <h2 class="display mt-4 text-5xl sm:text-6xl">Ce facem <span class="text-coral">&icirc;n fotoliu.</span></h2>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="card" data-aos="fade-up">
+        <i class="fa-solid fa-scissors text-coral text-2xl"></i>
+        <h3 class="display text-3xl mt-4">Tuns clasic</h3>
+        <p class="mt-2 text-sm text-muted">Tunsoare clasic&#259; la foarfec&#259; &#537;i ma&#537;in&#259;, pentru orice tip de p&#259;r &#537;i form&#259; a fe&#539;ei.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="60">
+        <i class="fa-solid fa-crown text-coral text-2xl"></i>
+        <h3 class="display text-3xl mt-4">Tuns modern</h3>
+        <p class="mt-2 text-sm text-muted">Fade, undercut, pompadour, crop. Stiluri cerute, f&#259;cute la carte.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="120">
+        <i class="fa-solid fa-razor text-coral text-2xl"></i>
+        <h3 class="display text-3xl mt-4">B&#259;rbierit</h3>
+        <p class="mt-2 text-sm text-muted">B&#259;rbierit la brici, cu comprese calde, ulei &#537;i balsam dup&#259;.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="180">
+        <i class="fa-solid fa-wind text-coral text-2xl"></i>
+        <h3 class="display text-3xl mt-4">Tuns dam&#259;</h3>
+        <p class="mt-2 text-sm text-muted">Forme contemporane, tunsori modelate, franjuri, scurtate sau lungi.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="240">
+        <i class="fa-solid fa-palette text-coral text-2xl"></i>
+        <h3 class="display text-3xl mt-4">Culoare</h3>
+        <p class="mt-2 text-sm text-muted">Vopsit complet, &#537;uvi&#539;e, corec&#539;ii de culoare, tonuri reci sau calde.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-child text-coral text-2xl"></i>
+        <h3 class="display text-3xl mt-4">Tuns copii</h3>
+        <p class="mt-2 text-sm text-muted">Pentru cei mici, cu r&#259;bdare &#537;i joac&#259;. P&#259;rin&#539;ii zic mul&#539;umesc.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="preturi" class="py-16 sm:py-24 bg-sand border-y-2 border-ink">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+    <span class="chip">Pre&#539;uri</span>
+    <h2 class="display mt-4 text-5xl sm:text-6xl">
+      CELE MAI MICI<br><span class="text-coral">DIN ORA&#536;</span>, PENTRU TUNS.
+    </h2>
+
+    <div class="mt-12 bg-cream border-2 border-ink p-6 sm:p-8">
+      <ul class="space-y-4">
+        <li class="flex items-baseline justify-between text-lg border-b border-dashed border-ink/30 pb-3">
+          <span class="display text-2xl">Tuns b&#259;rba&#539;i</span>
+          <span class="display text-2xl text-coral">25 lei</span>
+        </li>
+        <li class="flex items-baseline justify-between text-lg border-b border-dashed border-ink/30 pb-3">
+          <span class="display text-2xl">Tuns copii</span>
+          <span class="display text-2xl text-coral">20 lei</span>
+        </li>
+        <li class="flex items-baseline justify-between text-lg border-b border-dashed border-ink/30 pb-3">
+          <span class="display text-2xl">B&#259;rbierit</span>
+          <span class="display text-2xl text-coral">20 lei</span>
+        </li>
+        <li class="flex items-baseline justify-between text-lg border-b border-dashed border-ink/30 pb-3">
+          <span class="display text-2xl">Tuns dam&#259;</span>
+          <span class="display text-2xl text-coral">de la 40 lei</span>
+        </li>
+        <li class="flex items-baseline justify-between text-lg border-b border-dashed border-ink/30 pb-3">
+          <span class="display text-2xl">Sp&#259;lat + coafat</span>
+          <span class="display text-2xl text-coral">de la 50 lei</span>
+        </li>
+        <li class="flex items-baseline justify-between text-lg">
+          <span class="display text-2xl">Vopsit</span>
+          <span class="display text-2xl text-coral">de la 120 lei</span>
+        </li>
+      </ul>
+      <p class="mt-6 text-xs uppercase tracking-widest text-muted">* Pre&#539;urile pot varia &icirc;n func&#539;ie de lungimea p&#259;rului &#537;i complexitate.</p>
+    </div>
+  </div>
+</section>
+
+<section id="recenzii" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <span class="chip chip-coral">Recenzii</span>
+    <h2 class="display mt-4 text-5xl sm:text-6xl">CE ZIC <span class="text-olive">CLIEN&#538;II.</span></h2>
+
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="testi" data-aos="fade-up">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed">Profesionalism, calitate excelent&#259; &#537;i sincer foarte ieftin. 25 de lei tunsul, cel mai mic pre&#539; din ora&#537; unde te po&#539;i tunde excelent!</p>
+        <p class="display text-lg mt-4">&mdash; Taishi</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="60">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed">Este o loca&#539;ie bine &icirc;ngrijit&#259;, curat&#259; &#537;i cu personal calificat, bine instruit &#537;i respectuos!</p>
+        <p class="display text-lg mt-4">&mdash; Constantin Dr&#259;ghici</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="120">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed">Pre&#539;uri ieftine &#537;i rezultate profesionale &icirc;ntr-un timp scurt.</p>
+        <p class="display text-lg mt-4">&mdash; Grecu Leanu</p>
+      </article>
+
+      <article class="testi" data-aos="fade-up" data-aos-delay="180">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed">Un vibe super &icirc;n loca&#539;ie &#537;i personal profesionist.</p>
+        <p class="display text-lg mt-4">&mdash; Gelu Cristian</p>
+      </article>
+
+      <article class="testi md:col-span-2" data-aos="fade-up" data-aos-delay="240">
+        <div class="flex text-coral text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="mt-4 text-sm text-ink/85 leading-relaxed">Aceast&#259; frizerie po&#539;i s&#259; mergi cu &icirc;ncredere. Frizerul e foarte de treab&#259; &#537;i face &#537;i treaba foarte bun&#259;.</p>
+        <p class="display text-lg mt-4">&mdash; Petri&#537;or Staiculeasa</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="program" class="py-16 sm:py-24 bg-ink text-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+
+    <div class="lg:col-span-5">
+      <span class="chip chip-coral">Program</span>
+      <h2 class="display mt-4 text-5xl sm:text-6xl">
+        DESCHI&#536;I<br><span class="text-coral">LUNI-S&#194;MB&#258;T&#258;.</span>
+      </h2>
+      <p class="mt-6 text-cream/75">Programare obligatorie. Nu mai stai o or&#259; la r&#226;nd.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0786332327" class="btn-coral"><i class="fa-solid fa-phone"></i> Sun&#259;</a>
+        <a href="https://wa.me/40786332327" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="bg-cream text-ink p-6 sm:p-8">
+        <ul id="hours">
+          <li data-day="1" class="hours-row"><span class="display text-xl">LUNI</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="2" class="hours-row"><span class="display text-xl">MAR&#538;I</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="3" class="hours-row"><span class="display text-xl">MIERCURI</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="4" class="hours-row"><span class="display text-xl">JOI</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="5" class="hours-row"><span class="display text-xl">VINERI</span><span>09:00 &ndash; 19:00</span></li>
+          <li data-day="6" class="hours-row"><span class="display text-xl">S&#194;MB&#258;T&#258;</span><span>09:00 &ndash; 16:00</span></li>
+          <li data-day="0" class="hours-row"><span class="display text-xl">DUMINIC&#258;</span><span class="text-muted italic">&Icirc;nchis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
+
+    <div class="lg:col-span-7">
+      <span class="chip">Contact</span>
+      <h2 class="display mt-4 text-6xl sm:text-7xl">
+        HAI LA<br><span class="text-coral">DIV.</span>
+      </h2>
+      <p class="mt-6 max-w-lg text-muted">Strada Ecaterina Teodoroiu 11, Slatina. Programare telefonic&#259; sau pe WhatsApp.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:0786332327" class="btn-olive"><i class="fa-solid fa-phone"></i> 0786 332 327</a>
+        <a href="https://wa.me/40786332327" class="btn-wap"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="border-2 border-ink p-6">
+        <p class="chip">Adresa</p>
+        <p class="display text-2xl mt-4">Strada Ecaterina<br>Teodoroiu 11</p>
+        <p class="text-sm text-muted mt-2">230053 Slatina, jud. Olt</p>
+        <div class="mt-6 border-t-2 border-ink pt-4 space-y-2 text-sm">
+          <div><i class="fa-solid fa-phone text-coral w-5"></i> 0786 332 327</div>
+          <div><i class="fa-brands fa-whatsapp text-coral w-5"></i> wa.me/40786332327</div>
+          <div><i class="fa-regular fa-clock text-coral w-5"></i> Lun&ndash;Vin 9&ndash;19 &middot; S&#226;m 9&ndash;16</div>
+        </div>
+        <a href="https://www.google.com/maps/place/DIV+Studio/@44.4233772,24.3818662,17z" class="mt-6 inline-flex items-center gap-2 display text-sm text-coral">
+          <i class="fa-solid fa-location-dot"></i> VEZI PE HART&#258;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-inkd text-cream/60 py-10 pb-24 md:pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs uppercase tracking-widest">
+    <span>&copy; 2026 DIV Studio</span>
+    <span>Slatina &middot; Olt &middot; RO</span>
+    <span>Coafor &middot; Frizerie</span>
+  </div>
+</footer>
+
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden grid grid-cols-2 gap-0">
+  <a href="tel:0786332327" class="py-4 bg-olive text-cream text-center display text-sm tracking-wider">SUN&#258;</a>
+  <a href="https://wa.me/40786332327" class="py-4 bg-wa text-white text-center display text-sm tracking-wider">WHATSAPP</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "DIV Studio",
+  "description": "Frizerie si coafor in Slatina. Tuns, barbierit, coafuri, vopsit.",
+  "telephone": "+40786332327",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Strada Ecaterina Teodoroiu 11",
+    "addressLocality": "Slatina",
+    "addressRegion": "Olt",
+    "postalCode": "230053",
+    "addressCountry": "RO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.423377, "longitude": 24.381866 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "15" },
+  "priceRange": "$"
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 60 });
+  const menu = document.getElementById('menu');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  openBtn.addEventListener('click', () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+  closeBtn.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menu.classList.remove('flex'); }));
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    const row = document.querySelector('#hours li[data-day="' + now.getDay() + '"]');
+    if (row) row.classList.add('today');
+  } catch (e) {}
+</script>
+
+</body>
+</html>
