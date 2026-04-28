@@ -261,7 +261,7 @@ tailwind.config = {
 <section id="top" class="relative grid-bg">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-20 pb-16 sm:pb-24 lg:pb-32">
 
-    <div class="flex items-center justify-between text-[10px] uppercase tracking-[.18em] text-mute">
+    <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-[10px] uppercase tracking-[.18em] text-mute">
       <span>Craiova &middot; Dolj &middot; RO</span>
       <span class="hidden sm:inline coord-plate">44&deg;18'44.7"N &middot; 23&deg;49'30.9"E</span>
       <span>2015 &mdash; &rarr;</span>
@@ -269,42 +269,46 @@ tailwind.config = {
 
     <div class="mt-6 line-h"></div>
 
-    <div class="mt-10 sm:mt-14 grid lg:grid-cols-12 gap-10">
-      <div class="lg:col-span-8">
-        <span class="num-badge" data-aos="fade-up">&mdash; DA / 001</span>
-        <h1 class="mega mt-6 text-[clamp(3rem,10vw,8.5rem)]" data-aos="fade-up" data-aos-delay="60">
-          Case<br>
-          <span class="italic-display text-rust">g&#226;ndite</span><br>
-          cu r&#259;bdare.
-        </h1>
+    <div class="mt-12 sm:mt-16 lg:mt-24 max-w-4xl mx-auto text-center">
+      <span class="num-badge" data-aos="fade-up">&mdash; DA / 001</span>
 
-        <p class="mt-10 max-w-xl text-lg leading-relaxed text-graph" data-aos="fade-up" data-aos-delay="120">
-          Dumys Arhitectura este biroul din Craiova al arhitectului <strong>Dumitra&#537;cu Sorin</strong> (OAR Oltenia, TNA nr. 2576). Lucr&#259;m proiecte de case, interioare, extinderi &#537;i documenta&#539;ii de urbanism, cu aten&#539;ie pentru locul &icirc;n care construim &#537;i oamenii pentru care construim.
-        </p>
+      <h1 class="mega mt-8 sm:mt-10 text-[clamp(3.25rem,12vw,9.5rem)]" data-aos="fade-up" data-aos-delay="60">
+        Case<br>
+        <span class="italic-display text-rust">g&#226;ndite</span><br>
+        cu r&#259;bdare.
+      </h1>
 
-        <div class="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg" data-aos="fade-up" data-aos-delay="180">
-          <a href="tel:0722245594" class="btn-dark"><i class="fa-solid fa-phone"></i> 0722 245 594</a>
-          <a href="https://wa.me/40722245594" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
-        </div>
+      <div class="mt-8 sm:mt-10 flex items-center justify-center gap-3 sm:gap-4" data-aos="fade-up" data-aos-delay="100">
+        <span class="w-8 sm:w-16 h-px bg-rust/60"></span>
+        <span class="text-[10px] sm:text-xs tracking-[.28em] uppercase text-rust font-semibold">Birou de arhitectur&#259;</span>
+        <span class="w-8 sm:w-16 h-px bg-rust/60"></span>
       </div>
 
+      <p class="mt-8 mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-graph" data-aos="fade-up" data-aos-delay="120">
+        Dumys Arhitectura este biroul din Craiova al arhitectului <strong>Dumitra&#537;cu Sorin</strong> (OAR Oltenia, TNA nr. 2576). Lucr&#259;m proiecte de case, interioare, extinderi &#537;i documenta&#539;ii de urbanism, cu aten&#539;ie pentru locul &icirc;n care construim &#537;i oamenii pentru care construim.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto sm:justify-center" data-aos="fade-up" data-aos-delay="180">
+        <a href="tel:0722245594" class="btn-dark"><i class="fa-solid fa-phone"></i> 0722 245 594</a>
+        <a href="https://wa.me/40722245594" class="btn-wap"><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a>
+      </div>
     </div>
 
-    <div class="mt-20 grid sm:grid-cols-4 gap-6 text-xs uppercase tracking-[.15em] text-mute">
-      <div class="flex flex-col">
-        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">10+</span>
+    <div class="mt-16 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8 max-w-4xl mx-auto text-xs uppercase tracking-[.15em] text-mute" data-aos="fade-up" data-aos-delay="220">
+      <div class="flex flex-col items-center text-center">
+        <span class="display italic-display text-3xl sm:text-4xl text-ink normal-case tracking-normal">10+</span>
         <span class="mt-2">ani de practic&#259; arhitectural&#259;</span>
       </div>
-      <div class="flex flex-col">
-        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">2576</span>
+      <div class="flex flex-col items-center text-center">
+        <span class="display italic-display text-3xl sm:text-4xl text-ink normal-case tracking-normal">2576</span>
         <span class="mt-2">&Icirc;nregistrat &icirc;n TNA, OAR</span>
       </div>
-      <div class="flex flex-col">
-        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">DTAC</span>
+      <div class="flex flex-col items-center text-center">
+        <span class="display italic-display text-3xl sm:text-4xl text-ink normal-case tracking-normal">DTAC</span>
         <span class="mt-2">+ DTOE complete</span>
       </div>
-      <div class="flex flex-col">
-        <span class="display italic-display text-3xl text-ink normal-case tracking-normal">PUD</span>
+      <div class="flex flex-col items-center text-center">
+        <span class="display italic-display text-3xl sm:text-4xl text-ink normal-case tracking-normal">PUD</span>
         <span class="mt-2">&#537;i PUZ documenta&#539;ii</span>
       </div>
     </div>
