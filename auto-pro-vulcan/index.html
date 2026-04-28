@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auto Pro Vulcan Cluj-Napoca - Vulcanizare &#537;i Anvelope | 0740 196 478</title>
-<meta name="description" content="Auto Pro Vulcan Cluj-Napoca - vulcanizare, anvelope, echilibrare &#537;i geometria ro&#539;ilor. Strada Oa&#537;ului 93. Sun&#259; 0740 196 478.">
-<meta name="keywords" content="vulcanizare Cluj, Auto Pro Vulcan, anvelope Cluj-Napoca, schimb anvelope Cluj">
+<title>Auto Pro Vulcan Cluj-Napoca - Vulcanizare, Anvelope, Geometrie | 0740 196 478</title>
+<meta name="description" content="Vulcanizare Cluj-Napoca pe Strada Oașului 93. Montaj anvelope, echilibrare, geometrie roți, depozitare anvelope. 4.7/5 din 133 recenzii Google. Sună 0740 196 478.">
+<meta name="keywords" content="vulcanizare Cluj, vulcanizare Cluj-Napoca, Auto Pro Vulcan, anvelope Cluj, montaj anvelope Cluj, echilibrare roti Cluj, geometrie roti Cluj, depozitare anvelope Cluj, reparatii jante Cluj">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Auto Pro Vulcan">
 <link rel="canonical" href="">
@@ -13,26 +13,34 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:site_name" content="Auto Pro Vulcan">
-<meta property="og:title" content="Auto Pro Vulcan Cluj">
-<meta property="og:description" content="Vulcanizare &#537;i anvelope &#238;n Cluj-Napoca.">
+<meta property="og:title" content="Auto Pro Vulcan - Vulcanizare Cluj-Napoca">
+<meta property="og:description" content="Vulcanizare, montaj anvelope, echilibrare și geometrie roți în Cluj-Napoca. 4.7/5 din 133 recenzii Google.">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Auto Pro Vulcan">
-<meta name="twitter:description" content="Vulcanizare &#537;i anvelope Cluj-Napoca.">
+<meta name="twitter:title" content="Auto Pro Vulcan - Vulcanizare Cluj-Napoca">
+<meta name="twitter:description" content="Vulcanizare și anvelope Cluj-Napoca. 4.7/5 din 133 recenzii.">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   "name": "Auto Pro Vulcan",
+  "image": "https://images.unsplash.com/photo-1568667256549-094345857637?w=1200",
   "telephone": "+40740196478",
-  "address": {"@type": "PostalAddress", "streetAddress": "Strada Oa&#537;ului 93", "addressLocality": "Cluj-Napoca", "postalCode": "400000", "addressCountry": "RO"},
+  "url": "",
+  "priceRange": "$$",
+  "address": {"@type": "PostalAddress", "streetAddress": "Strada Oașului 93", "addressLocality": "Cluj-Napoca", "postalCode": "400000", "addressCountry": "RO"},
   "geo": {"@type": "GeoCoordinates", "latitude": 46.793988, "longitude": 23.600226},
   "openingHoursSpecification": [
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "08:00", "closes": "16:00"}
   ],
-  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "133"}
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "133"},
+  "review": [
+    {"@type": "Review", "author": {"@type": "Person", "name": "Andrei Voina"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Nota 10, mulțumim foarte mult pentru tot sprijinul acordat. Am rămas plăcut surprins de modul în care au gestionat situația noastră."},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Doru E. Beșchi"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Băieții foarte profesioniști, în special domnul Daniel electricianul - mi-a rezolvat orice problemă, nu se lasă până nu îi dă de cap."},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Ben"}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "Oameni faini și profesionalism maxim!"}
+  ]
 }
 </script>
 
@@ -66,56 +74,576 @@ tailwind.config = {
   .display { font-family: 'Antonio', sans-serif; letter-spacing: 0.02em; }
   .tag { display: inline-flex; gap: 0.5rem; padding: 6px 14px; background: #ff6b00; color: #fff; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; }
   .tread { background: repeating-linear-gradient(45deg, #161616 0 12px, #0a0a0a 12px 24px); }
+  .tread-light { background: repeating-linear-gradient(45deg, #f4f4f0 0 12px, #e4e4de 12px 24px); }
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 40%, rgba(255,107,0,0.08), transparent 60%),
+      radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,107,0,0.06), transparent 60%),
+      #fff;
+  }
+  .hero-outline {
+    -webkit-text-stroke: 2px #0a0a0a;
+    color: transparent;
+  }
+  .stat-num { font-variant-numeric: tabular-nums; }
+  .stripe { background-image: linear-gradient(90deg, transparent 0 28px, rgba(255,107,0,0.18) 28px 30px); background-size: 30px 100%; }
+  .review-card { transition: transform .25s ease, box-shadow .25s ease; }
+  .review-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -20px rgba(255,107,0,0.4); }
+  details summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform .25s ease; }
+  .marquee {
+    display: flex;
+    gap: 4rem;
+    animation: marquee 38s linear infinite;
+    width: max-content;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 </style>
 </head>
 <body>
 
 <div class="tread h-3"></div>
 
-<header class="bg-white border-b-2 border-tar-900 sticky top-0 z-40"><div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between"><a href="#" class="flex items-center gap-3"><div class="w-11 h-11 bg-tar-900 flex items-center justify-center rounded-full"><i class="fa-solid fa-circle-dot text-glow-500 text-lg"></i></div><div><p class="display font-bold text-2xl text-tar-900 leading-none">AUTO PRO VULCAN</p><p class="text-[10px] tracking-[0.3em] text-glow-500 uppercase mt-1">Cluj-Napoca</p></div></a><nav class="hidden lg:flex items-center gap-8 text-sm text-tar-800 uppercase tracking-wider"><a href="#servicii" class="hover:text-glow-500">Servicii</a><a href="#contact" class="hover:text-glow-500">Contact</a></nav><a href="tel:0740196478" class="hidden md:inline-flex items-center gap-2 bg-glow-500 text-white px-5 py-3 hover:bg-tar-900 transition text-sm font-bold display"><i class="fa-solid fa-phone"></i> 0740 196 478</a></div></header>
+<header class="bg-white border-b-2 border-tar-900 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-11 h-11 bg-tar-900 flex items-center justify-center rounded-full">
+        <i class="fa-solid fa-circle-dot text-glow-500 text-lg"></i>
+      </div>
+      <div>
+        <p class="display font-bold text-2xl text-tar-900 leading-none">AUTO PRO VULCAN</p>
+        <p class="text-[10px] tracking-[0.3em] text-glow-500 uppercase mt-1">Cluj-Napoca</p>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm text-tar-800 uppercase tracking-wider font-semibold">
+      <a href="#servicii" class="hover:text-glow-500 transition">Servicii</a>
+      <a href="#proces" class="hover:text-glow-500 transition">Cum lucrăm</a>
+      <a href="#recenzii" class="hover:text-glow-500 transition">Recenzii</a>
+      <a href="#faq" class="hover:text-glow-500 transition">Întrebări</a>
+      <a href="#contact" class="hover:text-glow-500 transition">Contact</a>
+    </nav>
+    <a href="tel:0740196478" class="hidden md:inline-flex items-center gap-2 bg-glow-500 text-white px-5 py-3 hover:bg-tar-900 transition text-sm font-bold display">
+      <i class="fa-solid fa-phone"></i> 0740 196 478
+    </a>
+  </div>
+</header>
 
-<section class="bg-white py-16 md:py-24"><div class="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-12 gap-10 items-center">
-<div class="lg:col-span-7" data-aos="fade-right">
-<span class="tag mb-6">VULCANIZARE &middot; 4.7 / 133 RECENZII</span>
-<h1 class="display text-6xl md:text-8xl lg:text-[9rem] leading-[0.92] mt-4 font-bold">ANVELOPELE TALE,<br><span class="text-glow-500">&#206;N M&#194;INI BUNE.</span></h1>
-<p class="mt-8 text-lg md:text-xl text-tar-800 max-w-xl">Auto Pro Vulcan asigur&#259; vulcanizare, montaj anvelope, echilibrare &#537;i geometria ro&#539;ilor pentru toate tipurile de autoturisme.</p>
-<div class="mt-10 flex flex-wrap gap-4"><a href="tel:0740196478" class="bg-tar-900 text-white px-8 py-4 display hover:bg-glow-500 transition inline-flex items-center gap-3"><i class="fa-solid fa-phone"></i> 0740 196 478</a><a href="https://wa.me/40740196478" class="border-2 border-tar-900 text-tar-900 px-8 py-4 display hover:bg-tar-900 hover:text-white transition inline-flex items-center gap-3"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+<!-- ============ HERO (no image, typographic) ============ -->
+<section class="hero-bg relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 pt-16 md:pt-24 pb-10">
+    <div class="grid lg:grid-cols-12 gap-8 items-end">
+      <div class="lg:col-span-8" data-aos="fade-right">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <span class="tag">Vulcanizare Cluj-Napoca</span>
+          <span class="inline-flex items-center gap-2 px-3 py-1 border border-tar-900 text-xs font-bold tracking-widest uppercase">
+            <i class="fa-solid fa-star text-glow-500"></i> 4.7 / 5 &middot; 133 recenzii Google
+          </span>
+        </div>
+        <h1 class="display font-bold leading-[0.86]">
+          <span class="block text-7xl md:text-9xl lg:text-[10.5rem] text-tar-900">ANVELOPELE</span>
+          <span class="block text-7xl md:text-9xl lg:text-[10.5rem] hero-outline">TALE,</span>
+          <span class="block text-6xl md:text-8xl lg:text-[8rem] text-glow-500 mt-2">ÎN MÂINI BUNE.</span>
+        </h1>
+        <p class="mt-10 text-lg md:text-xl text-tar-800 max-w-2xl leading-relaxed">
+          Vulcanizare profesională pe Strada Oașului 93. Repara&#539;ii pene, montaj anvelope vară-iarnă, echilibrare cu aparat profesional, geometrie roți și depozitare sezonieră &#8211; tot ce ține de roată, sub același acoperiș.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="tel:0740196478" class="bg-tar-900 text-white px-8 py-4 display hover:bg-glow-500 transition inline-flex items-center gap-3 text-lg font-bold">
+            <i class="fa-solid fa-phone"></i> Sună acum: 0740 196 478
+          </a>
+          <a href="https://wa.me/40740196478" class="border-2 border-tar-900 text-tar-900 px-8 py-4 display hover:bg-tar-900 hover:text-white transition inline-flex items-center gap-3 text-lg font-bold">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- vertical info column -->
+      <div class="lg:col-span-4 space-y-4" data-aos="fade-left">
+        <div class="bg-tar-900 text-white p-6 border-l-4 border-glow-500">
+          <p class="text-[10px] tracking-[0.3em] uppercase text-glow-500 font-bold">Program</p>
+          <p class="display text-2xl font-bold mt-2">Luni &ndash; Vineri</p>
+          <p class="text-sm text-white/80 mt-1">08:00 &ndash; 18:00</p>
+          <div class="mt-3 pt-3 border-t border-white/15">
+            <p class="display text-xl font-bold">Sâmbătă</p>
+            <p class="text-sm text-white/80">08:00 &ndash; 16:00</p>
+          </div>
+          <div class="mt-3 pt-3 border-t border-white/15">
+            <p class="display text-xl font-bold text-white/40 line-through">Duminică</p>
+            <p class="text-sm text-white/50">Închis</p>
+          </div>
+        </div>
+        <div class="bg-glow-500 text-white p-6">
+          <p class="text-[10px] tracking-[0.3em] uppercase font-bold opacity-90">Adresă</p>
+          <p class="display text-xl font-bold mt-2 leading-tight">Strada Oașului 93</p>
+          <p class="text-sm mt-1 opacity-90">400000 Cluj-Napoca</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- inline stats strip, no separation -->
+  <div class="border-t-2 border-tar-900 bg-tar-900 text-white">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+      <div class="p-6 md:p-8 text-center" data-aos="fade-up">
+        <p class="display text-5xl md:text-6xl font-bold text-glow-500 stat-num">4.7</p>
+        <p class="text-[11px] tracking-[0.25em] uppercase mt-2 text-white/70">Rating Google</p>
+      </div>
+      <div class="p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="50">
+        <p class="display text-5xl md:text-6xl font-bold text-glow-500 stat-num">133</p>
+        <p class="text-[11px] tracking-[0.25em] uppercase mt-2 text-white/70">Recenzii Google</p>
+      </div>
+      <div class="p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+        <p class="display text-5xl md:text-6xl font-bold text-glow-500 stat-num">6+</p>
+        <p class="text-[11px] tracking-[0.25em] uppercase mt-2 text-white/70">Servicii Auto</p>
+      </div>
+      <div class="p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="150">
+        <p class="display text-5xl md:text-6xl font-bold text-glow-500">24h</p>
+        <p class="text-[11px] tracking-[0.25em] uppercase mt-2 text-white/70">Răspuns Telefonic</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE BRANDS / KEYWORDS ============ -->
+<section class="bg-chrome/40 border-y border-tar-900/20 overflow-hidden py-6">
+  <div class="marquee text-tar-900/70 display text-2xl md:text-3xl font-bold whitespace-nowrap">
+    <span class="flex items-center gap-16">
+      <span>VULCANIZARE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>MONTAJ ANVELOPE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>ECHILIBRARE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>GEOMETRIE ROȚI</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>DEPOZITARE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>JANTE ALIAJ</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+    </span>
+    <span class="flex items-center gap-16">
+      <span>VULCANIZARE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>MONTAJ ANVELOPE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>ECHILIBRARE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>GEOMETRIE ROȚI</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>DEPOZITARE</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+      <span>JANTE ALIAJ</span><i class="fa-solid fa-circle-dot text-glow-500 text-sm"></i>
+    </span>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="servicii" class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="grid lg:grid-cols-12 gap-10 mb-14">
+      <div class="lg:col-span-5" data-aos="fade-up">
+        <span class="tag mb-6">Servicii</span>
+        <h2 class="display text-5xl md:text-7xl text-tar-900 mt-4 font-bold leading-[0.9]">Tot ce ține<br>de <span class="text-glow-500">roată</span>.</h2>
+      </div>
+      <div class="lg:col-span-7 lg:pt-12" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-lg text-tar-800 leading-relaxed">
+          De la o pană simplă până la geometria completă a roților, lucrăm cu aparate profesionale și cu atenție la fiecare detaliu. Garantăm timpii anunțați și transparența totală asupra intervenției.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-white border-2 border-tar-900 p-7 group hover:bg-tar-900 hover:text-white transition" data-aos="fade-up">
+        <div class="flex items-start justify-between mb-6">
+          <i class="fa-solid fa-circle-dot text-glow-500 text-3xl"></i>
+          <span class="display text-3xl font-bold text-tar-900/20 group-hover:text-white/30 transition">01</span>
+        </div>
+        <h3 class="display text-2xl font-bold">VULCANIZARE</h3>
+        <p class="text-sm mt-3 leading-relaxed text-tar-800 group-hover:text-white/80">Reparații pene cu plăcuțe, șurub anti-pană, vulcanizare la cald sau rece, în funcție de tipul tăieturii.</p>
+      </div>
+      <div class="bg-tar-900 text-white p-7 border-2 border-tar-900 group hover:bg-glow-500 hover:border-glow-500 transition" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex items-start justify-between mb-6">
+          <i class="fa-solid fa-truck-fast text-glow-500 group-hover:text-white text-3xl"></i>
+          <span class="display text-3xl font-bold text-white/20">02</span>
+        </div>
+        <h3 class="display text-2xl font-bold">MONTAJ ANVELOPE</h3>
+        <p class="text-sm mt-3 opacity-90 leading-relaxed">Vară, iarnă, all-season. Pentru orice tip de jantă - oțel sau aliaj, până la 22 inch.</p>
+      </div>
+      <div class="bg-white border-2 border-tar-900 p-7 group hover:bg-tar-900 hover:text-white transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-start justify-between mb-6">
+          <i class="fa-solid fa-balance-scale text-glow-500 text-3xl"></i>
+          <span class="display text-3xl font-bold text-tar-900/20 group-hover:text-white/30 transition">03</span>
+        </div>
+        <h3 class="display text-2xl font-bold">ECHILIBRARE ROȚI</h3>
+        <p class="text-sm mt-3 leading-relaxed text-tar-800 group-hover:text-white/80">Aparat profesional cu contragreutăți auto-adezive sau cu cleme. Vibrațiile dispar din volan.</p>
+      </div>
+      <div class="bg-glow-500 text-white p-7 border-2 border-glow-500 group hover:bg-tar-900 hover:border-tar-900 transition" data-aos="fade-up">
+        <div class="flex items-start justify-between mb-6">
+          <i class="fa-solid fa-arrows-left-right text-white text-3xl"></i>
+          <span class="display text-3xl font-bold text-white/30">04</span>
+        </div>
+        <h3 class="display text-2xl font-bold">GEOMETRIE ROȚI</h3>
+        <p class="text-sm mt-3 opacity-95 leading-relaxed">Aliniere față și spate, verificare unghiuri (camber, caster, toe). Anvelopele se uzează egal.</p>
+      </div>
+      <div class="bg-white border-2 border-tar-900 p-7 group hover:bg-tar-900 hover:text-white transition" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex items-start justify-between mb-6">
+          <i class="fa-solid fa-warehouse text-glow-500 text-3xl"></i>
+          <span class="display text-3xl font-bold text-tar-900/20 group-hover:text-white/30 transition">05</span>
+        </div>
+        <h3 class="display text-2xl font-bold">DEPOZITARE ANVELOPE</h3>
+        <p class="text-sm mt-3 leading-relaxed text-tar-800 group-hover:text-white/80">Pentru clienții care nu au unde le ține acasă. Spațiu uscat, ventilat, organizat pe set.</p>
+      </div>
+      <div class="bg-white border-2 border-tar-900 p-7 group hover:bg-tar-900 hover:text-white transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-start justify-between mb-6">
+          <i class="fa-solid fa-screwdriver-wrench text-glow-500 text-3xl"></i>
+          <span class="display text-3xl font-bold text-tar-900/20 group-hover:text-white/30 transition">06</span>
+        </div>
+        <h3 class="display text-2xl font-bold">REPARAȚII JANTE</h3>
+        <p class="text-sm mt-3 leading-relaxed text-tar-800 group-hover:text-white/80">Îndreptare jante de aliaj sau tablă, finisaj, redare aspect estetic după bordură.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="proces" class="py-20 md:py-28 bg-tar-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04] tread"></div>
+  <div class="max-w-7xl mx-auto px-4 md:px-6 relative">
+    <div class="grid lg:grid-cols-12 gap-10 mb-14">
+      <div class="lg:col-span-5" data-aos="fade-up">
+        <span class="tag mb-6">Cum lucrăm</span>
+        <h2 class="display text-5xl md:text-7xl mt-4 font-bold leading-[0.9]">Patru pași.<br><span class="text-glow-500">Zero surprize.</span></h2>
+      </div>
+      <div class="lg:col-span-7 lg:pt-12" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-lg text-white/70 leading-relaxed">
+          Procesul nostru e clar de la primul telefon. Vă spunem dinainte cât durează, cât costă și ce includem &#8211; fără descoperiri în mijlocul intervenției.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+      <div class="bg-tar-900 p-8 relative" data-aos="fade-up">
+        <p class="display text-7xl font-bold text-glow-500/30">01</p>
+        <h3 class="display text-2xl font-bold mt-4">SUNĂ-NE</h3>
+        <p class="text-sm text-white/70 mt-3 leading-relaxed">Descrieți problema sau spuneți ce serviciu doriți. Vă comunicăm timpul disponibil și prețul aproximativ.</p>
+      </div>
+      <div class="bg-tar-900 p-8 relative" data-aos="fade-up" data-aos-delay="100">
+        <p class="display text-7xl font-bold text-glow-500/30">02</p>
+        <h3 class="display text-2xl font-bold mt-4">VENIȚI ÎN SERVICE</h3>
+        <p class="text-sm text-white/70 mt-3 leading-relaxed">Strada Oașului 93. Verificăm starea anvelopelor și a jantelor împreună cu dvs. înainte de intervenție.</p>
+      </div>
+      <div class="bg-tar-900 p-8 relative" data-aos="fade-up" data-aos-delay="200">
+        <p class="display text-7xl font-bold text-glow-500/30">03</p>
+        <h3 class="display text-2xl font-bold mt-4">LUCRĂM RAPID</h3>
+        <p class="text-sm text-white/70 mt-3 leading-relaxed">Echipă cu experiență, aparate profesionale. O vulcanizare se termină de obicei în 20&ndash;40 de minute.</p>
+      </div>
+      <div class="bg-tar-900 p-8 relative" data-aos="fade-up" data-aos-delay="300">
+        <p class="display text-7xl font-bold text-glow-500/30">04</p>
+        <h3 class="display text-2xl font-bold mt-4">PLECAȚI LINIȘTIT</h3>
+        <p class="text-sm text-white/70 mt-3 leading-relaxed">Verificăm presiunea, strângem prezoanele cu cheia dinamometrică și vă explicăm ce am făcut.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="recenzii" class="py-20 md:py-28 bg-chrome/30">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="grid lg:grid-cols-12 gap-10 mb-14 items-end">
+      <div class="lg:col-span-7" data-aos="fade-up">
+        <span class="tag mb-6">Recenzii Google</span>
+        <h2 class="display text-5xl md:text-7xl text-tar-900 mt-4 font-bold leading-[0.9]">Ce spun<br><span class="text-glow-500">clienții noștri</span>.</h2>
+      </div>
+      <div class="lg:col-span-5 lg:text-right" data-aos="fade-up" data-aos-delay="100">
+        <div class="inline-flex flex-col gap-3 lg:items-end">
+          <div class="flex items-center gap-2 lg:justify-end">
+            <div class="display text-6xl font-bold text-tar-900 stat-num">4.7</div>
+            <div class="display text-3xl text-tar-900/40 font-bold">/5</div>
+          </div>
+          <div class="text-glow-500 text-2xl">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="text-sm text-tar-800 font-semibold">Pe baza a <span class="text-glow-500">133 recenzii Google</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- rating breakdown bars -->
+    <div class="bg-white border-2 border-tar-900 p-6 md:p-8 mb-10" data-aos="fade-up">
+      <p class="display text-xl font-bold mb-5 text-tar-900">Distribuția recenziilor</p>
+      <div class="space-y-3">
+        <div class="flex items-center gap-4 text-sm">
+          <span class="display font-bold text-tar-900 w-12 shrink-0">5 <i class="fa-solid fa-star text-glow-500 text-xs"></i></span>
+          <div class="flex-1 h-3 bg-chrome/60 overflow-hidden"><div class="h-full bg-glow-500" style="width:85.5%"></div></div>
+          <span class="display font-bold text-tar-900 w-12 text-right">71</span>
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="display font-bold text-tar-900 w-12 shrink-0">4 <i class="fa-solid fa-star text-glow-500 text-xs"></i></span>
+          <div class="flex-1 h-3 bg-chrome/60 overflow-hidden"><div class="h-full bg-glow-500" style="width:4.8%"></div></div>
+          <span class="display font-bold text-tar-900 w-12 text-right">4</span>
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="display font-bold text-tar-900 w-12 shrink-0">3 <i class="fa-solid fa-star text-glow-500 text-xs"></i></span>
+          <div class="flex-1 h-3 bg-chrome/60 overflow-hidden"><div class="h-full bg-glow-500" style="width:0%"></div></div>
+          <span class="display font-bold text-tar-900 w-12 text-right">0</span>
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="display font-bold text-tar-900 w-12 shrink-0">2 <i class="fa-solid fa-star text-glow-500 text-xs"></i></span>
+          <div class="flex-1 h-3 bg-chrome/60 overflow-hidden"><div class="h-full bg-glow-500" style="width:1.2%"></div></div>
+          <span class="display font-bold text-tar-900 w-12 text-right">1</span>
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="display font-bold text-tar-900 w-12 shrink-0">1 <i class="fa-solid fa-star text-glow-500 text-xs"></i></span>
+          <div class="flex-1 h-3 bg-chrome/60 overflow-hidden"><div class="h-full bg-glow-500" style="width:8.4%"></div></div>
+          <span class="display font-bold text-tar-900 w-12 text-right">7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- review cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="review-card bg-white p-7 border-l-4 border-glow-500 relative" data-aos="fade-up">
+        <i class="fa-solid fa-quote-right absolute top-5 right-5 text-glow-500/20 text-3xl"></i>
+        <div class="text-glow-500 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="mt-4 text-tar-800 leading-relaxed">&bdquo;Nota 10, mulțumim foarte mult pentru tot sprijinul acordat. Am rămas plăcut surprins de modul și felul în care au gestionat situația noastră. Mult succes în continuare!&rdquo;</p>
+        <div class="mt-6 pt-5 border-t border-tar-900/10 flex items-center gap-3">
+          <div class="w-10 h-10 bg-tar-900 text-white display font-bold rounded-full flex items-center justify-center">A</div>
+          <div>
+            <p class="display font-bold text-tar-900">Andrei Voina</p>
+            <p class="text-xs text-tar-800/60">Recenzie Google</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card bg-tar-900 text-white p-7 border-l-4 border-glow-500 relative" data-aos="fade-up" data-aos-delay="80">
+        <i class="fa-solid fa-quote-right absolute top-5 right-5 text-glow-500/30 text-3xl"></i>
+        <div class="text-glow-500 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="mt-4 text-white/90 leading-relaxed">&bdquo;Băieții foarte profesioniști, în special domnul Daniel electricianul. Mi-a rezolvat orice problemă, nu se lasă până nu îi dă de cap.&rdquo;</p>
+        <div class="mt-6 pt-5 border-t border-white/15 flex items-center gap-3">
+          <div class="w-10 h-10 bg-glow-500 text-white display font-bold rounded-full flex items-center justify-center">D</div>
+          <div>
+            <p class="display font-bold">Doru E. Beșchi</p>
+            <p class="text-xs text-white/50">Recenzie Google</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card bg-white p-7 border-l-4 border-glow-500 relative" data-aos="fade-up" data-aos-delay="160">
+        <i class="fa-solid fa-quote-right absolute top-5 right-5 text-glow-500/20 text-3xl"></i>
+        <div class="text-glow-500 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="mt-4 text-tar-800 leading-relaxed">&bdquo;Oameni faini și profesionalism maxim!&rdquo;</p>
+        <div class="mt-6 pt-5 border-t border-tar-900/10 flex items-center gap-3">
+          <div class="w-10 h-10 bg-tar-900 text-white display font-bold rounded-full flex items-center justify-center">B</div>
+          <div>
+            <p class="display font-bold text-tar-900">Ben</p>
+            <p class="text-xs text-tar-800/60">Recenzie Google</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card bg-white p-7 border-l-4 border-tar-900 relative" data-aos="fade-up" data-aos-delay="40">
+        <i class="fa-solid fa-quote-right absolute top-5 right-5 text-tar-900/15 text-3xl"></i>
+        <div class="text-glow-500 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+        </div>
+        <p class="mt-4 text-tar-800 leading-relaxed">&bdquo;Service ok.&rdquo;</p>
+        <div class="mt-6 pt-5 border-t border-tar-900/10 flex items-center gap-3">
+          <div class="w-10 h-10 bg-tar-900 text-white display font-bold rounded-full flex items-center justify-center">R</div>
+          <div>
+            <p class="display font-bold text-tar-900">Raul Pop</p>
+            <p class="text-xs text-tar-800/60">Recenzie Google</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card bg-glow-500 text-white p-7 border-l-4 border-tar-900 relative md:col-span-2" data-aos="fade-up" data-aos-delay="120">
+        <i class="fa-solid fa-quote-right absolute top-5 right-5 text-white/30 text-3xl"></i>
+        <div class="grid md:grid-cols-3 gap-6 items-center">
+          <div class="md:col-span-2">
+            <p class="display text-3xl md:text-4xl font-bold leading-tight">71 din 133 de clienți<br>au lăsat 5 stele.</p>
+            <p class="mt-3 text-white/90">Citiți toate recenziile direct pe Google și formați-vă propria părere.</p>
+          </div>
+          <div class="md:text-right">
+            <a href="https://search.google.com/local/reviews?placeid=ChIJ-UqWVKwOSUcRUAgP97UCeKE&q=Auto+Pro+Vulcan&authuser=0&hl=ro" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-tar-900 text-white px-6 py-3 display font-bold hover:bg-white hover:text-tar-900 transition">
+              <i class="fa-brands fa-google"></i> Vezi toate recenziile
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-20 md:py-28 bg-white">
+  <div class="max-w-5xl mx-auto px-4 md:px-6">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <span class="tag mb-6">Întrebări frecvente</span>
+      <h2 class="display text-5xl md:text-7xl text-tar-900 mt-4 font-bold leading-[0.9]">Răspunsuri rapide.</h2>
+    </div>
+
+    <div class="space-y-3">
+      <details class="bg-chrome/30 border-l-4 border-glow-500 group" data-aos="fade-up">
+        <summary class="cursor-pointer p-6 flex items-center justify-between gap-4">
+          <h3 class="display text-xl font-bold text-tar-900">Cât durează o vulcanizare?</h3>
+          <i class="fa-solid fa-plus text-glow-500 text-xl faq-icon"></i>
+        </summary>
+        <div class="px-6 pb-6 text-tar-800 leading-relaxed">
+          De regulă între 20 și 40 de minute, în funcție de tipul de pană. O reparație simplă cu plăcuță e mai rapidă, iar o tăietură pe flanc poate necesita evaluare detaliată sau înlocuirea anvelopei.
+        </div>
+      </details>
+
+      <details class="bg-chrome/30 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="40">
+        <summary class="cursor-pointer p-6 flex items-center justify-between gap-4">
+          <h3 class="display text-xl font-bold text-tar-900">Trebuie programare în avans?</h3>
+          <i class="fa-solid fa-plus text-glow-500 text-xl faq-icon"></i>
+        </summary>
+        <div class="px-6 pb-6 text-tar-800 leading-relaxed">
+          Pentru o pană puteți veni direct &#8211; vă luăm cât putem de repede. Pentru montaj sezonier complet sau geometrie roți, recomandăm un telefon prealabil la <a href="tel:0740196478" class="text-glow-500 font-bold hover:underline">0740 196 478</a>, mai ales în perioadele de schimb anvelope vară/iarnă.
+        </div>
+      </details>
+
+      <details class="bg-chrome/30 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="80">
+        <summary class="cursor-pointer p-6 flex items-center justify-between gap-4">
+          <h3 class="display text-xl font-bold text-tar-900">Care sunt formele de plată acceptate?</h3>
+          <i class="fa-solid fa-plus text-glow-500 text-xl faq-icon"></i>
+        </summary>
+        <div class="px-6 pb-6 text-tar-800 leading-relaxed">
+          Acceptăm numerar, card bancar (debit și credit) și plată mobilă prin NFC. Eliberăm bon fiscal și factură la cerere.
+        </div>
+      </details>
+
+      <details class="bg-chrome/30 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="120">
+        <summary class="cursor-pointer p-6 flex items-center justify-between gap-4">
+          <h3 class="display text-xl font-bold text-tar-900">Faceți depozitare anvelope?</h3>
+          <i class="fa-solid fa-plus text-glow-500 text-xl faq-icon"></i>
+        </summary>
+        <div class="px-6 pb-6 text-tar-800 leading-relaxed">
+          Da. Avem spațiu de depozitare uscat și ventilat, organizat pe seturi cu eticheta dvs. Astfel, la schimbul de sezon, treceți doar pe la noi și plecați cu setul potrivit. Ideal pentru clienții care nu au unde le ține acasă.
+        </div>
+      </details>
+
+      <details class="bg-chrome/30 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="160">
+        <summary class="cursor-pointer p-6 flex items-center justify-between gap-4">
+          <h3 class="display text-xl font-bold text-tar-900">Ce dimensiuni de jante puteți monta?</h3>
+          <i class="fa-solid fa-plus text-glow-500 text-xl faq-icon"></i>
+        </summary>
+        <div class="px-6 pb-6 text-tar-800 leading-relaxed">
+          Lucrăm cu jante de oțel și de aliaj pentru autoturisme, până la 22 inch. Pentru anvelope cu profil foarte jos sau jante de colecție, vă rugăm să ne sunați înainte pentru detalii.
+        </div>
+      </details>
+
+      <details class="bg-chrome/30 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="200">
+        <summary class="cursor-pointer p-6 flex items-center justify-between gap-4">
+          <h3 class="display text-xl font-bold text-tar-900">De ce trebuie făcută echilibrarea după montaj?</h3>
+          <i class="fa-solid fa-plus text-glow-500 text-xl faq-icon"></i>
+        </summary>
+        <div class="px-6 pb-6 text-tar-800 leading-relaxed">
+          Orice anvelopă nouă sau remontată are mici diferențe de masă pe circumferință. Fără echilibrare, se simte vibrație în volan la viteze peste 80&ndash;100 km/h și anvelopele se uzează inegal. Echilibrarea durează 5&ndash;10 minute pe roată și e obligatorie după orice montaj.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="bg-tar-900 text-white">
+  <div class="grid lg:grid-cols-2">
+    <div class="p-10 md:p-16">
+      <span class="tag mb-6">Contact</span>
+      <h2 class="display text-5xl md:text-6xl mt-4 mb-3 font-bold leading-[0.95]">Vino la <span class="text-glow-500">noi</span>.</h2>
+      <p class="text-white/70 mb-10 max-w-md">Strada Oașului 93, Cluj-Napoca. Vă așteptăm cu o cafea cât pregătim mașina.</p>
+
+      <div class="space-y-3">
+        <a href="tel:0740196478" class="flex items-center gap-5 bg-tar-800 p-6 border-l-4 border-glow-500 hover:bg-glow-500 transition group">
+          <i class="fa-solid fa-phone text-glow-500 group-hover:text-white text-xl"></i>
+          <div>
+            <p class="text-[10px] tracking-[0.3em] uppercase text-glow-500 group-hover:text-white font-bold">Telefon</p>
+            <p class="display text-2xl font-bold mt-1">0740 196 478</p>
+          </div>
+        </a>
+        <a href="https://wa.me/40740196478" class="flex items-center gap-5 bg-tar-800 p-6 border-l-4 border-glow-500 hover:bg-glow-500 transition group">
+          <i class="fa-brands fa-whatsapp text-glow-500 group-hover:text-white text-xl"></i>
+          <div>
+            <p class="text-[10px] tracking-[0.3em] uppercase text-glow-500 group-hover:text-white font-bold">WhatsApp</p>
+            <p class="display text-2xl font-bold mt-1">Trimite mesaj</p>
+          </div>
+        </a>
+        <div class="flex items-start gap-5 bg-tar-800 p-6 border-l-4 border-glow-500">
+          <i class="fa-solid fa-location-dot text-glow-500 text-xl mt-1"></i>
+          <div>
+            <p class="text-[10px] tracking-[0.3em] uppercase text-glow-500 font-bold">Adresă</p>
+            <p class="display text-xl font-bold mt-1">Strada Oașului 93</p>
+            <p class="text-sm text-white/70">400000 Cluj-Napoca</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 bg-tar-800 p-6 border-l-4 border-glow-500">
+          <i class="fa-regular fa-clock text-glow-500 text-xl mt-1"></i>
+          <div class="flex-1">
+            <p class="text-[10px] tracking-[0.3em] uppercase text-glow-500 font-bold">Program</p>
+            <div class="display text-base mt-2 grid grid-cols-2 gap-x-6 gap-y-1">
+              <span class="font-bold">Luni &ndash; Vineri</span><span>08:00 &ndash; 18:00</span>
+              <span class="font-bold">Sâmbătă</span><span>08:00 &ndash; 16:00</span>
+              <span class="font-bold text-white/40">Duminică</span><span class="text-white/40">Închis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="min-h-[500px] lg:min-h-full">
+      <iframe src="https://www.google.com/maps?q=46.793988,23.600226&hl=ro&z=17&output=embed" width="100%" height="100%" style="border:0; min-height:500px; height:100%;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-tar-900 text-white/70 border-t-4 border-glow-500">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <div>
+        <p class="display text-3xl text-white font-bold">AUTO PRO VULCAN</p>
+        <p class="text-xs tracking-[0.3em] text-glow-500 uppercase mt-2">Vulcanizare Cluj-Napoca</p>
+        <p class="text-sm mt-4 leading-relaxed">Service auto specializat în vulcanizare, anvelope, echilibrare și geometrie roți. Servim Cluj-Napoca și împrejurimile.</p>
+      </div>
+      <div>
+        <p class="display text-lg text-white font-bold mb-3">Servicii</p>
+        <ul class="text-sm space-y-1.5">
+          <li><a href="#servicii" class="hover:text-glow-500 transition">Vulcanizare</a></li>
+          <li><a href="#servicii" class="hover:text-glow-500 transition">Montaj anvelope</a></li>
+          <li><a href="#servicii" class="hover:text-glow-500 transition">Echilibrare roți</a></li>
+          <li><a href="#servicii" class="hover:text-glow-500 transition">Geometrie roți</a></li>
+          <li><a href="#servicii" class="hover:text-glow-500 transition">Depozitare anvelope</a></li>
+          <li><a href="#servicii" class="hover:text-glow-500 transition">Reparații jante</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="display text-lg text-white font-bold mb-3">Contact</p>
+        <ul class="text-sm space-y-1.5">
+          <li><a href="tel:0740196478" class="hover:text-glow-500 transition"><i class="fa-solid fa-phone text-glow-500 mr-2"></i>0740 196 478</a></li>
+          <li><a href="https://wa.me/40740196478" class="hover:text-glow-500 transition"><i class="fa-brands fa-whatsapp text-glow-500 mr-2"></i>WhatsApp</a></li>
+          <li><i class="fa-solid fa-location-dot text-glow-500 mr-2"></i>Strada Oașului 93, Cluj-Napoca</li>
+          <li><i class="fa-regular fa-clock text-glow-500 mr-2"></i>L-V 08-18 / S 08-16</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs">
+      <p>&copy; 2026 Auto Pro Vulcan. Toate drepturile rezervate.</p>
+      <p class="text-white/50">Cluj-Napoca &middot; 4.7/5 din 133 recenzii Google</p>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile sticky bar -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-glow-500 text-white grid grid-cols-2 z-50">
+  <a href="tel:0740196478" class="py-4 text-center display font-bold border-r border-white/20"><i class="fa-solid fa-phone mr-2"></i> 0740 196 478</a>
+  <a href="https://wa.me/40740196478" class="py-4 text-center display font-bold"><i class="fa-brands fa-whatsapp mr-2"></i> WHATSAPP</a>
 </div>
-<div class="lg:col-span-5" data-aos="fade-left">
-<div class="aspect-[4/5] bg-tar-900 overflow-hidden border-4 border-tar-900"><img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=900&auto=format&fit=crop&q=80" alt="Vulcanizare" class="w-full h-full object-cover"></div>
-</div>
-</div></section>
+<div class="md:hidden h-16"></div>
 
-<section id="servicii" class="py-20 md:py-28 bg-chrome/40"><div class="max-w-6xl mx-auto px-4 md:px-6">
-<span class="tag mb-6" data-aos="fade-up">SERVICII</span>
-<h2 class="display text-5xl md:text-7xl text-tar-900 mt-4 mb-10 font-bold" data-aos="fade-up">Tot ce &#539;ine de roat&#259;.</h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-<div class="bg-white p-6 border-l-4 border-glow-500" data-aos="fade-up"><i class="fa-solid fa-circle-dot text-glow-500 text-2xl mb-3"></i><h3 class="display text-xl text-tar-900 font-bold">VULCANIZARE</h3><p class="text-sm mt-2 text-tar-800">Repara&#539;ii pene cu pl&#259;cu&#539;e, &#537;urub anti-pen&#259;, infirm pe foc.</p></div>
-<div class="bg-tar-900 text-white p-6 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-truck-fast text-glow-500 text-2xl mb-3"></i><h3 class="display text-xl font-bold">MONTAJ ANVELOPE</h3><p class="text-sm mt-2 opacity-90">Var&#259;, iarn&#259;, all season. Pentru orice tip de jant&#259;.</p></div>
-<div class="bg-white p-6 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-balance-scale text-glow-500 text-2xl mb-3"></i><h3 class="display text-xl text-tar-900 font-bold">ECHILIBRARE</h3><p class="text-sm mt-2 text-tar-800">Aparat profesional, contragreut&#259;&#539;i auto-adezive sau cu cleme.</p></div>
-<div class="bg-white p-6 border-l-4 border-glow-500" data-aos="fade-up"><i class="fa-solid fa-arrows-left-right text-glow-500 text-2xl mb-3"></i><h3 class="display text-xl text-tar-900 font-bold">GEOMETRIE RO&#538;I</h3><p class="text-sm mt-2 text-tar-800">Aliniere fa&#539;&#259; &#537;i spate, verificare unghiuri.</p></div>
-<div class="bg-glow-500 text-white p-6 border-l-4 border-tar-900" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-warehouse text-white text-2xl mb-3"></i><h3 class="display text-xl font-bold">DEPOZITARE ANVELOPE</h3><p class="text-sm mt-2">Pentru clien&#539;ii care nu au unde le &#539;ine acas&#259;.</p></div>
-<div class="bg-white p-6 border-l-4 border-glow-500" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-screwdriver-wrench text-glow-500 text-2xl mb-3"></i><h3 class="display text-xl text-tar-900 font-bold">REPARATII JANTE</h3><p class="text-sm mt-2 text-tar-800">&#206;ndreptare jante aliaj &#537;i tabl&#259;, finisaj.</p></div>
-</div>
-</div></section>
-
-<section id="contact" class="bg-tar-900 text-white"><div class="grid lg:grid-cols-2">
-<div class="p-10 md:p-16">
-<span class="tag mb-6">CONTACT</span>
-<h2 class="display text-4xl md:text-6xl mt-4 mb-10 font-bold">Vino la <span class="text-glow-500">noi</span>.</h2>
-<div class="space-y-4">
-<a href="tel:0740196478" class="flex items-center gap-5 bg-tar-800 p-6 border-l-4 border-glow-500 hover:bg-glow-500 transition"><i class="fa-solid fa-phone text-glow-500 text-xl"></i><div><p class="tag">Telefon</p><p class="display text-2xl font-bold">0740 196 478</p></div></a>
-<a href="https://wa.me/40740196478" class="flex items-center gap-5 bg-tar-800 p-6 border-l-4 border-glow-500 hover:bg-glow-500 transition"><i class="fa-brands fa-whatsapp text-glow-500 text-xl"></i><div><p class="tag">WhatsApp</p><p class="display text-2xl font-bold">Trimite mesaj</p></div></a>
-<div class="flex items-start gap-5 bg-tar-800 p-6 border-l-4 border-glow-500"><i class="fa-solid fa-location-dot text-glow-500 text-xl mt-1"></i><div><p class="tag">Adres&#259;</p><p class="display text-xl font-bold">Strada Oa&#537;ului 93</p><p class="text-sm text-white/70">Cluj-Napoca</p></div></div>
-<div class="flex items-start gap-5 bg-tar-800 p-6 border-l-4 border-glow-500"><i class="fa-regular fa-clock text-glow-500 text-xl mt-1"></i><div><p class="tag">Program</p><p class="display text-xl font-bold">L-V 08:00 - 18:00 / S 08-16</p></div></div>
-</div></div>
-<div class="min-h-[500px]"><iframe src="https://www.google.com/maps?q=46.793988,23.600226&hl=ro&z=17&output=embed" width="100%" height="100%" style="border:0; min-height:500px;" allowfullscreen="" loading="lazy"></iframe></div>
-</div></section>
-
-<footer class="bg-tar-900 text-white/70 py-8 border-t-4 border-glow-500"><div class="max-w-7xl mx-auto px-4 md:px-6 text-center"><p class="display text-2xl text-white font-bold">AUTO PRO VULCAN</p><p class="text-sm mt-2">Cluj-Napoca &middot; 0740 196 478</p><p class="text-xs mt-4">&copy; 2026</p></div></footer>
-
-<div class="md:hidden fixed bottom-0 left-0 right-0 bg-glow-500 text-white grid grid-cols-2 z-50"><a href="tel:0740196478" class="py-4 text-center display font-bold border-r border-white/20"><i class="fa-solid fa-phone mr-2"></i> 0740 196 478</a><a href="https://wa.me/40740196478" class="py-4 text-center display font-bold"><i class="fa-brands fa-whatsapp mr-2"></i> WHATSAPP</a></div><div class="md:hidden h-16"></div>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({ duration: 700, once: true });</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 700, once: true, offset: 60 });</script>
 </body>
 </html>
